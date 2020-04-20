@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>松果小站</title>
+  
+  <subtitle>松果小站博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.songuo.tech/"/>
+  <updated>2020-04-20T03:06:39.479Z</updated>
+  <id>https://blog.songuo.tech/</id>
+  
+  <author>
+    <name>松鼠</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
+    <link href="https://blog.songuo.tech/p/23a9bdeb.html"/>
+    <id>https://blog.songuo.tech/p/23a9bdeb.html</id>
+    <published>2020-04-20T02:40:00.000Z</published>
+    <updated>2020-04-20T03:06:39.479Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p><h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p><a id="more"></a><p><strong>典型现象（一）：条件判断超预期</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure><p><strong>典型现象（二）：数据转换超预期</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure><p><strong>典型现象（三）：基本运算超预期</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure><p><strong>典型现象（四）：数据自增超预期</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure><p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p><p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p><hr><h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure><p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p><p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p><p>我们不妨来简单思考一下：</p><blockquote><p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p></blockquote><p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p><p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure><p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p><p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure><p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p><p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p><p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p><p>这就要谈一下浮点数的精度问题了。</p><hr><h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p><p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p><p><strong>1、符号部分（S）</strong></p><p><code>0</code>-正 <code>1</code>-负</p><p><strong>2、阶码部分（E）（指数部分）</strong>：</p><ul><li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li><li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li></ul><p><strong>3、尾数部分（M）</strong>：</p><p>浮点数的精度是由尾数的位数来决定的：</p><ul><li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li><li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li></ul><p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p><hr><h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p><p><strong>方法一：用字符串或者数组解决多位数问题</strong></p><p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p><p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p><p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p><p><strong>方法二：Java的大数类是个好东西</strong></p><p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p><p>Java的大数类位于<code>java.math</code>包下：</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p><p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure><p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以下文章来源于CodeSheep ，作者hansonwong99&lt;/p&gt;
+&lt;h2 id=&quot;老大说：谁要再用double定义商品金额，就自己收拾东西走&quot;&gt;&lt;a href=&quot;#老大说：谁要再用double定义商品金额，就自己收拾东西走&quot; class=&quot;headerlink&quot; title=&quot;老大说：谁要再用double定义商品金额，就自己收拾东西走!&quot;&gt;&lt;/a&gt;老大说：谁要再用double定义商品金额，就自己收拾东西走!&lt;/h2&gt;&lt;h2 id=&quot;先看现象&quot;&gt;&lt;a href=&quot;#先看现象&quot; class=&quot;headerlink&quot; title=&quot;先看现象&quot;&gt;&lt;/a&gt;先看现象&lt;/h2&gt;&lt;p&gt;涉及诸如&lt;code&gt;float&lt;/code&gt;或者&lt;code&gt;double&lt;/code&gt;这两种浮点型数据的处理时，偶尔总会有一些&lt;strong&gt;怪怪的现象&lt;/strong&gt;，不知道大家注意过没，举几个常见的栗子：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/tags/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>成为一流软件开发者的34条建议</title>
+    <link href="https://blog.songuo.tech/p/32d2b524.html"/>
+    <id>https://blog.songuo.tech/p/32d2b524.html</id>
+    <published>2020-04-20T02:30:00.000Z</published>
+    <updated>2020-04-20T03:06:39.479Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p><p>这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。</p><p><strong>1. 规划方法 &amp; 在编码前先写伪代码</strong></p><p>当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。</p><p>在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。</p><p>作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！</p><p><strong>2. 总是寻找新东西来学习</strong></p><p>这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。</p><p>你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。</p><p><strong>3. 不要尝试去学习所有的东西</strong></p><p>尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。</p><p>你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。</p><p><strong>4. 了解怎样学习</strong></p><p>每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。</p><p>除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（<a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> https://www.coursera.org/learn/learning-how-to-learn </a>），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。</p><p><strong>5. 缓缓前行，不要破坏东西</strong></p><p>“快速前行，打破常规”，在科技行业，这句谚语已经作为一条真理存在很久了。这句谚语是用来鼓励开发者快速地部署代码和技术想法的，同时还能安心地觉得这只是一些代码，当任何错误或者 bug 自己暴露出来的时候，都可以被轻松解决。</p><p>但是软件和数字产品不再是被公司美化的营销部门，也不再是偏安一隅的经济单位。它现在已经成为了所有东西之上的一层。软件和数 10 亿人的生活息息相关，代码不再是完全无害的。Bug 和设计问题都会对人们产生负面的影响。</p><p>所以我们应该缓缓前行，并且保证不会破坏任何东西。你所写的代码会对其他人的生活产生真实的影响，所以应当确保写出质量好的代码。</p><p><strong>6. 善于阅读其他人的代码</strong></p><p>阅读其他人的代码是一项不太容易掌握的技能。当你开始成为一名优秀的程序员时，你就会习惯于你自己的代码风格。而当你尝试阅读别人的代码时，你就会逐渐迷失了。幸运的是，你阅读别人的代码越多，你就会发现这越容易，而且你将愿意经常阅读别人的代码，但是，寻找不同的阅读方法（<a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener"> https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/ </a>）也会起到帮助，那会让阅读别人代码的过程变得更加轻松。</p><p><strong>7. 感到自豪，让工作变得有价值</strong></p><p>不管你的工作是大还是小，都要为此感到自豪。你写的每一行代码都应当足够好，好到你自己也感觉良好的程度。这些代码不仅要能正常运行，而且要能让你感到自豪。你不可能创建出完美的代码，也没有人能够做到这样，因为创建完美的软件是不可能的。但是创建出让你感觉良好的代码，一定会让你不断地做出好的工作成绩。</p><p><strong>8. 对你造成的错误保持开放负责的态度</strong></p><p>有时候你可能把事情弄砸了，可能在你的职业生涯中，还会出现好几次这样的情况。不管是做错了什么，我们每个人都发生过这样的状况。当错误发生时，保持开放的心态，担负起责任，不要责怪其他人。</p><p>用这样的态度处理这些错误，你就会在你的队友和同事中间建立起信任和尊重。</p><p><strong>9. 工作时尽量减少分心</strong></p><p>由于你是人类（对所有读到这篇文章的机器人发出警告），在你累到筋疲力尽之前，你这一天当中产出效率最高的工作时间是有限的。所以你需要优化那些产出效率高的时间来完成工作。</p><p>每个人的情况是不同的，但是请尝试不同的方法，看看哪种方法对你最有效。关闭任何手机提醒（电子邮件，短信等等），可能会有帮助；或者每天只检查电子邮件 1~2 次；并且只有在你工作完回到家时，再去登陆社交网络。</p><p><strong>10. 善于使用 Google</strong></p><p>作为一名程序员，你可能会不断地碰到大大小小的问题。这些问题绝大部分也被其他的开发者遇到过，所以你可以在各种网站上看到他们的解决方案。</p><p>要善于寻找这些疑问 / 问题的解决方案。学习如何高效地搜索 Google 能够为你的开发节省大量时间。我们得承认一个事实，StackOverflow 将成为你新的救世主。</p><p><strong>11. 不要害怕寻求帮助</strong></p><p>但是当你自己不能解决某些问题的时候，你不应该害怕寻求帮助。有时候你可能会卡在一个问题上，并且花了大量的时间来搜索解决方案。</p><p>寻求支持并不丢脸。你的部分或所有同事都会得到更高的工资，这是有原因的，因为他们更有经验。大部分时候他们都是乐于帮助你的，并且还会抓住机会给你讲解一些编程知识。</p><p><strong>12. 不要拿自己和其他人去做比较</strong></p><p>在你的职业生涯和生活中，你会不停地拿自己和其他人做比较。你可能会自然地这样做，因为这会帮助你弄清楚你位于世界的哪个位置，帮你找到人生方向。</p><p>但有时候进步的最好方式是拿你和你的昨天或者你的过去进行比较。用这种方法思考肯定能让你不断地进步，减少受挫感，明确你的预期目标。</p><p><strong>13. 测试你的代码</strong></p><p>如果你测试了你的代码，软件的最终交付版本将会更加稳定和可预测。学习不同的测试类型（单元测试、集成测试等等），并且要很勤快地使用它们，因为这真的很重要。你预先做的测试越多，你今后的工作就会越轻松，你晚上睡觉也会更踏实。</p><p><strong>14. 学习如何调试</strong></p><p>你编写的代码并不总是会按照你所预期的那样精确运行，不过没关系，这很正常。但是，你需要掌握相关技能，找到问题的原因，并且做出必要的修复。</p><p>在定位 bug 时，需要弄清楚哪些调试技术是最适合你的。找一些有用的工具，这会让调试过程更加轻松。</p><p><strong>15. 要知道自己的身价</strong></p><p>去做一些调研，弄清楚你所在行业其他人的薪水如何，他们给公司带来了怎样的价值。了解这些东西会给你目前的工作带来一些认识，并且帮助你理解你的价值所在。</p><p>这个调研不仅可以用于薪水方面，还可以用于了解你给公司或者团队提供了哪些价值。</p><p><strong>16. 不要为了扩展而编写代码，除非这是必要的</strong></p><p>在构建和编写代码时，需要记住，将来有一天你可能需要扩展代码。但是不要在编码的第一天就去考虑扩展性，没必要这样，而且这肯定会让你淹没其中，并且拖慢开发速度。</p><p>准备好适应未来的增长，并且准备好创建相应的策略。但不要让你的代码库和团队陷入不断扩展代码的困境，除非这是必要的。如果你给火箭添加太多的重物，它可能都不能飞离地面。</p><p><strong>17. 在你知道代码是如何运行之后，可以复制粘贴</strong></p><p>诚恳地讲，每个人以前都有过复制粘贴代码的经历。不管这段代码是来自 StackOverflow，还是其他随便哪里的编程博客，这都没问题，只要你在复制粘贴前理解这段代码是做什么的。</p><p>对你要粘贴的代码，你需要知道自己在做什么，并且小心谨慎。记住，缓缓前行，不要破坏东西。</p><p><strong>18. 让周围人感到愉快，对他人友善</strong></p><p>当你身边围绕着很多人都愿意帮助你或者支持你的时候，生活会变得很轻松。但如果人们都不喜欢你，那生活就不可能很轻松了。</p><p>所以对人要友善（尽你所能），大部分时间里都要让周围的人感觉愉快。如果你能做到这一点，人们就会很喜欢你，如果人们很喜欢你，他们就愿意帮助你，你也会交到更多朋友。</p><p><strong>19. 为了提高产出，休息一会儿</strong></p><p>在整个工作日中保持 100% 的产出效率，这几乎是不可能的，如果你尝试这样做，那将会使你精疲力尽。设置一个计时器，让它提醒你站起来走一走，或者给你的咖啡续个杯。像番茄工作法这样的系统就可以在休息和提高效率方面起到很大的作用了（如果你想尝试一下，可以使用我们做的番茄工作法计时器（<a href="https://coderrocketfuel.com/tools/pomodoro-timer" target="_blank" rel="noopener"> https://coderrocketfuel.com/tools/pomodoro-timer </a>））。</p><p>此外大量的研究表明，适当休息是任何工作和学习过程的一个关键组成部分。休息能够很大程度上帮助学生更有效地学习东西，让他们的注意力保持更长的时间。</p><p><strong>20. 少说多听</strong></p><p>不管你是想赢得一场辩论，变得更讨人喜欢，还是说服某人，倾听都是一个获得重要信息的很关键的方式，他会让你显得更值得信任和尊重。</p><p>你很可能是与一些真正聪明的人一起工作，他们中的一些人甚至比你更聪明。于是他们可能有一些编程或者生活上的知识能够传授给你，如果你说太多话，可能就会错过这样的机会。</p><p><strong>21. 去做那些让你害怕的项目</strong></p><p>无论是在你的职业生涯中，还是在编程技能方面，不断扩展你的舒适区都是相当重要的。去做一些让你有点害怕的项目，扩展你的舒适区，这会让你变成一个更好的开发者，你的职业生涯也会进步得更快。</p><p>你需要经历一些痛苦和恐惧，这样才能成长。要做到这样，你需要去寻找一些能扩展你舒适区的事情去做。</p><p><strong>22. 给函数和变量提供描述性的命名</strong></p><p>你会希望你的代码尽可能容易理解。让别人更容易阅读你的代码的方式之一，就是给你的函数和变量起一个能描述他们做什么和代表什么的好名字。</p><p>例如有一个函数名叫 aDopeFunctionIMade，这就不是一个好名字，而另一个函数名 calculateCartTotal，它就是一个很好的名字。</p><p><strong>23. 编写描述性好的代码注释</strong></p><p>另外一种能让你的代码更容易阅读的方式就是给代码添加注释，注释能够解释你的代码为什么要这样做，以及你的代码都做了什么。编写注释并不难，只需要花点精力把注释包含到代码里去就可以啦。</p><p>这个方法和上面那个写出具有描述性的函数和变量名字的方法通常是同时使用的。</p><p><strong>24. 习惯于有建设性的批评</strong></p><p>在工作中，你可能从不会享受于接受批评。但为了变得更好，你需要习惯于接受批评，不要对这些批评产生情绪。</p><p>如果你的代码写得很糟糕，你难道不希望有其他人给你指出来吗？相反的一种方式就是别人看到了问题代码也不会告诉你，这将更糟糕。如果你欣然接受批评，你会因此而受到别人的尊敬，你自己也能够改进你的技能。</p><p><strong>25. 找到你的立足点</strong></p><p>在科技行业，你可能会在很多不同的领域都做得很成功。找到你最感兴趣或者最擅长的领域，在这个领域成为一个专家。在你的立足点上成为一个专家，会给你带来影响力，把你从一件商品变为你的公司或者你所在行业的必需品。但是这个说起来容易，做起来难，你可能需要花些时间才能弄清楚你的立足点在哪里。</p><p><strong>26. 学一点商业方面的知识</strong></p><p>花点时间去了解你所在公司或者团队的一些业务方面的知识。销售人员整天都在做些什么，他们为何有价值？会计或者市场营销人员的情况又如何？</p><p>你不必成为这些领域的专家。但是理解一些业务情况，将会让你对工作有更好的理解，并且能帮助你为公司和团队的整体目标创造更多价值。</p><p><strong>27. 在传授别人知识和与他人分享的过程中学习</strong></p><p>protégé效应是一种心理现象，说的是向别人传授或假装传授信息时能够让你更好地（相比不使用这种方法时）学习这些信息。这一点适用于很多领域，但编程领域尤其如此。</p><p>你可以向队友或者同事传授一些知识，或者可以开始维护个人编程博客，编写教程，向他人传授编程的概念。把你传授的知识汇总起来，以让其他人也能够学习到，这将极大地提高你自己对这些主题的理解。</p><p><strong>28. 花点时间好好写写文档</strong></p><p>这是很多程序员忽略的一点。但是好的文档能帮助你和其他人抓住你的代码或者项目的精髓。</p><p>如果你写出的文档组织很有条理，综合性强，可读性强，那么你的代码或者项目就更容易使用，人们也就会更愿意来使用它。</p><p><strong>29. 尽可能避免不必要的会议</strong></p><p>尽管公司会议在传达思想，建立项目目标方面极其有帮助，但如果你不好好管理会议进度，这也可能会成为不可思议的时间吞噬器。在你工作的地方总有一些人喜欢发起会议，而不去想他们是否真的需要这些会议。</p><p>你需要学习一些委婉拒绝他们的技巧，而同时又和他们保持良好的工作关系。或者你可能需要学习向人们说“不”的艺术，并且欣然接受说“不“而带来的结果。</p><p><strong>30. 掌控你自己的工具箱</strong></p><p>任何精通这一行的人都有一个工具箱，里面装满了工具，他们对这些工具的里里外外都了如指掌，他们通过使用这些工具来完成工作。他们非常了解其中每一件工具，并把他们当做自己能力的延伸。</p><p>作为一名程序员，你应当构建自己的工具袋。精通你所选的文本编辑器，以最大化你的产出，或者找一个你喜欢使用的测试框架。你需要了解哪些工具是服务于什么样的目的的。并且要知道每一件工具为何会比另外一件工具更适用于某个场景。</p><p><strong>31. 每隔一段时间就去尝试一种新的语言</strong></p><p>不要做过头，但也要每隔一段时间就去尝试一种新的语言。使用一种新的语言，将会让你或多或少从不同的角度去思考问题，思考问题的方式会和你正在使用的语言不太一样。</p><p>这些新的思考途径，将帮助你在使用当前的和 / 或今后的语言时，全面提高解决问题的能力。</p><p><strong>32. 努力保持身体健康</strong></p><p>编程是一项需要长时间坐在位子上的职业。你会很多天都坐在桌子前（顺便说一下，可以考虑入手一张站式桌子），看着电脑屏幕。久而久之，如果你不努力保持健康的话，这样的工作方式就会给你的身体带来负面影响。</p><p>每周计划锻炼 2~3 天，每天保证 8 个小时的睡眠，并且计划一些外出活动，这些活动不要涉及到编程。这会帮助你过上更健康的生活，这将渗透到你的编程生涯中。</p><p><strong>33. 建立能让你沉迷的东西</strong></p><p>不是每天的工作都会给你走在阳光里的感觉。但如果你把工作时间花在你觉得有影响力或者很酷的事情上，你将会经历很多美好的日子，而不是糟糕的日子。</p><p>你在业余时间或者工作时间中创造的酷酷的东西越多，你在自己的领域得到的认可也就越多，机会也就越多。</p><p><strong>34. 绝不放弃</strong></p><p>生活很艰难，编程也很艰难。可能会有很多次，你都会产生强烈的、要退出的想法。当那些时刻发生时，你要意识到每个人都会经历这些。如果你想作为一名程序员在你的职业生涯中保持成长，你就需要从这些困境里获取力量。</p><p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p><p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;a href=&quot;#成为一流软件开发者的34条建议&quot; class=&quot;headerlink&quot; title=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;/a&gt;成为一流软件开发者的34条建议&lt;/h1&gt;&lt;p&gt;我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。&lt;/p&gt;
+&lt;p&gt;这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 规划方法 &amp;amp; 在编码前先写伪代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。&lt;/p&gt;
+&lt;p&gt;在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。&lt;/p&gt;
+&lt;p&gt;作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 总是寻找新东西来学习&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。&lt;/p&gt;
+&lt;p&gt;你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/tags/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Kettle将mysql数据同步到Elasticsearch中</title>
+    <link href="https://blog.songuo.tech/p/efd6f6f6.html"/>
+    <id>https://blog.songuo.tech/p/efd6f6f6.html</id>
+    <published>2020-04-16T12:55:00.000Z</published>
+    <updated>2020-04-20T03:10:58.548Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用Kettle将mysql数据同步到Elasticsearch中"><a href="#使用Kettle将mysql数据同步到Elasticsearch中" class="headerlink" title="使用Kettle将mysql数据同步到Elasticsearch中"></a>使用Kettle将mysql数据同步到Elasticsearch中</h1><h2 id="整体流程图如下"><a href="#整体流程图如下" class="headerlink" title="整体流程图如下"></a>整体流程图如下</h2><h2 id="获取配置信息"><a href="#获取配置信息" class="headerlink" title="获取配置信息"></a>获取配置信息</h2><h2 id="将数据字段进行清洗"><a href="#将数据字段进行清洗" class="headerlink" title="将数据字段进行清洗"></a>将数据字段进行清洗</h2><h2 id="将附件进行下载抽取"><a href="#将附件进行下载抽取" class="headerlink" title="将附件进行下载抽取"></a>将附件进行下载抽取</h2><h2 id="根据规则查看ID文档是否存在"><a href="#根据规则查看ID文档是否存在" class="headerlink" title="根据规则查看ID文档是否存在"></a>根据规则查看ID文档是否存在</h2><h2 id="将结构化信息提交"><a href="#将结构化信息提交" class="headerlink" title="将结构化信息提交"></a>将结构化信息提交</h2><h2 id="回写ES的文档id"><a href="#回写ES的文档id" class="headerlink" title="回写ES的文档id"></a>回写ES的文档id</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用Kettle将mysql数据同步到Elasticsearch中&quot;&gt;&lt;a href=&quot;#使用Kettle将mysql数据同步到Elasticsearch中&quot; class=&quot;headerlink&quot; title=&quot;使用Kettle将mysql数据同步到Elasticsearch中&quot;&gt;&lt;/a&gt;使用Kettle将mysql数据同步到Elasticsearch中&lt;/h1&gt;&lt;h2 id=&quot;整体流程图如下&quot;&gt;&lt;a href=&quot;#整体流程图如下&quot; class=&quot;headerlink&quot; title=&quot;整体流程图如下&quot;&gt;&lt;/a&gt;整体流程图如下&lt;/h2&gt;&lt;h2 id=&quot;获取配置信息&quot;&gt;&lt;a href=&quot;#获取配置信息&quot; class=&quot;headerlink&quot; title=&quot;获取配置信息&quot;&gt;&lt;/a&gt;获取配置信息&lt;/h2&gt;&lt;h2 id=&quot;将数据字段进行清洗&quot;&gt;&lt;a href=&quot;#将数据字段进行清洗&quot; class=&quot;headerlink&quot; title=&quot;将数据字段进行清洗&quot;&gt;&lt;/a&gt;将数据字段进行清洗&lt;/h2&gt;&lt;h2 id=&quot;将附件进行下载抽取&quot;&gt;&lt;a href=&quot;#将附件进行下载抽取&quot; class=&quot;headerlink&quot; title=&quot;将附件进行下载抽取&quot;&gt;&lt;/a&gt;将附件进行下载抽取&lt;/h2&gt;&lt;h2 id=&quot;根据规则查看ID文档是否存在&quot;&gt;&lt;a href=&quot;#根据规则查看ID文档是否存在&quot; class=&quot;headerlink&quot; title=&quot;根据规则查看ID文档是否存在&quot;&gt;&lt;/a&gt;根据规则查看ID文档是否存在&lt;/h2&gt;&lt;h2 id=&quot;将结构化信息提交&quot;&gt;&lt;a href=&quot;#将结构化信息提交&quot; class=&quot;headerlink&quot; title=&quot;将结构化信息提交&quot;&gt;&lt;/a&gt;将结构化信息提交&lt;/h2&gt;&lt;h2 id=&quot;回写ES的文档id&quot;&gt;&lt;a href=&quot;#回写ES的文档id&quot; class=&quot;headerlink&quot; title=&quot;回写ES的文档id&quot;&gt;&lt;/a&gt;回写ES的文档id&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="全文检索" scheme="https://blog.songuo.tech/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+    
+      <category term="elasticsearch" scheme="https://blog.songuo.tech/tags/elasticsearch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title>
+    <link href="https://blog.songuo.tech/p/448e437.html"/>
+    <id>https://blog.songuo.tech/p/448e437.html</id>
+    <published>2020-04-16T08:30:00.000Z</published>
+    <updated>2020-04-20T03:10:28.549Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ETL报错："><a href="#ETL报错：" class="headerlink" title="ETL报错："></a>ETL报错：</h2><p><strong>Unexpected problem reading shared objects from XML file : null</strong></p><p>当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”</p><p>“Unexpected problem reading shared objects from XML file : null”…</p><p>保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“</p><p> ”Unexpected problem reading shared objects from XML file :“</p><h2 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h2><p>​    这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。</p><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 <sharedobjects>…</sharedobjects>之间的内容，可解决这个问题；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192104994.png" alt="img"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ETL报错：&quot;&gt;&lt;a href=&quot;#ETL报错：&quot; class=&quot;headerlink&quot; title=&quot;ETL报错：&quot;&gt;&lt;/a&gt;ETL报错：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Unexpected problem reading shared objects from XML file : null&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”&lt;/p&gt;
+&lt;p&gt;“Unexpected problem reading shared objects from XML file : null”…&lt;/p&gt;
+&lt;p&gt;保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“&lt;/p&gt;
+&lt;p&gt; ”Unexpected problem reading shared objects from XML file :“&lt;/p&gt;
+&lt;h2 id=&quot;问题原因：&quot;&gt;&lt;a href=&quot;#问题原因：&quot; class=&quot;headerlink&quot; title=&quot;问题原因：&quot;&gt;&lt;/a&gt;问题原因：&lt;/h2&gt;&lt;p&gt;​    这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。&lt;/p&gt;
+&lt;h2 id=&quot;解决方案：&quot;&gt;&lt;a href=&quot;#解决方案：&quot; class=&quot;headerlink&quot; title=&quot;解决方案：&quot;&gt;&lt;/a&gt;解决方案：&lt;/h2&gt;&lt;p&gt;​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 &lt;sharedobjects&gt;…&lt;/sharedobjects&gt;之间的内容，可解决这个问题；&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据抽取" scheme="https://blog.songuo.tech/categories/%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%96/"/>
+    
+    
+      <category term="Kettle" scheme="https://blog.songuo.tech/tags/Kettle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx常用配置</title>
+    <link href="https://blog.songuo.tech/p/30985643.html"/>
+    <id>https://blog.songuo.tech/p/30985643.html</id>
+    <published>2020-04-15T07:26:53.000Z</published>
+    <updated>2020-04-20T03:02:44.279Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Nginx常用配置&quot;&gt;&lt;a href=&quot;#Nginx常用配置&quot; class=&quot;headerlink&quot; title=&quot;Nginx常用配置&quot;&gt;&lt;/a&gt;Nginx常用配置&lt;/h1&gt;&lt;h2 id=&quot;常用代理Server配置&quot;&gt;&lt;a href=&quot;#常用代理Server配置&quot; class=&quot;headerlink&quot; title=&quot;常用代理Server配置&quot;&gt;&lt;/a&gt;常用代理Server配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    listen       80;    &amp;#x2F;&amp;#x2F;监听的本地端口&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server_name  localhost;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api1&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api1&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api1&amp;#x2F;xxx;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api2&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api2&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;xxx;                    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api3 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api3&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api3&amp;#x2F;xxx;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api4 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api4&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;&amp;#x2F;xxx; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 请注意这里的双斜线,好好分析一下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api5&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;haha;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api5&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api4&amp;#x2F;hahaxxx;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 请注意这里的haha和xxx之间没有斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;携带Cookie配置&quot;&gt;&lt;a href=&quot;#携带Cookie配置&quot; class=&quot;headerlink&quot; title=&quot;携带Cookie配置&quot;&gt;&lt;/a&gt;携带Cookie配置&lt;/h2&gt;&lt;p&gt;常用于cas单点登录跳转&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;unstream 10api &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server 192.168.1.10:8080;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;server&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location ^~ &amp;#x2F;prod-api&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_cookie_domain 10api $host;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_cookie_path &amp;#x2F;strategy &amp;#x2F;prod-api;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="nginx" scheme="https://blog.songuo.tech/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kettle数据抽取</title>
+    <link href="https://blog.songuo.tech/p/5c1c96f2.html"/>
+    <id>https://blog.songuo.tech/p/5c1c96f2.html</id>
+    <published>2020-04-15T04:30:00.000Z</published>
+    <updated>2020-04-20T03:10:28.549Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据库数据抽取&quot;&gt;&lt;a href=&quot;#数据库数据抽取&quot; class=&quot;headerlink&quot; title=&quot;数据库数据抽取&quot;&gt;&lt;/a&gt;数据库数据抽取&lt;/h2&gt;&lt;h2 id=&quot;抽取数据转换json&quot;&gt;&lt;a href=&quot;#抽取数据转换json&quot; class=&quot;headerlink&quot; title=&quot;抽取数据转换json&quot;&gt;&lt;/a&gt;抽取数据转换json&lt;/h2&gt;&lt;h2 id=&quot;数据存储&quot;&gt;&lt;a href=&quot;#数据存储&quot; class=&quot;headerlink&quot; title=&quot;数据存储&quot;&gt;&lt;/a&gt;数据存储&lt;/h2&gt;&lt;h2 id=&quot;附件文本抽取&quot;&gt;&lt;a href=&quot;#附件文本抽取&quot; class=&quot;headerlink&quot; title=&quot;附件文本抽取&quot;&gt;&lt;/a&gt;附件文本抽取&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="数据抽取" scheme="https://blog.songuo.tech/categories/%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%96/"/>
+    
+    
+      <category term="Kettle" scheme="https://blog.songuo.tech/tags/Kettle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>elasticsearch中英文混搜</title>
+    <link href="https://blog.songuo.tech/p/57eff7ce.html"/>
+    <id>https://blog.songuo.tech/p/57eff7ce.html</id>
+    <published>2020-04-15T03:55:00.000Z</published>
+    <updated>2020-04-20T03:02:44.275Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考地址：</p><ul><li><a href="https://blog.csdn.net/weixin_33725126/article/details/89702059" target="_blank" rel="noopener">https://blog.csdn.net/weixin_33725126/article/details/89702059</a></li><li><a href="https://blog.csdn.net/weixin_34148456/article/details/86002009" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34148456/article/details/86002009</a></li><li><a href="https://blog.csdn.net/zmx729618/article/details/80415984" target="_blank" rel="noopener">https://blog.csdn.net/zmx729618/article/details/80415984</a></li><li><a href="https://www.cnblogs.com/zhangyafei/p/11028927.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangyafei/p/11028927.html</a></li></ul><h2 id="mapping设置"><a href="#mapping设置" class="headerlink" title="mapping设置"></a>mapping设置</h2><h2 id="中文分词插件"><a href="#中文分词插件" class="headerlink" title="中文分词插件"></a>中文分词插件</h2><h2 id="英文分词插件"><a href="#英文分词插件" class="headerlink" title="英文分词插件"></a>英文分词插件</h2><h2 id="拼音搜索插件"><a href="#拼音搜索插件" class="headerlink" title="拼音搜索插件"></a>拼音搜索插件</h2><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_33725126/article/details/89702059&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/weixin_33725126/article/details/89702059&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_34148456/article/details/86002009&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/weixin_34148456/article/details/86002009&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/zmx729618/article/details/80415984&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/zmx729618/article/details/80415984&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/zhangyafei/p/11028927.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/zhangyafei/p/11028927.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;mapping设置&quot;&gt;&lt;a href=&quot;#mapping设置&quot; class=&quot;headerlink&quot; title=&quot;mapping设置&quot;&gt;&lt;/a&gt;mapping设置&lt;/h2&gt;&lt;h2 id=&quot;中文分词插件&quot;&gt;&lt;a href=&quot;#中文分词插件&quot; class=&quot;headerlink&quot; title=&quot;中文分词插件&quot;&gt;&lt;/a&gt;中文分词插件&lt;/h2&gt;&lt;h2 id=&quot;英文分词插件&quot;&gt;&lt;a href=&quot;#英文分词插件&quot; class=&quot;headerlink&quot; title=&quot;英文分词插件&quot;&gt;&lt;/a&gt;英文分词插件&lt;/h2&gt;&lt;h2 id=&quot;拼音搜索插件&quot;&gt;&lt;a href=&quot;#拼音搜索插件&quot; class=&quot;headerlink&quot; title=&quot;拼音搜索插件&quot;&gt;&lt;/a&gt;拼音搜索插件&lt;/h2&gt;&lt;h2 id=&quot;举例&quot;&gt;&lt;a href=&quot;#举例&quot; class=&quot;headerlink&quot; title=&quot;举例&quot;&gt;&lt;/a&gt;举例&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="全文检索" scheme="https://blog.songuo.tech/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+    
+      <category term="elasticsearch" scheme="https://blog.songuo.tech/tags/elasticsearch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几种常见的消息中间件对比</title>
+    <link href="https://blog.songuo.tech/p/5d4e7479.html"/>
+    <id>https://blog.songuo.tech/p/5d4e7479.html</id>
+    <published>2020-04-15T03:30:00.000Z</published>
+    <updated>2020-04-20T03:07:30.805Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常见消息中间件介绍"><a href="#常见消息中间件介绍" class="headerlink" title="常见消息中间件介绍"></a>常见消息中间件介绍</h1><p>当前使用较多的消息队列有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，而部分数据库如Redis、MySQL以及phxsql也可实现消息队列的功能。</p><a id="more"></a><h2 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h2><p>消息队列是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。</p><h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ于2007年发布，是一个在AMQP(高级消息队列协议)基础上完成的，可复用的企业消息系统，是当前最主流的消息中间件之一。</p><h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3><ol><li>可靠性：提供了多种技术可以让你在性能和可靠性之间进行权衡。这些技术包括持久性机制、投递确认、发布者证实和高可用性机制；</li><li>灵活的路由：消息在到达队列前是通过交换机进行路由的。RabbitMQ为典型的路由逻辑提供了多种内置交换机类型。如果你有更复杂的路由需求，可以将这些交换机组合起来使用，你甚至可以实现自己的交换机类型，并且当做RabbitMQ的插件来使用；</li><li>消息集群：在相同局域网中的多个RabbitMQ服务器可以聚合在一起，作为一个独立的逻辑代理来使用；</li><li>队列高可用：队列可以在集群中的机器上进行镜像，以确保在硬件问题下还保证消息安全；</li><li>支持多种协议：支持多种消息队列协议；</li><li>支持多种语言：用Erlang语言编写，支持只要是你能想到的所有编程语言；</li><li>管理界面：RabbitMQ有一个易用的用户界面，使得用户可以监控和管理消息Broker的许多方面；</li><li>跟踪机制：如果消息异常，RabbitMQ 提供消息跟踪机制，使用者可以找出发生了什么；</li><li>插件机制：提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。</li></ol><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol><li>由于Erlang语言的特性，消息队列性能较好，支持高并发；</li><li>健壮、稳定、易用、跨平台、支持多种语言、文档齐全；</li><li>有消息确认机制和持久化机制，可靠性高；</li><li>高度可定制的路由；</li><li>管理界面较丰富，在互联网公司也有较大规模的应用，社区活跃度高。</li></ol><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol><li>尽管结合 Erlang 语言本身的并发优势，性能较好，但是不利于做二次开发和维护；</li><li>实现了代理架构，意味着消息在发送到客户端之前可以在中央节点上排队。此特性使得RabbitMQ易于使用和部署，但是使得其运行速度较慢，因为中央节点 增加了延迟，消息封装后也比较大；需要学习比较复杂的接口和协议，学习和维护成本较高。</li></ol><h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ出自阿里的开源产品，用Java语言实现，在设计时参考了Kafka，并做出了自己的一些改进，消息可靠性上比Kafka更好。RocketMQ在阿里内部被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</p><h3 id="主要特性-1"><a href="#主要特性-1" class="headerlink" title="主要特性"></a>主要特性</h3><ol><li>基于 队列模型：具有高性能、高可靠、高实时、分布式等特点；</li><li>Producer、Consumer、队列都支持分布式；</li><li>Producer向一些队列轮流发送消息，队列集合称为Topic。Consumer如果做广播消费，则一个Consumer实例消费这个Topic对应的所有队列；如果做集群消费，则多个Consumer 实例平均消费这个Topic对应的队列集合；</li><li>能够保证严格的消息顺序；</li><li>提供丰富的消息拉取模式；</li><li>高效的订阅者水平扩展能力；</li><li>实时的消息订阅机制；</li><li>亿级消息堆积 能力；</li><li>较少的外部依赖。</li></ol><h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><ol><li>单机支持1万以上持久化队列；</li><li>RocketMQ的所有消息都是持久化的，先写入系统PAGECACHE，然后刷盘，可以保证内存与磁盘都有一份数据，而访问时，直接从内存读取。</li><li>模型简单，接口易用（JMS的接口很多场合并不太实用）；</li><li>性能非常好，可以允许大量堆积消息在Broker中；</li><li>支持多种消费模式，包括集群消费、广播消费等；</li><li>各个环节分布式扩展设计，支持主从和高可用；</li><li>开发度较活跃，版本更新很快。</li></ol><h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><ol><li>支持的 客户端语言不多，目前是Java及C++，其中C++还不成熟；</li><li>RocketMQ社区关注度及成熟度也不及前两者；</li><li>没有Web管理界面，提供了一个 CLI (命令行界面) 管理工具带来查询、管理和诊断各种问题；</li><li>没有在MQ核心里实现JMS等接口；</li></ol><h2 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h2><p>ActiveMQ是由Apache出品，ActiveMQ是一个完全支持JMS1.1和J2EE 1.4规范的JMS Provider实现。它非常快速，支持多种语言的客户端和协议，而且可以非常容易的嵌入到企业的应用环境中，并有许多高级功能。</p><h3 id="主要特性-2"><a href="#主要特性-2" class="headerlink" title="主要特性"></a>主要特性</h3><ol><li>服从JMS规范：JMS 规范提供了良好的标准和保证，包括：同步 或 异步 的消息分发，一次和仅一次的消息分发，消息接收和订阅等等。遵从JMS规范的好处在于，不论使用什么JMS实现提供者，这些基础特性都是可用的；</li><li>连接灵活性：ActiveMQ提供了广泛的连接协议，支持的协议有：HTTP/S，IP多播，SSL，TCP，UDP等等。对众多协议的支持让ActiveMQ拥有了很好的灵活性；</li><li>支持的协议种类多：OpenWire、STOMP、REST、XMPP、AMQP；</li><li>持久化插件和安全插件：ActiveMQ提供了多种持久化选择。而且，ActiveMQ的安全性也可以完全依据用户需求进行自定义鉴权和授权；</li><li>支持的客户端语言种类多：除了Java之外，还有：C/C++，.NET，Perl，PHP，Python，Ruby；</li><li>代理集群：多个ActiveMQ代理可以组成一个集群来提供服务；</li><li>异常简单的管理：ActiveMQ是以开发者思维被设计的。所以，它并不需要专门的管理员，因为它提供了简单又使用的管理特性。有很多中方法可以监控ActiveMQ不同层面的数据，包括使用在JConsole或者在ActiveMQ的WebConsole中使用JMX。通过处理JMX的告警消息，通过使用命令行脚本，甚至可以通过监控各种类型的日志。</li></ol><h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><ol><li>跨平台(JAVA编写与平台无关，ActiveMQ几乎可以运行在任何的JVM上)；</li><li>可以用JDBC：可以将数据持久化到数据库。虽然使用JDBC会降低ActiveMQ的性能，但是数据库一直都是开发人员最熟悉的存储介质；</li><li>支持JMS规范：支持JMS规范提供的统一接口;</li><li>支持自动重连和错误重试机制；</li><li>有安全机制：支持基于shiro，jaas等多种安全配置机制，可以对Queue/Topic进行认证和授权；</li><li>监控完善：拥有完善的监控，包括WebConsole，JMX，Shell命令行，Jolokia的RESTful API；</li><li>界面友善：提供的WebConsole可以满足大部分情况，还有很多第三方的组件可以使用，比如hawtio；</li></ol><h3 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h3><ol><li>社区活跃度不及RabbitMQ高；</li><li>根据其他用户反馈，会出莫名其妙的问题，会丢失消息；</li><li>目前重心放到activemq6.0产品Apollo，对5.x的维护较少；</li><li>不适合用于上千个队列的应用场景；</li></ol><h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Apache Kafka是一个分布式消息发布订阅系统。它最初由LinkedIn公司基于独特的设计实现为一个分布式的日志提交系统(a distributed commit log)，之后成为Apache项目的一部分。Kafka性能高效、可扩展良好并且可持久化。它的分区特性，可复制和可容错都是其不错的特性。</p><h3 id="主要特性-3"><a href="#主要特性-3" class="headerlink" title="主要特性"></a>主要特性</h3><ol><li>快速持久化：可以在O(1)的系统开销下进行消息持久化；</li><li>高吞吐：在一台普通的服务器上既可以达到10W/s的吞吐速率；</li><li>完全的分布式系统：Broker、Producer和Consumer都原生自动支持分布式，自动实现负载均衡；</li><li>支持同步和异步复制两种高可用机制；</li><li>支持数据批量发送和拉取；</li><li>零拷贝技术(zero-copy)：减少IO操作步骤，提高系统吞吐量；</li><li>数据迁移、扩容对用户透明；</li><li>无需停机即可扩展机器；</li><li>其他特性：丰富的消息拉取模型、高效订阅者水平扩展、实时的消息订阅、亿级的消息堆积能力、定期删除机制；</li></ol><h3 id="优点-3"><a href="#优点-3" class="headerlink" title="优点"></a>优点</h3><ol><li>客户端语言丰富：支持Java、.Net、PHP、Ruby、Python、Go等多种语言；</li><li>高性能：单机写入TPS约在100万条/秒，消息大小10个字节；</li><li>提供完全分布式架构，并有replica机制，拥有较高的可用性和可靠性，理论上支持消息无限堆积；</li><li>支持批量操作；</li><li>消费者采用Pull方式获取消息。消息有序，通过控制能够保证所有消息被消费且仅被消费一次；</li><li>有优秀的第三方KafkaWeb管理界面Kafka-Manager；</li><li>在日志领域比较成熟，被多家公司和多个开源项目使用。</li></ol><h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><ol><li>Kafka单机超过64个队列/分区时，Load时会发生明显的飙高现象。队列越多，负载越高，发送消息响应时间变长；</li><li>使用短轮询方式，实时性取决于轮询间隔时间；</li><li>消费失败不支持重试；</li><li>支持消息顺序，但是一台代理宕机后，就会产生消息乱序；</li><li>社区更新较慢。</li></ol><h1 id="常见消息中间就对比分析图"><a href="#常见消息中间就对比分析图" class="headerlink" title="常见消息中间就对比分析图"></a>常见消息中间就对比分析图</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/30dda6833f20181b27f3a08ba34f4db881d.jpg" alt="img"></p><h1 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h1><h2 id="从公司基础建设力量角度"><a href="#从公司基础建设力量角度" class="headerlink" title="从公司基础建设力量角度"></a>从公司基础建设力量角度</h2><ol><li>中小型软件公司，建议选RabbitMQ，一方面，erlang语言天生具备高并发的特性，而且他的管理界面用起来十分方便。他的弊端也在这里，虽然RabbitMQ是开源的，然而国内有几个能定制化开发erlang的程序员呢？所幸，RabbitMQ的社区十分活跃，可以解决开发过程中遇到的bug，这点对于中小型公司来说十分重要。不考虑RocketMQ和kafka的原因是，一方面中小型软件公司不如互联网公司，数据量没那么大，选消息中间件，应首选功能比较完备的，所以kafka排除。不考虑RocketMQ的原因是，RocketMQ是阿里出品，如果阿里放弃维护RocketMQ，中小型公司一般抽不出人来进行RocketMQ的定制化开发，因此不推荐。</li><li>大型软件公司，根据具体使用在RocketMQ和kafka之间二选一。一方面，大型软件公司，具备足够的资金搭建分布式环境，也具备足够大的数据量。针对RocketMQ,大型软件公司也可以抽出人手对RocketMQ进行定制化开发，毕竟国内有能力改JAVA源码的人，还是相当多的。至于kafka，根据业务场景选择，如果有日志采集功能，肯定是首选kafka了。</li></ol><h2 id="从业务场景角度出发"><a href="#从业务场景角度出发" class="headerlink" title="从业务场景角度出发"></a>从业务场景角度出发</h2><ol><li>RocketMQ定位于非日志的可靠消息传输（日志场景也OK），目前RocketMQ在阿里集团被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</li><li>Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache定级项目。Kafka主要特点是基于Pull的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，适合产生大量数据的互联网服务的数据收集业务。</li><li>RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内，对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;常见消息中间件介绍&quot;&gt;&lt;a href=&quot;#常见消息中间件介绍&quot; class=&quot;headerlink&quot; title=&quot;常见消息中间件介绍&quot;&gt;&lt;/a&gt;常见消息中间件介绍&lt;/h1&gt;&lt;p&gt;当前使用较多的消息队列有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，而部分数据库如Redis、MySQL以及phxsql也可实现消息队列的功能。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="消息中间件" scheme="https://blog.songuo.tech/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    
+      <category term="RabbitMQ" scheme="https://blog.songuo.tech/tags/RabbitMQ/"/>
+    
+      <category term="RocketMQ" scheme="https://blog.songuo.tech/tags/RocketMQ/"/>
+    
+      <category term="ActiveMQ" scheme="https://blog.songuo.tech/tags/ActiveMQ/"/>
+    
+      <category term="Kafka" scheme="https://blog.songuo.tech/tags/Kafka/"/>
+    
+      <category term="消息中间件" scheme="https://blog.songuo.tech/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>elasticsearch中父子关系文档</title>
+    <link href="https://blog.songuo.tech/p/3cb208bc.html"/>
+    <id>https://blog.songuo.tech/p/3cb208bc.html</id>
+    <published>2020-04-15T03:00:00.000Z</published>
+    <updated>2020-04-20T03:02:44.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考地址：</p><ul><li><a href="https://blog.csdn.net/hsj1213522415/article/details/97693509" target="_blank" rel="noopener">https://blog.csdn.net/hsj1213522415/article/details/97693509</a></li></ul><h2 id="为什么要有父子文档？"><a href="#为什么要有父子文档？" class="headerlink" title="为什么要有父子文档？"></a>为什么要有父子文档？</h2><ul><li><p>nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；</p></li><li><p>parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；</p></li></ul><h2 id="为什么父子文档性能好？"><a href="#为什么父子文档性能好？" class="headerlink" title="为什么父子文档性能好？"></a>为什么父子文档性能好？</h2><p>​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。</p><h2 id="父子文档核心"><a href="#父子文档核心" class="headerlink" title="父子文档核心"></a>父子文档核心</h2><p>​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。</p><h2 id="实例-带权限的全文检索"><a href="#实例-带权限的全文检索" class="headerlink" title="实例-带权限的全文检索"></a>实例-带权限的全文检索</h2><h3 id="建立mapping"><a href="#建立mapping" class="headerlink" title="建立mapping"></a>建立mapping</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">PUT &#x2F;company</span><br><span class="line">&#123;</span><br><span class="line">  &quot;mappings&quot;: &#123;</span><br><span class="line">    &quot;doc&quot;: &#123;&#125;,</span><br><span class="line">    &quot;employee&quot;: &#123;</span><br><span class="line">      &quot;_parent&quot;: &#123;</span><br><span class="line">        &quot;type&quot;: &quot;rd_center&quot; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/hsj1213522415/article/details/97693509&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/hsj1213522415/article/details/97693509&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;为什么要有父子文档？&quot;&gt;&lt;a href=&quot;#为什么要有父子文档？&quot; class=&quot;headerlink&quot; title=&quot;为什么要有父子文档？&quot;&gt;&lt;/a&gt;为什么要有父子文档？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;为什么父子文档性能好？&quot;&gt;&lt;a href=&quot;#为什么父子文档性能好？&quot; class=&quot;headerlink&quot; title=&quot;为什么父子文档性能好？&quot;&gt;&lt;/a&gt;为什么父子文档性能好？&lt;/h2&gt;&lt;p&gt;​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。&lt;/p&gt;
+&lt;h2 id=&quot;父子文档核心&quot;&gt;&lt;a href=&quot;#父子文档核心&quot; class=&quot;headerlink&quot; title=&quot;父子文档核心&quot;&gt;&lt;/a&gt;父子文档核心&lt;/h2&gt;&lt;p&gt;​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。&lt;/p&gt;
+&lt;h2 id=&quot;实例-带权限的全文检索&quot;&gt;&lt;a href=&quot;#实例-带权限的全文检索&quot; class=&quot;headerlink&quot; title=&quot;实例-带权限的全文检索&quot;&gt;&lt;/a&gt;实例-带权限的全文检索&lt;/h2&gt;&lt;h3 id=&quot;建立mapping&quot;&gt;&lt;a href=&quot;#建立mapping&quot; class=&quot;headerlink&quot; title=&quot;建立mapping&quot;&gt;&lt;/a&gt;建立mapping&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="全文检索" scheme="https://blog.songuo.tech/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+    
+      <category term="elasticsearch" scheme="https://blog.songuo.tech/tags/elasticsearch/"/>
+    
+      <category term="全文检索" scheme="https://blog.songuo.tech/tags/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在powerdesigner中执行SQL.通过SQL生成模型图</title>
+    <link href="https://blog.songuo.tech/p/be84d7b.html"/>
+    <id>https://blog.songuo.tech/p/be84d7b.html</id>
+    <published>2020-04-15T00:29:53.000Z</published>
+    <updated>2020-04-15T01:33:17.569Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="在powerdesigner中执行SQL-通过SQL生成模型图"><a href="#在powerdesigner中执行SQL-通过SQL生成模型图" class="headerlink" title="在powerdesigner中执行SQL.通过SQL生成模型图"></a>在powerdesigner中执行SQL.通过SQL生成模型图</h1><p> 通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图</p><p>方法:  在powerdesigner中.选择<strong>file</strong>—&gt;<strong>reverse engine</strong>—&gt;<strong>database</strong>—-&gt;选择相应的数据库版本,再把SQL导入执行即可.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;在powerdesigner中执行SQL-通过SQL生成模型图&quot;&gt;&lt;a href=&quot;#在powerdesigner中执行SQL-通过SQL生成模型图&quot; class=&quot;headerlink&quot; title=&quot;在powerdesigner中执行SQL.通过SQL生成模型图&quot;&gt;&lt;/a&gt;在powerdesigner中执行SQL.通过SQL生成模型图&lt;/h1&gt;&lt;p&gt; 通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图&lt;/p&gt;
+&lt;p&gt;方法:  在powerdesigner中.选择&lt;strong&gt;file&lt;/strong&gt;—&amp;gt;&lt;strong&gt;reverse engine&lt;/strong&gt;—&amp;gt;&lt;strong&gt;database&lt;/strong&gt;—-&amp;gt;选择相应的数据库版本,再把SQL导入执行即可.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="https://blog.songuo.tech/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="PD" scheme="https://blog.songuo.tech/tags/PD/"/>
+    
+      <category term="PowerDesigner" scheme="https://blog.songuo.tech/tags/PowerDesigner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PowerDesigner设计Name和Comment替换</title>
+    <link href="https://blog.songuo.tech/p/cab30bdb.html"/>
+    <id>https://blog.songuo.tech/p/cab30bdb.html</id>
+    <published>2020-04-15T00:26:53.000Z</published>
+    <updated>2020-04-20T03:13:47.748Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p><p> 在 PowerDesigner中操作如下</p><p>PowerDesigner—&gt;Tools—&gt;Execute Commands—&gt;Edit/Run Scripts 下执行就OK了</p><a id="more"></a><h2 id="把comment-覆盖name"><a href="#把comment-覆盖name" class="headerlink" title="把comment 覆盖name"></a>把comment 覆盖name</h2><p>方法如下：</p><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line"><span class="keyword">On</span> <span class="keyword">Error</span> <span class="keyword">Resume</span> <span class="keyword">Next</span></span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                  <span class="keyword">if</span> col.comment=<span class="string">""</span> <span class="keyword">then</span></span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        col.name=   col.comment </span><br><span class="line">                  <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.name   =   view.comment </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure><h2 id="将name覆盖comment"><a href="#将name覆盖comment" class="headerlink" title="将name覆盖comment"></a>将name覆盖comment</h2><p> 方法如下</p><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   This   routine   copy   name   into   comment   for   each   table,   each   column   and   each   view </span></span><br><span class="line"><span class="comment">'   of   the   current   folder </span></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.comment   =   tab.name </span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                        col.comment=   col.name </span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.comment   =   view.name </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;PowerDesigner设计Name和Comment-替换&quot;&gt;&lt;a href=&quot;#PowerDesigner设计Name和Comment-替换&quot; class=&quot;headerlink&quot; title=&quot;PowerDesigner设计Name和Comment 替换&quot;&gt;&lt;/a&gt;PowerDesigner设计Name和Comment 替换&lt;/h1&gt;&lt;p&gt;comment 是注释。name 是字段描述 &lt;/p&gt;
+&lt;p&gt; 在 PowerDesigner中操作如下&lt;/p&gt;
+&lt;p&gt;PowerDesigner—&amp;gt;Tools—&amp;gt;Execute Commands—&amp;gt;Edit/Run Scripts 下执行就OK了&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="https://blog.songuo.tech/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="PD" scheme="https://blog.songuo.tech/tags/PD/"/>
+    
+      <category term="PowerDesigner" scheme="https://blog.songuo.tech/tags/PowerDesigner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用gitlab实现项目协作</title>
+    <link href="https://blog.songuo.tech/p/1845ee0e.html"/>
+    <id>https://blog.songuo.tech/p/1845ee0e.html</id>
+    <published>2020-04-10T08:19:53.000Z</published>
+    <updated>2020-04-10T08:43:09.141Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用gitlab实现项目协作"><a href="#使用gitlab实现项目协作" class="headerlink" title="使用gitlab实现项目协作"></a>使用gitlab实现项目协作</h1><h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。</p><p>一、创建issue</p><p>​        新建issue时必须给issue设置一个或多个分类（即Labels），还可以指定由谁来处理该issue（即Assignee），设置处理该issue的截止日期（Due date）以及issue归属的里程碑（Milestone）。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163511.jpg" alt="images/create issue.jpg"></p><p>二、 issues列表</p><p>​        issues List为当期project下的所有issues,项目组成员在处理issue时需要做到以下几点：</p><ul><li>项目组成员要关注分配给自己的、状态为“Open”的issues。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163535.png" alt="images/image-20200210100911642"></p><ul><li>当issue已经处理完成，issue的处理者要及时地把issue的状态修改为关闭。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163803.png" alt="images/image-20200210102010576"></p><h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>标签允许我们使用描述性标题（如bug、需求）对问题进行分类，每个标签也有可定制的颜色，可以让我们快速动态地筛选和管理问题。</p><p>一、新建label</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163545.png" alt="images/image-20200210105850287"></p><p>二、 Labels列表</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163611.png" alt="images/image-20200210110113601"></p><h2 id="MileStones"><a href="#MileStones" class="headerlink" title="MileStones"></a>MileStones</h2><p>GitLab中的里程碑（MileStone）是一种跟踪问题的方法，以便在特定时间段内实现既定的目标。里程碑允许我们把安排问题到一个阶段，它具有可选的开始日期和可选的截止日期。</p><p>一、创建MileStone</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163623.png" alt="images/image-20200210111225816"></p><p>二、MileStone list</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163638.png" alt="images/image-20200210111540891"></p><h2 id="Board"><a href="#Board" class="headerlink" title="Board"></a>Board</h2><p>gitLab工单看板（board）可以帮助我们组工作和排列工作的优先级,免费版gitLab只能创建一个board。</p><p>一、添加list到board</p><p>​       添加list时会要求我们先选择label，选择完labels成功创建list后，board会出现以label名称命名的list。该list下会列出有该label标签的所有issues。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163648.png" alt="images/image-20200210120159151"></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163701.png" alt="images/image-20200210121515856"></p><p>一般情况下，我们会新增“待办”和”处理中“两个list来辅助项目任务的管理，团队成员间可以按照以下方式协作：</p><ul><li>项目经理将默认“open”列中的任务选择性地拖拽到“待办”列中。</li><li>项目成员需要关注“待办”列中的issues,已经开始着手处理的issues,需要从“待办”列拖拽到“处理中”列。</li><li>项目成员“处理”列中的某项任务以完成，需要及时地将issue拖拽到“closed”列中。</li><li>项目经理可以去检查“closed”列中的任务，若需要重新处理，可以将该任务再次拖拽到“处理中”列，此时需要在issue中添加comment描述，以便问题处理者能够知道任务完成的不足或者优化的具体要求。</li></ul><h2 id="Merge-Request"><a href="#Merge-Request" class="headerlink" title="Merge Request"></a>Merge Request</h2><p>master分支是受保护的，原则上是不允许直接在master上提交代码。所以我们需要用merge request来实现分支管理。上面提到，开发过程的每一个任务都以issue去记录，所以可以用以下方式去创建Merge Request：</p><ol><li>任务的接收者在master分支上对某个issue创建本地issue_xxx分支</li><li>完成任务后推送代码到issue_xxx分支</li><li>项目经理对代码进行Code Review，如果没发现问题 ，执行merge操作，经分支合并到主分支上；如果有发现问题 ，任务处理者继续在该分支上修改代码并重新push</li></ol><p>一、Create merge request</p><p>​        执行完上面的1、2后出现下图所示内容，点击按钮填写内容即可创建merge request：</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163715.png" alt="images/image-20200210152355513"></p><p>二、 Code Review</p><p>​        在Merge Requests列表页面选择进入要审核的request进行代码审核：</p><ul><li>审核不通过并添加描述</li></ul><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163724.png" alt=""></p><ul><li><p>审核通过并合并分支</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163735.png" alt="images/image-20200210153721528"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://blog.songuo.tech/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://blog.songuo.tech/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitlab添加问题模板</title>
+    <link href="https://blog.songuo.tech/p/7930ee41.html"/>
+    <id>https://blog.songuo.tech/p/7930ee41.html</id>
+    <published>2020-04-10T07:19:53.000Z</published>
+    <updated>2020-04-10T10:09:55.503Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul><li><p>在项目中找到文件夹 <code>.gitlab</code>（和 <code>.git</code> 是在同一目录），创建文件夹 <code>issue_templates</code></p></li><li><p>在文件夹 <code>issue_templates</code>下添加一个<code>.md</code>的文件，如<code>bug.md</code></p></li><li><p>将添加的文件推送到服务器分支上，合并</p></li><li><p>最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 <code>bug</code><br>这样就可以了</p></li></ul><a id="more"></a><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;gitlab-添加问题-任务模板&quot;&gt;&lt;a href=&quot;#gitlab-添加问题-任务模板&quot; class=&quot;headerlink&quot; title=&quot;gitlab 添加问题/任务模板&quot;&gt;&lt;/a&gt;gitlab 添加问题/任务模板&lt;/h2&gt;&lt;h3 id=&quot;操作步骤：&quot;&gt;&lt;a href=&quot;#操作步骤：&quot; class=&quot;headerlink&quot; title=&quot;操作步骤：&quot;&gt;&lt;/a&gt;操作步骤：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在项目中找到文件夹 &lt;code&gt;.gitlab&lt;/code&gt;（和 &lt;code&gt;.git&lt;/code&gt; 是在同一目录），创建文件夹 &lt;code&gt;issue_templates&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在文件夹 &lt;code&gt;issue_templates&lt;/code&gt;下添加一个&lt;code&gt;.md&lt;/code&gt;的文件，如&lt;code&gt;bug.md&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将添加的文件推送到服务器分支上，合并&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 &lt;code&gt;bug&lt;/code&gt;&lt;br&gt;这样就可以了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://blog.songuo.tech/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://blog.songuo.tech/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>word转md文件</title>
+    <link href="https://blog.songuo.tech/p/d44f2022.html"/>
+    <id>https://blog.songuo.tech/p/d44f2022.html</id>
+    <published>2020-04-09T09:34:00.000Z</published>
+    <updated>2020-04-09T09:56:58.419Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用Pandoc转换</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Docx to markdown, including math:</span><br><span class="line">$ pandoc -s example30.docx -t markdown -o example35.md</span><br></pre></td></tr></table></figure><p><a href="https://pandoc.org/demos.html" target="_blank" rel="noopener">更多命令参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      word转md文件
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://blog.songuo.tech/categories/hexo/"/>
+    
+    
+      <category term="pandoc" scheme="https://blog.songuo.tech/tags/pandoc/"/>
+    
+      <category term="word" scheme="https://blog.songuo.tech/tags/word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>要素式审核-资料</title>
+    <link href="https://blog.songuo.tech/p/4d915dad.html"/>
+    <id>https://blog.songuo.tech/p/4d915dad.html</id>
+    <published>2020-04-09T09:29:53.000Z</published>
+    <updated>2020-04-10T08:40:33.314Z</updated>
+    
+    <content type="html"><![CDATA[<p>TODO pdf在线预览<br>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="/pdf/web/viewer.html?file=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf" target="_blank" rel="noopener">下载</a>】</p><p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>]]></content>
+    
+    <summary type="html">
+    
+      要素式审核资料收集
+    
+    </summary>
+    
+    
+      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用法律文书收集</title>
+    <link href="https://blog.songuo.tech/p/71b20ea9.html"/>
+    <id>https://blog.songuo.tech/p/71b20ea9.html</id>
+    <published>2020-04-09T09:03:53.000Z</published>
+    <updated>2020-04-09T09:28:32.759Z</updated>
+    
+    <content type="html"><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>]]></content>
+    
+    <summary type="html">
+    
+      常用法律文书收集
+    
+    </summary>
+    
+    
+      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>诉讼费收费标准</title>
+    <link href="https://blog.songuo.tech/p/1b9b841c.html"/>
+    <id>https://blog.songuo.tech/p/1b9b841c.html</id>
+    <published>2020-04-09T07:19:53.000Z</published>
+    <updated>2020-04-09T07:47:11.941Z</updated>
+    
+    <content type="html"><![CDATA[<p>案件受理费交纳标准：</p><p>　　＜1万               50元</p><p>　　1万至10万            ×2.5%-200</p><p>　　10万至20万            ×2%+300</p><p>　　20万至50万            ×1.5%+1300</p><p>　　50万至100万           ×1%+3800</p><p>　　100万至200万           ×0.9%+4800</p><p>　　200万至500万           ×0.8%+6800</p><p>　　500万至1000万          ×0.7%+11800</p><p>　　1000万至2000万          ×0.6%+21800</p><p>　　2000万以上            ×0.5%+41800</p><p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p><p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p><p>　　适用简易程序审理的案件减半交纳案件受理费。</p><p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>]]></content>
+    
+    <summary type="html">
+    
+      案件受理费交纳标准
+    
+    </summary>
+    
+    
+      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在线预览，互联网解决方案</title>
+    <link href="https://blog.songuo.tech/p/44b14d3b.html"/>
+    <id>https://blog.songuo.tech/p/44b14d3b.html</id>
+    <published>2020-04-08T16:00:00.000Z</published>
+    <updated>2020-04-09T08:06:09.430Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用微软在线预览<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;view.officeapps.live.com&#x2F;op&#x2F;view.aspx?src&#x3D;offcie链接地址</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      office在线预览
+    
+    </summary>
+    
+    
+      <category term="office" scheme="https://blog.songuo.tech/categories/office/"/>
+    
+      <category term="在线预览" scheme="https://blog.songuo.tech/categories/office/%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/"/>
+    
+    
+      <category term="在线预览" scheme="https://blog.songuo.tech/tags/%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/"/>
+    
+      <category term="office" scheme="https://blog.songuo.tech/tags/office/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo中预览pdf</title>
+    <link href="https://blog.songuo.tech/p/214f0223.html"/>
+    <id>https://blog.songuo.tech/p/214f0223.html</id>
+    <published>2020-04-08T16:00:00.000Z</published>
+    <updated>2020-04-09T07:46:58.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p><h1 id="实现-安装插件"><a href="#实现-安装插件" class="headerlink" title="实现 安装插件"></a>实现 安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在Markdown文档中添加pdf<br>本地资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf  test.pdf %&#125;</span><br></pre></td></tr></table></figure><p>在线资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt; **监督学习**&lt;&#x2F;center&gt; # 居中</span><br><span class="line">&#123;% pdf https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;afshinea&#x2F;stanford-cs-229-machine-learning&#x2F;4d5ac4e620be8b63b6f889ecff667b7ebac008a8&#x2F;zh&#x2F;cheatsheet-supervised-learning.pdf %&#125;</span><br></pre></td></tr></table></figure><h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><h2 id="github上pdf的显示"><a href="#github上pdf的显示" class="headerlink" title="github上pdf的显示"></a>github上pdf的显示</h2><p>要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是<strong>raw.githubusercontent.com</strong>的域名，可以通过F12来查看。</p>]]></content>
+    
+    <summary type="html">
+    
+      hexo pdf预览
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://blog.songuo.tech/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://blog.songuo.tech/tags/hexo/"/>
+    
+      <category term="pdf" scheme="https://blog.songuo.tech/tags/pdf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>银行卡纠纷案件的审理流程与思路</title>
+    <link href="https://blog.songuo.tech/p/cd3adfb6.html"/>
+    <id>https://blog.songuo.tech/p/cd3adfb6.html</id>
+    <published>2020-04-08T16:00:00.000Z</published>
+    <updated>2020-04-09T07:44:48.829Z</updated>
+    
+    <content type="html"><![CDATA[<p>近日， 北京西城法院甘琳法官结合审判实践和理论研究， 总结梳理了欠款类银行卡纠纷案件、<br>盗刷类银行卡纠纷案件、 维权类银行卡纠纷案件等三类银行卡纠纷案件的审理流程与思路，<br>具有一定的实践价值。<br>一、 欠款类银行卡纠纷案件的审理流程与思路<br>（一） 案件审理的时间节点管理<br>（二） 程序问题的处理<br>（三） 实体审理中的常见抗辩事由及处理思路<br>二、 盗刷类银行卡纠纷案件的审理思路<br>（一） 民刑交叉情形下的受理<br>（二） 侵权责任或违约责任的认定<br>（三） 伪卡交易情形下举证责任的分配与责任认定<br>（四） 无卡交易情形下的举证责任分配与责任认定<br>三、 维权类银行卡纠纷案件的审理思路<br>（一） 主体资格的审查<br>（二） 格式条款的效力认定<br>（三） 增值业务效力的认定<br>一、 欠款类银行卡纠纷案件的审理流程与思路<br>欠款类银行卡纠纷案件， 指以发卡行作为原告， 以持卡人作为被告， 以持卡人经催收仍欠款<br>不予偿还为基础诉讼事实， 以要求持卡人偿还信用卡透支欠款本金、 利息、 手续费、 超限费<br>及滞纳金为诉讼请求的信用卡合同纠纷案件。 当前， 欠款类银行卡纠纷已经成为困扰银行的<br>一类高发纠纷， 也成为基层法院近年来审理数量较大的一类案件。 近年来， 欠款类银行卡案<br>件数量增长迅猛， 并呈现出标的额不断增加、 公告送达比例高、 被告到庭应诉率低、 案件审<br>理成本高等特点， 特别是人口流动加剧人户分离现状， 虚假填报申领表导致冒名申卡现象突<br>出等问题的出现， 给此类案件的审理带来了一定的困难。<br>（一） 案件审理的时间节点管理<br>欠款类银行卡案件在诉讼主体、 诉讼基础事实以及诉讼请求等要素上相对固定， 案件事实清<br>楚， 法律关系明确， 但由于案件数量大， 送达困难多， 司法辅助性工作量大， 因此在审判实<br>践中应注重提高效率， 形成规范化的审理流程。 为此， 我们制定了审理此类案件的时间节点<br>管理流程图及相应的具体工作要求。<br>1、 收案后 5 天内完成：<br>初步整理卷宗， 对案件进行分类、 筛查、 标注；<br>在高院身份信息查询系统中查询并打印当事人的户籍信息；<br>向被告所有联系地址邮寄起诉书、 证据材料、 到庭传票， 完成首次邮寄送达；<br>拨打被告所有联系电话， 并做好相应电话工作记录。</p><p>2、 收案后 5-20 天内完成：<br>对户籍地在北京市内的被告进行上门送达；<br>在高院裁判文书数据库中搜索被告有无在先的刑事判决， 准备向仍在北京市内监狱服刑的被<br>告进行送达；<br>筛除无身份证信息及无申请表原件的案件后， 制作批量开庭公告稿, 向人民法院报刊登公告。<br>3、 开庭公告见报后至开庭前完成：<br>委托外地法院送达的全部手续；<br>拨打被告无人接听的电话；<br>核实原告提交的证据原件， 如信用卡申请表原件、 交易明细， 甄别是否存在伪冒办卡情况；<br>向被告户籍地邮寄开庭传票， 完成第二次邮寄送达工作；<br>整理卷宗内文件， 核查邮单有无漏寄情况；<br>准备批量案件的开庭笔录；<br>草拟批量案件的裁判文书。<br>4、 开庭后 7 天内完成：<br>批量案件的裁判文书校核工作；<br>系统报结工作。<br>5、 案件报结后完成：<br>向被告户籍地邮寄送达判决书；<br>制作批量宣判公告稿， 向人民法院报刊登公告；<br>裁判文书上网工作；<br>60 日内完成卷宗归档。<br>（二） 程序问题的处理<br>1、 管辖权的确定<br>《中华人民共和国民事诉讼法》 第三十四条规定： “合同或者其他财产权益纠纷的当事人可<br>以书面协议选择被告住所地、 合同履行地、 合同签订地、 原告住所地、 标的物所在地等与争<br>议有实际联系的地点的人民法院管辖， 但不得违反本法对级别管辖和专属管辖的规定。 ”《最<br>高人民法院关于适用&lt;中华人民共和国民事诉讼法&gt;的解释》 第三十条规定：“根据管辖协议，<br>起诉时能够确定管辖法院的， 从其约定； 不能确定的， 依照民事诉讼法的相关规定确定管辖。”<br>对于欠款类银行卡纠纷案件的管辖， 由于信用卡领用合约中一般均有约定， 故应按约定进行<br>管辖。 少数案件如冒名申卡案件中， 被告与银行并未成立合同关系， 但合同关系是否成立应<br>是在案件实体审理中才能确定的事实， 因此仍可按领用协议中的约定管辖协议进行管辖。<br>2、 主体资格的审查<br>各银行的审核发卡机构一般为银行的信用卡中心， 由于部分银行的信用卡中心并不具备独立<br>诉讼的主体资格， 故发卡行多以本市分行一级的银行或者总行营业部作为原告进行诉讼。 司法实践中， 发卡行作为起诉依据的信用卡申领表上大多只有被告的签字， 没有银行的盖章，<br>领用合约中也没有表明与申卡人签订合同的具体主体。由于负责审核发卡的信用卡中心系隶<br>属于分行或总行营业部的机构， 故实践中一般认可提起诉讼的分行一级的银行或者总行营业<br>部作为原告的主体资格， 但该问题还需要进一步规范。 对于被告的身份信息， 一般应将原告<br>提交的起诉状中所列被告身份信息与证据中记载的被告身份信息进行比对， 审查两者是否一<br>致； 如当事人信息中含有身份证号的， 应在身份信息查询系统中进行核对， 如在身份信息查<br>询系统中查询不到被告身份信息， 应通知原告在一定期限内补充提交正确的材料。 如果原告<br>在一定期限内无法补充提交正确的材料， 应裁定驳回原告的起诉。<br>3、 送达的效力<br>在欠款类银行卡纠纷案件中， 大量案件存在送达困难的问题。 发卡行提供的被告地址一般为<br>持卡人的户籍地或者办卡申请表中被告填写的地址， 但是由于人口流动速度加快、 人户分离<br>现象突出、 申领人虚假填写地址等原因， 银行所提供的这些地址使得直接送达和邮寄送达方<br>式失效。 为了预防信用卡业务风险， 防范持卡人躲避透支信用卡后拖欠债务， 及时通过民事<br>诉讼主张权益， 部分银行在信用卡领用合约上约定了法律文书送达地址、 送达方式及送达后<br>果。 人民法院审理这类案件能否按照上述约定的方式及约定地址进行诉讼文书的送达， 且送<br>达后即发生法律效力， 实践中面临诸多复杂情形， 各地法院做法不一。<br>对于此类案件， 我们认为， 首先应当按照原告提供的联系方式进行送达； 如果没有找到， 应<br>当按照被告的户籍地址送达； 在穷尽上述手段后， 仍然无法联系被告的， 应当告知银行， 进<br>行公告送达。 公告期满被告仍然没有应诉的， 依法进行缺席审判。<br>此类案件， 应当注意穷尽各种送达方式， 并且将各阶段的送达情况告知银行， 并制作工作笔<br>录备查。 这种方式将原告提供的联系方式作为首先送达的地址， 有保留地认可约定效力， 在<br>没有找到的情况下再采取其他手段。 司法实践中， 在决定采取公告送达前， 承办人员需要与<br>原告方进行最后一次核实， 询问其是否能够提供被送达人的其他有效联系方式， 告知其公告<br>送达的法律后果及公告费的负担等情形， 确定送达穷尽后启动公告送达。<br>（三） 实体审理中的常见抗辩事由及处理思路<br>1、 如持卡人称身份证曾丢失， 本人未填写过信用卡申请表， 信用卡申请表上持卡人签名系<br>伪造， 本人未收到过信用卡且未使用过信用卡进行过消费。 针对此情形， 需要持卡人提交身<br>份证丢失的证明， 审查申请表上填写的信息是否真实， 申请表上签名是否为本人所签。 必要<br>时需要对签名进行笔迹鉴定， 如签名确非持卡人所签， 再无其他证据证明涉案信用卡与持卡<br>人有关， 则应裁定驳回原告的起诉。<br>2、 持卡人到庭后答辩称他人基于某种原因要求持卡人协助办卡， 持卡人提供本人身份证并<br>填写信用卡申请表， 收到信用卡后交予他人或者指定邮寄地址要求发卡行将卡片直接邮寄给<br>他人， 由本人或者他人开卡， 他人持卡消费后不还款， 持卡人认为本人未实际使用信用卡故拒绝还款。 针对此情形， 因持卡人系信用卡实际申请人， 客观上为他人开卡及用卡提供了便<br>利条件， 其与实际使用人之间的信用卡借用关系不足以对抗发卡行基于信用卡领用合约对持<br>卡人的付款请求权， 依照合同相对性的基本原则， 持卡人应对涉案信用卡欠款承担清偿责任。<br>3、 持卡人到庭后答辩称虽填写了信用卡申领表， 但并未收到过信用卡， 信用卡消费与其无<br>关。 信用卡的申领、 使用流程一般为申请人从发卡行的分支机构或者代办机构处取得信用卡<br>申请表， 申请人填写信用卡申请表并向发卡行分支机构或者代办机构提交信用卡申请表， 发<br>卡行分支机构或者代办机构按照批次将信用卡申请表交由发卡行信用卡业务部门（信用卡中<br>心， 持独立营业执照） 审核， 发卡行信用卡业务部门审核申请表及申请人信用记录， 审核通<br>过后发卡行信用卡业务部门按照申请人选择的邮寄地址向持卡人送达信用卡卡片、 持卡人收<br>到卡片后使用留存的固话或者手机开卡。 针对持卡人提出未收到信用卡的情形， 一方面要求<br>发卡行就向申请人适当履行送达信用卡卡片义务提供证据， 发卡行可以向法院提交向申请人<br>送达卡片的挂号信、 特快专递的底联， 或者提交能够证明发卡行按照申请人留存的邮寄地址<br>邮寄卡片有人签收的证明， 同时按照时间或者逻辑顺序提交能够证明信用卡开卡或者信用卡<br>消费或者信用卡挂失等等与申请人有关的证明， 证明发卡行向申请人履行了送达信用卡卡片<br>的义务。<br>4、 持卡人到庭后答辩称虽填写了信用卡申领表， 也收到了信用卡， 但实际并未开卡， 信用<br>卡消费与其无关。 根据对上述 3 中信用卡申领及使用流程的描述， 针对持卡人提出信用卡收<br>到了但并未开卡的情形， 一方面要仔细核实信用卡领用合约中的有效开卡电话是否是申请人<br>提供， 是否与申请人有关， 一般情况下只要申请人在信用卡领用合约签名确认处签字确认，<br>即视为对有效开卡电话的认可。 同时要求发卡行就开卡申请是通过申请人留存的指定固话或<br>者手机提供证明， 后即使经过录音辨认实际开卡人确不是申请人本人， 但由于实际开卡人确<br>系使用了申请表中指定的固话或者手机开卡， 这实际造成了足以使发卡行相信其就是申请人<br>本人所为或者实际开卡人有代理权的表象， 根据表现代理的相关理论， 开卡的法律后果应由<br>申请人承担。<br>5、 持卡人到庭后答辩称虽填写了信用卡申领表也向发卡行递交了信用卡申领表， 但是在未<br>收到信用卡卡片前即通知发卡行信用卡客服要求停办信用卡， 持卡人与发卡行并未建立信用<br>卡合同关系。 后卡片被发卡行寄出后开卡消费， 持卡人不同意承担还款责任。 处理此种情形，<br>首先应对信用卡申领各环节中相关行为的法律性质有所认识： 发卡行向不特定的社会公众发<br>出信用卡申请表的行为视为要约邀请； 申请人接收信用卡申请表、按要求填写信用卡申请表，<br>表示接受信用卡领用合约相关条款的约束并签字确认视为要约； 要约到达受要约人时生效，<br>故申请人填写的信用卡申领表到达发卡行信用卡业务部门时生效， 在此过程中可以参照合同<br>法中关于要约撤回和要约撤销的相关规定处理； 发卡行信用卡业务部门收到信用卡申请表审<br>核予以批准视为承诺， 承诺应当以通知的方式作出， 发卡行信用卡业务部门将信用卡邮寄申<br>请人指定的地址， 申请人收到卡片即表明收到承诺的通知， 信用卡合同关系即成立。 因此，<br>要充分参照上述各行为的时间点以确认申请人与发卡行的信用卡领用关系是否成立。再此基<br>础上， 根据 3、 4 的处理思路进行进一步处理。</p><p>6、 持卡人到庭后答辩称信用卡领用合约中的相关条款系格式条款， 要求确认该条款无效。<br>对于格式条款的效力问题应综合分析， 应依据《中华人民共和国合同法》 第三十九、 四十条<br>以及最高人民法院《关于适用〈中华人民共和国合同法〉 若干问题的解释（二） 》 第九、 十<br>条的规定进行认定。 发卡行应对其已尽《中华人民共和国合同法》 第三十九条规定的合理的<br>提示和说明义务承担举证责任。 持卡人抄写信用卡申领表中关于“已阅读并了解免责限责条<br>款， 并同意接受上述条款内容” 等声明并签字的， 可以认定发卡行尽到合理的提示和说明义<br>务, 但持卡人有相反证据推翻的情形除外。 发卡行虽尽到合理的提示和说明义务， 但格式条<br>款属于《中华人民共和国合同法》 第四十条规定情形的， 应认定该格式条款无效。<br>7、 如果持卡人以信用卡被盗刷为由， 已经向公安机关报案， 要求法院依法中止本案的审理。<br>法院确实认为信用卡纠纷案件的审理需以刑事案件的审理结果为依据的， 应依据《中华人民<br>共和国民事诉讼法》 第一百五十条第（五） 项关于“本案必须以另一案的审理结果为依据，<br>而另一案尚未审结” 的规定中止审理； 如不需要以刑事案件的审理结果为依据的， 法院应当<br>依照《最高人民法院关于在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定》 中的第<br>十条的规定处理， 即“人民法院在审理经济纠纷案件中， 发现与本案有牵连， 但与本案不是<br>同一法律关系的经济犯罪嫌疑线索、 材料， 应将犯罪嫌疑线索、 材料移送有关公安机关或检<br>察机关查处， 经济纠纷案件继续审理。 ”<br>8、 如持卡人称其持有的信用卡透支消费确系其本人所为， 但由于其信用卡诈骗的行为已经<br>被公诉机关追究刑事责任， 持卡人已被判处过有期徒刑并判决退还赃款， 且赃款已经退回发<br>卡行， 故不同意支付透支消费产生的利息、 滞纳金及超限费等费用。 一方面， 持卡人恶意透<br>支构成犯罪的， 发卡行主张信用卡合同有效， 法院应予支持； 持卡人因信用卡诈骗的行为被<br>追究刑责不能对抗发卡行向其主张的民事权利， 发卡行作为债权人仍可向持卡人主张给付透<br>支款本息； 另一方面， 法院在查明赃款确已退回发卡行的前提下， 可在判决时在本金部分予<br>以扣除。<br>9、 如持卡人称发卡行提交的交易明细记录或清单为发卡行自行打印后加盖印章的证据， 不<br>认可交易明细记录或清单的证明效力。 根据《银行卡业务管理办法》 第三十九条规定， “发<br>卡银行依据密码等电子信息为持卡人办理的存取款、转账结算等各类交易所产生的电子信息<br>记录， 均为该项交易的有效凭据。 发卡行可凭交易明细记录或清单作为记账凭证。 ” 因此，<br>发卡行向法院提交的交易明细记录或清单是证明持卡人拖欠银行卡相关款项的证据， 也符合<br>法定的证据形式， 应当认定其证明效力。 持卡人若有异议， 应当提交相反的证据予以证明，<br>否则应承担举证不能的法律后果。<br>10、 如果持卡人称其最后一次透支还款后， 发卡行长期未向其主张权利已经超过 2 年诉讼时<br>效， 要求法院驳回发卡行的诉讼请求的， 一般可以参照以下情形处理： 一是发卡行在持卡人<br>关联账户直接扣划欠款本息的， 属于《最高人民法院关于审理民事案件适用诉讼时效制度若<br>干问题的规定》 第十条第（三） 项规定的诉讼时效中断事由的， 具有诉讼时效中断的效力。<br>二是持卡人关联账户中无余额可扣， 发卡行采取按约定在账户中增加透支额计息的方式主张<br>权利， 记载该内容的对账单寄送持卡人的， 诉讼时效期间中断。 三是发卡行按照持卡人在银<br>行卡领用合约上留下的电话、 通信地址催收债权， 持卡人未通知发卡行电话、 通信地址变更<br>导致上述催收通知没有实际到达持卡人的， 应认定催收行为具有诉讼时效中断的效力。 四是<br>发卡行将银行卡债权打包后委托专门公司、 律师事务所等单位催收的， 受托人以发卡行的名<br>义或者持卡人知道或者应当知道其是为发卡行催收的， 催收行为具有诉讼时效中断的效力。<br>二、 盗刷类银行卡纠纷案件的审理思路<br>盗刷类银行卡纠纷案件主要指因不法分子盗刷银行卡的行为而引发的持卡人要求发卡<br>行承担给付借记卡内被盗刷资金本息， 或者返还被发卡行扣划信用卡本息责任， 或者抗辩其<br>不应偿还被盗刷信用卡本息的银行卡纠纷案件。 盗刷类银行卡纠纷案件主要分为两类， 一类<br>为有卡片介质存在的银行卡盗刷案件， 如伪卡交易案件。 另一类为无卡片介质存在的银行卡<br>盗刷案件， 如涉及网上支付、 手机支付、 第三方支付的银行卡盗刷案件。 近两年， 因银行卡<br>盗刷而引发的银行卡纠纷案件的收案数量增长迅速， 由于缺乏统一的司法政策指导， 各地法<br>院在举证责任分配、 归责原则适用、 裁判尺度上亦不一致， 给审理此类案件带来了较大难度。<br>（一） 民刑交叉情形下的受理<br>在盗刷类银行卡纠纷案件中， 实施盗刷行为的犯罪嫌疑人应当是第一责任人， 但在司法实践<br>中， 由于犯罪嫌疑人逃亡下落不明， 难以向其主张权利， 故持卡人往往以发卡行、 特约商户、<br>收单行等作为被告提起诉讼， 请求其承担给付被盗刷款项本息损失的责任。 在银行卡纠纷案<br>件中， 同一主体之间， 因不同的法律事实分别违反了民商事、 刑事法律的规定， 民商事案件<br>和刑事案件应当分别受理和审理。<br>在盗刷类银行卡纠纷案件中， 由于发卡行与持卡人之间因申领银行卡行为而建立了民商事法<br>律关系， 故无论持卡人是基于合同法律关系还是侵权法律关系诉请发卡行承担卡内资金损失<br>责任的， 由于持卡人与发卡行之间存在着民商事法律关系， 则该案件均应作为民商事案件受<br>理， 而不能因为涉及到刑事犯罪而裁定不予受理， 或者受理后裁定驳回起诉。 如案件不需要<br>以刑事案件的审理结果为依据的， 人民法院应将刑事犯罪嫌疑材料移交公安、检察机关处理，<br>民商事纠纷案件继续审理。当事人一方以追赃程序未完成为由主张民商事纠纷案件不应受理<br>或者受理后应中止审理的， 人民法院应不予支持。<br>（二） 侵权责任或违约责任的认定<br>在盗刷类银行卡纠纷案件中， 不仅当事人起诉的法律依据不一致， 在理论和实务层面也都存<br>在不同的观点。<br>第一种观点认为， 由于申领和发放银行卡， 持卡人与发卡行之间形成了银行卡合同法律关系。<br>因此， 在持卡人或者发卡行基于银行卡合同而起诉对方当事人时， 当事人之间构成银行卡合<br>同法律关系。<br>第二种观点认为， 《商业银行法》 第 6 条规定： “商业银行应当保障存款人的合法权益不受<br>任何单位和个人的侵犯。 ” 《侵权责任法》 第 37 条规定： “宾馆、 商场、 银行、 车站、 娱<br>乐场所等公共场所的管理人或者群众性活动的组织者， 未尽到安全保障义务， 造成他人损害<br>的， 应当承担侵权责任。 因第三人的行为造成他人损害的， 由第三人承担侵权责任； 管理人<br>或者组织者未尽到安全保障义务的， 承担相应的补充责任。 ” 根据上述规定， 发卡行负有保<br>护持卡人卡内资金安全以及用卡环境安全的安全保障义务。持卡人以发卡行违反安全保障义<br>务造成卡内资金损失为由诉请判令发卡行承担侵权责任的， 当事人之间形成侵权法律关系。<br>第三种观点则认为， 在持卡人起诉发卡行的银行卡盗刷案件中， 存在违约与侵权的竞合。<br>笔者认为， 持卡人起诉发卡行， 请求发卡行承担银行卡被盗刷的责任， 宜认定为违约责任。<br>首先， 从立法渊源上看， 《侵权责任法》 第 37 条来源于最高人民法院《关于审理人身损害<br>赔偿案件适用法律若干问题的解释》 第 6 条“从事住宿、 餐饮、 娱乐等经营活动或者其他社<br>会活动的自然人、 法人、 其他组织， 未尽合理限度范围内的安全保障义务致使他人遭受人身<br>损害， 赔偿权利人请求其承担相应赔偿责任的， 人民法院应予支持” ， 故第 37 条宜理解为<br>人身权， 而非财产权。<br>其次， 第 37 条是一种补充责任， 承担补充责任应当有法律的明确规定， 不宜随意扩大解释。<br>条文明确将“银行” 与“宾馆、 商场、 银行、 车站、 娱乐场所等公共场所” 并列在一起， 作<br>为“管理人” 、 “群众性活动的组织者” 的定语， 应当说这种责任并非是在平等主体之间因<br>正常经营或商业行为应当承担的责任。<br>第三， 侵权责任法规定补充责任的目的在于双方之间没有合同关系， 或者合同中并没有对此<br>类责任作出明确的约定， 从公平正义上考虑， 在产生损害时应当承担一种补充责任。 而发卡<br>行与持卡人之间显然存在银行卡合同关系， 发卡行有义务保障持卡人账户内的资金安全， 故<br>不再适用此类侵权责任。<br>第四， 违约责任只需要持卡人证明发卡行违约即可， 并不需要证明发卡行的过错， 而侵权责<br>任需要持卡人证明发卡行的过错。 在持卡人本身举证能力较弱的情况下， 采用侵权责任不利<br>于对诉讼能力较弱的持卡人的保护。<br>（三） 伪卡交易情形下举证责任的分配与责任认定<br>举证责任分配， 实际上是在诉讼当事人之间分配事实的真伪得不到证明时所产生的败诉风<br>险。 因此， 如何确定举证责任， 是关系到伪卡交易案件中责任主体的认定的一个关键问题。<br>在司法实务中， 关于伪卡交易情形下， 发卡行的责任认定问题， 主要有三种处理思路： 第一<br>种思路是判决持卡人承担 100%的伪卡交易损失的责任， 这种思路将举证责任分配给持卡人，<br>由持卡人举证证明发卡行具有过错； 第二种思路是判决发卡行承担 100%的卡内资金损失的<br>责任， 这种思路将举证责任分配给发卡行， 由发卡行举证证明持卡人具有过错； 第三种思路<br>是按照过错比例判令发卡行、 持卡人分担卡内资金损失的责任。<br>笔者认为， 伪卡交易是指他人盗用银行卡信息和密码， 通过伪造或者变造银行卡卡片进行消<br>费、 取现、 转账的行为。<br>以下几方面事实是判断是否存在伪卡交易的重点：<br>一是确定争议的交易为哪几笔及争议交易发生的时间和地点；<br>二是确定争议的交易系伪卡所为；<br>三是发卡行无证据证明持卡人对伪卡交易具有过错。<br>在伪卡交易案件中， 应当在确定法律关系的基础上， 综合考虑发卡行与持卡人的经济地位、<br>承担风险的能力和举证能力进行举证责任的分配。 在银行卡盗刷案件中， 持卡人应当对伪卡<br>交易导致其银行卡账户内资金减少或者透支额度增加的事实承担初步举证责任。持卡人提供<br>了其持有的真卡、 在涉案时间内的用卡记录、 报警记录、 挂失记录或者刑事判决等证据材料<br>的几项或者全部， 可以判断存在伪卡交易的， 应当认定其尽到了初步举证责任。 发卡行、 收<br>单机构、 特约商户应对持卡人未尽妥善保管银行卡、 密码义务的事实， 承担举证责任。 如果<br>发卡行、 收单机构、 特约商户不能提供上述证据， 应当承担举证不能的法律后果。<br>一般情况下， 具备下列情形之一， 可以认定属于伪卡交易：<br>（一） 争议交易发生时、 发生地的监控录像显示持卡交易人并非持卡人本人；<br>（二） 存在不法分子安装摄像头等设备窃取银行卡信息、 密码等行为；<br>（三） 监控录像显示交易中的银行卡的样式、 颜色、 标记等与真实银行卡有较大差异；<br>（四） 结合交易发生地和持卡人持有的银行卡所在地、 交易时间等时空距离判断， 持卡人难<br>以使用同一张银行卡往返两地操作；<br>（五） 生效判决认定案涉交易系罪犯所为伪卡交易。 以上五种情况基本上可以作为判断存在<br>伪卡交易的情形。<br>（四） 无卡交易情形下的举证责任分配与责任认定<br>无卡交易情形下的银行卡盗刷纠纷， 主要指通过网上支付、 手机支付、 第三方支付等交易方<br>式导致持卡人银行卡账户内的资金被盗刷的案件。 在无卡交易的情形下， 由于持卡人账户内<br>的资金转移并未以银行卡卡片作为介质， 故此类案件在举证责任的分配和责任的认定上与伪<br>卡交易的案件存在一定的区别。<br>发卡行应当根据银行卡的种类、 交易类型、 支付金额等因素， 采用具有安全性的持卡人身份<br>认证方式。 身份认证方式是否具有安全性， 可综合其是否符合《电子签名法》 等法律、 法规<br>和业务规则的规定、是否达到行为当时通用技术水平下保障网上交易安全的技术标准等因素<br>进行综合判断。因身份认证不具有安全性而导致银行卡被盗刷的， 发卡行应当承担法律责任。<br>持卡人与发卡行签订银行卡合同时， 发卡行应将银行卡是否具有网上支付功能、 开通该功能<br>的方式和使用该功能的法律后果等情况告知持卡人。 发卡行未尽告知义务， 或者虽尽告知义<br>务， 但持卡人未同意， 发卡行单方开通该功能导致银行卡被盗刷的， 应承担相应的法律责任。<br>三、 维权类银行卡纠纷案件的审理思路<br>维权类银行卡纠纷案件主要指持卡人因发卡行收取费用、 开通业务、 提供服务等产生争<br>议而起诉发卡行， 要求维护自身合法权益的银行卡纠纷案件。 当前， 维权类银行卡纠纷案件<br>主要包括持卡人对银行卡合同中的格式条款有争议、 发卡行擅自为持卡人开通的增值业务、<br>持卡人对存入银行的欠款数额有争议、继承人要求支取被继承人的银行存款等多种类型的案<br>件。<br>（一） 主体资格的审查<br>在维权类银行卡纠纷案件中， 应注意与原告形成银行卡合同关系的主体是总行、 分行还是支<br>行。 由于自然人作为原告的诉讼能力相对较弱， 经常会出现被告主体错误或部分被告与案件<br>无关的情况， 此时应充分行使释明权， 告知其适格的被告。 如原告坚持由错误的被告承担责<br>任， 只要其与案件有利害关系， 由于有明确的被告， 也应当进行实体审理后驳回原告的诉讼<br>请求。<br>（二） 格式条款的效力认定<br>维权类银行卡案件往往涉及到格式条款的问题。 银行为持卡人提供相关金融服务时， 合同条<br>款由银行单方拟定， 为格式条款。 银行开展的业务有的较为复杂， 合同的格式条款中多有一<br>些专业术语和免责、 限责条款， 对于缺乏专业知识的持卡人而言， 其与发卡行在信息的掌握<br>上存在着不对称性， 其注意能力和交涉能力也处于劣势， 很难准确理解条款涵义和了解其<br>法律后果， 如果任由发卡行根据持卡人并不理解、 未真正同意的格式条款内容确定当事人之<br>间的权利和义务， 任意免责、 限责， 则对持卡人有失公平， 也有违民商法的诚实信用原则。<br>我国《合同法》 第 39 条规定了格式条款提供方的说明义务。 即： “采用格式条款订立合同<br>的， 提供格式条款的一方应当遵循公平原则确定当事人之间的权利和义务， 并采取合理的方<br>式提请对方注意免除或者限制其责任的条款， 按照对方的要求， 对该条款予以说明” 。 关于<br>说明义务的履行标准和程度， 最高人民法院《关于适用〈中华人民共和国合同法〉 若干问题<br>的解释（二） 》 （以下简称《合同法解释（二） 》 ） 第 6 条进行了规定， 即“采用足以引起<br>对方注意的文字、 符号、 字体等特别标识” 。<br>实践中， 对于格式条款争议， 发卡行应证明对上述条款履行说明义务， 并经相对人同意。 一<br>般来说， 银行会提供相对人声明已阅读全部材料， 充分了解并清楚知晓该业务的相关信息的<br>签字确认单。 在银行能够提供确认单， 且合同条款没有显失公平的情况下， 可以认定相应条<br>款的效力。<br>（三） 增值业务效力的认定<br>近年来， 各银行普遍针对银行卡开发出较多增值业务， 如短信提醒、 分期付款、 现金转存等<br>基本增值业务、 还有透支转账分期还款、 存贷两用、 提高临时额度并将大额消费自动转分期<br>等更为复杂的增值业务， 甚至还包括与商户合作开发的与银行自身业务无关的增值服务。<br>由于该类案件涉及的并非一般的银行卡业务， 故在审理时应当针对个案重点审查相关的法律<br>关系是否存在。<br>例如， 持卡人与发卡行基于信用卡的发卡建立了法律关系， 在申领协议中也有关于分期付款<br>的约定， 但发卡行开展了一项新的业务， 即在一定期限内提高信用卡的额度， 但单笔消费超<br>过一定数额即自动转为分期付款。这项业务并非双方基于信用卡发卡而产生的法律关系的内<br>容， 应审查双方是否有变更或增加合同内容的真实的意思表示。</p>]]></content>
+    
+    <summary type="html">
+    
+      银行卡纠纷案件的审理流程与思路
+    
+    </summary>
+    
+    
+      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
+    
+      <category term="信用卡纠纷" scheme="https://blog.songuo.tech/tags/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7/"/>
+    
+  </entry>
+  
+</feed>

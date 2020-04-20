@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="以下文章来源于CodeSheep ，作者hansonwong99 老大说：谁要再用double定义商品金额，就自己收拾东西走!先看现象涉及诸如float或者double这两种浮点型数据的处理时，偶尔总会有一些怪怪的现象，不知道大家注意过没，举几个常见的栗子：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="老大说：谁要再用double定义商品金额，就自己收拾东西走!">
+<meta property="og:url" content="https://blog.songuo.tech/p/23a9bdeb.html">
+<meta property="og:site_name" content="松果小站">
+<meta property="og:description" content="以下文章来源于CodeSheep ，作者hansonwong99 老大说：谁要再用double定义商品金额，就自己收拾东西走!先看现象涉及诸如float或者double这两种浮点型数据的处理时，偶尔总会有一些怪怪的现象，不知道大家注意过没，举几个常见的栗子：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png">
+<meta property="article:published_time" content="2020-04-20T02:40:00.000Z">
+<meta property="article:modified_time" content="2020-04-20T03:06:39.479Z">
+<meta property="article:author" content="松鼠">
+<meta property="article:tag" content="开发经验">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png">
+
+<link rel="canonical" href="https://blog.songuo.tech/p/23a9bdeb.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>老大说：谁要再用double定义商品金额，就自己收拾东西走! | 松果小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="松果小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">松果小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">松果小站博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-baidusitemap">
+
+    <a href="/baidusitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>baidusitemap</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/jooejooe" class="github-corner" title="GitHub" aria-label="GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/23a9bdeb.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="松鼠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="松果小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          老大说：谁要再用double定义商品金额，就自己收拾东西走!
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-20 10:40:00" itemprop="dateCreated datePublished" datetime="2020-04-20T10:40:00+08:00">2020-04-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">开发经验</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>以下文章来源于CodeSheep ，作者hansonwong99</p>
+<h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p>
+<a id="more"></a>
+<p><strong>典型现象（一）：条件判断超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（二）：数据转换超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（三）：基本运算超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（四）：数据自增超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure>
+<p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p>
+<p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p>
+<hr>
+<h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure>
+<p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p>
+<p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p>
+<p>我们不妨来简单思考一下：</p>
+<blockquote>
+<p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p>
+</blockquote>
+<p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p>
+<p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure>
+<p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p>
+<p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure>
+<p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p>
+<p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p>
+<p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p>
+<p>这就要谈一下浮点数的精度问题了。</p>
+<hr>
+<h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p>
+<p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p>
+<p><strong>1、符号部分（S）</strong></p>
+<p><code>0</code>-正 <code>1</code>-负</p>
+<p><strong>2、阶码部分（E）（指数部分）</strong>：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li>
+<li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li>
+</ul>
+<p><strong>3、尾数部分（M）</strong>：</p>
+<p>浮点数的精度是由尾数的位数来决定的：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li>
+<li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li>
+</ul>
+<p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p>
+<hr>
+<h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p>
+<p><strong>方法一：用字符串或者数组解决多位数问题</strong></p>
+<p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p>
+<p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p>
+<p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p>
+<p><strong>方法二：Java的大数类是个好东西</strong></p>
+<p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p>
+<p>Java的大数类位于<code>java.math</code>包下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p>
+<p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure>
+<p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\p\32d2b524.html" rel="bookmark">成为一流软件开发者的34条建议</a></div>
+    </li>
+  </ul>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" rel="tag"># 开发经验</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/32d2b524.html" rel="prev" title="成为一流软件开发者的34条建议">
+      <i class="fa fa-chevron-left"></i> 成为一流软件开发者的34条建议
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#老大说：谁要再用double定义商品金额，就自己收拾东西走"><span class="nav-text">老大说：谁要再用double定义商品金额，就自己收拾东西走!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先看现象"><span class="nav-text">先看现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因出在哪里？"><span class="nav-text">原因出在哪里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数的精度问题！"><span class="nav-text">浮点数的精度问题！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精度问题如何解决"><span class="nav-text">精度问题如何解决</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="松鼠"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">松鼠</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <script
+  async
+  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">©2020 by jooe</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">33k</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '7d37213f6cbb3348ef67',
+      clientSecret: 'bc1b9b6f6c11d5c8c5cc2e6fa0764c60d92d610a',
+      repo        : 'jooejooe.github.io',
+      owner       : 'jooejooe',
+      admin       : ['jooejooe'],
+      id          : 'e0a592d62961bd267ee3251e0f03ddd8',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
