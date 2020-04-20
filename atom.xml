@@ -128,7 +128,7 @@
     <link href="https://blog.songuo.tech/p/30985643.html"/>
     <id>https://blog.songuo.tech/p/30985643.html</id>
     <published>2020-04-15T07:26:53.000Z</published>
-    <updated>2020-04-20T03:02:44.279Z</updated>
+    <updated>2020-04-20T04:01:26.359Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -431,7 +431,7 @@
     <link href="https://blog.songuo.tech/p/71b20ea9.html"/>
     <id>https://blog.songuo.tech/p/71b20ea9.html</id>
     <published>2020-04-09T09:03:53.000Z</published>
-    <updated>2020-04-09T09:28:32.759Z</updated>
+    <updated>2020-04-20T04:02:06.116Z</updated>
     
     <content type="html"><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>]]></content>
     
@@ -473,6 +473,31 @@
   </entry>
   
   <entry>
+    <title>Hexo中预览pdf</title>
+    <link href="https://blog.songuo.tech/p/214f0223.html"/>
+    <id>https://blog.songuo.tech/p/214f0223.html</id>
+    <published>2020-04-08T16:00:00.000Z</published>
+    <updated>2020-04-09T07:46:58.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p><h1 id="实现-安装插件"><a href="#实现-安装插件" class="headerlink" title="实现 安装插件"></a>实现 安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在Markdown文档中添加pdf<br>本地资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf  test.pdf %&#125;</span><br></pre></td></tr></table></figure><p>在线资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt; **监督学习**&lt;&#x2F;center&gt; # 居中</span><br><span class="line">&#123;% pdf https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;afshinea&#x2F;stanford-cs-229-machine-learning&#x2F;4d5ac4e620be8b63b6f889ecff667b7ebac008a8&#x2F;zh&#x2F;cheatsheet-supervised-learning.pdf %&#125;</span><br></pre></td></tr></table></figure><h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><h2 id="github上pdf的显示"><a href="#github上pdf的显示" class="headerlink" title="github上pdf的显示"></a>github上pdf的显示</h2><p>要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是<strong>raw.githubusercontent.com</strong>的域名，可以通过F12来查看。</p>]]></content>
+    
+    <summary type="html">
+    
+      hexo pdf预览
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://blog.songuo.tech/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://blog.songuo.tech/tags/hexo/"/>
+    
+      <category term="pdf" scheme="https://blog.songuo.tech/tags/pdf/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在线预览，互联网解决方案</title>
     <link href="https://blog.songuo.tech/p/44b14d3b.html"/>
     <id>https://blog.songuo.tech/p/44b14d3b.html</id>
@@ -496,31 +521,6 @@
       <category term="在线预览" scheme="https://blog.songuo.tech/tags/%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/"/>
     
       <category term="office" scheme="https://blog.songuo.tech/tags/office/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo中预览pdf</title>
-    <link href="https://blog.songuo.tech/p/214f0223.html"/>
-    <id>https://blog.songuo.tech/p/214f0223.html</id>
-    <published>2020-04-08T16:00:00.000Z</published>
-    <updated>2020-04-09T07:46:58.520Z</updated>
-    
-    <content type="html"><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p><h1 id="实现-安装插件"><a href="#实现-安装插件" class="headerlink" title="实现 安装插件"></a>实现 安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在Markdown文档中添加pdf<br>本地资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf  test.pdf %&#125;</span><br></pre></td></tr></table></figure><p>在线资源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt; **监督学习**&lt;&#x2F;center&gt; # 居中</span><br><span class="line">&#123;% pdf https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;afshinea&#x2F;stanford-cs-229-machine-learning&#x2F;4d5ac4e620be8b63b6f889ecff667b7ebac008a8&#x2F;zh&#x2F;cheatsheet-supervised-learning.pdf %&#125;</span><br></pre></td></tr></table></figure><h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><h2 id="github上pdf的显示"><a href="#github上pdf的显示" class="headerlink" title="github上pdf的显示"></a>github上pdf的显示</h2><p>要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是<strong>raw.githubusercontent.com</strong>的域名，可以通过F12来查看。</p>]]></content>
-    
-    <summary type="html">
-    
-      hexo pdf预览
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://blog.songuo.tech/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://blog.songuo.tech/tags/hexo/"/>
-    
-      <category term="pdf" scheme="https://blog.songuo.tech/tags/pdf/"/>
     
   </entry>
   
