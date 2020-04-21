@@ -30,109 +30,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo中预览pdf</title>
-    <url>//p/214f0223.html</url>
-    <content><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p>
-<h1 id="实现-安装插件"><a href="#实现-安装插件" class="headerlink" title="实现 安装插件"></a>实现 安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在Markdown文档中添加pdf<br>本地资源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% pdf  test.pdf %&#125;</span><br></pre></td></tr></table></figure>
-<p>在线资源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt; **监督学习**&lt;&#x2F;center&gt; # 居中</span><br><span class="line">&#123;% pdf https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;afshinea&#x2F;stanford-cs-229-machine-learning&#x2F;4d5ac4e620be8b63b6f889ecff667b7ebac008a8&#x2F;zh&#x2F;cheatsheet-supervised-learning.pdf %&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><h2 id="github上pdf的显示"><a href="#github上pdf的显示" class="headerlink" title="github上pdf的显示"></a>github上pdf的显示</h2><p>要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是<strong>raw.githubusercontent.com</strong>的域名，可以通过F12来查看。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>pdf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>elasticsearch中英文混搜</title>
-    <url>//p/57eff7ce.html</url>
-    <content><![CDATA[<p>参考地址：</p>
-<ul>
-<li><a href="https://blog.csdn.net/weixin_33725126/article/details/89702059" target="_blank" rel="noopener">https://blog.csdn.net/weixin_33725126/article/details/89702059</a></li>
-<li><a href="https://blog.csdn.net/weixin_34148456/article/details/86002009" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34148456/article/details/86002009</a></li>
-<li><a href="https://blog.csdn.net/zmx729618/article/details/80415984" target="_blank" rel="noopener">https://blog.csdn.net/zmx729618/article/details/80415984</a></li>
-<li><a href="https://www.cnblogs.com/zhangyafei/p/11028927.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangyafei/p/11028927.html</a></li>
-</ul>
-<h2 id="mapping设置"><a href="#mapping设置" class="headerlink" title="mapping设置"></a>mapping设置</h2><h2 id="中文分词插件"><a href="#中文分词插件" class="headerlink" title="中文分词插件"></a>中文分词插件</h2><h2 id="英文分词插件"><a href="#英文分词插件" class="headerlink" title="英文分词插件"></a>英文分词插件</h2><h2 id="拼音搜索插件"><a href="#拼音搜索插件" class="headerlink" title="拼音搜索插件"></a>拼音搜索插件</h2><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2>]]></content>
-      <categories>
-        <category>全文检索</category>
-      </categories>
-      <tags>
-        <tag>elasticsearch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kettle数据抽取</title>
-    <url>//p/5c1c96f2.html</url>
-    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
-      <categories>
-        <category>数据抽取</category>
-      </categories>
-      <tags>
-        <tag>Kettle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Kettle将mysql数据同步到Elasticsearch中</title>
-    <url>//p/efd6f6f6.html</url>
-    <content><![CDATA[<h1 id="使用Kettle将mysql数据同步到Elasticsearch中"><a href="#使用Kettle将mysql数据同步到Elasticsearch中" class="headerlink" title="使用Kettle将mysql数据同步到Elasticsearch中"></a>使用Kettle将mysql数据同步到Elasticsearch中</h1><h2 id="整体流程图如下"><a href="#整体流程图如下" class="headerlink" title="整体流程图如下"></a>整体流程图如下</h2><h2 id="获取配置信息"><a href="#获取配置信息" class="headerlink" title="获取配置信息"></a>获取配置信息</h2><h2 id="将数据字段进行清洗"><a href="#将数据字段进行清洗" class="headerlink" title="将数据字段进行清洗"></a>将数据字段进行清洗</h2><h2 id="将附件进行下载抽取"><a href="#将附件进行下载抽取" class="headerlink" title="将附件进行下载抽取"></a>将附件进行下载抽取</h2><h2 id="根据规则查看ID文档是否存在"><a href="#根据规则查看ID文档是否存在" class="headerlink" title="根据规则查看ID文档是否存在"></a>根据规则查看ID文档是否存在</h2><h2 id="将结构化信息提交"><a href="#将结构化信息提交" class="headerlink" title="将结构化信息提交"></a>将结构化信息提交</h2><h2 id="回写ES的文档id"><a href="#回写ES的文档id" class="headerlink" title="回写ES的文档id"></a>回写ES的文档id</h2>]]></content>
-      <categories>
-        <category>全文检索</category>
-      </categories>
-      <tags>
-        <tag>elasticsearch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title>
-    <url>//p/448e437.html</url>
-    <content><![CDATA[<h2 id="ETL报错："><a href="#ETL报错：" class="headerlink" title="ETL报错："></a>ETL报错：</h2><p><strong>Unexpected problem reading shared objects from XML file : null</strong></p>
-<p>当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”</p>
-<p>“Unexpected problem reading shared objects from XML file : null”…</p>
-<p>保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“</p>
-<p> ”Unexpected problem reading shared objects from XML file :“</p>
-<h2 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h2><p>​    这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。</p>
-<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 <sharedobjects>…</sharedobjects>之间的内容，可解决这个问题；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png" alt="img"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192104994.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>数据抽取</category>
-      </categories>
-      <tags>
-        <tag>Kettle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>elasticsearch中父子关系文档</title>
-    <url>//p/3cb208bc.html</url>
-    <content><![CDATA[<p>参考地址：</p>
-<ul>
-<li><a href="https://blog.csdn.net/hsj1213522415/article/details/97693509" target="_blank" rel="noopener">https://blog.csdn.net/hsj1213522415/article/details/97693509</a></li>
-</ul>
-<h2 id="为什么要有父子文档？"><a href="#为什么要有父子文档？" class="headerlink" title="为什么要有父子文档？"></a>为什么要有父子文档？</h2><ul>
-<li><p>nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；</p>
-</li>
-<li><p>parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；</p>
-</li>
-</ul>
-<h2 id="为什么父子文档性能好？"><a href="#为什么父子文档性能好？" class="headerlink" title="为什么父子文档性能好？"></a>为什么父子文档性能好？</h2><p>​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。</p>
-<h2 id="父子文档核心"><a href="#父子文档核心" class="headerlink" title="父子文档核心"></a>父子文档核心</h2><p>​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。</p>
-<h2 id="实例-带权限的全文检索"><a href="#实例-带权限的全文检索" class="headerlink" title="实例-带权限的全文检索"></a>实例-带权限的全文检索</h2><h3 id="建立mapping"><a href="#建立mapping" class="headerlink" title="建立mapping"></a>建立mapping</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PUT &#x2F;company</span><br><span class="line">&#123;</span><br><span class="line">  &quot;mappings&quot;: &#123;</span><br><span class="line">    &quot;doc&quot;: &#123;&#125;,</span><br><span class="line">    &quot;employee&quot;: &#123;</span><br><span class="line">      &quot;_parent&quot;: &#123;</span><br><span class="line">        &quot;type&quot;: &quot;rd_center&quot; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>全文检索</category>
-      </categories>
-      <tags>
-        <tag>elasticsearch</tag>
-        <tag>全文检索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IDEA中Git的更新、提交、还原方法</title>
     <url>//p/503970b4.html</url>
     <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
@@ -152,6 +49,41 @@
       </tags>
   </entry>
   <entry>
+    <title>IDEA撤销commit</title>
+    <url>//p/934109a7.html</url>
+    <content><![CDATA[<p>日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。<br> <strong>Undo Commit</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162635.png" alt="20200403035359132"></p>
+<p>可以在 Version Control 查看到刚刚撤销的内容</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162740.png" alt="20200403035409033">此时，就可以从新 commit 代码了</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PowerDesigner设计Name和Comment替换</title>
+    <url>//p/cab30bdb.html</url>
+    <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
+<p> 在 PowerDesigner中操作如下</p>
+<p>PowerDesigner—&gt;Tools—&gt;Execute Commands—&gt;Edit/Run Scripts 下执行就OK了</p>
+<a id="more"></a>
+<h2 id="把comment-覆盖name"><a href="#把comment-覆盖name" class="headerlink" title="把comment 覆盖name"></a>把comment 覆盖name</h2><p>方法如下：</p>
+<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line"><span class="keyword">On</span> <span class="keyword">Error</span> <span class="keyword">Resume</span> <span class="keyword">Next</span></span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                  <span class="keyword">if</span> col.comment=<span class="string">""</span> <span class="keyword">then</span></span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        col.name=   col.comment </span><br><span class="line">                  <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.name   =   view.comment </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<h2 id="将name覆盖comment"><a href="#将name覆盖comment" class="headerlink" title="将name覆盖comment"></a>将name覆盖comment</h2><p> 方法如下</p>
+<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   This   routine   copy   name   into   comment   for   each   table,   each   column   and   each   view </span></span><br><span class="line"><span class="comment">'   of   the   current   folder </span></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.comment   =   tab.name </span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                        col.comment=   col.name </span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.comment   =   view.name </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>PD</tag>
+        <tag>PowerDesigner</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nginx常用配置</title>
     <url>//p/30985643.html</url>
     <content><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -165,18 +97,25 @@
       </tags>
   </entry>
   <entry>
-    <title>IDEA撤销commit</title>
-    <url>//p/934109a7.html</url>
-    <content><![CDATA[<p>日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。<br> <strong>Undo Commit</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162635.png" alt="20200403035359132"></p>
-<p>可以在 Version Control 查看到刚刚撤销的内容</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162740.png" alt="20200403035409033">此时，就可以从新 commit 代码了</p>
+    <title>一种基于平均思想的任务分配算法</title>
+    <url>//p/c3e6b6ee.html</url>
+    <content><![CDATA[<p>​    假设现在有n个任务需要分配给m个审核员去完成，但是每个审核员手头上还有未完成的任务，且未完成的任务数不同。那么如何均匀的把这些任务分配给各个审核员呢?这里我提出了一种基于平均思想的任务分配算法（我称之为标杆算法）。</p>
+<p>​    算法的主要思想是：首先找出所有审核员中手头未完成任务数最大的审核员，然后其它审核员以该审核员的未完成任务数为标杆，计算自己可容纳的任务数，最后所有审核员可容纳的任务数之和即为总的可容纳任务数(ava_task)。<br>​    这里有两种情况，第一种情况是：总的可容纳任务数小于或等于n个待分配的任务数，此时所有审核员以最大未完成任务数(max_task)为标杆，接收待分配的任务。如果刚好分配完，那么算法结束；如果还有剩下的任务未分配，那将剩下的任务抽取m个任务分配给每一个审核员，依次类推，直到剩下的未分配任务数小于m为止，然后再将这小于m的任务随机分配给相应数量的审核员。第二种情况是：总的可容纳任务数大于n个待分配的任务数，此时降低一个单位的标杆(max_task-1)，然后循环计算可容纳的任务数，直到退出循环(循环终止条件为：ava_task - task_num &lt;= lower_List.size()，lower_List.size()表示的是低于当前标杆的审核员数)。<br>​    接下来，我们将通过一个简单的例子来说明算法的流程，由于第一种情况比较简单，因此，该例子是基于第二种情况的,，如图1所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200421185038.jfif" alt="图1"></p>
+<p>​    假设有20个任务需要分配给8个审核员(对应8个条形图，实线条形图里的数字代表该审核员手头未完成的任务数)。首先找出这8个审核员中未完成任务数的最大值max_task=7，然后各审核员以max_task为标杆计算各自可容纳的任务数(对应虚线条形图里的数字)，总的可容纳任务数为所有审核员可容纳的任务数之和，即ava_task=6+3+4+2+5+0+5+6=31，由图1可知，lower_List.size()=7，由于31-20&gt;7，因此可降低一个单位的标杆，即max_task=max_task-1=6，如图2所示。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200421185013.jfif" alt="图2"></p>
+<p>​    那么，ava_task=5+2+3+1+4+0+4+5=24，lower_List.size()=7，由于24-20&lt;7，因此循环终止。由于可容纳的任务数仍然大于待分配的任务数，因此需要再降低一个单位的标杆(一定要考虑这种情况)，max_task=max_task-1=5，此时ava_task=4+1+2+0+3+0+3+4=17，lower_List.size()=6，剩余待分配任务数为20-17=3，然后将这3个任务随机分配给低于当前标杆的6个审核员中的3个，每个审核员分配一个。当然算法中还考虑了很多种情况，具体请参见如下代码。由于任务一般按审核员ID来分配，且ID一般为字符串。为了存储方便，我定义了一个二维字符串类型的数组rev_task[i][j]来存储数据，i表示第i个审核员，rev_task[i][0]存放的是第i个审核员的ID，rev_task[i][1]存放的是第i个审核员当前未完成的任务数，rev_task[i][2]存放的是第i个审核员应当被分配的任务数。</p>
+<p><strong>算法工具类-AlgorithmUtils.java</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yushen.allocationAlgorithm;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlgorithmUtils</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">taskAllocation</span><span class="params">(<span class="keyword">int</span> task_num, <span class="keyword">int</span> rev_num, String[][] rev_task)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        Random rd = <span class="keyword">new</span> Random();</span><br><span class="line">        List&lt;Integer&gt; rdList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//获得审核人员中的最大未完成任务数</span></span><br><span class="line">        <span class="keyword">int</span> max_task = Integer.parseInt(rev_task[<span class="number">0</span>][<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; rev_num; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(max_task &lt; Integer.parseInt(rev_task[i][<span class="number">1</span>]))</span><br><span class="line">                max_task = Integer.parseInt(rev_task[i][<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//以最大待审核任务数为标杆，判断第一轮可容纳的任务数</span></span><br><span class="line">        <span class="keyword">int</span> ava_task = <span class="number">0</span>;</span><br><span class="line">        List&lt;Integer&gt; lower_List = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                ava_task += (max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                lower_List.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">int</span> task_rest;</span><br><span class="line">        <span class="keyword">int</span> task_avg;</span><br><span class="line">        <span class="comment">//第一种情况：第一轮可容纳的任务数小于待分配的任务数</span></span><br><span class="line">        <span class="keyword">if</span>(ava_task - task_num &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rev_num; i++) &#123;</span><br><span class="line">                rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">            &#125;</span><br><span class="line">            task_rest = task_num-ava_task;</span><br><span class="line">            task_avg = task_rest/rev_num;</span><br><span class="line">            <span class="keyword">if</span>(task_rest != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">while</span>(task_avg &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rev_num; i++) &#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[i][<span class="number">2</span>])+task_avg);</span><br><span class="line">                    &#125;</span><br><span class="line">                    task_rest -= rev_num*task_avg;</span><br><span class="line">                    task_avg = task_rest/rev_num;</span><br><span class="line">                &#125;</span><br><span class="line">                rdList.removeAll(rdList);</span><br><span class="line">                <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                    temp = rd.nextInt(rev_num);</span><br><span class="line">                    <span class="keyword">if</span>(!rdList.contains(temp))&#123;</span><br><span class="line">                        rdList.add(temp);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                    rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;<span class="comment">//第二种情况：第一轮可容纳的任务数大于待分配的任务数，此时降低一个单位的标杆(max_task-1)，然后循环计算可容纳的任务数，直到退出循环</span></span><br><span class="line">            <span class="keyword">while</span>(ava_task - task_num &gt; lower_List.size()) &#123;</span><br><span class="line">                max_task--;</span><br><span class="line">                ava_task = <span class="number">0</span>;</span><br><span class="line">                lower_List.removeAll(lower_List);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">                    rev_task[i][<span class="number">2</span>] = <span class="string">"0"</span>;</span><br><span class="line">                    <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                        ava_task += Integer.parseInt(rev_task[i][<span class="number">2</span>]);</span><br><span class="line">                        lower_List.add(i);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(ava_task - task_num &gt; <span class="number">0</span>) &#123;<span class="comment">//如果可容纳的任务数大于待分配的任务数，那么需要再再降低一个单位的标杆</span></span><br><span class="line">                max_task--;</span><br><span class="line">                ava_task = <span class="number">0</span>;</span><br><span class="line">                lower_List.removeAll(lower_List);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                        ava_task += Integer.parseInt(rev_task[i][<span class="number">2</span>]);</span><br><span class="line">                        lower_List.add(i);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                task_rest = task_num - ava_task;</span><br><span class="line">                rdList.removeAll(rdList);</span><br><span class="line">                <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                    temp = rd.nextInt(rev_num);</span><br><span class="line">                    <span class="keyword">if</span>((!rdList.contains(temp))&amp;&amp;(lower_List.contains(temp)))&#123;</span><br><span class="line">                        rdList.add(temp);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                    rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                task_rest = task_num-ava_task;</span><br><span class="line">                <span class="keyword">if</span>(task_rest != <span class="number">0</span>) &#123;</span><br><span class="line">                    rdList.removeAll(rdList);</span><br><span class="line">                    <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                        temp = rd.nextInt(rev_num);</span><br><span class="line">                        <span class="keyword">if</span>((!rdList.contains(temp))&amp;&amp;(lower_List.contains(temp)))&#123;</span><br><span class="line">                            rdList.add(temp);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                        rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//记录被分配的任务数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">            rev_task[i][<span class="number">1</span>] = String.valueOf(Integer.parseInt(rev_task[i][<span class="number">1</span>])+Integer.parseInt(rev_task[i][<span class="number">2</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>算法测试类-TestAlgorithm.java</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yushen.allocationAlgorithm;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestAlgorithm</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	    System.out.println(<span class="string">"请输入任务数："</span>);</span><br><span class="line">	    <span class="keyword">int</span> task_num = sc.nextInt();</span><br><span class="line">	    System.out.println(<span class="string">"请输入审核人员的当前未完成任务数组，整数数字输入时用英文逗号隔开："</span>);</span><br><span class="line">	    String inputString=sc.next().toString();</span><br><span class="line">	    String stringArray[]=inputString.split(<span class="string">","</span>);</span><br><span class="line">	    </span><br><span class="line">	    <span class="keyword">int</span> rev_num = stringArray.length;<span class="comment">//审核人员总数</span></span><br><span class="line">	    String[][] rev_task =<span class="keyword">new</span> String[rev_num][<span class="number">3</span>];</span><br><span class="line">	    Random rd = <span class="keyword">new</span> Random();</span><br><span class="line">	    List&lt;Integer&gt; rdList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	    rdList.removeAll(rdList);</span><br><span class="line">	    <span class="keyword">int</span> temp;</span><br><span class="line">	    <span class="keyword">while</span>(rdList.size() &lt; (rev_num+<span class="number">1</span>))&#123;</span><br><span class="line">	    	temp = rd.nextInt(<span class="number">100</span>);</span><br><span class="line">                <span class="keyword">if</span>(!rdList.contains(temp))&#123;</span><br><span class="line">		    rdList.add(temp);</span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;</span><br><span class="line">	    </span><br><span class="line">	    System.out.println(<span class="string">"算法前的任务分配："</span>);</span><br><span class="line">	    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">	    	rev_task[i][<span class="number">0</span>] = String.valueOf(rdList.get(i) + <span class="number">1</span>);</span><br><span class="line">	    	rev_task[i][<span class="number">1</span>]= stringArray[i];</span><br><span class="line">	    	rev_task[i][<span class="number">2</span>] = <span class="string">"0"</span>;</span><br><span class="line">	    	System.out.print(rev_task[i][<span class="number">0</span>]+<span class="string">","</span>+rev_task[i][<span class="number">1</span>]+<span class="string">" "</span>);</span><br><span class="line">	    &#125;</span><br><span class="line">	    System.out.println();</span><br><span class="line">	     </span><br><span class="line">            AlgorithmUtils.taskAllocation(task_num, rev_num, rev_task);<span class="comment">//调用算法工具类</span></span><br><span class="line">            System.out.println(<span class="string">"算法后的任务分配："</span>);    </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;    </span><br><span class="line">                System.out.print(rev_task[i][<span class="number">0</span>]+<span class="string">","</span>+rev_task[i][<span class="number">1</span>]+<span class="string">" "</span>);  </span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>运行结果：</strong><br>请输入任务数：<br>20<br>请输入审核人员的当前未完成任务数组，整数数字输入时用英文逗号隔开：<br>1,4,3,5,2,7,2,1<br>算法前的任务分配：<br>72,1 63,4 73,3 49,5 74,2 43,7 100,2 20,1<br>算法后的任务分配：<br>72,5 63,5 73,5 49,6 74,5 43,7 100,6 20,6<br>由运行结果可知，20个任务均衡的分配给了每个审核人员，达到了平均分配的目的！</p>
+<p>原文链接：<a href="https://blog.csdn.net/y1250056491/article/details/77652739" target="_blank" rel="noopener">https://blog.csdn.net/y1250056491/article/details/77652739</a></p>
 ]]></content>
       <categories>
-        <category>git</category>
+        <category>开发经验</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>开发经验</tag>
       </tags>
   </entry>
   <entry>
@@ -204,185 +143,22 @@
       </tags>
   </entry>
   <entry>
-    <title>使用gitlab实现项目协作</title>
-    <url>//p/1845ee0e.html</url>
-    <content><![CDATA[<h1 id="使用gitlab实现项目协作"><a href="#使用gitlab实现项目协作" class="headerlink" title="使用gitlab实现项目协作"></a>使用gitlab实现项目协作</h1><h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。</p>
-<p>一、创建issue</p>
-<p>​        新建issue时必须给issue设置一个或多个分类（即Labels），还可以指定由谁来处理该issue（即Assignee），设置处理该issue的截止日期（Due date）以及issue归属的里程碑（Milestone）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163511.jpg" alt="images/create issue.jpg"></p>
-<p>二、 issues列表</p>
-<p>​        issues List为当期project下的所有issues,项目组成员在处理issue时需要做到以下几点：</p>
-<ul>
-<li>项目组成员要关注分配给自己的、状态为“Open”的issues。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163535.png" alt="images/image-20200210100911642"></p>
-<ul>
-<li>当issue已经处理完成，issue的处理者要及时地把issue的状态修改为关闭。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163803.png" alt="images/image-20200210102010576"></p>
-<h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>标签允许我们使用描述性标题（如bug、需求）对问题进行分类，每个标签也有可定制的颜色，可以让我们快速动态地筛选和管理问题。</p>
-<p>一、新建label</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163545.png" alt="images/image-20200210105850287"></p>
-<p>二、 Labels列表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163611.png" alt="images/image-20200210110113601"></p>
-<h2 id="MileStones"><a href="#MileStones" class="headerlink" title="MileStones"></a>MileStones</h2><p>GitLab中的里程碑（MileStone）是一种跟踪问题的方法，以便在特定时间段内实现既定的目标。里程碑允许我们把安排问题到一个阶段，它具有可选的开始日期和可选的截止日期。</p>
-<p>一、创建MileStone</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163623.png" alt="images/image-20200210111225816"></p>
-<p>二、MileStone list</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163638.png" alt="images/image-20200210111540891"></p>
-<h2 id="Board"><a href="#Board" class="headerlink" title="Board"></a>Board</h2><p>gitLab工单看板（board）可以帮助我们组工作和排列工作的优先级,免费版gitLab只能创建一个board。</p>
-<p>一、添加list到board</p>
-<p>​       添加list时会要求我们先选择label，选择完labels成功创建list后，board会出现以label名称命名的list。该list下会列出有该label标签的所有issues。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163648.png" alt="images/image-20200210120159151"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163701.png" alt="images/image-20200210121515856"></p>
-<p>一般情况下，我们会新增“待办”和”处理中“两个list来辅助项目任务的管理，团队成员间可以按照以下方式协作：</p>
-<ul>
-<li>项目经理将默认“open”列中的任务选择性地拖拽到“待办”列中。</li>
-<li>项目成员需要关注“待办”列中的issues,已经开始着手处理的issues,需要从“待办”列拖拽到“处理中”列。</li>
-<li>项目成员“处理”列中的某项任务以完成，需要及时地将issue拖拽到“closed”列中。</li>
-<li>项目经理可以去检查“closed”列中的任务，若需要重新处理，可以将该任务再次拖拽到“处理中”列，此时需要在issue中添加comment描述，以便问题处理者能够知道任务完成的不足或者优化的具体要求。</li>
-</ul>
-<h2 id="Merge-Request"><a href="#Merge-Request" class="headerlink" title="Merge Request"></a>Merge Request</h2><p>master分支是受保护的，原则上是不允许直接在master上提交代码。所以我们需要用merge request来实现分支管理。上面提到，开发过程的每一个任务都以issue去记录，所以可以用以下方式去创建Merge Request：</p>
-<ol>
-<li>任务的接收者在master分支上对某个issue创建本地issue_xxx分支</li>
-<li>完成任务后推送代码到issue_xxx分支</li>
-<li>项目经理对代码进行Code Review，如果没发现问题 ，执行merge操作，经分支合并到主分支上；如果有发现问题 ，任务处理者继续在该分支上修改代码并重新push</li>
-</ol>
-<p>一、Create merge request</p>
-<p>​        执行完上面的1、2后出现下图所示内容，点击按钮填写内容即可创建merge request：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163715.png" alt="images/image-20200210152355513"></p>
-<p>二、 Code Review</p>
-<p>​        在Merge Requests列表页面选择进入要审核的request进行代码审核：</p>
-<ul>
-<li>审核不通过并添加描述</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163724.png" alt=""></p>
-<ul>
-<li><p>审核通过并合并分支</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163735.png" alt="images/image-20200210153721528"></p>
-</li>
-</ul>
+    <title>Hexo中预览pdf</title>
+    <url>//p/214f0223.html</url>
+    <content><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p>
+<h1 id="实现-安装插件"><a href="#实现-安装插件" class="headerlink" title="实现 安装插件"></a>实现 安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在Markdown文档中添加pdf<br>本地资源</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% pdf  test.pdf %&#125;</span><br></pre></td></tr></table></figure>
+<p>在线资源</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt; **监督学习**&lt;&#x2F;center&gt; # 居中</span><br><span class="line">&#123;% pdf https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;afshinea&#x2F;stanford-cs-229-machine-learning&#x2F;4d5ac4e620be8b63b6f889ecff667b7ebac008a8&#x2F;zh&#x2F;cheatsheet-supervised-learning.pdf %&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><h2 id="github上pdf的显示"><a href="#github上pdf的显示" class="headerlink" title="github上pdf的显示"></a>github上pdf的显示</h2><p>要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是<strong>raw.githubusercontent.com</strong>的域名，可以通过F12来查看。</p>
 ]]></content>
       <categories>
-        <category>git</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成为一流软件开发者的34条建议</title>
-    <url>//p/32d2b524.html</url>
-    <content><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p>
-<p>这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。</p>
-<p><strong>1. 规划方法 &amp; 在编码前先写伪代码</strong></p>
-<p>当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。</p>
-<p>在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。</p>
-<p>作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！</p>
-<p><strong>2. 总是寻找新东西来学习</strong></p>
-<p>这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。</p>
-<p>你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。</p>
-<p><strong>3. 不要尝试去学习所有的东西</strong></p>
-<p>尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。</p>
-<p>你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。</p>
-<p><strong>4. 了解怎样学习</strong></p>
-<p>每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。</p>
-<p>除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（<a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> https://www.coursera.org/learn/learning-how-to-learn </a>），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。</p>
-<p><strong>5. 缓缓前行，不要破坏东西</strong></p>
-<p>“快速前行，打破常规”，在科技行业，这句谚语已经作为一条真理存在很久了。这句谚语是用来鼓励开发者快速地部署代码和技术想法的，同时还能安心地觉得这只是一些代码，当任何错误或者 bug 自己暴露出来的时候，都可以被轻松解决。</p>
-<p>但是软件和数字产品不再是被公司美化的营销部门，也不再是偏安一隅的经济单位。它现在已经成为了所有东西之上的一层。软件和数 10 亿人的生活息息相关，代码不再是完全无害的。Bug 和设计问题都会对人们产生负面的影响。</p>
-<p>所以我们应该缓缓前行，并且保证不会破坏任何东西。你所写的代码会对其他人的生活产生真实的影响，所以应当确保写出质量好的代码。</p>
-<p><strong>6. 善于阅读其他人的代码</strong></p>
-<p>阅读其他人的代码是一项不太容易掌握的技能。当你开始成为一名优秀的程序员时，你就会习惯于你自己的代码风格。而当你尝试阅读别人的代码时，你就会逐渐迷失了。幸运的是，你阅读别人的代码越多，你就会发现这越容易，而且你将愿意经常阅读别人的代码，但是，寻找不同的阅读方法（<a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener"> https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/ </a>）也会起到帮助，那会让阅读别人代码的过程变得更加轻松。</p>
-<p><strong>7. 感到自豪，让工作变得有价值</strong></p>
-<p>不管你的工作是大还是小，都要为此感到自豪。你写的每一行代码都应当足够好，好到你自己也感觉良好的程度。这些代码不仅要能正常运行，而且要能让你感到自豪。你不可能创建出完美的代码，也没有人能够做到这样，因为创建完美的软件是不可能的。但是创建出让你感觉良好的代码，一定会让你不断地做出好的工作成绩。</p>
-<p><strong>8. 对你造成的错误保持开放负责的态度</strong></p>
-<p>有时候你可能把事情弄砸了，可能在你的职业生涯中，还会出现好几次这样的情况。不管是做错了什么，我们每个人都发生过这样的状况。当错误发生时，保持开放的心态，担负起责任，不要责怪其他人。</p>
-<p>用这样的态度处理这些错误，你就会在你的队友和同事中间建立起信任和尊重。</p>
-<p><strong>9. 工作时尽量减少分心</strong></p>
-<p>由于你是人类（对所有读到这篇文章的机器人发出警告），在你累到筋疲力尽之前，你这一天当中产出效率最高的工作时间是有限的。所以你需要优化那些产出效率高的时间来完成工作。</p>
-<p>每个人的情况是不同的，但是请尝试不同的方法，看看哪种方法对你最有效。关闭任何手机提醒（电子邮件，短信等等），可能会有帮助；或者每天只检查电子邮件 1~2 次；并且只有在你工作完回到家时，再去登陆社交网络。</p>
-<p><strong>10. 善于使用 Google</strong></p>
-<p>作为一名程序员，你可能会不断地碰到大大小小的问题。这些问题绝大部分也被其他的开发者遇到过，所以你可以在各种网站上看到他们的解决方案。</p>
-<p>要善于寻找这些疑问 / 问题的解决方案。学习如何高效地搜索 Google 能够为你的开发节省大量时间。我们得承认一个事实，StackOverflow 将成为你新的救世主。</p>
-<p><strong>11. 不要害怕寻求帮助</strong></p>
-<p>但是当你自己不能解决某些问题的时候，你不应该害怕寻求帮助。有时候你可能会卡在一个问题上，并且花了大量的时间来搜索解决方案。</p>
-<p>寻求支持并不丢脸。你的部分或所有同事都会得到更高的工资，这是有原因的，因为他们更有经验。大部分时候他们都是乐于帮助你的，并且还会抓住机会给你讲解一些编程知识。</p>
-<p><strong>12. 不要拿自己和其他人去做比较</strong></p>
-<p>在你的职业生涯和生活中，你会不停地拿自己和其他人做比较。你可能会自然地这样做，因为这会帮助你弄清楚你位于世界的哪个位置，帮你找到人生方向。</p>
-<p>但有时候进步的最好方式是拿你和你的昨天或者你的过去进行比较。用这种方法思考肯定能让你不断地进步，减少受挫感，明确你的预期目标。</p>
-<p><strong>13. 测试你的代码</strong></p>
-<p>如果你测试了你的代码，软件的最终交付版本将会更加稳定和可预测。学习不同的测试类型（单元测试、集成测试等等），并且要很勤快地使用它们，因为这真的很重要。你预先做的测试越多，你今后的工作就会越轻松，你晚上睡觉也会更踏实。</p>
-<p><strong>14. 学习如何调试</strong></p>
-<p>你编写的代码并不总是会按照你所预期的那样精确运行，不过没关系，这很正常。但是，你需要掌握相关技能，找到问题的原因，并且做出必要的修复。</p>
-<p>在定位 bug 时，需要弄清楚哪些调试技术是最适合你的。找一些有用的工具，这会让调试过程更加轻松。</p>
-<p><strong>15. 要知道自己的身价</strong></p>
-<p>去做一些调研，弄清楚你所在行业其他人的薪水如何，他们给公司带来了怎样的价值。了解这些东西会给你目前的工作带来一些认识，并且帮助你理解你的价值所在。</p>
-<p>这个调研不仅可以用于薪水方面，还可以用于了解你给公司或者团队提供了哪些价值。</p>
-<p><strong>16. 不要为了扩展而编写代码，除非这是必要的</strong></p>
-<p>在构建和编写代码时，需要记住，将来有一天你可能需要扩展代码。但是不要在编码的第一天就去考虑扩展性，没必要这样，而且这肯定会让你淹没其中，并且拖慢开发速度。</p>
-<p>准备好适应未来的增长，并且准备好创建相应的策略。但不要让你的代码库和团队陷入不断扩展代码的困境，除非这是必要的。如果你给火箭添加太多的重物，它可能都不能飞离地面。</p>
-<p><strong>17. 在你知道代码是如何运行之后，可以复制粘贴</strong></p>
-<p>诚恳地讲，每个人以前都有过复制粘贴代码的经历。不管这段代码是来自 StackOverflow，还是其他随便哪里的编程博客，这都没问题，只要你在复制粘贴前理解这段代码是做什么的。</p>
-<p>对你要粘贴的代码，你需要知道自己在做什么，并且小心谨慎。记住，缓缓前行，不要破坏东西。</p>
-<p><strong>18. 让周围人感到愉快，对他人友善</strong></p>
-<p>当你身边围绕着很多人都愿意帮助你或者支持你的时候，生活会变得很轻松。但如果人们都不喜欢你，那生活就不可能很轻松了。</p>
-<p>所以对人要友善（尽你所能），大部分时间里都要让周围的人感觉愉快。如果你能做到这一点，人们就会很喜欢你，如果人们很喜欢你，他们就愿意帮助你，你也会交到更多朋友。</p>
-<p><strong>19. 为了提高产出，休息一会儿</strong></p>
-<p>在整个工作日中保持 100% 的产出效率，这几乎是不可能的，如果你尝试这样做，那将会使你精疲力尽。设置一个计时器，让它提醒你站起来走一走，或者给你的咖啡续个杯。像番茄工作法这样的系统就可以在休息和提高效率方面起到很大的作用了（如果你想尝试一下，可以使用我们做的番茄工作法计时器（<a href="https://coderrocketfuel.com/tools/pomodoro-timer" target="_blank" rel="noopener"> https://coderrocketfuel.com/tools/pomodoro-timer </a>））。</p>
-<p>此外大量的研究表明，适当休息是任何工作和学习过程的一个关键组成部分。休息能够很大程度上帮助学生更有效地学习东西，让他们的注意力保持更长的时间。</p>
-<p><strong>20. 少说多听</strong></p>
-<p>不管你是想赢得一场辩论，变得更讨人喜欢，还是说服某人，倾听都是一个获得重要信息的很关键的方式，他会让你显得更值得信任和尊重。</p>
-<p>你很可能是与一些真正聪明的人一起工作，他们中的一些人甚至比你更聪明。于是他们可能有一些编程或者生活上的知识能够传授给你，如果你说太多话，可能就会错过这样的机会。</p>
-<p><strong>21. 去做那些让你害怕的项目</strong></p>
-<p>无论是在你的职业生涯中，还是在编程技能方面，不断扩展你的舒适区都是相当重要的。去做一些让你有点害怕的项目，扩展你的舒适区，这会让你变成一个更好的开发者，你的职业生涯也会进步得更快。</p>
-<p>你需要经历一些痛苦和恐惧，这样才能成长。要做到这样，你需要去寻找一些能扩展你舒适区的事情去做。</p>
-<p><strong>22. 给函数和变量提供描述性的命名</strong></p>
-<p>你会希望你的代码尽可能容易理解。让别人更容易阅读你的代码的方式之一，就是给你的函数和变量起一个能描述他们做什么和代表什么的好名字。</p>
-<p>例如有一个函数名叫 aDopeFunctionIMade，这就不是一个好名字，而另一个函数名 calculateCartTotal，它就是一个很好的名字。</p>
-<p><strong>23. 编写描述性好的代码注释</strong></p>
-<p>另外一种能让你的代码更容易阅读的方式就是给代码添加注释，注释能够解释你的代码为什么要这样做，以及你的代码都做了什么。编写注释并不难，只需要花点精力把注释包含到代码里去就可以啦。</p>
-<p>这个方法和上面那个写出具有描述性的函数和变量名字的方法通常是同时使用的。</p>
-<p><strong>24. 习惯于有建设性的批评</strong></p>
-<p>在工作中，你可能从不会享受于接受批评。但为了变得更好，你需要习惯于接受批评，不要对这些批评产生情绪。</p>
-<p>如果你的代码写得很糟糕，你难道不希望有其他人给你指出来吗？相反的一种方式就是别人看到了问题代码也不会告诉你，这将更糟糕。如果你欣然接受批评，你会因此而受到别人的尊敬，你自己也能够改进你的技能。</p>
-<p><strong>25. 找到你的立足点</strong></p>
-<p>在科技行业，你可能会在很多不同的领域都做得很成功。找到你最感兴趣或者最擅长的领域，在这个领域成为一个专家。在你的立足点上成为一个专家，会给你带来影响力，把你从一件商品变为你的公司或者你所在行业的必需品。但是这个说起来容易，做起来难，你可能需要花些时间才能弄清楚你的立足点在哪里。</p>
-<p><strong>26. 学一点商业方面的知识</strong></p>
-<p>花点时间去了解你所在公司或者团队的一些业务方面的知识。销售人员整天都在做些什么，他们为何有价值？会计或者市场营销人员的情况又如何？</p>
-<p>你不必成为这些领域的专家。但是理解一些业务情况，将会让你对工作有更好的理解，并且能帮助你为公司和团队的整体目标创造更多价值。</p>
-<p><strong>27. 在传授别人知识和与他人分享的过程中学习</strong></p>
-<p>protégé效应是一种心理现象，说的是向别人传授或假装传授信息时能够让你更好地（相比不使用这种方法时）学习这些信息。这一点适用于很多领域，但编程领域尤其如此。</p>
-<p>你可以向队友或者同事传授一些知识，或者可以开始维护个人编程博客，编写教程，向他人传授编程的概念。把你传授的知识汇总起来，以让其他人也能够学习到，这将极大地提高你自己对这些主题的理解。</p>
-<p><strong>28. 花点时间好好写写文档</strong></p>
-<p>这是很多程序员忽略的一点。但是好的文档能帮助你和其他人抓住你的代码或者项目的精髓。</p>
-<p>如果你写出的文档组织很有条理，综合性强，可读性强，那么你的代码或者项目就更容易使用，人们也就会更愿意来使用它。</p>
-<p><strong>29. 尽可能避免不必要的会议</strong></p>
-<p>尽管公司会议在传达思想，建立项目目标方面极其有帮助，但如果你不好好管理会议进度，这也可能会成为不可思议的时间吞噬器。在你工作的地方总有一些人喜欢发起会议，而不去想他们是否真的需要这些会议。</p>
-<p>你需要学习一些委婉拒绝他们的技巧，而同时又和他们保持良好的工作关系。或者你可能需要学习向人们说“不”的艺术，并且欣然接受说“不“而带来的结果。</p>
-<p><strong>30. 掌控你自己的工具箱</strong></p>
-<p>任何精通这一行的人都有一个工具箱，里面装满了工具，他们对这些工具的里里外外都了如指掌，他们通过使用这些工具来完成工作。他们非常了解其中每一件工具，并把他们当做自己能力的延伸。</p>
-<p>作为一名程序员，你应当构建自己的工具袋。精通你所选的文本编辑器，以最大化你的产出，或者找一个你喜欢使用的测试框架。你需要了解哪些工具是服务于什么样的目的的。并且要知道每一件工具为何会比另外一件工具更适用于某个场景。</p>
-<p><strong>31. 每隔一段时间就去尝试一种新的语言</strong></p>
-<p>不要做过头，但也要每隔一段时间就去尝试一种新的语言。使用一种新的语言，将会让你或多或少从不同的角度去思考问题，思考问题的方式会和你正在使用的语言不太一样。</p>
-<p>这些新的思考途径，将帮助你在使用当前的和 / 或今后的语言时，全面提高解决问题的能力。</p>
-<p><strong>32. 努力保持身体健康</strong></p>
-<p>编程是一项需要长时间坐在位子上的职业。你会很多天都坐在桌子前（顺便说一下，可以考虑入手一张站式桌子），看着电脑屏幕。久而久之，如果你不努力保持健康的话，这样的工作方式就会给你的身体带来负面影响。</p>
-<p>每周计划锻炼 2~3 天，每天保证 8 个小时的睡眠，并且计划一些外出活动，这些活动不要涉及到编程。这会帮助你过上更健康的生活，这将渗透到你的编程生涯中。</p>
-<p><strong>33. 建立能让你沉迷的东西</strong></p>
-<p>不是每天的工作都会给你走在阳光里的感觉。但如果你把工作时间花在你觉得有影响力或者很酷的事情上，你将会经历很多美好的日子，而不是糟糕的日子。</p>
-<p>你在业余时间或者工作时间中创造的酷酷的东西越多，你在自己的领域得到的认可也就越多，机会也就越多。</p>
-<p><strong>34. 绝不放弃</strong></p>
-<p>生活很艰难，编程也很艰难。可能会有很多次，你都会产生强烈的、要退出的想法。当那些时刻发生时，你要意识到每个人都会经历这些。如果你想作为一名程序员在你的职业生涯中保持成长，你就需要从这些困境里获取力量。</p>
-<p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p>
-<p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>
-]]></content>
-      <categories>
-        <category>开发经验</category>
-      </categories>
-      <tags>
-        <tag>开发经验</tag>
+        <tag>hexo</tag>
+        <tag>pdf</tag>
       </tags>
   </entry>
   <entry>
@@ -531,6 +307,207 @@
       </tags>
   </entry>
   <entry>
+    <title>使用gitlab实现项目协作</title>
+    <url>//p/1845ee0e.html</url>
+    <content><![CDATA[<h1 id="使用gitlab实现项目协作"><a href="#使用gitlab实现项目协作" class="headerlink" title="使用gitlab实现项目协作"></a>使用gitlab实现项目协作</h1><h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。</p>
+<p>一、创建issue</p>
+<p>​        新建issue时必须给issue设置一个或多个分类（即Labels），还可以指定由谁来处理该issue（即Assignee），设置处理该issue的截止日期（Due date）以及issue归属的里程碑（Milestone）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163511.jpg" alt="images/create issue.jpg"></p>
+<p>二、 issues列表</p>
+<p>​        issues List为当期project下的所有issues,项目组成员在处理issue时需要做到以下几点：</p>
+<ul>
+<li>项目组成员要关注分配给自己的、状态为“Open”的issues。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163535.png" alt="images/image-20200210100911642"></p>
+<ul>
+<li>当issue已经处理完成，issue的处理者要及时地把issue的状态修改为关闭。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163803.png" alt="images/image-20200210102010576"></p>
+<h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>标签允许我们使用描述性标题（如bug、需求）对问题进行分类，每个标签也有可定制的颜色，可以让我们快速动态地筛选和管理问题。</p>
+<p>一、新建label</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163545.png" alt="images/image-20200210105850287"></p>
+<p>二、 Labels列表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163611.png" alt="images/image-20200210110113601"></p>
+<h2 id="MileStones"><a href="#MileStones" class="headerlink" title="MileStones"></a>MileStones</h2><p>GitLab中的里程碑（MileStone）是一种跟踪问题的方法，以便在特定时间段内实现既定的目标。里程碑允许我们把安排问题到一个阶段，它具有可选的开始日期和可选的截止日期。</p>
+<p>一、创建MileStone</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163623.png" alt="images/image-20200210111225816"></p>
+<p>二、MileStone list</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163638.png" alt="images/image-20200210111540891"></p>
+<h2 id="Board"><a href="#Board" class="headerlink" title="Board"></a>Board</h2><p>gitLab工单看板（board）可以帮助我们组工作和排列工作的优先级,免费版gitLab只能创建一个board。</p>
+<p>一、添加list到board</p>
+<p>​       添加list时会要求我们先选择label，选择完labels成功创建list后，board会出现以label名称命名的list。该list下会列出有该label标签的所有issues。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163648.png" alt="images/image-20200210120159151"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163701.png" alt="images/image-20200210121515856"></p>
+<p>一般情况下，我们会新增“待办”和”处理中“两个list来辅助项目任务的管理，团队成员间可以按照以下方式协作：</p>
+<ul>
+<li>项目经理将默认“open”列中的任务选择性地拖拽到“待办”列中。</li>
+<li>项目成员需要关注“待办”列中的issues,已经开始着手处理的issues,需要从“待办”列拖拽到“处理中”列。</li>
+<li>项目成员“处理”列中的某项任务以完成，需要及时地将issue拖拽到“closed”列中。</li>
+<li>项目经理可以去检查“closed”列中的任务，若需要重新处理，可以将该任务再次拖拽到“处理中”列，此时需要在issue中添加comment描述，以便问题处理者能够知道任务完成的不足或者优化的具体要求。</li>
+</ul>
+<h2 id="Merge-Request"><a href="#Merge-Request" class="headerlink" title="Merge Request"></a>Merge Request</h2><p>master分支是受保护的，原则上是不允许直接在master上提交代码。所以我们需要用merge request来实现分支管理。上面提到，开发过程的每一个任务都以issue去记录，所以可以用以下方式去创建Merge Request：</p>
+<ol>
+<li>任务的接收者在master分支上对某个issue创建本地issue_xxx分支</li>
+<li>完成任务后推送代码到issue_xxx分支</li>
+<li>项目经理对代码进行Code Review，如果没发现问题 ，执行merge操作，经分支合并到主分支上；如果有发现问题 ，任务处理者继续在该分支上修改代码并重新push</li>
+</ol>
+<p>一、Create merge request</p>
+<p>​        执行完上面的1、2后出现下图所示内容，点击按钮填写内容即可创建merge request：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163715.png" alt="images/image-20200210152355513"></p>
+<p>二、 Code Review</p>
+<p>​        在Merge Requests列表页面选择进入要审核的request进行代码审核：</p>
+<ul>
+<li>审核不通过并添加描述</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163724.png" alt=""></p>
+<ul>
+<li><p>审核通过并合并分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163735.png" alt="images/image-20200210153721528"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title>
+    <url>//p/448e437.html</url>
+    <content><![CDATA[<h2 id="ETL报错："><a href="#ETL报错：" class="headerlink" title="ETL报错："></a>ETL报错：</h2><p><strong>Unexpected problem reading shared objects from XML file : null</strong></p>
+<p>当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”</p>
+<p>“Unexpected problem reading shared objects from XML file : null”…</p>
+<p>保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“</p>
+<p> ”Unexpected problem reading shared objects from XML file :“</p>
+<h2 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h2><p>​    这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。</p>
+<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 <sharedobjects>…</sharedobjects>之间的内容，可解决这个问题；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192104994.png" alt="img"></p>
+]]></content>
+      <categories>
+        <category>数据抽取</category>
+      </categories>
+      <tags>
+        <tag>Kettle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>成为一流软件开发者的34条建议</title>
+    <url>//p/32d2b524.html</url>
+    <content><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p>
+<p>这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。</p>
+<p><strong>1. 规划方法 &amp; 在编码前先写伪代码</strong></p>
+<p>当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。</p>
+<p>在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。</p>
+<p>作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！</p>
+<p><strong>2. 总是寻找新东西来学习</strong></p>
+<p>这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。</p>
+<p>你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。</p>
+<p><strong>3. 不要尝试去学习所有的东西</strong></p>
+<p>尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。</p>
+<p>你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。</p>
+<p><strong>4. 了解怎样学习</strong></p>
+<p>每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。</p>
+<p>除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（<a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> https://www.coursera.org/learn/learning-how-to-learn </a>），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。</p>
+<p><strong>5. 缓缓前行，不要破坏东西</strong></p>
+<p>“快速前行，打破常规”，在科技行业，这句谚语已经作为一条真理存在很久了。这句谚语是用来鼓励开发者快速地部署代码和技术想法的，同时还能安心地觉得这只是一些代码，当任何错误或者 bug 自己暴露出来的时候，都可以被轻松解决。</p>
+<p>但是软件和数字产品不再是被公司美化的营销部门，也不再是偏安一隅的经济单位。它现在已经成为了所有东西之上的一层。软件和数 10 亿人的生活息息相关，代码不再是完全无害的。Bug 和设计问题都会对人们产生负面的影响。</p>
+<p>所以我们应该缓缓前行，并且保证不会破坏任何东西。你所写的代码会对其他人的生活产生真实的影响，所以应当确保写出质量好的代码。</p>
+<p><strong>6. 善于阅读其他人的代码</strong></p>
+<p>阅读其他人的代码是一项不太容易掌握的技能。当你开始成为一名优秀的程序员时，你就会习惯于你自己的代码风格。而当你尝试阅读别人的代码时，你就会逐渐迷失了。幸运的是，你阅读别人的代码越多，你就会发现这越容易，而且你将愿意经常阅读别人的代码，但是，寻找不同的阅读方法（<a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener"> https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/ </a>）也会起到帮助，那会让阅读别人代码的过程变得更加轻松。</p>
+<p><strong>7. 感到自豪，让工作变得有价值</strong></p>
+<p>不管你的工作是大还是小，都要为此感到自豪。你写的每一行代码都应当足够好，好到你自己也感觉良好的程度。这些代码不仅要能正常运行，而且要能让你感到自豪。你不可能创建出完美的代码，也没有人能够做到这样，因为创建完美的软件是不可能的。但是创建出让你感觉良好的代码，一定会让你不断地做出好的工作成绩。</p>
+<p><strong>8. 对你造成的错误保持开放负责的态度</strong></p>
+<p>有时候你可能把事情弄砸了，可能在你的职业生涯中，还会出现好几次这样的情况。不管是做错了什么，我们每个人都发生过这样的状况。当错误发生时，保持开放的心态，担负起责任，不要责怪其他人。</p>
+<p>用这样的态度处理这些错误，你就会在你的队友和同事中间建立起信任和尊重。</p>
+<p><strong>9. 工作时尽量减少分心</strong></p>
+<p>由于你是人类（对所有读到这篇文章的机器人发出警告），在你累到筋疲力尽之前，你这一天当中产出效率最高的工作时间是有限的。所以你需要优化那些产出效率高的时间来完成工作。</p>
+<p>每个人的情况是不同的，但是请尝试不同的方法，看看哪种方法对你最有效。关闭任何手机提醒（电子邮件，短信等等），可能会有帮助；或者每天只检查电子邮件 1~2 次；并且只有在你工作完回到家时，再去登陆社交网络。</p>
+<p><strong>10. 善于使用 Google</strong></p>
+<p>作为一名程序员，你可能会不断地碰到大大小小的问题。这些问题绝大部分也被其他的开发者遇到过，所以你可以在各种网站上看到他们的解决方案。</p>
+<p>要善于寻找这些疑问 / 问题的解决方案。学习如何高效地搜索 Google 能够为你的开发节省大量时间。我们得承认一个事实，StackOverflow 将成为你新的救世主。</p>
+<p><strong>11. 不要害怕寻求帮助</strong></p>
+<p>但是当你自己不能解决某些问题的时候，你不应该害怕寻求帮助。有时候你可能会卡在一个问题上，并且花了大量的时间来搜索解决方案。</p>
+<p>寻求支持并不丢脸。你的部分或所有同事都会得到更高的工资，这是有原因的，因为他们更有经验。大部分时候他们都是乐于帮助你的，并且还会抓住机会给你讲解一些编程知识。</p>
+<p><strong>12. 不要拿自己和其他人去做比较</strong></p>
+<p>在你的职业生涯和生活中，你会不停地拿自己和其他人做比较。你可能会自然地这样做，因为这会帮助你弄清楚你位于世界的哪个位置，帮你找到人生方向。</p>
+<p>但有时候进步的最好方式是拿你和你的昨天或者你的过去进行比较。用这种方法思考肯定能让你不断地进步，减少受挫感，明确你的预期目标。</p>
+<p><strong>13. 测试你的代码</strong></p>
+<p>如果你测试了你的代码，软件的最终交付版本将会更加稳定和可预测。学习不同的测试类型（单元测试、集成测试等等），并且要很勤快地使用它们，因为这真的很重要。你预先做的测试越多，你今后的工作就会越轻松，你晚上睡觉也会更踏实。</p>
+<p><strong>14. 学习如何调试</strong></p>
+<p>你编写的代码并不总是会按照你所预期的那样精确运行，不过没关系，这很正常。但是，你需要掌握相关技能，找到问题的原因，并且做出必要的修复。</p>
+<p>在定位 bug 时，需要弄清楚哪些调试技术是最适合你的。找一些有用的工具，这会让调试过程更加轻松。</p>
+<p><strong>15. 要知道自己的身价</strong></p>
+<p>去做一些调研，弄清楚你所在行业其他人的薪水如何，他们给公司带来了怎样的价值。了解这些东西会给你目前的工作带来一些认识，并且帮助你理解你的价值所在。</p>
+<p>这个调研不仅可以用于薪水方面，还可以用于了解你给公司或者团队提供了哪些价值。</p>
+<p><strong>16. 不要为了扩展而编写代码，除非这是必要的</strong></p>
+<p>在构建和编写代码时，需要记住，将来有一天你可能需要扩展代码。但是不要在编码的第一天就去考虑扩展性，没必要这样，而且这肯定会让你淹没其中，并且拖慢开发速度。</p>
+<p>准备好适应未来的增长，并且准备好创建相应的策略。但不要让你的代码库和团队陷入不断扩展代码的困境，除非这是必要的。如果你给火箭添加太多的重物，它可能都不能飞离地面。</p>
+<p><strong>17. 在你知道代码是如何运行之后，可以复制粘贴</strong></p>
+<p>诚恳地讲，每个人以前都有过复制粘贴代码的经历。不管这段代码是来自 StackOverflow，还是其他随便哪里的编程博客，这都没问题，只要你在复制粘贴前理解这段代码是做什么的。</p>
+<p>对你要粘贴的代码，你需要知道自己在做什么，并且小心谨慎。记住，缓缓前行，不要破坏东西。</p>
+<p><strong>18. 让周围人感到愉快，对他人友善</strong></p>
+<p>当你身边围绕着很多人都愿意帮助你或者支持你的时候，生活会变得很轻松。但如果人们都不喜欢你，那生活就不可能很轻松了。</p>
+<p>所以对人要友善（尽你所能），大部分时间里都要让周围的人感觉愉快。如果你能做到这一点，人们就会很喜欢你，如果人们很喜欢你，他们就愿意帮助你，你也会交到更多朋友。</p>
+<p><strong>19. 为了提高产出，休息一会儿</strong></p>
+<p>在整个工作日中保持 100% 的产出效率，这几乎是不可能的，如果你尝试这样做，那将会使你精疲力尽。设置一个计时器，让它提醒你站起来走一走，或者给你的咖啡续个杯。像番茄工作法这样的系统就可以在休息和提高效率方面起到很大的作用了（如果你想尝试一下，可以使用我们做的番茄工作法计时器（<a href="https://coderrocketfuel.com/tools/pomodoro-timer" target="_blank" rel="noopener"> https://coderrocketfuel.com/tools/pomodoro-timer </a>））。</p>
+<p>此外大量的研究表明，适当休息是任何工作和学习过程的一个关键组成部分。休息能够很大程度上帮助学生更有效地学习东西，让他们的注意力保持更长的时间。</p>
+<p><strong>20. 少说多听</strong></p>
+<p>不管你是想赢得一场辩论，变得更讨人喜欢，还是说服某人，倾听都是一个获得重要信息的很关键的方式，他会让你显得更值得信任和尊重。</p>
+<p>你很可能是与一些真正聪明的人一起工作，他们中的一些人甚至比你更聪明。于是他们可能有一些编程或者生活上的知识能够传授给你，如果你说太多话，可能就会错过这样的机会。</p>
+<p><strong>21. 去做那些让你害怕的项目</strong></p>
+<p>无论是在你的职业生涯中，还是在编程技能方面，不断扩展你的舒适区都是相当重要的。去做一些让你有点害怕的项目，扩展你的舒适区，这会让你变成一个更好的开发者，你的职业生涯也会进步得更快。</p>
+<p>你需要经历一些痛苦和恐惧，这样才能成长。要做到这样，你需要去寻找一些能扩展你舒适区的事情去做。</p>
+<p><strong>22. 给函数和变量提供描述性的命名</strong></p>
+<p>你会希望你的代码尽可能容易理解。让别人更容易阅读你的代码的方式之一，就是给你的函数和变量起一个能描述他们做什么和代表什么的好名字。</p>
+<p>例如有一个函数名叫 aDopeFunctionIMade，这就不是一个好名字，而另一个函数名 calculateCartTotal，它就是一个很好的名字。</p>
+<p><strong>23. 编写描述性好的代码注释</strong></p>
+<p>另外一种能让你的代码更容易阅读的方式就是给代码添加注释，注释能够解释你的代码为什么要这样做，以及你的代码都做了什么。编写注释并不难，只需要花点精力把注释包含到代码里去就可以啦。</p>
+<p>这个方法和上面那个写出具有描述性的函数和变量名字的方法通常是同时使用的。</p>
+<p><strong>24. 习惯于有建设性的批评</strong></p>
+<p>在工作中，你可能从不会享受于接受批评。但为了变得更好，你需要习惯于接受批评，不要对这些批评产生情绪。</p>
+<p>如果你的代码写得很糟糕，你难道不希望有其他人给你指出来吗？相反的一种方式就是别人看到了问题代码也不会告诉你，这将更糟糕。如果你欣然接受批评，你会因此而受到别人的尊敬，你自己也能够改进你的技能。</p>
+<p><strong>25. 找到你的立足点</strong></p>
+<p>在科技行业，你可能会在很多不同的领域都做得很成功。找到你最感兴趣或者最擅长的领域，在这个领域成为一个专家。在你的立足点上成为一个专家，会给你带来影响力，把你从一件商品变为你的公司或者你所在行业的必需品。但是这个说起来容易，做起来难，你可能需要花些时间才能弄清楚你的立足点在哪里。</p>
+<p><strong>26. 学一点商业方面的知识</strong></p>
+<p>花点时间去了解你所在公司或者团队的一些业务方面的知识。销售人员整天都在做些什么，他们为何有价值？会计或者市场营销人员的情况又如何？</p>
+<p>你不必成为这些领域的专家。但是理解一些业务情况，将会让你对工作有更好的理解，并且能帮助你为公司和团队的整体目标创造更多价值。</p>
+<p><strong>27. 在传授别人知识和与他人分享的过程中学习</strong></p>
+<p>protégé效应是一种心理现象，说的是向别人传授或假装传授信息时能够让你更好地（相比不使用这种方法时）学习这些信息。这一点适用于很多领域，但编程领域尤其如此。</p>
+<p>你可以向队友或者同事传授一些知识，或者可以开始维护个人编程博客，编写教程，向他人传授编程的概念。把你传授的知识汇总起来，以让其他人也能够学习到，这将极大地提高你自己对这些主题的理解。</p>
+<p><strong>28. 花点时间好好写写文档</strong></p>
+<p>这是很多程序员忽略的一点。但是好的文档能帮助你和其他人抓住你的代码或者项目的精髓。</p>
+<p>如果你写出的文档组织很有条理，综合性强，可读性强，那么你的代码或者项目就更容易使用，人们也就会更愿意来使用它。</p>
+<p><strong>29. 尽可能避免不必要的会议</strong></p>
+<p>尽管公司会议在传达思想，建立项目目标方面极其有帮助，但如果你不好好管理会议进度，这也可能会成为不可思议的时间吞噬器。在你工作的地方总有一些人喜欢发起会议，而不去想他们是否真的需要这些会议。</p>
+<p>你需要学习一些委婉拒绝他们的技巧，而同时又和他们保持良好的工作关系。或者你可能需要学习向人们说“不”的艺术，并且欣然接受说“不“而带来的结果。</p>
+<p><strong>30. 掌控你自己的工具箱</strong></p>
+<p>任何精通这一行的人都有一个工具箱，里面装满了工具，他们对这些工具的里里外外都了如指掌，他们通过使用这些工具来完成工作。他们非常了解其中每一件工具，并把他们当做自己能力的延伸。</p>
+<p>作为一名程序员，你应当构建自己的工具袋。精通你所选的文本编辑器，以最大化你的产出，或者找一个你喜欢使用的测试框架。你需要了解哪些工具是服务于什么样的目的的。并且要知道每一件工具为何会比另外一件工具更适用于某个场景。</p>
+<p><strong>31. 每隔一段时间就去尝试一种新的语言</strong></p>
+<p>不要做过头，但也要每隔一段时间就去尝试一种新的语言。使用一种新的语言，将会让你或多或少从不同的角度去思考问题，思考问题的方式会和你正在使用的语言不太一样。</p>
+<p>这些新的思考途径，将帮助你在使用当前的和 / 或今后的语言时，全面提高解决问题的能力。</p>
+<p><strong>32. 努力保持身体健康</strong></p>
+<p>编程是一项需要长时间坐在位子上的职业。你会很多天都坐在桌子前（顺便说一下，可以考虑入手一张站式桌子），看着电脑屏幕。久而久之，如果你不努力保持健康的话，这样的工作方式就会给你的身体带来负面影响。</p>
+<p>每周计划锻炼 2~3 天，每天保证 8 个小时的睡眠，并且计划一些外出活动，这些活动不要涉及到编程。这会帮助你过上更健康的生活，这将渗透到你的编程生涯中。</p>
+<p><strong>33. 建立能让你沉迷的东西</strong></p>
+<p>不是每天的工作都会给你走在阳光里的感觉。但如果你把工作时间花在你觉得有影响力或者很酷的事情上，你将会经历很多美好的日子，而不是糟糕的日子。</p>
+<p>你在业余时间或者工作时间中创造的酷酷的东西越多，你在自己的领域得到的认可也就越多，机会也就越多。</p>
+<p><strong>34. 绝不放弃</strong></p>
+<p>生活很艰难，编程也很艰难。可能会有很多次，你都会产生强烈的、要退出的想法。当那些时刻发生时，你要意识到每个人都会经历这些。如果你想作为一名程序员在你的职业生涯中保持成长，你就需要从这些困境里获取力量。</p>
+<p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p>
+<p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
     <url>//p/23a9bdeb.html</url>
     <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
@@ -604,6 +581,109 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>elasticsearch中英文混搜</title>
+    <url>//p/57eff7ce.html</url>
+    <content><![CDATA[<p>参考地址：</p>
+<ul>
+<li><a href="https://blog.csdn.net/weixin_33725126/article/details/89702059" target="_blank" rel="noopener">https://blog.csdn.net/weixin_33725126/article/details/89702059</a></li>
+<li><a href="https://blog.csdn.net/weixin_34148456/article/details/86002009" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34148456/article/details/86002009</a></li>
+<li><a href="https://blog.csdn.net/zmx729618/article/details/80415984" target="_blank" rel="noopener">https://blog.csdn.net/zmx729618/article/details/80415984</a></li>
+<li><a href="https://www.cnblogs.com/zhangyafei/p/11028927.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangyafei/p/11028927.html</a></li>
+</ul>
+<h2 id="mapping设置"><a href="#mapping设置" class="headerlink" title="mapping设置"></a>mapping设置</h2><h2 id="中文分词插件"><a href="#中文分词插件" class="headerlink" title="中文分词插件"></a>中文分词插件</h2><h2 id="英文分词插件"><a href="#英文分词插件" class="headerlink" title="英文分词插件"></a>英文分词插件</h2><h2 id="拼音搜索插件"><a href="#拼音搜索插件" class="headerlink" title="拼音搜索插件"></a>拼音搜索插件</h2><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2>]]></content>
+      <categories>
+        <category>全文检索</category>
+      </categories>
+      <tags>
+        <tag>elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Kettle将mysql数据同步到Elasticsearch中</title>
+    <url>//p/efd6f6f6.html</url>
+    <content><![CDATA[<h1 id="使用Kettle将mysql数据同步到Elasticsearch中"><a href="#使用Kettle将mysql数据同步到Elasticsearch中" class="headerlink" title="使用Kettle将mysql数据同步到Elasticsearch中"></a>使用Kettle将mysql数据同步到Elasticsearch中</h1><h2 id="整体流程图如下"><a href="#整体流程图如下" class="headerlink" title="整体流程图如下"></a>整体流程图如下</h2><h2 id="获取配置信息"><a href="#获取配置信息" class="headerlink" title="获取配置信息"></a>获取配置信息</h2><h2 id="将数据字段进行清洗"><a href="#将数据字段进行清洗" class="headerlink" title="将数据字段进行清洗"></a>将数据字段进行清洗</h2><h2 id="将附件进行下载抽取"><a href="#将附件进行下载抽取" class="headerlink" title="将附件进行下载抽取"></a>将附件进行下载抽取</h2><h2 id="根据规则查看ID文档是否存在"><a href="#根据规则查看ID文档是否存在" class="headerlink" title="根据规则查看ID文档是否存在"></a>根据规则查看ID文档是否存在</h2><h2 id="将结构化信息提交"><a href="#将结构化信息提交" class="headerlink" title="将结构化信息提交"></a>将结构化信息提交</h2><h2 id="回写ES的文档id"><a href="#回写ES的文档id" class="headerlink" title="回写ES的文档id"></a>回写ES的文档id</h2>]]></content>
+      <categories>
+        <category>全文检索</category>
+      </categories>
+      <tags>
+        <tag>elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kettle数据抽取</title>
+    <url>//p/5c1c96f2.html</url>
+    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
+      <categories>
+        <category>数据抽取</category>
+      </categories>
+      <tags>
+        <tag>Kettle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>elasticsearch中父子关系文档</title>
+    <url>//p/3cb208bc.html</url>
+    <content><![CDATA[<p>参考地址：</p>
+<ul>
+<li><a href="https://blog.csdn.net/hsj1213522415/article/details/97693509" target="_blank" rel="noopener">https://blog.csdn.net/hsj1213522415/article/details/97693509</a></li>
+</ul>
+<h2 id="为什么要有父子文档？"><a href="#为什么要有父子文档？" class="headerlink" title="为什么要有父子文档？"></a>为什么要有父子文档？</h2><ul>
+<li><p>nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；</p>
+</li>
+<li><p>parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；</p>
+</li>
+</ul>
+<h2 id="为什么父子文档性能好？"><a href="#为什么父子文档性能好？" class="headerlink" title="为什么父子文档性能好？"></a>为什么父子文档性能好？</h2><p>​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。</p>
+<h2 id="父子文档核心"><a href="#父子文档核心" class="headerlink" title="父子文档核心"></a>父子文档核心</h2><p>​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。</p>
+<h2 id="实例-带权限的全文检索"><a href="#实例-带权限的全文检索" class="headerlink" title="实例-带权限的全文检索"></a>实例-带权限的全文检索</h2><h3 id="建立mapping"><a href="#建立mapping" class="headerlink" title="建立mapping"></a>建立mapping</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PUT &#x2F;company</span><br><span class="line">&#123;</span><br><span class="line">  &quot;mappings&quot;: &#123;</span><br><span class="line">    &quot;doc&quot;: &#123;&#125;,</span><br><span class="line">    &quot;employee&quot;: &#123;</span><br><span class="line">      &quot;_parent&quot;: &#123;</span><br><span class="line">        &quot;type&quot;: &quot;rd_center&quot; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>全文检索</category>
+      </categories>
+      <tags>
+        <tag>elasticsearch</tag>
+        <tag>全文检索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用法律文书收集</title>
+    <url>//p/71b20ea9.html</url>
+    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>诉讼费收费标准</title>
+    <url>//p/1b9b841c.html</url>
+    <content><![CDATA[<p>案件受理费交纳标准：</p>
+<p>　　＜1万               50元</p>
+<p>　　1万至10万            ×2.5%-200</p>
+<p>　　10万至20万            ×2%+300</p>
+<p>　　20万至50万            ×1.5%+1300</p>
+<p>　　50万至100万           ×1%+3800</p>
+<p>　　100万至200万           ×0.9%+4800</p>
+<p>　　200万至500万           ×0.8%+6800</p>
+<p>　　500万至1000万          ×0.7%+11800</p>
+<p>　　1000万至2000万          ×0.6%+21800</p>
+<p>　　2000万以上            ×0.5%+41800</p>
+<p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p>
+<p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p>
+<p>　　适用简易程序审理的案件减半交纳案件受理费。</p>
+<p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,38 +1102,6 @@
       </tags>
   </entry>
   <entry>
-    <title>常用法律文书收集</title>
-    <url>//p/71b20ea9.html</url>
-    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PowerDesigner设计Name和Comment替换</title>
-    <url>//p/cab30bdb.html</url>
-    <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
-<p> 在 PowerDesigner中操作如下</p>
-<p>PowerDesigner—&gt;Tools—&gt;Execute Commands—&gt;Edit/Run Scripts 下执行就OK了</p>
-<a id="more"></a>
-<h2 id="把comment-覆盖name"><a href="#把comment-覆盖name" class="headerlink" title="把comment 覆盖name"></a>把comment 覆盖name</h2><p>方法如下：</p>
-<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line"><span class="keyword">On</span> <span class="keyword">Error</span> <span class="keyword">Resume</span> <span class="keyword">Next</span></span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                  <span class="keyword">if</span> col.comment=<span class="string">""</span> <span class="keyword">then</span></span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        col.name=   col.comment </span><br><span class="line">                  <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.name   =   view.comment </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
-<h2 id="将name覆盖comment"><a href="#将name覆盖comment" class="headerlink" title="将name覆盖comment"></a>将name覆盖comment</h2><p> 方法如下</p>
-<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   This   routine   copy   name   into   comment   for   each   table,   each   column   and   each   view </span></span><br><span class="line"><span class="comment">'   of   the   current   folder </span></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.comment   =   tab.name </span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                        col.comment=   col.name </span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.comment   =   view.name </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>PD</tag>
-        <tag>PowerDesigner</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>要素式审核-资料</title>
     <url>//p/4d915dad.html</url>
     <content><![CDATA[<p>TODO pdf在线预览<br>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="/pdf/web/viewer.html?file=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf" target="_blank" rel="noopener">下载</a>】</p>
@@ -1079,32 +1127,6 @@
       <tags>
         <tag>法院</tag>
         <tag>信用卡纠纷</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>诉讼费收费标准</title>
-    <url>//p/1b9b841c.html</url>
-    <content><![CDATA[<p>案件受理费交纳标准：</p>
-<p>　　＜1万               50元</p>
-<p>　　1万至10万            ×2.5%-200</p>
-<p>　　10万至20万            ×2%+300</p>
-<p>　　20万至50万            ×1.5%+1300</p>
-<p>　　50万至100万           ×1%+3800</p>
-<p>　　100万至200万           ×0.9%+4800</p>
-<p>　　200万至500万           ×0.8%+6800</p>
-<p>　　500万至1000万          ×0.7%+11800</p>
-<p>　　1000万至2000万          ×0.6%+21800</p>
-<p>　　2000万以上            ×0.5%+41800</p>
-<p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p>
-<p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p>
-<p>　　适用简易程序审理的案件减半交纳案件受理费。</p>
-<p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
       </tags>
   </entry>
 </search>

@@ -199,6 +199,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/c3e6b6ee.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="松鼠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="松果小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/c3e6b6ee.html" class="post-title-link" itemprop="url">一种基于平均思想的任务分配算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-21 18:30:00" itemprop="dateCreated datePublished" datetime="2020-04-21T18:30:00+08:00">2020-04-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">开发经验</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>​    假设现在有n个任务需要分配给m个审核员去完成，但是每个审核员手头上还有未完成的任务，且未完成的任务数不同。那么如何均匀的把这些任务分配给各个审核员呢?这里我提出了一种基于平均思想的任务分配算法（我称之为标杆算法）。</p>
+<p>​    算法的主要思想是：首先找出所有审核员中手头未完成任务数最大的审核员，然后其它审核员以该审核员的未完成任务数为标杆，计算自己可容纳的任务数，最后所有审核员可容纳的任务数之和即为总的可容纳任务数(ava_task)。<br>​    这里有两种情况，第一种情况是：总的可容纳任务数小于或等于n个待分配的任务数，此时所有审核员以最大未完成任务数(max_task)为标杆，接收待分配的任务。如果刚好分配完，那么算法结束；如果还有剩下的任务未分配，那将剩下的任务抽取m个任务分配给每一个审核员，依次类推，直到剩下的未分配任务数小于m为止，然后再将这小于m的任务随机分配给相应数量的审核员。第二种情况是：总的可容纳任务数大于n个待分配的任务数，此时降低一个单位的标杆(max_task-1)，然后循环计算可容纳的任务数，直到退出循环(循环终止条件为：ava_task - task_num &lt;= lower_List.size()，lower_List.size()表示的是低于当前标杆的审核员数)。<br>​    接下来，我们将通过一个简单的例子来说明算法的流程，由于第一种情况比较简单，因此，该例子是基于第二种情况的,，如图1所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200421185038.jfif" alt="图1"></p>
+<p>​    假设有20个任务需要分配给8个审核员(对应8个条形图，实线条形图里的数字代表该审核员手头未完成的任务数)。首先找出这8个审核员中未完成任务数的最大值max_task=7，然后各审核员以max_task为标杆计算各自可容纳的任务数(对应虚线条形图里的数字)，总的可容纳任务数为所有审核员可容纳的任务数之和，即ava_task=6+3+4+2+5+0+5+6=31，由图1可知，lower_List.size()=7，由于31-20&gt;7，因此可降低一个单位的标杆，即max_task=max_task-1=6，如图2所示。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200421185013.jfif" alt="图2"></p>
+<p>​    那么，ava_task=5+2+3+1+4+0+4+5=24，lower_List.size()=7，由于24-20&lt;7，因此循环终止。由于可容纳的任务数仍然大于待分配的任务数，因此需要再降低一个单位的标杆(一定要考虑这种情况)，max_task=max_task-1=5，此时ava_task=4+1+2+0+3+0+3+4=17，lower_List.size()=6，剩余待分配任务数为20-17=3，然后将这3个任务随机分配给低于当前标杆的6个审核员中的3个，每个审核员分配一个。当然算法中还考虑了很多种情况，具体请参见如下代码。由于任务一般按审核员ID来分配，且ID一般为字符串。为了存储方便，我定义了一个二维字符串类型的数组rev_task[i][j]来存储数据，i表示第i个审核员，rev_task[i][0]存放的是第i个审核员的ID，rev_task[i][1]存放的是第i个审核员当前未完成的任务数，rev_task[i][2]存放的是第i个审核员应当被分配的任务数。</p>
+<p><strong>算法工具类-AlgorithmUtils.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yushen.allocationAlgorithm;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlgorithmUtils</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">taskAllocation</span><span class="params">(<span class="keyword">int</span> task_num, <span class="keyword">int</span> rev_num, String[][] rev_task)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        Random rd = <span class="keyword">new</span> Random();</span><br><span class="line">        List&lt;Integer&gt; rdList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//获得审核人员中的最大未完成任务数</span></span><br><span class="line">        <span class="keyword">int</span> max_task = Integer.parseInt(rev_task[<span class="number">0</span>][<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; rev_num; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(max_task &lt; Integer.parseInt(rev_task[i][<span class="number">1</span>]))</span><br><span class="line">                max_task = Integer.parseInt(rev_task[i][<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//以最大待审核任务数为标杆，判断第一轮可容纳的任务数</span></span><br><span class="line">        <span class="keyword">int</span> ava_task = <span class="number">0</span>;</span><br><span class="line">        List&lt;Integer&gt; lower_List = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                ava_task += (max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                lower_List.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">int</span> task_rest;</span><br><span class="line">        <span class="keyword">int</span> task_avg;</span><br><span class="line">        <span class="comment">//第一种情况：第一轮可容纳的任务数小于待分配的任务数</span></span><br><span class="line">        <span class="keyword">if</span>(ava_task - task_num &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rev_num; i++) &#123;</span><br><span class="line">                rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">            &#125;</span><br><span class="line">            task_rest = task_num-ava_task;</span><br><span class="line">            task_avg = task_rest/rev_num;</span><br><span class="line">            <span class="keyword">if</span>(task_rest != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">while</span>(task_avg &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rev_num; i++) &#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[i][<span class="number">2</span>])+task_avg);</span><br><span class="line">                    &#125;</span><br><span class="line">                    task_rest -= rev_num*task_avg;</span><br><span class="line">                    task_avg = task_rest/rev_num;</span><br><span class="line">                &#125;</span><br><span class="line">                rdList.removeAll(rdList);</span><br><span class="line">                <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                    temp = rd.nextInt(rev_num);</span><br><span class="line">                    <span class="keyword">if</span>(!rdList.contains(temp))&#123;</span><br><span class="line">                        rdList.add(temp);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                    rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;<span class="comment">//第二种情况：第一轮可容纳的任务数大于待分配的任务数，此时降低一个单位的标杆(max_task-1)，然后循环计算可容纳的任务数，直到退出循环</span></span><br><span class="line">            <span class="keyword">while</span>(ava_task - task_num &gt; lower_List.size()) &#123;</span><br><span class="line">                max_task--;</span><br><span class="line">                ava_task = <span class="number">0</span>;</span><br><span class="line">                lower_List.removeAll(lower_List);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">                    rev_task[i][<span class="number">2</span>] = <span class="string">"0"</span>;</span><br><span class="line">                    <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                        ava_task += Integer.parseInt(rev_task[i][<span class="number">2</span>]);</span><br><span class="line">                        lower_List.add(i);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(ava_task - task_num &gt; <span class="number">0</span>) &#123;<span class="comment">//如果可容纳的任务数大于待分配的任务数，那么需要再再降低一个单位的标杆</span></span><br><span class="line">                max_task--;</span><br><span class="line">                ava_task = <span class="number">0</span>;</span><br><span class="line">                lower_List.removeAll(lower_List);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>((max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>])) &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                        rev_task[i][<span class="number">2</span>] = String.valueOf(max_task-Integer.parseInt(rev_task[i][<span class="number">1</span>]));</span><br><span class="line">                        ava_task += Integer.parseInt(rev_task[i][<span class="number">2</span>]);</span><br><span class="line">                        lower_List.add(i);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                task_rest = task_num - ava_task;</span><br><span class="line">                rdList.removeAll(rdList);</span><br><span class="line">                <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                    temp = rd.nextInt(rev_num);</span><br><span class="line">                    <span class="keyword">if</span>((!rdList.contains(temp))&amp;&amp;(lower_List.contains(temp)))&#123;</span><br><span class="line">                        rdList.add(temp);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                    rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                task_rest = task_num-ava_task;</span><br><span class="line">                <span class="keyword">if</span>(task_rest != <span class="number">0</span>) &#123;</span><br><span class="line">                    rdList.removeAll(rdList);</span><br><span class="line">                    <span class="keyword">while</span>(rdList.size() &lt; (task_rest+<span class="number">1</span>))&#123;</span><br><span class="line">                        temp = rd.nextInt(rev_num);</span><br><span class="line">                        <span class="keyword">if</span>((!rdList.contains(temp))&amp;&amp;(lower_List.contains(temp)))&#123;</span><br><span class="line">                            rdList.add(temp);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; task_rest; i++) &#123;</span><br><span class="line">                        rev_task[rdList.get(i)][<span class="number">2</span>] = String.valueOf(Integer.parseInt(rev_task[rdList.get(i)][<span class="number">2</span>])+<span class="number">1</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//记录被分配的任务数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">            rev_task[i][<span class="number">1</span>] = String.valueOf(Integer.parseInt(rev_task[i][<span class="number">1</span>])+Integer.parseInt(rev_task[i][<span class="number">2</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>算法测试类-TestAlgorithm.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yushen.allocationAlgorithm;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestAlgorithm</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	    System.out.println(<span class="string">"请输入任务数："</span>);</span><br><span class="line">	    <span class="keyword">int</span> task_num = sc.nextInt();</span><br><span class="line">	    System.out.println(<span class="string">"请输入审核人员的当前未完成任务数组，整数数字输入时用英文逗号隔开："</span>);</span><br><span class="line">	    String inputString=sc.next().toString();</span><br><span class="line">	    String stringArray[]=inputString.split(<span class="string">","</span>);</span><br><span class="line">	    </span><br><span class="line">	    <span class="keyword">int</span> rev_num = stringArray.length;<span class="comment">//审核人员总数</span></span><br><span class="line">	    String[][] rev_task =<span class="keyword">new</span> String[rev_num][<span class="number">3</span>];</span><br><span class="line">	    Random rd = <span class="keyword">new</span> Random();</span><br><span class="line">	    List&lt;Integer&gt; rdList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	    rdList.removeAll(rdList);</span><br><span class="line">	    <span class="keyword">int</span> temp;</span><br><span class="line">	    <span class="keyword">while</span>(rdList.size() &lt; (rev_num+<span class="number">1</span>))&#123;</span><br><span class="line">	    	temp = rd.nextInt(<span class="number">100</span>);</span><br><span class="line">                <span class="keyword">if</span>(!rdList.contains(temp))&#123;</span><br><span class="line">		    rdList.add(temp);</span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;</span><br><span class="line">	    </span><br><span class="line">	    System.out.println(<span class="string">"算法前的任务分配："</span>);</span><br><span class="line">	    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;</span><br><span class="line">	    	rev_task[i][<span class="number">0</span>] = String.valueOf(rdList.get(i) + <span class="number">1</span>);</span><br><span class="line">	    	rev_task[i][<span class="number">1</span>]= stringArray[i];</span><br><span class="line">	    	rev_task[i][<span class="number">2</span>] = <span class="string">"0"</span>;</span><br><span class="line">	    	System.out.print(rev_task[i][<span class="number">0</span>]+<span class="string">","</span>+rev_task[i][<span class="number">1</span>]+<span class="string">" "</span>);</span><br><span class="line">	    &#125;</span><br><span class="line">	    System.out.println();</span><br><span class="line">	     </span><br><span class="line">            AlgorithmUtils.taskAllocation(task_num, rev_num, rev_task);<span class="comment">//调用算法工具类</span></span><br><span class="line">            System.out.println(<span class="string">"算法后的任务分配："</span>);    </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rev_num;i++)&#123;    </span><br><span class="line">                System.out.print(rev_task[i][<span class="number">0</span>]+<span class="string">","</span>+rev_task[i][<span class="number">1</span>]+<span class="string">" "</span>);  </span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>运行结果：</strong><br>请输入任务数：<br>20<br>请输入审核人员的当前未完成任务数组，整数数字输入时用英文逗号隔开：<br>1,4,3,5,2,7,2,1<br>算法前的任务分配：<br>72,1 63,4 73,3 49,5 74,2 43,7 100,2 20,1<br>算法后的任务分配：<br>72,5 63,5 73,5 49,6 74,5 43,7 100,6 20,6<br>由运行结果可知，20个任务均衡的分配给了每个审核人员，达到了平均分配的目的！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/c3e6b6ee.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/fb3832f5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1019,106 +1116,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/3cb208bc.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="松鼠">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="松果小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/3cb208bc.html" class="post-title-link" itemprop="url">elasticsearch中父子关系文档</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-15 11:00:00" itemprop="dateCreated datePublished" datetime="2020-04-15T11:00:00+08:00">2020-04-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">全文检索</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>674</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>参考地址：</p>
-<ul>
-<li><a href="https://blog.csdn.net/hsj1213522415/article/details/97693509" target="_blank" rel="noopener">https://blog.csdn.net/hsj1213522415/article/details/97693509</a></li>
-</ul>
-<h2 id="为什么要有父子文档？"><a href="#为什么要有父子文档？" class="headerlink" title="为什么要有父子文档？"></a>为什么要有父子文档？</h2><ul>
-<li><p>nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；</p>
-</li>
-<li><p>parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；</p>
-</li>
-</ul>
-<h2 id="为什么父子文档性能好？"><a href="#为什么父子文档性能好？" class="headerlink" title="为什么父子文档性能好？"></a>为什么父子文档性能好？</h2><p>​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。</p>
-<h2 id="父子文档核心"><a href="#父子文档核心" class="headerlink" title="父子文档核心"></a>父子文档核心</h2><p>​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。</p>
-<h2 id="实例-带权限的全文检索"><a href="#实例-带权限的全文检索" class="headerlink" title="实例-带权限的全文检索"></a>实例-带权限的全文检索</h2><h3 id="建立mapping"><a href="#建立mapping" class="headerlink" title="建立mapping"></a>建立mapping</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/3cb208bc.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1190,7 +1187,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1242,7 +1239,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">54k</span>
+    <span title="站点总字数">60k</span>
 </div>
 
         
