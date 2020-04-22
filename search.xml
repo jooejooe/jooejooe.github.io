@@ -20,6 +20,21 @@
       </tags>
   </entry>
   <entry>
+    <title>word转md文件</title>
+    <url>//p/d44f2022.html</url>
+    <content><![CDATA[<p>使用Pandoc转换</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Docx to markdown, including math:</span><br><span class="line">$ pandoc -s example30.docx -t markdown -o example35.md</span><br></pre></td></tr></table></figure>
+<p><a href="https://pandoc.org/demos.html" target="_blank" rel="noopener">更多命令参考</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>pandoc</tag>
+        <tag>word</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在线预览，互联网解决方案</title>
     <url>//p/44b14d3b.html</url>
     <content><![CDATA[<p>使用微软在线预览<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;view.officeapps.live.com&#x2F;op&#x2F;view.aspx?src&#x3D;offcie链接地址</span><br></pre></td></tr></table></figure></p>
@@ -31,6 +46,17 @@
       <tags>
         <tag>在线预览</tag>
         <tag>office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kettle数据抽取</title>
+    <url>//p/5c1c96f2.html</url>
+    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
+      <categories>
+        <category>数据抽取</category>
+      </categories>
+      <tags>
+        <tag>Kettle</tag>
       </tags>
   </entry>
   <entry>
@@ -71,21 +97,6 @@
       </tags>
   </entry>
   <entry>
-    <title>word转md文件</title>
-    <url>//p/d44f2022.html</url>
-    <content><![CDATA[<p>使用Pandoc转换</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Docx to markdown, including math:</span><br><span class="line">$ pandoc -s example30.docx -t markdown -o example35.md</span><br></pre></td></tr></table></figure>
-<p><a href="https://pandoc.org/demos.html" target="_blank" rel="noopener">更多命令参考</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>pandoc</tag>
-        <tag>word</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Kettle将mysql数据同步到Elasticsearch中</title>
     <url>//p/efd6f6f6.html</url>
     <content><![CDATA[<h1 id="使用Kettle将mysql数据同步到Elasticsearch中"><a href="#使用Kettle将mysql数据同步到Elasticsearch中" class="headerlink" title="使用Kettle将mysql数据同步到Elasticsearch中"></a>使用Kettle将mysql数据同步到Elasticsearch中</h1><h2 id="整体流程图如下"><a href="#整体流程图如下" class="headerlink" title="整体流程图如下"></a>整体流程图如下</h2><h2 id="获取配置信息"><a href="#获取配置信息" class="headerlink" title="获取配置信息"></a>获取配置信息</h2><h2 id="将数据字段进行清洗"><a href="#将数据字段进行清洗" class="headerlink" title="将数据字段进行清洗"></a>将数据字段进行清洗</h2><h2 id="将附件进行下载抽取"><a href="#将附件进行下载抽取" class="headerlink" title="将附件进行下载抽取"></a>将附件进行下载抽取</h2><h2 id="根据规则查看ID文档是否存在"><a href="#根据规则查看ID文档是否存在" class="headerlink" title="根据规则查看ID文档是否存在"></a>根据规则查看ID文档是否存在</h2><h2 id="将结构化信息提交"><a href="#将结构化信息提交" class="headerlink" title="将结构化信息提交"></a>将结构化信息提交</h2><h2 id="回写ES的文档id"><a href="#回写ES的文档id" class="headerlink" title="回写ES的文档id"></a>回写ES的文档id</h2>]]></content>
@@ -94,17 +105,6 @@
       </categories>
       <tags>
         <tag>elasticsearch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kettle数据抽取</title>
-    <url>//p/5c1c96f2.html</url>
-    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
-      <categories>
-        <category>数据抽取</category>
-      </categories>
-      <tags>
-        <tag>Kettle</tag>
       </tags>
   </entry>
   <entry>
@@ -167,6 +167,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Nginx常用配置</title>
+    <url>//p/30985643.html</url>
+    <content><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PowerDesigner设计Name和Comment替换</title>
     <url>//p/cab30bdb.html</url>
     <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
@@ -187,19 +200,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx常用配置</title>
-    <url>//p/30985643.html</url>
-    <content><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>gitlab添加问题模板</title>
     <url>//p/7930ee41.html</url>
     <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
@@ -215,73 +215,6 @@
 <a id="more"></a>
 <p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用gitlab实现项目协作</title>
-    <url>//p/1845ee0e.html</url>
-    <content><![CDATA[<h1 id="使用gitlab实现项目协作"><a href="#使用gitlab实现项目协作" class="headerlink" title="使用gitlab实现项目协作"></a>使用gitlab实现项目协作</h1><h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。</p>
-<p>一、创建issue</p>
-<p>​        新建issue时必须给issue设置一个或多个分类（即Labels），还可以指定由谁来处理该issue（即Assignee），设置处理该issue的截止日期（Due date）以及issue归属的里程碑（Milestone）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163511.jpg" alt="images/create issue.jpg"></p>
-<p>二、 issues列表</p>
-<p>​        issues List为当期project下的所有issues,项目组成员在处理issue时需要做到以下几点：</p>
-<ul>
-<li>项目组成员要关注分配给自己的、状态为“Open”的issues。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163535.png" alt="images/image-20200210100911642"></p>
-<ul>
-<li>当issue已经处理完成，issue的处理者要及时地把issue的状态修改为关闭。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163803.png" alt="images/image-20200210102010576"></p>
-<h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>标签允许我们使用描述性标题（如bug、需求）对问题进行分类，每个标签也有可定制的颜色，可以让我们快速动态地筛选和管理问题。</p>
-<p>一、新建label</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163545.png" alt="images/image-20200210105850287"></p>
-<p>二、 Labels列表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163611.png" alt="images/image-20200210110113601"></p>
-<h2 id="MileStones"><a href="#MileStones" class="headerlink" title="MileStones"></a>MileStones</h2><p>GitLab中的里程碑（MileStone）是一种跟踪问题的方法，以便在特定时间段内实现既定的目标。里程碑允许我们把安排问题到一个阶段，它具有可选的开始日期和可选的截止日期。</p>
-<p>一、创建MileStone</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163623.png" alt="images/image-20200210111225816"></p>
-<p>二、MileStone list</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163638.png" alt="images/image-20200210111540891"></p>
-<h2 id="Board"><a href="#Board" class="headerlink" title="Board"></a>Board</h2><p>gitLab工单看板（board）可以帮助我们组工作和排列工作的优先级,免费版gitLab只能创建一个board。</p>
-<p>一、添加list到board</p>
-<p>​       添加list时会要求我们先选择label，选择完labels成功创建list后，board会出现以label名称命名的list。该list下会列出有该label标签的所有issues。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163648.png" alt="images/image-20200210120159151"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163701.png" alt="images/image-20200210121515856"></p>
-<p>一般情况下，我们会新增“待办”和”处理中“两个list来辅助项目任务的管理，团队成员间可以按照以下方式协作：</p>
-<ul>
-<li>项目经理将默认“open”列中的任务选择性地拖拽到“待办”列中。</li>
-<li>项目成员需要关注“待办”列中的issues,已经开始着手处理的issues,需要从“待办”列拖拽到“处理中”列。</li>
-<li>项目成员“处理”列中的某项任务以完成，需要及时地将issue拖拽到“closed”列中。</li>
-<li>项目经理可以去检查“closed”列中的任务，若需要重新处理，可以将该任务再次拖拽到“处理中”列，此时需要在issue中添加comment描述，以便问题处理者能够知道任务完成的不足或者优化的具体要求。</li>
-</ul>
-<h2 id="Merge-Request"><a href="#Merge-Request" class="headerlink" title="Merge Request"></a>Merge Request</h2><p>master分支是受保护的，原则上是不允许直接在master上提交代码。所以我们需要用merge request来实现分支管理。上面提到，开发过程的每一个任务都以issue去记录，所以可以用以下方式去创建Merge Request：</p>
-<ol>
-<li>任务的接收者在master分支上对某个issue创建本地issue_xxx分支</li>
-<li>完成任务后推送代码到issue_xxx分支</li>
-<li>项目经理对代码进行Code Review，如果没发现问题 ，执行merge操作，经分支合并到主分支上；如果有发现问题 ，任务处理者继续在该分支上修改代码并重新push</li>
-</ol>
-<p>一、Create merge request</p>
-<p>​        执行完上面的1、2后出现下图所示内容，点击按钮填写内容即可创建merge request：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163715.png" alt="images/image-20200210152355513"></p>
-<p>二、 Code Review</p>
-<p>​        在Merge Requests列表页面选择进入要审核的request进行代码审核：</p>
-<ul>
-<li>审核不通过并添加描述</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163724.png" alt=""></p>
-<ul>
-<li><p>审核通过并合并分支</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163735.png" alt="images/image-20200210153721528"></p>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>git</category>
@@ -442,6 +375,73 @@
         <tag>ActiveMQ</tag>
         <tag>Kafka</tag>
         <tag>消息中间件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用gitlab实现项目协作</title>
+    <url>//p/1845ee0e.html</url>
+    <content><![CDATA[<h1 id="使用gitlab实现项目协作"><a href="#使用gitlab实现项目协作" class="headerlink" title="使用gitlab实现项目协作"></a>使用gitlab实现项目协作</h1><h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>issue是添加到项目中的、需要解决和改进的内容。issue可以是bug、任务或者是需要讨论的需求。issues是支持搜索和过滤的。</p>
+<p>一、创建issue</p>
+<p>​        新建issue时必须给issue设置一个或多个分类（即Labels），还可以指定由谁来处理该issue（即Assignee），设置处理该issue的截止日期（Due date）以及issue归属的里程碑（Milestone）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163511.jpg" alt="images/create issue.jpg"></p>
+<p>二、 issues列表</p>
+<p>​        issues List为当期project下的所有issues,项目组成员在处理issue时需要做到以下几点：</p>
+<ul>
+<li>项目组成员要关注分配给自己的、状态为“Open”的issues。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163535.png" alt="images/image-20200210100911642"></p>
+<ul>
+<li>当issue已经处理完成，issue的处理者要及时地把issue的状态修改为关闭。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163803.png" alt="images/image-20200210102010576"></p>
+<h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>标签允许我们使用描述性标题（如bug、需求）对问题进行分类，每个标签也有可定制的颜色，可以让我们快速动态地筛选和管理问题。</p>
+<p>一、新建label</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163545.png" alt="images/image-20200210105850287"></p>
+<p>二、 Labels列表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163611.png" alt="images/image-20200210110113601"></p>
+<h2 id="MileStones"><a href="#MileStones" class="headerlink" title="MileStones"></a>MileStones</h2><p>GitLab中的里程碑（MileStone）是一种跟踪问题的方法，以便在特定时间段内实现既定的目标。里程碑允许我们把安排问题到一个阶段，它具有可选的开始日期和可选的截止日期。</p>
+<p>一、创建MileStone</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163623.png" alt="images/image-20200210111225816"></p>
+<p>二、MileStone list</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163638.png" alt="images/image-20200210111540891"></p>
+<h2 id="Board"><a href="#Board" class="headerlink" title="Board"></a>Board</h2><p>gitLab工单看板（board）可以帮助我们组工作和排列工作的优先级,免费版gitLab只能创建一个board。</p>
+<p>一、添加list到board</p>
+<p>​       添加list时会要求我们先选择label，选择完labels成功创建list后，board会出现以label名称命名的list。该list下会列出有该label标签的所有issues。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163648.png" alt="images/image-20200210120159151"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163701.png" alt="images/image-20200210121515856"></p>
+<p>一般情况下，我们会新增“待办”和”处理中“两个list来辅助项目任务的管理，团队成员间可以按照以下方式协作：</p>
+<ul>
+<li>项目经理将默认“open”列中的任务选择性地拖拽到“待办”列中。</li>
+<li>项目成员需要关注“待办”列中的issues,已经开始着手处理的issues,需要从“待办”列拖拽到“处理中”列。</li>
+<li>项目成员“处理”列中的某项任务以完成，需要及时地将issue拖拽到“closed”列中。</li>
+<li>项目经理可以去检查“closed”列中的任务，若需要重新处理，可以将该任务再次拖拽到“处理中”列，此时需要在issue中添加comment描述，以便问题处理者能够知道任务完成的不足或者优化的具体要求。</li>
+</ul>
+<h2 id="Merge-Request"><a href="#Merge-Request" class="headerlink" title="Merge Request"></a>Merge Request</h2><p>master分支是受保护的，原则上是不允许直接在master上提交代码。所以我们需要用merge request来实现分支管理。上面提到，开发过程的每一个任务都以issue去记录，所以可以用以下方式去创建Merge Request：</p>
+<ol>
+<li>任务的接收者在master分支上对某个issue创建本地issue_xxx分支</li>
+<li>完成任务后推送代码到issue_xxx分支</li>
+<li>项目经理对代码进行Code Review，如果没发现问题 ，执行merge操作，经分支合并到主分支上；如果有发现问题 ，任务处理者继续在该分支上修改代码并重新push</li>
+</ol>
+<p>一、Create merge request</p>
+<p>​        执行完上面的1、2后出现下图所示内容，点击按钮填写内容即可创建merge request：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163715.png" alt="images/image-20200210152355513"></p>
+<p>二、 Code Review</p>
+<p>​        在Merge Requests列表页面选择进入要审核的request进行代码审核：</p>
+<ul>
+<li>审核不通过并添加描述</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163724.png" alt=""></p>
+<ul>
+<li><p>审核通过并合并分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200410163735.png" alt="images/image-20200210153721528"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -1079,7 +1079,9 @@
   <entry>
     <title>要素式审核-资料</title>
     <url>//p/4d915dad.html</url>
-    <content><![CDATA[<p>TODO pdf在线预览<br>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="/pdf/web/viewer.html?file=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89.pdf" target="_blank" rel="noopener">下载</a>】</p>
+    <content><![CDATA[<p>TODO pdf在线预览</p>
+<div class="pdfobject-container" data-target="http://q87a8anb5.bkt.clouddn.com/Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C(%E6%B3%B0%E5%B1%B1%E7%89%88).pdf" data-height="500px"></div>
+<p>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="">预览</a>】</p>
 <p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>
 ]]></content>
       <categories>
