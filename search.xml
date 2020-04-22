@@ -20,6 +20,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown自动生成左侧导航栏</title>
+    <url>//p/383ccfbe.html</url>
+    <content><![CDATA[<p>Markdown自动生成左侧导航栏</p>
+<p>把以下代码直接 复制到markdown生成的html中即可。</p>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-1.7.2.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"> <span class="comment">//是否显示导航栏</span></span></span><br><span class="line"><span class="actionscript"> <span class="keyword">var</span> showNavBar = <span class="literal">true</span>;</span></span><br><span class="line"><span class="actionscript"> <span class="comment">//是否展开导航栏</span></span></span><br><span class="line"><span class="actionscript"> <span class="keyword">var</span> expandNavBar = <span class="literal">true</span>;</span></span><br><span class="line"><span class="actionscript"> <span class="keyword">var</span> currentIndex = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript"> <span class="keyword">var</span> currentScrollHigh = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript"> <span class="keyword">var</span> currentContentScrollHigh = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript"> <span class="function"><span class="keyword">function</span> <span class="title">sleep</span><span class="params">(numberMillis)</span> </span>&#123;  </span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();  </span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> exitTime = now.getTime() + numberMillis;  </span></span><br><span class="line"><span class="actionscript">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;  </span></span><br><span class="line"><span class="javascript">        now = <span class="keyword">new</span> <span class="built_in">Date</span>();  </span></span><br><span class="line">        if (now.getTime() &gt; exitTime)  </span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span>;  </span></span><br><span class="line">        &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">$(<span class="built_in">window</span>).onbeforeunload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span></span><br><span class="line">currentIndex = 0;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript"> $(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h1s = $(<span class="string">"body"</span>).find(<span class="string">"h1"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h2s = $(<span class="string">"body"</span>).find(<span class="string">"h2"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h3s = $(<span class="string">"body"</span>).find(<span class="string">"h3"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h4s = $(<span class="string">"body"</span>).find(<span class="string">"h4"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h5s = $(<span class="string">"body"</span>).find(<span class="string">"h5"</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> h6s = $(<span class="string">"body"</span>).find(<span class="string">"h6"</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> headCounts = [h1s.length, h2s.length, h3s.length, h4s.length, h5s.length, h6s.length];</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vH1Tag = <span class="literal">null</span>;  <span class="comment">// 显示的最高层级</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vH2Tag = <span class="literal">null</span>;   <span class="comment">// 显示的最低层级</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> sum = <span class="number">0</span>;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; headCounts.length; i++)&#123;</span></span><br><span class="line">          if(headCounts[i] &gt; 0)&#123;</span><br><span class="line"><span class="actionscript">          <span class="keyword">for</span>( <span class="keyword">var</span> y = <span class="number">0</span>; y &lt; headCounts[i]; y++)</span></span><br><span class="line">                 sum = sum + 1;</span><br><span class="line">          &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; headCounts.length; i++)&#123;</span></span><br><span class="line">        if(headCounts[i] &gt; 0)&#123;</span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span>(vH1Tag == <span class="literal">null</span>)&#123;</span></span><br><span class="line"><span class="actionscript">                vH1Tag = <span class="string">'h'</span> + (i + <span class="number">1</span>);</span></span><br><span class="line"><span class="actionscript">            &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">                vH2Tag = <span class="string">'h'</span> + (i + <span class="number">1</span>);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    <span class="keyword">if</span>(vH1Tag == <span class="literal">null</span>)&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    $(<span class="string">"body"</span>).prepend(<span class="string">'&lt;div class="BlogAnchor"&gt;'</span> + </span></span><br><span class="line"><span class="handlebars"><span class="xml">        '<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red;position:absolute;top:-6px;left:0px;cursor:pointer;"</span> ο<span class="attr">nclick</span>=<span class="string">"$(\'.BlogAnchor\').hide();"</span>&gt;</span>×<span class="tag">&lt;/<span class="name">span</span>&gt;</span>' +</span></span></span><br><span class="line"><span class="actionscript">        <span class="string">'&lt;p&gt;'</span> + </span></span><br><span class="line"><span class="handlebars"><span class="xml">            '<span class="tag">&lt;<span class="name">b</span> <span class="attr">id</span>=<span class="string">"AnchorContentToggle"</span> <span class="attr">title</span>=<span class="string">"收起"</span> <span class="attr">style</span>=<span class="string">"cursor:pointer;"</span>&gt;</span>目录▲<span class="tag">&lt;/<span class="name">b</span>&gt;</span>' + </span></span></span><br><span class="line"><span class="actionscript">        <span class="string">'&lt;/p&gt;'</span> + </span></span><br><span class="line"><span class="handlebars"><span class="xml">        '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"AnchorContent"</span> <span class="attr">id</span>=<span class="string">"AnchorContent"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span>' + </span></span></span><br><span class="line"><span class="actionscript">    <span class="string">'&lt;/div&gt;'</span> );</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vH1Index = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vH2Index = <span class="number">0</span>;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH1 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH2 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH3 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH4 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH5 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vIndexH6 = <span class="number">0</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> headerALL = [];</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> headerIDALL = [];</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> headerHightALL = [];</span></span><br><span class="line"><span class="javascript">    $(<span class="string">"body"</span>).find(<span class="string">"h1,h2,h3,h4,h5,h6"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> id = <span class="string">''</span>;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> name = <span class="string">''</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> tag = $(item).get(<span class="number">0</span>).tagName.toLowerCase();</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> className = <span class="string">''</span>;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// i=0 tag=h1          i=1 tag=h2     i=2 tag=h2</span></span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(tag == <span class="string">"h1"</span>)&#123;</span></span><br><span class="line">            id = name = ++vIndexH1;</span><br><span class="line">    vIndexH2 = 0;</span><br><span class="line">    vIndexH3 = 0;</span><br><span class="line">    vIndexH4 = 0;</span><br><span class="line">    vIndexH5 = 0;</span><br><span class="line">    vIndexH6 = 0;</span><br><span class="line"><span class="actionscript">    className = <span class="string">'item_h1'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">//alert("tag ="+ tag +"----   i = "+ i + " name ="+ name +"    className= "+ className);</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">//tag =h1----   i = 0 name =1    className= item_h1</span></span></span><br><span class="line"><span class="actionscript">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tag == <span class="string">"h2"</span>)&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">            id = vIndexH1 + <span class="string">'_'</span> + ++vIndexH2;</span></span><br><span class="line"><span class="actionscript">            name = vIndexH1 + <span class="string">'.'</span> + vIndexH2;</span></span><br><span class="line"><span class="actionscript">            className = <span class="string">'item_h2'</span>; </span></span><br><span class="line">    vIndexH3 = 0;</span><br><span class="line">    vIndexH4 = 0;</span><br><span class="line">    vIndexH5 = 0;</span><br><span class="line">    vIndexH6 = 0;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">       &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tag == <span class="string">"h3"</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            id = vIndexH1 + <span class="string">'_'</span> + vIndexH2+ <span class="string">'_'</span> + ++vIndexH3;</span></span><br><span class="line"><span class="actionscript">            name = vIndexH1 + <span class="string">'.'</span> + vIndexH2+ <span class="string">'.'</span> + +vIndexH3;</span></span><br><span class="line"><span class="actionscript">            className = <span class="string">'item_h3'</span>; </span></span><br><span class="line">    vIndexH4 = 0;</span><br><span class="line">    vIndexH5 = 0;</span><br><span class="line">    vIndexH6 = 0;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">       <span class="keyword">else</span> <span class="keyword">if</span>(tag == <span class="string">"h4"</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            id = vIndexH1 + <span class="string">'_'</span> + vIndexH2+ <span class="string">'_'</span>  +vIndexH3 +<span class="string">'_'</span>+ ++vIndexH4 ;</span></span><br><span class="line"><span class="actionscript">            name =  vIndexH1 + <span class="string">'.'</span> + vIndexH2+ <span class="string">'.'</span>  +vIndexH3 +<span class="string">'.'</span>+  vIndexH4 ;</span></span><br><span class="line"><span class="actionscript">            className = <span class="string">'item_h4'</span>;</span></span><br><span class="line">    vIndexH5 = 0;</span><br><span class="line">    vIndexH6 = 0; </span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">       <span class="keyword">else</span> <span class="keyword">if</span>(tag == <span class="string">"h5"</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            id = vIndexH1 + <span class="string">'_'</span> + vIndexH2+ <span class="string">'_'</span>  +vIndexH3 +<span class="string">'_'</span> +vIndexH4+<span class="string">'_'</span>+ ++vIndexH5;</span></span><br><span class="line"><span class="actionscript">            name = vIndexH1 + <span class="string">'.'</span> + vIndexH2+ <span class="string">'.'</span>  +vIndexH3 +<span class="string">'.'</span> +vIndexH4+<span class="string">'.'</span>+ vIndexH5;</span></span><br><span class="line"><span class="actionscript">            className = <span class="string">'item_h5'</span>; </span></span><br><span class="line">            vIndexH6 = 0; </span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">       <span class="keyword">else</span> <span class="keyword">if</span>(tag == <span class="string">"h6"</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            id = vIndexH1 + <span class="string">'_'</span> + vIndexH2+ <span class="string">'_'</span>  +vIndexH3 +<span class="string">'_'</span> +vIndexH4+<span class="string">'_'</span> +vIndexH5+<span class="string">'_'</span>+ ++vIndexH6;</span></span><br><span class="line"><span class="actionscript">            name = vIndexH1 + <span class="string">'.'</span> + vIndexH2+ <span class="string">'.'</span>  +vIndexH3 +<span class="string">'.'</span> +vIndexH4+<span class="string">'.'</span> +vIndexH5+<span class="string">'.'</span>+ vIndexH6;</span></span><br><span class="line"><span class="actionscript">            className = <span class="string">'item_h6'</span>; </span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">        if(name.length &gt; 2)&#123;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> mFirstName = name.substring(<span class="number">0</span>,<span class="number">2</span>);</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">while</span>(mFirstName == <span class="string">"0."</span>)&#123;</span></span><br><span class="line">        name = name.substring(2,name.length);</span><br><span class="line">        mFirstName = name.substring(0,2);</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        $(item).attr(<span class="string">"id"</span>,<span class="string">"wow"</span>+id+<span class="string">"_index_"</span>+i);</span></span><br><span class="line"><span class="javascript">        $(item).addClass(<span class="string">"wow_head"</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> itemHeight = $(item).offset().top</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).css(<span class="string">'max-height'</span>, ($(<span class="built_in">document</span>).height()) + <span class="string">'px'</span>);</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).css(<span class="string">'height'</span>, ($(<span class="built_in">window</span>).height()) + <span class="string">'px'</span>);</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).css(<span class="string">'overflow'</span>,<span class="string">'auto'</span>);</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).append(<span class="string">'&lt;li&gt;&lt;a class="nav_item '</span>+className+<span class="string">' anchor-link"  href="#wow'</span>+id+<span class="string">'_index_'</span>+i+<span class="string">'" link="#wow'</span>+id+<span class="string">'" index="'</span>+i+<span class="string">'"&gt;'</span>+name+<span class="string">" "</span>+$(<span class="keyword">this</span>).text()+<span class="string">" "</span>+<span class="string">'&lt;/a&gt;&lt;/li&gt;'</span>);</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> str = <span class="string">"#wow"</span>+id+<span class="string">"_index_"</span>+i;</span></span><br><span class="line"><span class="javascript">        headerALL.push($(item));</span></span><br><span class="line">        headerIDALL.push(str);</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">"  i = "</span>+ i +<span class="string">"   id ="</span> + id +<span class="string">"  itemHeight = "</span>+ itemHeight);</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1.1</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1.1.1</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1.1.1.1</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1.1.1.1.1</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 1.1.1.1.1.1</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">"#AnchorContentToggle"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> text = $(<span class="keyword">this</span>).html();</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(text==<span class="string">"目录▲"</span>)&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="keyword">this</span>).html(<span class="string">"目录▼"</span>);</span></span><br><span class="line"><span class="javascript">            $(<span class="keyword">this</span>).attr(&#123;<span class="string">"title"</span>:<span class="string">"展开"</span>&#125;);</span></span><br><span class="line"><span class="actionscript">        &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="keyword">this</span>).html(<span class="string">"目录▲"</span>);</span></span><br><span class="line"><span class="javascript">            $(<span class="keyword">this</span>).attr(&#123;<span class="string">"title"</span>:<span class="string">"收起"</span>&#125;);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).toggle();</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">$(<span class="string">".anchor-link"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">//$("html,body").animate(&#123;scrollTop: $($(this).attr("link")).offset().top&#125;, 10);</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> index  = $(<span class="keyword">this</span>).attr(<span class="string">"index"</span>);</span></span><br><span class="line"><span class="javascript">                $(<span class="string">".BlogAnchor li .nav_item.current"</span>).removeClass(<span class="string">'current'</span>);</span></span><br><span class="line"><span class="javascript">                $(headerNavs[index]).addClass(<span class="string">'current'</span>);</span></span><br><span class="line"><span class="javascript">                      <span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop(); <span class="comment">// 获得将要到达的点离顶距离</span></span></span><br><span class="line">                      currentScrollHigh = scrollTop;</span><br><span class="line">                      currentContentScrollHigh = headerHightALL[index];</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> value = headerTops[index];</span></span><br><span class="line">      currentIndex = value;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">"index = "</span>+ index+ <span class="string">"  headerTops["</span>+index+<span class="string">"] ="</span>+ value + <span class="string">"scrollTop="</span>+ scrollTop);</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> headerNavs = $(<span class="string">".BlogAnchor li .nav_item"</span>);</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> headerTops = [];</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> mHeight = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">".wow_head"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i, n</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> value = $(n).offset().top;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        headerTops.push($(n).offset().top);</span></span><br><span class="line"><span class="javascript">         <span class="built_in">console</span>.log(<span class="string">"i = "</span>+ i+ <span class="string">"  offset().top ="</span>+ value);</span></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    headerTops.push($(<span class="built_in">document</span>).height());</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line">headerTops = [];</span><br><span class="line"><span class="javascript">$.each(headerNavs, <span class="function"><span class="keyword">function</span>(<span class="params">i, n</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">$(n).trigger(<span class="string">"click"</span>); </span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.querySelector(headerIDALL[i]).scrollIntoView(<span class="literal">true</span>);</span></span><br><span class="line"><span class="actionscript"><span class="comment">//var high = $(n).offset().top;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop();</span></span><br><span class="line">headerTops.push(scrollTop);</span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(<span class="string">"headerNavs_index="</span>+i +<span class="string">"   scrollTop="</span>+scrollTop +<span class="string">"  headerTops="</span>+headerTops[i]);</span></span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line"><span class="javascript">headerTops.push($(<span class="built_in">document</span>).height());</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">//$("#AnchorContent").height($(window).height());</span></span></span><br><span class="line"><span class="javascript">$(<span class="string">"#AnchorContent"</span>).css(<span class="string">'height'</span>, ($(<span class="built_in">window</span>).height()) + <span class="string">'px'</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> xcontentWidth =  $(<span class="string">"#AnchorContent"</span>).width();</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> xWidth = $(<span class="built_in">window</span>).width();</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> xlength = xWidth - xcontentWidth;</span></span><br><span class="line"><span class="javascript">$(<span class="string">"body"</span>).css(<span class="string">"marginLeft"</span>,xcontentWidth+<span class="string">'px'</span>);</span></span><br><span class="line"><span class="javascript">$(<span class="string">"body"</span>).css(<span class="string">"max-width"</span>,xlength);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">$(headerNavs[currentIndex]).trigger(<span class="string">"click"</span>); </span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.querySelector(headerIDALL[i]).scrollIntoView(<span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">$(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop(); <span class="comment">// 获得将要到达的点离顶距离</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        $.each(headerTops, <span class="function"><span class="keyword">function</span>(<span class="params">i, n</span>)</span>&#123;</span></span><br><span class="line">            if( (scrollTop &gt;= (headerTops[i])  &amp;&amp; scrollTop &lt; (headerTops[i+1] -1))  )&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"headerTops[i-1]"</span>+headerTops[i<span class="number">-1</span>]+<span class="string">"headerTops[i]"</span>+headerTops[i]+<span class="string">"  scrollTop ="</span>+ scrollTop+<span class="string">"  headerTops[i+1]= "</span>+headerTops[i+<span class="number">1</span>] +<span class="string">"  i ="</span>+i);</span></span><br><span class="line"><span class="javascript">                $(<span class="string">".BlogAnchor li .nav_item.current"</span>).removeClass(<span class="string">'current'</span>);</span></span><br><span class="line"><span class="javascript">                $(headerNavs[i]).addClass(<span class="string">'current'</span>);</span></span><br><span class="line">                currentScrollHigh = scrollTop;</span><br><span class="line">                currentContentScrollHigh = headerHightALL[i];</span><br><span class="line">                currentIndex = i;</span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> mxxHeight = $(<span class="string">"#AnchorContent"</span>).height()</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> mscrollTop1 = $(<span class="string">"#AnchorContent"</span>).scrollTop();  <span class="comment">// 当前标签的高度</span></span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">"zukgit2 currentIndex="</span>+ currentIndex );</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"zukgit2 windows.scrollTop="</span>+ scrollTop );</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"zukgit2 $(window).height()="</span>+ $(<span class="built_in">window</span>).height() );</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"zukgit2 currentContentScrollHigh="</span>+ currentContentScrollHigh );</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"zukgit2 AnchorContent.mscrollTop="</span>+ mscrollTop1 );</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"zukgit2 AnchorContent.high="</span>+ mxxHeight );</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span>((currentContentScrollHigh - mscrollTop1)&gt;  ($(<span class="built_in">window</span>).height()/<span class="number">2</span>))&#123; <span class="comment">//↓ // 如果当前index超出  界面的高度</span></span></span><br><span class="line"><span class="actionscript">                <span class="comment">//var sum =   Math.floor(headerHightALL(i) / $(window).height());</span></span></span><br><span class="line"><span class="actionscript">                <span class="keyword">var</span> dif = currentContentScrollHigh - mscrollTop1;</span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#AnchorContent"</span>).animate(&#123;<span class="attr">scrollTop</span>: (currentContentScrollHigh)&#125;, <span class="number">50</span>);</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"  i(zukgit3) = "</span>+ i +<span class="string">"   currentContentScrollHigh ="</span> + currentContentScrollHigh +<span class="string">"  mscrollTop1 = "</span>+ mscrollTop1);</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">" $(window).height()="</span>+ $(<span class="built_in">window</span>).height() );</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>( ( mscrollTop1 - currentContentScrollHigh )&gt;  <span class="number">0</span> )&#123;  <span class="comment">//↑</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#AnchorContent"</span>).animate(&#123;<span class="attr">scrollTop</span>: currentContentScrollHigh-($(<span class="string">"#AnchorContent"</span>).height()/<span class="number">3</span>)&#125;, <span class="number">50</span>);</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">"  i(zukgit4) = "</span>+ i +<span class="string">"   currentContentScrollHigh ="</span> + currentContentScrollHigh +<span class="string">"  mscrollTop1 = "</span>+ mscrollTop1);</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">" $(window).height()="</span>+ $(<span class="built_in">window</span>).height() +<span class="string">"   $(#AnchorContent).height()="</span>+mxxHeight);</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">                <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        );</span><br><span class="line">        if(scrollTop == 0)&#123;</span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).animate(&#123;<span class="attr">scrollTop</span>: <span class="number">0</span>&#125;, <span class="number">50</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(scrollTop == $(<span class="built_in">document</span>).height())&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).animate(&#123;<span class="attr">scrollTop</span>: headerHightALL[headerHightALL.length<span class="number">-1</span>]&#125;, <span class="number">50</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">$.each(headerNavs, <span class="function"><span class="keyword">function</span>(<span class="params">i, n</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> high = $(n).offset().top;</span></span><br><span class="line">headerHightALL.push(high);</span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(<span class="string">"high"</span>+high);</span></span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">headerTops = [];</span><br><span class="line"><span class="javascript">$.each(headerNavs, <span class="function"><span class="keyword">function</span>(<span class="params">i, n</span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">$(n).trigger(<span class="string">"click"</span>); </span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.querySelector(headerIDALL[i]).scrollIntoView(<span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop();</span></span><br><span class="line"></span><br><span class="line">headerTops.push(scrollTop);</span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(<span class="string">"headerNavs_index="</span>+i +<span class="string">"   scrollTop="</span>+scrollTop +<span class="string">"  headerTops="</span>+headerTops[i]);</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">headerTops.push($(<span class="built_in">document</span>).height());</span></span><br><span class="line"><span class="javascript">$(headerNavs[<span class="number">0</span>]).trigger(<span class="string">"click"</span>); </span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.querySelector(headerIDALL[<span class="number">0</span>]).scrollIntoView(<span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> xcontentWidth =  $(<span class="string">"#AnchorContent"</span>).width();</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> xWidth = $(<span class="built_in">window</span>).width();</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> xlength = xWidth - xcontentWidth;</span></span><br><span class="line"><span class="javascript">$(<span class="string">"body"</span>).css(<span class="string">"marginLeft"</span>,xcontentWidth+<span class="string">'px'</span>);</span></span><br><span class="line"><span class="javascript">$(<span class="string">"body"</span>).css(<span class="string">"max-width"</span>,xlength);</span></span><br><span class="line"></span><br><span class="line">    if(!showNavBar)&#123;</span><br><span class="line"><span class="javascript">        $(<span class="string">'.BlogAnchor'</span>).hide();</span></span><br><span class="line">    &#125;</span><br><span class="line">    if(!expandNavBar)&#123;</span><br><span class="line"><span class="javascript">        $(<span class="keyword">this</span>).html(<span class="string">"目录▼"</span>);</span></span><br><span class="line"><span class="javascript">        $(<span class="keyword">this</span>).attr(&#123;<span class="string">"title"</span>:<span class="string">"展开"</span>&#125;);</span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#AnchorContent"</span>).hide();</span></span><br><span class="line">    &#125;</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="comment">/*导航*/</span></span></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> &#123;</span></span><br><span class="line">        //background: #f1f1f1;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#ffffff</span>;</span></span><br><span class="line">        //padding: 10px;</span><br><span class="line">        line-height: 180%;</span><br><span class="line">        position: fixed;</span><br><span class="line">        left: 0px;   // right: 48px;  </span><br><span class="line">        top: 0px;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#aaaaaa</span>;</span></span><br><span class="line">        width: 20%;</span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:100</span>%;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">p</span> &#123;</span></span><br><span class="line">        font-size: 18px;</span><br><span class="line"><span class="css">        <span class="selector-tag">color</span>: <span class="selector-id">#15a230</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">margin</span>: 0 0 0<span class="selector-class">.3rem</span> 0;</span></span><br><span class="line">        text-align: right;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-class">.AnchorContent</span> &#123;</span></span><br><span class="line">        //padding: 5px 0px;</span><br><span class="line">        overflow: auto;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">text-indent</span>: 0<span class="selector-class">.5rem</span>;</span></span><br><span class="line">        font-size: 14px;</span><br><span class="line">        list-style: none;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.nav_item</span>&#123;</span></span><br><span class="line">        padding: 3px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h1</span>&#123;</span></span><br><span class="line">        margin-left: 0rem;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h2</span>&#123;</span></span><br><span class="line">        margin-left: 2rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h3</span>&#123;</span></span><br><span class="line">        margin-left: 4rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h4</span>&#123;</span></span><br><span class="line">        margin-left: 5rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h5</span>&#123;</span></span><br><span class="line">        margin-left: 6rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.item_h6</span>&#123;</span></span><br><span class="line">        margin-left: 7rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span> <span class="selector-class">.nav_item</span><span class="selector-class">.current</span>&#123;</span></span><br><span class="line">        color: white;</span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>: <span class="selector-id">#5cc26f</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-id">#AnchorContentToggle</span> &#123;</span></span><br><span class="line">        font-size: 13px;</span><br><span class="line">        font-weight: normal;</span><br><span class="line"><span class="css">        <span class="selector-tag">color</span>: <span class="selector-id">#FFF</span>;</span></span><br><span class="line">        display: inline-block;</span><br><span class="line">        line-height: 20px;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#5cc26f</span>;</span></span><br><span class="line">        font-style: normal;</span><br><span class="line">        padding: 1px 8px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">color</span>: <span class="selector-id">#5cc26f</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.BlogAnchor</span> <span class="selector-tag">a</span> &#123;</span></span><br><span class="line">        text-decoration: none;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>目录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>word转md文件</title>
     <url>//p/d44f2022.html</url>
     <content><![CDATA[<p>使用Pandoc转换</p>
@@ -108,25 +124,6 @@
       </tags>
   </entry>
   <entry>
-    <title>IDEA中Git的更新、提交、还原方法</title>
-    <url>//p/503970b4.html</url>
-    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
-<a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
-<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
-<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>idea</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>elasticsearch中父子关系文档</title>
     <url>//p/3cb208bc.html</url>
     <content><![CDATA[<p>参考地址：</p>
@@ -152,18 +149,22 @@
       </tags>
   </entry>
   <entry>
-    <title>IDEA撤销commit</title>
-    <url>//p/934109a7.html</url>
-    <content><![CDATA[<p>日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。<br> <strong>Undo Commit</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162635.png" alt="20200403035359132"></p>
-<p>可以在 Version Control 查看到刚刚撤销的内容</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162740.png" alt="20200403035409033">此时，就可以从新 commit 代码了</p>
+    <title>IDEA中Git的更新、提交、还原方法</title>
+    <url>//p/503970b4.html</url>
+    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
+<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
+<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
 ]]></content>
       <categories>
         <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -180,21 +181,12 @@
       </tags>
   </entry>
   <entry>
-    <title>gitlab添加问题模板</title>
-    <url>//p/7930ee41.html</url>
-    <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
-<li><p>在项目中找到文件夹 <code>.gitlab</code>（和 <code>.git</code> 是在同一目录），创建文件夹 <code>issue_templates</code></p>
-</li>
-<li><p>在文件夹 <code>issue_templates</code>下添加一个<code>.md</code>的文件，如<code>bug.md</code></p>
-</li>
-<li><p>将添加的文件推送到服务器分支上，合并</p>
-</li>
-<li><p>最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 <code>bug</code><br>这样就可以了</p>
-</li>
-</ul>
-<a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>
+    <title>IDEA撤销commit</title>
+    <url>//p/934109a7.html</url>
+    <content><![CDATA[<p>日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。<br> <strong>Undo Commit</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162635.png" alt="20200403035359132"></p>
+<p>可以在 Version Control 查看到刚刚撤销的内容</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403162740.png" alt="20200403035409033">此时，就可以从新 commit 代码了</p>
 ]]></content>
       <categories>
         <category>git</category>
@@ -244,6 +236,30 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gitlab添加问题模板</title>
+    <url>//p/7930ee41.html</url>
+    <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
+<li><p>在项目中找到文件夹 <code>.gitlab</code>（和 <code>.git</code> 是在同一目录），创建文件夹 <code>issue_templates</code></p>
+</li>
+<li><p>在文件夹 <code>issue_templates</code>下添加一个<code>.md</code>的文件，如<code>bug.md</code></p>
+</li>
+<li><p>将添加的文件推送到服务器分支上，合并</p>
+</li>
+<li><p>最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 <code>bug</code><br>这样就可以了</p>
+</li>
+</ul>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -325,121 +341,6 @@
       <tags>
         <tag>PD</tag>
         <tag>PowerDesigner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成为一流软件开发者的34条建议</title>
-    <url>//p/32d2b524.html</url>
-    <content><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p>
-<p>这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。</p>
-<p><strong>1. 规划方法 &amp; 在编码前先写伪代码</strong></p>
-<p>当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。</p>
-<p>在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。</p>
-<p>作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！</p>
-<p><strong>2. 总是寻找新东西来学习</strong></p>
-<p>这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。</p>
-<p>你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。</p>
-<p><strong>3. 不要尝试去学习所有的东西</strong></p>
-<p>尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。</p>
-<p>你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。</p>
-<p><strong>4. 了解怎样学习</strong></p>
-<p>每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。</p>
-<p>除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（<a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> https://www.coursera.org/learn/learning-how-to-learn </a>），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。</p>
-<p><strong>5. 缓缓前行，不要破坏东西</strong></p>
-<p>“快速前行，打破常规”，在科技行业，这句谚语已经作为一条真理存在很久了。这句谚语是用来鼓励开发者快速地部署代码和技术想法的，同时还能安心地觉得这只是一些代码，当任何错误或者 bug 自己暴露出来的时候，都可以被轻松解决。</p>
-<p>但是软件和数字产品不再是被公司美化的营销部门，也不再是偏安一隅的经济单位。它现在已经成为了所有东西之上的一层。软件和数 10 亿人的生活息息相关，代码不再是完全无害的。Bug 和设计问题都会对人们产生负面的影响。</p>
-<p>所以我们应该缓缓前行，并且保证不会破坏任何东西。你所写的代码会对其他人的生活产生真实的影响，所以应当确保写出质量好的代码。</p>
-<p><strong>6. 善于阅读其他人的代码</strong></p>
-<p>阅读其他人的代码是一项不太容易掌握的技能。当你开始成为一名优秀的程序员时，你就会习惯于你自己的代码风格。而当你尝试阅读别人的代码时，你就会逐渐迷失了。幸运的是，你阅读别人的代码越多，你就会发现这越容易，而且你将愿意经常阅读别人的代码，但是，寻找不同的阅读方法（<a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener"> https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/ </a>）也会起到帮助，那会让阅读别人代码的过程变得更加轻松。</p>
-<p><strong>7. 感到自豪，让工作变得有价值</strong></p>
-<p>不管你的工作是大还是小，都要为此感到自豪。你写的每一行代码都应当足够好，好到你自己也感觉良好的程度。这些代码不仅要能正常运行，而且要能让你感到自豪。你不可能创建出完美的代码，也没有人能够做到这样，因为创建完美的软件是不可能的。但是创建出让你感觉良好的代码，一定会让你不断地做出好的工作成绩。</p>
-<p><strong>8. 对你造成的错误保持开放负责的态度</strong></p>
-<p>有时候你可能把事情弄砸了，可能在你的职业生涯中，还会出现好几次这样的情况。不管是做错了什么，我们每个人都发生过这样的状况。当错误发生时，保持开放的心态，担负起责任，不要责怪其他人。</p>
-<p>用这样的态度处理这些错误，你就会在你的队友和同事中间建立起信任和尊重。</p>
-<p><strong>9. 工作时尽量减少分心</strong></p>
-<p>由于你是人类（对所有读到这篇文章的机器人发出警告），在你累到筋疲力尽之前，你这一天当中产出效率最高的工作时间是有限的。所以你需要优化那些产出效率高的时间来完成工作。</p>
-<p>每个人的情况是不同的，但是请尝试不同的方法，看看哪种方法对你最有效。关闭任何手机提醒（电子邮件，短信等等），可能会有帮助；或者每天只检查电子邮件 1~2 次；并且只有在你工作完回到家时，再去登陆社交网络。</p>
-<p><strong>10. 善于使用 Google</strong></p>
-<p>作为一名程序员，你可能会不断地碰到大大小小的问题。这些问题绝大部分也被其他的开发者遇到过，所以你可以在各种网站上看到他们的解决方案。</p>
-<p>要善于寻找这些疑问 / 问题的解决方案。学习如何高效地搜索 Google 能够为你的开发节省大量时间。我们得承认一个事实，StackOverflow 将成为你新的救世主。</p>
-<p><strong>11. 不要害怕寻求帮助</strong></p>
-<p>但是当你自己不能解决某些问题的时候，你不应该害怕寻求帮助。有时候你可能会卡在一个问题上，并且花了大量的时间来搜索解决方案。</p>
-<p>寻求支持并不丢脸。你的部分或所有同事都会得到更高的工资，这是有原因的，因为他们更有经验。大部分时候他们都是乐于帮助你的，并且还会抓住机会给你讲解一些编程知识。</p>
-<p><strong>12. 不要拿自己和其他人去做比较</strong></p>
-<p>在你的职业生涯和生活中，你会不停地拿自己和其他人做比较。你可能会自然地这样做，因为这会帮助你弄清楚你位于世界的哪个位置，帮你找到人生方向。</p>
-<p>但有时候进步的最好方式是拿你和你的昨天或者你的过去进行比较。用这种方法思考肯定能让你不断地进步，减少受挫感，明确你的预期目标。</p>
-<p><strong>13. 测试你的代码</strong></p>
-<p>如果你测试了你的代码，软件的最终交付版本将会更加稳定和可预测。学习不同的测试类型（单元测试、集成测试等等），并且要很勤快地使用它们，因为这真的很重要。你预先做的测试越多，你今后的工作就会越轻松，你晚上睡觉也会更踏实。</p>
-<p><strong>14. 学习如何调试</strong></p>
-<p>你编写的代码并不总是会按照你所预期的那样精确运行，不过没关系，这很正常。但是，你需要掌握相关技能，找到问题的原因，并且做出必要的修复。</p>
-<p>在定位 bug 时，需要弄清楚哪些调试技术是最适合你的。找一些有用的工具，这会让调试过程更加轻松。</p>
-<p><strong>15. 要知道自己的身价</strong></p>
-<p>去做一些调研，弄清楚你所在行业其他人的薪水如何，他们给公司带来了怎样的价值。了解这些东西会给你目前的工作带来一些认识，并且帮助你理解你的价值所在。</p>
-<p>这个调研不仅可以用于薪水方面，还可以用于了解你给公司或者团队提供了哪些价值。</p>
-<p><strong>16. 不要为了扩展而编写代码，除非这是必要的</strong></p>
-<p>在构建和编写代码时，需要记住，将来有一天你可能需要扩展代码。但是不要在编码的第一天就去考虑扩展性，没必要这样，而且这肯定会让你淹没其中，并且拖慢开发速度。</p>
-<p>准备好适应未来的增长，并且准备好创建相应的策略。但不要让你的代码库和团队陷入不断扩展代码的困境，除非这是必要的。如果你给火箭添加太多的重物，它可能都不能飞离地面。</p>
-<p><strong>17. 在你知道代码是如何运行之后，可以复制粘贴</strong></p>
-<p>诚恳地讲，每个人以前都有过复制粘贴代码的经历。不管这段代码是来自 StackOverflow，还是其他随便哪里的编程博客，这都没问题，只要你在复制粘贴前理解这段代码是做什么的。</p>
-<p>对你要粘贴的代码，你需要知道自己在做什么，并且小心谨慎。记住，缓缓前行，不要破坏东西。</p>
-<p><strong>18. 让周围人感到愉快，对他人友善</strong></p>
-<p>当你身边围绕着很多人都愿意帮助你或者支持你的时候，生活会变得很轻松。但如果人们都不喜欢你，那生活就不可能很轻松了。</p>
-<p>所以对人要友善（尽你所能），大部分时间里都要让周围的人感觉愉快。如果你能做到这一点，人们就会很喜欢你，如果人们很喜欢你，他们就愿意帮助你，你也会交到更多朋友。</p>
-<p><strong>19. 为了提高产出，休息一会儿</strong></p>
-<p>在整个工作日中保持 100% 的产出效率，这几乎是不可能的，如果你尝试这样做，那将会使你精疲力尽。设置一个计时器，让它提醒你站起来走一走，或者给你的咖啡续个杯。像番茄工作法这样的系统就可以在休息和提高效率方面起到很大的作用了（如果你想尝试一下，可以使用我们做的番茄工作法计时器（<a href="https://coderrocketfuel.com/tools/pomodoro-timer" target="_blank" rel="noopener"> https://coderrocketfuel.com/tools/pomodoro-timer </a>））。</p>
-<p>此外大量的研究表明，适当休息是任何工作和学习过程的一个关键组成部分。休息能够很大程度上帮助学生更有效地学习东西，让他们的注意力保持更长的时间。</p>
-<p><strong>20. 少说多听</strong></p>
-<p>不管你是想赢得一场辩论，变得更讨人喜欢，还是说服某人，倾听都是一个获得重要信息的很关键的方式，他会让你显得更值得信任和尊重。</p>
-<p>你很可能是与一些真正聪明的人一起工作，他们中的一些人甚至比你更聪明。于是他们可能有一些编程或者生活上的知识能够传授给你，如果你说太多话，可能就会错过这样的机会。</p>
-<p><strong>21. 去做那些让你害怕的项目</strong></p>
-<p>无论是在你的职业生涯中，还是在编程技能方面，不断扩展你的舒适区都是相当重要的。去做一些让你有点害怕的项目，扩展你的舒适区，这会让你变成一个更好的开发者，你的职业生涯也会进步得更快。</p>
-<p>你需要经历一些痛苦和恐惧，这样才能成长。要做到这样，你需要去寻找一些能扩展你舒适区的事情去做。</p>
-<p><strong>22. 给函数和变量提供描述性的命名</strong></p>
-<p>你会希望你的代码尽可能容易理解。让别人更容易阅读你的代码的方式之一，就是给你的函数和变量起一个能描述他们做什么和代表什么的好名字。</p>
-<p>例如有一个函数名叫 aDopeFunctionIMade，这就不是一个好名字，而另一个函数名 calculateCartTotal，它就是一个很好的名字。</p>
-<p><strong>23. 编写描述性好的代码注释</strong></p>
-<p>另外一种能让你的代码更容易阅读的方式就是给代码添加注释，注释能够解释你的代码为什么要这样做，以及你的代码都做了什么。编写注释并不难，只需要花点精力把注释包含到代码里去就可以啦。</p>
-<p>这个方法和上面那个写出具有描述性的函数和变量名字的方法通常是同时使用的。</p>
-<p><strong>24. 习惯于有建设性的批评</strong></p>
-<p>在工作中，你可能从不会享受于接受批评。但为了变得更好，你需要习惯于接受批评，不要对这些批评产生情绪。</p>
-<p>如果你的代码写得很糟糕，你难道不希望有其他人给你指出来吗？相反的一种方式就是别人看到了问题代码也不会告诉你，这将更糟糕。如果你欣然接受批评，你会因此而受到别人的尊敬，你自己也能够改进你的技能。</p>
-<p><strong>25. 找到你的立足点</strong></p>
-<p>在科技行业，你可能会在很多不同的领域都做得很成功。找到你最感兴趣或者最擅长的领域，在这个领域成为一个专家。在你的立足点上成为一个专家，会给你带来影响力，把你从一件商品变为你的公司或者你所在行业的必需品。但是这个说起来容易，做起来难，你可能需要花些时间才能弄清楚你的立足点在哪里。</p>
-<p><strong>26. 学一点商业方面的知识</strong></p>
-<p>花点时间去了解你所在公司或者团队的一些业务方面的知识。销售人员整天都在做些什么，他们为何有价值？会计或者市场营销人员的情况又如何？</p>
-<p>你不必成为这些领域的专家。但是理解一些业务情况，将会让你对工作有更好的理解，并且能帮助你为公司和团队的整体目标创造更多价值。</p>
-<p><strong>27. 在传授别人知识和与他人分享的过程中学习</strong></p>
-<p>protégé效应是一种心理现象，说的是向别人传授或假装传授信息时能够让你更好地（相比不使用这种方法时）学习这些信息。这一点适用于很多领域，但编程领域尤其如此。</p>
-<p>你可以向队友或者同事传授一些知识，或者可以开始维护个人编程博客，编写教程，向他人传授编程的概念。把你传授的知识汇总起来，以让其他人也能够学习到，这将极大地提高你自己对这些主题的理解。</p>
-<p><strong>28. 花点时间好好写写文档</strong></p>
-<p>这是很多程序员忽略的一点。但是好的文档能帮助你和其他人抓住你的代码或者项目的精髓。</p>
-<p>如果你写出的文档组织很有条理，综合性强，可读性强，那么你的代码或者项目就更容易使用，人们也就会更愿意来使用它。</p>
-<p><strong>29. 尽可能避免不必要的会议</strong></p>
-<p>尽管公司会议在传达思想，建立项目目标方面极其有帮助，但如果你不好好管理会议进度，这也可能会成为不可思议的时间吞噬器。在你工作的地方总有一些人喜欢发起会议，而不去想他们是否真的需要这些会议。</p>
-<p>你需要学习一些委婉拒绝他们的技巧，而同时又和他们保持良好的工作关系。或者你可能需要学习向人们说“不”的艺术，并且欣然接受说“不“而带来的结果。</p>
-<p><strong>30. 掌控你自己的工具箱</strong></p>
-<p>任何精通这一行的人都有一个工具箱，里面装满了工具，他们对这些工具的里里外外都了如指掌，他们通过使用这些工具来完成工作。他们非常了解其中每一件工具，并把他们当做自己能力的延伸。</p>
-<p>作为一名程序员，你应当构建自己的工具袋。精通你所选的文本编辑器，以最大化你的产出，或者找一个你喜欢使用的测试框架。你需要了解哪些工具是服务于什么样的目的的。并且要知道每一件工具为何会比另外一件工具更适用于某个场景。</p>
-<p><strong>31. 每隔一段时间就去尝试一种新的语言</strong></p>
-<p>不要做过头，但也要每隔一段时间就去尝试一种新的语言。使用一种新的语言，将会让你或多或少从不同的角度去思考问题，思考问题的方式会和你正在使用的语言不太一样。</p>
-<p>这些新的思考途径，将帮助你在使用当前的和 / 或今后的语言时，全面提高解决问题的能力。</p>
-<p><strong>32. 努力保持身体健康</strong></p>
-<p>编程是一项需要长时间坐在位子上的职业。你会很多天都坐在桌子前（顺便说一下，可以考虑入手一张站式桌子），看着电脑屏幕。久而久之，如果你不努力保持健康的话，这样的工作方式就会给你的身体带来负面影响。</p>
-<p>每周计划锻炼 2~3 天，每天保证 8 个小时的睡眠，并且计划一些外出活动，这些活动不要涉及到编程。这会帮助你过上更健康的生活，这将渗透到你的编程生涯中。</p>
-<p><strong>33. 建立能让你沉迷的东西</strong></p>
-<p>不是每天的工作都会给你走在阳光里的感觉。但如果你把工作时间花在你觉得有影响力或者很酷的事情上，你将会经历很多美好的日子，而不是糟糕的日子。</p>
-<p>你在业余时间或者工作时间中创造的酷酷的东西越多，你在自己的领域得到的认可也就越多，机会也就越多。</p>
-<p><strong>34. 绝不放弃</strong></p>
-<p>生活很艰难，编程也很艰难。可能会有很多次，你都会产生强烈的、要退出的想法。当那些时刻发生时，你要意识到每个人都会经历这些。如果你想作为一名程序员在你的职业生涯中保持成长，你就需要从这些困境里获取力量。</p>
-<p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p>
-<p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>
-]]></content>
-      <categories>
-        <category>开发经验</category>
-      </categories>
-      <tags>
-        <tag>开发经验</tag>
       </tags>
   </entry>
   <entry>
@@ -574,6 +475,121 @@
       </tags>
   </entry>
   <entry>
+    <title>成为一流软件开发者的34条建议</title>
+    <url>//p/32d2b524.html</url>
+    <content><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p>
+<p>这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。</p>
+<p><strong>1. 规划方法 &amp; 在编码前先写伪代码</strong></p>
+<p>当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。</p>
+<p>在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。</p>
+<p>作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！</p>
+<p><strong>2. 总是寻找新东西来学习</strong></p>
+<p>这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。</p>
+<p>你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。</p>
+<p><strong>3. 不要尝试去学习所有的东西</strong></p>
+<p>尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。</p>
+<p>你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。</p>
+<p><strong>4. 了解怎样学习</strong></p>
+<p>每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。</p>
+<p>除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（<a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener"> https://www.coursera.org/learn/learning-how-to-learn </a>），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。</p>
+<p><strong>5. 缓缓前行，不要破坏东西</strong></p>
+<p>“快速前行，打破常规”，在科技行业，这句谚语已经作为一条真理存在很久了。这句谚语是用来鼓励开发者快速地部署代码和技术想法的，同时还能安心地觉得这只是一些代码，当任何错误或者 bug 自己暴露出来的时候，都可以被轻松解决。</p>
+<p>但是软件和数字产品不再是被公司美化的营销部门，也不再是偏安一隅的经济单位。它现在已经成为了所有东西之上的一层。软件和数 10 亿人的生活息息相关，代码不再是完全无害的。Bug 和设计问题都会对人们产生负面的影响。</p>
+<p>所以我们应该缓缓前行，并且保证不会破坏任何东西。你所写的代码会对其他人的生活产生真实的影响，所以应当确保写出质量好的代码。</p>
+<p><strong>6. 善于阅读其他人的代码</strong></p>
+<p>阅读其他人的代码是一项不太容易掌握的技能。当你开始成为一名优秀的程序员时，你就会习惯于你自己的代码风格。而当你尝试阅读别人的代码时，你就会逐渐迷失了。幸运的是，你阅读别人的代码越多，你就会发现这越容易，而且你将愿意经常阅读别人的代码，但是，寻找不同的阅读方法（<a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener"> https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/ </a>）也会起到帮助，那会让阅读别人代码的过程变得更加轻松。</p>
+<p><strong>7. 感到自豪，让工作变得有价值</strong></p>
+<p>不管你的工作是大还是小，都要为此感到自豪。你写的每一行代码都应当足够好，好到你自己也感觉良好的程度。这些代码不仅要能正常运行，而且要能让你感到自豪。你不可能创建出完美的代码，也没有人能够做到这样，因为创建完美的软件是不可能的。但是创建出让你感觉良好的代码，一定会让你不断地做出好的工作成绩。</p>
+<p><strong>8. 对你造成的错误保持开放负责的态度</strong></p>
+<p>有时候你可能把事情弄砸了，可能在你的职业生涯中，还会出现好几次这样的情况。不管是做错了什么，我们每个人都发生过这样的状况。当错误发生时，保持开放的心态，担负起责任，不要责怪其他人。</p>
+<p>用这样的态度处理这些错误，你就会在你的队友和同事中间建立起信任和尊重。</p>
+<p><strong>9. 工作时尽量减少分心</strong></p>
+<p>由于你是人类（对所有读到这篇文章的机器人发出警告），在你累到筋疲力尽之前，你这一天当中产出效率最高的工作时间是有限的。所以你需要优化那些产出效率高的时间来完成工作。</p>
+<p>每个人的情况是不同的，但是请尝试不同的方法，看看哪种方法对你最有效。关闭任何手机提醒（电子邮件，短信等等），可能会有帮助；或者每天只检查电子邮件 1~2 次；并且只有在你工作完回到家时，再去登陆社交网络。</p>
+<p><strong>10. 善于使用 Google</strong></p>
+<p>作为一名程序员，你可能会不断地碰到大大小小的问题。这些问题绝大部分也被其他的开发者遇到过，所以你可以在各种网站上看到他们的解决方案。</p>
+<p>要善于寻找这些疑问 / 问题的解决方案。学习如何高效地搜索 Google 能够为你的开发节省大量时间。我们得承认一个事实，StackOverflow 将成为你新的救世主。</p>
+<p><strong>11. 不要害怕寻求帮助</strong></p>
+<p>但是当你自己不能解决某些问题的时候，你不应该害怕寻求帮助。有时候你可能会卡在一个问题上，并且花了大量的时间来搜索解决方案。</p>
+<p>寻求支持并不丢脸。你的部分或所有同事都会得到更高的工资，这是有原因的，因为他们更有经验。大部分时候他们都是乐于帮助你的，并且还会抓住机会给你讲解一些编程知识。</p>
+<p><strong>12. 不要拿自己和其他人去做比较</strong></p>
+<p>在你的职业生涯和生活中，你会不停地拿自己和其他人做比较。你可能会自然地这样做，因为这会帮助你弄清楚你位于世界的哪个位置，帮你找到人生方向。</p>
+<p>但有时候进步的最好方式是拿你和你的昨天或者你的过去进行比较。用这种方法思考肯定能让你不断地进步，减少受挫感，明确你的预期目标。</p>
+<p><strong>13. 测试你的代码</strong></p>
+<p>如果你测试了你的代码，软件的最终交付版本将会更加稳定和可预测。学习不同的测试类型（单元测试、集成测试等等），并且要很勤快地使用它们，因为这真的很重要。你预先做的测试越多，你今后的工作就会越轻松，你晚上睡觉也会更踏实。</p>
+<p><strong>14. 学习如何调试</strong></p>
+<p>你编写的代码并不总是会按照你所预期的那样精确运行，不过没关系，这很正常。但是，你需要掌握相关技能，找到问题的原因，并且做出必要的修复。</p>
+<p>在定位 bug 时，需要弄清楚哪些调试技术是最适合你的。找一些有用的工具，这会让调试过程更加轻松。</p>
+<p><strong>15. 要知道自己的身价</strong></p>
+<p>去做一些调研，弄清楚你所在行业其他人的薪水如何，他们给公司带来了怎样的价值。了解这些东西会给你目前的工作带来一些认识，并且帮助你理解你的价值所在。</p>
+<p>这个调研不仅可以用于薪水方面，还可以用于了解你给公司或者团队提供了哪些价值。</p>
+<p><strong>16. 不要为了扩展而编写代码，除非这是必要的</strong></p>
+<p>在构建和编写代码时，需要记住，将来有一天你可能需要扩展代码。但是不要在编码的第一天就去考虑扩展性，没必要这样，而且这肯定会让你淹没其中，并且拖慢开发速度。</p>
+<p>准备好适应未来的增长，并且准备好创建相应的策略。但不要让你的代码库和团队陷入不断扩展代码的困境，除非这是必要的。如果你给火箭添加太多的重物，它可能都不能飞离地面。</p>
+<p><strong>17. 在你知道代码是如何运行之后，可以复制粘贴</strong></p>
+<p>诚恳地讲，每个人以前都有过复制粘贴代码的经历。不管这段代码是来自 StackOverflow，还是其他随便哪里的编程博客，这都没问题，只要你在复制粘贴前理解这段代码是做什么的。</p>
+<p>对你要粘贴的代码，你需要知道自己在做什么，并且小心谨慎。记住，缓缓前行，不要破坏东西。</p>
+<p><strong>18. 让周围人感到愉快，对他人友善</strong></p>
+<p>当你身边围绕着很多人都愿意帮助你或者支持你的时候，生活会变得很轻松。但如果人们都不喜欢你，那生活就不可能很轻松了。</p>
+<p>所以对人要友善（尽你所能），大部分时间里都要让周围的人感觉愉快。如果你能做到这一点，人们就会很喜欢你，如果人们很喜欢你，他们就愿意帮助你，你也会交到更多朋友。</p>
+<p><strong>19. 为了提高产出，休息一会儿</strong></p>
+<p>在整个工作日中保持 100% 的产出效率，这几乎是不可能的，如果你尝试这样做，那将会使你精疲力尽。设置一个计时器，让它提醒你站起来走一走，或者给你的咖啡续个杯。像番茄工作法这样的系统就可以在休息和提高效率方面起到很大的作用了（如果你想尝试一下，可以使用我们做的番茄工作法计时器（<a href="https://coderrocketfuel.com/tools/pomodoro-timer" target="_blank" rel="noopener"> https://coderrocketfuel.com/tools/pomodoro-timer </a>））。</p>
+<p>此外大量的研究表明，适当休息是任何工作和学习过程的一个关键组成部分。休息能够很大程度上帮助学生更有效地学习东西，让他们的注意力保持更长的时间。</p>
+<p><strong>20. 少说多听</strong></p>
+<p>不管你是想赢得一场辩论，变得更讨人喜欢，还是说服某人，倾听都是一个获得重要信息的很关键的方式，他会让你显得更值得信任和尊重。</p>
+<p>你很可能是与一些真正聪明的人一起工作，他们中的一些人甚至比你更聪明。于是他们可能有一些编程或者生活上的知识能够传授给你，如果你说太多话，可能就会错过这样的机会。</p>
+<p><strong>21. 去做那些让你害怕的项目</strong></p>
+<p>无论是在你的职业生涯中，还是在编程技能方面，不断扩展你的舒适区都是相当重要的。去做一些让你有点害怕的项目，扩展你的舒适区，这会让你变成一个更好的开发者，你的职业生涯也会进步得更快。</p>
+<p>你需要经历一些痛苦和恐惧，这样才能成长。要做到这样，你需要去寻找一些能扩展你舒适区的事情去做。</p>
+<p><strong>22. 给函数和变量提供描述性的命名</strong></p>
+<p>你会希望你的代码尽可能容易理解。让别人更容易阅读你的代码的方式之一，就是给你的函数和变量起一个能描述他们做什么和代表什么的好名字。</p>
+<p>例如有一个函数名叫 aDopeFunctionIMade，这就不是一个好名字，而另一个函数名 calculateCartTotal，它就是一个很好的名字。</p>
+<p><strong>23. 编写描述性好的代码注释</strong></p>
+<p>另外一种能让你的代码更容易阅读的方式就是给代码添加注释，注释能够解释你的代码为什么要这样做，以及你的代码都做了什么。编写注释并不难，只需要花点精力把注释包含到代码里去就可以啦。</p>
+<p>这个方法和上面那个写出具有描述性的函数和变量名字的方法通常是同时使用的。</p>
+<p><strong>24. 习惯于有建设性的批评</strong></p>
+<p>在工作中，你可能从不会享受于接受批评。但为了变得更好，你需要习惯于接受批评，不要对这些批评产生情绪。</p>
+<p>如果你的代码写得很糟糕，你难道不希望有其他人给你指出来吗？相反的一种方式就是别人看到了问题代码也不会告诉你，这将更糟糕。如果你欣然接受批评，你会因此而受到别人的尊敬，你自己也能够改进你的技能。</p>
+<p><strong>25. 找到你的立足点</strong></p>
+<p>在科技行业，你可能会在很多不同的领域都做得很成功。找到你最感兴趣或者最擅长的领域，在这个领域成为一个专家。在你的立足点上成为一个专家，会给你带来影响力，把你从一件商品变为你的公司或者你所在行业的必需品。但是这个说起来容易，做起来难，你可能需要花些时间才能弄清楚你的立足点在哪里。</p>
+<p><strong>26. 学一点商业方面的知识</strong></p>
+<p>花点时间去了解你所在公司或者团队的一些业务方面的知识。销售人员整天都在做些什么，他们为何有价值？会计或者市场营销人员的情况又如何？</p>
+<p>你不必成为这些领域的专家。但是理解一些业务情况，将会让你对工作有更好的理解，并且能帮助你为公司和团队的整体目标创造更多价值。</p>
+<p><strong>27. 在传授别人知识和与他人分享的过程中学习</strong></p>
+<p>protégé效应是一种心理现象，说的是向别人传授或假装传授信息时能够让你更好地（相比不使用这种方法时）学习这些信息。这一点适用于很多领域，但编程领域尤其如此。</p>
+<p>你可以向队友或者同事传授一些知识，或者可以开始维护个人编程博客，编写教程，向他人传授编程的概念。把你传授的知识汇总起来，以让其他人也能够学习到，这将极大地提高你自己对这些主题的理解。</p>
+<p><strong>28. 花点时间好好写写文档</strong></p>
+<p>这是很多程序员忽略的一点。但是好的文档能帮助你和其他人抓住你的代码或者项目的精髓。</p>
+<p>如果你写出的文档组织很有条理，综合性强，可读性强，那么你的代码或者项目就更容易使用，人们也就会更愿意来使用它。</p>
+<p><strong>29. 尽可能避免不必要的会议</strong></p>
+<p>尽管公司会议在传达思想，建立项目目标方面极其有帮助，但如果你不好好管理会议进度，这也可能会成为不可思议的时间吞噬器。在你工作的地方总有一些人喜欢发起会议，而不去想他们是否真的需要这些会议。</p>
+<p>你需要学习一些委婉拒绝他们的技巧，而同时又和他们保持良好的工作关系。或者你可能需要学习向人们说“不”的艺术，并且欣然接受说“不“而带来的结果。</p>
+<p><strong>30. 掌控你自己的工具箱</strong></p>
+<p>任何精通这一行的人都有一个工具箱，里面装满了工具，他们对这些工具的里里外外都了如指掌，他们通过使用这些工具来完成工作。他们非常了解其中每一件工具，并把他们当做自己能力的延伸。</p>
+<p>作为一名程序员，你应当构建自己的工具袋。精通你所选的文本编辑器，以最大化你的产出，或者找一个你喜欢使用的测试框架。你需要了解哪些工具是服务于什么样的目的的。并且要知道每一件工具为何会比另外一件工具更适用于某个场景。</p>
+<p><strong>31. 每隔一段时间就去尝试一种新的语言</strong></p>
+<p>不要做过头，但也要每隔一段时间就去尝试一种新的语言。使用一种新的语言，将会让你或多或少从不同的角度去思考问题，思考问题的方式会和你正在使用的语言不太一样。</p>
+<p>这些新的思考途径，将帮助你在使用当前的和 / 或今后的语言时，全面提高解决问题的能力。</p>
+<p><strong>32. 努力保持身体健康</strong></p>
+<p>编程是一项需要长时间坐在位子上的职业。你会很多天都坐在桌子前（顺便说一下，可以考虑入手一张站式桌子），看着电脑屏幕。久而久之，如果你不努力保持健康的话，这样的工作方式就会给你的身体带来负面影响。</p>
+<p>每周计划锻炼 2~3 天，每天保证 8 个小时的睡眠，并且计划一些外出活动，这些活动不要涉及到编程。这会帮助你过上更健康的生活，这将渗透到你的编程生涯中。</p>
+<p><strong>33. 建立能让你沉迷的东西</strong></p>
+<p>不是每天的工作都会给你走在阳光里的感觉。但如果你把工作时间花在你觉得有影响力或者很酷的事情上，你将会经历很多美好的日子，而不是糟糕的日子。</p>
+<p>你在业余时间或者工作时间中创造的酷酷的东西越多，你在自己的领域得到的认可也就越多，机会也就越多。</p>
+<p><strong>34. 绝不放弃</strong></p>
+<p>生活很艰难，编程也很艰难。可能会有很多次，你都会产生强烈的、要退出的想法。当那些时刻发生时，你要意识到每个人都会经历这些。如果你想作为一名程序员在你的职业生涯中保持成长，你就需要从这些困境里获取力量。</p>
+<p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p>
+<p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
     <url>//p/23a9bdeb.html</url>
     <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
@@ -647,6 +663,63 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要素式审核-资料</title>
+    <url>//p/4d915dad.html</url>
+    <content><![CDATA[<p>TODO pdf在线预览</p>
+<p>11111</p>
+<div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
+<p>2222</p>
+<div class="pdfobject-container" data-target="files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
+<p>3333</p>
+<p>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="">预览</a>】</p>
+<p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用法律文书收集</title>
+    <url>//p/71b20ea9.html</url>
+    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>诉讼费收费标准</title>
+    <url>//p/1b9b841c.html</url>
+    <content><![CDATA[<p>案件受理费交纳标准：</p>
+<p>　　＜1万               50元</p>
+<p>　　1万至10万            ×2.5%-200</p>
+<p>　　10万至20万            ×2%+300</p>
+<p>　　20万至50万            ×1.5%+1300</p>
+<p>　　50万至100万           ×1%+3800</p>
+<p>　　100万至200万           ×0.9%+4800</p>
+<p>　　200万至500万           ×0.8%+6800</p>
+<p>　　500万至1000万          ×0.7%+11800</p>
+<p>　　1000万至2000万          ×0.6%+21800</p>
+<p>　　2000万以上            ×0.5%+41800</p>
+<p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p>
+<p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p>
+<p>　　适用简易程序审理的案件减半交纳案件受理费。</p>
+<p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
       </tags>
   </entry>
   <entry>
@@ -1062,60 +1135,6 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用法律文书收集</title>
-    <url>//p/71b20ea9.html</url>
-    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要素式审核-资料</title>
-    <url>//p/4d915dad.html</url>
-    <content><![CDATA[<p>TODO pdf在线预览</p>
-<div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
-<div class="pdfobject-container" data-target="files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
-<p>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="">预览</a>】</p>
-<p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>诉讼费收费标准</title>
-    <url>//p/1b9b841c.html</url>
-    <content><![CDATA[<p>案件受理费交纳标准：</p>
-<p>　　＜1万               50元</p>
-<p>　　1万至10万            ×2.5%-200</p>
-<p>　　10万至20万            ×2%+300</p>
-<p>　　20万至50万            ×1.5%+1300</p>
-<p>　　50万至100万           ×1%+3800</p>
-<p>　　100万至200万           ×0.9%+4800</p>
-<p>　　200万至500万           ×0.8%+6800</p>
-<p>　　500万至1000万          ×0.7%+11800</p>
-<p>　　1000万至2000万          ×0.6%+21800</p>
-<p>　　2000万以上            ×0.5%+41800</p>
-<p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p>
-<p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p>
-<p>　　适用简易程序审理的案件减半交纳案件受理费。</p>
-<p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
       </tags>
   </entry>
   <entry>
