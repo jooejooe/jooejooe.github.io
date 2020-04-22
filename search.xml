@@ -49,17 +49,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Kettle数据抽取</title>
-    <url>//p/5c1c96f2.html</url>
-    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
-      <categories>
-        <category>数据抽取</category>
-      </categories>
-      <tags>
-        <tag>Kettle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title>
     <url>//p/448e437.html</url>
     <content><![CDATA[<h2 id="ETL报错："><a href="#ETL报错：" class="headerlink" title="ETL报错："></a>ETL报错：</h2><p><strong>Unexpected problem reading shared objects from XML file : null</strong></p>
@@ -97,6 +86,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Kettle数据抽取</title>
+    <url>//p/5c1c96f2.html</url>
+    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
+      <categories>
+        <category>数据抽取</category>
+      </categories>
+      <tags>
+        <tag>Kettle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Kettle将mysql数据同步到Elasticsearch中</title>
     <url>//p/efd6f6f6.html</url>
     <content><![CDATA[<h1 id="使用Kettle将mysql数据同步到Elasticsearch中"><a href="#使用Kettle将mysql数据同步到Elasticsearch中" class="headerlink" title="使用Kettle将mysql数据同步到Elasticsearch中"></a>使用Kettle将mysql数据同步到Elasticsearch中</h1><h2 id="整体流程图如下"><a href="#整体流程图如下" class="headerlink" title="整体流程图如下"></a>整体流程图如下</h2><h2 id="获取配置信息"><a href="#获取配置信息" class="headerlink" title="获取配置信息"></a>获取配置信息</h2><h2 id="将数据字段进行清洗"><a href="#将数据字段进行清洗" class="headerlink" title="将数据字段进行清洗"></a>将数据字段进行清洗</h2><h2 id="将附件进行下载抽取"><a href="#将附件进行下载抽取" class="headerlink" title="将附件进行下载抽取"></a>将附件进行下载抽取</h2><h2 id="根据规则查看ID文档是否存在"><a href="#根据规则查看ID文档是否存在" class="headerlink" title="根据规则查看ID文档是否存在"></a>根据规则查看ID文档是否存在</h2><h2 id="将结构化信息提交"><a href="#将结构化信息提交" class="headerlink" title="将结构化信息提交"></a>将结构化信息提交</h2><h2 id="回写ES的文档id"><a href="#回写ES的文档id" class="headerlink" title="回写ES的文档id"></a>回写ES的文档id</h2>]]></content>
@@ -105,6 +105,25 @@
       </categories>
       <tags>
         <tag>elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDEA中Git的更新、提交、还原方法</title>
+    <url>//p/503970b4.html</url>
+    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
+<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
+<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -130,25 +149,6 @@
       <tags>
         <tag>elasticsearch</tag>
         <tag>全文检索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA中Git的更新、提交、还原方法</title>
-    <url>//p/503970b4.html</url>
-    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
-<a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
-<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
-<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -180,26 +180,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PowerDesigner设计Name和Comment替换</title>
-    <url>//p/cab30bdb.html</url>
-    <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
-<p> 在 PowerDesigner中操作如下</p>
-<p>PowerDesigner—&gt;Tools—&gt;Execute Commands—&gt;Edit/Run Scripts 下执行就OK了</p>
-<a id="more"></a>
-<h2 id="把comment-覆盖name"><a href="#把comment-覆盖name" class="headerlink" title="把comment 覆盖name"></a>把comment 覆盖name</h2><p>方法如下：</p>
-<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line"><span class="keyword">On</span> <span class="keyword">Error</span> <span class="keyword">Resume</span> <span class="keyword">Next</span></span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                  <span class="keyword">if</span> col.comment=<span class="string">""</span> <span class="keyword">then</span></span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        col.name=   col.comment </span><br><span class="line">                  <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.name   =   view.comment </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
-<h2 id="将name覆盖comment"><a href="#将name覆盖comment" class="headerlink" title="将name覆盖comment"></a>将name覆盖comment</h2><p> 方法如下</p>
-<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   This   routine   copy   name   into   comment   for   each   table,   each   column   and   each   view </span></span><br><span class="line"><span class="comment">'   of   the   current   folder </span></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.comment   =   tab.name </span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                        col.comment=   col.name </span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.comment   =   view.name </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>PD</tag>
-        <tag>PowerDesigner</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>gitlab添加问题模板</title>
     <url>//p/7930ee41.html</url>
     <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
@@ -224,6 +204,26 @@
       </tags>
   </entry>
   <entry>
+    <title>PowerDesigner设计Name和Comment替换</title>
+    <url>//p/cab30bdb.html</url>
+    <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
+<p> 在 PowerDesigner中操作如下</p>
+<p>PowerDesigner—&gt;Tools—&gt;Execute Commands—&gt;Edit/Run Scripts 下执行就OK了</p>
+<a id="more"></a>
+<h2 id="把comment-覆盖name"><a href="#把comment-覆盖name" class="headerlink" title="把comment 覆盖name"></a>把comment 覆盖name</h2><p>方法如下：</p>
+<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line"><span class="keyword">On</span> <span class="keyword">Error</span> <span class="keyword">Resume</span> <span class="keyword">Next</span></span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                  <span class="keyword">if</span> col.comment=<span class="string">""</span> <span class="keyword">then</span></span><br><span class="line">                  <span class="keyword">else</span></span><br><span class="line">                        col.name=   col.comment </span><br><span class="line">                  <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.name   =   view.comment </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<h2 id="将name覆盖comment"><a href="#将name覆盖comment" class="headerlink" title="将name覆盖comment"></a>将name覆盖comment</h2><p> 方法如下</p>
+<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Option</span>   <span class="keyword">Explicit</span> </span><br><span class="line">ValidationMode   =   <span class="literal">True</span> </span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span>   mdl   <span class="comment">'   the   current   model</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   get   the   current   active   model </span></span><br><span class="line"><span class="keyword">Set</span>   mdl   =   ActiveModel </span><br><span class="line"><span class="keyword">If</span>   (mdl   <span class="keyword">Is</span>   <span class="literal">Nothing</span>)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"There   is   no   current   Model "</span> </span><br><span class="line"><span class="keyword">ElseIf</span>   <span class="keyword">Not</span>   mdl.IsKindOf(PdPDM.cls_Model)   <span class="keyword">Then</span> </span><br><span class="line">      <span class="built_in">MsgBox</span>   <span class="string">"The   current   model   is   not   an   Physical   Data   model. "</span> </span><br><span class="line"><span class="keyword">Else</span> </span><br><span class="line">      ProcessFolder   mdl </span><br><span class="line"><span class="keyword">End</span>   <span class="keyword">If</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'   This   routine   copy   name   into   comment   for   each   table,   each   column   and   each   view </span></span><br><span class="line"><span class="comment">'   of   the   current   folder </span></span><br><span class="line"><span class="keyword">Private</span>   <span class="keyword">sub</span>   ProcessFolder(folder) </span><br><span class="line">      <span class="keyword">Dim</span>   Tab   <span class="comment">'running     table </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   Tab   <span class="keyword">in</span>   folder.tables </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   tab.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  tab.comment   =   tab.name </span><br><span class="line">                  <span class="keyword">Dim</span>   col   <span class="comment">'   running   column </span></span><br><span class="line">                  <span class="keyword">for</span>   <span class="keyword">each</span>   col   <span class="keyword">in</span>   tab.columns </span><br><span class="line">                        col.comment=   col.name </span><br><span class="line">                  <span class="keyword">next</span> </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">Dim</span>   view   <span class="comment">'running   view </span></span><br><span class="line">      <span class="keyword">for</span>   <span class="keyword">each</span>   view   <span class="keyword">in</span>   folder.Views </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   view.isShortcut   <span class="keyword">then</span> </span><br><span class="line">                  view.comment   =   view.name </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">next</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">'   go   into   the   sub-packages </span></span><br><span class="line">      <span class="keyword">Dim</span>   f   <span class="comment">'   running   folder </span></span><br><span class="line">      <span class="keyword">For</span>   <span class="keyword">Each</span>   f   <span class="keyword">In</span>   folder.Packages </span><br><span class="line">            <span class="keyword">if</span>   <span class="keyword">not</span>   f.IsShortcut   <span class="keyword">then</span> </span><br><span class="line">                  ProcessFolder   f </span><br><span class="line">            <span class="keyword">end</span>   <span class="keyword">if</span> </span><br><span class="line">      <span class="keyword">Next</span> </span><br><span class="line"><span class="keyword">end</span>   <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>PD</tag>
+        <tag>PowerDesigner</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一种基于平均思想的任务分配算法</title>
     <url>//p/c3e6b6ee.html</url>
     <content><![CDATA[<p>​    假设现在有n个任务需要分配给m个审核员去完成，但是每个审核员手头上还有未完成的任务，且未完成的任务数不同。那么如何均匀的把这些任务分配给各个审核员呢?这里我提出了一种基于平均思想的任务分配算法（我称之为标杆算法）。</p>
@@ -244,137 +244,6 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>几种常见的消息中间件对比</title>
-    <url>//p/5d4e7479.html</url>
-    <content><![CDATA[<h1 id="常见消息中间件介绍"><a href="#常见消息中间件介绍" class="headerlink" title="常见消息中间件介绍"></a>常见消息中间件介绍</h1><p>当前使用较多的消息队列有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，而部分数据库如Redis、MySQL以及phxsql也可实现消息队列的功能。</p>
-<a id="more"></a>
-<h2 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h2><p>消息队列是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。</p>
-<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ于2007年发布，是一个在AMQP(高级消息队列协议)基础上完成的，可复用的企业消息系统，是当前最主流的消息中间件之一。</p>
-<h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
-<li>可靠性：提供了多种技术可以让你在性能和可靠性之间进行权衡。这些技术包括持久性机制、投递确认、发布者证实和高可用性机制；</li>
-<li>灵活的路由：消息在到达队列前是通过交换机进行路由的。RabbitMQ为典型的路由逻辑提供了多种内置交换机类型。如果你有更复杂的路由需求，可以将这些交换机组合起来使用，你甚至可以实现自己的交换机类型，并且当做RabbitMQ的插件来使用；</li>
-<li>消息集群：在相同局域网中的多个RabbitMQ服务器可以聚合在一起，作为一个独立的逻辑代理来使用；</li>
-<li>队列高可用：队列可以在集群中的机器上进行镜像，以确保在硬件问题下还保证消息安全；</li>
-<li>支持多种协议：支持多种消息队列协议；</li>
-<li>支持多种语言：用Erlang语言编写，支持只要是你能想到的所有编程语言；</li>
-<li>管理界面：RabbitMQ有一个易用的用户界面，使得用户可以监控和管理消息Broker的许多方面；</li>
-<li>跟踪机制：如果消息异常，RabbitMQ 提供消息跟踪机制，使用者可以找出发生了什么；</li>
-<li>插件机制：提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。</li>
-</ol>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
-<li>由于Erlang语言的特性，消息队列性能较好，支持高并发；</li>
-<li>健壮、稳定、易用、跨平台、支持多种语言、文档齐全；</li>
-<li>有消息确认机制和持久化机制，可靠性高；</li>
-<li>高度可定制的路由；</li>
-<li>管理界面较丰富，在互联网公司也有较大规模的应用，社区活跃度高。</li>
-</ol>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
-<li>尽管结合 Erlang 语言本身的并发优势，性能较好，但是不利于做二次开发和维护；</li>
-<li>实现了代理架构，意味着消息在发送到客户端之前可以在中央节点上排队。此特性使得RabbitMQ易于使用和部署，但是使得其运行速度较慢，因为中央节点 增加了延迟，消息封装后也比较大；需要学习比较复杂的接口和协议，学习和维护成本较高。</li>
-</ol>
-<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ出自阿里的开源产品，用Java语言实现，在设计时参考了Kafka，并做出了自己的一些改进，消息可靠性上比Kafka更好。RocketMQ在阿里内部被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</p>
-<h3 id="主要特性-1"><a href="#主要特性-1" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
-<li>基于 队列模型：具有高性能、高可靠、高实时、分布式等特点；</li>
-<li>Producer、Consumer、队列都支持分布式；</li>
-<li>Producer向一些队列轮流发送消息，队列集合称为Topic。Consumer如果做广播消费，则一个Consumer实例消费这个Topic对应的所有队列；如果做集群消费，则多个Consumer 实例平均消费这个Topic对应的队列集合；</li>
-<li>能够保证严格的消息顺序；</li>
-<li>提供丰富的消息拉取模式；</li>
-<li>高效的订阅者水平扩展能力；</li>
-<li>实时的消息订阅机制；</li>
-<li>亿级消息堆积 能力；</li>
-<li>较少的外部依赖。</li>
-</ol>
-<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><ol>
-<li>单机支持1万以上持久化队列；</li>
-<li>RocketMQ的所有消息都是持久化的，先写入系统PAGECACHE，然后刷盘，可以保证内存与磁盘都有一份数据，而访问时，直接从内存读取。</li>
-<li>模型简单，接口易用（JMS的接口很多场合并不太实用）；</li>
-<li>性能非常好，可以允许大量堆积消息在Broker中；</li>
-<li>支持多种消费模式，包括集群消费、广播消费等；</li>
-<li>各个环节分布式扩展设计，支持主从和高可用；</li>
-<li>开发度较活跃，版本更新很快。</li>
-</ol>
-<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><ol>
-<li>支持的 客户端语言不多，目前是Java及C++，其中C++还不成熟；</li>
-<li>RocketMQ社区关注度及成熟度也不及前两者；</li>
-<li>没有Web管理界面，提供了一个 CLI (命令行界面) 管理工具带来查询、管理和诊断各种问题；</li>
-<li>没有在MQ核心里实现JMS等接口；</li>
-</ol>
-<h2 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h2><p>ActiveMQ是由Apache出品，ActiveMQ是一个完全支持JMS1.1和J2EE 1.4规范的JMS Provider实现。它非常快速，支持多种语言的客户端和协议，而且可以非常容易的嵌入到企业的应用环境中，并有许多高级功能。</p>
-<h3 id="主要特性-2"><a href="#主要特性-2" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
-<li>服从JMS规范：JMS 规范提供了良好的标准和保证，包括：同步 或 异步 的消息分发，一次和仅一次的消息分发，消息接收和订阅等等。遵从JMS规范的好处在于，不论使用什么JMS实现提供者，这些基础特性都是可用的；</li>
-<li>连接灵活性：ActiveMQ提供了广泛的连接协议，支持的协议有：HTTP/S，IP多播，SSL，TCP，UDP等等。对众多协议的支持让ActiveMQ拥有了很好的灵活性；</li>
-<li>支持的协议种类多：OpenWire、STOMP、REST、XMPP、AMQP；</li>
-<li>持久化插件和安全插件：ActiveMQ提供了多种持久化选择。而且，ActiveMQ的安全性也可以完全依据用户需求进行自定义鉴权和授权；</li>
-<li>支持的客户端语言种类多：除了Java之外，还有：C/C++，.NET，Perl，PHP，Python，Ruby；</li>
-<li>代理集群：多个ActiveMQ代理可以组成一个集群来提供服务；</li>
-<li>异常简单的管理：ActiveMQ是以开发者思维被设计的。所以，它并不需要专门的管理员，因为它提供了简单又使用的管理特性。有很多中方法可以监控ActiveMQ不同层面的数据，包括使用在JConsole或者在ActiveMQ的WebConsole中使用JMX。通过处理JMX的告警消息，通过使用命令行脚本，甚至可以通过监控各种类型的日志。</li>
-</ol>
-<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><ol>
-<li>跨平台(JAVA编写与平台无关，ActiveMQ几乎可以运行在任何的JVM上)；</li>
-<li>可以用JDBC：可以将数据持久化到数据库。虽然使用JDBC会降低ActiveMQ的性能，但是数据库一直都是开发人员最熟悉的存储介质；</li>
-<li>支持JMS规范：支持JMS规范提供的统一接口;</li>
-<li>支持自动重连和错误重试机制；</li>
-<li>有安全机制：支持基于shiro，jaas等多种安全配置机制，可以对Queue/Topic进行认证和授权；</li>
-<li>监控完善：拥有完善的监控，包括WebConsole，JMX，Shell命令行，Jolokia的RESTful API；</li>
-<li>界面友善：提供的WebConsole可以满足大部分情况，还有很多第三方的组件可以使用，比如hawtio；</li>
-</ol>
-<h3 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h3><ol>
-<li>社区活跃度不及RabbitMQ高；</li>
-<li>根据其他用户反馈，会出莫名其妙的问题，会丢失消息；</li>
-<li>目前重心放到activemq6.0产品Apollo，对5.x的维护较少；</li>
-<li>不适合用于上千个队列的应用场景；</li>
-</ol>
-<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Apache Kafka是一个分布式消息发布订阅系统。它最初由LinkedIn公司基于独特的设计实现为一个分布式的日志提交系统(a distributed commit log)，之后成为Apache项目的一部分。Kafka性能高效、可扩展良好并且可持久化。它的分区特性，可复制和可容错都是其不错的特性。</p>
-<h3 id="主要特性-3"><a href="#主要特性-3" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
-<li>快速持久化：可以在O(1)的系统开销下进行消息持久化；</li>
-<li>高吞吐：在一台普通的服务器上既可以达到10W/s的吞吐速率；</li>
-<li>完全的分布式系统：Broker、Producer和Consumer都原生自动支持分布式，自动实现负载均衡；</li>
-<li>支持同步和异步复制两种高可用机制；</li>
-<li>支持数据批量发送和拉取；</li>
-<li>零拷贝技术(zero-copy)：减少IO操作步骤，提高系统吞吐量；</li>
-<li>数据迁移、扩容对用户透明；</li>
-<li>无需停机即可扩展机器；</li>
-<li>其他特性：丰富的消息拉取模型、高效订阅者水平扩展、实时的消息订阅、亿级的消息堆积能力、定期删除机制；</li>
-</ol>
-<h3 id="优点-3"><a href="#优点-3" class="headerlink" title="优点"></a>优点</h3><ol>
-<li>客户端语言丰富：支持Java、.Net、PHP、Ruby、Python、Go等多种语言；</li>
-<li>高性能：单机写入TPS约在100万条/秒，消息大小10个字节；</li>
-<li>提供完全分布式架构，并有replica机制，拥有较高的可用性和可靠性，理论上支持消息无限堆积；</li>
-<li>支持批量操作；</li>
-<li>消费者采用Pull方式获取消息。消息有序，通过控制能够保证所有消息被消费且仅被消费一次；</li>
-<li>有优秀的第三方KafkaWeb管理界面Kafka-Manager；</li>
-<li>在日志领域比较成熟，被多家公司和多个开源项目使用。</li>
-</ol>
-<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><ol>
-<li>Kafka单机超过64个队列/分区时，Load时会发生明显的飙高现象。队列越多，负载越高，发送消息响应时间变长；</li>
-<li>使用短轮询方式，实时性取决于轮询间隔时间；</li>
-<li>消费失败不支持重试；</li>
-<li>支持消息顺序，但是一台代理宕机后，就会产生消息乱序；</li>
-<li>社区更新较慢。</li>
-</ol>
-<h1 id="常见消息中间就对比分析图"><a href="#常见消息中间就对比分析图" class="headerlink" title="常见消息中间就对比分析图"></a>常见消息中间就对比分析图</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/30dda6833f20181b27f3a08ba34f4db881d.jpg" alt="img"></p>
-<h1 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h1><h2 id="从公司基础建设力量角度"><a href="#从公司基础建设力量角度" class="headerlink" title="从公司基础建设力量角度"></a>从公司基础建设力量角度</h2><ol>
-<li>中小型软件公司，建议选RabbitMQ，一方面，erlang语言天生具备高并发的特性，而且他的管理界面用起来十分方便。他的弊端也在这里，虽然RabbitMQ是开源的，然而国内有几个能定制化开发erlang的程序员呢？所幸，RabbitMQ的社区十分活跃，可以解决开发过程中遇到的bug，这点对于中小型公司来说十分重要。不考虑RocketMQ和kafka的原因是，一方面中小型软件公司不如互联网公司，数据量没那么大，选消息中间件，应首选功能比较完备的，所以kafka排除。不考虑RocketMQ的原因是，RocketMQ是阿里出品，如果阿里放弃维护RocketMQ，中小型公司一般抽不出人来进行RocketMQ的定制化开发，因此不推荐。</li>
-<li>大型软件公司，根据具体使用在RocketMQ和kafka之间二选一。一方面，大型软件公司，具备足够的资金搭建分布式环境，也具备足够大的数据量。针对RocketMQ,大型软件公司也可以抽出人手对RocketMQ进行定制化开发，毕竟国内有能力改JAVA源码的人，还是相当多的。至于kafka，根据业务场景选择，如果有日志采集功能，肯定是首选kafka了。</li>
-</ol>
-<h2 id="从业务场景角度出发"><a href="#从业务场景角度出发" class="headerlink" title="从业务场景角度出发"></a>从业务场景角度出发</h2><ol>
-<li>RocketMQ定位于非日志的可靠消息传输（日志场景也OK），目前RocketMQ在阿里集团被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</li>
-<li>Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache定级项目。Kafka主要特点是基于Pull的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，适合产生大量数据的互联网服务的数据收集业务。</li>
-<li>RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内，对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>消息中间件</category>
-      </categories>
-      <tags>
-        <tag>RabbitMQ</tag>
-        <tag>RocketMQ</tag>
-        <tag>ActiveMQ</tag>
-        <tag>Kafka</tag>
-        <tag>消息中间件</tag>
       </tags>
   </entry>
   <entry>
@@ -565,6 +434,213 @@
 <p>但是请记住，转变方向和放弃是不同的。如果你做的东西运行不起来或者你感觉哪里不对劲时，而你又需要去尝试一些新的想法或者策略时，那就换到其他的新方向吧，但绝不要放弃。</p>
 <h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>好，就是这些了，34 条建议，用来帮助你成为一个优秀的软件开发者。希望其中的一条或多条能与你产生共鸣，或者在你的编码和 / 或职业生涯中帮助到你。</p>
 <p><strong>原文链接</strong>：<br><a href="https://coderrocketfuel.com/article/34-tips-to-become-a-first-rate-software-developer" target="_blank" rel="noopener">34 Tips To Become a First-Rate Software Developer</a></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>几种常见的消息中间件对比</title>
+    <url>//p/5d4e7479.html</url>
+    <content><![CDATA[<h1 id="常见消息中间件介绍"><a href="#常见消息中间件介绍" class="headerlink" title="常见消息中间件介绍"></a>常见消息中间件介绍</h1><p>当前使用较多的消息队列有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，而部分数据库如Redis、MySQL以及phxsql也可实现消息队列的功能。</p>
+<a id="more"></a>
+<h2 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h2><p>消息队列是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。</p>
+<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ于2007年发布，是一个在AMQP(高级消息队列协议)基础上完成的，可复用的企业消息系统，是当前最主流的消息中间件之一。</p>
+<h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
+<li>可靠性：提供了多种技术可以让你在性能和可靠性之间进行权衡。这些技术包括持久性机制、投递确认、发布者证实和高可用性机制；</li>
+<li>灵活的路由：消息在到达队列前是通过交换机进行路由的。RabbitMQ为典型的路由逻辑提供了多种内置交换机类型。如果你有更复杂的路由需求，可以将这些交换机组合起来使用，你甚至可以实现自己的交换机类型，并且当做RabbitMQ的插件来使用；</li>
+<li>消息集群：在相同局域网中的多个RabbitMQ服务器可以聚合在一起，作为一个独立的逻辑代理来使用；</li>
+<li>队列高可用：队列可以在集群中的机器上进行镜像，以确保在硬件问题下还保证消息安全；</li>
+<li>支持多种协议：支持多种消息队列协议；</li>
+<li>支持多种语言：用Erlang语言编写，支持只要是你能想到的所有编程语言；</li>
+<li>管理界面：RabbitMQ有一个易用的用户界面，使得用户可以监控和管理消息Broker的许多方面；</li>
+<li>跟踪机制：如果消息异常，RabbitMQ 提供消息跟踪机制，使用者可以找出发生了什么；</li>
+<li>插件机制：提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。</li>
+</ol>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>由于Erlang语言的特性，消息队列性能较好，支持高并发；</li>
+<li>健壮、稳定、易用、跨平台、支持多种语言、文档齐全；</li>
+<li>有消息确认机制和持久化机制，可靠性高；</li>
+<li>高度可定制的路由；</li>
+<li>管理界面较丰富，在互联网公司也有较大规模的应用，社区活跃度高。</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>尽管结合 Erlang 语言本身的并发优势，性能较好，但是不利于做二次开发和维护；</li>
+<li>实现了代理架构，意味着消息在发送到客户端之前可以在中央节点上排队。此特性使得RabbitMQ易于使用和部署，但是使得其运行速度较慢，因为中央节点 增加了延迟，消息封装后也比较大；需要学习比较复杂的接口和协议，学习和维护成本较高。</li>
+</ol>
+<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ出自阿里的开源产品，用Java语言实现，在设计时参考了Kafka，并做出了自己的一些改进，消息可靠性上比Kafka更好。RocketMQ在阿里内部被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</p>
+<h3 id="主要特性-1"><a href="#主要特性-1" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
+<li>基于 队列模型：具有高性能、高可靠、高实时、分布式等特点；</li>
+<li>Producer、Consumer、队列都支持分布式；</li>
+<li>Producer向一些队列轮流发送消息，队列集合称为Topic。Consumer如果做广播消费，则一个Consumer实例消费这个Topic对应的所有队列；如果做集群消费，则多个Consumer 实例平均消费这个Topic对应的队列集合；</li>
+<li>能够保证严格的消息顺序；</li>
+<li>提供丰富的消息拉取模式；</li>
+<li>高效的订阅者水平扩展能力；</li>
+<li>实时的消息订阅机制；</li>
+<li>亿级消息堆积 能力；</li>
+<li>较少的外部依赖。</li>
+</ol>
+<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>单机支持1万以上持久化队列；</li>
+<li>RocketMQ的所有消息都是持久化的，先写入系统PAGECACHE，然后刷盘，可以保证内存与磁盘都有一份数据，而访问时，直接从内存读取。</li>
+<li>模型简单，接口易用（JMS的接口很多场合并不太实用）；</li>
+<li>性能非常好，可以允许大量堆积消息在Broker中；</li>
+<li>支持多种消费模式，包括集群消费、广播消费等；</li>
+<li>各个环节分布式扩展设计，支持主从和高可用；</li>
+<li>开发度较活跃，版本更新很快。</li>
+</ol>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>支持的 客户端语言不多，目前是Java及C++，其中C++还不成熟；</li>
+<li>RocketMQ社区关注度及成熟度也不及前两者；</li>
+<li>没有Web管理界面，提供了一个 CLI (命令行界面) 管理工具带来查询、管理和诊断各种问题；</li>
+<li>没有在MQ核心里实现JMS等接口；</li>
+</ol>
+<h2 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h2><p>ActiveMQ是由Apache出品，ActiveMQ是一个完全支持JMS1.1和J2EE 1.4规范的JMS Provider实现。它非常快速，支持多种语言的客户端和协议，而且可以非常容易的嵌入到企业的应用环境中，并有许多高级功能。</p>
+<h3 id="主要特性-2"><a href="#主要特性-2" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
+<li>服从JMS规范：JMS 规范提供了良好的标准和保证，包括：同步 或 异步 的消息分发，一次和仅一次的消息分发，消息接收和订阅等等。遵从JMS规范的好处在于，不论使用什么JMS实现提供者，这些基础特性都是可用的；</li>
+<li>连接灵活性：ActiveMQ提供了广泛的连接协议，支持的协议有：HTTP/S，IP多播，SSL，TCP，UDP等等。对众多协议的支持让ActiveMQ拥有了很好的灵活性；</li>
+<li>支持的协议种类多：OpenWire、STOMP、REST、XMPP、AMQP；</li>
+<li>持久化插件和安全插件：ActiveMQ提供了多种持久化选择。而且，ActiveMQ的安全性也可以完全依据用户需求进行自定义鉴权和授权；</li>
+<li>支持的客户端语言种类多：除了Java之外，还有：C/C++，.NET，Perl，PHP，Python，Ruby；</li>
+<li>代理集群：多个ActiveMQ代理可以组成一个集群来提供服务；</li>
+<li>异常简单的管理：ActiveMQ是以开发者思维被设计的。所以，它并不需要专门的管理员，因为它提供了简单又使用的管理特性。有很多中方法可以监控ActiveMQ不同层面的数据，包括使用在JConsole或者在ActiveMQ的WebConsole中使用JMX。通过处理JMX的告警消息，通过使用命令行脚本，甚至可以通过监控各种类型的日志。</li>
+</ol>
+<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>跨平台(JAVA编写与平台无关，ActiveMQ几乎可以运行在任何的JVM上)；</li>
+<li>可以用JDBC：可以将数据持久化到数据库。虽然使用JDBC会降低ActiveMQ的性能，但是数据库一直都是开发人员最熟悉的存储介质；</li>
+<li>支持JMS规范：支持JMS规范提供的统一接口;</li>
+<li>支持自动重连和错误重试机制；</li>
+<li>有安全机制：支持基于shiro，jaas等多种安全配置机制，可以对Queue/Topic进行认证和授权；</li>
+<li>监控完善：拥有完善的监控，包括WebConsole，JMX，Shell命令行，Jolokia的RESTful API；</li>
+<li>界面友善：提供的WebConsole可以满足大部分情况，还有很多第三方的组件可以使用，比如hawtio；</li>
+</ol>
+<h3 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>社区活跃度不及RabbitMQ高；</li>
+<li>根据其他用户反馈，会出莫名其妙的问题，会丢失消息；</li>
+<li>目前重心放到activemq6.0产品Apollo，对5.x的维护较少；</li>
+<li>不适合用于上千个队列的应用场景；</li>
+</ol>
+<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Apache Kafka是一个分布式消息发布订阅系统。它最初由LinkedIn公司基于独特的设计实现为一个分布式的日志提交系统(a distributed commit log)，之后成为Apache项目的一部分。Kafka性能高效、可扩展良好并且可持久化。它的分区特性，可复制和可容错都是其不错的特性。</p>
+<h3 id="主要特性-3"><a href="#主要特性-3" class="headerlink" title="主要特性"></a>主要特性</h3><ol>
+<li>快速持久化：可以在O(1)的系统开销下进行消息持久化；</li>
+<li>高吞吐：在一台普通的服务器上既可以达到10W/s的吞吐速率；</li>
+<li>完全的分布式系统：Broker、Producer和Consumer都原生自动支持分布式，自动实现负载均衡；</li>
+<li>支持同步和异步复制两种高可用机制；</li>
+<li>支持数据批量发送和拉取；</li>
+<li>零拷贝技术(zero-copy)：减少IO操作步骤，提高系统吞吐量；</li>
+<li>数据迁移、扩容对用户透明；</li>
+<li>无需停机即可扩展机器；</li>
+<li>其他特性：丰富的消息拉取模型、高效订阅者水平扩展、实时的消息订阅、亿级的消息堆积能力、定期删除机制；</li>
+</ol>
+<h3 id="优点-3"><a href="#优点-3" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>客户端语言丰富：支持Java、.Net、PHP、Ruby、Python、Go等多种语言；</li>
+<li>高性能：单机写入TPS约在100万条/秒，消息大小10个字节；</li>
+<li>提供完全分布式架构，并有replica机制，拥有较高的可用性和可靠性，理论上支持消息无限堆积；</li>
+<li>支持批量操作；</li>
+<li>消费者采用Pull方式获取消息。消息有序，通过控制能够保证所有消息被消费且仅被消费一次；</li>
+<li>有优秀的第三方KafkaWeb管理界面Kafka-Manager；</li>
+<li>在日志领域比较成熟，被多家公司和多个开源项目使用。</li>
+</ol>
+<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>Kafka单机超过64个队列/分区时，Load时会发生明显的飙高现象。队列越多，负载越高，发送消息响应时间变长；</li>
+<li>使用短轮询方式，实时性取决于轮询间隔时间；</li>
+<li>消费失败不支持重试；</li>
+<li>支持消息顺序，但是一台代理宕机后，就会产生消息乱序；</li>
+<li>社区更新较慢。</li>
+</ol>
+<h1 id="常见消息中间就对比分析图"><a href="#常见消息中间就对比分析图" class="headerlink" title="常见消息中间就对比分析图"></a>常见消息中间就对比分析图</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/30dda6833f20181b27f3a08ba34f4db881d.jpg" alt="img"></p>
+<h1 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h1><h2 id="从公司基础建设力量角度"><a href="#从公司基础建设力量角度" class="headerlink" title="从公司基础建设力量角度"></a>从公司基础建设力量角度</h2><ol>
+<li>中小型软件公司，建议选RabbitMQ，一方面，erlang语言天生具备高并发的特性，而且他的管理界面用起来十分方便。他的弊端也在这里，虽然RabbitMQ是开源的，然而国内有几个能定制化开发erlang的程序员呢？所幸，RabbitMQ的社区十分活跃，可以解决开发过程中遇到的bug，这点对于中小型公司来说十分重要。不考虑RocketMQ和kafka的原因是，一方面中小型软件公司不如互联网公司，数据量没那么大，选消息中间件，应首选功能比较完备的，所以kafka排除。不考虑RocketMQ的原因是，RocketMQ是阿里出品，如果阿里放弃维护RocketMQ，中小型公司一般抽不出人来进行RocketMQ的定制化开发，因此不推荐。</li>
+<li>大型软件公司，根据具体使用在RocketMQ和kafka之间二选一。一方面，大型软件公司，具备足够的资金搭建分布式环境，也具备足够大的数据量。针对RocketMQ,大型软件公司也可以抽出人手对RocketMQ进行定制化开发，毕竟国内有能力改JAVA源码的人，还是相当多的。至于kafka，根据业务场景选择，如果有日志采集功能，肯定是首选kafka了。</li>
+</ol>
+<h2 id="从业务场景角度出发"><a href="#从业务场景角度出发" class="headerlink" title="从业务场景角度出发"></a>从业务场景角度出发</h2><ol>
+<li>RocketMQ定位于非日志的可靠消息传输（日志场景也OK），目前RocketMQ在阿里集团被广泛应用在订单，交易，充值，流计算，消息推送，日志流式处理，binglog分发等场景。</li>
+<li>Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache定级项目。Kafka主要特点是基于Pull的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，适合产生大量数据的互联网服务的数据收集业务。</li>
+<li>RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内，对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>消息中间件</category>
+      </categories>
+      <tags>
+        <tag>RabbitMQ</tag>
+        <tag>RocketMQ</tag>
+        <tag>ActiveMQ</tag>
+        <tag>Kafka</tag>
+        <tag>消息中间件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
+    <url>//p/23a9bdeb.html</url>
+    <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
+<h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p>
+<a id="more"></a>
+<p><strong>典型现象（一）：条件判断超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（二）：数据转换超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（三）：基本运算超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（四）：数据自增超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure>
+<p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p>
+<p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p>
+<hr>
+<h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure>
+<p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p>
+<p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p>
+<p>我们不妨来简单思考一下：</p>
+<blockquote>
+<p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p>
+</blockquote>
+<p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p>
+<p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure>
+<p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p>
+<p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure>
+<p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p>
+<p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p>
+<p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p>
+<p>这就要谈一下浮点数的精度问题了。</p>
+<hr>
+<h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p>
+<p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p>
+<p><strong>1、符号部分（S）</strong></p>
+<p><code>0</code>-正 <code>1</code>-负</p>
+<p><strong>2、阶码部分（E）（指数部分）</strong>：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li>
+<li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li>
+</ul>
+<p><strong>3、尾数部分（M）</strong>：</p>
+<p>浮点数的精度是由尾数的位数来决定的：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li>
+<li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li>
+</ul>
+<p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p>
+<hr>
+<h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p>
+<p><strong>方法一：用字符串或者数组解决多位数问题</strong></p>
+<p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p>
+<p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p>
+<p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p>
+<p><strong>方法二：Java的大数类是个好东西</strong></p>
+<p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p>
+<p>Java的大数类位于<code>java.math</code>包下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p>
+<p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure>
+<p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>
 ]]></content>
       <categories>
         <category>开发经验</category>
@@ -989,82 +1065,6 @@
       </tags>
   </entry>
   <entry>
-    <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
-    <url>//p/23a9bdeb.html</url>
-    <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
-<h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p>
-<a id="more"></a>
-<p><strong>典型现象（一）：条件判断超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（二）：数据转换超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（三）：基本运算超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（四）：数据自增超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure>
-<p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p>
-<p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p>
-<hr>
-<h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure>
-<p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p>
-<p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p>
-<p>我们不妨来简单思考一下：</p>
-<blockquote>
-<p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p>
-</blockquote>
-<p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p>
-<p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure>
-<p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p>
-<p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure>
-<p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p>
-<p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p>
-<p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p>
-<p>这就要谈一下浮点数的精度问题了。</p>
-<hr>
-<h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p>
-<p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p>
-<p><strong>1、符号部分（S）</strong></p>
-<p><code>0</code>-正 <code>1</code>-负</p>
-<p><strong>2、阶码部分（E）（指数部分）</strong>：</p>
-<ul>
-<li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li>
-<li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li>
-</ul>
-<p><strong>3、尾数部分（M）</strong>：</p>
-<p>浮点数的精度是由尾数的位数来决定的：</p>
-<ul>
-<li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li>
-<li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li>
-</ul>
-<p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p>
-<hr>
-<h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p>
-<p><strong>方法一：用字符串或者数组解决多位数问题</strong></p>
-<p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p>
-<p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p>
-<p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p>
-<p><strong>方法二：Java的大数类是个好东西</strong></p>
-<p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p>
-<p>Java的大数类位于<code>java.math</code>包下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p>
-<p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure>
-<p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>
-]]></content>
-      <categories>
-        <category>开发经验</category>
-      </categories>
-      <tags>
-        <tag>开发经验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用法律文书收集</title>
     <url>//p/71b20ea9.html</url>
     <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
@@ -1080,7 +1080,8 @@
     <title>要素式审核-资料</title>
     <url>//p/4d915dad.html</url>
     <content><![CDATA[<p>TODO pdf在线预览</p>
-<div class="pdfobject-container" data-target="http://q87a8anb5.bkt.clouddn.com/Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C(%E6%B3%B0%E5%B1%B1%E7%89%88).pdf" data-height="500px"></div>
+<div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
+<div class="pdfobject-container" data-target="files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div>
 <p>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="">预览</a>】</p>
 <p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>
 ]]></content>
