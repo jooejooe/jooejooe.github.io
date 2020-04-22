@@ -76,15 +76,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;提问的智慧&quot;&gt;&lt;a href=&quot;#提问的智慧&quot; class=&quot;headerlink&quot; title=&quot;提问的智慧&quot;&gt;&lt;/a&gt;提问的智慧&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/pulls&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;images/PRs-welcome-brightgreen.svg&quot; alt=&quot;PRs Welcome&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;How To Ask Questions The Smart Way&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen&lt;/p&gt;
-&lt;p&gt;本指南英文版版权为 Eric S. Raymond, Rick Moen 所有。&lt;/p&gt;
-&lt;p&gt;原文网址：&lt;a href=&quot;http://www.catb.org/~esr/faqs/smart-questions.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.catb.org/~esr/faqs/smart-questions.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu&lt;/p&gt;
-&lt;p&gt;本中文指南是基于原文 3.10 版以及 2010 年由 &lt;a href=&quot;https://github.com/gasolin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gasolin&lt;/a&gt; 所翻译版本的最新翻译；&lt;/p&gt;
-&lt;p&gt;协助指出翻译问题，&lt;strong&gt;请&lt;a href=&quot;https://github.com/ryanhanwu/smartquestions/issues/new&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;发 Issue&lt;/a&gt;，或直接&lt;a href=&quot;https://github.com/ryanhanwu/smartquestions/compare/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;发 Pull Request&lt;/a&gt; 给我。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;本文另有&lt;a href=&quot;https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;繁體中文版&lt;/a&gt;。&lt;/p&gt;
+      
+      
+        &lt;h1 id=&quot;提问的智慧&quot;&gt;&lt;a href=&quot;#提问的智慧&quot; class=&quot;headerlink&quot; title=&quot;提问的智慧&quot;&gt;&lt;/a&gt;提问的智慧&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ryanhanwu/How-To-Ask-Questions
+      
     
     </summary>
     
@@ -131,15 +126,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;a href=&quot;#成为一流软件开发者的34条建议&quot; class=&quot;headerlink&quot; title=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;/a&gt;成为一流软件开发者的34条建议&lt;/h1&gt;&lt;p&gt;我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。&lt;/p&gt;
-&lt;p&gt;这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. 规划方法 &amp;amp; 在编码前先写伪代码&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。&lt;/p&gt;
-&lt;p&gt;在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。&lt;/p&gt;
-&lt;p&gt;作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. 总是寻找新东西来学习&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。&lt;/p&gt;
-&lt;p&gt;你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。&lt;/p&gt;
+      
+      
+        &lt;h1 id=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;a href=&quot;#成为一流软件开发者的34条建议&quot; class=&quot;headerlink&quot; title=&quot;成为一流软件开发者的34条建议&quot;&gt;&lt;/a&gt;成为一流软件开发者的34条建议&lt;/h1&gt;&lt;p&gt;我们列出了一张包含 34 条建议的清
+      
     
     </summary>
     
@@ -162,7 +152,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用Kettle将mysql数据同步到Elasticsearch中&quot;&gt;&lt;a href=&quot;#使用Kettle将mysql数据同步到Elasticsearch中&quot; class=&quot;headerlink&quot; title=&quot;使用Kettle将mysql数据同步到Elasticsearch中&quot;&gt;&lt;/a&gt;使用Kettle将mysql数据同步到Elasticsearch中&lt;/h1&gt;&lt;h2 id=&quot;整体流程图如下&quot;&gt;&lt;a href=&quot;#整体流程图如下&quot; class=&quot;headerlink&quot; title=&quot;整体流程图如下&quot;&gt;&lt;/a&gt;整体流程图如下&lt;/h2&gt;&lt;h2 id=&quot;获取配置信息&quot;&gt;&lt;a href=&quot;#获取配置信息&quot; class=&quot;headerlink&quot; title=&quot;获取配置信息&quot;&gt;&lt;/a&gt;获取配置信息&lt;/h2&gt;&lt;h2 id=&quot;将数据字段进行清洗&quot;&gt;&lt;a href=&quot;#将数据字段进行清洗&quot; class=&quot;headerlink&quot; title=&quot;将数据字段进行清洗&quot;&gt;&lt;/a&gt;将数据字段进行清洗&lt;/h2&gt;&lt;h2 id=&quot;将附件进行下载抽取&quot;&gt;&lt;a href=&quot;#将附件进行下载抽取&quot; class=&quot;headerlink&quot; title=&quot;将附件进行下载抽取&quot;&gt;&lt;/a&gt;将附件进行下载抽取&lt;/h2&gt;&lt;h2 id=&quot;根据规则查看ID文档是否存在&quot;&gt;&lt;a href=&quot;#根据规则查看ID文档是否存在&quot; class=&quot;headerlink&quot; title=&quot;根据规则查看ID文档是否存在&quot;&gt;&lt;/a&gt;根据规则查看ID文档是否存在&lt;/h2&gt;&lt;h2 id=&quot;将结构化信息提交&quot;&gt;&lt;a href=&quot;#将结构化信息提交&quot; class=&quot;headerlink&quot; title=&quot;将结构化信息提交&quot;&gt;&lt;/a&gt;将结构化信息提交&lt;/h2&gt;&lt;h2 id=&quot;回写ES的文档id&quot;&gt;&lt;a href=&quot;#回写ES的文档id&quot; class=&quot;headerlink&quot; title=&quot;回写ES的文档id&quot;&gt;&lt;/a&gt;回写ES的文档id&lt;/h2&gt;
+      
+      
+        &lt;h1 id=&quot;使用Kettle将mysql数据同步到Elasticsearch中&quot;&gt;&lt;a href=&quot;#使用Kettle将mysql数据同步到Elasticsearch中&quot; class=&quot;headerlink&quot; title=&quot;使用Kettle将mysql数据同步到Elastic
+      
     
     </summary>
     
@@ -185,13 +178,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;ETL报错：&quot;&gt;&lt;a href=&quot;#ETL报错：&quot; class=&quot;headerlink&quot; title=&quot;ETL报错：&quot;&gt;&lt;/a&gt;ETL报错：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Unexpected problem reading shared objects from XML file : null&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”&lt;/p&gt;
-&lt;p&gt;“Unexpected problem reading shared objects from XML file : null”…&lt;/p&gt;
-&lt;p&gt;保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“&lt;/p&gt;
-&lt;p&gt; ”Unexpected problem reading shared objects from XML file :“&lt;/p&gt;
-&lt;h2 id=&quot;问题原因：&quot;&gt;&lt;a href=&quot;#问题原因：&quot; class=&quot;headerlink&quot; title=&quot;问题原因：&quot;&gt;&lt;/a&gt;问题原因：&lt;/h2&gt;&lt;p&gt;​    这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。&lt;/p&gt;
-&lt;h2 id=&quot;解决方案：&quot;&gt;&lt;a href=&quot;#解决方案：&quot; class=&quot;headerlink&quot; title=&quot;解决方案：&quot;&gt;&lt;/a&gt;解决方案：&lt;/h2&gt;&lt;p&gt;​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 &lt;sharedobjects&gt;…&lt;/sharedobjects&gt;之间的内容，可解决这个问题；&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+      
+      
+        &lt;h2 id=&quot;ETL报错：&quot;&gt;&lt;a href=&quot;#ETL报错：&quot; class=&quot;headerlink&quot; title=&quot;ETL报错：&quot;&gt;&lt;/a&gt;ETL报错：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Unexpected problem reading shared objects from
+      
     
     </summary>
     
@@ -214,9 +204,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Nginx常用配置&quot;&gt;&lt;a href=&quot;#Nginx常用配置&quot; class=&quot;headerlink&quot; title=&quot;Nginx常用配置&quot;&gt;&lt;/a&gt;Nginx常用配置&lt;/h1&gt;&lt;h2 id=&quot;常用代理Server配置&quot;&gt;&lt;a href=&quot;#常用代理Server配置&quot; class=&quot;headerlink&quot; title=&quot;常用代理Server配置&quot;&gt;&lt;/a&gt;常用代理Server配置&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    listen       80;    &amp;#x2F;&amp;#x2F;监听的本地端口&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server_name  localhost;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api1&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api1&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api1&amp;#x2F;xxx;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api2&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api2&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;xxx;                    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api3 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api3&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api3&amp;#x2F;xxx;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api4 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api4&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;&amp;#x2F;xxx; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 请注意这里的双斜线,好好分析一下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location &amp;#x2F;api5&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        proxy_pass  http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;haha;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # http:&amp;#x2F;&amp;#x2F;localhost&amp;#x2F;api5&amp;#x2F;xxx -&amp;gt; http:&amp;#x2F;&amp;#x2F;localhost:8080&amp;#x2F;api4&amp;#x2F;hahaxxx;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 请注意这里的haha和xxx之间没有斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;携带Cookie配置&quot;&gt;&lt;a href=&quot;#携带Cookie配置&quot; class=&quot;headerlink&quot; title=&quot;携带Cookie配置&quot;&gt;&lt;/a&gt;携带Cookie配置&lt;/h2&gt;&lt;p&gt;常用于cas单点登录跳转&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;unstream 10api &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server 192.168.1.10:8080;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;server&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    location ^~ &amp;#x2F;prod-api&amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_cookie_domain 10api $host;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_cookie_path &amp;#x2F;strategy &amp;#x2F;prod-api;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      
+      
+        &lt;h1 id=&quot;Nginx常用配置&quot;&gt;&lt;a href=&quot;#Nginx常用配置&quot; class=&quot;headerlink&quot; title=&quot;Nginx常用配置&quot;&gt;&lt;/a&gt;Nginx常用配置&lt;/h1&gt;&lt;h2 id=&quot;常用代理Server配置&quot;&gt;&lt;a href=&quot;#常用代理Server配置&quot;
+      
     
     </summary>
     
@@ -239,7 +230,10 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;数据库数据抽取&quot;&gt;&lt;a href=&quot;#数据库数据抽取&quot; class=&quot;headerlink&quot; title=&quot;数据库数据抽取&quot;&gt;&lt;/a&gt;数据库数据抽取&lt;/h2&gt;&lt;h2 id=&quot;抽取数据转换json&quot;&gt;&lt;a href=&quot;#抽取数据转换json&quot; class=&quot;headerlink&quot; title=&quot;抽取数据转换json&quot;&gt;&lt;/a&gt;抽取数据转换json&lt;/h2&gt;&lt;h2 id=&quot;数据存储&quot;&gt;&lt;a href=&quot;#数据存储&quot; class=&quot;headerlink&quot; title=&quot;数据存储&quot;&gt;&lt;/a&gt;数据存储&lt;/h2&gt;&lt;h2 id=&quot;附件文本抽取&quot;&gt;&lt;a href=&quot;#附件文本抽取&quot; class=&quot;headerlink&quot; title=&quot;附件文本抽取&quot;&gt;&lt;/a&gt;附件文本抽取&lt;/h2&gt;
+      
+      
+        &lt;h2 id=&quot;数据库数据抽取&quot;&gt;&lt;a href=&quot;#数据库数据抽取&quot; class=&quot;headerlink&quot; title=&quot;数据库数据抽取&quot;&gt;&lt;/a&gt;数据库数据抽取&lt;/h2&gt;&lt;h2 id=&quot;抽取数据转换json&quot;&gt;&lt;a href=&quot;#抽取数据转换json&quot; class=&quot;head
+      
     
     </summary>
     
@@ -262,14 +256,12 @@
     
     <summary type="html">
     
-      &lt;p&gt;参考地址：&lt;/p&gt;
+      
+      
+        &lt;p&gt;参考地址：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_33725126/article/details/89702059&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/weixin_33725126/article/details/89702059&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_34148456/article/details/86002009&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/weixin_34148456/article/details/86002009&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/zmx729618/article/details/80415984&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/zmx729618/article/details/80415984&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/zhangyafei/p/11028927.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/zhangyafei/p/11028927.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;mapping设置&quot;&gt;&lt;a href=&quot;#mapping设置&quot; class=&quot;headerlink&quot; title=&quot;mapping设置&quot;&gt;&lt;/a&gt;mapping设置&lt;/h2&gt;&lt;h2 id=&quot;中文分词插件&quot;&gt;&lt;a href=&quot;#中文分词插件&quot; class=&quot;headerlink&quot; title=&quot;中文分词插件&quot;&gt;&lt;/a&gt;中文分词插件&lt;/h2&gt;&lt;h2 id=&quot;英文分词插件&quot;&gt;&lt;a href=&quot;#英文分词插件&quot; class=&quot;headerlink&quot; title=&quot;英文分词插件&quot;&gt;&lt;/a&gt;英文分词插件&lt;/h2&gt;&lt;h2 id=&quot;拼音搜索插件&quot;&gt;&lt;a href=&quot;#拼音搜索插件&quot; class=&quot;headerlink&quot; title=&quot;拼音搜索插件&quot;&gt;&lt;/a&gt;拼音搜索插件&lt;/h2&gt;&lt;h2 id=&quot;举例&quot;&gt;&lt;a href=&quot;#举例&quot; class=&quot;headerlink&quot; title=&quot;举例&quot;&gt;&lt;/a&gt;举例&lt;/h2&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_33725126/article/details/89702059&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.c
+      
     
     </summary>
     
@@ -323,19 +315,12 @@
     
     <summary type="html">
     
-      &lt;p&gt;参考地址：&lt;/p&gt;
+      
+      
+        &lt;p&gt;参考地址：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/hsj1213522415/article/details/97693509&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/hsj1213522415/article/details/97693509&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;为什么要有父子文档？&quot;&gt;&lt;a href=&quot;#为什么要有父子文档？&quot; class=&quot;headerlink&quot; title=&quot;为什么要有父子文档？&quot;&gt;&lt;/a&gt;为什么要有父子文档？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;为什么父子文档性能好？&quot;&gt;&lt;a href=&quot;#为什么父子文档性能好？&quot; class=&quot;headerlink&quot; title=&quot;为什么父子文档性能好？&quot;&gt;&lt;/a&gt;为什么父子文档性能好？&lt;/h2&gt;&lt;p&gt;​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。&lt;/p&gt;
-&lt;h2 id=&quot;父子文档核心&quot;&gt;&lt;a href=&quot;#父子文档核心&quot; class=&quot;headerlink&quot; title=&quot;父子文档核心&quot;&gt;&lt;/a&gt;父子文档核心&lt;/h2&gt;&lt;p&gt;​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。&lt;/p&gt;
-&lt;h2 id=&quot;实例-带权限的全文检索&quot;&gt;&lt;a href=&quot;#实例-带权限的全文检索&quot; class=&quot;headerlink&quot; title=&quot;实例-带权限的全文检索&quot;&gt;&lt;/a&gt;实例-带权限的全文检索&lt;/h2&gt;&lt;h3 id=&quot;建立mapping&quot;&gt;&lt;a href=&quot;#建立mapping&quot; class=&quot;headerlink&quot; title=&quot;建立mapping&quot;&gt;&lt;/a&gt;建立mapping&lt;/h3&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/hsj1213522415/article/details/97693509&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csd
+      
     
     </summary>
     
@@ -360,9 +345,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;在powerdesigner中执行SQL-通过SQL生成模型图&quot;&gt;&lt;a href=&quot;#在powerdesigner中执行SQL-通过SQL生成模型图&quot; class=&quot;headerlink&quot; title=&quot;在powerdesigner中执行SQL.通过SQL生成模型图&quot;&gt;&lt;/a&gt;在powerdesigner中执行SQL.通过SQL生成模型图&lt;/h1&gt;&lt;p&gt; 通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图&lt;/p&gt;
-&lt;p&gt;方法:  在powerdesigner中.选择&lt;strong&gt;file&lt;/strong&gt;—&amp;gt;&lt;strong&gt;reverse engine&lt;/strong&gt;—&amp;gt;&lt;strong&gt;database&lt;/strong&gt;—-&amp;gt;选择相应的数据库版本,再把SQL导入执行即可.&lt;/p&gt;
-
+      
+      
+        &lt;h1 id=&quot;在powerdesigner中执行SQL-通过SQL生成模型图&quot;&gt;&lt;a href=&quot;#在powerdesigner中执行SQL-通过SQL生成模型图&quot; class=&quot;headerlink&quot; title=&quot;在powerdesigner中执行SQL.通过SQL生成模型
+      
     
     </summary>
     
@@ -484,17 +470,40 @@
   </entry>
   
   <entry>
-    <title>要素式审核-资料</title>
-    <link href="https://blog.songuo.tech/p/4d915dad.html"/>
-    <id>https://blog.songuo.tech/p/4d915dad.html</id>
-    <published>2020-04-09T09:29:53.000Z</published>
-    <updated>2020-04-22T03:55:46.183Z</updated>
+    <title>要素式审核-最高人民法院关于民商事案件繁简分流和调解速裁操作规程</title>
+    <link href="https://blog.songuo.tech/p/27f07296.html"/>
+    <id>https://blog.songuo.tech/p/27f07296.html</id>
+    <published>2020-04-09T09:30:53.000Z</published>
+    <updated>2020-04-22T10:18:03.204Z</updated>
     
-    <content type="html"><![CDATA[<p>TODO pdf在线预览</p><p>11111</p><div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div><p>2222</p><div class="pdfobject-container" data-target="files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div><p>3333</p><p>山东省高级人民法院要素式审判方式指引（试行）.pdf 【<a href="">预览</a>】</p><p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>]]></content>
+    <content type="html"><![CDATA[<p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程</p><a id="more"></a><div class="pdfobject-container" data-target="http://q87a8anb5.bkt.clouddn.com/%E6%B3%95%E9%99%A2/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" data-height="500px"></div>]]></content>
     
     <summary type="html">
     
-      要素式审核资料收集
+      &lt;p&gt;最高人民法院关于民商事案件繁简分流和调解速裁操作规程&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>要素式审核-c</title>
+    <link href="https://blog.songuo.tech/p/4d915dad.html"/>
+    <id>https://blog.songuo.tech/p/4d915dad.html</id>
+    <published>2020-04-09T09:29:53.000Z</published>
+    <updated>2020-04-22T10:14:17.559Z</updated>
+    
+    <content type="html"><![CDATA[<p>山东省高级人民法院要素式审判方式指引（试行）</p><a id="more"></a><div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="500px"></div><p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/raw/master/files/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4/%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B.pdf" target="_blank" rel="noopener">下载</a>】</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;山东省高级人民法院要素式审判方式指引（试行）&lt;/p&gt;
     
     </summary>
     
@@ -518,29 +527,6 @@
     <summary type="html">
     
       常用法律文书收集
-    
-    </summary>
-    
-    
-      <category term="法律知识" scheme="https://blog.songuo.tech/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/"/>
-    
-    
-      <category term="法院" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>诉讼费收费标准</title>
-    <link href="https://blog.songuo.tech/p/1b9b841c.html"/>
-    <id>https://blog.songuo.tech/p/1b9b841c.html</id>
-    <published>2020-04-09T07:19:53.000Z</published>
-    <updated>2020-04-09T07:47:11.941Z</updated>
-    
-    <content type="html"><![CDATA[<p>案件受理费交纳标准：</p><p>　　＜1万               50元</p><p>　　1万至10万            ×2.5%-200</p><p>　　10万至20万            ×2%+300</p><p>　　20万至50万            ×1.5%+1300</p><p>　　50万至100万           ×1%+3800</p><p>　　100万至200万           ×0.9%+4800</p><p>　　200万至500万           ×0.8%+6800</p><p>　　500万至1000万          ×0.7%+11800</p><p>　　1000万至2000万          ×0.6%+21800</p><p>　　2000万以上            ×0.5%+41800</p><p>　　离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，</p><p>　　每件交纳300元，超过20万元的部分，按照0.5%交纳。</p><p>　　适用简易程序审理的案件减半交纳案件受理费。</p><p>　　适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</p>]]></content>
-    
-    <summary type="html">
-    
-      案件受理费交纳标准
     
     </summary>
     
