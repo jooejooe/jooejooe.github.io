@@ -263,16 +263,7 @@
           <p>参考地址：</p>
 <ul>
 <li><a href="https://blog.csdn.net/hsj1213522415/article/details/97693509" target="_blank" rel="noopener">https://blog.csdn.net/hsj1213522415/article/details/97693509</a></li>
-</ul>
-<h2 id="为什么要有父子文档？"><a href="#为什么要有父子文档？" class="headerlink" title="为什么要有父子文档？"></a>为什么要有父子文档？</h2><ul>
-<li><p>nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；</p>
-</li>
-<li><p>parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；</p>
-</li>
-</ul>
-<h2 id="为什么父子文档性能好？"><a href="#为什么父子文档性能好？" class="headerlink" title="为什么父子文档性能好？"></a>为什么父子文档性能好？</h2><p>​    虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。</p>
-<h2 id="父子文档核心"><a href="#父子文档核心" class="headerlink" title="父子文档核心"></a>父子文档核心</h2><p>​    父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。</p>
-<h2 id="实例-带权限的全文检索"><a href="#实例-带权限的全文检索" class="headerlink" title="实例-带权限的全文检索"></a>实例-带权限的全文检索</h2><h3 id="建立mapping"><a href="#建立mapping" class="headerlink" title="建立mapping"></a>建立mapping</h3>
+<li>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/p/3cb208bc.html#more" rel="contents">
