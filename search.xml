@@ -16,6 +16,20 @@
       </tags>
   </entry>
   <entry>
+    <title>在线预览，互联网解决方案</title>
+    <url>//p/44b14d3b.html</url>
+    <content><![CDATA[<p>使用微软在线预览<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;view.officeapps.live.com&#x2F;op&#x2F;view.aspx?src&#x3D;offcie链接地址</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>office</category>
+        <category>在线预览</category>
+      </categories>
+      <tags>
+        <tag>在线预览</tag>
+        <tag>office</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo中预览pdf</title>
     <url>//p/214f0223.html</url>
     <content><![CDATA[<p>希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。</p>
@@ -32,20 +46,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>pdf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在线预览，互联网解决方案</title>
-    <url>//p/44b14d3b.html</url>
-    <content><![CDATA[<p>使用微软在线预览<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;view.officeapps.live.com&#x2F;op&#x2F;view.aspx?src&#x3D;offcie链接地址</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>office</category>
-        <category>在线预览</category>
-      </categories>
-      <tags>
-        <tag>在线预览</tag>
-        <tag>office</tag>
       </tags>
   </entry>
   <entry>
@@ -72,17 +72,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Kettle数据抽取</title>
-    <url>//p/5c1c96f2.html</url>
-    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
-      <categories>
-        <category>数据抽取</category>
-      </categories>
-      <tags>
-        <tag>Kettle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title>
     <url>//p/448e437.html</url>
     <content><![CDATA[<h2 id="ETL报错："><a href="#ETL报错：" class="headerlink" title="ETL报错："></a>ETL报错：</h2><p><strong>Unexpected problem reading shared objects from XML file : null</strong></p>
@@ -95,6 +84,17 @@
 <h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>​    找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 <sharedobjects>…</sharedobjects>之间的内容，可解决这个问题；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192024641.png" alt="img"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20190910192104994.png" alt="img"></p>
 ]]></content>
+      <categories>
+        <category>数据抽取</category>
+      </categories>
+      <tags>
+        <tag>Kettle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kettle数据抽取</title>
+    <url>//p/5c1c96f2.html</url>
+    <content><![CDATA[<h2 id="数据库数据抽取"><a href="#数据库数据抽取" class="headerlink" title="数据库数据抽取"></a>数据库数据抽取</h2><h2 id="抽取数据转换json"><a href="#抽取数据转换json" class="headerlink" title="抽取数据转换json"></a>抽取数据转换json</h2><h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><h2 id="附件文本抽取"><a href="#附件文本抽取" class="headerlink" title="附件文本抽取"></a>附件文本抽取</h2>]]></content>
       <categories>
         <category>数据抽取</category>
       </categories>
@@ -156,25 +156,6 @@
       </tags>
   </entry>
   <entry>
-    <title>IDEA中Git的更新、提交、还原方法</title>
-    <url>//p/503970b4.html</url>
-    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
-<a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
-<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
-<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>idea</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IDEA撤销commit</title>
     <url>//p/934109a7.html</url>
     <content><![CDATA[<p>日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。<br> <strong>Undo Commit</strong></p>
@@ -206,6 +187,38 @@
       </tags>
   </entry>
   <entry>
+    <title>IDEA中Git的更新、提交、还原方法</title>
+    <url>//p/503970b4.html</url>
+    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，<strong>即使你解决了冲突，但是有时候不注意会冲掉别人写的代码</strong>，不像svn使用那么简单，所以提交自己项目前必须进行更新（<strong>特别重要</strong>）；如图1：选择pull进行更新代码操作；</p>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164225.png" alt="图1"></p>
+<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164420.png" alt="图2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164601.png" alt="图3"></p>
+<p>第三步：1.<strong>当确定第二步操作完之后</strong>，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403164937.png" alt="图4"><br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165258.png" alt="图5"><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165545.png" alt="图6"><br>3.进行commit Directory操作 如图7：<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165631.png" alt="图7"><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165754.png" alt="图8"><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图9"><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200403165906.png" alt="图10"></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx常用配置</title>
+    <url>//p/30985643.html</url>
+    <content><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows下安装及使用NVM</title>
     <url>//p/c2331b8d.html</url>
     <content><![CDATA[<h2 id="Windows下安装及使用NVM"><a href="#Windows下安装及使用NVM" class="headerlink" title="Windows下安装及使用NVM"></a>Windows下安装及使用NVM</h2><p>​    所谓nvm就是一个可以让你在同一台机器上安装和切换不同版本node的工具。这里是一篇安装及使用教程。</p>
@@ -234,19 +247,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx常用配置</title>
-    <url>//p/30985643.html</url>
-    <content><![CDATA[<h1 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h1><h2 id="常用代理Server配置"><a href="#常用代理Server配置" class="headerlink" title="常用代理Server配置"></a>常用代理Server配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;    &#x2F;&#x2F;监听的本地端口</span><br><span class="line">    server_name  localhost;    </span><br><span class="line">    </span><br><span class="line">                </span><br><span class="line">    location &#x2F;api1&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080; </span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api1&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api1&#x2F;xxx;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api2&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api2&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;xxx;                    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api3 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api3&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api3&#x2F;xxx;   </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api4 &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api4&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;&#x2F;xxx; </span><br><span class="line">    # 请注意这里的双斜线,好好分析一下</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    location &#x2F;api5&#x2F; &#123;</span><br><span class="line">        proxy_pass  http:&#x2F;&#x2F;localhost:8080&#x2F;haha;</span><br><span class="line">    &#125;</span><br><span class="line">    # http:&#x2F;&#x2F;localhost&#x2F;api5&#x2F;xxx -&gt; http:&#x2F;&#x2F;localhost:8080&#x2F;api4&#x2F;hahaxxx;</span><br><span class="line">    # 请注意这里的haha和xxx之间没有斜杠</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="携带Cookie配置"><a href="#携带Cookie配置" class="headerlink" title="携带Cookie配置"></a>携带Cookie配置</h2><p>常用于cas单点登录跳转</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unstream 10api &#123;</span><br><span class="line">    server 192.168.1.10:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">    location ^~ &#x2F;prod-api&#x2F; &#123;</span><br><span class="line">                proxy_cookie_domain 10api $host;</span><br><span class="line">                </span><br><span class="line">                proxy_cookie_path &#x2F;strategy &#x2F;prod-api;</span><br><span class="line">                #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PowerDesigner设计Name和Comment替换</title>
     <url>//p/cab30bdb.html</url>
     <content><![CDATA[<h1 id="PowerDesigner设计Name和Comment-替换"><a href="#PowerDesigner设计Name和Comment-替换" class="headerlink" title="PowerDesigner设计Name和Comment 替换"></a>PowerDesigner设计Name和Comment 替换</h1><p>comment 是注释。name 是字段描述 </p>
@@ -264,30 +264,6 @@
       <tags>
         <tag>PD</tag>
         <tag>PowerDesigner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitlab添加问题模板</title>
-    <url>//p/7930ee41.html</url>
-    <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
-<li><p>在项目中找到文件夹 <code>.gitlab</code>（和 <code>.git</code> 是在同一目录），创建文件夹 <code>issue_templates</code></p>
-</li>
-<li><p>在文件夹 <code>issue_templates</code>下添加一个<code>.md</code>的文件，如<code>bug.md</code></p>
-</li>
-<li><p>将添加的文件推送到服务器分支上，合并</p>
-</li>
-<li><p>最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 <code>bug</code><br>这样就可以了</p>
-</li>
-</ul>
-<a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -311,6 +287,20 @@
       </categories>
       <tags>
         <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在powerdesigner中执行SQL.通过SQL生成模型图</title>
+    <url>//p/be84d7b.html</url>
+    <content><![CDATA[<h1 id="在powerdesigner中执行SQL-通过SQL生成模型图"><a href="#在powerdesigner中执行SQL-通过SQL生成模型图" class="headerlink" title="在powerdesigner中执行SQL.通过SQL生成模型图"></a>在powerdesigner中执行SQL.通过SQL生成模型图</h1><p> 通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图</p>
+<p>方法:  在powerdesigner中.选择<strong>file</strong>—&gt;<strong>reverse engine</strong>—&gt;<strong>database</strong>—-&gt;选择相应的数据库版本,再把SQL导入执行即可.</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>PD</tag>
+        <tag>PowerDesigner</tag>
       </tags>
   </entry>
   <entry>
@@ -381,17 +371,16 @@
       </tags>
   </entry>
   <entry>
-    <title>在powerdesigner中执行SQL.通过SQL生成模型图</title>
-    <url>//p/be84d7b.html</url>
-    <content><![CDATA[<h1 id="在powerdesigner中执行SQL-通过SQL生成模型图"><a href="#在powerdesigner中执行SQL-通过SQL生成模型图" class="headerlink" title="在powerdesigner中执行SQL.通过SQL生成模型图"></a>在powerdesigner中执行SQL.通过SQL生成模型图</h1><p> 通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图</p>
-<p>方法:  在powerdesigner中.选择<strong>file</strong>—&gt;<strong>reverse engine</strong>—&gt;<strong>database</strong>—-&gt;选择相应的数据库版本,再把SQL导入执行即可.</p>
+    <title>查看当前npm源</title>
+    <url>//p/9fa7683d.html</url>
+    <content><![CDATA[<h2 id="查看当前npm源"><a href="#查看当前npm源" class="headerlink" title="查看当前npm源"></a>查看当前npm源</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line">&gt;http:&#x2F;&#x2F;registry.npmjs.org&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="修改npm源（设置为淘宝npm源）"><a href="#修改npm源（设置为淘宝npm源）" class="headerlink" title="修改npm源（设置为淘宝npm源）"></a>修改npm源（设置为淘宝npm源）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>数据库</category>
+        <category>开发经验</category>
       </categories>
       <tags>
-        <tag>PD</tag>
-        <tag>PowerDesigner</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -526,6 +515,291 @@
       </tags>
   </entry>
   <entry>
+    <title>编写技术规范的实用指南</title>
+    <url>//p/44314006.html</url>
+    <content><![CDATA[<p>作为一名软件工程师，你的主要职责是解决技术问题。你的第一个冲动可能是立即直接开始编写代码。但如果你没有仔细考虑过你的解决方案，那么这可能是一个糟糕的主意。</p>
+<a id="more"></a>
+<p>你可以通过编写技术规范来思考一些困难的技术问题。如果你自认并非一个好作家，那么编写这样的技术规范可能会让你感到沮丧。你甚至可能认为这是一件不必要的琐事。但是，编写技术规范真的可以增加成功的项目、服务或功能的机会，让所有利益相关者都感到满意。它可以降低在实施过程中甚至在产品发布之后出现严重错误的几率。</p>
+<p>在本文中，我将讲述如何编写确保产品质量的技术规范。</p>
+<p><strong>什么是技术规范文档</strong></p>
+<p>技术规范文档概述了如何通过设计和构建解决方案来解决技术问题。它有时也被称为技术设计文档、软件设计文档或工程设计文档。它通常是由工程师编写的，他们将构建解决方案或在实施过程中担任负责人，但对于大型项目，它可以由技术负责人、项目负责人或高级工程师编写。这些文档向工程师团队和其他利益相关者展示了功能、项目、计划和服务的设计、所涉及的工作、影响和时间线。</p>
+<p><strong>为什么编写技术规范很重要</strong></p>
+<p>技术规范对参与项目的每个人都有巨大的好处：编写它们的工程师，使用它们的团队，甚至是根据它们设计的项目。以下是你应该编写技术规范的一些理由。</p>
+<p><strong>给工程师带来的好处</strong></p>
+<p>通过编写技术规范，工程师被迫在直接进入代码之前检查问题，在代码中他们可能会忽略解决方案的某些方面。当你把实施过程中需要做的所有工作进行分解、组织和安排，你就会对解决方案的范围有一个更好的认识。因为技术规范是所提议的解决方案的透彻看法，所以技术规范也可以作为项目的文档，无论是在实施阶段还是实施之后的文档，都是为了交流你在项目上的成就。</p>
+<p>有了这个经过深思熟虑的解决方案，你的技术规范就不必再向多个团队成员和利益相关者反复解释你的设计了。但常言道，人无完人。你的同行和经验更为丰富的工程师可能会给你展示他们在设计、新技术、工程实践、替代解决方案等方面的新事物，而这些你以前可能从未见过或从未想到过。他们可能会发现你可能忽略的解决方案的例外情况，从而减少你的责任。反正你编写的技术规范，关注的人越多越好。</p>
+<p><strong>给团队带来的好处</strong></p>
+<p>要在团队和其他利益相关者之间沟通项目设计思想，技术规范是一种直接而有效的方式。整个团队可以协作解决问题并创建解决方案。随着越来越多的团队成员和利益相关者为规范做出贡献，这会让他们在项目中投入更多精力，并鼓励他们主动承担责任，并为之负责。由于每个人都有相同的想法，它限制了重叠工作可能产生的复杂性。不熟悉该项目的新团队成员可以自己加进来，并提前为项目的实施做出贡献。</p>
+<p><strong>给项目带来的好处</strong></p>
+<p>对技术规范的投资最终会带来卓越的产品。由于团队是一致的，并且就需要通过规范完成的工作达成一致，因此大型项目可以进展得更快。规范对于管理复杂性和通过设定项目限制来防止范围和功能蔓延方面是必不可少的。它设定了优先级，从而确保项目中只有影响最大、最紧迫的部分才会被优先考虑。</p>
+<p>项目实施后，它有助于解决项目中出现的问题，并为回顾和事后总结提供见解。最好的计划规范可以作为衡量工程成功与否和工程时间投资回报的最佳指南。</p>
+<p><strong>编写技术规范之前要做什么</strong></p>
+<p>在开始之前，请收集问题域中的现有信息。阅读产品团队提出的任何产品 / 功能要求，以及与项目相关的技术要求 / 标准。在了解问题的来龙去脉后，试着详细地陈述问题，并进行头脑风暴，想出各种你认为可能会解决的解决方案。从你想出的所有方案中选出一个最合理的解决方案。</p>
+<p>记住，你并不是一个人在执行这项任务。请一位对这个问题很有经验的工程师做你的参谋。邀请他们参加会议，并说明问题和你选择的解决方案。列出你的想法和思考过程，并试图说法他们相信你的解决方案是最合适的。收集他们的反馈，并请他们为你的技术规范进行审查。</p>
+<p>终于到了真正编写技术规范的时候了。在你的日程表中留出时间用来编写技术规范的初稿。使用整个团队都可以使用的协作文档服务。获取技术规范模板（见下文），并写一份粗略的草案。</p>
+<p><strong>技术规范的内容</strong></p>
+<p>今天，许多公司都在解决各种各样的问题。每个组织都是独一无二的，并创造了自己独特的工程文华。因此，即使在公司、部门、团队内部，甚至在同一团队的工程师之间，技术规范也可能不是标准的。每个解决方案都有不同的需求，你应该根据项目来定制你的技术规范。你并不需要包括下面提到的所有部分。选择适合你的设计部分，然后放弃其他部分。</p>
+<p>根据我的经验，技术规范包括以下七个基本部分：</p>
+<p>前页、简介、解决方案、其他考虑因素、成功评估、工作、审议和结文。</p>
+<p><strong>前页</strong></p>
+<p>1、题目</p>
+<p>2、作者</p>
+<p>3、团队</p>
+<p>4、审核人</p>
+<p>5、编写日期</p>
+<p>6、最后更新日期</p>
+<p>7、Epic（史诗故事）、Ticket（凭据）、发布、任务追踪器参考链接</p>
+<p><strong>简介</strong></p>
+<p>1、概述、问题描述、总结或摘要</p>
+<ul>
+<li>问题摘要（从用户的角度）、上下文、建议的解决方案和利益相关者。</li>
+</ul>
+<p>2、词汇表或术语表</p>
+<ul>
+<li>你在研究设计时遇到的新术语，或者你可能怀疑读者 / 利益相关者不知道的术语。</li>
+</ul>
+<p>3、上下文或背景</p>
+<ul>
+<li>问题值得解决的原因。</li>
+<li>问题的根源。</li>
+<li>这个问题如何影响用户和公司目标。</li>
+<li>过去为解决这一问题所做的努力及其无效的原因。</li>
+<li>产品如何与团队目标和关键成果相关。</li>
+<li>解决方案如何融入整个产品路线图和战略。</li>
+<li>解决方案如何融入技术战略。</li>
+</ul>
+<p>4、目标或产品与技术要求</p>
+<ul>
+<li>以用户故事的形式提出产品需求。</li>
+<li>技术要求。</li>
+</ul>
+<p>5、非目标或超出范围</p>
+<ul>
+<li>不予考虑的产品和技术要求。</li>
+</ul>
+<p>6、未来目标</p>
+<ul>
+<li>未来的产品和技术要求。</li>
+</ul>
+<p>7、假设</p>
+<ul>
+<li>需要具备并可获得的条件和资源，以使解决方案如上所述发挥作用。</li>
+</ul>
+<p><strong>解决方案</strong></p>
+<p>1、现时或现有的解决方案 / 设计</p>
+<ul>
+<li>当前解决方案说明。</li>
+<li>当前解决方案的优缺点。</li>
+</ul>
+<p>2、建议或提议的解决方案 / 设计</p>
+<ul>
+<li>解决方案将与之交互并进行更改的外部组件</li>
+<li>当前解决方案的依赖项</li>
+<li>建议的解决方案的优缺点</li>
+<li>数据模型 / 模式变化。</li>
+</ul>
+<p>​    a、模式定义</p>
+<p>​    b、新的数据模型</p>
+<p>​    c、修改后的数据模型</p>
+<p>​    d、数据验证方法</p>
+<ul>
+<li>业务逻辑</li>
+</ul>
+<p>​    a、API 变化</p>
+<p>​    b、伪代码</p>
+<p>​    c、流程图</p>
+<p>​    d、错误状态</p>
+<p>​    e、失败场景</p>
+<p>​    f、导致错误和失败的条件</p>
+<p>​    g、局限性</p>
+<ul>
+<li>表示层</li>
+</ul>
+<p>​    a、用户需求</p>
+<p>​    b、用户体验变化</p>
+<p>​    c、用户界面变化</p>
+<p>​    d、带描述的线框图</p>
+<p>​    e、链接到用户界面 / 用户体验设计器的工作</p>
+<p>​    f、移动关注点</p>
+<p>​    g、Web 关注点</p>
+<p>​    h、用户界面状态</p>
+<p>​    i、错误处理</p>
+<ul>
+<li>其他需要回答的问题</li>
+</ul>
+<p>​    a、该解决方案将如何扩展？</p>
+<p>​    b、该解决方案的局限性是什么？</p>
+<p>​    c、一旦发生故障，它将如何恢复？</p>
+<p>​    d、它将如何应对未来的需求？</p>
+<p>3、测试计划</p>
+<ul>
+<li>解释测试如何确保用户需求得到满足的说明</li>
+<li>单元测试</li>
+<li>集成测试</li>
+<li>质量保证</li>
+</ul>
+<p>4、监控和警报计划</p>
+<ul>
+<li>日志计划和工具</li>
+<li>监控计划和工具</li>
+<li>用于衡量运行状况的指标</li>
+<li>如何保证可观测性</li>
+<li>警报计划和工具</li>
+</ul>
+<p>5、发布 / 推出和部署计划</p>
+<ul>
+<li>部署架构</li>
+<li>部署环境</li>
+<li>分阶段推出计划，例如使用功能标志。</li>
+<li>计划概述如何向用户转达更改，例如，使用发行说明。</li>
+</ul>
+<p>6、回滚计划</p>
+<ul>
+<li>详细和具体的负债。</li>
+<li>减少负债的计划。</li>
+<li>描述如何防止其他组件、服务和系统受到影响的计划。</li>
+</ul>
+<p>7、替代解决方案 / 设计</p>
+<ul>
+<li>每个替代解决方案的简短摘要说明</li>
+<li>每种替代解决方案的利弊</li>
+<li>每种解决方案均无法正常工作的原因</li>
+<li>替代方案在哪些方面不如建议的解决方案</li>
+<li>在建议的方案失败的情况下，向次佳次佳替代方案迁移的计划</li>
+</ul>
+<p><strong>其他考虑因素</strong></p>
+<p>1、对其他团队的影响</p>
+<ul>
+<li>这将如何增加其他人的工作？</li>
+</ul>
+<p>2、第三方服务和平台考虑因素</p>
+<ul>
+<li>与内部构建服务相比，这真的值得吗？</li>
+<li>与服务 / 平台相关的安全和隐私问题有哪些？</li>
+<li>总共要花多少钱？</li>
+<li>它将如何扩展规模？</li>
+<li>预计未来可能会出现哪些问题？</li>
+</ul>
+<p>3、成本分析</p>
+<ul>
+<li>每天运行解决方案的成本是多少？</li>
+<li>推出它的成本是多少？</li>
+</ul>
+<p>4、安全方面考虑因素</p>
+<ul>
+<li>潜在的威胁是什么？</li>
+<li>如何减轻这些风险？</li>
+<li>该解决方案将如何影响其他组件、服务和系统的安全性？</li>
+</ul>
+<p>5、隐私方面考虑因素</p>
+<ul>
+<li>该解决方案是否遵循有关数据隐私的当地法律和政策？</li>
+<li>该解决方案如何保护用户的数据隐私？</li>
+<li>在解决方案中，个性化和隐私之间有哪些权衡？</li>
+</ul>
+<p>6、地区性考虑因素</p>
+<ul>
+<li>国际化和本地化对解决方案有什么影响？</li>
+<li>延迟问题是什么？</li>
+<li>在法律上有什么顾虑？</li>
+<li>服务可用性的状态是什么？</li>
+<li>如何实施跨地区的数据传输？这方面需要关注的问题是什么？</li>
+</ul>
+<p>7、可访问性考虑因素</p>
+<ul>
+<li>解决方案的可访问性如何？</li>
+<li>你将使用那些工具来评估其可访问性？</li>
+</ul>
+<p>8、运营方面考虑因素</p>
+<ul>
+<li>这种解决方案是否会产生不良后果？</li>
+<li>一旦发生故障，如何恢复数据？</li>
+<li>如何在为用户带来更高价值的同时保持较低的运营成本？</li>
+</ul>
+<p>9、风险性</p>
+<ul>
+<li>该解决方案存在哪些风险？</li>
+<li>是否有一些风险一旦承担就无法挽回？</li>
+<li>承担这些风险的成本效益分析是什么？</li>
+</ul>
+<p>10、支持方面考虑因素</p>
+<ul>
+<li>在于更改交互时，支持团队将如何向用户传达有关他们可能面临的常见问题的信息？</li>
+<li>我们如何确保用户对解决方案感到满意，并且能够在最少的支持下与之交互？</li>
+<li>谁负责解决方案的维护？</li>
+<li>如果项目所有者不在，如何完成知识转移？</li>
+</ul>
+<p><strong>成功评估</strong></p>
+<p>1、影响</p>
+<ul>
+<li>安全影响</li>
+<li>性能影响</li>
+<li>成本影响</li>
+<li>对其他组件和服务的影响</li>
+</ul>
+<p>2、指标</p>
+<ul>
+<li>要捕获的指标列表</li>
+<li>用户捕获和度量指标的工具</li>
+</ul>
+<p><strong>工作</strong></p>
+<p>1、工作估算和时间表</p>
+<ul>
+<li>具体的、可衡量的和有时限的任务列表。</li>
+<li>完成每项任务所需的资源。</li>
+<li>每项任务需要完成的时间估算。</li>
+</ul>
+<p>2、优先次序</p>
+<ul>
+<li>按紧急程度和影响对任务进行分类。</li>
+</ul>
+<p>3、里程碑</p>
+<ul>
+<li>当大量的工作已经完成时，标注有日期的检查点。</li>
+<li>表明里程碑通过的衡量标准。</li>
+</ul>
+<p>4、未来的工作</p>
+<ul>
+<li>将来要完成的任务列表。</li>
+</ul>
+<p><strong>审议</strong></p>
+<p>1、答辩</p>
+<ul>
+<li>团队成员不同意解决方案的内容，需要进一步辩论，以达成共识。</li>
+</ul>
+<p>2、待决问题</p>
+<ul>
+<li>向团队和利益相关者提出一些你不知道答案或不确定的问题，以征求他们的意见。这些可能包括你还不知道如何解决的问题的各个方面。</li>
+</ul>
+<p><strong>结文</strong></p>
+<p>1、相关工作</p>
+<ul>
+<li>在某种横渡上与建议的解决方案相似，且由不同团队处理的任何外部工作。</li>
+<li>了解这一点很重要，当遇到相关问题时，这样的团队之间能够实现知识共享。</li>
+</ul>
+<p>2、参考文献</p>
+<ul>
+<li>指向参考文档和资源的链接，这些参考文档和连接是你在设计时进行参考的内容。</li>
+</ul>
+<p>3、致谢</p>
+<ul>
+<li>致谢那些为你希望认可的设计做出过贡献的人们。</li>
+</ul>
+<p><strong>完成编写技术规范之后</strong></p>
+<p>现在，你已经编写好了规范，是时候对其进行完善了。像一个独立的审稿人一样，仔细审阅你的草案。问问自己设计的哪些部分不清楚，哪些部分不确定。修改草案，把这些问题包括进去。再次检查草案，就好像你的任务仅仅是根据技术规范来实施设计一样。确保规范是一个足够清晰的实施指南。如果你不在的话，团队可以按照这份指南进行工作。如果你对解决方案有疑问，并且想要对它进行测试以确保有效，那么可以创建一个简单的原型来证明你的概念。</p>
+<p>当你完成彻底审阅后，将草案发给你的团队和利益相关者。尽管处理所有的意见、问题和建议。为每个问题设定最后期限。安排会议，讨论团队在那些问题上存在分歧，或者对文档进行一场冗长的讨论。如果团队在某个问题没有达成一致，即使在进行了面对面的会议之后，也要做最后的决定，因为责任就落在你身上了。要求不同团队中的工程师审查你的规范，这样你就可以从局外人的角度出发，从而加强对非团队成员的利益相关者的了解。即使在实施过程中，也要用设计、进度、工作估算、范围等方面的任何变更来更新文档。</p>
+<p><strong>结论</strong></p>
+<p>编写测试和规范是保证项目成功的有效方法。稍作规划和稍作深思熟虑就可以使项目的实际实施变得轻松许多。</p>
+<p>作者 | Zara Cooper  译者 | Sambodhi  编辑 | Natalie</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+      <tags>
+        <tag>文档</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>成为一流软件开发者的34条建议</title>
     <url>//p/32d2b524.html</url>
     <content><![CDATA[<h1 id="成为一流软件开发者的34条建议"><a href="#成为一流软件开发者的34条建议" class="headerlink" title="成为一流软件开发者的34条建议"></a>成为一流软件开发者的34条建议</h1><p>我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。</p>
@@ -641,442 +915,27 @@
       </tags>
   </entry>
   <entry>
-    <title>查看当前npm源</title>
-    <url>//p/9fa7683d.html</url>
-    <content><![CDATA[<h2 id="查看当前npm源"><a href="#查看当前npm源" class="headerlink" title="查看当前npm源"></a>查看当前npm源</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line">&gt;http:&#x2F;&#x2F;registry.npmjs.org&#x2F;</span><br></pre></td></tr></table></figure>
-<h2 id="修改npm源（设置为淘宝npm源）"><a href="#修改npm源（设置为淘宝npm源）" class="headerlink" title="修改npm源（设置为淘宝npm源）"></a>修改npm源（设置为淘宝npm源）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>开发经验</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2018年度广东省行政诉讼情况报告</title>
-    <url>//p/9e1000d2.html</url>
-    <content><![CDATA[<h2 id="2018年度广东省行政诉讼情况报告"><a href="#2018年度广东省行政诉讼情况报告" class="headerlink" title="2018年度广东省行政诉讼情况报告"></a>2018年度广东省行政诉讼情况报告</h2><p>​    2018年，广东省各级法院深入学习贯彻习近平新时代中国特色社会主义思想和党的十九大精神以及习近平总书记对广东重要讲话精神，全面加强行政审判工作，保护人民群众合法权益，促进行政争议实质性解决，支持和监督行政机关依法行政，为广东实现“四个走在全国前列”、当好“两个重要窗口”提供强有力司法保障。</p>
-<a id="more"></a>
-<p>一、2018年度广东省行政诉讼概况和案件特点</p>
-<p>（一）行政诉讼概况</p>
-<p>1.行政诉讼案件年度增长。2018年，全省法院新收行政案件持续快速增长，其中一审行政案件新收21442件，同比增长18%，二审行政案件新收12229件，同比增长31.23%，行政申请再审案件新收2177件，同比增长57%，审判压力继续上升。</p>
-<p>2.行政诉讼案件类型分布。2018年，全省新收一审行政案件类型更趋分散。传统案件继续增长，收案最多的依然是劳动和社会保障类案件（3671件），其次是土地海洋林业等自然资源类案件（1930件）。与此同时，新类型案件比重上升，无法归入传统案由的案件占42%。</p>
-<p>3.行政诉讼案件地域分布。2018年，全省行政案件地域集中趋势有所缓和。大湾区内地九市（广州、深圳、佛山、东莞、中山、惠州、珠海、肇庆、江门）新收一审行政案件17092件，占全省的80%。粤东西北一审收案恢复增长，新收一审行政案件4350件，同比增长28%，比全省平均增幅高出10个百分点。</p>
-<p>4.行政诉讼裁判结果。2018年，全省共审结一审行政案件21316件，其中直接判决行政机关败诉的891件，行政机关改变行政行为后裁定准予原告撤诉的5件，合计896件。行政机关一审败诉率为4.2%，较上年度下降6.5个百分点。</p>
-<p>（二）行政非诉审查概况</p>
-<p>1.行政非诉审查案件继续增长。2018年，全省法院新收行政机关申请法院强制执行行政行为的案件即行政非诉审查案件33129件，同比增长12.6%，审结33098件，同比增长11%。行政非诉审查案件类型高度集中，土地、公积金、环保和交通4类案件占全部非诉审查案件的72%。</p>
-<p>\2. 准予执行率基本持平。2018年，全省法院裁定准予强制执行行政行为25634件，准予执行率77.45%，同比微降0.4个百分点。各类行政行为中，不准予执行率相对较高的依然是土地类、环保类行政行为。行政机关不服不准予执行裁定，向上一级法院申请复议560件，复议率1.7%，同比上升1.3个百分点。</p>
-<p>（三）案件特点</p>
-<p>1.行政矛盾纠纷渐趋平稳。一是以省、市政府为被告的行政案件收案数明显下降。2018年，全省法院新收一审行政案件中，以省、市政府为单独被告的案件共488件，同比减少150件，下降23.5%。二是“矛盾上交”现象得到初步遏制，案件“倒金字塔”分布情况有所改善。全年全省各中级法院新收一审行政案件3282件，占全省法院新收一审行政案件的15.3%，连续两年下降。</p>
-<p>2.司法需求日益增长。一是要求司法保护更加全面。上市公司不服深交所强制退市、农民集体不服政府划定自然保护区、学生家长不服教育局划分学区等新类型案件的出现，对司法能力提出更高要求。二是要求司法保护更加及时。全省法院探索运用新行政诉讼法司法解释的暂时权利保护制度，在作出判决之前，裁定停止执行行政行为2件。三是要求司法保护更加有效。全省法院附带审查规章以下规范性文件22份，确认4份规范性文件的有关条款不合法。</p>
-<p>3.积极推动纠纷化解。行政应诉、政务诚信、政务公开等情况纳入法治广东建设考评和省直机关考核指标，行政与司法良性互动格局进一步形成。行政机关出庭应诉工作取得新进展，应诉水平进一步提升，全年各级行政机关负责人出庭应诉3819件，同比增长34%，其中汕尾市市长杨绪松、恩平市市长刘兵等地方政府“一把手”出庭应诉。行政机关积极配合法院实质化解行政争议，全年原告主动撤诉结案2655件，调解结案21件。肇庆市将军陶瓷有限公司等4家企业诉阳春市人民政府招商引资协议纠纷，仁化县丹霞瀛枫温泉有限公司诉仁化县人民政府、仁化县城口镇人民政府土地开发协议纠纷等行政协议案件调解结案，营商环境进一步优化。</p>
-<p>二、行政诉讼司法审查动向</p>
-<p>2018年，全省法院依法履行行政审判职责，强化对社会、经济等重点管理领域行政执法行为的司法审查力度，注重保护公民、法人或其他组织的合法权益，助推法治政府建设，助力全省法治环境、营商环境、生态环境进一步改善优化。</p>
-<p>（一）依法审理涉民营企业产权行政案件，加大对民营企业产权的司法保护力度</p>
-<p>民营企业产权是我国产权体系的重要部分，实现对民营企业产权的有效保障是经济持续健康发展的重要基础，也是全面深化市场经济体制改革的需要。2018年，全省法院坚决贯彻党的十九大精神及中央有关民营企业产权的保护意见，依法审结一批涉民营企业产权保护的典型案件，纠正一些违法侵害民营企业产权的行政行为，努力为民营企业发展营造良好的市场竞争环境。在涉民营企业行政处罚案件中，法院重点审查行政机关作出处罚决定所依据的事实是否清楚、法律依据是否充分，是否存在因政府原因造成企业产权权能无法行使的情形，依法准确认定政府与企业各自应承担的法律责任。在行政机关不履行承诺导致民营企业本应合法取得的财产权益无法兑现的案件中，法院妥善认定政府与企业签订合同的效力，依法支持民营企业的合理诉求，确保民营企业的合法正当利益得到有效司法保护。如台山市荣富房地产开发有限公司诉台山市国土资源局收回国有土地使用权决定案，法院认定台山市国土资源局未充分举证证明其已对土地闲置的原因和有关情况开展调查核实，以事实不清、证据不足为由，判决撤销其作出的《收回国有建设用地使用权决定书》。又如仁化县丹霞瀛枫温泉有限公司诉仁化县人民政府、仁化县城口镇人民政府土地开发协议纠纷案，仁化县人民政府将仁化县丹霞瀛枫温泉有限公司通过与仁化县城口镇人民政府订立《仁化县城口镇温泉项目投资开发合同书》而获得的土地使用权另行挂牌出让，并被其他公司竞得。在法院的协调下，各方当事人达成调解协议，城口镇人民政府退还仁化县丹霞瀛枫温泉有限公司的全部投资款并补偿其12年的投资利息损失。</p>
-<p>（二）依法审理行政协议纠纷案件，督促行政机关依法、依约、诚信履行行政协议</p>
-<p>随着市场经济不断发展，政府在公共管理服务中更多通过平等协商的方式施行政策，实现行政管理目的。行政协议作为新行政管理手段在市场经济中发挥的作用日益明显。2018年，全省法院审理的行政协议纠纷案较往年明显增多。法院通过依法裁判，监督和促进行政机关依法、依约、诚信履行行政协议，充分保护协议各方主体的合法权益。对行政机关不符合法定或约定条件，单方变更、解除协议或以其他方式拒绝履行协议义务的，法院依法判令行政机关承担违约责任，责令其继续履行行政协议义务。对行政机关因维护国家、公共利益需要变更行政协议，造成行政相对人合法权益损失的，法院依法判令行政机关承担补偿责任。对行政机关拒绝承认其与行政相对人签订的协议属于行政协议，逃避履行协议义务的，在该协议具备履行条件且不会损害国家、公共利益的情形下，法院判令行政机关限期履行协议，保护行政相对人信赖利益。如广东深汕森钢投资发展有限公司诉深汕特别合作区管理委员会行政协议纠纷案，深汕特别合作区管理委员会未能提供证据证明其已履行与广东深汕森钢投资发展有限公司订立《项目投资协议》中约定的依照“招、拍、挂”法定程序为该公司提供土地使用权的义务，法院判决深汕特别合作区管理委员会继续履行该协议。又如林某诉广州市越秀区建设和水务局拆迁安置协议纠纷案，广州市越秀区建设和水务局长期既不履行其与林某签订的《拆迁房屋安置协议》，也不采取其他补救措施，被法院认定属于不履行职责，构成违约，法院判决该局三十日内履行协议约定，协助将涉案安置房屋过户给林某。</p>
-<p>（三）依法审理涉政府采购的财政监管案件，为促成公平、公正、公开的市场竞争环境提供有力司法保障</p>
-<p>招投标工作在实现财政资金的有效利用、优化社会公共资源配置等方面有着重要作用。对招投标行为进行有效监管，能够规范市场竞争行为，确保政府采购依法、依规进行。2018年，全省法院通过依法审理涉政府采购投诉处理的财政监管案件，支持和规范财政主管部门依法履行监管职责，为促成公平、公正、公开的市场竞争环境提供有力司法保障。对接到当事人有关招投标行为违法的投诉，相关财政主管部门未认真履行监管职责，未尽充分调查义务，或者回避投诉的关键问题的，法院依法判令其重启处理程序。对中标供应商存在商业信誉不良不具备参与政府采购法定条件的，法院依法支持财政主管部门合法、合理行使自由裁量权，责令重新开展采购活动，促进政府采购的诚信建设。如大连中睿科技发展有限公司诉深圳市财政委员会招投标监管行政处理决定案，法院认定深圳市财政委员会未对大连中睿科技发展有限公司投诉材料中提及的问题进行实质性调查就直接作出行政处理决定属于事实不清，判决撤销该处理决定并责令重新处理。广州某建筑咨询公司诉中山市财政局政府采购投诉处理决定纠纷案，法院依法支持中山市财政局作出的以该公司存在“重大违法记录”不能成为有效的供应商为由责令重新开展政府采购活动的行政处理决定。</p>
-<p>（四）依法审理环境行政公益诉讼案件，督促行政机关切实履行环境保护职责，维护环境公共利益</p>
-<p>当前，环境保护日益成为社会关注的焦点。为了最大限度减少当公共环境资源遭到非法破坏时，因行政机关不依法履行监管职责，致使环境污染状况持续加重的情况出现，2018年全省法院依法审理了检察机关提起环境行政公益诉讼，支持检察机关的合法诉讼请求，督促行政机关及时、充分、有效履行环境保护职责，全力维护生态环境。对接到检察机关检察建议后，仍怠于履行环保监管职责的行政机关，责令其限期采取环保监管措施；对行政机关部分履行环保职责，但未能完全消除环境污染问题的，判令其继续履行职责，直至受污染的环境得到有效治理、修复。如连南瑶族自治县人民检察院诉连南瑶族自治县国土资源和环境保护局不履行法定职责纠纷案，法院经审理依法支持连南检察院的诉讼请求，认定连南国土环保局未督促环境违法当事人依法履行行政处罚决定，未足额收缴环境治理恢复保证金，属怠于履行监管职责的行为，责令其限期履行。又如开平市人民检察院诉开平市环境保护局不履行法定职责案，法院认为开平市环保局未提供充分证据证明造成环境污染的垃圾填埋场及其周边环境已修复治理完成，判决该局继续履行监督管理的法定职责。</p>
-<p>三、工作展望</p>
-<p>广东法院将以习近平新时代中国特色社会主义思想为指导，以“努力让人民群众在每一个司法案件中感受到公平正义”为目标，紧紧围绕党和国家中心工作以及广东省委“1+1+9”工作部署，进一步发挥行政审判职能作用，支持和监督行政机关依法行政，积极推动法治国家、法治政府、法治社会一体建设，为深化“放管服”改革和粤港澳大湾区建设提供更优质的司法服务，为把广东建设成为全国最安全稳定、最公平公正、法治环境最好地区提供更好的司法保障。</p>
-<p>——坚持严格司法，强化对行政行为合法性的全面审查力度，依法支持、监督和规范行政行为。坚持对行政行为合法性全面审查的基本原则，在厘清案件事实的基础上，以被诉行政行为作为审理对象，结合诉讼请求，明确双方的争议焦点，不断推进庭审、裁决实质化，通过适用撤销判决、履行判决、变更判决、赔偿判决等方式，妥善处理当事人的诉讼请求，减少“程序空转”，力争实质性全面化解行政争议。坚持以维护法律统一适用为基本前提，特别是在征地拆迁、三旧改造、食品安全、环境保护等重点民生领域以及对相关规范性文件附带审查方面，加强对被诉行政行为所依据的证据、规范和相关程序的合法性审查力度，对于与法律、法规相抵触的行政行为予以确认违法，对于相关规范性文件的“不合法条款”将发出司法建议并督促有关行政机关予以修订，实现源头治理，充分保障人民群众的人身和财产安全。加大产权保护力度，依法平等对待各类市场主体，对于侵犯企业合法产权和自主经营权的行政行为要明确认定其违法，应当予以撤销的要撤销，可以补救的应当判决行政机关限期采取补救措施，需要赔偿或补偿的要尽可能一并予以判决，尽快帮助企业恢复正常的生产和经营。全面对标诚信政府、法治政府的建设标准和要求，依法规范和治理地方政府的招商引资行为，加大信赖利益保护，对于因政府负责人更替、机构合并等原因导致的不履行行政协议约定的义务、违法行使行政优益权、不兑现招商承诺等违法行为予以纠正，营造稳定公平透明、可预期的法治化营商环境。依法审理检察机关提起的行政公益诉讼案件，既要维护检察机关的起诉权，也要尊重行政机关的法定裁量权，平等充分听取双方意见，稳妥居中裁判，切实发挥行政公益诉讼制度的正向价值。</p>
-<p>——坚持多元解纷，统筹各方力量和各种资源，共同推动行政案件的诉前调解、实质化解，形成参与“诉源治理”的合力。加大诉前调解和多元化解力度，试点在部分法院建立行政争议诉前调解中心，对于土地征收补偿、房屋拆迁、社会保险、村民资格确认、自然资源确权等涉及民生权益、社会福祉类行政案件，在立案前由相关行政机关、人民调解机构、其他社会团体或引入学者、律师等共同参与先行调解，力促行政争议早化解、快解决。认真贯彻《中华人民共和国人民陪审员法》，发挥人民陪审员在推进司法民主、促进司法公正、提高司法公信等方面的重要作用，尤其是在涉及群体利益、公共利益或者社会公众高度关注的行政案件中，由法官和人民陪审员共同组成合议庭，在行政裁判中充分吸纳民意、体现民意，提升裁判的社会认同感和接受度。善于运用司法建议，主动服务和护航当地的中心工作、重点工作、重大项目，提出法律意见，提供司法保障。加强与行政复议机关的联动机制建设，推动和支持行政复议机关发挥其作为上级行政机关的领导优势，推动行政复议实质化，发挥行政机关内部自我纠错功能。通过与行政机关召开案例研讨会、案例点评会等形式，不断统一行政裁决、行政复议、行政审判标准，发挥行政裁决、行政复议程序的过滤功能，形成实质性解决行政争议的合力。</p>
-<p>——坚持改革创新，继续优化行政审判体制机制，不断破解影响行政审判工作科学发展的难题。合理调整行政案件级别管辖，优化全省三级法院职能定位，发挥不同审级法院的不同功能，将一些不存在地方干预的信息公开、自然资源确权等行政案件下沉到集中管辖试点基层法院一审管辖，夯实基层工作，力促矛盾纠纷就地化解，强化中级法院二审纠错、定纷止争以及高级法院对下指导、统一尺度的功能作用。继续巩固行政案件集中管辖改革成果，逐步优化统一集中管辖改革模式，推动各地市全面施行 “全面集中”或者“全面集中+交叉集中”的模式，完善配套工作机制，推动集中管辖改革向更高层次发展。<strong>尝试将繁简分流简案快审机制改革与推进庭审方式和裁判文书改革有机统一起来，在收案量较大的珠三角地区中级法院试点简单行政二审案件快审工作，针对简单案件的不同类型分别引入表格式、要素式、令状式裁判文书，推行标准化、模块化说理，推动行政审判质量效率大幅提高。</strong></p>
-<p>——坚持理论研究，加强以案释法，认真落实“谁执法谁普法”的普法责任，不断满足人民群众日益增长的多元司法需求。贯彻广东省委部署开展“大学习、深调研、真落实”活动要求，把大调研、深调研作为发现问题、查找短板、释放潜力、谋划发展的重要工作方法。按照实现国家治理体系和治理能力现代化的要求，依托广东行政审判案例研究基地，加强对现代行政管理理念和新型行政管理方式的理论研究，对审判实务中出现的涉及行政协议、农村集体土地征收、规范性文件附带审查、行政争议多元化解、行政速裁制度等系列热点、难点问题开展专题研讨，提出切实可行的解决方案。与广东省司法厅、广东省普法办共建领导干部旁听庭审学法用法机制，加强与党校共建依法行政教育基地的相关工作力度，推动典型案例、公开庭审、法官沙龙等进入领导干部培训课程，成为全省国家工作人员学法用法的必修内容，不断提升领导干部和执法人员的法治意识和依法行政能力。按照“谁执法谁普法”的要求，建立法官以案释法说法制度，充分运用公开庭审、巡回审判、庭审直播等形式开展普法宣传，开展“庭审进校园”、“法官实务讲座”等系列活动，推动全民守法。加强典型行政案例工作，定期发布典型类案，汇编出版全省性典型案例，推动行政案例电子数据库建设，不断推动行政执法尺度和裁判尺度相统一。</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-        <tag>广东</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基层法院书记员操作手册</title>
-    <url>//p/7bd8b6f6.html</url>
-    <content><![CDATA[<p><strong>基层法院书记员操作手册</strong></p>
-<p>法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。</p>
-<a id="more"></a>
-<p>【前言】法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。</p>
-<p>书记员是人民法院干部队伍的重要组成部分，主要履行以下职责：（一）办理庭前准备过程中的事务性工作；（二）检查开庭时诉讼参与人的出庭情况，宣布法庭纪律；（三）担任案件审理过程中的记录工作；（四）整理、装订、归档案卷材料；（五）完成法官交办的其他事务性工作。[1]</p>
-<p>下面就基层法院书记员工作操作流程分解如下：</p>
-<p><strong>一、庭前准备</strong></p>
-<p>（一） 文书送达</p>
-<p>1、书记员收到案件后，准备庭前应送达的材料。</p>
-<p>原告方需送达：①受理案件通知书；（应由立案庭送达，收到案件时应检查）②举证通知书；（因涉及当事人举证权利，需存档）③开庭传票；④诉讼风险提示书；⑤廉政监督表；⑥当事人权利义务须知；⑦裁判文书上网告知书；⑧调解忠告书。</p>
-<p>被告方需送达：①民事诉状副本；②应诉通知书；③举证通知书；④开庭传票；⑤诉讼风险提示书；⑥廉政监督表；⑦当事人权利义务须知；⑧裁判文书上网告知书。⑨解忠告书。（除送达上述文书外，还需让被告填写送达地址确认书）</p>
-<p>如果是民一庭的离婚诉讼，则需另行再送一份损害赔偿请求权告知书。</p>
-<p>【说明】：根据民事诉讼法113条的规定，人民法院应当在立案之日起五日内将起诉状副本发送被告，被告在收到之日起十五日内提出答辩状。但是在五日内未必能够送达，变通的作法是将文书的日期落在立案之日起五日内。普通程序审理的案件，除当事人自由协商一致的外，举证期限不得少于30日（证据规定第33条，虽然民事诉讼法司法解释改为了15天， 但该举证期限的起诉时间是在答辩期届满之后，所以15天的答辩期+15天的举证期，还是30天！）。但本院多数是简易程序，根据《民事诉讼法司法解释》第266条的规定，简易程序的举证期不得超过15日。（简易程序规定在民事诉讼法第十三章，而民事诉讼法113条规定在民事诉讼法第十二章，故简易程序中不应局限民事诉讼法第113条中关于答辩期15日的规定）。简易程序的举证通知书通常写开庭前举证即可。</p>
-<p>上述需送达给当事人的文书，若当事人聘请了律师、法律工作者为代理人，或者当事人是银行等长期参加诉讼的当事人，则原告可以只送达举证通知书和开庭传票，被告可以只送达应诉通知书、起诉状副本、举证通知书及开庭传票。（民事诉讼法司法解释第268条，简易程序规定第19条）</p>
-<p>2、准备好上述材料后，书记员应着手准备送达（其实也可以先通知当事人，再准备材料，可根据实际情况定）</p>
-<p>首先应向被告进行送达，以便确定开庭日期。先按原告提供的被告联系电话通知被告（与被告联系的情况，应该做电话记录），若无联系方式，或者原告提供的联系方式不能联系到被告的，应要求原告提供（按诉状或者送达地址确认书上原告的联系电话联系原告）。原告有义务提供被告的联系方式。若原告无法提供被告的联系电话，则应询问原告提供的被告住址是否准确，若原告也不能确定地址是否准确的，可以去公安部门查询被告的户籍所在地，以户籍所在地为送达地址，用法院专递邮寄送达（《最高人民法院关于以法院专递方式邮寄送达民事诉讼文书的若干规定》第5条、《简易程序规定》第9条）若原告坚持其提供的被告住址是准确的，则可用法院专递向被告邮寄送达（若该邮件被退回，应向被告户籍所在地邮寄送达）。在邮寄之前，可以与被告住所地基层组织工作人员（如村支书、村主任、综治专干）联系，了解被告的情况，电话联系的情况应作电话记录。</p>
-<p>说明：书记员在知道无法用电话通知被告应诉之后，应当及时与承办人沟通，由承办人决定是直接到被告住所地去送达还是继续等待原告寻找线索。但笔者建议书记员同时应通过法院专递向被告户籍所在地邮寄送达，因为一旦其他方式无法送达，被退回的邮件也是可以作为公告送达的依据的（民事诉讼法第84条）。</p>
-<p>注意：若同时有几个被告的，有些送达了，有些没有送达，在预定的时间就无法开庭。此时对于那些已经送达了的当事人（尤其是已经到场签了地址确认书的当事人），应及时通知他们无法按时开庭，需要等待下次通知的事情。避免当事人“跑空路”。但是如果都是邮寄的，都没有签地址确认书，那么可以技术操作，先不通知，等开庭时对方来了，再说自己也不确定对方来不来，此时可以要求到了的当事人填写地址确认书，但是要注意语气态度和措词。通知原告的时候，可以将利害关系说清楚，也可以说暂不确定被告是否会来，故原告须到场。</p>
-<p>建议：每一个案件均应作送达记录， 对于何时何地通过何种方式与当事人（包括原告、被告）联系，联系的内容进行记录，以便对事后能够对整个送达过程一目了然。（也便于在送达不到需公告时，向原告解释说明）。</p>
-<p>（二）程序转换</p>
-<p>除特别程序外，一般的民商事案件，分为简易程序和普通程序。其中简易程序又包括了小额诉讼程序，目前，是否适用小额诉讼程序虽然由立案一庭立案时决定，但审判业务庭要根据实际情况决定是否适用小额诉讼程序（如果立案庭立了小额诉讼程序，则向当事人送达时需要多送达一份小额诉讼须知）。这里主要讲简易程序转为普通程序如何处理。</p>
-<p>多数是被告无法送达，需要公告送达的，应该转普。决定转普后</p>
-<p>·   制作转普裁定书，并在审判管理系统中及时审批。</p>
-<p>·   在系统里做程序转换审批。</p>
-<p>·   通知原告交纳公告费，补交案件受理费。</p>
-<p>·   公告，发传真及电子档。</p>
-<p>·   公告收到后及时排期并请人民陪审员</p>
-<p>需要注意的是，转普裁定及合议庭成员告知书一定要送给原告及其他能够送达的当事人。如果当事人不愿意缴纳公告费及补交案件受理费的，应及时发通知给原告，在原告收到通知后不及时交纳的，按自动撤诉处理。（民事诉讼法司法解释199条、《诉讼费用交纳办法》第13条、第20条。</p>
-<p><strong>二、庭审记录略</strong></p>
-<p>说明：庭审记录完毕后，笔录民事诉讼法第133条规定可以告知当事人和其他诉讼参与人在五日内阅读，但是建议当庭阅读并签字，以免发生矛盾。笔误处或修改补正处一定要捺印。</p>
-<p>因目前多是电脑打印，如果书记员对自己的记录速度不自信的，应该提前（一般是提前一天）打好笔录头子（包括当事人的身份信息、诉讼请求等），甚至可以将双方举示的证据按证据名称、证据来源、证明目的事先打印，开庭时复制粘贴即可。（小技巧：在原告举证之后，被告质证阶段时，可以将原告举证的直接复制为质证内容，再进行修改，这样做有几个好处，一是省时，二是可以促使被告按顺序质证，避免遗漏，三是可以让被告看到原告举证的证明目的，有针对性的质证）。应该事先准备的还有证人权利义务告知的内容等等。其他要求具体可以参照渝五中法发〔2015〕94号：重庆市第五中级人民法院印发《关于规范法庭笔录的办法（试行）》的通知。</p>
-<p><strong>三、案卷整理</strong></p>
-<p>根据最高人民法院、国家档案局《人民法院诉讼文书立卷归档办法》、重庆市高级人民法院《全市法院审判流程管理办法（试行）》以及审判管理系统的目录设置。民事一审诉讼文书正卷材料的排列顺序为：</p>
-<p>（１）卷宗封面；</p>
-<p>（２）卷内目录；</p>
-<p>（３）诉状或口诉笔录；</p>
-<p>（4）立案、审理流程表；</p>
-<p>（5）诉讼费用票据及诉讼费减免缓审批手续；（含预收、退费、结算票据，保全费票据、公告费票据，缓缴诉讼费申请及相关审批单）</p>
-<p>（6）地址确认书；</p>
-<p>（7）开庭前的通知；（含受理案件通知书、应诉通知书、举证通知书、权利义务告知书、风险提示书、廉政监督卡等；应诉通知书、权利义务告知书、风险提示书等文书系格式化文书，个人认为只要在送达回证上体现了送达即可，不需入卷；按审管办现行要求，需要入卷）</p>
-<p>（8）开庭通知书、传票；（当事人用传票，其余诉讼参与人用通知书）</p>
-<p>（9）答辩状及附件；（此处附件指除证据外的其他附件）</p>
-<p>（10）原被告身份证明及委托手续；（自然人需身份证复印件，未成年人需户口薄；法人或其他组织需营业执照、组织机构代码（三证合一的除外）、法定代表人身份证明）如果委托代理人的，律师、法律工作者需要委托书、所函、执业证复印件；</p>
-<p>（11）原、被告举证材料；（一般按照举证顺序的先后排放）</p>
-<p>（12）鉴定材料；（鉴定裁定也属于证据材料的一种，所以放在举证材料之后）</p>
-<p>（13）询问、调查材料；</p>
-<p>（14）诉讼保全材料；(含保全中调查笔录)</p>
-<p>（15）其他证据材料；（一切不知道放哪个目录下面的都可以放在这下面）</p>
-<p>（16）管辖异议材料（含管辖异议申请书、裁定书、上诉移送函、退卷函、二审裁定等）</p>
-<p>（17）其他审限相关材料。（如和解申请，中止、扣除、延长审限的审批表）</p>
-<p>（18）调解材料；（含调解笔录）</p>
-<p>（19）公告（登报）</p>
-<p>（20）公告；（主要指开庭公告与宣判公告；按审管办要求，除当庭裁判外，宣判均需宣判公告，个人认为简易程序开庭不需要开庭公告，而普通程序开庭均需开庭公告；但按审管办的现行要求，简易程序也需要发布公告）</p>
-<p>（21）开庭审理笔录；</p>
-<p>（22）代理词；</p>
-<p>（23）撤诉申请；</p>
-<p>（24）判决、调解、裁定书发文稿（单卷用）；</p>
-<p>（25）判决、调解、裁定书正本；</p>
-<p>（26）宣判公告；</p>
-<p>（27）宣判笔录；</p>
-<p>（28）送达回证；</p>
-<p>（29）结案表；</p>
-<p>（30）上诉移送函；</p>
-<p>（31）退卷函；</p>
-<p>（32）二审裁判文书；</p>
-<p>（33）移送执行手续；（主要指没有收到诉讼费的）</p>
-<p>（34）备考表；</p>
-<p>（35）证物袋；</p>
-<p>（36）卷底。</p>
-<p>副卷排列顺序略</p>
-<p>具体问题解答</p>
-<p>问：当事人上诉如何处理？</p>
-<p>答：若当事人在上诉期内提出上诉，首先应填写上诉案件缴费通知书要求上诉人缴费，缴费金额为一审立案时收取的案件受理费的全额（一般立案庭是收全额，但是也有减半收取的，减半收取的，上诉费需乘以2）；</p>
-<p>其次，向被上诉人（未提起上诉的其他当事人）送达上诉状副本；</p>
-<p>再次准备五份判决书原件及上诉案件移送函。</p>
-<p>当上诉费缴费回单（两份）、送达回证、上诉移送函、判决书均已备好，且卷宗已经装订完成后，在内勤处登记后，将案件移送至立案庭（需先进行网上移送）。</p>
-<p>问：收到公告的报纸（或张贴公告）后需要做些什么？</p>
-<p>答：1、在审判管理系统中扣除审限（法定事由审批）；2、计算出举证期届满时间及开庭时间，并及时排期，向其余当事人送达；（如果认为有必要，可向被告住所地邮寄传票，做到仁至义尽！）3、申请人民陪审员，在人民陪审员名单确定后及时向当事人送达。</p>
-<p>问：为什么说书记员最重要的工作是记录？</p>
-<p>答：因为当事人的陈述是民事诉讼的证据之一，而记录在卷的笔录是当事人陈述的重要表现形式，而且笔录要求及时、准确。如被告当庭承认向原告借款，但是书记员没有及时记录，被告就有可能矢口否认，若原告未能提供其他证据，而笔录又没有被告自认的内容，则原告有可能败诉，但是开庭时原告也在场，对于书记员没有记录该重要陈述必然不服，后果非常严重。</p>
-<p>问：为什么必须书记员记录！</p>
-<p>答：因为法律规定禁止自审自记！在案件审理过程中，审判员负责审理，书记员负责记录。不得自审自记，这是公权力行使的基本要求。除了做好记录外。书记员担负着为审判员查漏补缺的职责，对于审判员应为而未为的（如最后陈述没有进行），应该提醒审判员。而这，就要求书记员要熟悉审判程序，否则，就无从提醒。</p>
-<p>庭审笔录中记录的当事人陈述的内容，是裁判的重要依据，每一个成功的审判员背后都有一个或者几个优秀的书记员。</p>
-<p>相关规定</p>
-<p>·   《民事诉讼法》</p>
-<p>第一百四十七条第一款 书记员应当将法庭审理的全部活动记入笔录，由审判人员和书记员签名。</p>
-<p>·   《民事诉讼法司法解释》</p>
-<p>第二百六十一条第三款 适用简易程序审理案件，由审判员独任审判，书记员担任记录。</p>
-<p>·   《民诉意见》（已废止）</p>
-<p>172、适用简易程序审理案件，人民法院应当将起诉内容，用口头或书面方式告知被告，用口头或者其他简便方式传唤当事人、证人，由审判员独任审判，书记员担任记录，不得自审自记。判决结案的，应当依照民事诉讼法第一百三十四条的规定公开宣判。</p>
-<p>问：审书如何配合？</p>
-<p>答：审书配合与否，在作笔录时最容易体现。如庭审时。在书记员的记录速度尚不能达到速录员的记录的现实情况下，必然就有记录的速度跟不上当事人说话的速度的情况。此时，哪些内容是可以略记的，哪些内容是可以在庭审后校队补正的，哪些内容是必须立刻记录的等问题，书记员要有基本的判断。</p>
-<p>哪些东西是可以略记的呢？如告知权利义务的内容（当然书记员也可以事先打印后复制粘贴），因为都是有明文规定的，可以略记（如直接记录为告知证人权利义务略记）。在比如当事人宣读的法律条文、合同中的内容，记录好条款序号即可。</p>
-<p>哪些内容是可以事后补正的？如审判员的问话，可以根据当事人的回答补。如原告举证、被告质证等程序性问题，也可以补正。毕竟，庭审主要是看当事人的陈述。</p>
-<p>哪些内容是必须当场记录的呢？如关于自认部分，或者直接影响当事人权利义务的内容（如承认借款，承认录音真实性），就必须立即记录。</p>
-<p>在书记员不能及时全面记录，又无法及时抓住重点时，审判员应该提醒书记员。当然，审判员一般不会直接提醒记录，而是通过审书之间的“暗号”完成。如审判员对当事人的话进行归纳当事人无异议的，书记员就可以直接记作当事人的陈述，毋需机械地记录审判员问，你说的是不是……，当事人回答是，没有必要！如同一个问题，审判员多次询问或者多次重复，这些绝大多数就是重点，必须记录的！</p>
-<p>问：如何作询问笔录？</p>
-<p>答：所谓询问笔录，指法院因某些特定事项，需要向当事人或者了解情况的人通过询问的方式搞清楚、弄明白时做的笔录。</p>
-<p>若询问笔录是在法院之外的其他地方做的，那么首先就要出示证件，出示证件的过程需要在笔录中反映。</p>
-<p>询问笔录是通过一问一答的方式进行的。但是现实中，询问时不是机械的说一个说提问，一个说回答，然后一问一答（如聪明的一休）。尤其是在外对当事人以外的人作询问时，可能谈了很多话（如问候了身体，讨论了天气），书记员此时就要区分哪些话是应该记入笔录的，哪些话只是为了拉近距离，摆的“闲龙门阵”。这就要求审判员要提前知会书记员，这次询问的目的，记录的重点。但是对于诸如询问当事人下落等的询问笔录，就没有必要次次提醒，书记员应该了解，这类笔录一般的写法如下：</p>
-<p>笔录写法：</p>
-<p>？：（出示证件）我们是某某法院的工作人员，因……一案，需向你了解情况。</p>
-<p>：我一定如实回答。</p>
-<p>？：（若询问当事人的亲友）你与某某是什么关系？（若询问基层组织或物业人员）你在……单位任何职？</p>
-<p>：</p>
-<p>？：某某现在在哪里？</p>
-<p>：</p>
-<p>？：你能否联系上他（或者问有无联系方式）</p>
-<p>？：他家中还有何人（具体的可问父母是否在家，是否婚配，是否与父母或者子女同住，目的是为了确定有无同住成年家属可以签收诉讼文书）</p>
-<p>：</p>
-<p>？：（在对方愿意代收文书的情况）请你代为签收诉讼文书并转交给他，告知开庭时间及未到庭的后果（如缺席审理或者公告送达）</p>
-<p>：</p>
-<p>？：还有补充？（如果有补充，则补充后再重新问一次）</p>
-<p>：无补充。</p>
-<p>？：笔录阅必无误签字确认。</p>
-<p>（询问人和记录人最好也当场签字，一是避免忘记，二是给被询问人做榜样）</p>
-<p>追问：为什么要摆“闲龙门阵”？</p>
-<p>回答： 刚刚做书记员的人可能会疑惑，为什么明明笔录只有一篇，但是却要说上很长时间呢？一方面，虽然民事诉讼法规定被询问人有配合法院的义务，但是你想得到有用的信息，以对方自愿告知最佳。那么询问的过程中聊的一些看似无用的闲篇，如对方抱着小孩，问一句孩子多大了，适当逗逗小孩什么的，都是增强彼此之间信任的一种方式，是为了对方自愿配合接受询问做铺垫。很多人对签字，接受材料是抗拒的，因为害怕签字会担责任。比如有的被告不愿意签收起诉状副本或者判决书，就是误认为签字就代表认可起诉状的内容或者认可判决书的内容。此时就要耐心细致地解释给他们听。</p>
-<p>问：为什么邮件已经被退回，但是还需要从网上打印快递详单？</p>
-<p>答：因为邮件上有时无法显示退回的准确时间，而根据法释[2004]13号《最高人民法院关于以法院专递方式邮寄送达民事诉讼文书的若干规定》第十一条第一款关于“因受送达人自己提供或者确认的送达地址不准确、拒不提供送达地址、送达地址变更未及时告知人民法院、受送达人本人或者受送达人指定的代收人拒绝签收，导致诉讼文书未能被受送达人实际接收的，文书退回之日视为送达之日”的规定。文书退回之日视为送达之日，而送达之日又关系到当事人的上诉权等非常重要的程序权利，必须准确到“天”。</p>
-<p>【补充提醒】</p>
-<p>第一，除不准上诉的判决（如小额诉讼程序审结的终审判决、公示催告除权判决）、裁定（如特别程序的裁定、撤诉裁定）外，只有超过上诉期没有上诉的判决、裁定，才是生效的判决、裁定。（民事诉讼法第155条）</p>
-<p>第二，判决书的上诉期为15天，裁定书的上诉期为10天，均从送达之日开始计算（民事诉讼法第156条）；开始计算的当天不算在内（民事诉讼法第82条）。</p>
-<p>假设1月5日送达的文书，如是判决书，则上诉期1月20日届满，只有在1月20日前未上诉的判决才能生效；如是裁定书，则上诉期于1月15日届满。</p>
-<p>《民事诉讼法》</p>
-<p>第八十二条 期间包括法定期间和人民法院指定的期间。</p>
-<p>·   期间以时、日、月、年计算。期间开始的时和日，不计算在期间内。</p>
-<p>·   期间届满的最后一日是节假日的，以节假日后的第一日为期间届满的日期。</p>
-<p>·   期间不包括在途时间，诉讼文书在期满前交邮的，不算过期。</p>
-<p>第一百五十五条 最高人民法院的判决、裁定，以及依法不准上诉或者超过上诉期没有上诉的判决、裁定，是发生法律效力的判决、裁定。</p>
-<p>第一百六十四条 当事人不服地方人民法院第一审判决的，有权在判决书送达之日起十五日内向上一级人民法院提起上诉。</p>
-<p>当事人不服地方人民法院第一审裁定的，有权在裁定书送达之日起十日内向上一级人民法院提起上诉。</p>
-<p>问：为什么审判组织成员（含审判员、书记员、人民陪审员）及当事人出庭人员（如变更了委托代理人）变化后，必须要强调回避权？</p>
-<p>答：回避制度是民事诉讼以及所有诉讼中的基本制度之一（民事诉讼法第10条）。如果没有强调回避权，属于程序上的严重错误，可能引起再审。</p>
-<p>（一）交待回避权是义务，必须履行。（民事诉讼法第137条第1款）</p>
-<p>（二）应当回避没有回避足以引起再审。（民事诉讼法第200条第7项）</p>
-<p>追问：没有回避事由是否也会引起再审？回答：当事人可能有回避事由，但是没有问，当事人就可能不会主动提出，程序问题丝毫不能马虎。</p>
-<p>《民事诉讼法》</p>
-<p>第十条人民法院审理民事案件，依照法律规定实行合议、回避、公开审判和两审终审制度。</p>
-<p>第一百三十七条 开庭审理前，书记员应当查明当事人和其他诉讼参与人是否到庭，宣布法庭纪律。</p>
-<p>开庭审理时，由审判长核对当事人，宣布案由，宣布审判人员、书记员名单，告知当事人有关的诉讼权利义务，询问当事人是否提出回避申请。</p>
-<p>第二百条 当事人的申请符合下列情形之一的，人民法院应当再审：</p>
-<p>（一）有新的证据，足以推翻原判决、裁定的；</p>
-<p>（二）原判决、裁定认定的基本事实缺乏证据证明的；</p>
-<p>（三）原判决、裁定认定事实的主要证据是伪造的；</p>
-<p>（四）原判决、裁定认定事实的主要证据未经质证的；</p>
-<p>（五）对审理案件需要的主要证据，当事人因客观原因不能自行收集，书面申请人民法院调查收集，人民法院未调查收集的；</p>
-<p>（六）原判决、裁定适用法律确有错误的；</p>
-<p>（七）审判组织的组成不合法或者依法应当回避的审判人员没有回避的；</p>
-<p>（八）无诉讼行为能力人未经法定代理人代为诉讼或者应当参加诉讼的当事人，因不能归责于本人或者其诉讼代理人的事由，未参加诉讼的；</p>
-<p>（九）违反法律规定，剥夺当事人辩论权利的；</p>
-<p>（十）未经传票传唤，缺席判决的；</p>
-<p>（十一）原判决、裁定遗漏或者超出诉讼请求的；</p>
-<p>（十二）据以作出原判决、裁定的法律文书被撤销或者变更的；</p>
-<p>（十三）审判人员审理该案件时有贪污受贿，徇私舞弊，枉法裁判行为的。</p>
-<p>问：管辖异议扣除审限的起止时间。</p>
-<p>答：管辖异议从异议人提出申请当天起扣除审限，如果作出裁定后未上诉的，以生效当日作为扣除审限的截止时间。如果作出裁定后上诉的，终审裁定已由二审送达给当事人的，以一审法院收到退回的案卷时间（具体为审判部门签收案卷为准）为截止时间；若二审法院无法送达终审裁定而委托一审法院送达的，以一审法院送达终审裁定的时间为截止时间。但是，案卷的移送和裁定的送达要及时，不能拖延。</p>
-<p>问：民事诉讼法第91条规定，自发出公告之日起，经过六十日，即视为送达。这个经过60日，是指只能是60天，还是说超过60天都行？</p>
-<p>答：只能是60天！不能多也不能少，拟制送达的规定不允许改变（如写2个月）。为什么？如果说可以超过60天，那么公告十年行不行？显然不行！</p>
-<p>[1] 《中共中央组织部、人事部、最高人民法院人民法院书记员管理办法（试行）》第2条</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-        <tag>工作流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>广州互联网法院 构建“互联网+”金融解纷新机制</title>
-    <url>//p/371627f3.html</url>
-    <content><![CDATA[<h2 id="广州互联网法院-构建“互联网-”金融解纷新机制"><a href="#广州互联网法院-构建“互联网-”金融解纷新机制" class="headerlink" title="广州互联网法院 构建“互联网+”金融解纷新机制"></a>广州互联网法院 构建“互联网+”金融解纷新机制</h2><p>发布时间：2019-12-23 16:37:41</p>
-<p>​    为及时回应数字经济发展进程中的司法新需求，探索创新“互联网+”纠纷解决机制，广州互联网法院联合政法系统、地方金融监管系统、金融业机构等80余家单位，共建数字金融协同治理中心，上线“类案批量智审系统”，协同打造“一系统+一指引+一中心”创新模式，共建数字金融纠纷解决机制改革新样板，强化互联网金融综合治理，以良好法治环境助力普惠金融发展，为粤港澳大湾区数字金融建设赋能。</p>
-<a id="more"></a>
-<p>一、以技术强化为驱动，打造全国首个互联网金融纠纷全流程在线批量审理系统</p>
-<p>上线在线纠纷“类案批量智审系统”，全程覆盖存证调证、催告、和解、调解、申请立案、立案审查、送达、证据交换、庭审、宣判、执行等诉讼环节，实现案件全程在线快速、批量、智能办理。一是便捷自动存证。依托“网通法链”智慧信用生态系统，广州互联网法院诉讼平台标准化对接多个存证平台数据库，已存证电子数据，可直接批量导入诉讼平台；未存证电子数据，可依照要素列表整理，批量提交。二是失联修复送达。系统送达全程区块链留痕，可实时追踪送达时间、地点、签收人等关键节点信息。对无法电子送达的当事人，系统采用失联修复技术，可自动获取其本人近三个月内活跃的手机号码、电子邮箱等作为优先送达地址，提升电子送达率。三是批量立案裁判。系统借助案件信息预先配置、证据要素智能审定技术实现批量立案、匹配和审核，可一键批量生成令状式、要素式、表格式等各式文书，显著减少法官工作量，提升金融纠纷案件审判质效。四是推广示范性审判。对于代表性强、具有示范意义的典型案件，法官可以通过系统发送邀请码等形式，实现同类型案件当事人在线旁听，推动平行案件达成和解、调解协议或自动履行，引导非判决方式批量解决纠纷。</p>
-<p>二、以标准制定为抓手，出台全国首个互联网金融在线程序指引</p>
-<p>出台《广州互联网法院互联网金融借款、小额借款合同纠纷在线批量化解程序指引（试行）》，以多层次数字金融司法需求为切入点，在保障当事人权益前提下优化审理程序，破解互联网金融案件治理规则不完善难题。一是严格纠纷准入标准。程序仅限标的额小、以快速批量处理、在线执行即可化解的纠纷，避免纠纷因化解难、执行难而批量滞留于司法程序，确保纠纷智能、高效、有序化解。就申请批量化解程序的案件，严抓“八道准入门槛”，从当事人身份认证、证据标准、送达方式、合规程度、执行模式、贷款标的、风险控制、事先承诺八方面明确批量标准。二是前置部分审查内容。在立案审查阶段，提前全面审查影响贷款产品利息、费用、催收方式、违约责任、格式条款、个人信息收集等内容。明确电子送达方式、范围和效力，引导借贷双方在合同中约定适用电子送达适用于对所有法律文书的送达，真正实现“全程留痕、回溯可查、全时在线、在线解纷”。三是简化在线审理程序。明确批量纠纷在线庭审简化条件，确保当事人权利正常行使。庭前集中完成纪律宣告等程序，庭上直接针对诉讼请求、争议焦点等展开要素式审理。明确不开庭审理情形，对于当事人已关联案件，采用回溯查询方式引导当事人在本院指定时间内举证质证、充分发表意见。当事人同意且案件事实清楚的，可不再组织开庭。四是赋能纠纷多元化解。针对互联网金融借款、小额借款合同纠纷高度标准化、类型化的特点，发挥广州互联网法院在线纠纷多元化解平台功能，设计了催告、和解、调解、支付令、审判等多手段组合运用的个性化的化解程序，鼓励快速兑现债权利益，鼓励以非判决方式兑现债权利益。</p>
-<p>三、以多元协同为模式，共建全国首个数字金融协同治理中心</p>
-<p>共建数字金融协同治理中心，践行“国家主导、司法推动、社会参与、多元并举、法治保障”解纷理念，增强数字金融协同治理的立体性、便民性与时效性，实现“司法+政府+社会”三元体系同频共振。一是坚持本位意识，提供优质司法服务。广州互联网法院站在维护国家安全的政治高度，围绕防范化解重大金融风险和粤港澳大湾区发展，不断提升在线诉讼全流程批量工作的整体水平，为数字经济可持续发展提供优质、高效、便捷的司法服务和保障。积极应对新形势下互联网金融风险防控任务的新问题、新要求，创新解纷手段，丰富技术运用、拓展应用场景、创新应用效果，使电子催告、引导和解、在线调解常态化，为债权实现提供更多保障手段。用“低成本”“快审理”优质司法服务画出一流营商环境“磁场圈”。二是坚持协同意识，聚合多方优势资源。以多元化数字金融纠纷化解为着眼点，提升优势资源“虹吸效应”。主动“走出去”，进一步融入党委和政府领导的诉源治理机制建设，以裁判规则向纠纷源头防控延伸，指引互联网金融行业健康发展。积极“引进来”，以开放、共建的崭新姿态加强吸纳各方力量加入纠纷多元化解平台，凝聚合力，推动构建综合治网新格局。携手政党机关、行业协会、金融机构再创新活力，共同拓宽社会治理“朋友圈”。三是坚持风险意识，全面优化风险体系。进一步发挥司法审判与行政监管的双重化合作用，有效形成数字金融预防、监督、打击的治理闭环，使多方协同治理真正成为数字金融发展的安全阀、调节器和稳定剂。以全方位数字金融业态风险防控为落脚点，充分发挥互联网司法大数据多源分析、多维评估、多重预警作用，建机制、定规则、搭平台、推应用，为打好防范化解重大金融风险攻坚战提供坚强保障，推动形成“数字湾区”金融发展“生态圈”。 </p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-        <tag>广东</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法</title>
-    <url>//p/63e6ca99.html</url>
-    <content><![CDATA[<h2 id="最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法"><a href="#最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法" class="headerlink" title="最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法"></a>最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法</h2><ul>
-<li>来源：人民法院新闻传媒总社  发布时间：2020-01-15 21:49:16</li>
+    <title>gitlab添加问题模板</title>
+    <url>//p/7930ee41.html</url>
+    <content><![CDATA[<h2 id="gitlab-添加问题-任务模板"><a href="#gitlab-添加问题-任务模板" class="headerlink" title="gitlab 添加问题/任务模板"></a>gitlab 添加问题/任务模板</h2><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ul>
+<li><p>在项目中找到文件夹 <code>.gitlab</code>（和 <code>.git</code> 是在同一目录），创建文件夹 <code>issue_templates</code></p>
+</li>
+<li><p>在文件夹 <code>issue_templates</code>下添加一个<code>.md</code>的文件，如<code>bug.md</code></p>
+</li>
+<li><p>将添加的文件推送到服务器分支上，合并</p>
+</li>
+<li><p>最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 <code>bug</code><br>这样就可以了</p>
+</li>
 </ul>
-<p>为深入贯彻中央决策部署，认真落实全国人大常委会授权决定，深化民事诉讼制度改革，推进案件繁简分流、轻重分离、快慢分道；为充分保障人民群众合法诉讼权益，有效降低当事人诉讼成本，满足人民群众多元、高效、便捷的解纷需求，进一步优化司法资源配置，提升审判工作质效和公信力，今天，最高人民法院印发《民事诉讼程序繁简分流改革试点方案》和《民事诉讼程序繁简分流改革试点实施办法》，正式启动为期2年的试点工作。</p>
 <a id="more"></a>
-<p>　　按照重大改革先行先试要求，最高人民法院经扎实深入调研，广泛征求意见，根据全国人大常委会授权决定，研究起草了《试点方案》和《实施办法》。《试点方案》明确了改革目标和基本原则、试点主要内容、试点范围和期限、方案实施和组织保障等内容，《实施办法》共30条，对试点方案作了进一步细化，是开展试点工作的具体依据。两个文件主要内容包括五个方面：</p>
-<p>　　一是优化司法确认程序。文件规定，除人民调解委员会外，将特邀调解组织、特邀调解员主持达成的调解协议纳入司法确认范围，明确司法确认案件管辖规则，允许中级人民法院及专门人民法院受理符合级别管辖及专门管辖标准的司法确认案件，进一步规范和促进非诉调解工作，提升纠纷化解效率，增强调解公信力。</p>
-<p>　　二是完善小额诉讼程序。文件规定，小额诉讼程序适用于标的额为人民币5万元以下的案件，对于标的额在人民币5万至10万元的案件，允许当事人合意选择适用小额诉讼程序。在充分保障当事人诉讼权利基础上，进一步简化小额诉讼程序审理方式和裁判文书，合理确定小额诉讼案件审限。规范小额诉讼程序与简易程序、普通程序的转换适用机制。</p>
-<p>　　三是完善简易程序规则。文件规定，合理扩大简易程序适用范围，将需要公告送达的简单民事案件纳入适用范围。进一步明确简易程序庭审和文书简化规则，优化庭审程序和审理方式，推行要素式裁判文书，对事实清楚、争议不大的案件可以适当简化说理。</p>
-<p>　　四是扩大独任制适用。文件规定，在一审程序中，基层法院可以采取独任制审理部分民事案件。在二审程序中，中级法院及专门法院可采取独任制审理一审以简易程序审结的上诉案件以及民事裁定上诉案件，实现二审程序繁简分流。同时，建立完善独任制与合议制转换适用机制，充分保障当事人诉讼权利，保障案件审判质量。</p>
-<p>　　五是健全电子诉讼规则。文件着力明确相关电子诉讼规则，进一步拓展在线诉讼探索空间，为在线诉讼活动提供法律依据，包括：明确电子化材料提交效力，当事人以电子化方式提交诉讼材料和证据材料的，经人民法院审核通过后可以不再提交纸质原件；确立完善在线庭审规则，将适用普通程序审理的案件纳入在线庭审范围；完善电子送达机制，明确电子送达适用条件、适用范围和生效标准，经当事人同意，可以采用电子方式送达判决书、裁定书、调解书等。</p>
-<p>　　文件还规定，民事诉讼程序繁简分流改革试点将在北京、上海、江苏、浙江、福建、广东等15个省、自治区、直辖市内纳入试点的中级法院、专门法院及其辖区基层法院开展。试点法院将根据全国人大常委会授权决定，调整适用相关法律规定。最高人民法院将适时就试点工作情况向全国人大常委会作专题报告。（孙航）</p>
-<p>　　<strong>附：</strong><br>　　<strong><a href="http://www.court.gov.cn/fabu-xiangqing-217551.html" target="_blank" rel="noopener">民事诉讼程序繁简分流改革试点方案</a></strong><br>　　<strong><a href="http://www.court.gov.cn/fabu-xiangqing-217561.html" target="_blank" rel="noopener">民事诉讼程序繁简分流改革试点实施办法</a></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173602213.png" alt="image-20200410173602213" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/image-20200410173843646.png" alt="image-20200410173843646" style="zoom:80%;" /></p>
 ]]></content>
       <categories>
-        <category>法律知识</category>
+        <category>git</category>
       </categories>
       <tags>
-        <tag>法院</tag>
-        <tag>繁简分流</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最高院关于修改最高院适用《民诉法》的解释第一百四十条建议的答复</title>
-    <url>//p/cd1b580b.html</url>
-    <content><![CDATA[<p>对十二届全国人大五次会议第1755号建议的答复</p>
-<p>您提出的关于修改最高人民法院关于适用《中华人民共和国民事诉讼法》的解释第一百四十条的建议收悉，现答复如下：</p>
-<a id="more"></a>
-<p>根据《中华人民共和国民事诉讼法》（以下简称民事诉讼法）第一百五十七条的规定，基层人民法院和它派出的法庭审理事实清楚、权利义务关系明确、争议不大的简易的民事案件，可以适用简易程序。根据民事诉讼法第九十二条的规定，公告送达适用于受送达人下落不明或者用其他方式无法送达的情形。由于公告送达是一种拟制送达方式，案件事实、权利义务关系、当事人之间的争议不易确定，不符合民事诉讼法第一百五十七条规定的简易程序适用条件，故民事诉讼法司法解释第一百四十条规定，适用简易程序的案件，不适用公告送达。</p>
-<p>审判实践中，确实存在被告故意避而不见、不参加庭审、不接收法律文书等规避送达的情形。对此，可以通过加强送达工作、改进送达方式等措施着力解决。2017年7月，最高人民法院印发《关于进一步加强民事送达工作的若干意见》， 全面推进当事人送达地址确认制度，统一送达地址确认书格式，规范送达地址确认书，提升民事送达的质量和效率。今后，我们将对送达问题继续调查研究，在总结审判实践经验基础上推动民事送达制度的完善。</p>
-<p>感谢您对人民法院工作的关心和支持。</p>
-<p>​      2017年8月26日</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-        <tag>民诉法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）</title>
-    <url>//p/6d6f6f8d.html</url>
-    <content><![CDATA[<h2 id="济南知识产权法庭编发“著作权侵权纠纷案件审判要素表-要素式判决书样式”（范本）"><a href="#济南知识产权法庭编发“著作权侵权纠纷案件审判要素表-要素式判决书样式”（范本）" class="headerlink" title="济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）"></a>济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）</h2><p><strong>发布：**</strong>济南中院新闻中心<strong> </strong>来源：济南知识产权法庭**</p>
-<p>​    为贯彻落实最高人民法院民事诉讼程序繁简分流改革试点精神以及省法院要素式审判方式指引规定要求，进一步提升著作权侵权纠纷案件审判质效，更加合理分配司法审判资源，济南知识产权法庭依照《济南市中级人民法院关于民事诉讼程序繁简分流改革试点工作实施方案（试行）》，结合济南知识产权审判工作实际，编写了《著作权侵权纠纷案件审判要素表、要素式判决书样式》并予以印发。</p>
-<a id="more"></a>
-<p>​    《著作权侵权纠纷案件审判要素表、要素式判决书样式》为基层法院适用小额诉讼程序或者简易程序审理图片类、音乐作品类著作权侵权案件提供了规范化指引，并为审判流程和裁判文书的简化进一步细化了操作流程。</p>
-<p><strong>著作权侵权纠纷案件审判要素表</strong></p>
-<p><strong>
-</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>提示：</strong>1.为了帮助您更好地参加诉讼，保护您的合法权利，请填写本表。2.本表所列各项内容为法院查明案件事实所需，务必如实填写。3.您在本表中所填内容属于依法向法院陈述的事实，不如实填写应承担由此产生的法律后果。4.本表有些内容可能与您的案件无关，您认为与案件无关的项目可以填“无”或不填；对于本表中勾选项可以在对应项打“√”；您认为另有重要内容未予列明的，可以在本表尾部填写。</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>案件事实要素</strong></td>
-<td><strong>原告填写</strong></td>
-<td><strong>被告**</strong>/<strong>**第三人确认</strong></td>
-</tr>
-<tr>
-<td>1.权利主体</td>
-<td>原始著作权人□ 受让人□1.合同签订时间：2.转让的权利种类：3.地域范围： 被许可使用人□1.合同签订时间：2.许可使用的权利种类、是否为专有使用权：3.地域范围、期间： 其他□</td>
-<td></td>
-</tr>
-<tr>
-<td>2.权利内容</td>
-<td>作品类型： 作品名称： 作品完成时间： 发表时间： 作品载体： 著作权登记证书1.登记机关：2.登记时间： 权利种类1.复制权2.发行权3.信息网络传播权4.放映权5.获得报酬权6.其他</td>
-<td></td>
-</tr>
-<tr>
-<td>3.侵权行为及取证方式</td>
-<td>1. 2. 3.</td>
-<td></td>
-</tr>
-<tr>
-<td>4.被诉侵权作品与权利作品比对情况</td>
-<td>构成相同□构成实质性相似□</td>
-<td></td>
-</tr>
-<tr>
-<td>5.损害赔偿</td>
-<td>实际损失□1.数额：2.计算方式： 侵权获利□1.数额：2.计算方式： 参照许可使用费□1.数额：2.计算方式： 法定赔偿□1.数额：2.参考依据：</td>
-<td></td>
-</tr>
-<tr>
-<td>6.合理开支</td>
-<td>公证费□：<strong><em>__</em></strong>元；律师费□：<strong><em>__</em></strong>元；调查费□：<strong><em>__</em></strong>元；其他□：<strong><em>__</em></strong>元。</td>
-<td></td>
-</tr>
-<tr>
-<td>7.是否有合法来源</td>
-<td></td>
-<td>是□1.来源主体：<strong><em>__</em></strong>2.来源渠道：合同□ 发票□ 进货单□ 销售单□ 出库单□ 其他□ 否□</td>
-</tr>
-<tr>
-<td>8.当事人需要明确的其他事项</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>填表人（签字、盖章）</strong></td>
-<td><strong>原告：</strong></td>
-<td><strong>被告**</strong>/<strong>**第三人：</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>著作权侵权纠纷案件要素式判决书样式</strong></p>
-<p>××××人民法院</p>
-<p><strong>民 事 判 决 书</strong></p>
-<p>(××××)……民初……号</p>
-<p>原告：×××，男/女，××××年×月×日出生，×族，……(工作单位和职务或者职业)，住……。</p>
-<p>法定代理人/指定代理人/法定代表人/主要负责人：×××，……。</p>
-<p>委托诉讼代理人：×××，……。</p>
-<p>被告：×××，……。</p>
-<p>法定代理人/指定代理人/法定代表人/主要负责人：×××，……。</p>
-<p>委托诉讼代理人：×××，……。</p>
-<p>(以上写明当事人和其他诉讼参加人的姓名或者名称等基本信息)</p>
-<p>原告×××与被告×××……（写明案由）一案，本院于×××年×月×日立案后，依法适用简易程序/小额诉讼程序，公开/因涉及……（写明不公开开庭的理由）不公开开庭进行了审理。原告×××、被告×××(写明当事人和其他诉讼参加人的诉讼地位和姓名或者名称)到庭参加诉讼。本案现已审理终结。</p>
-<p>原告向本院提出诉讼请求：…。</p>
-<p>被告辩称，…。</p>
-<p>本院经审理认定事实如下：</p>
-<p>一、原告权利来源情况：原告系</p>
-<p>原始著作权人□</p>
-<p>受让人□</p>
-<p>1.合同签订时间：<strong><strong><strong>__</strong></strong></strong></p>
-<p>2.转让的权利种类：<strong><strong><strong>__</strong></strong></strong></p>
-<p>3.地域范围：<strong><strong><strong>__</strong></strong></strong></p>
-<p>被许可使用人□</p>
-<p>1.合同签订时间：<strong><strong><strong>__</strong></strong></strong></p>
-<p>2.许可使用的权利种类、是否为专有使用权：<strong><strong><strong>__</strong></strong></strong></p>
-<p>3.地域范围、期间：<strong><strong><strong>__</strong></strong></strong></p>
-<p>二、权利内容：</p>
-<p>作品类型：<strong><strong><strong>__</strong></strong></strong></p>
-<p>作品名称：<strong><strong><strong>__</strong></strong></strong></p>
-<p>作品完成时间、发表时间：<strong><strong><strong>__</strong></strong></strong></p>
-<p>作品载体：<strong><strong><strong>__</strong></strong></strong></p>
-<p>著作权登记证书</p>
-<p>1.登记机关：<strong><strong><strong>__</strong></strong></strong></p>
-<p>2.登记时间：<strong><strong><strong>__</strong></strong></strong></p>
-<p>权利种类</p>
-<p>1.复制权</p>
-<p>2.发行权</p>
-<p>3.信息网络传播权</p>
-<p>4.放映权</p>
-<p>5.获得报酬权</p>
-<p>6.其他：</p>
-<p>三、被告侵权行为：<strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong></p>
-<hr>
-<p>被诉侵权作品与权利作品比对情况：</p>
-<p>是否构成相同：是□；否□</p>
-<p>是否构成实质性相似：是□；否□</p>
-<p>四、损害赔偿：</p>
-<p>1.实际损失□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
-<p>2.侵权获利□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
-<p>3.参照许可使用费□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
-<p>4.法定赔偿□：数额<strong><em>__</em></strong>,参考依据<strong><em>__</em></strong>。</p>
-<p>五、合理开支：公证费□<strong><em>__</em></strong>；律师费□<strong><em>__</em></strong>；调查费□<strong><em>__</em></strong>；其他□<strong><em>_</em></strong>。</p>
-<p>六、是否有合法来源：否□；</p>
-<p>是□1.来源主体<strong><strong><strong><em>_</em></strong></strong></strong></p>
-<p>2.来源渠道:合同□发票□进货单□销售单□出库单□其他□</p>
-<p>七、其他必要事项<strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong>。</p>
-<p>以上事项中，双方有争议的事项为第×项、第×项，其他事项双方无争议。</p>
-<p>综上所述，……(写明对当事人的诉讼请求及主张是否支持进行评述)。依照《中华人民共和国……法》第×条、……(写明法律文件名称及其条款项序号)规定，判决如下：</p>
-<p>……(写明判决结果)。</p>
-<p>如果未按本判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百五十三条规定，加倍支付迟延履行期间的债务利息(没有给付金钱义务的，不写)。</p>
-<p>案件受理费……元，由……负担(写明当事人姓名或者名称、负担金额)。</p>
-<p>如不服本判决，可以在判决书送达之日起十五日内，向本院递交上诉状，并按对方当事人或代表人的人数提出副本，上诉于××××人民法院。/本判决为终审判决。（小额诉讼程序）</p>
-<p>​        　　</p>
-<p>审 判 员   ×××</p>
-<p>××××年××月××日</p>
-<p>书 记 员   ×××</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -1495,6 +1354,391 @@
       </tags>
   </entry>
   <entry>
+    <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
+    <url>//p/23a9bdeb.html</url>
+    <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
+<h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p>
+<a id="more"></a>
+<p><strong>典型现象（一）：条件判断超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（二）：数据转换超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（三）：基本运算超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure>
+<p><strong>典型现象（四）：数据自增超预期</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure>
+<p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p>
+<p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p>
+<hr>
+<h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure>
+<p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p>
+<p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p>
+<p>我们不妨来简单思考一下：</p>
+<blockquote>
+<p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p>
+</blockquote>
+<p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p>
+<p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure>
+<p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p>
+<p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure>
+<p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p>
+<p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p>
+<p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p>
+<p>这就要谈一下浮点数的精度问题了。</p>
+<hr>
+<h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p>
+<p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p>
+<p><strong>1、符号部分（S）</strong></p>
+<p><code>0</code>-正 <code>1</code>-负</p>
+<p><strong>2、阶码部分（E）（指数部分）</strong>：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li>
+<li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li>
+</ul>
+<p><strong>3、尾数部分（M）</strong>：</p>
+<p>浮点数的精度是由尾数的位数来决定的：</p>
+<ul>
+<li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li>
+<li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li>
+</ul>
+<p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p>
+<hr>
+<h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p>
+<p><strong>方法一：用字符串或者数组解决多位数问题</strong></p>
+<p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p>
+<p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p>
+<p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p>
+<p><strong>方法二：Java的大数类是个好东西</strong></p>
+<p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p>
+<p>Java的大数类位于<code>java.math</code>包下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p>
+<p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure>
+<p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>开发经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站备案指的是域名备案？ 还是指的服务器备案呢？</title>
+    <url>//p/32883715.html</url>
+    <content><![CDATA[<p>​    一般在建网站的时候很多人对于怎么备案，给域名备案还是服务器备案比较迷糊，下面为大家详细讲解一下，希望各位个人站长或者企业建站可以很准确的搞好备案。</p>
+<p>​    备案是工信部要求的，主要是为了规范网络安全化，维护网站经营者的合法权益，保障网民的合法利益。凡是使用国内空间的网站域名都需要备案。</p>
+<p>​    域名如果绑定指向到国内网站空间就要备案。也就是说如果你这个域名只是纯粹注册下来，用作投资或者暂时不用，是无需备案的。域名指向到国外网站空间，也是无需备案的。由于域名备案基本取决于网站空间的情况，所以备案也是主机提供商提供的，不是域名注册商。 备案是针对空间的，但是备案号是挂在域名上的，可以说备案如果没有空间或者没有域名都备案不了。备案首先是要由空间商审核，审核完才能递交到通管局，审核成功后，备案号是挂在域名上。备案与否是根据空间判断的，空间要求备案就备案，不要求就不用。网站空间怎么备案呢?只要联系当时购买的空间商就可以了，正规的空间商都会提供免费的备案帮助。只要按照空间商的要求准备备案资料就可以了。</p>
+<p>​    备案之后，可以使用国内空间，内地用户打开的速度会大大快于其他空间，保障了排名和转化率。百度，Google，等搜索引擎，对同类型网站的搜录，往往是已备案的多于未备案的。因为没有备案被封过的网站不在少数，其中不备案的很多都是违法网站，一般正规网站备案之后，如果出了问题容易解决，而没有备案的，如果存在违法信息，被发现了，就会直接撤销。另外，如果你的网站涉及违法内容，将可以直接调查到你本人，如果你的网站被攻击或遭受利益上的损失，你可以凭备案许可进行报案。</p>
+<p>​    网站备案到底是给域名备案还是给空间备案?备案说到底是给域名备案，但备案的话离不开域名和国内空间，两者缺一不可。备案的最终结果是让域名有备案号，有了备案号的域名才能访问国内空间。</p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>送达流程</title>
+    <url>//p/1fd17fe4.html</url>
+    <content><![CDATA[<h1 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a>总体流程</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172104.png" alt="img"></p>
+<a id="more"></a>
+<h1 id="系统组成"><a href="#系统组成" class="headerlink" title="系统组成"></a>系统组成</h1><p>送达载体全覆盖，线上线下一体化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172125.jpg" alt="img"></p>
+<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><h2 id="电话送达"><a href="#电话送达" class="headerlink" title="电话送达"></a>电话送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172150.png" alt="img"></p>
+<h2 id="电子送达"><a href="#电子送达" class="headerlink" title="电子送达"></a>电子送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172201.png" alt="img"></p>
+<h2 id="邮寄送达"><a href="#邮寄送达" class="headerlink" title="邮寄送达"></a>邮寄送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172210.png" alt="img"></p>
+<h2 id="外勤送达"><a href="#外勤送达" class="headerlink" title="外勤送达"></a>外勤送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/20_wqsd.png" alt="img"></p>
+<h2 id="公告送达"><a href="#公告送达" class="headerlink" title="公告送达"></a>公告送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172231.png" alt="img"></p>
+<h2 id="网格协助"><a href="#网格协助" class="headerlink" title="网格协助"></a>网格协助</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/20_wgxz.png" alt="img"></p>
+<h2 id="短信送达"><a href="#短信送达" class="headerlink" title="短信送达"></a>短信送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/20_dxsd.png" alt="img"></p>
+<h2 id="跨域集约"><a href="#跨域集约" class="headerlink" title="跨域集约"></a>跨域集约</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/20_kyjy.png" alt="img"></p>
+<h2 id="送达地址库"><a href="#送达地址库" class="headerlink" title="送达地址库"></a>送达地址库</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/20_sddzk.jpg" alt="img"></p>
+<h1 id="岗位与设备配置"><a href="#岗位与设备配置" class="headerlink" title="岗位与设备配置"></a>岗位与设备配置</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/2020/05/25/21.png" alt="img"></p>
+]]></content>
+      <categories>
+        <category>送达</category>
+      </categories>
+      <tags>
+        <tag>送达</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基层法院书记员操作手册</title>
+    <url>//p/7bd8b6f6.html</url>
+    <content><![CDATA[<p><strong>基层法院书记员操作手册</strong></p>
+<p>法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。</p>
+<a id="more"></a>
+<p>【前言】法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。</p>
+<p>书记员是人民法院干部队伍的重要组成部分，主要履行以下职责：（一）办理庭前准备过程中的事务性工作；（二）检查开庭时诉讼参与人的出庭情况，宣布法庭纪律；（三）担任案件审理过程中的记录工作；（四）整理、装订、归档案卷材料；（五）完成法官交办的其他事务性工作。[1]</p>
+<p>下面就基层法院书记员工作操作流程分解如下：</p>
+<p><strong>一、庭前准备</strong></p>
+<p>（一） 文书送达</p>
+<p>1、书记员收到案件后，准备庭前应送达的材料。</p>
+<p>原告方需送达：①受理案件通知书；（应由立案庭送达，收到案件时应检查）②举证通知书；（因涉及当事人举证权利，需存档）③开庭传票；④诉讼风险提示书；⑤廉政监督表；⑥当事人权利义务须知；⑦裁判文书上网告知书；⑧调解忠告书。</p>
+<p>被告方需送达：①民事诉状副本；②应诉通知书；③举证通知书；④开庭传票；⑤诉讼风险提示书；⑥廉政监督表；⑦当事人权利义务须知；⑧裁判文书上网告知书。⑨解忠告书。（除送达上述文书外，还需让被告填写送达地址确认书）</p>
+<p>如果是民一庭的离婚诉讼，则需另行再送一份损害赔偿请求权告知书。</p>
+<p>【说明】：根据民事诉讼法113条的规定，人民法院应当在立案之日起五日内将起诉状副本发送被告，被告在收到之日起十五日内提出答辩状。但是在五日内未必能够送达，变通的作法是将文书的日期落在立案之日起五日内。普通程序审理的案件，除当事人自由协商一致的外，举证期限不得少于30日（证据规定第33条，虽然民事诉讼法司法解释改为了15天， 但该举证期限的起诉时间是在答辩期届满之后，所以15天的答辩期+15天的举证期，还是30天！）。但本院多数是简易程序，根据《民事诉讼法司法解释》第266条的规定，简易程序的举证期不得超过15日。（简易程序规定在民事诉讼法第十三章，而民事诉讼法113条规定在民事诉讼法第十二章，故简易程序中不应局限民事诉讼法第113条中关于答辩期15日的规定）。简易程序的举证通知书通常写开庭前举证即可。</p>
+<p>上述需送达给当事人的文书，若当事人聘请了律师、法律工作者为代理人，或者当事人是银行等长期参加诉讼的当事人，则原告可以只送达举证通知书和开庭传票，被告可以只送达应诉通知书、起诉状副本、举证通知书及开庭传票。（民事诉讼法司法解释第268条，简易程序规定第19条）</p>
+<p>2、准备好上述材料后，书记员应着手准备送达（其实也可以先通知当事人，再准备材料，可根据实际情况定）</p>
+<p>首先应向被告进行送达，以便确定开庭日期。先按原告提供的被告联系电话通知被告（与被告联系的情况，应该做电话记录），若无联系方式，或者原告提供的联系方式不能联系到被告的，应要求原告提供（按诉状或者送达地址确认书上原告的联系电话联系原告）。原告有义务提供被告的联系方式。若原告无法提供被告的联系电话，则应询问原告提供的被告住址是否准确，若原告也不能确定地址是否准确的，可以去公安部门查询被告的户籍所在地，以户籍所在地为送达地址，用法院专递邮寄送达（《最高人民法院关于以法院专递方式邮寄送达民事诉讼文书的若干规定》第5条、《简易程序规定》第9条）若原告坚持其提供的被告住址是准确的，则可用法院专递向被告邮寄送达（若该邮件被退回，应向被告户籍所在地邮寄送达）。在邮寄之前，可以与被告住所地基层组织工作人员（如村支书、村主任、综治专干）联系，了解被告的情况，电话联系的情况应作电话记录。</p>
+<p>说明：书记员在知道无法用电话通知被告应诉之后，应当及时与承办人沟通，由承办人决定是直接到被告住所地去送达还是继续等待原告寻找线索。但笔者建议书记员同时应通过法院专递向被告户籍所在地邮寄送达，因为一旦其他方式无法送达，被退回的邮件也是可以作为公告送达的依据的（民事诉讼法第84条）。</p>
+<p>注意：若同时有几个被告的，有些送达了，有些没有送达，在预定的时间就无法开庭。此时对于那些已经送达了的当事人（尤其是已经到场签了地址确认书的当事人），应及时通知他们无法按时开庭，需要等待下次通知的事情。避免当事人“跑空路”。但是如果都是邮寄的，都没有签地址确认书，那么可以技术操作，先不通知，等开庭时对方来了，再说自己也不确定对方来不来，此时可以要求到了的当事人填写地址确认书，但是要注意语气态度和措词。通知原告的时候，可以将利害关系说清楚，也可以说暂不确定被告是否会来，故原告须到场。</p>
+<p>建议：每一个案件均应作送达记录， 对于何时何地通过何种方式与当事人（包括原告、被告）联系，联系的内容进行记录，以便对事后能够对整个送达过程一目了然。（也便于在送达不到需公告时，向原告解释说明）。</p>
+<p>（二）程序转换</p>
+<p>除特别程序外，一般的民商事案件，分为简易程序和普通程序。其中简易程序又包括了小额诉讼程序，目前，是否适用小额诉讼程序虽然由立案一庭立案时决定，但审判业务庭要根据实际情况决定是否适用小额诉讼程序（如果立案庭立了小额诉讼程序，则向当事人送达时需要多送达一份小额诉讼须知）。这里主要讲简易程序转为普通程序如何处理。</p>
+<p>多数是被告无法送达，需要公告送达的，应该转普。决定转普后</p>
+<p>·   制作转普裁定书，并在审判管理系统中及时审批。</p>
+<p>·   在系统里做程序转换审批。</p>
+<p>·   通知原告交纳公告费，补交案件受理费。</p>
+<p>·   公告，发传真及电子档。</p>
+<p>·   公告收到后及时排期并请人民陪审员</p>
+<p>需要注意的是，转普裁定及合议庭成员告知书一定要送给原告及其他能够送达的当事人。如果当事人不愿意缴纳公告费及补交案件受理费的，应及时发通知给原告，在原告收到通知后不及时交纳的，按自动撤诉处理。（民事诉讼法司法解释199条、《诉讼费用交纳办法》第13条、第20条。</p>
+<p><strong>二、庭审记录略</strong></p>
+<p>说明：庭审记录完毕后，笔录民事诉讼法第133条规定可以告知当事人和其他诉讼参与人在五日内阅读，但是建议当庭阅读并签字，以免发生矛盾。笔误处或修改补正处一定要捺印。</p>
+<p>因目前多是电脑打印，如果书记员对自己的记录速度不自信的，应该提前（一般是提前一天）打好笔录头子（包括当事人的身份信息、诉讼请求等），甚至可以将双方举示的证据按证据名称、证据来源、证明目的事先打印，开庭时复制粘贴即可。（小技巧：在原告举证之后，被告质证阶段时，可以将原告举证的直接复制为质证内容，再进行修改，这样做有几个好处，一是省时，二是可以促使被告按顺序质证，避免遗漏，三是可以让被告看到原告举证的证明目的，有针对性的质证）。应该事先准备的还有证人权利义务告知的内容等等。其他要求具体可以参照渝五中法发〔2015〕94号：重庆市第五中级人民法院印发《关于规范法庭笔录的办法（试行）》的通知。</p>
+<p><strong>三、案卷整理</strong></p>
+<p>根据最高人民法院、国家档案局《人民法院诉讼文书立卷归档办法》、重庆市高级人民法院《全市法院审判流程管理办法（试行）》以及审判管理系统的目录设置。民事一审诉讼文书正卷材料的排列顺序为：</p>
+<p>（１）卷宗封面；</p>
+<p>（２）卷内目录；</p>
+<p>（３）诉状或口诉笔录；</p>
+<p>（4）立案、审理流程表；</p>
+<p>（5）诉讼费用票据及诉讼费减免缓审批手续；（含预收、退费、结算票据，保全费票据、公告费票据，缓缴诉讼费申请及相关审批单）</p>
+<p>（6）地址确认书；</p>
+<p>（7）开庭前的通知；（含受理案件通知书、应诉通知书、举证通知书、权利义务告知书、风险提示书、廉政监督卡等；应诉通知书、权利义务告知书、风险提示书等文书系格式化文书，个人认为只要在送达回证上体现了送达即可，不需入卷；按审管办现行要求，需要入卷）</p>
+<p>（8）开庭通知书、传票；（当事人用传票，其余诉讼参与人用通知书）</p>
+<p>（9）答辩状及附件；（此处附件指除证据外的其他附件）</p>
+<p>（10）原被告身份证明及委托手续；（自然人需身份证复印件，未成年人需户口薄；法人或其他组织需营业执照、组织机构代码（三证合一的除外）、法定代表人身份证明）如果委托代理人的，律师、法律工作者需要委托书、所函、执业证复印件；</p>
+<p>（11）原、被告举证材料；（一般按照举证顺序的先后排放）</p>
+<p>（12）鉴定材料；（鉴定裁定也属于证据材料的一种，所以放在举证材料之后）</p>
+<p>（13）询问、调查材料；</p>
+<p>（14）诉讼保全材料；(含保全中调查笔录)</p>
+<p>（15）其他证据材料；（一切不知道放哪个目录下面的都可以放在这下面）</p>
+<p>（16）管辖异议材料（含管辖异议申请书、裁定书、上诉移送函、退卷函、二审裁定等）</p>
+<p>（17）其他审限相关材料。（如和解申请，中止、扣除、延长审限的审批表）</p>
+<p>（18）调解材料；（含调解笔录）</p>
+<p>（19）公告（登报）</p>
+<p>（20）公告；（主要指开庭公告与宣判公告；按审管办要求，除当庭裁判外，宣判均需宣判公告，个人认为简易程序开庭不需要开庭公告，而普通程序开庭均需开庭公告；但按审管办的现行要求，简易程序也需要发布公告）</p>
+<p>（21）开庭审理笔录；</p>
+<p>（22）代理词；</p>
+<p>（23）撤诉申请；</p>
+<p>（24）判决、调解、裁定书发文稿（单卷用）；</p>
+<p>（25）判决、调解、裁定书正本；</p>
+<p>（26）宣判公告；</p>
+<p>（27）宣判笔录；</p>
+<p>（28）送达回证；</p>
+<p>（29）结案表；</p>
+<p>（30）上诉移送函；</p>
+<p>（31）退卷函；</p>
+<p>（32）二审裁判文书；</p>
+<p>（33）移送执行手续；（主要指没有收到诉讼费的）</p>
+<p>（34）备考表；</p>
+<p>（35）证物袋；</p>
+<p>（36）卷底。</p>
+<p>副卷排列顺序略</p>
+<p>具体问题解答</p>
+<p>问：当事人上诉如何处理？</p>
+<p>答：若当事人在上诉期内提出上诉，首先应填写上诉案件缴费通知书要求上诉人缴费，缴费金额为一审立案时收取的案件受理费的全额（一般立案庭是收全额，但是也有减半收取的，减半收取的，上诉费需乘以2）；</p>
+<p>其次，向被上诉人（未提起上诉的其他当事人）送达上诉状副本；</p>
+<p>再次准备五份判决书原件及上诉案件移送函。</p>
+<p>当上诉费缴费回单（两份）、送达回证、上诉移送函、判决书均已备好，且卷宗已经装订完成后，在内勤处登记后，将案件移送至立案庭（需先进行网上移送）。</p>
+<p>问：收到公告的报纸（或张贴公告）后需要做些什么？</p>
+<p>答：1、在审判管理系统中扣除审限（法定事由审批）；2、计算出举证期届满时间及开庭时间，并及时排期，向其余当事人送达；（如果认为有必要，可向被告住所地邮寄传票，做到仁至义尽！）3、申请人民陪审员，在人民陪审员名单确定后及时向当事人送达。</p>
+<p>问：为什么说书记员最重要的工作是记录？</p>
+<p>答：因为当事人的陈述是民事诉讼的证据之一，而记录在卷的笔录是当事人陈述的重要表现形式，而且笔录要求及时、准确。如被告当庭承认向原告借款，但是书记员没有及时记录，被告就有可能矢口否认，若原告未能提供其他证据，而笔录又没有被告自认的内容，则原告有可能败诉，但是开庭时原告也在场，对于书记员没有记录该重要陈述必然不服，后果非常严重。</p>
+<p>问：为什么必须书记员记录！</p>
+<p>答：因为法律规定禁止自审自记！在案件审理过程中，审判员负责审理，书记员负责记录。不得自审自记，这是公权力行使的基本要求。除了做好记录外。书记员担负着为审判员查漏补缺的职责，对于审判员应为而未为的（如最后陈述没有进行），应该提醒审判员。而这，就要求书记员要熟悉审判程序，否则，就无从提醒。</p>
+<p>庭审笔录中记录的当事人陈述的内容，是裁判的重要依据，每一个成功的审判员背后都有一个或者几个优秀的书记员。</p>
+<p>相关规定</p>
+<p>·   《民事诉讼法》</p>
+<p>第一百四十七条第一款 书记员应当将法庭审理的全部活动记入笔录，由审判人员和书记员签名。</p>
+<p>·   《民事诉讼法司法解释》</p>
+<p>第二百六十一条第三款 适用简易程序审理案件，由审判员独任审判，书记员担任记录。</p>
+<p>·   《民诉意见》（已废止）</p>
+<p>172、适用简易程序审理案件，人民法院应当将起诉内容，用口头或书面方式告知被告，用口头或者其他简便方式传唤当事人、证人，由审判员独任审判，书记员担任记录，不得自审自记。判决结案的，应当依照民事诉讼法第一百三十四条的规定公开宣判。</p>
+<p>问：审书如何配合？</p>
+<p>答：审书配合与否，在作笔录时最容易体现。如庭审时。在书记员的记录速度尚不能达到速录员的记录的现实情况下，必然就有记录的速度跟不上当事人说话的速度的情况。此时，哪些内容是可以略记的，哪些内容是可以在庭审后校队补正的，哪些内容是必须立刻记录的等问题，书记员要有基本的判断。</p>
+<p>哪些东西是可以略记的呢？如告知权利义务的内容（当然书记员也可以事先打印后复制粘贴），因为都是有明文规定的，可以略记（如直接记录为告知证人权利义务略记）。在比如当事人宣读的法律条文、合同中的内容，记录好条款序号即可。</p>
+<p>哪些内容是可以事后补正的？如审判员的问话，可以根据当事人的回答补。如原告举证、被告质证等程序性问题，也可以补正。毕竟，庭审主要是看当事人的陈述。</p>
+<p>哪些内容是必须当场记录的呢？如关于自认部分，或者直接影响当事人权利义务的内容（如承认借款，承认录音真实性），就必须立即记录。</p>
+<p>在书记员不能及时全面记录，又无法及时抓住重点时，审判员应该提醒书记员。当然，审判员一般不会直接提醒记录，而是通过审书之间的“暗号”完成。如审判员对当事人的话进行归纳当事人无异议的，书记员就可以直接记作当事人的陈述，毋需机械地记录审判员问，你说的是不是……，当事人回答是，没有必要！如同一个问题，审判员多次询问或者多次重复，这些绝大多数就是重点，必须记录的！</p>
+<p>问：如何作询问笔录？</p>
+<p>答：所谓询问笔录，指法院因某些特定事项，需要向当事人或者了解情况的人通过询问的方式搞清楚、弄明白时做的笔录。</p>
+<p>若询问笔录是在法院之外的其他地方做的，那么首先就要出示证件，出示证件的过程需要在笔录中反映。</p>
+<p>询问笔录是通过一问一答的方式进行的。但是现实中，询问时不是机械的说一个说提问，一个说回答，然后一问一答（如聪明的一休）。尤其是在外对当事人以外的人作询问时，可能谈了很多话（如问候了身体，讨论了天气），书记员此时就要区分哪些话是应该记入笔录的，哪些话只是为了拉近距离，摆的“闲龙门阵”。这就要求审判员要提前知会书记员，这次询问的目的，记录的重点。但是对于诸如询问当事人下落等的询问笔录，就没有必要次次提醒，书记员应该了解，这类笔录一般的写法如下：</p>
+<p>笔录写法：</p>
+<p>？：（出示证件）我们是某某法院的工作人员，因……一案，需向你了解情况。</p>
+<p>：我一定如实回答。</p>
+<p>？：（若询问当事人的亲友）你与某某是什么关系？（若询问基层组织或物业人员）你在……单位任何职？</p>
+<p>：</p>
+<p>？：某某现在在哪里？</p>
+<p>：</p>
+<p>？：你能否联系上他（或者问有无联系方式）</p>
+<p>？：他家中还有何人（具体的可问父母是否在家，是否婚配，是否与父母或者子女同住，目的是为了确定有无同住成年家属可以签收诉讼文书）</p>
+<p>：</p>
+<p>？：（在对方愿意代收文书的情况）请你代为签收诉讼文书并转交给他，告知开庭时间及未到庭的后果（如缺席审理或者公告送达）</p>
+<p>：</p>
+<p>？：还有补充？（如果有补充，则补充后再重新问一次）</p>
+<p>：无补充。</p>
+<p>？：笔录阅必无误签字确认。</p>
+<p>（询问人和记录人最好也当场签字，一是避免忘记，二是给被询问人做榜样）</p>
+<p>追问：为什么要摆“闲龙门阵”？</p>
+<p>回答： 刚刚做书记员的人可能会疑惑，为什么明明笔录只有一篇，但是却要说上很长时间呢？一方面，虽然民事诉讼法规定被询问人有配合法院的义务，但是你想得到有用的信息，以对方自愿告知最佳。那么询问的过程中聊的一些看似无用的闲篇，如对方抱着小孩，问一句孩子多大了，适当逗逗小孩什么的，都是增强彼此之间信任的一种方式，是为了对方自愿配合接受询问做铺垫。很多人对签字，接受材料是抗拒的，因为害怕签字会担责任。比如有的被告不愿意签收起诉状副本或者判决书，就是误认为签字就代表认可起诉状的内容或者认可判决书的内容。此时就要耐心细致地解释给他们听。</p>
+<p>问：为什么邮件已经被退回，但是还需要从网上打印快递详单？</p>
+<p>答：因为邮件上有时无法显示退回的准确时间，而根据法释[2004]13号《最高人民法院关于以法院专递方式邮寄送达民事诉讼文书的若干规定》第十一条第一款关于“因受送达人自己提供或者确认的送达地址不准确、拒不提供送达地址、送达地址变更未及时告知人民法院、受送达人本人或者受送达人指定的代收人拒绝签收，导致诉讼文书未能被受送达人实际接收的，文书退回之日视为送达之日”的规定。文书退回之日视为送达之日，而送达之日又关系到当事人的上诉权等非常重要的程序权利，必须准确到“天”。</p>
+<p>【补充提醒】</p>
+<p>第一，除不准上诉的判决（如小额诉讼程序审结的终审判决、公示催告除权判决）、裁定（如特别程序的裁定、撤诉裁定）外，只有超过上诉期没有上诉的判决、裁定，才是生效的判决、裁定。（民事诉讼法第155条）</p>
+<p>第二，判决书的上诉期为15天，裁定书的上诉期为10天，均从送达之日开始计算（民事诉讼法第156条）；开始计算的当天不算在内（民事诉讼法第82条）。</p>
+<p>假设1月5日送达的文书，如是判决书，则上诉期1月20日届满，只有在1月20日前未上诉的判决才能生效；如是裁定书，则上诉期于1月15日届满。</p>
+<p>《民事诉讼法》</p>
+<p>第八十二条 期间包括法定期间和人民法院指定的期间。</p>
+<p>·   期间以时、日、月、年计算。期间开始的时和日，不计算在期间内。</p>
+<p>·   期间届满的最后一日是节假日的，以节假日后的第一日为期间届满的日期。</p>
+<p>·   期间不包括在途时间，诉讼文书在期满前交邮的，不算过期。</p>
+<p>第一百五十五条 最高人民法院的判决、裁定，以及依法不准上诉或者超过上诉期没有上诉的判决、裁定，是发生法律效力的判决、裁定。</p>
+<p>第一百六十四条 当事人不服地方人民法院第一审判决的，有权在判决书送达之日起十五日内向上一级人民法院提起上诉。</p>
+<p>当事人不服地方人民法院第一审裁定的，有权在裁定书送达之日起十日内向上一级人民法院提起上诉。</p>
+<p>问：为什么审判组织成员（含审判员、书记员、人民陪审员）及当事人出庭人员（如变更了委托代理人）变化后，必须要强调回避权？</p>
+<p>答：回避制度是民事诉讼以及所有诉讼中的基本制度之一（民事诉讼法第10条）。如果没有强调回避权，属于程序上的严重错误，可能引起再审。</p>
+<p>（一）交待回避权是义务，必须履行。（民事诉讼法第137条第1款）</p>
+<p>（二）应当回避没有回避足以引起再审。（民事诉讼法第200条第7项）</p>
+<p>追问：没有回避事由是否也会引起再审？回答：当事人可能有回避事由，但是没有问，当事人就可能不会主动提出，程序问题丝毫不能马虎。</p>
+<p>《民事诉讼法》</p>
+<p>第十条人民法院审理民事案件，依照法律规定实行合议、回避、公开审判和两审终审制度。</p>
+<p>第一百三十七条 开庭审理前，书记员应当查明当事人和其他诉讼参与人是否到庭，宣布法庭纪律。</p>
+<p>开庭审理时，由审判长核对当事人，宣布案由，宣布审判人员、书记员名单，告知当事人有关的诉讼权利义务，询问当事人是否提出回避申请。</p>
+<p>第二百条 当事人的申请符合下列情形之一的，人民法院应当再审：</p>
+<p>（一）有新的证据，足以推翻原判决、裁定的；</p>
+<p>（二）原判决、裁定认定的基本事实缺乏证据证明的；</p>
+<p>（三）原判决、裁定认定事实的主要证据是伪造的；</p>
+<p>（四）原判决、裁定认定事实的主要证据未经质证的；</p>
+<p>（五）对审理案件需要的主要证据，当事人因客观原因不能自行收集，书面申请人民法院调查收集，人民法院未调查收集的；</p>
+<p>（六）原判决、裁定适用法律确有错误的；</p>
+<p>（七）审判组织的组成不合法或者依法应当回避的审判人员没有回避的；</p>
+<p>（八）无诉讼行为能力人未经法定代理人代为诉讼或者应当参加诉讼的当事人，因不能归责于本人或者其诉讼代理人的事由，未参加诉讼的；</p>
+<p>（九）违反法律规定，剥夺当事人辩论权利的；</p>
+<p>（十）未经传票传唤，缺席判决的；</p>
+<p>（十一）原判决、裁定遗漏或者超出诉讼请求的；</p>
+<p>（十二）据以作出原判决、裁定的法律文书被撤销或者变更的；</p>
+<p>（十三）审判人员审理该案件时有贪污受贿，徇私舞弊，枉法裁判行为的。</p>
+<p>问：管辖异议扣除审限的起止时间。</p>
+<p>答：管辖异议从异议人提出申请当天起扣除审限，如果作出裁定后未上诉的，以生效当日作为扣除审限的截止时间。如果作出裁定后上诉的，终审裁定已由二审送达给当事人的，以一审法院收到退回的案卷时间（具体为审判部门签收案卷为准）为截止时间；若二审法院无法送达终审裁定而委托一审法院送达的，以一审法院送达终审裁定的时间为截止时间。但是，案卷的移送和裁定的送达要及时，不能拖延。</p>
+<p>问：民事诉讼法第91条规定，自发出公告之日起，经过六十日，即视为送达。这个经过60日，是指只能是60天，还是说超过60天都行？</p>
+<p>答：只能是60天！不能多也不能少，拟制送达的规定不允许改变（如写2个月）。为什么？如果说可以超过60天，那么公告十年行不行？显然不行！</p>
+<p>[1] 《中共中央组织部、人事部、最高人民法院人民法院书记员管理办法（试行）》第2条</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>工作流程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2018年度广东省行政诉讼情况报告</title>
+    <url>//p/9e1000d2.html</url>
+    <content><![CDATA[<h2 id="2018年度广东省行政诉讼情况报告"><a href="#2018年度广东省行政诉讼情况报告" class="headerlink" title="2018年度广东省行政诉讼情况报告"></a>2018年度广东省行政诉讼情况报告</h2><p>​    2018年，广东省各级法院深入学习贯彻习近平新时代中国特色社会主义思想和党的十九大精神以及习近平总书记对广东重要讲话精神，全面加强行政审判工作，保护人民群众合法权益，促进行政争议实质性解决，支持和监督行政机关依法行政，为广东实现“四个走在全国前列”、当好“两个重要窗口”提供强有力司法保障。</p>
+<a id="more"></a>
+<p>一、2018年度广东省行政诉讼概况和案件特点</p>
+<p>（一）行政诉讼概况</p>
+<p>1.行政诉讼案件年度增长。2018年，全省法院新收行政案件持续快速增长，其中一审行政案件新收21442件，同比增长18%，二审行政案件新收12229件，同比增长31.23%，行政申请再审案件新收2177件，同比增长57%，审判压力继续上升。</p>
+<p>2.行政诉讼案件类型分布。2018年，全省新收一审行政案件类型更趋分散。传统案件继续增长，收案最多的依然是劳动和社会保障类案件（3671件），其次是土地海洋林业等自然资源类案件（1930件）。与此同时，新类型案件比重上升，无法归入传统案由的案件占42%。</p>
+<p>3.行政诉讼案件地域分布。2018年，全省行政案件地域集中趋势有所缓和。大湾区内地九市（广州、深圳、佛山、东莞、中山、惠州、珠海、肇庆、江门）新收一审行政案件17092件，占全省的80%。粤东西北一审收案恢复增长，新收一审行政案件4350件，同比增长28%，比全省平均增幅高出10个百分点。</p>
+<p>4.行政诉讼裁判结果。2018年，全省共审结一审行政案件21316件，其中直接判决行政机关败诉的891件，行政机关改变行政行为后裁定准予原告撤诉的5件，合计896件。行政机关一审败诉率为4.2%，较上年度下降6.5个百分点。</p>
+<p>（二）行政非诉审查概况</p>
+<p>1.行政非诉审查案件继续增长。2018年，全省法院新收行政机关申请法院强制执行行政行为的案件即行政非诉审查案件33129件，同比增长12.6%，审结33098件，同比增长11%。行政非诉审查案件类型高度集中，土地、公积金、环保和交通4类案件占全部非诉审查案件的72%。</p>
+<p>\2. 准予执行率基本持平。2018年，全省法院裁定准予强制执行行政行为25634件，准予执行率77.45%，同比微降0.4个百分点。各类行政行为中，不准予执行率相对较高的依然是土地类、环保类行政行为。行政机关不服不准予执行裁定，向上一级法院申请复议560件，复议率1.7%，同比上升1.3个百分点。</p>
+<p>（三）案件特点</p>
+<p>1.行政矛盾纠纷渐趋平稳。一是以省、市政府为被告的行政案件收案数明显下降。2018年，全省法院新收一审行政案件中，以省、市政府为单独被告的案件共488件，同比减少150件，下降23.5%。二是“矛盾上交”现象得到初步遏制，案件“倒金字塔”分布情况有所改善。全年全省各中级法院新收一审行政案件3282件，占全省法院新收一审行政案件的15.3%，连续两年下降。</p>
+<p>2.司法需求日益增长。一是要求司法保护更加全面。上市公司不服深交所强制退市、农民集体不服政府划定自然保护区、学生家长不服教育局划分学区等新类型案件的出现，对司法能力提出更高要求。二是要求司法保护更加及时。全省法院探索运用新行政诉讼法司法解释的暂时权利保护制度，在作出判决之前，裁定停止执行行政行为2件。三是要求司法保护更加有效。全省法院附带审查规章以下规范性文件22份，确认4份规范性文件的有关条款不合法。</p>
+<p>3.积极推动纠纷化解。行政应诉、政务诚信、政务公开等情况纳入法治广东建设考评和省直机关考核指标，行政与司法良性互动格局进一步形成。行政机关出庭应诉工作取得新进展，应诉水平进一步提升，全年各级行政机关负责人出庭应诉3819件，同比增长34%，其中汕尾市市长杨绪松、恩平市市长刘兵等地方政府“一把手”出庭应诉。行政机关积极配合法院实质化解行政争议，全年原告主动撤诉结案2655件，调解结案21件。肇庆市将军陶瓷有限公司等4家企业诉阳春市人民政府招商引资协议纠纷，仁化县丹霞瀛枫温泉有限公司诉仁化县人民政府、仁化县城口镇人民政府土地开发协议纠纷等行政协议案件调解结案，营商环境进一步优化。</p>
+<p>二、行政诉讼司法审查动向</p>
+<p>2018年，全省法院依法履行行政审判职责，强化对社会、经济等重点管理领域行政执法行为的司法审查力度，注重保护公民、法人或其他组织的合法权益，助推法治政府建设，助力全省法治环境、营商环境、生态环境进一步改善优化。</p>
+<p>（一）依法审理涉民营企业产权行政案件，加大对民营企业产权的司法保护力度</p>
+<p>民营企业产权是我国产权体系的重要部分，实现对民营企业产权的有效保障是经济持续健康发展的重要基础，也是全面深化市场经济体制改革的需要。2018年，全省法院坚决贯彻党的十九大精神及中央有关民营企业产权的保护意见，依法审结一批涉民营企业产权保护的典型案件，纠正一些违法侵害民营企业产权的行政行为，努力为民营企业发展营造良好的市场竞争环境。在涉民营企业行政处罚案件中，法院重点审查行政机关作出处罚决定所依据的事实是否清楚、法律依据是否充分，是否存在因政府原因造成企业产权权能无法行使的情形，依法准确认定政府与企业各自应承担的法律责任。在行政机关不履行承诺导致民营企业本应合法取得的财产权益无法兑现的案件中，法院妥善认定政府与企业签订合同的效力，依法支持民营企业的合理诉求，确保民营企业的合法正当利益得到有效司法保护。如台山市荣富房地产开发有限公司诉台山市国土资源局收回国有土地使用权决定案，法院认定台山市国土资源局未充分举证证明其已对土地闲置的原因和有关情况开展调查核实，以事实不清、证据不足为由，判决撤销其作出的《收回国有建设用地使用权决定书》。又如仁化县丹霞瀛枫温泉有限公司诉仁化县人民政府、仁化县城口镇人民政府土地开发协议纠纷案，仁化县人民政府将仁化县丹霞瀛枫温泉有限公司通过与仁化县城口镇人民政府订立《仁化县城口镇温泉项目投资开发合同书》而获得的土地使用权另行挂牌出让，并被其他公司竞得。在法院的协调下，各方当事人达成调解协议，城口镇人民政府退还仁化县丹霞瀛枫温泉有限公司的全部投资款并补偿其12年的投资利息损失。</p>
+<p>（二）依法审理行政协议纠纷案件，督促行政机关依法、依约、诚信履行行政协议</p>
+<p>随着市场经济不断发展，政府在公共管理服务中更多通过平等协商的方式施行政策，实现行政管理目的。行政协议作为新行政管理手段在市场经济中发挥的作用日益明显。2018年，全省法院审理的行政协议纠纷案较往年明显增多。法院通过依法裁判，监督和促进行政机关依法、依约、诚信履行行政协议，充分保护协议各方主体的合法权益。对行政机关不符合法定或约定条件，单方变更、解除协议或以其他方式拒绝履行协议义务的，法院依法判令行政机关承担违约责任，责令其继续履行行政协议义务。对行政机关因维护国家、公共利益需要变更行政协议，造成行政相对人合法权益损失的，法院依法判令行政机关承担补偿责任。对行政机关拒绝承认其与行政相对人签订的协议属于行政协议，逃避履行协议义务的，在该协议具备履行条件且不会损害国家、公共利益的情形下，法院判令行政机关限期履行协议，保护行政相对人信赖利益。如广东深汕森钢投资发展有限公司诉深汕特别合作区管理委员会行政协议纠纷案，深汕特别合作区管理委员会未能提供证据证明其已履行与广东深汕森钢投资发展有限公司订立《项目投资协议》中约定的依照“招、拍、挂”法定程序为该公司提供土地使用权的义务，法院判决深汕特别合作区管理委员会继续履行该协议。又如林某诉广州市越秀区建设和水务局拆迁安置协议纠纷案，广州市越秀区建设和水务局长期既不履行其与林某签订的《拆迁房屋安置协议》，也不采取其他补救措施，被法院认定属于不履行职责，构成违约，法院判决该局三十日内履行协议约定，协助将涉案安置房屋过户给林某。</p>
+<p>（三）依法审理涉政府采购的财政监管案件，为促成公平、公正、公开的市场竞争环境提供有力司法保障</p>
+<p>招投标工作在实现财政资金的有效利用、优化社会公共资源配置等方面有着重要作用。对招投标行为进行有效监管，能够规范市场竞争行为，确保政府采购依法、依规进行。2018年，全省法院通过依法审理涉政府采购投诉处理的财政监管案件，支持和规范财政主管部门依法履行监管职责，为促成公平、公正、公开的市场竞争环境提供有力司法保障。对接到当事人有关招投标行为违法的投诉，相关财政主管部门未认真履行监管职责，未尽充分调查义务，或者回避投诉的关键问题的，法院依法判令其重启处理程序。对中标供应商存在商业信誉不良不具备参与政府采购法定条件的，法院依法支持财政主管部门合法、合理行使自由裁量权，责令重新开展采购活动，促进政府采购的诚信建设。如大连中睿科技发展有限公司诉深圳市财政委员会招投标监管行政处理决定案，法院认定深圳市财政委员会未对大连中睿科技发展有限公司投诉材料中提及的问题进行实质性调查就直接作出行政处理决定属于事实不清，判决撤销该处理决定并责令重新处理。广州某建筑咨询公司诉中山市财政局政府采购投诉处理决定纠纷案，法院依法支持中山市财政局作出的以该公司存在“重大违法记录”不能成为有效的供应商为由责令重新开展政府采购活动的行政处理决定。</p>
+<p>（四）依法审理环境行政公益诉讼案件，督促行政机关切实履行环境保护职责，维护环境公共利益</p>
+<p>当前，环境保护日益成为社会关注的焦点。为了最大限度减少当公共环境资源遭到非法破坏时，因行政机关不依法履行监管职责，致使环境污染状况持续加重的情况出现，2018年全省法院依法审理了检察机关提起环境行政公益诉讼，支持检察机关的合法诉讼请求，督促行政机关及时、充分、有效履行环境保护职责，全力维护生态环境。对接到检察机关检察建议后，仍怠于履行环保监管职责的行政机关，责令其限期采取环保监管措施；对行政机关部分履行环保职责，但未能完全消除环境污染问题的，判令其继续履行职责，直至受污染的环境得到有效治理、修复。如连南瑶族自治县人民检察院诉连南瑶族自治县国土资源和环境保护局不履行法定职责纠纷案，法院经审理依法支持连南检察院的诉讼请求，认定连南国土环保局未督促环境违法当事人依法履行行政处罚决定，未足额收缴环境治理恢复保证金，属怠于履行监管职责的行为，责令其限期履行。又如开平市人民检察院诉开平市环境保护局不履行法定职责案，法院认为开平市环保局未提供充分证据证明造成环境污染的垃圾填埋场及其周边环境已修复治理完成，判决该局继续履行监督管理的法定职责。</p>
+<p>三、工作展望</p>
+<p>广东法院将以习近平新时代中国特色社会主义思想为指导，以“努力让人民群众在每一个司法案件中感受到公平正义”为目标，紧紧围绕党和国家中心工作以及广东省委“1+1+9”工作部署，进一步发挥行政审判职能作用，支持和监督行政机关依法行政，积极推动法治国家、法治政府、法治社会一体建设，为深化“放管服”改革和粤港澳大湾区建设提供更优质的司法服务，为把广东建设成为全国最安全稳定、最公平公正、法治环境最好地区提供更好的司法保障。</p>
+<p>——坚持严格司法，强化对行政行为合法性的全面审查力度，依法支持、监督和规范行政行为。坚持对行政行为合法性全面审查的基本原则，在厘清案件事实的基础上，以被诉行政行为作为审理对象，结合诉讼请求，明确双方的争议焦点，不断推进庭审、裁决实质化，通过适用撤销判决、履行判决、变更判决、赔偿判决等方式，妥善处理当事人的诉讼请求，减少“程序空转”，力争实质性全面化解行政争议。坚持以维护法律统一适用为基本前提，特别是在征地拆迁、三旧改造、食品安全、环境保护等重点民生领域以及对相关规范性文件附带审查方面，加强对被诉行政行为所依据的证据、规范和相关程序的合法性审查力度，对于与法律、法规相抵触的行政行为予以确认违法，对于相关规范性文件的“不合法条款”将发出司法建议并督促有关行政机关予以修订，实现源头治理，充分保障人民群众的人身和财产安全。加大产权保护力度，依法平等对待各类市场主体，对于侵犯企业合法产权和自主经营权的行政行为要明确认定其违法，应当予以撤销的要撤销，可以补救的应当判决行政机关限期采取补救措施，需要赔偿或补偿的要尽可能一并予以判决，尽快帮助企业恢复正常的生产和经营。全面对标诚信政府、法治政府的建设标准和要求，依法规范和治理地方政府的招商引资行为，加大信赖利益保护，对于因政府负责人更替、机构合并等原因导致的不履行行政协议约定的义务、违法行使行政优益权、不兑现招商承诺等违法行为予以纠正，营造稳定公平透明、可预期的法治化营商环境。依法审理检察机关提起的行政公益诉讼案件，既要维护检察机关的起诉权，也要尊重行政机关的法定裁量权，平等充分听取双方意见，稳妥居中裁判，切实发挥行政公益诉讼制度的正向价值。</p>
+<p>——坚持多元解纷，统筹各方力量和各种资源，共同推动行政案件的诉前调解、实质化解，形成参与“诉源治理”的合力。加大诉前调解和多元化解力度，试点在部分法院建立行政争议诉前调解中心，对于土地征收补偿、房屋拆迁、社会保险、村民资格确认、自然资源确权等涉及民生权益、社会福祉类行政案件，在立案前由相关行政机关、人民调解机构、其他社会团体或引入学者、律师等共同参与先行调解，力促行政争议早化解、快解决。认真贯彻《中华人民共和国人民陪审员法》，发挥人民陪审员在推进司法民主、促进司法公正、提高司法公信等方面的重要作用，尤其是在涉及群体利益、公共利益或者社会公众高度关注的行政案件中，由法官和人民陪审员共同组成合议庭，在行政裁判中充分吸纳民意、体现民意，提升裁判的社会认同感和接受度。善于运用司法建议，主动服务和护航当地的中心工作、重点工作、重大项目，提出法律意见，提供司法保障。加强与行政复议机关的联动机制建设，推动和支持行政复议机关发挥其作为上级行政机关的领导优势，推动行政复议实质化，发挥行政机关内部自我纠错功能。通过与行政机关召开案例研讨会、案例点评会等形式，不断统一行政裁决、行政复议、行政审判标准，发挥行政裁决、行政复议程序的过滤功能，形成实质性解决行政争议的合力。</p>
+<p>——坚持改革创新，继续优化行政审判体制机制，不断破解影响行政审判工作科学发展的难题。合理调整行政案件级别管辖，优化全省三级法院职能定位，发挥不同审级法院的不同功能，将一些不存在地方干预的信息公开、自然资源确权等行政案件下沉到集中管辖试点基层法院一审管辖，夯实基层工作，力促矛盾纠纷就地化解，强化中级法院二审纠错、定纷止争以及高级法院对下指导、统一尺度的功能作用。继续巩固行政案件集中管辖改革成果，逐步优化统一集中管辖改革模式，推动各地市全面施行 “全面集中”或者“全面集中+交叉集中”的模式，完善配套工作机制，推动集中管辖改革向更高层次发展。<strong>尝试将繁简分流简案快审机制改革与推进庭审方式和裁判文书改革有机统一起来，在收案量较大的珠三角地区中级法院试点简单行政二审案件快审工作，针对简单案件的不同类型分别引入表格式、要素式、令状式裁判文书，推行标准化、模块化说理，推动行政审判质量效率大幅提高。</strong></p>
+<p>——坚持理论研究，加强以案释法，认真落实“谁执法谁普法”的普法责任，不断满足人民群众日益增长的多元司法需求。贯彻广东省委部署开展“大学习、深调研、真落实”活动要求，把大调研、深调研作为发现问题、查找短板、释放潜力、谋划发展的重要工作方法。按照实现国家治理体系和治理能力现代化的要求，依托广东行政审判案例研究基地，加强对现代行政管理理念和新型行政管理方式的理论研究，对审判实务中出现的涉及行政协议、农村集体土地征收、规范性文件附带审查、行政争议多元化解、行政速裁制度等系列热点、难点问题开展专题研讨，提出切实可行的解决方案。与广东省司法厅、广东省普法办共建领导干部旁听庭审学法用法机制，加强与党校共建依法行政教育基地的相关工作力度，推动典型案例、公开庭审、法官沙龙等进入领导干部培训课程，成为全省国家工作人员学法用法的必修内容，不断提升领导干部和执法人员的法治意识和依法行政能力。按照“谁执法谁普法”的要求，建立法官以案释法说法制度，充分运用公开庭审、巡回审判、庭审直播等形式开展普法宣传，开展“庭审进校园”、“法官实务讲座”等系列活动，推动全民守法。加强典型行政案例工作，定期发布典型类案，汇编出版全省性典型案例，推动行政案例电子数据库建设，不断推动行政执法尺度和裁判尺度相统一。</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>广东</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>民事诉讼流程图</title>
+    <url>//p/c0e147ce.html</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200519151837.png" alt="民事诉讼流程图"></p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>工作流程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>广州互联网法院 构建“互联网+”金融解纷新机制</title>
+    <url>//p/371627f3.html</url>
+    <content><![CDATA[<h2 id="广州互联网法院-构建“互联网-”金融解纷新机制"><a href="#广州互联网法院-构建“互联网-”金融解纷新机制" class="headerlink" title="广州互联网法院 构建“互联网+”金融解纷新机制"></a>广州互联网法院 构建“互联网+”金融解纷新机制</h2><p>发布时间：2019-12-23 16:37:41</p>
+<p>​    为及时回应数字经济发展进程中的司法新需求，探索创新“互联网+”纠纷解决机制，广州互联网法院联合政法系统、地方金融监管系统、金融业机构等80余家单位，共建数字金融协同治理中心，上线“类案批量智审系统”，协同打造“一系统+一指引+一中心”创新模式，共建数字金融纠纷解决机制改革新样板，强化互联网金融综合治理，以良好法治环境助力普惠金融发展，为粤港澳大湾区数字金融建设赋能。</p>
+<a id="more"></a>
+<p>一、以技术强化为驱动，打造全国首个互联网金融纠纷全流程在线批量审理系统</p>
+<p>上线在线纠纷“类案批量智审系统”，全程覆盖存证调证、催告、和解、调解、申请立案、立案审查、送达、证据交换、庭审、宣判、执行等诉讼环节，实现案件全程在线快速、批量、智能办理。一是便捷自动存证。依托“网通法链”智慧信用生态系统，广州互联网法院诉讼平台标准化对接多个存证平台数据库，已存证电子数据，可直接批量导入诉讼平台；未存证电子数据，可依照要素列表整理，批量提交。二是失联修复送达。系统送达全程区块链留痕，可实时追踪送达时间、地点、签收人等关键节点信息。对无法电子送达的当事人，系统采用失联修复技术，可自动获取其本人近三个月内活跃的手机号码、电子邮箱等作为优先送达地址，提升电子送达率。三是批量立案裁判。系统借助案件信息预先配置、证据要素智能审定技术实现批量立案、匹配和审核，可一键批量生成令状式、要素式、表格式等各式文书，显著减少法官工作量，提升金融纠纷案件审判质效。四是推广示范性审判。对于代表性强、具有示范意义的典型案件，法官可以通过系统发送邀请码等形式，实现同类型案件当事人在线旁听，推动平行案件达成和解、调解协议或自动履行，引导非判决方式批量解决纠纷。</p>
+<p>二、以标准制定为抓手，出台全国首个互联网金融在线程序指引</p>
+<p>出台《广州互联网法院互联网金融借款、小额借款合同纠纷在线批量化解程序指引（试行）》，以多层次数字金融司法需求为切入点，在保障当事人权益前提下优化审理程序，破解互联网金融案件治理规则不完善难题。一是严格纠纷准入标准。程序仅限标的额小、以快速批量处理、在线执行即可化解的纠纷，避免纠纷因化解难、执行难而批量滞留于司法程序，确保纠纷智能、高效、有序化解。就申请批量化解程序的案件，严抓“八道准入门槛”，从当事人身份认证、证据标准、送达方式、合规程度、执行模式、贷款标的、风险控制、事先承诺八方面明确批量标准。二是前置部分审查内容。在立案审查阶段，提前全面审查影响贷款产品利息、费用、催收方式、违约责任、格式条款、个人信息收集等内容。明确电子送达方式、范围和效力，引导借贷双方在合同中约定适用电子送达适用于对所有法律文书的送达，真正实现“全程留痕、回溯可查、全时在线、在线解纷”。三是简化在线审理程序。明确批量纠纷在线庭审简化条件，确保当事人权利正常行使。庭前集中完成纪律宣告等程序，庭上直接针对诉讼请求、争议焦点等展开要素式审理。明确不开庭审理情形，对于当事人已关联案件，采用回溯查询方式引导当事人在本院指定时间内举证质证、充分发表意见。当事人同意且案件事实清楚的，可不再组织开庭。四是赋能纠纷多元化解。针对互联网金融借款、小额借款合同纠纷高度标准化、类型化的特点，发挥广州互联网法院在线纠纷多元化解平台功能，设计了催告、和解、调解、支付令、审判等多手段组合运用的个性化的化解程序，鼓励快速兑现债权利益，鼓励以非判决方式兑现债权利益。</p>
+<p>三、以多元协同为模式，共建全国首个数字金融协同治理中心</p>
+<p>共建数字金融协同治理中心，践行“国家主导、司法推动、社会参与、多元并举、法治保障”解纷理念，增强数字金融协同治理的立体性、便民性与时效性，实现“司法+政府+社会”三元体系同频共振。一是坚持本位意识，提供优质司法服务。广州互联网法院站在维护国家安全的政治高度，围绕防范化解重大金融风险和粤港澳大湾区发展，不断提升在线诉讼全流程批量工作的整体水平，为数字经济可持续发展提供优质、高效、便捷的司法服务和保障。积极应对新形势下互联网金融风险防控任务的新问题、新要求，创新解纷手段，丰富技术运用、拓展应用场景、创新应用效果，使电子催告、引导和解、在线调解常态化，为债权实现提供更多保障手段。用“低成本”“快审理”优质司法服务画出一流营商环境“磁场圈”。二是坚持协同意识，聚合多方优势资源。以多元化数字金融纠纷化解为着眼点，提升优势资源“虹吸效应”。主动“走出去”，进一步融入党委和政府领导的诉源治理机制建设，以裁判规则向纠纷源头防控延伸，指引互联网金融行业健康发展。积极“引进来”，以开放、共建的崭新姿态加强吸纳各方力量加入纠纷多元化解平台，凝聚合力，推动构建综合治网新格局。携手政党机关、行业协会、金融机构再创新活力，共同拓宽社会治理“朋友圈”。三是坚持风险意识，全面优化风险体系。进一步发挥司法审判与行政监管的双重化合作用，有效形成数字金融预防、监督、打击的治理闭环，使多方协同治理真正成为数字金融发展的安全阀、调节器和稳定剂。以全方位数字金融业态风险防控为落脚点，充分发挥互联网司法大数据多源分析、多维评估、多重预警作用，建机制、定规则、搭平台、推应用，为打好防范化解重大金融风险攻坚战提供坚强保障，推动形成“数字湾区”金融发展“生态圈”。 </p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>广东</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最高院关于修改最高院适用《民诉法》的解释第一百四十条建议的答复</title>
+    <url>//p/cd1b580b.html</url>
+    <content><![CDATA[<p>对十二届全国人大五次会议第1755号建议的答复</p>
+<p>您提出的关于修改最高人民法院关于适用《中华人民共和国民事诉讼法》的解释第一百四十条的建议收悉，现答复如下：</p>
+<a id="more"></a>
+<p>根据《中华人民共和国民事诉讼法》（以下简称民事诉讼法）第一百五十七条的规定，基层人民法院和它派出的法庭审理事实清楚、权利义务关系明确、争议不大的简易的民事案件，可以适用简易程序。根据民事诉讼法第九十二条的规定，公告送达适用于受送达人下落不明或者用其他方式无法送达的情形。由于公告送达是一种拟制送达方式，案件事实、权利义务关系、当事人之间的争议不易确定，不符合民事诉讼法第一百五十七条规定的简易程序适用条件，故民事诉讼法司法解释第一百四十条规定，适用简易程序的案件，不适用公告送达。</p>
+<p>审判实践中，确实存在被告故意避而不见、不参加庭审、不接收法律文书等规避送达的情形。对此，可以通过加强送达工作、改进送达方式等措施着力解决。2017年7月，最高人民法院印发《关于进一步加强民事送达工作的若干意见》， 全面推进当事人送达地址确认制度，统一送达地址确认书格式，规范送达地址确认书，提升民事送达的质量和效率。今后，我们将对送达问题继续调查研究，在总结审判实践经验基础上推动民事送达制度的完善。</p>
+<p>感谢您对人民法院工作的关心和支持。</p>
+<p>​      2017年8月26日</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>民诉法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>民事诉讼程序繁简分流改革试点实施办法</title>
     <url>//p/df01caaa.html</url>
     <content><![CDATA[<h2 id="民事诉讼程序繁简分流改革试点实施办法"><a href="#民事诉讼程序繁简分流改革试点实施办法" class="headerlink" title="民事诉讼程序繁简分流改革试点实施办法"></a>民事诉讼程序繁简分流改革试点实施办法</h2><ul>
@@ -1519,11 +1763,181 @@
       </tags>
   </entry>
   <entry>
-    <title>要素式审核-c</title>
-    <url>//p/4d915dad.html</url>
-    <content><![CDATA[<p>山东省高级人民法院要素式审判方式指引（试行）</p>
+    <title>济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）</title>
+    <url>//p/6d6f6f8d.html</url>
+    <content><![CDATA[<h2 id="济南知识产权法庭编发“著作权侵权纠纷案件审判要素表-要素式判决书样式”（范本）"><a href="#济南知识产权法庭编发“著作权侵权纠纷案件审判要素表-要素式判决书样式”（范本）" class="headerlink" title="济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）"></a>济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）</h2><p><strong>发布：**</strong>济南中院新闻中心<strong> </strong>来源：济南知识产权法庭**</p>
+<p>​    为贯彻落实最高人民法院民事诉讼程序繁简分流改革试点精神以及省法院要素式审判方式指引规定要求，进一步提升著作权侵权纠纷案件审判质效，更加合理分配司法审判资源，济南知识产权法庭依照《济南市中级人民法院关于民事诉讼程序繁简分流改革试点工作实施方案（试行）》，结合济南知识产权审判工作实际，编写了《著作权侵权纠纷案件审判要素表、要素式判决书样式》并予以印发。</p>
 <a id="more"></a>
-<div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="800px"></div>]]></content>
+<p>​    《著作权侵权纠纷案件审判要素表、要素式判决书样式》为基层法院适用小额诉讼程序或者简易程序审理图片类、音乐作品类著作权侵权案件提供了规范化指引，并为审判流程和裁判文书的简化进一步细化了操作流程。</p>
+<p><strong>著作权侵权纠纷案件审判要素表</strong></p>
+<p><strong>
+</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>提示：</strong>1.为了帮助您更好地参加诉讼，保护您的合法权利，请填写本表。2.本表所列各项内容为法院查明案件事实所需，务必如实填写。3.您在本表中所填内容属于依法向法院陈述的事实，不如实填写应承担由此产生的法律后果。4.本表有些内容可能与您的案件无关，您认为与案件无关的项目可以填“无”或不填；对于本表中勾选项可以在对应项打“√”；您认为另有重要内容未予列明的，可以在本表尾部填写。</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>案件事实要素</strong></td>
+<td><strong>原告填写</strong></td>
+<td><strong>被告**</strong>/<strong>**第三人确认</strong></td>
+</tr>
+<tr>
+<td>1.权利主体</td>
+<td>原始著作权人□ 受让人□1.合同签订时间：2.转让的权利种类：3.地域范围： 被许可使用人□1.合同签订时间：2.许可使用的权利种类、是否为专有使用权：3.地域范围、期间： 其他□</td>
+<td></td>
+</tr>
+<tr>
+<td>2.权利内容</td>
+<td>作品类型： 作品名称： 作品完成时间： 发表时间： 作品载体： 著作权登记证书1.登记机关：2.登记时间： 权利种类1.复制权2.发行权3.信息网络传播权4.放映权5.获得报酬权6.其他</td>
+<td></td>
+</tr>
+<tr>
+<td>3.侵权行为及取证方式</td>
+<td>1. 2. 3.</td>
+<td></td>
+</tr>
+<tr>
+<td>4.被诉侵权作品与权利作品比对情况</td>
+<td>构成相同□构成实质性相似□</td>
+<td></td>
+</tr>
+<tr>
+<td>5.损害赔偿</td>
+<td>实际损失□1.数额：2.计算方式： 侵权获利□1.数额：2.计算方式： 参照许可使用费□1.数额：2.计算方式： 法定赔偿□1.数额：2.参考依据：</td>
+<td></td>
+</tr>
+<tr>
+<td>6.合理开支</td>
+<td>公证费□：<strong><em>__</em></strong>元；律师费□：<strong><em>__</em></strong>元；调查费□：<strong><em>__</em></strong>元；其他□：<strong><em>__</em></strong>元。</td>
+<td></td>
+</tr>
+<tr>
+<td>7.是否有合法来源</td>
+<td></td>
+<td>是□1.来源主体：<strong><em>__</em></strong>2.来源渠道：合同□ 发票□ 进货单□ 销售单□ 出库单□ 其他□ 否□</td>
+</tr>
+<tr>
+<td>8.当事人需要明确的其他事项</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>填表人（签字、盖章）</strong></td>
+<td><strong>原告：</strong></td>
+<td><strong>被告**</strong>/<strong>**第三人：</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>著作权侵权纠纷案件要素式判决书样式</strong></p>
+<p>××××人民法院</p>
+<p><strong>民 事 判 决 书</strong></p>
+<p>(××××)……民初……号</p>
+<p>原告：×××，男/女，××××年×月×日出生，×族，……(工作单位和职务或者职业)，住……。</p>
+<p>法定代理人/指定代理人/法定代表人/主要负责人：×××，……。</p>
+<p>委托诉讼代理人：×××，……。</p>
+<p>被告：×××，……。</p>
+<p>法定代理人/指定代理人/法定代表人/主要负责人：×××，……。</p>
+<p>委托诉讼代理人：×××，……。</p>
+<p>(以上写明当事人和其他诉讼参加人的姓名或者名称等基本信息)</p>
+<p>原告×××与被告×××……（写明案由）一案，本院于×××年×月×日立案后，依法适用简易程序/小额诉讼程序，公开/因涉及……（写明不公开开庭的理由）不公开开庭进行了审理。原告×××、被告×××(写明当事人和其他诉讼参加人的诉讼地位和姓名或者名称)到庭参加诉讼。本案现已审理终结。</p>
+<p>原告向本院提出诉讼请求：…。</p>
+<p>被告辩称，…。</p>
+<p>本院经审理认定事实如下：</p>
+<p>一、原告权利来源情况：原告系</p>
+<p>原始著作权人□</p>
+<p>受让人□</p>
+<p>1.合同签订时间：<strong><strong><strong>__</strong></strong></strong></p>
+<p>2.转让的权利种类：<strong><strong><strong>__</strong></strong></strong></p>
+<p>3.地域范围：<strong><strong><strong>__</strong></strong></strong></p>
+<p>被许可使用人□</p>
+<p>1.合同签订时间：<strong><strong><strong>__</strong></strong></strong></p>
+<p>2.许可使用的权利种类、是否为专有使用权：<strong><strong><strong>__</strong></strong></strong></p>
+<p>3.地域范围、期间：<strong><strong><strong>__</strong></strong></strong></p>
+<p>二、权利内容：</p>
+<p>作品类型：<strong><strong><strong>__</strong></strong></strong></p>
+<p>作品名称：<strong><strong><strong>__</strong></strong></strong></p>
+<p>作品完成时间、发表时间：<strong><strong><strong>__</strong></strong></strong></p>
+<p>作品载体：<strong><strong><strong>__</strong></strong></strong></p>
+<p>著作权登记证书</p>
+<p>1.登记机关：<strong><strong><strong>__</strong></strong></strong></p>
+<p>2.登记时间：<strong><strong><strong>__</strong></strong></strong></p>
+<p>权利种类</p>
+<p>1.复制权</p>
+<p>2.发行权</p>
+<p>3.信息网络传播权</p>
+<p>4.放映权</p>
+<p>5.获得报酬权</p>
+<p>6.其他：</p>
+<p>三、被告侵权行为：<strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong></p>
+<hr>
+<p>被诉侵权作品与权利作品比对情况：</p>
+<p>是否构成相同：是□；否□</p>
+<p>是否构成实质性相似：是□；否□</p>
+<p>四、损害赔偿：</p>
+<p>1.实际损失□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
+<p>2.侵权获利□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
+<p>3.参照许可使用费□：数额<strong><em>__</em></strong>，计算方式<strong><em>__</em></strong>；</p>
+<p>4.法定赔偿□：数额<strong><em>__</em></strong>,参考依据<strong><em>__</em></strong>。</p>
+<p>五、合理开支：公证费□<strong><em>__</em></strong>；律师费□<strong><em>__</em></strong>；调查费□<strong><em>__</em></strong>；其他□<strong><em>_</em></strong>。</p>
+<p>六、是否有合法来源：否□；</p>
+<p>是□1.来源主体<strong><strong><strong><em>_</em></strong></strong></strong></p>
+<p>2.来源渠道:合同□发票□进货单□销售单□出库单□其他□</p>
+<p>七、其他必要事项<strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong>。</p>
+<p>以上事项中，双方有争议的事项为第×项、第×项，其他事项双方无争议。</p>
+<p>综上所述，……(写明对当事人的诉讼请求及主张是否支持进行评述)。依照《中华人民共和国……法》第×条、……(写明法律文件名称及其条款项序号)规定，判决如下：</p>
+<p>……(写明判决结果)。</p>
+<p>如果未按本判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百五十三条规定，加倍支付迟延履行期间的债务利息(没有给付金钱义务的，不写)。</p>
+<p>案件受理费……元，由……负担(写明当事人姓名或者名称、负担金额)。</p>
+<p>如不服本判决，可以在判决书送达之日起十五日内，向本院递交上诉状，并按对方当事人或代表人的人数提出副本，上诉于××××人民法院。/本判决为终审判决。（小额诉讼程序）</p>
+<p>​        　　</p>
+<p>审 判 员   ×××</p>
+<p>××××年××月××日</p>
+<p>书 记 员   ×××</p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法</title>
+    <url>//p/63e6ca99.html</url>
+    <content><![CDATA[<h2 id="最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法"><a href="#最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法" class="headerlink" title="最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法"></a>最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法</h2><ul>
+<li>来源：人民法院新闻传媒总社  发布时间：2020-01-15 21:49:16</li>
+</ul>
+<p>为深入贯彻中央决策部署，认真落实全国人大常委会授权决定，深化民事诉讼制度改革，推进案件繁简分流、轻重分离、快慢分道；为充分保障人民群众合法诉讼权益，有效降低当事人诉讼成本，满足人民群众多元、高效、便捷的解纷需求，进一步优化司法资源配置，提升审判工作质效和公信力，今天，最高人民法院印发《民事诉讼程序繁简分流改革试点方案》和《民事诉讼程序繁简分流改革试点实施办法》，正式启动为期2年的试点工作。</p>
+<a id="more"></a>
+<p>　　按照重大改革先行先试要求，最高人民法院经扎实深入调研，广泛征求意见，根据全国人大常委会授权决定，研究起草了《试点方案》和《实施办法》。《试点方案》明确了改革目标和基本原则、试点主要内容、试点范围和期限、方案实施和组织保障等内容，《实施办法》共30条，对试点方案作了进一步细化，是开展试点工作的具体依据。两个文件主要内容包括五个方面：</p>
+<p>　　一是优化司法确认程序。文件规定，除人民调解委员会外，将特邀调解组织、特邀调解员主持达成的调解协议纳入司法确认范围，明确司法确认案件管辖规则，允许中级人民法院及专门人民法院受理符合级别管辖及专门管辖标准的司法确认案件，进一步规范和促进非诉调解工作，提升纠纷化解效率，增强调解公信力。</p>
+<p>　　二是完善小额诉讼程序。文件规定，小额诉讼程序适用于标的额为人民币5万元以下的案件，对于标的额在人民币5万至10万元的案件，允许当事人合意选择适用小额诉讼程序。在充分保障当事人诉讼权利基础上，进一步简化小额诉讼程序审理方式和裁判文书，合理确定小额诉讼案件审限。规范小额诉讼程序与简易程序、普通程序的转换适用机制。</p>
+<p>　　三是完善简易程序规则。文件规定，合理扩大简易程序适用范围，将需要公告送达的简单民事案件纳入适用范围。进一步明确简易程序庭审和文书简化规则，优化庭审程序和审理方式，推行要素式裁判文书，对事实清楚、争议不大的案件可以适当简化说理。</p>
+<p>　　四是扩大独任制适用。文件规定，在一审程序中，基层法院可以采取独任制审理部分民事案件。在二审程序中，中级法院及专门法院可采取独任制审理一审以简易程序审结的上诉案件以及民事裁定上诉案件，实现二审程序繁简分流。同时，建立完善独任制与合议制转换适用机制，充分保障当事人诉讼权利，保障案件审判质量。</p>
+<p>　　五是健全电子诉讼规则。文件着力明确相关电子诉讼规则，进一步拓展在线诉讼探索空间，为在线诉讼活动提供法律依据，包括：明确电子化材料提交效力，当事人以电子化方式提交诉讼材料和证据材料的，经人民法院审核通过后可以不再提交纸质原件；确立完善在线庭审规则，将适用普通程序审理的案件纳入在线庭审范围；完善电子送达机制，明确电子送达适用条件、适用范围和生效标准，经当事人同意，可以采用电子方式送达判决书、裁定书、调解书等。</p>
+<p>　　文件还规定，民事诉讼程序繁简分流改革试点将在北京、上海、江苏、浙江、福建、广东等15个省、自治区、直辖市内纳入试点的中级法院、专门法院及其辖区基层法院开展。试点法院将根据全国人大常委会授权决定，调整适用相关法律规定。最高人民法院将适时就试点工作情况向全国人大常委会作专题报告。（孙航）</p>
+<p>　　<strong>附：</strong><br>　　<strong><a href="http://www.court.gov.cn/fabu-xiangqing-217551.html" target="_blank" rel="noopener">民事诉讼程序繁简分流改革试点方案</a></strong><br>　　<strong><a href="http://www.court.gov.cn/fabu-xiangqing-217561.html" target="_blank" rel="noopener">民事诉讼程序繁简分流改革试点实施办法</a></strong></p>
+]]></content>
+      <categories>
+        <category>法律知识</category>
+      </categories>
+      <tags>
+        <tag>法院</tag>
+        <tag>繁简分流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用法律文书收集</title>
+    <url>//p/71b20ea9.html</url>
+    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
+]]></content>
       <categories>
         <category>法律知识</category>
       </categories>
@@ -1701,12 +2115,11 @@
       </tags>
   </entry>
   <entry>
-    <title>要素式审核-最高人民法院关于民商事案件繁简分流和调解速裁操作规程</title>
-    <url>//p/27f07296.html</url>
-    <content><![CDATA[<p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程</p>
+    <title>要素式审核-c</title>
+    <url>//p/4d915dad.html</url>
+    <content><![CDATA[<p>山东省高级人民法院要素式审判方式指引（试行）</p>
 <a id="more"></a>
-<div class="pdfobject-container" data-target="/files/最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf" data-height="800px"></div>
-]]></content>
+<div class="pdfobject-container" data-target="/files/山东省高级人民法院要素式审判方式指引（试行）.pdf" data-height="800px"></div>]]></content>
       <categories>
         <category>法律知识</category>
       </categories>
@@ -1742,79 +2155,17 @@
       </tags>
   </entry>
   <entry>
-    <title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title>
-    <url>//p/23a9bdeb.html</url>
-    <content><![CDATA[<p>以下文章来源于CodeSheep ，作者hansonwong99</p>
-<h2 id="老大说：谁要再用double定义商品金额，就自己收拾东西走"><a href="#老大说：谁要再用double定义商品金额，就自己收拾东西走" class="headerlink" title="老大说：谁要再用double定义商品金额，就自己收拾东西走!"></a>老大说：谁要再用double定义商品金额，就自己收拾东西走!</h2><h2 id="先看现象"><a href="#先看现象" class="headerlink" title="先看现象"></a>先看现象</h2><p>涉及诸如<code>float</code>或者<code>double</code>这两种浮点型数据的处理时，偶尔总会有一些<strong>怪怪的现象</strong>，不知道大家注意过没，举几个常见的栗子：</p>
+    <title>要素式审核-最高人民法院关于民商事案件繁简分流和调解速裁操作规程</title>
+    <url>//p/27f07296.html</url>
+    <content><![CDATA[<p>最高人民法院关于民商事案件繁简分流和调解速裁操作规程</p>
 <a id="more"></a>
-<p><strong>典型现象（一）：条件判断超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.9999999f );   &#x2F;&#x2F; 打印：false</span><br><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );  &#x2F;&#x2F; 打印：true    纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（二）：数据转换超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f &#x3D; 1.1f;</span><br><span class="line">double d &#x3D; (double) f;</span><br><span class="line">System.out.println(f);  &#x2F;&#x2F; 打印：1.1</span><br><span class="line">System.out.println(d);  &#x2F;&#x2F; 打印：1.100000023841858  纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（三）：基本运算超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 0.2 + 0.7 );  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打印：0.8999999999999999   纳尼？</span><br></pre></td></tr></table></figure>
-<p><strong>典型现象（四）：数据自增超预期</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f1 &#x3D; 8455263f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f1);</span><br><span class="line">    f1++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 打印：8455263.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455264.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455265.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455266.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455267.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455268.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455269.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455270.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455271.0</span><br><span class="line">&#x2F;&#x2F; 打印：8455272.0</span><br><span class="line"></span><br><span class="line">float f2 &#x3D; 84552631f;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">    System.out.println(f2);</span><br><span class="line">    f2++;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br><span class="line">&#x2F;&#x2F;    打印：8.4552632E7   纳尼？不是 +1了吗？</span><br></pre></td></tr></table></figure>
-<p>看到没，这些简单场景下的使用情况都很难满足我们的需求，所以说用浮点数（包括<code>double</code>和<code>float</code>）处理问题有非常多<strong>隐晦的坑</strong>在等着咱们！</p>
-<p>怪不得技术总监发狠话：谁要是敢在处理诸如 <strong>商品金额</strong>、<strong>订单交易</strong>、以及<strong>货币计算</strong>时用浮点型数据（<code>double</code>/<code>float</code>），直接让我们走人！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432768.png" alt="img"></p>
-<hr>
-<h2 id="原因出在哪里？"><a href="#原因出在哪里？" class="headerlink" title="原因出在哪里？"></a>原因出在哪里？</h2><p>我们就以第一个典型现象为例来分析一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println( 1f &#x3D;&#x3D; 0.99999999f );</span><br></pre></td></tr></table></figure>
-<p>直接用代码去比较<code>1</code>和<code>0.99999999</code>，居然打印出<code>true</code>！</p>
-<p>这说明了什么？这说明了计算机压根<strong>区分不出来</strong>这两个数。这是为什么呢？</p>
-<p>我们不妨来简单思考一下：</p>
-<blockquote>
-<p>我们知道输入的这两个浮点数只是我们人类肉眼所看到的具体数值，是我们通常所理解的十进制数，但是计算机底层在计算时可不是按照十进制来计算的，学过基本计组原理的都知道，计算机底层最终都是基于像<code>010100100100110011011</code>这种<code>0</code>、<code>1</code>二进制来完成的。</p>
-</blockquote>
-<p>所以为了搞懂实际情况，我们应该将这两个十进制浮点数<strong>转化到二进制空间</strong>来看一看。</p>
-<p><strong>十进制浮点数转二进制</strong> 怎么转、怎么计算，我想这应该属于基础计算机进制转换常识，在 <strong>《计算机组成原理》</strong> 类似的课上肯定学过了，咱就不在此赘述了，直接给出结果（把它转换到<code>IEEE 754 Single precision 32-bit</code>，也就<code>float</code>类型对应的精度）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.99999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br></pre></td></tr></table></figure>
-<p><strong>果不其然</strong>，这两个十进制浮点数的底层二进制表示是一毛一样的，怪不得<code>==</code>的判断结果返回<code>true</code>！</p>
-<p>但是<code>1f == 0.9999999f</code>返回的结果是符合预期的，打印<code>false</code>，我们也把它们转换到二进制模式下看看情况：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.0（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 10000000 00000000 00000000（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F800000（十六进制）</span><br><span class="line">0.9999999（十进制）</span><br><span class="line">    ↓</span><br><span class="line">00111111 01111111 11111111 11111110（二进制）</span><br><span class="line">    ↓</span><br><span class="line">0x3F7FFFFE（十六进制）</span><br></pre></td></tr></table></figure>
-<p>哦，很明显，它俩的二进制数字表示确实不一样，这是理所应当的结果。</p>
-<p>那么为什么<code>0.99999999</code>的底层二进制表示竟然是：<code>00111111 10000000 00000000 00000000</code>呢？</p>
-<p>这不明明是浮点数<code>1.0</code>的二进制表示吗？</p>
-<p>这就要谈一下浮点数的精度问题了。</p>
-<hr>
-<h2 id="浮点数的精度问题！"><a href="#浮点数的精度问题！" class="headerlink" title="浮点数的精度问题！"></a>浮点数的精度问题！</h2><p>学过 <strong>《计算机组成原理》</strong> 这门课的小伙伴应该都知道，浮点数在计算机中的存储方式遵循<strong>IEEE 754 浮点数计数标准</strong>，可以用科学计数法表示为：</p>
-<p>只要给出：<strong>符号（S）</strong>、<strong>阶码部分（E）</strong>、<strong>尾数部分（M）</strong> 这三个维度的信息，一个浮点数的表示就完全确定下来了，所以<code>float</code>和<code>double</code>这两种浮点数在内存中的存储结构如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/641.png" alt="img"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640.png" alt="img"></p>
-<p><strong>1、符号部分（S）</strong></p>
-<p><code>0</code>-正 <code>1</code>-负</p>
-<p><strong>2、阶码部分（E）（指数部分）</strong>：</p>
-<ul>
-<li>对于<code>float</code>型浮点数，指数部分<code>8</code>位，考虑可正可负，因此可以表示的指数范围为<code>-127 ~ 128</code></li>
-<li>对于<code>double</code>型浮点数，指数部分<code>11</code>位，考虑可正可负，因此可以表示的指数范围为<code>-1023 ~ 1024</code></li>
-</ul>
-<p><strong>3、尾数部分（M）</strong>：</p>
-<p>浮点数的精度是由尾数的位数来决定的：</p>
-<ul>
-<li>对于<code>float</code>型浮点数，尾数部分<code>23</code>位，换算成十进制就是 <code>2^23=8388608</code>，所以十进制精度只有<code>6 ~ 7</code>位；</li>
-<li>对于<code>double</code>型浮点数，尾数部分<code>52</code>位，换算成十进制就是 <code>2^52 = 4503599627370496</code>，所以十进制精度只有<code>15 ~ 16</code>位</li>
-</ul>
-<p>所以对于上面的数值<code>0.99999999f</code>，很明显已经超过了<code>float</code>型浮点数据的精度范围，出问题也是在所难免的。</p>
-<hr>
-<h2 id="精度问题如何解决"><a href="#精度问题如何解决" class="headerlink" title="精度问题如何解决"></a>精度问题如何解决</h2><p>所以如果涉及<strong>商品金额</strong>、<strong>交易值</strong>、<strong>货币计算</strong>等这种对精度要求很高的场景该怎么办呢？</p>
-<p><strong>方法一：用字符串或者数组解决多位数问题</strong></p>
-<p>校招刷过算法题的小伙伴们应该都知道，用字符串或者数组表示大数是一个典型的解题思路。</p>
-<p>比如经典面试题：<strong>编写两个任意位数大数的加法、减法、乘法等运算</strong>。</p>
-<p>这时候我们我们可以用字符串或者数组来表示这种大数，然后按照四则运算的规则来手动模拟出具体计算过程，中间还需要考虑各种诸如：<strong>进位</strong>、<strong>借位</strong>、<strong>符号</strong>等等问题的处理，确实十分复杂，本文不做赘述。</p>
-<p><strong>方法二：Java的大数类是个好东西</strong></p>
-<p>JDK早已为我们考虑到了浮点数的计算精度问题，因此提供了专用于高精度数值计算的<strong>大数类</strong>来方便我们使用。</p>
-<p>Java的大数类位于<code>java.math</code>包下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/640-1587350432792.png" alt="img" style="zoom:50%;" /></p>
-<p>可以看到，常用的<code>BigInteger</code> 和 <code>BigDecimal</code>就是处理高精度数值计算的利器。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BigDecimal num3 &#x3D; new BigDecimal( Double.toString( 1.0f ) );</span><br><span class="line">BigDecimal num4 &#x3D; new BigDecimal( Double.toString( 0.99999999f ) );</span><br><span class="line">System.out.println( num3 &#x3D;&#x3D; num4 );  &#x2F;&#x2F; 打印 false</span><br><span class="line"></span><br><span class="line">BigDecimal num1 &#x3D; new BigDecimal( Double.toString( 0.2 ) );</span><br><span class="line">BigDecimal num2 &#x3D; new BigDecimal( Double.toString( 0.7 ) );</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 加</span><br><span class="line">System.out.println( num1.add( num2 ) );  &#x2F;&#x2F; 打印：0.9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 减</span><br><span class="line">System.out.println( num2.subtract( num1 ) );  &#x2F;&#x2F; 打印：0.5</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 乘</span><br><span class="line">System.out.println( num1.multiply( num2 ) );  &#x2F;&#x2F; 打印：0.14</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 除</span><br><span class="line">System.out.println( num2.divide( num1 ) );  &#x2F;&#x2F; 打印：3.5</span><br></pre></td></tr></table></figure>
-<p>当然了，像<code>BigInteger</code> 和 <code>BigDecimal</code>这种大数类的运算效率肯定是不如原生类型效率高，代价还是比较昂贵的，是否选用需要根据实际场景来评估。</p>
+<div class="pdfobject-container" data-target="/files/最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf" data-height="800px"></div>
 ]]></content>
       <categories>
-        <category>开发经验</category>
+        <category>法律知识</category>
       </categories>
       <tags>
-        <tag>开发经验</tag>
+        <tag>法院</tag>
       </tags>
   </entry>
   <entry>
@@ -1832,34 +2183,6 @@
       <tags>
         <tag>法院</tag>
         <tag>信用卡纠纷</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用法律文书收集</title>
-    <url>//p/71b20ea9.html</url>
-    <content><![CDATA[<p> 信用卡纠纷案件审判要素表.doc  【<a href="https://view.officeapps.live.com/op/view.aspx?src=https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">预览</a>】【<a href="https://github.com/jooejooe/images/blob/master/files/wenshu/%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8.doc?raw=true" target="_blank" rel="noopener">下载</a>】</p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站备案指的是域名备案？ 还是指的服务器备案呢？</title>
-    <url>//p/32883715.html</url>
-    <content><![CDATA[<p>​    一般在建网站的时候很多人对于怎么备案，给域名备案还是服务器备案比较迷糊，下面为大家详细讲解一下，希望各位个人站长或者企业建站可以很准确的搞好备案。</p>
-<p>​    备案是工信部要求的，主要是为了规范网络安全化，维护网站经营者的合法权益，保障网民的合法利益。凡是使用国内空间的网站域名都需要备案。</p>
-<p>​    域名如果绑定指向到国内网站空间就要备案。也就是说如果你这个域名只是纯粹注册下来，用作投资或者暂时不用，是无需备案的。域名指向到国外网站空间，也是无需备案的。由于域名备案基本取决于网站空间的情况，所以备案也是主机提供商提供的，不是域名注册商。 备案是针对空间的，但是备案号是挂在域名上的，可以说备案如果没有空间或者没有域名都备案不了。备案首先是要由空间商审核，审核完才能递交到通管局，审核成功后，备案号是挂在域名上。备案与否是根据空间判断的，空间要求备案就备案，不要求就不用。网站空间怎么备案呢?只要联系当时购买的空间商就可以了，正规的空间商都会提供免费的备案帮助。只要按照空间商的要求准备备案资料就可以了。</p>
-<p>​    备案之后，可以使用国内空间，内地用户打开的速度会大大快于其他空间，保障了排名和转化率。百度，Google，等搜索引擎，对同类型网站的搜录，往往是已备案的多于未备案的。因为没有备案被封过的网站不在少数，其中不备案的很多都是违法网站，一般正规网站备案之后，如果出了问题容易解决，而没有备案的，如果存在违法信息，被发现了，就会直接撤销。另外，如果你的网站涉及违法内容，将可以直接调查到你本人，如果你的网站被攻击或遭受利益上的损失，你可以凭备案许可进行报案。</p>
-<p>​    网站备案到底是给域名备案还是给空间备案?备案说到底是给域名备案，但备案的话离不开域名和国内空间，两者缺一不可。备案的最终结果是让域名有备案号，有了备案号的域名才能访问国内空间。</p>
-]]></content>
-      <categories>
-        <category>开发经验</category>
-      </categories>
-      <tags>
-        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -3122,329 +3445,6 @@
         <tag>法院</tag>
         <tag>要素式审判</tag>
         <tag>内蒙</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>民事诉讼流程图</title>
-    <url>//p/c0e147ce.html</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200519151837.png" alt="民事诉讼流程图"></p>
-]]></content>
-      <categories>
-        <category>法律知识</category>
-      </categories>
-      <tags>
-        <tag>法院</tag>
-        <tag>工作流程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>送达流程</title>
-    <url>//p/1fd17fe4.html</url>
-    <content><![CDATA[<h1 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a>总体流程</h1><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172104.png" alt="img"></p>
-<a id="more"></a>
-<h1 id="系统组成"><a href="#系统组成" class="headerlink" title="系统组成"></a>系统组成</h1><p>送达载体全覆盖，线上线下一体化</p>
-<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172125.jpg" alt="img"></p>
-<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><h2 id="电话送达"><a href="#电话送达" class="headerlink" title="电话送达"></a>电话送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172150.png" alt="img"></p>
-<h2 id="电子送达"><a href="#电子送达" class="headerlink" title="电子送达"></a>电子送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172201.png" alt="img"></p>
-<h2 id="邮寄送达"><a href="#邮寄送达" class="headerlink" title="邮寄送达"></a>邮寄送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172210.png" alt="img"></p>
-<h2 id="外勤送达"><a href="#外勤送达" class="headerlink" title="外勤送达"></a>外勤送达</h2><p><img src="images/20_wqsd.png" alt="img"></p>
-<h2 id="公告送达"><a href="#公告送达" class="headerlink" title="公告送达"></a>公告送达</h2><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200525172231.png" alt="img"></p>
-<h2 id="网格协助"><a href="#网格协助" class="headerlink" title="网格协助"></a>网格协助</h2><p><img src="images/20_wgxz.png" alt="img"></p>
-<h2 id="短信送达"><a href="#短信送达" class="headerlink" title="短信送达"></a>短信送达</h2><p><img src="images/20_dxsd.png" alt="img"></p>
-<h2 id="跨域集约"><a href="#跨域集约" class="headerlink" title="跨域集约"></a>跨域集约</h2><p><img src="images/20_kyjy.png" alt="img"></p>
-<h2 id="送达地址库"><a href="#送达地址库" class="headerlink" title="送达地址库"></a>送达地址库</h2><p><img src="images/20_sddzk.jpg" alt="img"></p>
-<h1 id="岗位与设备配置"><a href="#岗位与设备配置" class="headerlink" title="岗位与设备配置"></a>岗位与设备配置</h1><p><img src="images/21.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>送达</category>
-      </categories>
-      <tags>
-        <tag>送达</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>编写技术规范的实用指南</title>
-    <url>//p/44314006.html</url>
-    <content><![CDATA[<p>作为一名软件工程师，你的主要职责是解决技术问题。你的第一个冲动可能是立即直接开始编写代码。但如果你没有仔细考虑过你的解决方案，那么这可能是一个糟糕的主意。</p>
-<a id="more"></a>
-<p>你可以通过编写技术规范来思考一些困难的技术问题。如果你自认并非一个好作家，那么编写这样的技术规范可能会让你感到沮丧。你甚至可能认为这是一件不必要的琐事。但是，编写技术规范真的可以增加成功的项目、服务或功能的机会，让所有利益相关者都感到满意。它可以降低在实施过程中甚至在产品发布之后出现严重错误的几率。</p>
-<p>在本文中，我将讲述如何编写确保产品质量的技术规范。</p>
-<p><strong>什么是技术规范文档</strong></p>
-<p>技术规范文档概述了如何通过设计和构建解决方案来解决技术问题。它有时也被称为技术设计文档、软件设计文档或工程设计文档。它通常是由工程师编写的，他们将构建解决方案或在实施过程中担任负责人，但对于大型项目，它可以由技术负责人、项目负责人或高级工程师编写。这些文档向工程师团队和其他利益相关者展示了功能、项目、计划和服务的设计、所涉及的工作、影响和时间线。</p>
-<p><strong>为什么编写技术规范很重要</strong></p>
-<p>技术规范对参与项目的每个人都有巨大的好处：编写它们的工程师，使用它们的团队，甚至是根据它们设计的项目。以下是你应该编写技术规范的一些理由。</p>
-<p><strong>给工程师带来的好处</strong></p>
-<p>通过编写技术规范，工程师被迫在直接进入代码之前检查问题，在代码中他们可能会忽略解决方案的某些方面。当你把实施过程中需要做的所有工作进行分解、组织和安排，你就会对解决方案的范围有一个更好的认识。因为技术规范是所提议的解决方案的透彻看法，所以技术规范也可以作为项目的文档，无论是在实施阶段还是实施之后的文档，都是为了交流你在项目上的成就。</p>
-<p>有了这个经过深思熟虑的解决方案，你的技术规范就不必再向多个团队成员和利益相关者反复解释你的设计了。但常言道，人无完人。你的同行和经验更为丰富的工程师可能会给你展示他们在设计、新技术、工程实践、替代解决方案等方面的新事物，而这些你以前可能从未见过或从未想到过。他们可能会发现你可能忽略的解决方案的例外情况，从而减少你的责任。反正你编写的技术规范，关注的人越多越好。</p>
-<p><strong>给团队带来的好处</strong></p>
-<p>要在团队和其他利益相关者之间沟通项目设计思想，技术规范是一种直接而有效的方式。整个团队可以协作解决问题并创建解决方案。随着越来越多的团队成员和利益相关者为规范做出贡献，这会让他们在项目中投入更多精力，并鼓励他们主动承担责任，并为之负责。由于每个人都有相同的想法，它限制了重叠工作可能产生的复杂性。不熟悉该项目的新团队成员可以自己加进来，并提前为项目的实施做出贡献。</p>
-<p><strong>给项目带来的好处</strong></p>
-<p>对技术规范的投资最终会带来卓越的产品。由于团队是一致的，并且就需要通过规范完成的工作达成一致，因此大型项目可以进展得更快。规范对于管理复杂性和通过设定项目限制来防止范围和功能蔓延方面是必不可少的。它设定了优先级，从而确保项目中只有影响最大、最紧迫的部分才会被优先考虑。</p>
-<p>项目实施后，它有助于解决项目中出现的问题，并为回顾和事后总结提供见解。最好的计划规范可以作为衡量工程成功与否和工程时间投资回报的最佳指南。</p>
-<p><strong>编写技术规范之前要做什么</strong></p>
-<p>在开始之前，请收集问题域中的现有信息。阅读产品团队提出的任何产品 / 功能要求，以及与项目相关的技术要求 / 标准。在了解问题的来龙去脉后，试着详细地陈述问题，并进行头脑风暴，想出各种你认为可能会解决的解决方案。从你想出的所有方案中选出一个最合理的解决方案。</p>
-<p>记住，你并不是一个人在执行这项任务。请一位对这个问题很有经验的工程师做你的参谋。邀请他们参加会议，并说明问题和你选择的解决方案。列出你的想法和思考过程，并试图说法他们相信你的解决方案是最合适的。收集他们的反馈，并请他们为你的技术规范进行审查。</p>
-<p>终于到了真正编写技术规范的时候了。在你的日程表中留出时间用来编写技术规范的初稿。使用整个团队都可以使用的协作文档服务。获取技术规范模板（见下文），并写一份粗略的草案。</p>
-<p><strong>技术规范的内容</strong></p>
-<p>今天，许多公司都在解决各种各样的问题。每个组织都是独一无二的，并创造了自己独特的工程文华。因此，即使在公司、部门、团队内部，甚至在同一团队的工程师之间，技术规范也可能不是标准的。每个解决方案都有不同的需求，你应该根据项目来定制你的技术规范。你并不需要包括下面提到的所有部分。选择适合你的设计部分，然后放弃其他部分。</p>
-<p>根据我的经验，技术规范包括以下七个基本部分：</p>
-<p>前页、简介、解决方案、其他考虑因素、成功评估、工作、审议和结文。</p>
-<p><strong>前页</strong></p>
-<p>1、题目</p>
-<p>2、作者</p>
-<p>3、团队</p>
-<p>4、审核人</p>
-<p>5、编写日期</p>
-<p>6、最后更新日期</p>
-<p>7、Epic（史诗故事）、Ticket（凭据）、发布、任务追踪器参考链接</p>
-<p><strong>简介</strong></p>
-<p>1、概述、问题描述、总结或摘要</p>
-<ul>
-<li>问题摘要（从用户的角度）、上下文、建议的解决方案和利益相关者。</li>
-</ul>
-<p>2、词汇表或术语表</p>
-<ul>
-<li>你在研究设计时遇到的新术语，或者你可能怀疑读者 / 利益相关者不知道的术语。</li>
-</ul>
-<p>3、上下文或背景</p>
-<ul>
-<li>问题值得解决的原因。</li>
-<li>问题的根源。</li>
-<li>这个问题如何影响用户和公司目标。</li>
-<li>过去为解决这一问题所做的努力及其无效的原因。</li>
-<li>产品如何与团队目标和关键成果相关。</li>
-<li>解决方案如何融入整个产品路线图和战略。</li>
-<li>解决方案如何融入技术战略。</li>
-</ul>
-<p>4、目标或产品与技术要求</p>
-<ul>
-<li>以用户故事的形式提出产品需求。</li>
-<li>技术要求。</li>
-</ul>
-<p>5、非目标或超出范围</p>
-<ul>
-<li>不予考虑的产品和技术要求。</li>
-</ul>
-<p>6、未来目标</p>
-<ul>
-<li>未来的产品和技术要求。</li>
-</ul>
-<p>7、假设</p>
-<ul>
-<li>需要具备并可获得的条件和资源，以使解决方案如上所述发挥作用。</li>
-</ul>
-<p><strong>解决方案</strong></p>
-<p>1、现时或现有的解决方案 / 设计</p>
-<ul>
-<li>当前解决方案说明。</li>
-<li>当前解决方案的优缺点。</li>
-</ul>
-<p>2、建议或提议的解决方案 / 设计</p>
-<ul>
-<li>解决方案将与之交互并进行更改的外部组件</li>
-<li>当前解决方案的依赖项</li>
-<li>建议的解决方案的优缺点</li>
-<li>数据模型 / 模式变化。</li>
-</ul>
-<p>​    a、模式定义</p>
-<p>​    b、新的数据模型</p>
-<p>​    c、修改后的数据模型</p>
-<p>​    d、数据验证方法</p>
-<ul>
-<li>业务逻辑</li>
-</ul>
-<p>​    a、API 变化</p>
-<p>​    b、伪代码</p>
-<p>​    c、流程图</p>
-<p>​    d、错误状态</p>
-<p>​    e、失败场景</p>
-<p>​    f、导致错误和失败的条件</p>
-<p>​    g、局限性</p>
-<ul>
-<li>表示层</li>
-</ul>
-<p>​    a、用户需求</p>
-<p>​    b、用户体验变化</p>
-<p>​    c、用户界面变化</p>
-<p>​    d、带描述的线框图</p>
-<p>​    e、链接到用户界面 / 用户体验设计器的工作</p>
-<p>​    f、移动关注点</p>
-<p>​    g、Web 关注点</p>
-<p>​    h、用户界面状态</p>
-<p>​    i、错误处理</p>
-<ul>
-<li>其他需要回答的问题</li>
-</ul>
-<p>​    a、该解决方案将如何扩展？</p>
-<p>​    b、该解决方案的局限性是什么？</p>
-<p>​    c、一旦发生故障，它将如何恢复？</p>
-<p>​    d、它将如何应对未来的需求？</p>
-<p>3、测试计划</p>
-<ul>
-<li>解释测试如何确保用户需求得到满足的说明</li>
-<li>单元测试</li>
-<li>集成测试</li>
-<li>质量保证</li>
-</ul>
-<p>4、监控和警报计划</p>
-<ul>
-<li>日志计划和工具</li>
-<li>监控计划和工具</li>
-<li>用于衡量运行状况的指标</li>
-<li>如何保证可观测性</li>
-<li>警报计划和工具</li>
-</ul>
-<p>5、发布 / 推出和部署计划</p>
-<ul>
-<li>部署架构</li>
-<li>部署环境</li>
-<li>分阶段推出计划，例如使用功能标志。</li>
-<li>计划概述如何向用户转达更改，例如，使用发行说明。</li>
-</ul>
-<p>6、回滚计划</p>
-<ul>
-<li>详细和具体的负债。</li>
-<li>减少负债的计划。</li>
-<li>描述如何防止其他组件、服务和系统受到影响的计划。</li>
-</ul>
-<p>7、替代解决方案 / 设计</p>
-<ul>
-<li>每个替代解决方案的简短摘要说明</li>
-<li>每种替代解决方案的利弊</li>
-<li>每种解决方案均无法正常工作的原因</li>
-<li>替代方案在哪些方面不如建议的解决方案</li>
-<li>在建议的方案失败的情况下，向次佳次佳替代方案迁移的计划</li>
-</ul>
-<p><strong>其他考虑因素</strong></p>
-<p>1、对其他团队的影响</p>
-<ul>
-<li>这将如何增加其他人的工作？</li>
-</ul>
-<p>2、第三方服务和平台考虑因素</p>
-<ul>
-<li>与内部构建服务相比，这真的值得吗？</li>
-<li>与服务 / 平台相关的安全和隐私问题有哪些？</li>
-<li>总共要花多少钱？</li>
-<li>它将如何扩展规模？</li>
-<li>预计未来可能会出现哪些问题？</li>
-</ul>
-<p>3、成本分析</p>
-<ul>
-<li>每天运行解决方案的成本是多少？</li>
-<li>推出它的成本是多少？</li>
-</ul>
-<p>4、安全方面考虑因素</p>
-<ul>
-<li>潜在的威胁是什么？</li>
-<li>如何减轻这些风险？</li>
-<li>该解决方案将如何影响其他组件、服务和系统的安全性？</li>
-</ul>
-<p>5、隐私方面考虑因素</p>
-<ul>
-<li>该解决方案是否遵循有关数据隐私的当地法律和政策？</li>
-<li>该解决方案如何保护用户的数据隐私？</li>
-<li>在解决方案中，个性化和隐私之间有哪些权衡？</li>
-</ul>
-<p>6、地区性考虑因素</p>
-<ul>
-<li>国际化和本地化对解决方案有什么影响？</li>
-<li>延迟问题是什么？</li>
-<li>在法律上有什么顾虑？</li>
-<li>服务可用性的状态是什么？</li>
-<li>如何实施跨地区的数据传输？这方面需要关注的问题是什么？</li>
-</ul>
-<p>7、可访问性考虑因素</p>
-<ul>
-<li>解决方案的可访问性如何？</li>
-<li>你将使用那些工具来评估其可访问性？</li>
-</ul>
-<p>8、运营方面考虑因素</p>
-<ul>
-<li>这种解决方案是否会产生不良后果？</li>
-<li>一旦发生故障，如何恢复数据？</li>
-<li>如何在为用户带来更高价值的同时保持较低的运营成本？</li>
-</ul>
-<p>9、风险性</p>
-<ul>
-<li>该解决方案存在哪些风险？</li>
-<li>是否有一些风险一旦承担就无法挽回？</li>
-<li>承担这些风险的成本效益分析是什么？</li>
-</ul>
-<p>10、支持方面考虑因素</p>
-<ul>
-<li>在于更改交互时，支持团队将如何向用户传达有关他们可能面临的常见问题的信息？</li>
-<li>我们如何确保用户对解决方案感到满意，并且能够在最少的支持下与之交互？</li>
-<li>谁负责解决方案的维护？</li>
-<li>如果项目所有者不在，如何完成知识转移？</li>
-</ul>
-<p><strong>成功评估</strong></p>
-<p>1、影响</p>
-<ul>
-<li>安全影响</li>
-<li>性能影响</li>
-<li>成本影响</li>
-<li>对其他组件和服务的影响</li>
-</ul>
-<p>2、指标</p>
-<ul>
-<li>要捕获的指标列表</li>
-<li>用户捕获和度量指标的工具</li>
-</ul>
-<p><strong>工作</strong></p>
-<p>1、工作估算和时间表</p>
-<ul>
-<li>具体的、可衡量的和有时限的任务列表。</li>
-<li>完成每项任务所需的资源。</li>
-<li>每项任务需要完成的时间估算。</li>
-</ul>
-<p>2、优先次序</p>
-<ul>
-<li>按紧急程度和影响对任务进行分类。</li>
-</ul>
-<p>3、里程碑</p>
-<ul>
-<li>当大量的工作已经完成时，标注有日期的检查点。</li>
-<li>表明里程碑通过的衡量标准。</li>
-</ul>
-<p>4、未来的工作</p>
-<ul>
-<li>将来要完成的任务列表。</li>
-</ul>
-<p><strong>审议</strong></p>
-<p>1、答辩</p>
-<ul>
-<li>团队成员不同意解决方案的内容，需要进一步辩论，以达成共识。</li>
-</ul>
-<p>2、待决问题</p>
-<ul>
-<li>向团队和利益相关者提出一些你不知道答案或不确定的问题，以征求他们的意见。这些可能包括你还不知道如何解决的问题的各个方面。</li>
-</ul>
-<p><strong>结文</strong></p>
-<p>1、相关工作</p>
-<ul>
-<li>在某种横渡上与建议的解决方案相似，且由不同团队处理的任何外部工作。</li>
-<li>了解这一点很重要，当遇到相关问题时，这样的团队之间能够实现知识共享。</li>
-</ul>
-<p>2、参考文献</p>
-<ul>
-<li>指向参考文档和资源的链接，这些参考文档和连接是你在设计时进行参考的内容。</li>
-</ul>
-<p>3、致谢</p>
-<ul>
-<li>致谢那些为你希望认可的设计做出过贡献的人们。</li>
-</ul>
-<p><strong>完成编写技术规范之后</strong></p>
-<p>现在，你已经编写好了规范，是时候对其进行完善了。像一个独立的审稿人一样，仔细审阅你的草案。问问自己设计的哪些部分不清楚，哪些部分不确定。修改草案，把这些问题包括进去。再次检查草案，就好像你的任务仅仅是根据技术规范来实施设计一样。确保规范是一个足够清晰的实施指南。如果你不在的话，团队可以按照这份指南进行工作。如果你对解决方案有疑问，并且想要对它进行测试以确保有效，那么可以创建一个简单的原型来证明你的概念。</p>
-<p>当你完成彻底审阅后，将草案发给你的团队和利益相关者。尽管处理所有的意见、问题和建议。为每个问题设定最后期限。安排会议，讨论团队在那些问题上存在分歧，或者对文档进行一场冗长的讨论。如果团队在某个问题没有达成一致，即使在进行了面对面的会议之后，也要做最后的决定，因为责任就落在你身上了。要求不同团队中的工程师审查你的规范，这样你就可以从局外人的角度出发，从而加强对非团队成员的利益相关者的了解。即使在实施过程中，也要用设计、进度、工作估算、范围等方面的任何变更来更新文档。</p>
-<p><strong>结论</strong></p>
-<p>编写测试和规范是保证项目成功的有效方法。稍作规划和稍作深思熟虑就可以使项目的实际实施变得轻松许多。</p>
-<p>作者 | Zara Cooper  译者 | Sambodhi  编辑 | Natalie</p>
-]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-      <tags>
-        <tag>文档</tag>
       </tags>
   </entry>
 </search>
