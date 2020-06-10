@@ -29,7 +29,7 @@
 <meta property="og:description" content="法院信息列表来源 http:&#x2F;&#x2F;zxgk.court.gov.cn&#x2F;zhzxgk&#x2F;static&#x2F;javascript&#x2F;data.js">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-05T10:25:43.018Z">
-<meta property="article:modified_time" content="2020-06-05T10:31:27.335Z">
+<meta property="article:modified_time" content="2020-06-05T10:37:15.931Z">
 <meta property="article:author" content="松鼠">
 <meta property="article:tag" content="法院列表">
 <meta name="twitter:card" content="summary">
@@ -275,6 +275,7 @@
         <p>法院信息列表来源</p>
 <p><a href="http://zxgk.court.gov.cn/zhzxgk/static/javascript/data.js" target="_blank" rel="noopener">http://zxgk.court.gov.cn/zhzxgk/static/javascript/data.js</a></p>
 <a id="more"></a>
+<p><a href="http://zxgk.court.gov.cn/zhzxgk/" target="_blank" rel="noopener">http://zxgk.court.gov.cn/zhzxgk/</a></p>
 <p>console中添加如下方法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> courts=<span class="string">"(0,'最高人民法院',null,true),"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;court_0.length;i++)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(court_0[i].id+<span class="string">","</span>+court_0[i].sname+<span class="string">",0"</span>);</span><br><span class="line">		courts+=<span class="string">"("</span>+court_0[i].id+<span class="string">",'"</span>+court_0[i].sname+<span class="string">"',0,"</span>+court_0[i].hasNext+<span class="string">"),"</span>;</span><br><span class="line">		<span class="keyword">if</span>(court_0[i].hasNext)&#123;</span><br><span class="line">			<span class="keyword">var</span> intCourt = <span class="built_in">eval</span>(<span class="string">"court_"</span>+court_0[i].id);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> ii = <span class="number">0</span>;ii&lt;intCourt.length;ii++)&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(intCourt[ii].id+<span class="string">","</span>+intCourt[ii].sname+<span class="string">","</span>+court_0[i].id);</span><br><span class="line">				courts+=<span class="string">"("</span>+intCourt[ii].id+<span class="string">",'"</span>+intCourt[ii].sname+<span class="string">"',"</span>+court_0[i].id+<span class="string">","</span>+intCourt[ii].hasNext+<span class="string">"),"</span>;</span><br><span class="line">				<span class="keyword">if</span>(intCourt[ii].hasNext)&#123;</span><br><span class="line">					<span class="keyword">var</span> subCourt = <span class="built_in">eval</span>(<span class="string">"court_"</span>+intCourt[ii].id);</span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> iii = <span class="number">0</span>;iii&lt;subCourt.length;iii++)&#123;</span><br><span class="line">						<span class="built_in">console</span>.log(subCourt[iii].id+<span class="string">","</span>+subCourt[iii].sname+<span class="string">","</span>+intCourt[ii].id);</span><br><span class="line">						courts+=<span class="string">"("</span>+subCourt[iii].id+<span class="string">",'"</span>+subCourt[iii].sname+<span class="string">"',"</span>+intCourt[ii].id+<span class="string">","</span>+subCourt[iii].hasNext+<span class="string">"),"</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(courts);</span><br><span class="line">&#125;</span><br><span class="line">print();</span><br></pre></td></tr></table></figure>
 <p>备份</p>
@@ -304,7 +305,10 @@
     <a href="/p/b5d13c96.html" rel="prev" title="动态表单之form-create">
       <i class="fa fa-chevron-left"></i> 动态表单之form-create
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/p/73799b24.html" rel="next" title="验证类代码积累">
+      验证类代码积累 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -379,20 +383,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -431,7 +435,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">505k</span>
+    <span title="站点总字数">509k</span>
 </div>
 
         
