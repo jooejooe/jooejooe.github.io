@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2020-06-19T06:21:42.873Z</updated>
+  <updated>2020-06-19T06:25:21.825Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.songuo.tech/p/a2c42e0c.html"/>
     <id>https://blog.songuo.tech/p/a2c42e0c.html</id>
     <published>2020-06-19T06:26:53.000Z</published>
-    <updated>2020-06-19T06:21:42.873Z</updated>
+    <updated>2020-06-19T06:25:21.825Z</updated>
     
-    <content type="html"><![CDATA[<p>1.html导出为pdf，外部css，字体，页眉页脚，签章，水印 </p><p>2.二维码条形码处理 </p><p>3.印章动态生成</p><p><a href="https://github.com/jooejooe/pdf-demo" target="_blank" rel="noopener">源码github地址</a></p><p>实现效果pdf，参见源码demo文件夹下pdf文件</p><div class="pdfobject-container" data-target="https://raw.githubusercontent.com/jooejooe/pdf-demo/184e0968830233ea857aca000f8f64bdaf0d019b/demo/test.pdf" data-height="800px"></div>]]></content>
+    <content type="html"><![CDATA[<p>1.html导出为pdf，外部css，字体，页眉页脚，签章，水印 </p><p>2.二维码条形码处理 </p><p>3.印章动态生成</p><p><a href="https://github.com/jooejooe/pdf-demo" target="_blank" rel="noopener">源码github地址</a></p><p>实现效果pdf，参见源码demo文件夹下pdf文件</p><p><a href="https://raw.githubusercontent.com/jooejooe/pdf-demo/184e0968830233ea857aca000f8f64bdaf0d019b/demo/test.pdf" target="_blank" rel="noopener">生成示例pdf文件</a></p>]]></content>
     
     <summary type="html">
     
@@ -32,7 +32,8 @@
 &lt;p&gt;3.印章动态生成&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/jooejooe/pdf-demo&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;源码github地址&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;实现效果pdf，参见源码demo文件夹下pdf文件&lt;/p&gt;
-&lt;div class=&quot;pdfobject-container&quot; data-target=&quot;https://raw.githubusercontent.com/jooejooe/pdf-demo/184e0968830233ea857aca000f8f64bdaf0d019b/demo/test.pdf&quot; data-height=&quot;800px&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/jooejooe/pdf-demo/184e0968830233ea857aca000f8f64bdaf0d019b/demo/test.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;生成示例pdf文件&lt;/a&gt;&lt;/p&gt;
+
     
     </summary>
     
@@ -191,7 +192,7 @@
     <link href="https://blog.songuo.tech/p/716e86db.html"/>
     <id>https://blog.songuo.tech/p/716e86db.html</id>
     <published>2020-06-12T08:00:00.000Z</published>
-    <updated>2020-06-12T08:15:22.483Z</updated>
+    <updated>2020-06-12T09:09:44.453Z</updated>
     
     <content type="html"><![CDATA[<p>科 学 上 网<br><a id="more"></a></p><h2 id="订阅地址"><a href="#订阅地址" class="headerlink" title="订阅地址"></a>订阅地址</h2><ol><li><a href="https://youlianboshi.netlify.com" target="_blank" rel="noopener">https://youlianboshi.netlify.com</a></li><li><a href="https://muma16fx.netlify.com" target="_blank" rel="noopener">https://muma16fx.netlify.com</a></li><li><a href="https://fforever.github.io/v2rayfree" target="_blank" rel="noopener">https://fforever.github.io/v2rayfree</a></li><li><a href="https://jiang.netlify.com" target="_blank" rel="noopener">https://jiang.netlify.com</a></li><li><a href="https://www.go4net.ga/v2ray.txt" target="_blank" rel="noopener">https://www.go4net.ga/v2ray.txt</a></li><li><a href="https://bihai-v2ray.netlify.com" target="_blank" rel="noopener">https://bihai-v2ray.netlify.com</a></li><li><a href="https://www.tiancai.ml/baba.txt" target="_blank" rel="noopener">https://www.tiancai.ml/baba.txt</a></li><li><a href="https://freev2ray.netlify.com" target="_blank" rel="noopener">https://freev2ray.netlify.com</a></li><li><a href="https://www.namaho.org/service/subscribe" target="_blank" rel="noopener">https://www.namaho.org/service/subscribe</a></li><li><a href="https://cdn.jsdelivr.net/gh/fggfffgbg/https-aishangyou.tube-@master/README.md" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/fggfffgbg/https-aishangyou.tube-@master/README.md</a></li><li><a href="https://rss.sswow.xyz/link/pjcHSsymqDeXViPZ" target="_blank" rel="noopener">https://rss.sswow.xyz/link/pjcHSsymqDeXViPZ</a></li><li><a href="https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub" target="_blank" rel="noopener">https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub</a></li><li><a href="https://v2ray.qlolp.ml/" target="_blank" rel="noopener">https://v2ray.qlolp.ml</a></li></ol><h2 id="v2ray客户端地址"><a href="#v2ray客户端地址" class="headerlink" title="v2ray客户端地址"></a>v2ray客户端地址</h2><ol><li>Linux : <a href="https://github.com/jiangxufeng/v2rayL/releases" target="_blank" rel="noopener">https://github.com/jiangxufeng/v2rayL/releases</a></li><li>MacOS : <a href="https://github.com/Cenmrev/V2RayX/releases" target="_blank" rel="noopener">https://github.com/Cenmrev/V2RayX/releases</a></li><li>Android : <a href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener">https://github.com/2dust/v2rayNG/releases</a></li><li>Windows : <a href="https://github.com/2dust/v2rayN/releases" target="_blank" rel="noopener">https://github.com/2dust/v2rayN/releases</a></li></ol>]]></content>
     
