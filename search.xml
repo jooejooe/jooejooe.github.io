@@ -3738,4 +3738,59 @@
         <tag>itextpdf</tag>
       </tags>
   </entry>
+  <entry>
+    <title>keystore导出p12,cer,crt,.key.pem证书文件格式</title>
+    <url>//p/243be076.html</url>
+    <content><![CDATA[<p>p12文件生成</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -genkey -v -alias root -keyalg RSA -storetype PKCS12 -keystore dlt.p12 -dname "CN=www.handtimes.com,OU=ipcc,O=云电同方,L=昆明,ST=云南,C=中国" -storepass ipcc@95598 -keypass ipcc@95598</span><br></pre></td></tr></table></figure>
+<h2 id="1、生成keystore文件"><a href="#1、生成keystore文件" class="headerlink" title="1、生成keystore文件"></a><strong>1、生成keystore文件</strong></h2><p>命令行窗口执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -genkey -alias ynhr -keyalg RSA -keysize 1024 -keypass 123456 -validity 36500 -keystore test.keystore -storepass 123456</span><br></pre></td></tr></table></figure>
+<p>命令解读：</p>
+<p>-alias 别名：ynhr</p>
+<p>-keyalg 算法：RSA</p>
+<p>-keysize 密码长度：1024</p>
+<p>-keypass 私钥访问密码：123456</p>
+<p>-validity 有效期：36500天</p>
+<p>-keystore 名称：test.keystore</p>
+<p>-storepass keystone文件访问密码：123456</p>
+<p><img src="images/keystore%E5%AF%BC%E5%87%BAp12,cer,crt,.key.pem%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/20200409115237471.png" alt="img"></p>
+<p>在目录下已生成名为：test.keystore 的文件</p>
+<h2 id="2、keytool-通过keystone-导出p12文件"><a href="#2、keytool-通过keystone-导出p12文件" class="headerlink" title="2、keytool 通过keystone 导出p12文件"></a><strong>2、keytool 通过keystone 导出p12文件</strong></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -importkeystore -srcstoretype JKS -srckeystore test.keystore -srcstorepass 123456 -srcalias ynhr -srckeypass 123456 -deststoretype PKCS12 -destkeystore test.p12 -deststorepass 123456 -destalias client -destkeypass 123456 -noprompt</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -importkeystore -srckeystore 要转换的.jks -destkeystore 转换后的.p12  -srcstoretype JKS -deststoretype PKCS12  -srcstorepass STORE密码 -deststorepass STORE密码 -srcalias 用户名 -destalias 用户名 -srckeypass KEY密码 -destkeypass KEY密码 -noprompt</span><br></pre></td></tr></table></figure>
+<p>继续执行如上命令导出p12私钥文件</p>
+<h2 id="3、从p12导出格式为-key的私钥文件"><a href="#3、从p12导出格式为-key的私钥文件" class="headerlink" title="3、从p12导出格式为.key的私钥文件"></a><strong>3、从p12导出格式为.key的私钥文件</strong></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">openssl pkcs12 -in test.p12 -nocerts -nodes -out test.key</span><br></pre></td></tr></table></figure>
+<p><img src="images/keystore%E5%AF%BC%E5%87%BAp12,cer,crt,.key.pem%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/20200409115924244.png" alt="img"></p>
+<h2 id="4、从keystore导出cer公钥证书文件"><a href="#4、从keystore导出cer公钥证书文件" class="headerlink" title="4、从keystore导出cer公钥证书文件"></a><strong>4、从keystore导出cer公钥证书文件</strong></h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -export -alias ynhr -keystore test.keystore -rfc -file test.cer</span><br></pre></td></tr></table></figure>
+<p><img src="images/keystore%E5%AF%BC%E5%87%BAp12,cer,crt,.key.pem%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/20200409120049723.png" alt="img"></p>
+<p>有时候需要.crt格式的文件，调整下格式即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -export -alias ynhr -keystore test.keystore -rfc -file test.crt</span><br></pre></td></tr></table></figure>
+<h2 id="5、导出格式为“pem”的公钥证书文件"><a href="#5、导出格式为“pem”的公钥证书文件" class="headerlink" title="5、导出格式为“pem”的公钥证书文件"></a><strong>5、导出格式为“pem”的公钥证书文件</strong></h2><h3 id="5-1、keytool生成keystore的转为PKCS12格式"><a href="#5-1、keytool生成keystore的转为PKCS12格式" class="headerlink" title="5.1、keytool生成keystore的转为PKCS12格式"></a><strong>5.1、keytool生成keystore的转为PKCS12格式</strong></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -importkeystore -srcstoretype JKS -srckeystore test.keystore -srcstorepass 123456 -srcalias ynhr -srckeypass 123456 -deststoretype PKCS12 -destkeystore test.p12 -deststorepass 123456 -destalias test -destkeypass 123456 -noprompt</span><br></pre></td></tr></table></figure>
+<h3 id="5-2、opensl-从PKCS12中导出私钥"><a href="#5-2、opensl-从PKCS12中导出私钥" class="headerlink" title="5.2、opensl 从PKCS12中导出私钥"></a><strong>5.2、opensl 从PKCS12中导出私钥</strong></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">openssl pkcs12 -in test.p12 -passin pass:123456 -nocerts -out test.private</span><br><span class="line"></span><br><span class="line">MAC verified OK</span><br><span class="line"></span><br><span class="line">Enter PEM pass phrase:123456</span><br><span class="line"></span><br><span class="line">Verifying - Enter PEM pass phrase:123456</span><br></pre></td></tr></table></figure>
+<h3 id="5-3、opensl-从私钥导出不带签名的公钥"><a href="#5-3、opensl-从私钥导出不带签名的公钥" class="headerlink" title="5.3、opensl 从私钥导出不带签名的公钥"></a><strong>5.3、opensl 从私钥导出不带签名的公钥</strong></h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">openssl rsa -in test.private -pubout</span><br><span class="line"></span><br><span class="line">Enter pass phrase for client.private:123456</span><br><span class="line"></span><br><span class="line">writing RSA key</span><br><span class="line"></span><br><span class="line">-----BEGIN PUBLIC KEY-----</span><br><span class="line"></span><br><span class="line">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClREmV3+XLyq23AKA00kYZ0exc</span><br><span class="line"></span><br><span class="line">4CcLqhVVgavJckgwLKPKc0F0Rg8J4fKb8JBfIl9qaHa/RWh6MI50y1GKBEub5PWj</span><br><span class="line"></span><br><span class="line">JOAwsDhhLKTOD8DU7GXJnDOcwMfFPhfcMvID98l3uK3G9fjviMcKbN3tMlW0vg0D</span><br><span class="line"></span><br><span class="line">19msDnNhOpRKqZnULwIDAQAB</span><br><span class="line"></span><br><span class="line">-----END PUBLIC KEY-----</span><br></pre></td></tr></table></figure>
+<h2 id="6、将公钥证书导入密钥库"><a href="#6、将公钥证书导入密钥库" class="headerlink" title="6、将公钥证书导入密钥库"></a>6、将公钥证书导入密钥库</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">keytool -import -v -file bst.cer -keystore miepay.keystore</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>证书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pdf转html，签章以及二维码</title>
+    <url>//p/a2c42e0c.html</url>
+    <content><![CDATA[<p>1.html导出为pdf，外部css，字体，页眉页脚，签章，水印 </p>
+<p>2.二维码条形码处理 </p>
+<p>3.印章动态生成</p>
+<p><a href="https://github.com/jooejooe/pdf-demo" target="_blank" rel="noopener">源码github地址</a></p>
+<p>实现效果pdf，参见源码demo文件夹下pdf文件</p>
+<div class="pdfobject-container" data-target="https://raw.githubusercontent.com/jooejooe/pdf-demo/184e0968830233ea857aca000f8f64bdaf0d019b/demo/test.pdf" data-height="800px"></div>]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>itextpdf</tag>
+        <tag>pdf转html</tag>
+      </tags>
+  </entry>
 </search>
