@@ -3867,4 +3867,38 @@
         <tag>诉源治理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>IDEA自动导包设置</title>
+    <url>//p/7e18c401.html</url>
+    <content><![CDATA[<p><strong>1、配置</strong></p>
+<p>进入file-setting</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/905646-20190916093225567-2095910444.png" alt="img"></p>
+<h2 id="2、说明"><a href="#2、说明" class="headerlink" title="2、说明"></a>2、说明</h2><ul>
+<li>勾选标注第1个选项，IDEA 自动帮我们导入需要用到的包。但是对于那些同名的包，还是需要手动 Alt + Enter 进行导入的</li>
+<li>勾选标注第2个选项，IDEA自动帮我们优化导入的包，比如自动去掉一些没有用到的包。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDEA自动格式化代码</title>
+    <url>//p/ef3d5f33.html</url>
+    <content><![CDATA[<h3 id="1、settings-gt-plugins-选择-Browse-repositories…"><a href="#1、settings-gt-plugins-选择-Browse-repositories…" class="headerlink" title="1、settings -&gt; plugins 选择 Browse repositories…"></a>1、settings -&gt; plugins 选择 Browse repositories…</h3><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223937714280.png" alt="技术分享图片"></p>
+<h3 id="2、搜索google-java-format-和-Save-Actions，安装"><a href="#2、搜索google-java-format-和-Save-Actions，安装" class="headerlink" title="2、搜索google-java-format 和 Save Actions，安装"></a>2、搜索google-java-format 和 Save Actions，安装</h3><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223937892022.png" alt="技术分享图片"></p>
+<h3 id="3、重启IDE，启用google-java-format"><a href="#3、重启IDE，启用google-java-format" class="headerlink" title="3、重启IDE，启用google-java-format"></a>3、重启IDE，启用google-java-format</h3><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223938049254.png" alt="技术分享图片"></p>
+<h3 id="4、-启用Save-Actions"><a href="#4、-启用Save-Actions" class="headerlink" title="4、 启用Save Actions"></a>4、 启用Save Actions</h3><p>保存时自动格式化 ，将没用的import 语句删除</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223938160587.png" alt="技术分享图片"></p>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
 </search>
