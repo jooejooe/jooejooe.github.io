@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2020-10-21T14:02:14.011Z</updated>
+  <updated>2020-10-21T14:11:18.330Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.songuo.tech/p/3b2cd0d3.html"/>
     <id>https://blog.songuo.tech/p/3b2cd0d3.html</id>
     <published>2020-10-20T02:30:00.000Z</published>
-    <updated>2020-10-21T14:02:14.011Z</updated>
+    <updated>2020-10-21T14:11:18.330Z</updated>
     
     <content type="html"><![CDATA[<h2 id="linux下字体的安装处理"><a href="#linux下字体的安装处理" class="headerlink" title="linux下字体的安装处理"></a>linux下字体的安装处理</h2><p>linux下itextpdf将html转换为pdf的过程中，需要处理字体<br><code>需要将C:\Windows\Fonts下的字体文件copy到linux/usr/share/fonts目录，并且设置权限为755</code></p><ul><li>参考链接<a href="https://www.cnblogs.com/chengJAVA/p/5292014.html" target="_blank" rel="noopener">centos系统安装中文字体几种方法</a></li></ul>]]></content>
     
