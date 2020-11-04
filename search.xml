@@ -4058,4 +4058,28 @@
         <tag>jeecgboot</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Can&#39;t connect to X11 window server using &#39;localhost:10.0&#39; as the value of the DISPLAY variable</title>
+    <url>//p/769df2e6.html</url>
+    <content><![CDATA[<p>问题】</p>
+<p>centos上的tomcat报错</p>
+<p>Exception in thread “http-bio-8080-exec-6” java.lang.InternalError: Can’t connect to X11 window server using ‘localhost:10.0’ as the value of the DISPLAY variable</p>
+<p>前台问题是页面的验证码图片加载不出来，而且报500错误</p>
+<p> 【原因】</p>
+<p>因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动</p>
+<p> 【解决办法】</p>
+<p>不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true</p>
+<p>在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">JAVA_OPTS=-Djava.awt.headless=true</span><br></pre></td></tr></table></figure>
+<p> 【我的tomcat实际效果】</p>
+<p>/usr/local/tomcat/bin/catalina.sh 开头加入</p>
+<p>JAVA_OPTS=”$JAVA_OPTS -XX:PermSize=256m -XX:MaxPermSize=512m -Xms2g -Xmx2g -Djava.awt.headless=true “</p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>tomcat</tag>
+      </tags>
+  </entry>
 </search>

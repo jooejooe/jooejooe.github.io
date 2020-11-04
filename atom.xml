@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2020-10-23T07:55:07.020Z</updated>
+  <updated>2020-11-04T01:29:29.326Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Can&#39;t connect to X11 window server using &#39;localhost:10.0&#39; as the value of the DISPLAY variable</title>
+    <link href="https://blog.songuo.tech/p/769df2e6.html"/>
+    <id>https://blog.songuo.tech/p/769df2e6.html</id>
+    <published>2020-11-04T02:30:00.000Z</published>
+    <updated>2020-11-04T01:29:29.326Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题】</p><p>centos上的tomcat报错</p><p>Exception in thread “http-bio-8080-exec-6” java.lang.InternalError: Can’t connect to X11 window server using ‘localhost:10.0’ as the value of the DISPLAY variable</p><p>前台问题是页面的验证码图片加载不出来，而且报500错误</p><p> 【原因】</p><p>因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动</p><p> 【解决办法】</p><p>不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true</p><p>在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS=-Djava.awt.headless=true</span><br></pre></td></tr></table></figure><p> 【我的tomcat实际效果】</p><p>/usr/local/tomcat/bin/catalina.sh 开头加入</p><p>JAVA_OPTS=”$JAVA_OPTS -XX:PermSize=256m -XX:MaxPermSize=512m -Xms2g -Xmx2g -Djava.awt.headless=true “</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题】&lt;/p&gt;
+&lt;p&gt;centos上的tomcat报错&lt;/p&gt;
+&lt;p&gt;Exception in thread “http-bio-8080-exec-6” java.lang.InternalError: Can’t connect to X11 window server using ‘localhost:10.0’ as the value of the DISPLAY variable&lt;/p&gt;
+&lt;p&gt;前台问题是页面的验证码图片加载不出来，而且报500错误&lt;/p&gt;
+&lt;p&gt; 【原因】&lt;/p&gt;
+&lt;p&gt;因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动&lt;/p&gt;
+&lt;p&gt; 【解决办法】&lt;/p&gt;
+&lt;p&gt;不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true&lt;/p&gt;
+&lt;p&gt;在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;JAVA_OPTS=-Djava.awt.headless=true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="tomcat" scheme="https://blog.songuo.tech/tags/tomcat/"/>
+    
+  </entry>
   
   <entry>
     <title>Jeecgboot自定义列使用</title>
@@ -611,31 +643,6 @@
     
     
       <category term="法院列表" scheme="https://blog.songuo.tech/tags/%E6%B3%95%E9%99%A2%E5%88%97%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>动态表单之form-create</title>
-    <link href="https://blog.songuo.tech/p/b5d13c96.html"/>
-    <id>https://blog.songuo.tech/p/b5d13c96.html</id>
-    <published>2020-05-28T03:30:00.000Z</published>
-    <updated>2020-05-28T02:58:52.019Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.form-create.com/" target="_blank" rel="noopener">form-create</a> 是一个可以通过 JSON 生成具有动态渲染、数据收集、验证和提交功能的表单生成器。并且支持生成任何 Vue 组件。结合内置17种常用表单组件和自定义组件，再复杂的表单都可以轻松搞定。</p><a id="more"></a><p>示例：<a href="http://jsrun.net/NQhKp/edit" target="_blank" rel="noopener">http://jsrun.net/NQhKp/edit</a></p><p>在js文件后添加如下代码，主要模拟远程获取表单数据</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//后台获取数据值进行绑定</span></span><br><span class="line"><span class="keyword">var</span> result = &#123;</span><br><span class="line">    <span class="string">"goods_name"</span>:<span class="string">"fdsfdsfd"</span>,</span><br><span class="line">    <span class="string">'address'</span>:[<span class="string">'北京市'</span>, <span class="string">'市辖区'</span>, <span class="string">'西城区'</span>],</span><br><span class="line">    <span class="string">'is_postage'</span>:<span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'label'</span>:[<span class="string">"1"</span>, <span class="string">"3"</span>],</span><br><span class="line">    <span class="string">'is_show'</span>:<span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'cate_id'</span>:[<span class="string">'105'</span>],</span><br><span class="line">    <span class="string">'section_day'</span>:[<span class="string">'2020-05-25'</span>,<span class="keyword">new</span> <span class="built_in">Date</span>()],</span><br><span class="line">    <span class="string">'section_time'</span>:[<span class="string">'8:00:01'</span>,<span class="string">'8:00:02'</span>],</span><br><span class="line">    <span class="string">'checked'</span>:<span class="string">'1'</span></span><br><span class="line">    &#125;</span><br><span class="line">vm.fApi.setValue(result)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.form-create.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;form-create&lt;/a&gt; 是一个可以通过 JSON 生成具有动态渲染、数据收集、验证和提交功能的表单生成器。并且支持生成任何 Vue 组件。结合内置17种常用表单组件和自定义组件，再复杂的表单都可以轻松搞定。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://blog.songuo.tech/categories/vue/"/>
-    
-    
-      <category term="vue" scheme="https://blog.songuo.tech/tags/vue/"/>
-    
-      <category term="动态表单" scheme="https://blog.songuo.tech/tags/%E5%8A%A8%E6%80%81%E8%A1%A8%E5%8D%95/"/>
     
   </entry>
   

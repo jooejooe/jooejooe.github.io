@@ -199,6 +199,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/769df2e6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="松鼠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="松果小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/769df2e6.html" class="post-title-link" itemprop="url">Can't connect to X11 window server using 'localhost:10.0' as the value of the DISPLAY variable</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-04 10:30:00" itemprop="dateCreated datePublished" datetime="2020-11-04T10:30:00+08:00">2020-11-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">开发经验</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>517</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>问题】</p>
+<p>centos上的tomcat报错</p>
+<p>Exception in thread “http-bio-8080-exec-6” java.lang.InternalError: Can’t connect to X11 window server using ‘localhost:10.0’ as the value of the DISPLAY variable</p>
+<p>前台问题是页面的验证码图片加载不出来，而且报500错误</p>
+<p> 【原因】</p>
+<p>因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动</p>
+<p> 【解决办法】</p>
+<p>不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true</p>
+<p>在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS=-Djava.awt.headless=true</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/769df2e6.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/5a77449.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1033,94 +1130,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/b8d2e867.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="松鼠">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="松果小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/b8d2e867.html" class="post-title-link" itemprop="url">诉源治理规范化建设的现实解决路径</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-12 15:19:53" itemprop="dateCreated datePublished" datetime="2020-07-12T15:19:53+08:00">2020-07-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">法律知识</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>《最高人民法院关于深化人民法院司法体制综合配套改革的意见 ——人民法院第五个五年改革纲要(2019—2023)》简称“五五改革纲要”，首次提出“诉源治理”这一概念。何为“诉源治理”？“五五改革纲要”并未给予进一步的解释。笔者经搜索国内各文献，鲜有人对“诉源治理”这一概念进行解析，仅在四川省成都市中级人民法院院长郭彦撰写的文章中搜索到：“<strong>‘诉源治理’是指社会个体及各种机构对纠纷的预防及化解所采取的各项措施、方式和方法，使潜在纠纷和已出现纠纷的当事人的相关利益和冲突得以调和，并且采取联合行动所持续的过程。</strong>”笔者认为，“诉源治理”重在强调“源”，纠纷性质为“诉”，手段为“治理”，可理解为对诉讼纠纷的源头化解及处理机制。最高院提出强化诉源治理，即是从法院视角下，要求全国各级法院推动从源头上减少诉讼增量而采取引领、分流等各项举措。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/b8d2e867.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1192,7 +1201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1205,7 +1214,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">61</span>
+        <span class="site-state-item-count">62</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1244,7 +1253,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">536k</span>
+    <span title="站点总字数">537k</span>
 </div>
 
         
