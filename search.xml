@@ -4479,6 +4479,8 @@
 <p>3.使用poi进行word操作</p>
 <p>4.操作完成或，模拟进行提交</p>
 <p>参考资料：</p>
+<p>aspose-word-for-java-acceptallrevisions-method-is-not-working-as-expected: <a href="https://stackoverflow.com/questions/49119524/aspose-word-for-java-acceptallrevisions-method-is-not-working-as-expected" target="_blank" rel="noopener">https://stackoverflow.com/questions/49119524/aspose-word-for-java-acceptallrevisions-method-is-not-working-as-expected</a></p>
+<p>Document. Open 事件 (Word): <a href="https://docs.microsoft.com/zh-cn/office/vba/api/word.document.open" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/office/vba/api/word.document.open</a></p>
 ]]></content>
       <categories>
         <category>selenium</category>
