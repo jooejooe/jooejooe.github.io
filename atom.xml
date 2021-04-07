@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-04-06T10:17:18.048Z</updated>
+  <updated>2021-04-07T08:53:17.454Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用Charles代理工具导致电脑无法正常访问网站（您的连接不是私密连接）</title>
+    <link href="https://blog.songuo.tech/p/e14a8b4.html"/>
+    <id>https://blog.songuo.tech/p/e14a8b4.html</id>
+    <published>2021-04-07T08:30:00.000Z</published>
+    <updated>2021-04-07T08:53:17.454Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    很多开发者都需要使用代理工具来调试接口，查看数据等等，但是有时候发现打开代理工具之后，代理工具同时也拦截了电脑的所有网络请求，导致电脑访问网站时提示（您的连接不是私密连接）。。。<a id="more"></a></p><p>​    造成这种问题的原因就是charles等代理工具也拦截了电脑网页的请求，但是使用的是charles代理工具的证书，导致浏览器无法验证此网页的证书，进而导致了报错，那么该如何解决呢？我们只需要将charles的证书添加到电脑的信任证书中即可。</p><p>​    进入Charles的Help中，选择SSL Proxying，然后点击Install Charles Root Certificate。</p><p>​    此时我们的Charles证书是不被系统信任的，所以访问网站每回都会报证书问题，然后我们点击安装证书。</p><p>​    可以选择证书的安装位置，我选择的是本地计算机，所有用户都可以用，或者为了安全，也可以选择只给当前用户安装，那么别的windows用户就没有被安装此证书；</p><p>​    然后为证书选择存储位置，这里必须手动选择存储位置，否则自动选择出来的证书位置仍然是不被信任的。</p><p>​    然后点击浏览，我们手动指定证书的存储位置为“受信任的根证书颁发机构”。</p><p>​    然后点击确定，完成，此时再次进入安装证书的步骤，我们就发现Charles证书已经被系统信任。</p><p>​    此时，开着Charles再次访问网站，是不是已经可以正常访问了？如果还是报证书问题的话，试着重启一下电脑，重启之后就可以正常访问了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​    很多开发者都需要使用代理工具来调试接口，查看数据等等，但是有时候发现打开代理工具之后，代理工具同时也拦截了电脑的所有网络请求，导致电脑访问网站时提示（您的连接不是私密连接）。。。
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="charles" scheme="https://blog.songuo.tech/tags/charles/"/>
+    
+  </entry>
+  
+  <entry>
     <title>扒微信小程序源码</title>
     <link href="https://blog.songuo.tech/p/4f46e03b.html"/>
     <id>https://blog.songuo.tech/p/4f46e03b.html</id>
     <published>2021-04-06T02:22:00.000Z</published>
-    <updated>2021-04-06T10:17:18.048Z</updated>
+    <updated>2021-04-06T10:18:29.691Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Root Explorer 4.9.2</strong>下载地址</p><p><a href="https://www.lanzous.com/i8xv21a" target="_blank" rel="noopener">https://www.lanzous.com/i8xv21a</a> 密码:4sgw</p><p><a href="https://blog.csdn.net/lmy1998/article/details/109047385" target="_blank" rel="noopener">https://blog.csdn.net/lmy1998/article/details/109047385</a></p><p><a href="https://gitee.com/ksd/wxappUnpacker?_from=gitee_search" target="_blank" rel="noopener">https://gitee.com/ksd/wxappUnpacker?_from=gitee_search</a></p>]]></content>
     
@@ -538,30 +561,6 @@
     
     
       <category term="idea" scheme="https://blog.songuo.tech/tags/idea/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES版本对应jdk</title>
-    <link href="https://blog.songuo.tech/p/eff808.html"/>
-    <id>https://blog.songuo.tech/p/eff808.html</id>
-    <published>2020-07-24T01:19:53.000Z</published>
-    <updated>2020-07-24T00:47:54.055Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.elastic.co/cn/support/matrix#matrix_jvm" target="_blank" rel="noopener">Elasticsearch and JVM</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.elastic.co/cn/support/matrix#matrix_jvm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Elasticsearch and JVM&lt;/a&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="ES" scheme="https://blog.songuo.tech/categories/ES/"/>
-    
-    
-      <category term="ES" scheme="https://blog.songuo.tech/tags/ES/"/>
     
   </entry>
   
