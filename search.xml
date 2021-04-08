@@ -4527,4 +4527,23 @@
         <tag>charles</tag>
       </tags>
   </entry>
+  <entry>
+    <title>绿色版本JDK制作方法</title>
+    <url>//p/2c3084ae.html</url>
+    <content><![CDATA[<h1 id="1-下载官网EXE版本的jdk安装包"><a href="#1-下载官网EXE版本的jdk安装包" class="headerlink" title="1. 下载官网EXE版本的jdk安装包"></a>1. 下载官网EXE版本的jdk安装包</h1><h1 id="2-提取JDK文件"><a href="#2-提取JDK文件" class="headerlink" title="2. 提取JDK文件"></a>2. 提取JDK文件</h1><h2 id="以下为JDK1-8的提取方式，不同版本路径有所不同。"><a href="#以下为JDK1-8的提取方式，不同版本路径有所不同。" class="headerlink" title="以下为JDK1.8的提取方式，不同版本路径有所不同。"></a>以下为JDK1.8的提取方式，不同版本路径有所不同。</h2><h3 id="1-使用7-ZIP压缩工具打开EXE文件"><a href="#1-使用7-ZIP压缩工具打开EXE文件" class="headerlink" title="1. 使用7-ZIP压缩工具打开EXE文件"></a>1. 使用7-ZIP压缩工具打开EXE文件</h3><h3 id="2-找到JDK文件的目录"><a href="#2-找到JDK文件的目录" class="headerlink" title="2. 找到JDK文件的目录"></a>2. 找到JDK文件的目录</h3><h4 id="1-JDK1-8-32位的目录为："><a href="#1-JDK1-8-32位的目录为：" class="headerlink" title="1. JDK1.8 32位的目录为："></a>1. JDK1.8 32位的目录为：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\jdk-8u161-windows-i586.exe\tools.zip\</span><br></pre></td></tr></table></figure>
+<h4 id="2-JDK1-8-64位的目录为："><a href="#2-JDK1-8-64位的目录为：" class="headerlink" title="2. JDK1.8 64位的目录为："></a>2. JDK1.8 64位的目录为：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\jdk-8u161-windows-x64.exe\.rsrc\1033\JAVA_CAB10\111\tools.zip\</span><br></pre></td></tr></table></figure>
+<p>熟悉JDK程序目录的朋友，应该可以认出，这个目录下的文件就是JDK的文件了</p>
+<h3 id="3-把上面目录的文件解压出来"><a href="#3-把上面目录的文件解压出来" class="headerlink" title="3. 把上面目录的文件解压出来"></a>3. 把上面目录的文件解压出来</h3><h3 id="4-解压-pack文件"><a href="#4-解压-pack文件" class="headerlink" title="4. 解压.pack文件"></a>4. 解压.pack文件</h3><p>以管理员的身份运行CMD窗口，打开第3步提取文件的目录，输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for &#x2F;r %x in (*.pack) do .\bin\unpack200 -r &quot;%x&quot; &quot;%~dx%~px%~nx.jar&quot;</span><br></pre></td></tr></table></figure>
+<p>上面命令的作用是，使用unpack200这个程序，把*.pack的文件解压为.jar的文件。</p>
+<p>附Openjdk下载镜像：</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/</a></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>JDK</tag>
+      </tags>
+  </entry>
 </search>

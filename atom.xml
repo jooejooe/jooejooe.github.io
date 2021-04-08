@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-04-07T08:53:17.454Z</updated>
+  <updated>2021-04-08T07:49:12.751Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>绿色版本JDK制作方法</title>
+    <link href="https://blog.songuo.tech/p/2c3084ae.html"/>
+    <id>https://blog.songuo.tech/p/2c3084ae.html</id>
+    <published>2021-04-08T02:30:00.000Z</published>
+    <updated>2021-04-08T07:49:12.751Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-下载官网EXE版本的jdk安装包"><a href="#1-下载官网EXE版本的jdk安装包" class="headerlink" title="1. 下载官网EXE版本的jdk安装包"></a>1. 下载官网EXE版本的jdk安装包</h1><h1 id="2-提取JDK文件"><a href="#2-提取JDK文件" class="headerlink" title="2. 提取JDK文件"></a>2. 提取JDK文件</h1><h2 id="以下为JDK1-8的提取方式，不同版本路径有所不同。"><a href="#以下为JDK1-8的提取方式，不同版本路径有所不同。" class="headerlink" title="以下为JDK1.8的提取方式，不同版本路径有所不同。"></a>以下为JDK1.8的提取方式，不同版本路径有所不同。</h2><h3 id="1-使用7-ZIP压缩工具打开EXE文件"><a href="#1-使用7-ZIP压缩工具打开EXE文件" class="headerlink" title="1. 使用7-ZIP压缩工具打开EXE文件"></a>1. 使用7-ZIP压缩工具打开EXE文件</h3><h3 id="2-找到JDK文件的目录"><a href="#2-找到JDK文件的目录" class="headerlink" title="2. 找到JDK文件的目录"></a>2. 找到JDK文件的目录</h3><h4 id="1-JDK1-8-32位的目录为："><a href="#1-JDK1-8-32位的目录为：" class="headerlink" title="1. JDK1.8 32位的目录为："></a>1. JDK1.8 32位的目录为：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\jdk-8u161-windows-i586.exe\tools.zip\</span><br></pre></td></tr></table></figure><h4 id="2-JDK1-8-64位的目录为："><a href="#2-JDK1-8-64位的目录为：" class="headerlink" title="2. JDK1.8 64位的目录为："></a>2. JDK1.8 64位的目录为：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\jdk-8u161-windows-x64.exe\.rsrc\1033\JAVA_CAB10\111\tools.zip\</span><br></pre></td></tr></table></figure><p>熟悉JDK程序目录的朋友，应该可以认出，这个目录下的文件就是JDK的文件了</p><h3 id="3-把上面目录的文件解压出来"><a href="#3-把上面目录的文件解压出来" class="headerlink" title="3. 把上面目录的文件解压出来"></a>3. 把上面目录的文件解压出来</h3><h3 id="4-解压-pack文件"><a href="#4-解压-pack文件" class="headerlink" title="4. 解压.pack文件"></a>4. 解压.pack文件</h3><p>以管理员的身份运行CMD窗口，打开第3步提取文件的目录，输入如下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for &#x2F;r %x in (*.pack) do .\bin\unpack200 -r &quot;%x&quot; &quot;%~dx%~px%~nx.jar&quot;</span><br></pre></td></tr></table></figure><p>上面命令的作用是，使用unpack200这个程序，把*.pack的文件解压为.jar的文件。</p><p>附Openjdk下载镜像：</p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-下载官网EXE版本的jdk安装包&quot;&gt;&lt;a href=&quot;#1-下载官网EXE版本的jdk安装包&quot; class=&quot;headerlink&quot; title=&quot;1. 下载官网EXE版本的jdk安装包&quot;&gt;&lt;/a&gt;1. 下载官网EXE版本的jdk安装包&lt;/h1&gt;&lt;h1 id=&quot;2-提取JDK文件&quot;&gt;&lt;a href=&quot;#2-提取JDK文件&quot; class=&quot;headerlink&quot; title=&quot;2. 提取JDK文件&quot;&gt;&lt;/a&gt;2. 提取JDK文件&lt;/h1&gt;&lt;h2 id=&quot;以下为JDK1-8的提取方式，不同版本路径有所不同。&quot;&gt;&lt;a href=&quot;#以下为JDK1-8的提取方式，不同版本路径有所不同。&quot; class=&quot;headerlink&quot; title=&quot;以下为JDK1.8的提取方式，不同版本路径有所不同。&quot;&gt;&lt;/a&gt;以下为JDK1.8的提取方式，不同版本路径有所不同。&lt;/h2&gt;&lt;h3 id=&quot;1-使用7-ZIP压缩工具打开EXE文件&quot;&gt;&lt;a href=&quot;#1-使用7-ZIP压缩工具打开EXE文件&quot; class=&quot;headerlink&quot; title=&quot;1. 使用7-ZIP压缩工具打开EXE文件&quot;&gt;&lt;/a&gt;1. 使用7-ZIP压缩工具打开EXE文件&lt;/h3&gt;&lt;h3 id=&quot;2-找到JDK文件的目录&quot;&gt;&lt;a href=&quot;#2-找到JDK文件的目录&quot; class=&quot;headerlink&quot; title=&quot;2. 找到JDK文件的目录&quot;&gt;&lt;/a&gt;2. 找到JDK文件的目录&lt;/h3&gt;&lt;h4 id=&quot;1-JDK1-8-32位的目录为：&quot;&gt;&lt;a href=&quot;#1-JDK1-8-32位的目录为：&quot; class=&quot;headerlink&quot; title=&quot;1. JDK1.8 32位的目录为：&quot;&gt;&lt;/a&gt;1. JDK1.8 32位的目录为：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\jdk-8u161-windows-i586.exe\tools.zip\&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-JDK1-8-64位的目录为：&quot;&gt;&lt;a href=&quot;#2-JDK1-8-64位的目录为：&quot; class=&quot;headerlink&quot; title=&quot;2. JDK1.8 64位的目录为：&quot;&gt;&lt;/a&gt;2. JDK1.8 64位的目录为：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\jdk-8u161-windows-x64.exe\.rsrc\1033\JAVA_CAB10\111\tools.zip\&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;熟悉JDK程序目录的朋友，应该可以认出，这个目录下的文件就是JDK的文件了&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="JDK" scheme="https://blog.songuo.tech/tags/JDK/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Charles代理工具导致电脑无法正常访问网站（您的连接不是私密连接）</title>
     <link href="https://blog.songuo.tech/p/e14a8b4.html"/>
     <id>https://blog.songuo.tech/p/e14a8b4.html</id>
     <published>2021-04-07T08:30:00.000Z</published>
-    <updated>2021-04-07T08:53:17.454Z</updated>
+    <updated>2021-04-07T08:54:43.320Z</updated>
     
     <content type="html"><![CDATA[<p>​    很多开发者都需要使用代理工具来调试接口，查看数据等等，但是有时候发现打开代理工具之后，代理工具同时也拦截了电脑的所有网络请求，导致电脑访问网站时提示（您的连接不是私密连接）。。。<a id="more"></a></p><p>​    造成这种问题的原因就是charles等代理工具也拦截了电脑网页的请求，但是使用的是charles代理工具的证书，导致浏览器无法验证此网页的证书，进而导致了报错，那么该如何解决呢？我们只需要将charles的证书添加到电脑的信任证书中即可。</p><p>​    进入Charles的Help中，选择SSL Proxying，然后点击Install Charles Root Certificate。</p><p>​    此时我们的Charles证书是不被系统信任的，所以访问网站每回都会报证书问题，然后我们点击安装证书。</p><p>​    可以选择证书的安装位置，我选择的是本地计算机，所有用户都可以用，或者为了安全，也可以选择只给当前用户安装，那么别的windows用户就没有被安装此证书；</p><p>​    然后为证书选择存储位置，这里必须手动选择存储位置，否则自动选择出来的证书位置仍然是不被信任的。</p><p>​    然后点击浏览，我们手动指定证书的存储位置为“受信任的根证书颁发机构”。</p><p>​    然后点击确定，完成，此时再次进入安装证书的步骤，我们就发现Charles证书已经被系统信任。</p><p>​    此时，开着Charles再次访问网站，是不是已经可以正常访问了？如果还是报证书问题的话，试着重启一下电脑，重启之后就可以正常访问了。</p>]]></content>
     
@@ -522,36 +547,6 @@
 &lt;h3 id=&quot;3、重启IDE，启用google-java-format&quot;&gt;&lt;a href=&quot;#3、重启IDE，启用google-java-format&quot; class=&quot;headerlink&quot; title=&quot;3、重启IDE，启用google-java-format&quot;&gt;&lt;/a&gt;3、重启IDE，启用google-java-format&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223938049254.png&quot; alt=&quot;技术分享图片&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;4、-启用Save-Actions&quot;&gt;&lt;a href=&quot;#4、-启用Save-Actions&quot; class=&quot;headerlink&quot; title=&quot;4、 启用Save Actions&quot;&gt;&lt;/a&gt;4、 启用Save Actions&lt;/h3&gt;&lt;p&gt;保存时自动格式化 ，将没用的import 语句删除&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/20180731223938160587.png&quot; alt=&quot;技术分享图片&quot;&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="idea" scheme="https://blog.songuo.tech/categories/idea/"/>
-    
-    
-      <category term="idea" scheme="https://blog.songuo.tech/tags/idea/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA自动导包设置</title>
-    <link href="https://blog.songuo.tech/p/7e18c401.html"/>
-    <id>https://blog.songuo.tech/p/7e18c401.html</id>
-    <published>2020-07-30T01:19:53.000Z</published>
-    <updated>2020-07-31T03:49:29.761Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>1、配置</strong></p><p>进入file-setting</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/905646-20190916093225567-2095910444.png" alt="img"></p><h2 id="2、说明"><a href="#2、说明" class="headerlink" title="2、说明"></a>2、说明</h2><ul><li>勾选标注第1个选项，IDEA 自动帮我们导入需要用到的包。但是对于那些同名的包，还是需要手动 Alt + Enter 进行导入的</li><li>勾选标注第2个选项，IDEA自动帮我们优化导入的包，比如自动去掉一些没有用到的包。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;1、配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;进入file-setting&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20200731/905646-20190916093225567-2095910444.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2、说明&quot;&gt;&lt;a href=&quot;#2、说明&quot; class=&quot;headerlink&quot; title=&quot;2、说明&quot;&gt;&lt;/a&gt;2、说明&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;勾选标注第1个选项，IDEA 自动帮我们导入需要用到的包。但是对于那些同名的包，还是需要手动 Alt + Enter 进行导入的&lt;/li&gt;
-&lt;li&gt;勾选标注第2个选项，IDEA自动帮我们优化导入的包，比如自动去掉一些没有用到的包。&lt;/li&gt;
-&lt;/ul&gt;
 
     
     </summary>
