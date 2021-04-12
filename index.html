@@ -261,15 +261,7 @@
 
       
           <p>在使用selenium进行自动化测试中我们有时会遇到这样的情况：</p>
-<p>​    我们需要手动打开浏览器，进入到所需的页面，执行一些手动任务，如输入表单、输入验证码，登陆成功后，然后再开始运行自动化脚本。</p>
-<p>这种情况下如何使用selenium来接管先前已打开的浏览器呢？</p>
-<p>这里给出Google Chrome浏览器的解决方案。</p>
-<p>我们可以利用Chrome DevTools协议。它允许客户检查和调试Chrome浏览器。</p>
-<p>打开cmd，在命令行中输入命令：</p>
-<p>chrome.exe —remote-debugging-port=9222 —user-data-dir=”C:\selenum\AutomationProfile”</p>
-<p>   对于-remote-debugging-port值，可以指定任何打开的端口。</p>
-<p>   对于-user-data-dir标记，指定创建新Chrome配置文件的目录。它是为了确保在单独的配置文件中启动chrome，不会污染你的默认配置文件。</p>
-<p>   还有，不要忘了在环境变量中PATH里将chrome的路径添加进去。</p>
+<p>​    我们需要手动打开浏览器，进入到所需的页面，执行一些手动任务，如输入表单、输入验证码，登陆成功后，然后再开始运行自动化脚本。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/p/e522fa11.html#more" rel="contents">
