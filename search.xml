@@ -4433,6 +4433,7 @@
 <p>链接: <a href="https://pan.baidu.com/s/128Efmj_UqlbPUx7v_pW9DA" target="_blank" rel="noopener">https://pan.baidu.com/s/128Efmj_UqlbPUx7v_pW9DA</a> 提取码: andx</p>
 <p>注意:有一个问题还没有解决，还无法区分阴影部分是黑色还是白色。 因为两种的情况不同，所以处理方式也不同。阴影部分为黑底时需要转灰度和二值化，为白底时不需要。黑底使用归一化平方差匹配算法 TM_SQDIFF ，而白底使用相关系数匹配算法 TM_CCOEFF。</p>
 <p>因以上关系，无法区分阴影部分是黑色还是白色，顾存在失败的几率，在程序中通过重试登录进行处理，经测试大概率在3次以内能够登录成功。</p>
+<p>参考：<a href="https://blog.csdn.net/weixin_44549063/article/details/112193516" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44549063/article/details/112193516</a></p>
 ]]></content>
       <categories>
         <category>selenium</category>
