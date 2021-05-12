@@ -5002,7 +5002,7 @@
     <title>WEB套打程序开发 (lodop使用)</title>
     <url>//p/27db05d5.html</url>
     <content><![CDATA[<p><a href="https://www.diewufeiyang.com/post/1210.html" target="_blank" rel="noopener">WEB套打程序开发 (lodop使用)</a></p>
-<p>WEB套打可选方案不多，理想的更少，利用免费控件Lodop+JavaScript实现精确套打，算是较为经典的选择。这种方案其实比较简单，利用一个htm文件就可以实现模板设计过程，几乎是“空手套”式的开发，但理解这几个步骤还是需要点时间，下面一步步详细演示说明：</p>
+<p>WEB套打可选方案不多，理想的更少，利用免费控件Lodop+JavaScript实现精确套打，算是较为经典的选择。这种方案其实比较简单，利用一个htm文件就可以实现模板设计过程，几乎是“空手套”式的开发，但理解这几个步骤还是需要点时间，下面一步步详细演示说明：<a id="more"></a></p>
 <p>第一步：建立一个空白的模板设计文件</p>
 <p>把以下超文本代码复制到一个本地htm文件中:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210512/0025zsLrzy6GWjHaJkK3a-1.jpg" alt="img"></p>
