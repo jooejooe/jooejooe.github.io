@@ -352,9 +352,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-下载官网EXE版本的jdk安装包&quot;&gt;&lt;a href=&quot;#1-下载官网EXE版本的jdk安装包&quot; class=&quot;headerlink&quot; title=&quot;1. 下载官网EXE版本的jdk安装包&quot;&gt;&lt;/a&gt;1. 下载官网EXE版本的jdk安装包&lt;/h1&gt;&lt;h1 id=&quot;2-提取JDK文件&quot;&gt;&lt;a href=&quot;#2-提取JDK文件&quot; class=&quot;headerlink&quot; title=&quot;2. 提取JDK文件&quot;&gt;&lt;/a&gt;2. 提取JDK文件&lt;/h1&gt;&lt;h2 id=&quot;以下为JDK1-8的提取方式，不同版本路径有所不同。&quot;&gt;&lt;a href=&quot;#以下为JDK1-8的提取方式，不同版本路径有所不同。&quot; class=&quot;headerlink&quot; title=&quot;以下为JDK1.8的提取方式，不同版本路径有所不同。&quot;&gt;&lt;/a&gt;以下为JDK1.8的提取方式，不同版本路径有所不同。&lt;/h2&gt;&lt;h3 id=&quot;1-使用7-ZIP压缩工具打开EXE文件&quot;&gt;&lt;a href=&quot;#1-使用7-ZIP压缩工具打开EXE文件&quot; class=&quot;headerlink&quot; title=&quot;1. 使用7-ZIP压缩工具打开EXE文件&quot;&gt;&lt;/a&gt;1. 使用7-ZIP压缩工具打开EXE文件&lt;/h3&gt;&lt;h3 id=&quot;2-找到JDK文件的目录&quot;&gt;&lt;a href=&quot;#2-找到JDK文件的目录&quot; class=&quot;headerlink&quot; title=&quot;2. 找到JDK文件的目录&quot;&gt;&lt;/a&gt;2. 找到JDK文件的目录&lt;/h3&gt;&lt;h4 id=&quot;1-JDK1-8-32位的目录为：&quot;&gt;&lt;a href=&quot;#1-JDK1-8-32位的目录为：&quot; class=&quot;headerlink&quot; title=&quot;1. JDK1.8 32位的目录为：&quot;&gt;&lt;/a&gt;1. JDK1.8 32位的目录为：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\jdk-8u161-windows-i586.exe\tools.zip\&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;2-JDK1-8-64位的目录为：&quot;&gt;&lt;a href=&quot;#2-JDK1-8-64位的目录为：&quot; class=&quot;headerlink&quot; title=&quot;2. JDK1.8 64位的目录为：&quot;&gt;&lt;/a&gt;2. JDK1.8 64位的目录为：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\jdk-8u161-windows-x64.exe\.rsrc\1033\JAVA_CAB10\111\tools.zip\&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;熟悉JDK程序目录的朋友，应该可以认出，这个目录下的文件就是JDK的文件了&lt;/p&gt;
+      
+      
+        &lt;h1 id=&quot;1-下载官网EXE版本的jdk安装包&quot;&gt;&lt;a href=&quot;#1-下载官网EXE版本的jdk安装包&quot; class=&quot;headerlink&quot; title=&quot;1. 下载官网EXE版本的jdk安装包&quot;&gt;&lt;/a&gt;1. 下载官网EXE版本的jdk安装包&lt;/h1&gt;&lt;h1 id=
+      
     
     </summary>
     
@@ -400,10 +401,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Root Explorer 4.9.2&lt;/strong&gt;下载地址：&lt;a href=&quot;https://www.lanzous.com/i8xv21a&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.lanzous.com/i8xv21a&lt;/a&gt; 密码:4sgw&lt;/p&gt;
-&lt;p&gt;如何扒微信小程序源码：&lt;a href=&quot;https://blog.csdn.net/lmy1998/article/details/109047385&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/lmy1998/article/details/109047385&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;小程序反编译(支持分包)：&lt;a href=&quot;https://gitee.com/ksd/wxappUnpacker?_from=gitee_search&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitee.com/ksd/wxappUnpacker?_from=gitee_search&lt;/a&gt;&lt;/p&gt;
-
+      
+      
+        &lt;p&gt;&lt;strong&gt;Root Explorer 4.9.2&lt;/strong&gt;下载地址：&lt;a href=&quot;https://www.lanzous.com/i8xv21a&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.lanzous.com
+      
     
     </summary>
     
