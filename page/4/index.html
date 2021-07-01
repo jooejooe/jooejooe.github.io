@@ -199,6 +199,200 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/769df2e6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="松鼠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="松果小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/769df2e6.html" class="post-title-link" itemprop="url">Can't connect to X11 window server using 'localhost:10.0' as the value of the DISPLAY variable</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-04 10:30:00" itemprop="dateCreated datePublished" datetime="2020-11-04T10:30:00+08:00">2020-11-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">开发经验</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>517</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>问题】</p>
+<p>centos上的tomcat报错</p>
+<p>Exception in thread “http-bio-8080-exec-6” java.lang.InternalError: Can’t connect to X11 window server using ‘localhost:10.0’ as the value of the DISPLAY variable</p>
+<p>前台问题是页面的验证码图片加载不出来，而且报500错误</p>
+<p> 【原因】</p>
+<p>因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动</p>
+<p> 【解决办法】</p>
+<p>不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true</p>
+<p>在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS=-Djava.awt.headless=true</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/769df2e6.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/5a77449.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="松鼠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="松果小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/5a77449.html" class="post-title-link" itemprop="url">Jeecgboot自定义列使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-23 10:30:00" itemprop="dateCreated datePublished" datetime="2020-10-23T10:30:00+08:00">2020-10-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">开发经验</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>直接将代码copy到相应页面即可</p>
+<p><template> 标签添加如下</template></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20201023/clip_image002.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;span style&#x3D;&quot;float:right&quot;&gt;</span><br><span class="line">          &lt;a @click&#x3D;&quot;loadData()&quot;&gt;&lt;a-icon type&#x3D;&quot;sync&quot; &#x2F;&gt;刷新&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;a-divider type&#x3D;&quot;vertical&quot; &#x2F;&gt;</span><br><span class="line">          &lt;a-popover title&#x3D;&quot;自定义列&quot; trigger&#x3D;&quot;click&quot; placement&#x3D;&quot;leftBottom&quot;&gt;</span><br><span class="line">            &lt;template slot&#x3D;&quot;content&quot;&gt;</span><br><span class="line">              &lt;a-checkbox-group @change&#x3D;&quot;onColSettingsChange&quot; v-model&#x3D;&quot;settingColumns&quot; :defaultValue&#x3D;&quot;settingColumns&quot;&gt;</span><br><span class="line">                &lt;a-row&gt;</span><br><span class="line">                  &lt;template v-for&#x3D;&quot;(item,index) in defColumns&quot;&gt;</span><br><span class="line">                    &lt;template v-if&#x3D;&quot;item.key!&#x3D;&#39;rowIndex&#39;&amp;&amp; item.dataIndex!&#x3D;&#39;action&#39;&quot;&gt;</span><br><span class="line">                      &lt;a-col :span&#x3D;&quot;12&quot; :key&#x3D;&quot;index&quot;&gt;</span><br><span class="line">                        &lt;a-checkbox :value&#x3D;&quot;item.dataIndex&quot;&gt;</span><br><span class="line">                          &#123;&#123; item.title &#125;&#125;</span><br><span class="line">                        &lt;&#x2F;a-checkbox&gt;</span><br><span class="line">                      &lt;&#x2F;a-col&gt;</span><br><span class="line">                    &lt;&#x2F;template&gt;</span><br><span class="line">                  &lt;&#x2F;template&gt;</span><br><span class="line">                &lt;&#x2F;a-row&gt;</span><br><span class="line">              &lt;&#x2F;a-checkbox-group&gt;</span><br><span class="line">            &lt;&#x2F;template&gt;</span><br><span class="line">            &lt;a&gt;&lt;a-icon type&#x3D;&quot;setting&quot; &#x2F;&gt;自定义列&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;&#x2F;a-popover&gt;</span><br><span class="line">        &lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<p> data生命周期定义变量</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20201023/clip_image005.png" alt="img"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">columns: [],</span><br><span class="line">settingColumns: [],</span><br><span class="line">defColumns: columns,</span><br></pre></td></tr></table></figure>
+<p>created声明周期调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">   <span class="keyword">this</span>.initColumns()</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p> methods方法定义</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/5a77449.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/3b2cd0d3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -936,183 +1130,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/b8d2e867.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="松鼠">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="松果小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/b8d2e867.html" class="post-title-link" itemprop="url">诉源治理规范化建设的现实解决路径</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-12 15:19:53" itemprop="dateCreated datePublished" datetime="2020-07-12T15:19:53+08:00">2020-07-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">法律知识</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>《最高人民法院关于深化人民法院司法体制综合配套改革的意见 ——人民法院第五个五年改革纲要(2019—2023)》简称“五五改革纲要”，首次提出“诉源治理”这一概念。何为“诉源治理”？“五五改革纲要”并未给予进一步的解释。笔者经搜索国内各文献，鲜有人对“诉源治理”这一概念进行解析，仅在四川省成都市中级人民法院院长郭彦撰写的文章中搜索到：“<strong>‘诉源治理’是指社会个体及各种机构对纠纷的预防及化解所采取的各项措施、方式和方法，使潜在纠纷和已出现纠纷的当事人的相关利益和冲突得以调和，并且采取联合行动所持续的过程。</strong>”笔者认为，“诉源治理”重在强调“源”，纠纷性质为“诉”，手段为“治理”，可理解为对诉讼纠纷的源头化解及处理机制。最高院提出强化诉源治理，即是从法院视角下，要求全国各级法院推动从源头上减少诉讼增量而采取引领、分流等各项举措。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/b8d2e867.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/c9f18d0a.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="松鼠">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="松果小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/c9f18d0a.html" class="post-title-link" itemprop="url">SpringBoot 在IDEA中实现热部署 (JRebel实用版)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-28 10:30:00" itemprop="dateCreated datePublished" datetime="2020-06-28T10:30:00+08:00">2020-06-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/IDE/" itemprop="url" rel="index"><span itemprop="name">IDE</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>643</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>转自：<a href="https://blog.csdn.net/qierkang/article/details/95095954" target="_blank" rel="noopener">https://blog.csdn.net/qierkang/article/details/95095954</a></p>
-<p>JRebel简介：<br>        JRebel是与应用程序服务器集成的JVM Java代理，可使用现有的类加载器重新加载类。只有更改的类会重新编译并立即重新加载到正在运行的应用程序中，JRebel特别不依赖任何IDE或开发工具（除编译器外）。但是，与您的IDE紧密集成仍然很不错。请记住：只要您用新文件覆盖旧类文件，JRebel就会重新加载您的更改并减少重新部署的时间。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/c9f18d0a.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1184,7 +1201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1236,7 +1253,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">617k</span>
+    <span title="站点总字数">621k</span>
 </div>
 
         
