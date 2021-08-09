@@ -5176,7 +5176,7 @@
   <entry>
     <title>office在线预览以及在线编辑1</title>
     <url>//p/4c4ebf52.html</url>
-    <content><![CDATA[<p>做OA或者工作流程的网站中，常常能够看到一些在线Word编辑进行文档处理的功能，这里我开发了一个在线Word编辑插件并且以此为例。</p>
+    <content><![CDATA[<p>做OA或者工作流程的网站中，常常能够看到一些在线Word编辑进行文档处理的功能，这里我开发了一个在线Word编辑插件并且以此为例。<a id="more"></a></p>
 <p><strong>1．NTKO Word在线编辑器介绍：</strong></p>
 <p>NTKO的官方网站：<a href="http://www.ntko.com/" target="_blank" rel="noopener">http://www.ntko.com/</a><br> NTKO OFFICE文档控件是拥有完全自主知识产权的ActiveX控件。使用NTKO Office文档控件，能够在浏览器中直接编辑Word,Excel等Office文档，或者WPS，金山电子表等文档并保存到web服务器。实现文档和电子表格的统一管理。NTKO OFFICE文档控件具有在线编辑，痕迹保留，手写签名，模板套红，安全电子印章[企业版提供]，全屏批注，保存为HTML,MHT,PDF文件等办公自动化系统必备的功能。可以运行在PHP，ASP，JSP，C#，VB.NET，DOMINO等各种web编程语言和服务器。</p>
 <p><strong>2．列出完整的jQuery插件的代码清单：</strong></p>
@@ -5205,6 +5205,52 @@
       </categories>
       <tags>
         <tag>onlineoffice</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>freemarker常用语法</title>
+    <url>//p/8f745d43.html</url>
+    <content><![CDATA[<p>常用语法收集<a id="more"></a></p>
+<ol>
+<li>去掉数字输出时的逗号</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$&#123;<span class="number">123456</span>?c&#125;或者$&#123;<span class="number">123456</span>?string.computer&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>freemarker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux定时删除文件</title>
+    <url>//p/e76f239a.html</url>
+    <content><![CDATA[<ol>
+<li>创建shellauto-del-files.sh</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">touch /home/suzhuichang/auto-del-files.sh</span><br><span class="line"></span><br><span class="line">chmod +x auto-del-files.sh</span><br></pre></td></tr></table></figure>
+<p>新建一个可执行文件auto-del-files.sh，并分配可运行权限<a id="more"></a></p>
+<p>2.编辑shell脚本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi auto-del-files.sh</span><br></pre></td></tr></table></figure>
+<p>编辑auto-del-files.sh文件如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line">find /home/suzhuichang/importZipDes -mtime +10 -name "*" -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<p>ok，保存退出(:wq)</p>
+<p>3.计划任务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>将auto-del-files.sh执行脚本加入到系统计划任务，到点自动执行.输入：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">10 0 * * * /home/suzhuichang/auto-del-files.sh</span><br></pre></td></tr></table></figure>
+<p>这里的设置是每天凌晨0点10分执行auto-del-files.sh文件进行数据清理任务了。</p>
+<p>4.错误 -bash: xxx: /bin/sh^M: bad interpreter: No such file or directory</p>
+<p>使用notepad++打开sh文件，将文件转为Unix(LF) UTF-8格式保存，上传即可。</p>
+<p>参考资料：</p>
+<p><a href="http://c.biancheng.net/view/1092.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1092.html</a></p>
+<p><a href="https://tool.lu/crontab/" target="_blank" rel="noopener">https://tool.lu/crontab/</a></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
