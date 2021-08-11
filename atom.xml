@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-08-09T07:37:26.019Z</updated>
+  <updated>2021-08-11T03:00:59.723Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>抓取弹出框的xpath</title>
+    <link href="https://blog.songuo.tech/p/42d7f672.html"/>
+    <id>https://blog.songuo.tech/p/42d7f672.html</id>
+    <published>2021-08-11T01:00:00.000Z</published>
+    <updated>2021-08-11T03:00:59.723Z</updated>
+    
+    <content type="html"><![CDATA[<p>打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="selenium" scheme="https://blog.songuo.tech/categories/selenium/"/>
+    
+    
+      <category term="selenium" scheme="https://blog.songuo.tech/tags/selenium/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux定时删除文件</title>
     <link href="https://blog.songuo.tech/p/e76f239a.html"/>
     <id>https://blog.songuo.tech/p/e76f239a.html</id>
     <published>2021-08-09T02:30:00.000Z</published>
-    <updated>2021-08-09T07:37:26.019Z</updated>
+    <updated>2021-08-10T00:46:38.757Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>创建shellauto-del-files.sh</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">touch /home/suzhuichang/auto-del-files.sh</span><br><span class="line"></span><br><span class="line">chmod +x auto-del-files.sh</span><br></pre></td></tr></table></figure><p>新建一个可执行文件auto-del-files.sh，并分配可运行权限<a id="more"></a></p><p>2.编辑shell脚本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi auto-del-files.sh</span><br></pre></td></tr></table></figure><p>编辑auto-del-files.sh文件如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line">find /home/suzhuichang/importZipDes -mtime +10 -name "*" -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure><p>ok，保存退出(:wq)</p><p>3.计划任务</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>将auto-del-files.sh执行脚本加入到系统计划任务，到点自动执行.输入：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 0 * * * /home/suzhuichang/auto-del-files.sh</span><br></pre></td></tr></table></figure><p>这里的设置是每天凌晨0点10分执行auto-del-files.sh文件进行数据清理任务了。</p><p>4.错误 -bash: xxx: /bin/sh^M: bad interpreter: No such file or directory</p><p>使用notepad++打开sh文件，将文件转为Unix(LF) UTF-8格式保存，上传即可。</p><p>参考资料：</p><p><a href="http://c.biancheng.net/view/1092.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1092.html</a></p><p><a href="https://tool.lu/crontab/" target="_blank" rel="noopener">https://tool.lu/crontab/</a></p>]]></content>
+    <content type="html"><![CDATA[<ol><li>创建shellauto-del-files.sh</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">touch /home/suzhuichang/auto-del-files.sh</span><br><span class="line"></span><br><span class="line">chmod +x auto-del-files.sh</span><br></pre></td></tr></table></figure><p>新建一个可执行文件auto-del-files.sh，并分配可运行权限<a id="more"></a></p><p>2.编辑shell脚本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi auto-del-files.sh</span><br></pre></td></tr></table></figure><p>编辑auto-del-files.sh文件如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line">find /home/suzhuichang/importZipDes -mtime +10 -name "*" -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure><p>ok，保存退出(:wq)</p><p>3.计划任务</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>将auto-del-files.sh执行脚本加入到系统计划任务，到点自动执行.输入：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 0 * * * /home/suzhuichang/auto-del-files.sh</span><br></pre></td></tr></table></figure><p>这里的设置是每天凌晨0点10分执行auto-del-files.sh文件进行数据清理任务了。</p><p>4.错误 -bash: xxx: /bin/sh^M: bad interpreter: No such file or directory</p><p>使用notepad++打开sh文件，将文件转为Unix(LF) UTF-8格式保存，上传即可。</p><p>参考资料：</p><p><a href="http://c.biancheng.net/view/1092.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1092.html</a></p><p><a href="https://tool.lu/crontab/" target="_blank" rel="noopener">https://tool.lu/crontab/</a></p><p><a href="https://www.cnblogs.com/panie2015/p/8523377.html" target="_blank" rel="noopener">https://www.cnblogs.com/panie2015/p/8523377.html</a></p>]]></content>
     
     <summary type="html">
     
@@ -461,29 +485,6 @@
     <summary type="html">
     
       绘本教学的组织方法及策略（四）
-    
-    </summary>
-    
-    
-      <category term="生活学习" scheme="https://blog.songuo.tech/categories/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="绘本" scheme="https://blog.songuo.tech/tags/%E7%BB%98%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绘本教学的组织方法及策略（三）</title>
-    <link href="https://blog.songuo.tech/p/bad3846b.html"/>
-    <id>https://blog.songuo.tech/p/bad3846b.html</id>
-    <published>2021-04-08T12:02:00.000Z</published>
-    <updated>2021-04-09T02:54:57.051Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>（三）集体教学的组织方法及策略。</strong></p><p>根据教学的方式来分：1、分段式2、主干式3、细节式4、整体式5、综合式</p><p><strong>分段式阅读法——有机运用故事情节</strong>。</p><p>分段式阅读法是将一个绘本分成几个部分逐步进行教学的方法。绘本通常以较多连续的画面展示一个完整的故事，相对而言有故事的容量比较大，而且不少的作品情节跌宕起伏，每个转折的关键情节都是一个很好的教学契机，这样的绘本就很适合进行分段式的阅读。比如绘本《给天使一对翅膀》为例。将绘本的阅读分成三部分进行，第一部分集体阅读，知道小男孩画了一个天使，而天使不要那种有羽毛的翅膀。第二部分亲子阅读，小男孩为天使画了许多美丽而又新奇的翅膀。第三部分集体阅读，天使为了报答小男孩，带着小男孩绕着老胡桃树飞了三圈。最后再完整阅读故事。<br>  <strong>主干式阅读法——突出呈现故事的主题。</strong></p><p>主干式阅读法指的是在不影响作品主题的前提下，抽出绘本主要的骨架展开的教学方法。在阅读这类绘本时我们可以尝试在第一次的阅读中可采取先阅读故事的主要情节、简化语言等方式，再进入第二次的深入阅读。例如绘本《蛤蟆爷爷的秘诀》《神秘的大衣》。<br><strong></strong>  <strong>细节式阅读法**</strong>——<strong>**细致地感受作品精髓。</strong><br>   细节式阅读法指细致地观察绘本中有趣的细节，从而达到感受作品完美意境的方法。虽然每本书的文图构成不同，以图画为主，有的绘本文字少，有的文字多，但优秀的绘本文字都考虑了情节、场景、人物、心理等的变化，图画也具有动态感和流畅性，使整个画面看起来和谐、完整。一些图画设计非常巧妙，别具匠心，既能协助突出主题，又能让人忍俊不禁，运用细节式阅读绘本中这些精彩的部分，能让幼儿更细致感受作品，有时也能以这种方式切入来阅读绘本。如《母鸡萝丝去散步》，在故事的扉页有一张地图，就是母鸡散步的路线，画面把萝丝的家、院子、池塘、草垛、磨房、篱笆和蜂箱完整而连贯地以大页面的方式展现，把故事情节的主线直接拎出来，与地图上“母鸡萝丝去散步”相呼应，作者的考虑是多么的巧妙与慎密。</p><p><strong>整体式阅读法**</strong>——<strong>**整体地展现作品内容</strong>。</p><p>整体式阅读法是完整地阅读整个绘本的教学方法。精彩的绘本图画艺术性强，非常富有情感，故事的主题来自于幼儿的生活经验，能引发幼儿共鸣的，完整地阅读能带给幼儿情感上的冲击、语言上的提升。在绘本阅读中，整体式的阅读是最重要的策略之一，它经常使用在绘本的内容比较浅显或重复较多、幼儿阅读能力较强、阅读相似的绘本、分段阅读之后等情况之下。如《给天使一对翅膀》《猜猜我有多爱你》《彩虹的尽头》等在教学的最后环节都运用了整体式阅读。</p><p>  <strong>各种方法的综合运用</strong>。</p><p>  绘本是一种独立的图书形式，文字与图画共同承担着讲故事的重要责任，图画不再仅仅起辅助和诠释文字的作用，两者之间是一种相互依托的关系，这才营造出绘本完美的感觉。因此，我们应针对不同的绘本展开教学，深入分析的基础上进行精心设计，可以将上述方法进行有机地组合，帮助幼儿读懂绘本，读透绘本，从而提高幼儿的阅读能力。</p><p>以下，我列举了几种策略综合使用的心得：</p><div class="table-container"><table><thead><tr><th>策略</th><th>绘本</th><th>策略的反思</th><th>幼儿反应</th></tr></thead><tbody><tr><td>分段式+细节式+整体式</td><td>《给天使一对翅膀》</td><td>1.分段的时机比较恰当，给幼儿提供了充足的想象空间；2. 细节式阅读让幼儿更细致的发现小男孩丰富的想象力。3. 分段后的整体阅读能让幼儿整体地感受作品，并发现作品画面中的小细节。</td><td>（第一次分段的想象）1.猜想：小男孩会给天使画上怎样的翅膀呢？2.哇！有这么多的翅膀啊！3.小男孩可真会想啊！这些翅膀真漂亮！……</td></tr><tr><td>整体式+细节式</td><td>《母鸡萝丝去散步》</td><td>1.内容比较集中，整体式阅读直接给幼儿完整的印象；2.细节式的阅读体现在对比式阅读的铺垫和整体阅读后扉页的阅读中。</td><td>（幼儿在活动中的预测）1.我猜狐狸会踩在钉耙上，脚上会出血的；2.山羊用头上的角顶狐狸，他帮助了母鸡；3.看这只狐狸就知道它是吃不到母鸡的。</td></tr><tr><td>分段式+整体式+细节式</td><td>《猜猜我有多爱你》</td><td>1.完整式阅读能让幼儿完整地领略大兔子和小兔子的爱；2.细节式阅读时进一步观察两只兔子对爱的表达——那经典的动作。</td><td>（练习句式时的摘录）1.地球有多大，我就有多爱你；2.大海里的水有多深，我就有多爱你；3.高楼大厦有多高，我就有多爱你。</td></tr><tr><td>……</td><td>……</td><td>……</td><td>……</td></tr></tbody></table></div>]]></content>
-    
-    <summary type="html">
-    
-      绘本教学的组织方法及策略（三）
     
     </summary>
     

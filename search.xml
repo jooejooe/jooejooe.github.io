@@ -5245,12 +5245,25 @@
 <p>参考资料：</p>
 <p><a href="http://c.biancheng.net/view/1092.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1092.html</a></p>
 <p><a href="https://tool.lu/crontab/" target="_blank" rel="noopener">https://tool.lu/crontab/</a></p>
+<p><a href="https://www.cnblogs.com/panie2015/p/8523377.html" target="_blank" rel="noopener">https://www.cnblogs.com/panie2015/p/8523377.html</a></p>
 ]]></content>
       <categories>
         <category>开发经验</category>
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抓取弹出框的xpath</title>
+    <url>//p/42d7f672.html</url>
+    <content><![CDATA[<p>打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。</p>
+]]></content>
+      <categories>
+        <category>selenium</category>
+      </categories>
+      <tags>
+        <tag>selenium</tag>
       </tags>
   </entry>
 </search>
