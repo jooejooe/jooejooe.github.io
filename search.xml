@@ -5301,4 +5301,23 @@
         <tag>office,jacob</tag>
       </tags>
   </entry>
+  <entry>
+    <title>nignx文件服务器，添加用户认证</title>
+    <url>//p/a346aa4b.html</url>
+    <content><![CDATA[<p>nginx搭建文件服务器，为了安全起见，但只想部分份能够下载。<a id="more"></a></p>
+<p>Nginx进行用户名密码验证的话是通过ngx_http_auth_basic_module模块实现，该模块可作用范围http，server，location，limit_except，语法如下：</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">location</span> / &#123;</span><br><span class="line">    <span class="attribute">auth_basic</span>           <span class="string">"Please input your name"</span>;</span><br><span class="line">    <span class="attribute">auth_basic_user_file</span> /etc/nginx/conf/htpasswd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在conf目录下创建htpasswd文件，文件中添加用户名密码，格式如下</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">test:123456</span><br></pre></td></tr></table></figure>
+<p>重启nginx后，访问，效果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210830/1d481482201251.png" alt="nginxbasicautu.png"></p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>nignx</tag>
+        <tag>文件服务</tag>
+      </tags>
+  </entry>
 </search>
