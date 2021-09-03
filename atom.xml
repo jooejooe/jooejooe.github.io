@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-08-30T01:21:21.686Z</updated>
+  <updated>2021-09-03T03:46:48.272Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在谷歌浏览器(chrome)里面在线浏览word，excel文件</title>
+    <link href="https://blog.songuo.tech/p/fc11f5f9.html"/>
+    <id>https://blog.songuo.tech/p/fc11f5f9.html</id>
+    <published>2021-09-02T02:30:00.000Z</published>
+    <updated>2021-09-03T03:46:48.272Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先下载离线安装包，是一个crx文件，不需要打开<a id="more"></a></p><p>地址栏输入： chrome://extensions/</p><p>调整到开发者模式，然后将刚刚下载的crx文件拖入到浏览器</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127091755861.png" alt="在这里插入图片描述"></p><p>如果没有弹出安装的提示，把浏览器关了多重试几次。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127083952207.png" alt="设置允许控件"></p><p>修改配置，地址栏输入chrome://flags/#enable-nacl<br>将其改成enabled</p><p>重启浏览器</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先下载离线安装包，是一个crx文件，不需要打开
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="office" scheme="https://blog.songuo.tech/tags/office/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nignx文件服务器，添加用户认证</title>
     <link href="https://blog.songuo.tech/p/a346aa4b.html"/>
     <id>https://blog.songuo.tech/p/a346aa4b.html</id>
     <published>2021-08-30T02:30:00.000Z</published>
-    <updated>2021-08-30T01:21:21.686Z</updated>
+    <updated>2021-08-30T01:22:42.348Z</updated>
     
     <content type="html"><![CDATA[<p>nginx搭建文件服务器，为了安全起见，但只想部分份能够下载。<a id="more"></a></p><p>Nginx进行用户名密码验证的话是通过ngx_http_auth_basic_module模块实现，该模块可作用范围http，server，location，limit_except，语法如下：</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> / &#123;</span><br><span class="line">    <span class="attribute">auth_basic</span>           <span class="string">"Please input your name"</span>;</span><br><span class="line">    <span class="attribute">auth_basic_user_file</span> /etc/nginx/conf/htpasswd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在conf目录下创建htpasswd文件，文件中添加用户名密码，格式如下</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test:123456</span><br></pre></td></tr></table></figure><p>重启nginx后，访问，效果如下：</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210830/1d481482201251.png" alt="nginxbasicautu.png"></p>]]></content>
     
@@ -466,29 +489,6 @@
     <summary type="html">
     
       图画书幼儿观察能力的年龄特点与指导策略（3—4岁）
-    
-    </summary>
-    
-    
-      <category term="生活学习" scheme="https://blog.songuo.tech/categories/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="绘本" scheme="https://blog.songuo.tech/tags/%E7%BB%98%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图画书幼儿观察能力发展特点</title>
-    <link href="https://blog.songuo.tech/p/67817741.html"/>
-    <id>https://blog.songuo.tech/p/67817741.html</id>
-    <published>2021-04-08T13:11:00.000Z</published>
-    <updated>2021-04-09T02:54:57.034Z</updated>
-    
-    <content type="html"><![CDATA[<p>   幼儿期是观察力发展的萌芽阶段。3岁以前幼儿的观察多是随意的，无目的性的。比如说，这一时期的幼儿在小区玩耍的时候，无意中会被鸟儿的喳喳声，汽车的喇叭声，还有开得正艳的花朵等各种事物所吸引，有时候还会盯着自己感兴趣的事物看上好一阵子。这时他们的知觉是被动的，是无意的知觉，简单地说，这些知觉都是由外界刺激物引起的。</p><p>   而当幼儿渐渐成长，我们带着他到户外去感受春天，观察春天的树叶、花朵，分辨它们不同的颜色，感觉不同的气味，感受春天的阳光、微风时，这时的观察才是视觉、听觉、触觉、嗅觉等多种感知觉综合的结果，这个过程中包含着理解、思考，有一定的目的性和计划性。</p><p>   我们发现，幼儿早期的观察基本上是被动的、无意识的观察，这一时期的观察需要成人的引导，否则很容易被外界其他事物所吸引，分散注意力。随着年龄的增长，在我们正确的教育和引导下，幼儿的观察能力逐渐由先前的无意知觉转变为有目的、有组织的多重感知觉综合的“思维的知觉”，形成初步的有目的、有方向、自觉的观察能力。</p><p>   但就整个发展来说，幼儿观察力的发展还是不够的，他们观察的目的性、持续性、理解性、条理性等都还不强。具体表现在以下几个方面：</p><p>一、观察的目的性发展 </p><p>   刚刚我们谈到，幼儿早期的观察是随意的，无目的性的。这一时期的观察需要成人的引导，否则很容易被其他事物所吸引。到了中后期，幼儿观察的目的性增强，开始排除干扰，主动进行观察。在—项关于幼儿观察的研究中，研究者将幼儿观察的目的性分成了三级水平。</p><p>   一级：能根据任务有目的地观察，遇到困难和干扰也能坚持细致观察；</p><p>   二级：能够有目的地观察，但遇到困难和干扰不能克服，不愿坚持；</p><p>   三级：不能根据任务有目的地观察，东张西望，或只看一处，或随意乱指。</p><p> 二、观察的持续性发展 </p><p>​    我们都知道，幼儿自我控制力较差，容易受外界的干扰，所以他们无法像成人一样坚持长时间观察。另外，幼儿的情绪、兴趣、爱好等也会影响观察的时间。不过在教育和引导下，幼儿可以逐渐学会持续地观察事物。</p><p>   在上述的测查实验中，各年龄幼儿观察图画的平均持续时间随年龄增长而延长。3—4岁幼儿的观察时间平均为6分8秒； 5岁时为7分6秒； 6岁为12分3秒。从6岁开始，观察的持续时间显著增加。这表明大班学生是观察持续性发展的快速期。</p><p>三、观察的理解性的发展 </p><p>   所谓观察的理解性就是指在观察过程中，善于发现某种事物的特征，能透过事物的表面现象，发现事物之间的联系。一般来说，小班幼儿由于思维发展水平的限制，观察处于无意识、零碎、孤立的阶段，这时幼儿只能观察到事物的表面特征和现象，无法把所观察到的事物有机地联系起来，观察的概括能力很低。</p><p>   例如，图片上画着一棵苹果树和一个小女孩，苹果树上结满了红苹果。小班幼儿看见这幅图片可能只会注意图片上的苹果了，往往注意不到图片上的小女孩，也不会建立小女孩和苹果树之间的联系，想象“小女孩想要摘苹果”这一主题。这个时候他们处在只是理解图画中个别对象或者个别细节的阶段。而少部分中班幼儿开始能概括出图画之间的一些简单的联系。这主要是因为幼儿思维能力发展的影响导致的。 </p><p>四、观察的顺序性和条理性的发展 </p><p>   一般地说，小班、中班幼儿的观察缺乏顺序性和条理性，往往是随便看，翻到哪里是哪里，或者是凭兴趣想看哪里是哪里，并且常常是边用手指，边看，嘴里还常常自言自语。大班幼儿开始掌握初步的观察的方法。但是也仍然处于萌芽阶段。</p>]]></content>
-    
-    <summary type="html">
-    
-      图画书幼儿观察能力发展特点
     
     </summary>
     
