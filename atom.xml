@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-09-03T03:46:48.272Z</updated>
+  <updated>2021-09-03T03:48:07.397Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.songuo.tech/p/fc11f5f9.html"/>
     <id>https://blog.songuo.tech/p/fc11f5f9.html</id>
     <published>2021-09-02T02:30:00.000Z</published>
-    <updated>2021-09-03T03:46:48.272Z</updated>
+    <updated>2021-09-03T03:48:07.397Z</updated>
     
     <content type="html"><![CDATA[<p>首先下载离线安装包，是一个crx文件，不需要打开<a id="more"></a></p><p>地址栏输入： chrome://extensions/</p><p>调整到开发者模式，然后将刚刚下载的crx文件拖入到浏览器</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127091755861.png" alt="在这里插入图片描述"></p><p>如果没有弹出安装的提示，把浏览器关了多重试几次。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127083952207.png" alt="设置允许控件"></p><p>修改配置，地址栏输入chrome://flags/#enable-nacl<br>将其改成enabled</p><p>重启浏览器</p>]]></content>
     
