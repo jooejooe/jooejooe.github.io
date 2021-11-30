@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2021-10-20T07:17:23.730Z</updated>
+  <updated>2021-11-30T07:39:10.635Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>分节后，word总页数不为节的总页数</title>
+    <link href="https://blog.songuo.tech/p/f7f5ae3a.html"/>
+    <id>https://blog.songuo.tech/p/f7f5ae3a.html</id>
+    <published>2021-11-30T06:12:00.000Z</published>
+    <updated>2021-11-30T07:39:10.635Z</updated>
+    
+    <content type="html"><![CDATA[<p>选中总页数，鼠标右击，选中编辑域，进入弹出窗口</p><a id="more"></a><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153228038.png" alt="image-20211130153228038"></p><p>在弹出的窗口,点击【域代码】，</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153547063.png" alt="image-20211130153547063"></p><p>将NumPages修改成sectionpages，点击【确定】即可</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153651158.png" alt="image-20211130153651158"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;选中总页数，鼠标右击，选中编辑域，进入弹出窗口&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="office" scheme="https://blog.songuo.tech/categories/office/"/>
+    
+    
+      <category term="office" scheme="https://blog.songuo.tech/tags/office/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nginx反向代理去除tomcat项目名</title>
     <link href="https://blog.songuo.tech/p/23de2d9e.html"/>
     <id>https://blog.songuo.tech/p/23de2d9e.html</id>
     <published>2021-10-21T02:30:00.000Z</published>
-    <updated>2021-10-20T07:17:23.730Z</updated>
+    <updated>2021-10-20T07:17:33.613Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen    80;</span><br><span class="line">  server_name crm.xxx.net;</span><br><span class="line">  </span><br><span class="line">  location &#x2F; &#123;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;192.168.1.216&#x2F;crm&#x2F;;</span><br><span class="line">    proxy_cookie_path &#x2F;crm&#x2F; &#x2F;;</span><br><span class="line">    proxy_set_header  Host  $host;</span><br><span class="line">    proxy_set_header  X-Real-IP  $remote_addr;</span><br><span class="line">    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">  &#125;</span><br><span class="line">  location &#x2F;crm&#x2F;&#123;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;192.168.1.216&#x2F;crm&#x2F;;</span><br><span class="line">    proxy_cookie_path &#x2F;crm&#x2F; &#x2F;;</span><br><span class="line">    proxy_set_header  Host  $host;</span><br><span class="line">    proxy_set_header  X-Real-IP  $remote_addr;</span><br><span class="line">    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -466,29 +489,6 @@
     <summary type="html">
     
       图画书幼儿观察能力的年龄特点与指导策略（5—6岁）
-    
-    </summary>
-    
-    
-      <category term="生活学习" scheme="https://blog.songuo.tech/categories/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="绘本" scheme="https://blog.songuo.tech/tags/%E7%BB%98%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图画书幼儿观察能力的年龄特点与指导策略（4—5岁）</title>
-    <link href="https://blog.songuo.tech/p/594d12c6.html"/>
-    <id>https://blog.songuo.tech/p/594d12c6.html</id>
-    <published>2021-04-08T13:12:00.000Z</published>
-    <updated>2021-04-09T02:54:57.039Z</updated>
-    
-    <content type="html"><![CDATA[<p>（一）4～5岁幼儿图画观察能力的基本特点是：</p><p>​    1. 观察的有序性增强。</p><p>   通过前期的引导，我们发现这一时期幼儿能逐渐按照从主到次、从左到右、从上到下等基本顺序观察图画，开始意识到单页图画中各事物之间的联系，也能够用自己的话简单概括出单页图画的基本内容，但对连续观察多页图画并概括其内容有较大困难。</p><p>​    2. 高度关注细节，尝试赋予每个细节以意义。</p><p>   中班幼儿对图画的某些细节有着特别的观察兴趣，并喜欢由此展开想象。如图画书《爷爷一定有办法》中，有一个细节就是图画的下方有“小老鼠一家”，这让幼儿特别感兴趣，其实这个细节在故事中并没有什么特殊的意义，但幼儿会特别关注，而且对每一页小老鼠的活动都非常感兴趣。</p><p>​    3. 能发现关键线索，但还不能贯穿观察的始终。</p><p>   如在《爷爷一定有办法》中，图画的关键线索是旧毯子做成的东西越来越小，从最开始的外套到后来的背心、领带、纽扣。可能经我们引导，幼儿在刚开始阅读时可能会发现这条关键线索，但随着阅读活动的延续，很多幼儿会“忘记”利用该线索来预测故事情节。</p><p>(二)4～5岁幼儿图画观察能力发展的指导策略：</p><p>   教师对4～5岁幼儿图画观察能力的指导应先重在帮助幼儿整体观察单页图画，然后逐渐过渡到对两页以至多页图画的连续观察，重在提高幼儿对多页图画观察的概括性，帮助幼儿理解画页间的联系。具体可运用以下指导策略：</p><p>​    1．初次阅读时，引导幼儿把握故事主要线索，忽略无关细节。</p><p>   刚刚我们谈到过，这一时期幼儿对某些细节部分格外感兴趣，并喜欢展开想象。所以在初次阅读的过程中，教师不要主动提及无关细节让幼儿观察，即便有幼儿关注，我们也尽量采用“忽略”策略，以防幼儿将关注点投向寻找细节和赋予细节意义上，或者展开过多的想象，影响对图画主要内容的观察和理解。</p><p>   如在《爷爷一定有办法》中，教师在初次引导幼儿观察图画时应该先以“约瑟一家”这条线索为主，让幼儿跟随故事画面，从毯子到外套，再到背心，领带……随着故事的进展，在爷爷说出：“这块料子还够做……”时，引导幼儿发挥想象，接下来还可以做什么呢？</p><p>   在初次观察的时候，“小老鼠一家”这条辅助线索可暂时不观察。不过，关于这个细节，我们也可以想一想，为什么这个图画书中会有小老鼠一家这个细节呢？因为约瑟爷爷剪下来的那些碎毯子，最后都掉到了小老鼠一家中，成了它们布置房间的好材料，包括最后的那一粒让约瑟怎么都找不到的纽扣。在理解了故事之后，我们再来看小老鼠一家，会发现随着旧毯子做成的东西越来越小，裁下来的碎片让小老鼠的家也是布置得越来越漂亮了。这时，我们会觉得这个故事的内容更加丰满了。</p><p>   我们发现，在图画书的画面上某个不那么引人注目的地方，常常隐藏着许多作者在经意或不经意之间留下的细节。它们有的与作品的主题无关，只不过是增加一点小噱头或是出自于作者个人的癖好，但也有的与主题息息相关，甚至可以说，缺少了这样一个细节，整个作品就缺少了很多乐趣，少了很多色彩。</p><p>   正是这样的一些独具匠心的细节，往往是孩子们最容易注意到的，更能吸引幼儿一次又一次地阅读。需要注意的是，在初次观察的时候不能被细节耗费太多的时间，容易造成幼儿的注意力过于集中在细节方面，影响了对主要内容的理解。在把握了故事内容之后，再来观察细节，才能更好地感受到细节的力量,彰显故事趣味。</p><p>​    2．运用重点观察法把握书中图画的关键线索。</p><p>   一本图画书通常有几十页画面，这些画面一幅幅连贯起来，一个故事就被叙述出来了。问题是，这一幅幅画面是怎样被连贯起来的呢？其实，图画书的画面与画面之间都是被一根关键线索串联起来的，通过重点观察，我们可以把握这条关键线索。</p><p>   比如《爷爷一定有办法》这个故事的关键线索是什么呢？——这条奇妙的毯子发生的变化，我们可以用“重点观察法”，引导幼儿重点观察每一幅画面中这条毯子变成了什么，外套——背心——领带——手帕——纽扣，在这个过程中幼儿不难发现，这条旧毯子做成的东西越来越小。与此同时，我们也可以引导幼儿重点观察一下“小老鼠一家”的变化，从最开始一个空空的洞穴，到后来安上了窗帘，铺上了桌布，小老鼠们都穿上了衣服，这条毯子裁剪剩下的碎布也让小老鼠的一家变得越来越漂亮了。</p><p>   通过重点观察图画书的“关键线索”，并由此展开分析和讨论，以此能让幼儿抓住故事发展的脉络，从而有效加深对图画、故事内容的理解。</p><p>​    3．运用回溯法帮助幼儿了解页与页之间的关系。</p><p>   我们指导幼儿看懂一本图画书，要经历这样的一个过程：先看懂每一页的内容，并在此基础上建立每页与每页的联系，从而整体把握图画书的内容。对中班幼儿，我们的指导要从整体观察单页图画逐渐过渡到对两页以至多页图画的连续观察，那么我们该如何引导幼儿把握页与页之间的关系呢？</p><p>   还是以《爷爷一定有办法》为例，在观察图画的过程中，奇妙的毯子变成了外套、背心……我们发现奇妙毯子的每一次变化都有这样一个过程：妈妈说约瑟看看你的……真该把它丢了——爷爷拿起……翻过来又翻过去——爷爷拿起剪刀……再用针缝——最后做成了……</p><p>   这样，每四个页面构成一个完整的意义单元。在阅读每个单元的过程中，每当问题出现的时候，孩子们都会想到“爷爷一定有办法”，随着“爷爷把这块料子翻过了，又翻过去”，孩子们会欢快地“咯吱”“咯吱”地模仿爷爷剪子的声音。 在幼儿阅读每个单元后，我们可引导幼儿回顾本意义单元各页的内容，以引导幼儿了解该意义单元各页之间的内在关联。</p><p>   在幼儿明白页与页之间联系的基础上，我们还要适时引导幼儿对前面几个页面的内容进行回顾，从而帮其更好地梳理故事脉络，理解故事的结构，为深入阅读打下基础。</p><p>   总体来看，中班幼儿大都能按一定的顺序来观察一幅图画，但是对于连续观察多页图画，概括多页图画的内容还有一定的困难，所以我们在引导幼儿观察画面时，要引导幼儿注意到前一页图画和后一页图画的联系在哪里，帮助建立页与页之间的联系，从而整体把握图画书的内容，并鼓励幼儿用自己的语言来连贯地讲出故事。</p>]]></content>
-    
-    <summary type="html">
-    
-      图画书幼儿观察能力的年龄特点与指导策略（4—5岁）
     
     </summary>
     

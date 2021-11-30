@@ -5353,4 +5353,22 @@
         <tag>nginx</tag>
       </tags>
   </entry>
+  <entry>
+    <title>分节后，word总页数不为节的总页数</title>
+    <url>//p/f7f5ae3a.html</url>
+    <content><![CDATA[<p>选中总页数，鼠标右击，选中编辑域，进入弹出窗口</p>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153228038.png" alt="image-20211130153228038"></p>
+<p>在弹出的窗口,点击【域代码】，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153547063.png" alt="image-20211130153547063"></p>
+<p>将NumPages修改成sectionpages，点击【确定】即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20211130/image-20211130153651158.png" alt="image-20211130153651158"></p>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>
