@@ -10,6 +10,17 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
 <link rel="stylesheet" href="/css/main.css">
 
 
@@ -20,16 +31,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入查看密码') !== ''){
-                alert('密码不正确,请询问主编大大');
-                history.back();
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="最高人民法院关于印发《人民法院民事裁判文书制作规范》《民事诉讼文书样式》的通知 　　 法〔2016〕221号 　　各省、自治区、直辖市高级人民法院，解放军军事法院，新疆维吾尔自治区高级人民法院生产建设兵团分院： 　　为进一步规范和统一民事裁判文书写作标准，提高民事诉讼文书质量，最高人民法院制定了《人民法院民事裁判文书制作规范》《民事诉讼文书样式》。该两份文件已于2016年2月22日经最高人民法院审">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最高院:2016版民事裁判文书制作规范及样式模板">

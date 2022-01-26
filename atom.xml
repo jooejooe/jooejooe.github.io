@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2022-01-26T03:25:42.910Z</updated>
+  <updated>2022-01-26T03:31:14.390Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.songuo.tech/p/56df510a.html"/>
     <id>https://blog.songuo.tech/p/56df510a.html</id>
     <published>2022-01-26T01:09:00.000Z</published>
-    <updated>2022-01-26T03:25:42.910Z</updated>
+    <updated>2022-01-26T03:31:14.390Z</updated>
     
-    <content type="html"><![CDATA[<p>​    总结要点：无非功过得失，人财物分析。</p><p>2021年分为两个阶段</p><ul><li>11月份之前，法院项目。在11月份之前，通过大家的努力，攻克了一个个难点，验证码处理、模拟录入方案以及实现等；初步完成了快审系统，改造完成案件收录平台，支持了其它法院的快审系统的实施。</li><li>11月份之后，会诊项目。11月份之后，大家共同努力，基本完成会诊平台PC端功能。</li></ul><p>在完成项目过程中，项目团队成员之间相互支持、相互沟通，使得每个人或多或少都有进步。但同时也暴露出一些问题，一些可能是项目组特有的问题</p><p>1.沟通问题。</p><p>​    组员之间沟通有所改善，还需要更进一步改善，多多沟通，多多配合，培养团队的默契感。</p><p>​    沟通时常会出现怼的情况，即工作之中带着情绪，例如，“我不会，你做吧”、“我不做”、“我XXXX呢，你XXX去吧”，团队工作是一个精密的机械运转，每个人都在这个运转中担任着独一无二的责任，履行着不同的功能，我希望大家相互配合，共同去完成这个运转流程。如果说是运转整体出现问题，那么有可能整个运转系统（团队）将被替换，如果说每次都是局部问题，那可能局部需要维修，需要替换。</p><p>​    工作之中，没有敌人，只有伙伴，大家的共同目的是一样的，共同完成某个项目，不要天天跟干炮样的，你说一句，我怼一句。每天10小时，每周50个小时，大家都在一起工作，大家可以说是类似“家人”的关系，每朝相处，希望大家在工作中多沟通、和谐沟通、协同沟通，提高沟通效率，共同完成某个项目，某个任务。</p><blockquote><pre><code>A：xxx效果不好，应该xx会好些，给处理下。B：xx效果挺好，有很多这种网站。A：xx效果挺多啊，那你给找一个咱们看一下。B：我在忙别的，你自己找一下。A：…………</code></pre></blockquote><p>​    作为有效沟通，要“讲观点，摆事实”，即有理有据。这样才能说服别人，形成有效沟通。</p><p>要提高大局观，是否能让其他人的工作更顺畅作为衡量工作的标尺；</p><p>2.及时反馈问题。</p><p>​    工作中时常会出现，临时分配任务的这种情况：</p><blockquote><p>组长：小明，咱们组最近不怎么忙，你先看看XX这个功能，掌握的差不多了给我说下。</p><p>小明：好的</p><p>一天过去……</p><p>两天过去……</p><p>三天过去……</p><p>组长纳闷了，咋这么长时间，没看完。</p><p>组长：小明，XX这个功能怎么样了？</p><p>小明：我做完了啊，已经XXX了</p></blockquote><p>还会出现这种情况</p><blockquote><p>项目需要小明小红配合完成，但小明或小红做完后，没有告知对方，需要配合的功能点已经完成，导致对方还在等等等……</p></blockquote><p>以上举例都是实际工作中碰到的实际场景。这些场景反映了，一个问题，反馈的及时性问题，项目组成员之间的反馈延时、有明确期望性的反馈延时、无明确期望的任务，更需要及时反馈，以让项目成员/组长/负责人明白当前工作内容进展，以及工作的问题。</p><p>​        沟通群内的回复，及时回复，哪怕先说“收到”、“稍等下”、“我先看看”等这些话语，即使不能给出方案，也要让对方知道，我收到了，在处理。在客户群里，尤其需要重视这点。</p><p>​    方案：</p><p>​        对于组长/负责人：任务安排尽最大程度使用redmine或git issues等能够留痕的任务记录方式。</p><p>​        对于执行者：口头任务完成情况及时反馈；有痕任务及时更新状态。</p><p>​    参阅：2021年11月14日发布的《工作报告及反馈制度》</p><p>3.工作范围归属问题。</p><p>​        工作中，可能由于项目成员任务安排，A做的功能点，由于A有其它任务安排需要B或者C去做，这时通常会出现</p><blockquote><p>这功能不是我写的，我不做</p><p>这块不是我处理的，我不会。</p><p>…………</p><p>这个功能不是我写的（提示安排方，看是否任务安排有误），是XX写的，看是否能让他处理下，这样处理起来更快。</p><p>这个功能不是我写的，可能改起来有点慢，我先看下，改完候给你回复。</p></blockquote><p>​        项目组内的工作是没有绝对边界的，可以有异议，可以提出你的观点，讲出你的依据，看看是否符合当前实际情况，是否是更好的安排。但不要带有抵触情绪、反制情绪，学会平静真诚的沟通，沟通前先想想怎么说更好……</p><p>​        带情绪的处理工作，既不利他也不利己，何必如此呢。</p><p>4.业务能力问题。</p><p>​        大家都说增删改查没有意思，天天都是重复的工作。</p><blockquote><p>组长让我干啥，我干啥，其它我不管。</p><p>今天工作完成了，组长又没有其它工作安排，没事了，解放了，看看新闻，听听小说，一天过去了。</p><p>……</p></blockquote><p>​        与其抱怨天天重复的增删改查，不如充实下自己的业务能力，多了解下除了自己负责模块之外的业务，有想法及时反馈；不如充实下自己的技术能力，看看github、oschina、gitee等，为自己的技术库，增砖添瓦，碰到类似问题能够及时快速的找到类似解决方案。</p><p>​        大部分从事软件开发的人员，戏称自己为“码农”，我理解的码农是类似农民种地一样，不断耕耘的人。所以可能大部分人甚至连码农都不是，农民种地，需要打理庄稼，什么时候浇水、控温、施肥、收割、什么样的气候天气对庄稼有啥影响，看看今年收成的好坏与原因，农民对这些基本上了然于心。对应到咱们这类工种上就是，作为一名码农，我要明白自己所负责的功能块业务流程，什么时候开始，流经什么环节、什么时候结束，什么地方需要优化、在什么时候出现了什么问题，原因是啥，下次怎样改进避免。</p><p>5.及时总结问题。</p><p>​        问题解决完成就完成了么，其实对于自己、对于团队来说，问题解决完了，只是当前问题解决完了，再有同样的问题，团队其它成员还要走一遍寻求方案的过程，花费寻求方案的时间；可能自己在以后碰到同样的问题也需要重新翻找资料进行解决。</p><p>​        那么，既然如此，咱们为啥不把问题解决过程记录下来，问题解决方案整理下来。方式什么的不限，摘抄、转发、博客、收藏夹等。</p><p>6.缺少危机感。</p><p>​        今年不同往年，是咱们组回归公司，为公司整体发展方向努力的一年，我自己也要增强危机感，多看多想多学习，提高自己的项目管理水平、技术水平，提高自己的认知观、全局观，增强自己的沟通能力。</p><p>​        我也希望咱们团队，不要有养老的状态的成员，没有任务，每天看看八卦新闻、微信聊聊天、看看小说、听听小说。这些态度不可取，不能取，团队不养闲人，团队不提没有进取心的人。如果觉得团队发挥不了你的长处，你提我给你创造机会；与你的理念不同，你提，我可以给你申请调岗。</p><p>​    但是我不希望，你每天做的工作都是新手能做的工作，我期望咱们都不要作茧自缚，都要突破下自我，提升下自我。</p><p>最后，看大家对于更好的建设咱们的团队有啥更好的建议意见。</p>]]></content>
+    <content type="html"><![CDATA[<p>​    总结要点：无非功过得失，人财物分析。</p><a id="more"></a><p>2021年分为两个阶段</p><ul><li>11月份之前，法院项目。在11月份之前，通过大家的努力，攻克了一个个难点，验证码处理、模拟录入方案以及实现等；初步完成了快审系统，改造完成案件收录平台，支持了其它法院的快审系统的实施。</li><li>11月份之后，会诊项目。11月份之后，大家共同努力，基本完成会诊平台PC端功能。</li></ul><p>在完成项目过程中，项目团队成员之间相互支持、相互沟通，使得每个人或多或少都有进步。但同时也暴露出一些问题，一些可能是项目组特有的问题</p><p>1.沟通问题。</p><p>​    组员之间沟通有所改善，还需要更进一步改善，多多沟通，多多配合，培养团队的默契感。</p><p>​    沟通时常会出现怼的情况，即工作之中带着情绪，例如，“我不会，你做吧”、“我不做”、“我XXXX呢，你XXX去吧”，团队工作是一个精密的机械运转，每个人都在这个运转中担任着独一无二的责任，履行着不同的功能，我希望大家相互配合，共同去完成这个运转流程。如果说是运转整体出现问题，那么有可能整个运转系统（团队）将被替换，如果说每次都是局部问题，那可能局部需要维修，需要替换。</p><p>​    工作之中，没有敌人，只有伙伴，大家的共同目的是一样的，共同完成某个项目，不要天天跟干炮样的，你说一句，我怼一句。每天10小时，每周50个小时，大家都在一起工作，大家可以说是类似“家人”的关系，每朝相处，希望大家在工作中多沟通、和谐沟通、协同沟通，提高沟通效率，共同完成某个项目，某个任务。</p><blockquote><pre><code>A：xxx效果不好，应该xx会好些，给处理下。B：xx效果挺好，有很多这种网站。A：xx效果挺多啊，那你给找一个咱们看一下。B：我在忙别的，你自己找一下。A：…………</code></pre></blockquote><p>​    作为有效沟通，要“讲观点，摆事实”，即有理有据。这样才能说服别人，形成有效沟通。</p><p>要提高大局观，是否能让其他人的工作更顺畅作为衡量工作的标尺；</p><p>2.及时反馈问题。</p><p>​    工作中时常会出现，临时分配任务的这种情况：</p><blockquote><p>组长：小明，咱们组最近不怎么忙，你先看看XX这个功能，掌握的差不多了给我说下。</p><p>小明：好的</p><p>一天过去……</p><p>两天过去……</p><p>三天过去……</p><p>组长纳闷了，咋这么长时间，没看完。</p><p>组长：小明，XX这个功能怎么样了？</p><p>小明：我做完了啊，已经XXX了</p></blockquote><p>还会出现这种情况</p><blockquote><p>项目需要小明小红配合完成，但小明或小红做完后，没有告知对方，需要配合的功能点已经完成，导致对方还在等等等……</p></blockquote><p>以上举例都是实际工作中碰到的实际场景。这些场景反映了，一个问题，反馈的及时性问题，项目组成员之间的反馈延时、有明确期望性的反馈延时、无明确期望的任务，更需要及时反馈，以让项目成员/组长/负责人明白当前工作内容进展，以及工作的问题。</p><p>​        沟通群内的回复，及时回复，哪怕先说“收到”、“稍等下”、“我先看看”等这些话语，即使不能给出方案，也要让对方知道，我收到了，在处理。在客户群里，尤其需要重视这点。</p><p>​    方案：</p><p>​        对于组长/负责人：任务安排尽最大程度使用redmine或git issues等能够留痕的任务记录方式。</p><p>​        对于执行者：口头任务完成情况及时反馈；有痕任务及时更新状态。</p><p>​    参阅：2021年11月14日发布的《工作报告及反馈制度》</p><p>3.工作范围归属问题。</p><p>​        工作中，可能由于项目成员任务安排，A做的功能点，由于A有其它任务安排需要B或者C去做，这时通常会出现</p><blockquote><p>这功能不是我写的，我不做</p><p>这块不是我处理的，我不会。</p><p>…………</p><p>这个功能不是我写的（提示安排方，看是否任务安排有误），是XX写的，看是否能让他处理下，这样处理起来更快。</p><p>这个功能不是我写的，可能改起来有点慢，我先看下，改完候给你回复。</p></blockquote><p>​        项目组内的工作是没有绝对边界的，可以有异议，可以提出你的观点，讲出你的依据，看看是否符合当前实际情况，是否是更好的安排。但不要带有抵触情绪、反制情绪，学会平静真诚的沟通，沟通前先想想怎么说更好……</p><p>​        带情绪的处理工作，既不利他也不利己，何必如此呢。</p><p>4.业务能力问题。</p><p>​        大家都说增删改查没有意思，天天都是重复的工作。</p><blockquote><p>组长让我干啥，我干啥，其它我不管。</p><p>今天工作完成了，组长又没有其它工作安排，没事了，解放了，看看新闻，听听小说，一天过去了。</p><p>……</p></blockquote><p>​        与其抱怨天天重复的增删改查，不如充实下自己的业务能力，多了解下除了自己负责模块之外的业务，有想法及时反馈；不如充实下自己的技术能力，看看github、oschina、gitee等，为自己的技术库，增砖添瓦，碰到类似问题能够及时快速的找到类似解决方案。</p><p>​        大部分从事软件开发的人员，戏称自己为“码农”，我理解的码农是类似农民种地一样，不断耕耘的人。所以可能大部分人甚至连码农都不是，农民种地，需要打理庄稼，什么时候浇水、控温、施肥、收割、什么样的气候天气对庄稼有啥影响，看看今年收成的好坏与原因，农民对这些基本上了然于心。对应到咱们这类工种上就是，作为一名码农，我要明白自己所负责的功能块业务流程，什么时候开始，流经什么环节、什么时候结束，什么地方需要优化、在什么时候出现了什么问题，原因是啥，下次怎样改进避免。</p><p>5.及时总结问题。</p><p>​        问题解决完成就完成了么，其实对于自己、对于团队来说，问题解决完了，只是当前问题解决完了，再有同样的问题，团队其它成员还要走一遍寻求方案的过程，花费寻求方案的时间；可能自己在以后碰到同样的问题也需要重新翻找资料进行解决。</p><p>​        那么，既然如此，咱们为啥不把问题解决过程记录下来，问题解决方案整理下来。方式什么的不限，摘抄、转发、博客、收藏夹等。</p><p>6.缺少危机感。</p><p>​        今年不同往年，是咱们组回归公司，为公司整体发展方向努力的一年，我自己也要增强危机感，多看多想多学习，提高自己的项目管理水平、技术水平，提高自己的认知观、全局观，增强自己的沟通能力。</p><p>​        我也希望咱们团队，不要有养老的状态的成员，没有任务，每天看看八卦新闻、微信聊聊天、看看小说、听听小说。这些态度不可取，不能取，团队不养闲人，团队不提没有进取心的人。如果觉得团队发挥不了你的长处，你提我给你创造机会；与你的理念不同，你提，我可以给你申请调岗。</p><p>​    但是我不希望，你每天做的工作都是新手能做的工作，我期望咱们都不要作茧自缚，都要突破下自我，提升下自我。</p><p>最后，看大家对于更好的建设咱们的团队有啥更好的建议意见。</p>]]></content>
     
     <summary type="html">
     
@@ -73,7 +73,10 @@
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  listen    80;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  server_name crm.xxx.net;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  location &amp;#x2F; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_pass http:&amp;#x2F;&amp;#x2F;192.168.1.216&amp;#x2F;crm&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_cookie_path &amp;#x2F;crm&amp;#x2F; &amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  Host  $host;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  X-Real-IP  $remote_addr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  location &amp;#x2F;crm&amp;#x2F;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_pass http:&amp;#x2F;&amp;#x2F;192.168.1.216&amp;#x2F;crm&amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_cookie_path &amp;#x2F;crm&amp;#x2F; &amp;#x2F;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  Host  $host;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  X-Real-IP  $remote_addr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
     
     </summary>
     
@@ -144,9 +147,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;参考： &lt;a href=&quot;http://demo.clodop.com:8000/c_pdfprint&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.clodop.com:8000/c_pdfprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;结合jacob转pdf，可实现office文档的在线打印。&lt;/p&gt;
-
+      
+      
+        &lt;p&gt;参考： &lt;a href=&quot;http://demo.clodop.com:8000/c_pdfprint&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.clodop.com:8000/c_pdfprint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结合j
+      
     
     </summary>
     
@@ -192,8 +197,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。&lt;/p&gt;
+      
+      
+        &lt;p&gt;打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。&lt;/p&gt;
 
+      
     
     </summary>
     
@@ -266,8 +274,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://gitee.com/freshways/dsoframer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitee.com/freshways/dsoframer&lt;/a&gt;&lt;/p&gt;
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://gitee.com/freshways/dsoframer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitee.com/freshways/dsoframer&lt;/a&gt;&lt;/p&gt;
 
+      
     
     </summary>
     
@@ -365,11 +376,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;Maven 执行命令&lt;/p&gt;
-&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Dfile：JAR 包的路径&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#DgroupId：groupId(随便填)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#DartifactId：artifactId(随便填)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Dversion：版本号(随便填)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mvn install:&lt;span class=&quot;built_in&quot;&gt;install-file&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-Dfile&lt;/span&gt;=C:\lib\jasperreports&lt;span class=&quot;literal&quot;&gt;-fonts&lt;/span&gt;&lt;span class=&quot;literal&quot;&gt;-5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;6.0&lt;/span&gt;.jar &lt;span class=&quot;literal&quot;&gt;-DgroupId&lt;/span&gt;=org.ireport &lt;span class=&quot;literal&quot;&gt;-DartifactId&lt;/span&gt;=jasperreports&lt;span class=&quot;literal&quot;&gt;-fonts&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-Dversion&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;5.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-Dpackaging&lt;/span&gt;=jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Pom.xml  对应上方你填写的名称&lt;/p&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.xxxxx&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;xxxxxx&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;xxxx&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
+      
+      
+        &lt;p&gt;Maven 执行命令&lt;/p&gt;
+&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;
+      
     
     </summary>
     

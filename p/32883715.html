@@ -10,6 +10,17 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
 <link rel="stylesheet" href="/css/main.css">
 
 
@@ -20,16 +31,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入查看密码') !== ''){
-                alert('密码不正确,请询问主编大大');
-                history.back();
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="​    一般在建网站的时候很多人对于怎么备案，给域名备案还是服务器备案比较迷糊，下面为大家详细讲解一下，希望各位个人站长或者企业建站可以很准确的搞好备案。 ​    备案是工信部要求的，主要是为了规范网络安全化，维护网站经营者的合法权益，保障网民的合法利益。凡是使用国内空间的网站域名都需要备案。 ​    域名如果绑定指向到国内网站空间就要备案。也就是说如果你这个域名只是纯粹注册下来，用作投资或">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网站备案指的是域名备案？ 还是指的服务器备案呢？">

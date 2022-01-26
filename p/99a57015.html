@@ -10,6 +10,17 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
 <link rel="stylesheet" href="/css/main.css">
 
 
@@ -20,16 +31,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入查看密码') !== ''){
-                alert('密码不正确,请询问主编大大');
-                history.back();
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="仲裁与诉讼的区别仲裁？诉讼？傻傻分不清楚。不都是解决纠纷的方式吗？二者有什么区别呢？本文，我们就来重点聊一下：仲裁与诉讼的区别。 首先需要明确的是，对任何事物的界定和解读，都需建立在其与同类事物比较的基础上。仲裁和诉讼具有共性，从宏观层面上讲，二者都是第三方机构解决纠纷的程序性制度。但是，在发生、管辖、裁判者选择、审理案件的规则与标准、审级等方面，二者的差异还是相当明显的。 什么是仲裁？仲裁[Ar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仲裁与诉讼的区别">
