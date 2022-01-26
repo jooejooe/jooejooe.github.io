@@ -20,7 +20,16 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入查看密码') !== ''){
+                alert('密码不正确,请询问主编大大');
+                history.back();
+            }
+        }
+    })();
+</script>
   <meta name="description" content="（一）案件的审理期限 1.普通程序案件 《中华人民共和国民事诉讼法》第一百四十九条 法院适用普通程序审理的案件，应当在立案之日起六个月内审结。有特殊情况需要延长的，由本院院长批准，可以延长六个月；还需要延长的，报请上级法院批准。 《中华人民共和国民事诉讼法》第一百七十六条 法院审理对判决的上诉案件，应当在第二审立案之日起三个月内审结。有特殊情况需要延长的，由本院院长批准。 法院审理对裁定的上诉案件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【民事诉讼指南】案件的审理期限和审限的计算">
@@ -424,7 +433,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -437,7 +446,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-count">78</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -476,7 +485,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">645k</span>
+    <span title="站点总字数">647k</span>
 </div>
 
         

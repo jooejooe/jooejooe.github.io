@@ -20,7 +20,16 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入查看密码') !== ''){
+                alert('密码不正确,请询问主编大大');
+                history.back();
+            }
+        }
+    })();
+</script>
   <meta name="description" content="成为一流软件开发者的34条建议我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。 这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。 1. 规划方法 &amp; 在编码前先写伪代码 当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="成为一流软件开发者的34条建议">
@@ -490,7 +499,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -503,7 +512,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-count">78</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -542,7 +551,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">645k</span>
+    <span title="站点总字数">647k</span>
 </div>
 
         
