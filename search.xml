@@ -5455,4 +5455,29 @@
         <tag>总结</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Word如何批量调整表格自适应窗口</title>
+    <url>//p/179d6c8e.html</url>
+    <content><![CDATA[<ol>
+<li>word批量调整表格自适应窗口：<a id="more"></a>打开word，点击【视图】【宏】【查看宏】，或者直接使用Alt+F8打开查看宏界面</li>
+</ol>
+<p><img src="images/Word%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E8%B0%83%E6%95%B4%E8%A1%A8%E6%A0%BC%E8%87%AA%E9%80%82%E5%BA%94%E7%AA%97%E5%8F%A3/image-20220225163713431.png" alt="image-20220225163713431"></p>
+<ol>
+<li><p>创建宏</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220225/image-20220225163912937.png" alt="image-20220225163912937"></p>
+</li>
+<li><p>编写宏</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220225/image-20220225164158904.png" alt="image-20220225164158904"></p>
+</li>
+</ol>
+<p>相关代码</p>
+<figure class="highlight vbscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Dim</span> oDoc As Document</span><br><span class="line"><span class="keyword">Dim</span> oTable As Table</span><br><span class="line"><span class="keyword">Set</span> oDoc = Documents.Open(<span class="string">"E:\123\Doc\数据库结构7.25-1.docx"</span>)</span><br><span class="line"><span class="keyword">For</span> <span class="keyword">Each</span> oTable <span class="keyword">In</span> oDoc.Tables</span><br><span class="line">oTable.AutoFitBehavior (wdAutoFitWindow)</span><br><span class="line"><span class="keyword">Next</span></span><br><span class="line"><span class="built_in">MsgBox</span> <span class="string">"完成！"</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>
