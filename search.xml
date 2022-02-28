@@ -5480,4 +5480,26 @@
         <tag>office</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Word如何创建模板文件，附带多层级模板</title>
+    <url>//p/236eecf6.html</url>
+    <content><![CDATA[<p> Word如何创建模板文件，附带多层级模板：<a id="more"></a></p>
+<p>多层级模板</p>
+<p>件github</p>
+<p><strong>模板的导入：</strong>将此dotx模板文档拷贝到“D:\Users\Documents\自定义 Office 模板”下（具体路径根据各自office安装环境会有差异），导入即完成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220228/clip_image002.jpg" alt="img"></p>
+<p><strong>模板的固定：</strong>打开任意一个word文档，点击“开始”“新建”“更多模板”</p>
+<p><img src="images/Word%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%EF%BC%8C%E9%99%84%E5%B8%A6%E5%A4%9A%E5%B1%82%E7%BA%A7%E6%A8%A1%E6%9D%BF/clip_image004.jpg" alt="img"></p>
+<p>点击“个人”找到需要固定的模板文件，点击文件上的“固定至列表”模板文件即出现在“新建”列表中</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220228/clip_image006.jpg" alt="img"></p>
+<p>​    使用方法：打开任意一个word文件，点击“开始”，在“新建”中选择需要使用的模板，即可创建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220228/clip_image008.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>
