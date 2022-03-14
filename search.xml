@@ -5564,6 +5564,9 @@
 <li>作为公共卫生体系重要的组成部分，中医药在非典、流感、新冠肺炎等传染病防控中发挥关键作用。</li>
 <li>发挥中医治未病“未病先防、既病防变、瘥后防复”特点和优势，加强与临床诊疗、慢病管理、社区中医药服务等联动，推广治未病理念和技术方法，促进中医药全面融入市民健康生活。具体包括建设省级治未病中心，形成省级服务管理平台，强化治未病服务网络;建立完善针对不同人群、不同健康状况的治未病处方库并推广;依托“市健康云”加强治未病与市民健康管理衔接;大力普及中医养生保健知识和太极拳等养生保健方法，推进治未病服务进学校、进社区、进家庭。</li>
 </ol>
+<p><a href="http://www.xyhis.com/news/1538-cn.html" target="_blank" rel="noopener">医联体</a> 关于医联体的描述，PPT可能会用到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219235046070090.jpg" alt="医联体云平台"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219240803043246.jpg" alt="业务要求"></p>
 ]]></content>
       <categories>
         <category>文案</category>
@@ -5571,6 +5574,36 @@
       <tags>
         <tag>医疗</tag>
         <tag>文案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS Dootask安装</title>
+    <url>//p/86002ad8.html</url>
+    <content><![CDATA[<p>CentOS Dootask安装</p>
+<a id="more"></a>
+<h2 id="CentOS-Docker-安装"><a href="#CentOS-Docker-安装" class="headerlink" title="CentOS Docker 安装"></a>CentOS Docker 安装</h2><h3 id="使用官方安装脚本自动安装"><a href="#使用官方安装脚本自动安装" class="headerlink" title="使用官方安装脚本自动安装"></a>使用官方安装脚本自动安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure>
+<h3 id="卸载-docker"><a href="#卸载-docker" class="headerlink" title="卸载 docker"></a>卸载 docker</h3><p>删除安装包：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum remove docker-ce</span><br></pre></td></tr></table></figure>
+<p>删除镜像、容器、配置文件等内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
+<h2 id="安装Docker-Compose-v2-0"><a href="#安装Docker-Compose-v2-0" class="headerlink" title="安装Docker Compose v2.0+"></a>安装Docker Compose v2.0+</h2><p>安装 Docker Compose 可以通过下面命令自动下载适应版本的 Compose，并为安装脚本添加执行权限</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<p>要安装其他版本的 Compose，请替换 v2.2.2。</p>
+<p>将可执行权限应用于二进制文件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装git命令：yum-install-git-之后使用git拉取项目源码"><a href="#安装git命令：yum-install-git-之后使用git拉取项目源码" class="headerlink" title="安装git命令：yum install git 之后使用git拉取项目源码"></a>安装git命令：yum install git 之后使用git拉取项目源码</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone --depth=1 https://gitee.com/aipaw/dootask.git</span><br></pre></td></tr></table></figure>
+<p>进入目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd dootask</span><br></pre></td></tr></table></figure>
+<p>一键安装项目（自定义端口安装 ./cmd install —port 2222）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;cmd install</span><br></pre></td></tr></table></figure>
+<h2 id="没有找到php容器问题解决"><a href="#没有找到php容器问题解决" class="headerlink" title="没有找到php容器问题解决"></a>没有找到php容器问题解决</h2><p>重启docker服务</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>dootask</tag>
       </tags>
   </entry>
 </search>

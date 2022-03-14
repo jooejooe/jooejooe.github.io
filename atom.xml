@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2022-03-10T10:14:32.977Z</updated>
+  <updated>2022-03-11T03:29:37.477Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS Dootask安装</title>
+    <link href="https://blog.songuo.tech/p/86002ad8.html"/>
+    <id>https://blog.songuo.tech/p/86002ad8.html</id>
+    <published>2022-03-11T02:30:00.000Z</published>
+    <updated>2022-03-11T03:29:37.477Z</updated>
+    
+    <content type="html"><![CDATA[<p>CentOS Dootask安装</p><a id="more"></a><h2 id="CentOS-Docker-安装"><a href="#CentOS-Docker-安装" class="headerlink" title="CentOS Docker 安装"></a>CentOS Docker 安装</h2><h3 id="使用官方安装脚本自动安装"><a href="#使用官方安装脚本自动安装" class="headerlink" title="使用官方安装脚本自动安装"></a>使用官方安装脚本自动安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure><h3 id="卸载-docker"><a href="#卸载-docker" class="headerlink" title="卸载 docker"></a>卸载 docker</h3><p>删除安装包：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker-ce</span><br></pre></td></tr></table></figure><p>删除镜像、容器、配置文件等内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure><h2 id="安装Docker-Compose-v2-0"><a href="#安装Docker-Compose-v2-0" class="headerlink" title="安装Docker Compose v2.0+"></a>安装Docker Compose v2.0+</h2><p>安装 Docker Compose 可以通过下面命令自动下载适应版本的 Compose，并为安装脚本添加执行权限</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><p>要安装其他版本的 Compose，请替换 v2.2.2。</p><p>将可执行权限应用于二进制文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span></span><br></pre></td></tr></table></figure><h2 id="安装git命令：yum-install-git-之后使用git拉取项目源码"><a href="#安装git命令：yum-install-git-之后使用git拉取项目源码" class="headerlink" title="安装git命令：yum install git 之后使用git拉取项目源码"></a>安装git命令：yum install git 之后使用git拉取项目源码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=1 https://gitee.com/aipaw/dootask.git</span><br></pre></td></tr></table></figure><p>进入目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd dootask</span><br></pre></td></tr></table></figure><p>一键安装项目（自定义端口安装 ./cmd install —port 2222）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;cmd install</span><br></pre></td></tr></table></figure><h2 id="没有找到php容器问题解决"><a href="#没有找到php容器问题解决" class="headerlink" title="没有找到php容器问题解决"></a>没有找到php容器问题解决</h2><p>重启docker服务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CentOS Dootask安装&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="dootask" scheme="https://blog.songuo.tech/tags/dootask/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一文读懂医联体和医共体的区别！</title>
     <link href="https://blog.songuo.tech/p/171a7898.html"/>
     <id>https://blog.songuo.tech/p/171a7898.html</id>
     <published>2022-03-09T07:12:00.000Z</published>
-    <updated>2022-03-10T10:14:32.977Z</updated>
+    <updated>2022-03-10T10:15:52.612Z</updated>
     
     <content type="html"><![CDATA[<p>医联体：你我本无缘分，为了政绩、品牌、技术，大家站在一起做做样子。随缘互相转介绍病人，随缘或根据合作协议安排一定的技术指导。</p><p>医共体：我们因为人、财、物、考核指标等经济关系走在了一起，有着共同的经济目标与经济责任。我们要完成某个经营指标，每个人都必须出力。<a id="more"></a></p><p>医联体要强调“联”的是什么？“联”的是疾病，基层解决不了的病要联大医院、大专家。<br>医共体要强调“共”的是什么？“共”的是健康，共的是居民常见疾病预防健康管理、慢病康复等。</p><p><strong>医联体：一种医疗组织形式</strong></p><p><strong>医联体全称叫“医疗联合体建设”，</strong> <strong>医联体主要是以区域内医疗联合体为表现形式。一般是将同一区域内的医疗资源整合在一起，形成一个医疗互助与共享的系统。</strong> <strong>通常由区域内的三级医院与二级医院，社区医院和其他医疗组织等</strong>，共同组成一个医疗联合体，形成一个区域内分级诊疗的上下联动的互助医疗组织与系统。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220310/640-1646904562864.jfif" alt="img"></p><p><strong>医联体的四种组织形式</strong></p><p><img src="http://files.cn-healthcare.com/upload/20220121/84261642735150781" alt="84261642735150781"></p><p><strong>（一）医联体，是城市开展医联体建设的主要模式。</strong>以1家三级医院为牵头单位，联合若干城市二级医院、康复医院、护理院以及社区卫生服务中心，构建“1+X”医联体，纵向整合医疗资源。有条件的地区推行医联体内人、财、物统一管理模式，促使医联体成为目标一致的共同体。不具备条件的，可在医联体内以对口帮扶、技术支持为纽带形成松散型合作，引导优质医疗资源下沉，提升基层医疗服务能力。</p><p><strong>（二）医共体，是农村开展医联体建设的主要模式。</strong>重点探索以“县医院为龙头，乡镇卫生院为枢纽，村卫生室为基础”的县乡一体化管理，构建县、乡、村三级联动的县域医疗服务体系。</p><p><strong>（三）专科联盟，指医疗机构之间以专科协作为纽带形成的联合体。</strong>以一家医疗机构特色专科为主，联合其他医疗机构相同专科技术力量，形成区域内若干特色专科中心，提升解决专科重大疾病的救治能力，形成补位发展模式。横向盘活现有医疗资源，突出专科特色。</p><p><strong>（四）远程医疗协作网，由牵头单位与基层、偏远和欠发达地区医疗机构建立远程医疗服务网络</strong>。大力推进面向基层、偏远和欠发达地区的远程医疗服务体系建设，鼓励二级、三级医院向基层医疗卫生机构提供远程医疗服务。</p><p><strong>需注意的是：</strong></p><p>在这里表述的医联体一般是指不改变医院间组织结构的医疗联合组织。因此，它是以解决患者就医难、就医烦为目标的一个医疗互助系统。这是它的一个特点，也是他的初心。</p><p>同时医联体的龙头医院或者核心医院也是以不改变基层医疗组织的属性，以及它原有的管理架构的基础上所形成的一个医疗共享与互助的指导系统。这样的一种医疗组织架构的系统，可以称之为医联体。</p><p>另外，三级医院在医联体中发挥的作用，应当是指导作用、帮助作用和无私支撑作用；而不是组织的渗透与一体化的重建。因此，他更多地是优质医疗的输出与帮助。这是医联体的一种效能与价值的体现，同时也是让中国三级医疗等优质资源下沉基层的一种有效的表达和输出方式。</p><p><img src="http://files.cn-healthcare.com/upload/20220121/26891642735150952" alt="26891642735150952"></p><p>医院为中心与连续性整合医疗服务体系</p><p><img src="http://files.cn-healthcare.com/upload/20220121/64721642735151103" alt="64721642735151103"></p><p>紧密型医联体</p><p><strong>何为医共体？</strong></p><p><strong>医共体：全新的医疗组织架构</strong></p><p><strong>医共体是**</strong>指一个区域内的医院与其他医疗服务机构和组织联系在一起，重新组合，重新构建的一个整体性的全新医疗组织架构。**其更多的是参考医疗集团的组织形式，运用核心医院的家族式，以大家长身份来整合与统筹集团内的医疗资源。</p><p>同时重建集团内部的管理架构、组织系统和医疗服务的体系，以及相互之间的组织构成等等。它的主要特征是法人代表的统一性和医疗组织的紧密性关联。</p><p><strong>医共体有三个特征： </strong> <strong>法人代表的统一性和医疗组织的紧密性关联。</strong></p><ul><li>第一是有明确的区域性；</li><li>第二是以全体居民健康为目标；</li><li>第三是整合性，在这个区域里围绕着健康的目标，对所有的资源最大限度的整合。</li></ul><p><strong>需注意：</strong>医共体主要的并不是医疗联合体的属性，而是医疗集团组织的属性。因此，医共体的组织建设和构建，更多的是参考医疗集团的组织形式，运用的是核心医院的家族式，以大家长身份来整合与统筹集团内的医疗资源。同时重建集团内部的管理架构、组织系统和医疗服务的体系，以及相互之间的组织构成等等。</p><p><img src="http://files.cn-healthcare.com/upload/20220121/61581642735151308" alt="61581642735151308"></p><p><strong>医联体与医共体区别</strong></p><p><strong>（一）组织架构不同</strong></p><p>医共体与医联体在组织结构和管理架构的特征上两者都是完全背离的。</p><p><strong>医共体**</strong>是<strong>一个全新的医疗组织形式，它已经变成了一个医疗集团和一个重组的医疗新组织。这与</strong>医联体**级的各自独立的组织结构和医联体只是围绕医疗服务的有效性而开展的医疗合作是完全不同的组织形式。</p><p><strong>医共体并不是医联体，其核心医院则是必然要通过渗透与控制来管理这个全新的组织系统。</strong>因此，这完全是两种组织形式。</p><p><strong>（二）发展目的不同</strong></p><p><strong>对于医联体来说：</strong>是要不忘初心，充分发挥分级诊疗和区域内三级、二级与一级医院的各自独立功能，在一个区域内的医疗服务体系中，发挥各自的独特作用，并且通过合作共享、共建、共赢等，让区域内的医疗服务更加有效和通畅。</p><p><strong>对于医共体来说：</strong>需要的是发挥医疗集团化改革的作用与优势，形成区域内全新的医疗新组织来开展崭新的医院管理与医疗服务。</p>]]></content>
     
@@ -49,9 +72,9 @@
     <link href="https://blog.songuo.tech/p/418c4109.html"/>
     <id>https://blog.songuo.tech/p/418c4109.html</id>
     <published>2022-03-09T03:12:00.000Z</published>
-    <updated>2022-03-10T09:15:53.911Z</updated>
+    <updated>2022-03-14T05:49:23.133Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>《意见》提出全力推进上海中医药传承创新开放发展，发挥中医药在突发公共卫生事件中应急处置和重大传染病防控中的作用。</li><li>以就近结对、兼顾传统合作关系为主要原则，依托4家市级中医医院，与市级综合医院协同，在全市构建东、南、西、北四大区域中医医联体。</li><li>作为公共卫生体系重要的组成部分，中医药在非典、流感、新冠肺炎等传染病防控中发挥关键作用。</li><li>发挥中医治未病“未病先防、既病防变、瘥后防复”特点和优势，加强与临床诊疗、慢病管理、社区中医药服务等联动，推广治未病理念和技术方法，促进中医药全面融入市民健康生活。具体包括建设省级治未病中心，形成省级服务管理平台，强化治未病服务网络;建立完善针对不同人群、不同健康状况的治未病处方库并推广;依托“市健康云”加强治未病与市民健康管理衔接;大力普及中医养生保健知识和太极拳等养生保健方法，推进治未病服务进学校、进社区、进家庭。</li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li>《意见》提出全力推进上海中医药传承创新开放发展，发挥中医药在突发公共卫生事件中应急处置和重大传染病防控中的作用。</li><li>以就近结对、兼顾传统合作关系为主要原则，依托4家市级中医医院，与市级综合医院协同，在全市构建东、南、西、北四大区域中医医联体。</li><li>作为公共卫生体系重要的组成部分，中医药在非典、流感、新冠肺炎等传染病防控中发挥关键作用。</li><li>发挥中医治未病“未病先防、既病防变、瘥后防复”特点和优势，加强与临床诊疗、慢病管理、社区中医药服务等联动，推广治未病理念和技术方法，促进中医药全面融入市民健康生活。具体包括建设省级治未病中心，形成省级服务管理平台，强化治未病服务网络;建立完善针对不同人群、不同健康状况的治未病处方库并推广;依托“市健康云”加强治未病与市民健康管理衔接;大力普及中医养生保健知识和太极拳等养生保健方法，推进治未病服务进学校、进社区、进家庭。</li></ol><p><a href="http://www.xyhis.com/news/1538-cn.html" target="_blank" rel="noopener">医联体</a> 关于医联体的描述，PPT可能会用到</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219235046070090.jpg" alt="医联体云平台"></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219240803043246.jpg" alt="业务要求"></p>]]></content>
     
     <summary type="html">
     
@@ -61,6 +84,9 @@
 &lt;li&gt;作为公共卫生体系重要的组成部分，中医药在非典、流感、新冠肺炎等传染病防控中发挥关键作用。&lt;/li&gt;
 &lt;li&gt;发挥中医治未病“未病先防、既病防变、瘥后防复”特点和优势，加强与临床诊疗、慢病管理、社区中医药服务等联动，推广治未病理念和技术方法，促进中医药全面融入市民健康生活。具体包括建设省级治未病中心，形成省级服务管理平台，强化治未病服务网络;建立完善针对不同人群、不同健康状况的治未病处方库并推广;依托“市健康云”加强治未病与市民健康管理衔接;大力普及中医养生保健知识和太极拳等养生保健方法，推进治未病服务进学校、进社区、进家庭。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.xyhis.com/news/1538-cn.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;医联体&lt;/a&gt; 关于医联体的描述，PPT可能会用到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219235046070090.jpg&quot; alt=&quot;医联体云平台&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220314/1611219240803043246.jpg&quot; alt=&quot;业务要求&quot;&gt;&lt;/p&gt;
 
     
     </summary>
@@ -467,35 +493,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;1-传参注意事项&quot;&gt;&lt;a href=&quot;#1-传参注意事项&quot; class=&quot;headerlink&quot; title=&quot;1.传参注意事项&quot;&gt;&lt;/a&gt;1.传参注意事项&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="selenium" scheme="https://blog.songuo.tech/categories/selenium/"/>
-    
-    
-      <category term="selenium" scheme="https://blog.songuo.tech/tags/selenium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>selenium与http结合实现附件上传</title>
-    <link href="https://blog.songuo.tech/p/976dcb4a.html"/>
-    <id>https://blog.songuo.tech/p/976dcb4a.html</id>
-    <published>2021-07-01T00:42:00.000Z</published>
-    <updated>2021-07-01T01:05:48.782Z</updated>
-    
-    <content type="html"><![CDATA[<p>背景：</p><p>​    项目中需要进行多个多附件上传，且需要保证每个附件都进行上传，缺少一个附件也不能进行提交操作。这样通过sendkey的方式无法判断上传完成的时机，进行附件上传成功与否的判断就比较复杂。在此情况下，想到了通过selenium和http结合的方式进行附件处理，保证表单所有附件都正确上传后再进行表单提交。</p><p>思路：</p><p>1.获取附件上传链接</p><p>2.获取附件上传所需要的cookie以及参数</p><p>3.进行附件上传</p><p>4.查看上传成功后的处理，执行js进行处理</p><a id="more"></a><p>代码如下</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取cookies</span></span><br><span class="line">Set&lt;Cookie&gt; cookieSet = browser.manage().getCookies();</span><br><span class="line">HttpCookie[] cookies = <span class="keyword">new</span> HttpCookie[cookieSet.size()];</span><br><span class="line">StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(Cookie cookie:cookieSet)&#123;</span><br><span class="line">    cookies[index]=<span class="keyword">new</span> HttpCookie(cookie.getName(),cookie.getValue());</span><br><span class="line">    stringBuilder.append(cookie.getName())</span><br><span class="line">        .append(<span class="string">"="</span>)</span><br><span class="line">        .append(cookie.getValue())</span><br><span class="line">        .append(<span class="string">";"</span>)</span><br><span class="line">        ;</span><br><span class="line">    index++;</span><br><span class="line">&#125;</span><br><span class="line">String cookiesStr = stringBuilder.substring(<span class="number">0</span>,stringBuilder.length()-<span class="number">1</span>);</span><br><span class="line"><span class="comment">//调用http接口进行附件上传</span></span><br><span class="line">String result = HttpUtil.createPost(<span class="string">""</span>)</span><br><span class="line">    .cookie(cookies)</span><br><span class="line">    .header(Header.COOKIE,cookiesStr)</span><br><span class="line">    .header(Header.HOST,<span class="string">"ssfw.gdcourts.gov.cn"</span>)</span><br><span class="line">    .form(<span class="string">"file"</span>,<span class="keyword">new</span> File(<span class="string">""</span>))</span><br><span class="line">    .execute()</span><br><span class="line">    .body();</span><br><span class="line"><span class="comment">//获取执行结果</span></span><br><span class="line">JSONObject data = JSON.parseObject(result);</span><br><span class="line"><span class="comment">//判断上传是否成功并进行处理</span></span><br><span class="line"><span class="keyword">if</span> (!data.getBoolean(<span class="string">"success"</span>))&#123;</span><br><span class="line">log.info(<span class="string">"上传失败"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//判断是否成功</span></span><br><span class="line">    <span class="comment">//进行js处理</span></span><br><span class="line">    String attachments = <span class="string">""</span>;</span><br><span class="line">    String fjlx = <span class="string">""</span>;</span><br><span class="line">    String js = <span class="string">"var attachments = arguments[0];\n"</span> +</span><br><span class="line">    <span class="string">"var fjlx = arguments[1];\n"</span> +</span><br><span class="line">    <span class="string">"var data = arguments[2];\n"</span> +</span><br><span class="line">    <span class="string">"function addFileByjs()&#123;\n"</span> +</span><br><span class="line">    <span class="string">"\tif($.trim(data.fjList)!='')&#123;\n"</span> +</span><br><span class="line">    <span class="string">"\t\tvar fjpdf = \"1\";\n"</span> +</span><br><span class="line">    <span class="string">"\t\tfor(var i=0;i&lt;data.fjList.length;i++)&#123;\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar fj = data.fjList[i];\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar suffix = fj.fjmc.substring(fj.fjmc.lastIndexOf('.')+1);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tif(suffix == 'pdf')&#123;\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t\tfjpdf = '2';\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t&#125;\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar len = $('#'+attachments).find(\".attachment_cls\").length+1;\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar mc = W21Json[fjlx];\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t//替换特殊字符\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar fjmcTmp = filterSpecialChar(fj.fjmc);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar zjmc = mc+\"_\"+len+\"(\"+fjmcTmp+\")\";\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tvar clone = $(\"#attachment_div\").clone(true);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.removeAttr(\"id\");\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.find(\".zjxxs_fjmc\").attr(&#123;\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t\t\"href\":\t\"javascript:void(0);\",\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t\t\"onclick\":\"funClxxUpload_wzh(this,'\"+fjm+\"');\",\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t\t\"htitle\": zjmc,\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t\t\"fjmc\":fjmcTmp\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\t&#125;).append(zjmc);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.find(\"input[name='zjxxs.fjid']\").val(fj.fjid);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.find(\"input[name='zjxxs.lx']\").val(fjlx);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.find(\"input[name='zjxxs.zjmc']\").val(zjmc);\n"</span> +</span><br><span class="line">    <span class="string">"\t\t\tclone.appendTo(\"#\"+attachments);\n"</span> +</span><br><span class="line">                    <span class="string">"\t\t&#125;\n"</span> +</span><br><span class="line">                    <span class="string">"\t&#125;\n"</span> +</span><br><span class="line">                    <span class="string">"&#125;\n"</span> +</span><br><span class="line">                    <span class="string">"addFileByjs();"</span>;</span><br><span class="line">((JavascriptExecutor) browser).executeScript(js,attachments,fjlx,data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>executeScript调用js的注意事项见下节内容</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;背景：&lt;/p&gt;
-&lt;p&gt;​    项目中需要进行多个多附件上传，且需要保证每个附件都进行上传，缺少一个附件也不能进行提交操作。这样通过sendkey的方式无法判断上传完成的时机，进行附件上传成功与否的判断就比较复杂。在此情况下，想到了通过selenium和http结合的方式进行附件处理，保证表单所有附件都正确上传后再进行表单提交。&lt;/p&gt;
-&lt;p&gt;思路：&lt;/p&gt;
-&lt;p&gt;1.获取附件上传链接&lt;/p&gt;
-&lt;p&gt;2.获取附件上传所需要的cookie以及参数&lt;/p&gt;
-&lt;p&gt;3.进行附件上传&lt;/p&gt;
-&lt;p&gt;4.查看上传成功后的处理，执行js进行处理&lt;/p&gt;
     
     </summary>
     
