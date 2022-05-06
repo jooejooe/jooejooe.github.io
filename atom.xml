@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2022-03-28T04:50:02.082Z</updated>
+  <updated>2022-05-06T03:53:19.781Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>摘要、签名与数字证书都是什么？</title>
+    <link href="https://blog.songuo.tech/p/5651d140.html"/>
+    <id>https://blog.songuo.tech/p/5651d140.html</id>
+    <published>2022-05-06T02:30:00.000Z</published>
+    <updated>2022-05-06T03:53:19.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>看完这篇文章，你将会知道：</p><ol><li><p>摘要、签名、证书是什么；</p></li><li><p>摘要、签名、证书的用途和关系；</p></li><li><p>签名是怎么生成的；</p></li><li><p>签名是怎么校验的；</p></li><li><p>证书是怎么生成的；</p></li><li><p>证书是怎么校验的。</p></li></ol><hr><h2 id="1-消息摘要（Digest）"><a href="#1-消息摘要（Digest）" class="headerlink" title="1. 消息摘要（Digest）"></a>1. 消息摘要（Digest）</h2><h3 id="什么是消息摘要？"><a href="#什么是消息摘要？" class="headerlink" title="什么是消息摘要？"></a>什么是消息摘要？</h3><p>对一份数据，进行一个单向的 Hash 函数，生成一个固定长度的 Hash 值，这个值就是这份数据的摘要，也称为指纹。</p><h3 id="摘要算法"><a href="#摘要算法" class="headerlink" title="摘要算法"></a>摘要算法</h3><p>常见的摘要算法有 MD5、SHA-1、SHA-256 等。他们都有这些特点：</p><ul><li>对于同一个摘要算法，无论输入的数据是什么，输出都是相同长度的值。 例如 MD5，无论数据有多大，输出总是128位的散列值。</li><li>摘要算法是单向的，只能根据原始数据计算出它的摘要值，但是不能根据摘要值反算出原始数据。</li><li>越优秀的摘要算法越难找到Hash碰撞。 虽然长内容生成短摘要是必定会产生碰撞的，但一个优秀的摘要算法很难主动构造出两条数据，使得他们的摘要值相同。</li><li>消息摘要的用途：可以用于校验数据的完整性。 例如我们在下载文件时，数据源会提供一个文件的MD5。文件下载好之后，我们本地计算出文件的MD5，和数据源提供的MD5做对比，如果相同则文件是完整的。 但独立使用消息摘要时，无法确保数据没有被篡改，因为无法保证从数据源获取的MD5有没有被中途篡改。</li><li>相比加密算法，摘要算法速度都相对较快。</li></ul><hr><h2 id="2-数字签名（Signature）"><a href="#2-数字签名（Signature）" class="headerlink" title="2. 数字签名（Signature）"></a>2. 数字签名（Signature）</h2><p>在了解签名之前，需要了解什么是公开密钥体系：</p><p><strong>公开密钥密码体系：</strong> 基于大整数的因数分解可以生成一对公钥和私钥。公钥和私钥是一一对应关系，一把私钥有着和它唯一对应的公钥，反之亦然。用公钥加密的数据，只能用和它对应的私钥解密，用私钥加密也只能同与之对应的公钥解密。 密钥对的生成很快速，但根据公钥反推私钥是极其困难的事。</p><p>根据公开密钥密码体系，我们有了非对称加密。常见的非对称加密是 RSA 加密。</p><p>如果用「公钥」对数据加密，用「私钥」去解密，这是「加密」； 反之用「私钥」对数据加密，用「公钥」去解密，这是「签名」。</p><p>简单地看，似乎没有区别，只是换了个名字。但实际上，两者的用途完全不一样。 由于所有人都持有公钥，所以「签名」并不能保证数据的安全性，因为所有人都可以用公钥去解密。 但「签名」却能用于保证消息的准确性和不可否认性。<strong>因为公钥和私钥是一一对应的，所以当一个公钥能解密某个密文时，说明这个密文一定来自于私钥持有者</strong>。</p><p>我们来看一下具体<strong>签名和验证的过程</strong>：</p><ol><li><p>消息发送者持有 私钥 和 加密算法，称为信源；信源用私钥和加密算法对明文数据进行加密，得到密文数据，称为签体；</p></li><li><p>接着把明文数据和密文数据同时给到消息接收者；</p></li><li><p>消息接收者收到后，先取出密文数据，用公钥对密文解密，得到一份明文数据；</p></li><li><p>再将这份明文数据和收到的明文数据做对比，如果相同则数据完整且可信。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220506/v2-b3f846ecdc32cc2e9d4cde1db04fc8bc_r.jpg" alt="img"></p><p>即使他人截获并篡改了「明文数据」，由于「私钥」是保密的，篡改者也无法生成正确的「签体」。所以签名能保证消息的准确性。 但在单独使用非对称加密的数字签名方案时，要对所有明文消息进行加密，效率很低。怎么提高效率呢？</p><p><strong>更高效的数字签名方案：</strong> 将摘要算法和非对称加密结合使用。 如何签名：先用摘要算法计算明文数据的摘要值，再对这个摘要值用私钥加密。这样就能较快速地得到了原始信息的签名； 如何验证：先用相同的摘要算法计算原始信息的摘要值，再用公钥对签名解密，得到收到的摘要值，最后对比这两个摘要值判断是否相等。如果不相等说明数据不可信。</p><p><strong>数字签名方案的问题：</strong> 数据接收者如何获取正确的公钥呢？如果公钥本身都被篡改了，这个签名方案就不正确了。所以需要有某种方式确保公钥的正确性，这就是数字证书。</p><hr><h2 id="3-数字证书（Certificate）"><a href="#3-数字证书（Certificate）" class="headerlink" title="3. 数字证书（Certificate）"></a>3. 数字证书（Certificate）</h2><p><strong>数字证书的作用：</strong> 确保数据接收者的公钥是没有被篡改过的。</p><p><strong>数字证书通常包含以下内容：</strong></p><p>(1) 证书所有人的<strong>公钥</strong>;</p><p>(2) 证书发行者对证书的数字<strong>签名</strong>；</p><p>(3) 证书所用的签名算法；</p><p>(4) 证书发布机构、有效期、所有者的信息等其他信息。</p><p>数字证书的验证过程需要用到 <strong>CA根证书</strong> 和 <strong>业务相关证书</strong>，<strong>根证书</strong> 是预装在操作系统中的。</p><p>在理解数字证书工作原理之前，我们需要先理解这两种证书是怎么生成的：</p><p><strong>1. CA根证书的生成</strong></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220506/v2-646af2023e0e575980099183979a8afa_r.jpg" alt="img"></p><p>步骤：</p><ol><li><p>权威机构利用RSA等算法，生成一对 公钥PK1 / 私钥SK1;</p></li><li><p>将 公钥PK1 和 证书发布机构、有效期等信息组成一份原始的证书内容，设为 C1；</p></li><li><p>利用某种摘要算法，计算原始内容 C1 的数字摘要，设为 H1；</p></li><li><p>用第一步生成的私钥SK1，对摘要H1签名，得到签名内容S1；</p></li><li><p>将原始内容C1 和 签名内容S1 合在一起，就得到了证书。</p></li></ol><p>根证书安装在操作系统中，我们认为根证书是一定正确的。</p><p><strong>2. 业务相关证书的生成</strong></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220506/v2-ac24e22655ef29624cf8c10a77c3cb5a_r.jpg" alt="img"></p><p>步骤：</p><ol><li><p>企业利用RSA等算法，生成一对 公钥PK2 / 私钥SK2；</p></li><li><p>将 公钥PK2 和 证书其他内容 组成原始证书内容，设为C2，给到权威机构；</p></li><li><p>权威机构拿到 C2 后，利用摘要算法，生成摘要信息 H2;</p></li><li><p>权威机构用自己的私钥SK1 (这是关键点)，对摘要信息H2 签名，得到签名内容S2;</p></li><li><p>将 原始内容C2 和 签名内容S2 合并到一起，得到证书，交给企业。</p></li></ol><p>区别点在于： 业务申请的证书，在签名时用的私钥是CA机构的私钥。这个私钥是和根证书中的公钥对应的。</p><p><strong>3. 数字证书的真伪验证</strong> 有了根证书，我们就能校验其他证书的真伪了：</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220506/v2-ec6a1d9b7bc4136a45b7415d0f244296_r.jpg" alt="img"></p><p>用根证书的公钥，可以验证其他证书的签名是否正确。如果签名正确，则证书是可信的、没有被篡改的。后续就可以使用这个被信任证书中包含的公钥，去验证收到的消息是否可信了。</p><p>用CA证书去证明另外一个证书是否可信，我们可以称之为 证书的递归验证。类似地，我们也可以用一个受信任的证书，去验证其他证书是否可信。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看完这篇文章，你将会知道：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;摘要、签名、证书是什么；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;摘要、签名、证书的用途和关系；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;签名是怎么生成的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;签名是怎么校验的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;证书是怎么生成的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;证书是怎么校验的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;1-消息摘要（Digest）&quot;&gt;&lt;a href=&quot;#1-消息摘要（Digest）&quot; class=&quot;headerlink&quot; title=&quot;1. 消息摘要（Digest）&quot;&gt;&lt;/a&gt;1. 消息摘要（Digest）&lt;/h2&gt;&lt;h3 id=&quot;什么是消息摘要？&quot;&gt;&lt;a href=&quot;#什么是消息摘要？&quot; class=&quot;headerlink&quot; title=&quot;什么是消息摘要？&quot;&gt;&lt;/a&gt;什么是消息摘要？&lt;/h3&gt;&lt;p&gt;对一份数据，进行一个单向的 Hash 函数，生成一个固定长度的 Hash 值，这个值就是这份数据的摘要，也称为指纹。&lt;/p&gt;
+&lt;h3 id=&quot;摘要算法&quot;&gt;&lt;a href=&quot;#摘要算法&quot; class=&quot;headerlink&quot; title=&quot;摘要算法&quot;&gt;&lt;/a&gt;摘要算法&lt;/h3&gt;&lt;p&gt;常见的摘要算法有 MD5、SHA-1、SHA-256 等。他们都有这些特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于同一个摘要算法，无论输入的数据是什么，输出都是相同长度的值。 例如 MD5，无论数据有多大，输出总是128位的散列值。&lt;/li&gt;
+&lt;li&gt;摘要算法是单向的，只能根据原始数据计算出它的摘要值，但是不能根据摘要值反算出原始数据。&lt;/li&gt;
+&lt;li&gt;越优秀的摘要算法越难找到Hash碰撞。 虽然长内容生成短摘要是必定会产生碰撞的，但一个优秀的摘要算法很难主动构造出两条数据，使得他们的摘要值相同。&lt;/li&gt;
+&lt;li&gt;消息摘要的用途：可以用于校验数据的完整性。 例如我们在下载文件时，数据源会提供一个文件的MD5。文件下载好之后，我们本地计算出文件的MD5，和数据源提供的MD5做对比，如果相同则文件是完整的。 但独立使用消息摘要时，无法确保数据没有被篡改，因为无法保证从数据源获取的MD5有没有被中途篡改。&lt;/li&gt;
+&lt;li&gt;相比加密算法，摘要算法速度都相对较快。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="加解密" scheme="https://blog.songuo.tech/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>scrcpy——Android 投屏神器 (使用教程)</title>
     <link href="https://blog.songuo.tech/p/51185a0a.html"/>
     <id>https://blog.songuo.tech/p/51185a0a.html</id>
     <published>2022-03-28T02:30:00.000Z</published>
-    <updated>2022-03-28T04:50:02.082Z</updated>
+    <updated>2022-03-28T04:51:24.621Z</updated>
     
     <content type="html"><![CDATA[<h2 id="scrcpy-简介"><a href="#scrcpy-简介" class="headerlink" title="scrcpy 简介"></a>scrcpy 简介</h2><blockquote><p>注意：拼写是 scrcpy，非 Python 爬虫框架 Scrapy。</p></blockquote><p>简单地来说，scrcpy 就是通过 adb 调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的 Android 设备。它可以通过 USB 连接，也可以通过 Wifi 连接（类似于隔空投屏），而且不需要任何 root 权限，不需要在手机里安装任何程序。scrcpy 同时适用于 GNU / Linux，Windows 和 macOS。</p><p>它的一些特性：</p><ul><li>亮度（原生，仅显示设备屏幕）</li><li>性能（30~60fps）</li><li>质量（1920×1080 或以上）</li><li>低延迟（35~70ms）</li><li>启动时间短（显示第一张图像约 1 秒）</li><li>非侵入性（设备上没有安装任何东西）</li></ul><p>此项目为开源项目，Github 地址：<a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener">Genymobile/scrcpy: Display and control your Android device</a></p><h2 id="使用-scrcpy-的要求"><a href="#使用-scrcpy-的要求" class="headerlink" title="使用 scrcpy 的要求"></a>使用 scrcpy 的要求</h2><ol><li>Android 设备至少需要 API 21（Android 5.0 以上版本）;</li><li>确保在您的设备上启用了 <a href="https://developer.android.com/studio/command-line/adb.html#Enabling" target="_blank" rel="noopener">adb 调试</a> ;</li><li>在某些设备上，您还需要启用<a href="https://github.com/Genymobile/scrcpy/issues/70#issuecomment-373286323" target="_blank" rel="noopener">其他选项</a>以使用键盘和鼠标控制它。</li></ol><p>adb 调试的开启一般是多次点击手机系统版本，如我用的是 MIUI10，开启方法是 “设置”-&gt;” 我的设备”-&gt;” 全部参数”-&gt; 点击 7 下 MIUI 版本，开启 “开发者选项”。然后在 “设置”-&gt;” 更多设置”-&gt;” 开发者选项” 中同时开启 <code>USB调试</code> 和 <code>USB调试(安全设置)</code>。</p><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818142006.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818142006.png" alt="img"></a></p><p><strong>注意：</strong><code>USB调试(安全设置)</code> 必须开启，否则不可以使用电脑控制手机，即上述要求的第三条。</p><h2 id="使用电脑连接手机"><a href="#使用电脑连接手机" class="headerlink" title="使用电脑连接手机"></a>使用电脑连接手机</h2><p>在 Android 手机中打开了 USB 调试后，我们即可在电脑中使用 adb 进行调试。</p><p>我使用的是 Windows10 系统，以下以 Windows 为例，MacOS 或 Linux 请<a href="https://github.com/Genymobile/scrcpy#get-the-app" target="_blank" rel="noopener">点击这里</a>。</p><p>程序使用了 Java 语言，我们需要在电脑中搭建 Java 运行环境，参考：<a href="https://blog.csdn.net/sigmarising/article/details/80139287" target="_blank" rel="noopener">Windows10 配置 Java 开发环境</a></p><p>首先下载 scrcpy，可去 <code>releases</code> 下载最新版本，目前最新版本为 2020-04-30 的 <code>v1.13</code>。</p><p>下载地址：<a href="https://github.com/Genymobile/scrcpy/releases" target="_blank" rel="noopener">https://github.com/Genymobile/scrcpy/releases</a><br>往下拉到 Assets：</p><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20200516201427.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20200516201427.png" alt="下载64位版本"></a></p><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20200516201427.png" target="_blank" rel="noopener">下载 64 位版本</a></p><p>解压后的目录：</p><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818145557.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818145557.png" alt="解压文件"></a></p><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818145557.png" target="_blank" rel="noopener">解压文件</a></p><p>打开 cmd 定位到此目录（在地址栏中输入 <code>cmd</code> 回车），或者将该目录如 <code>D:\Github_Run\scrcpy-win64-v1.10</code> 加入到系统环境变量中，程序的使用都在 cmd 命令行中操作。</p><h2 id="使用-USB-进行连接"><a href="#使用-USB-进行连接" class="headerlink" title="使用 USB 进行连接"></a>使用 USB 进行连接</h2><p>此方式推荐使用，相对更加流畅。</p><ol><li>手机通过 USB 连接到 PC 上，首次连接会弹出是否信任该电脑，点击始终信任即可。</li><li>运行 <code>adb usb</code> 查看是否连接成功</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb usb</span><br><span class="line">restarting in USB mode</span><br></pre></td></tr></table></figure><p>复制</p><ol><li>运行 <code>scrcpy</code> 即可。</li></ol><h2 id="使用无线连接"><a href="#使用无线连接" class="headerlink" title="使用无线连接"></a>使用无线连接</h2><p>可参考官方文档：<a href="https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/" target="_blank" rel="noopener">Open Source Project - Scrcpy now works wirelessly</a></p><p>此连接方式更加方便快捷，若宽带速率高，使用效果更佳，使用方法也非常简单。</p><ol><li><p>确保 PC 和手机在同一 Wifi 中</p></li><li><p>手机先通过 USB 与 PC 相连</p></li><li><p>在 PC 上运行 adb tcpip 服务端口，如端口为 5555</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb tcpip 5555</span><br><span class="line">restarting in TCP mode port: 5555</span><br></pre></td></tr></table></figure><p>复制</p></li><li><p>拔下你的设备，断开 USB 连接</p></li><li><p>在 PC 上运行 adb connect 手机 IP: 服务端口（手机 IP 可通过手机的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">状态信息</span><br></pre></td></tr></table></figure><p>查看，或者登录路由器查看，一般以 192.168 开头）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb connect 192.168.0.4:5555</span><br><span class="line">connected to 192.168.0.4:5555</span><br></pre></td></tr></table></figure><p>复制</p></li><li><p>运行 scrcpy，在 cmd 中输入 <code>scrcpy.exe</code></p></li></ol><p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818151221.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818151221.png" alt="img"></a></p><p>这样弹出手机的屏幕，手机投屏成功！正如预期的那样，性能与 USB 不同，默认的 scrcpy 比特率是 8Mbps，这对于 Wi-Fi 连接来说可能太多了。根据使用情况，降低比特率和分辨率可能是一个很好的折中方案。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scrcpy --bit-rate 2M --max-size 800</span><br><span class="line"># 或者简写</span><br><span class="line">scrcpy -b2M -m800</span><br></pre></td></tr></table></figure><p>复制</p><p>若要切换回 USB 模式：<code>adb usb</code></p><h2 id="常用快捷键（重要）"><a href="#常用快捷键（重要）" class="headerlink" title="常用快捷键（重要）"></a>常用快捷键（重要）</h2><div class="table-container"><table><thead><tr><th style="text-align:left"><strong>描述</strong></th><th style="text-align:left"><strong>快捷键</strong></th></tr></thead><tbody><tr><td style="text-align:left">切换全屏模式</td><td style="text-align:left">Ctrl+f</td></tr><tr><td style="text-align:left">点击手机电源</td><td style="text-align:left">Ctrl+p</td></tr><tr><td style="text-align:left">返回</td><td style="text-align:left">Ctrl+b</td></tr><tr><td style="text-align:left">返回到 HOME</td><td style="text-align:left">Ctrl+h</td></tr><tr><td style="text-align:left">多任务</td><td style="text-align:left">Ctrl+s</td></tr><tr><td style="text-align:left">更多操作</td><td style="text-align:left">长按鼠标左键</td></tr><tr><td style="text-align:left">显示最佳窗口</td><td style="text-align:left">Ctrl+g</td></tr><tr><td style="text-align:left">调节音量</td><td style="text-align:left">Ctrl + 上下键</td></tr><tr><td style="text-align:left">关闭设备屏幕（保持镜像）</td><td style="text-align:left">Ctrl+o</td></tr><tr><td style="text-align:left">将设备剪贴板复制到计算机</td><td style="text-align:left">Ctrl+c</td></tr><tr><td style="text-align:left">将计算机剪贴板粘贴到设备</td><td style="text-align:left">Ctrl+v</td></tr></tbody></table></div><p><strong>Tips</strong>：查看已连接设备命令 <code>adb devices</code>，显示 <code>device</code> 则表示已连接，显示 <code>offline</code> 则离线：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb devices</span><br><span class="line">List of devices attached</span><br><span class="line">192.168.0.4:5555        device</span><br></pre></td></tr></table></figure><p>复制</p><p>使用命令行选项在启动时镜像时可以关闭设备屏幕，这一点也挺实用：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scrcpy --turn-screen-off</span><br><span class="line">scrcpy -S</span><br></pre></td></tr></table></figure><p>复制</p><p>这样我们就使用了两种方式（USB 连接和 Wifi 连接）使用 scrcpy，其它方法详见：<a href="https://github.com/Genymobile/scrcpy#features" target="_blank" rel="noopener">README</a> 如可直接拖拽 APK 进行安装，手机录屏等。</p><blockquote><p>参考：<a href="http://blog.lujun9972.win/blog/2019/03/20/使用scrcpy控制你的手机/" target="_blank" rel="noopener">使用 scrcpy 控制你的手机 - 暗无天日</a><br><a href="https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/" target="_blank" rel="noopener">Open Source Project - Scrcpy now works wirelessly</a></p></blockquote>]]></content>
     
@@ -1825,30 +1873,6 @@
     
     
       <category term="office,jacob" scheme="https://blog.songuo.tech/tags/office-jacob/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>抓取弹出框的xpath</title>
-    <link href="https://blog.songuo.tech/p/42d7f672.html"/>
-    <id>https://blog.songuo.tech/p/42d7f672.html</id>
-    <published>2021-08-11T01:00:00.000Z</published>
-    <updated>2021-08-11T03:02:55.858Z</updated>
-    
-    <content type="html"><![CDATA[<p>打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="selenium" scheme="https://blog.songuo.tech/categories/selenium/"/>
-    
-    
-      <category term="selenium" scheme="https://blog.songuo.tech/tags/selenium/"/>
     
   </entry>
   
