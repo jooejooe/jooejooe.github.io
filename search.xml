@@ -7530,4 +7530,41 @@
         <tag>IDE</tag>
       </tags>
   </entry>
+  <entry>
+    <title>破解Excel VBA 密码</title>
+    <url>//p/c870ea4d.html</url>
+    <content><![CDATA[<p>变更档案名称副档名以破解Excel VBA 密码<a id="more"></a></p>
+<ol>
+<li>找到目标.xlsm 档案并变更档案名称副档名.xlsm 为.zip。</li>
+<li>通过任何一个存档程式，打开这个档，你可以使用WinRAR 或7-Zip。如果这样做，你应该能够看到档案目录的以下结构。</li>
+<li>转到XL 目录选项并选取标记为「VBAProject.bin」档案。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/v2-0e705d7284dbbc9295cab6b41004d4f4_r.jpg" alt="img"></p>
+<ol>
+<li><p>通过十六进制Hex 编辑器打开VBAProject.bin 档案，并在十六进制编辑器中查询档案中的“DPB=”文字。</p>
+</li>
+<li><p>找到此文字后，只需删除并替换为“DPX=”。现在保存并关闭十六进位编辑器上的档案。覆盖旧的「VBAProject.bin」档案编辑新的十六进位「VBAProject.bin」档案。</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/v2-67cea49cfc563b631ed0176cdb9a7e8f_r.jpg" alt="img"></p>
+<ol>
+<li><p>档案名称副档名还原为.xlsm，然后在Excel 中打开。从弹出的警告视窗中，选择「是」并忽略其他选项。</p>
+</li>
+<li><p>运行VBA 编辑器，如果弹出对话方块，选择「确定」。</p>
+</li>
+<li><p>打开【工具】vba属性</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/image-20220906092822608.png" alt="image-20220906092822608"></p>
+<ol>
+<li>填入新密码即可打开，下次打开直接输入新密码即可</li>
+</ol>
+]]></content>
+      <categories>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>
