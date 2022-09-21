@@ -7567,4 +7567,21 @@
         <tag>office</tag>
       </tags>
   </entry>
+  <entry>
+    <title>uni-app 调用安卓原生方法代码</title>
+    <url>//p/36606800.html</url>
+    <content><![CDATA[<p>1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下<a id="more"></a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220921/20201013135425306.png" alt="img"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// com.example.myapplicatio 为安卓包名，要改为自己的包名</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddCount</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2: uni-app 前端代码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> AddCount = plus.android.importClass(<span class="string">"com.example.myapplication.AddCount"</span>)</span><br><span class="line"><span class="keyword">var</span> addCount = <span class="keyword">new</span> AddCount();  </span><br><span class="line"><span class="comment">// addCount.add 即为上面的原生方法拉</span></span><br><span class="line"><span class="keyword">this</span>.w4 = addCount.add(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p>直接打包成apk，验证完美调用了。</p>
+]]></content>
+      <categories>
+        <category>开发经验</category>
+      </categories>
+      <tags>
+        <tag>uniapp</tag>
+      </tags>
+  </entry>
 </search>

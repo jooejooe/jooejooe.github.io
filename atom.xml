@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.songuo.tech/"/>
-  <updated>2022-09-06T01:32:26.220Z</updated>
+  <updated>2022-09-21T00:57:11.204Z</updated>
   <id>https://blog.songuo.tech/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>uni-app 调用安卓原生方法代码</title>
+    <link href="https://blog.songuo.tech/p/36606800.html"/>
+    <id>https://blog.songuo.tech/p/36606800.html</id>
+    <published>2022-09-21T02:30:00.000Z</published>
+    <updated>2022-09-21T00:57:11.204Z</updated>
+    
+    <content type="html"><![CDATA[<p>1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下<a id="more"></a></p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220921/20201013135425306.png" alt="img"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// com.example.myapplicatio 为安卓包名，要改为自己的包名</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddCount</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2: uni-app 前端代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> AddCount = plus.android.importClass(<span class="string">"com.example.myapplication.AddCount"</span>)</span><br><span class="line"><span class="keyword">var</span> addCount = <span class="keyword">new</span> AddCount();  </span><br><span class="line"><span class="comment">// addCount.add 即为上面的原生方法拉</span></span><br><span class="line"><span class="keyword">this</span>.w4 = addCount.add(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure><p>直接打包成apk，验证完美调用了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下
+    
+    </summary>
+    
+    
+      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="uniapp" scheme="https://blog.songuo.tech/tags/uniapp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>破解Excel VBA 密码</title>
     <link href="https://blog.songuo.tech/p/c870ea4d.html"/>
     <id>https://blog.songuo.tech/p/c870ea4d.html</id>
     <published>2022-09-06T02:12:00.000Z</published>
-    <updated>2022-09-06T01:32:26.220Z</updated>
+    <updated>2022-09-06T01:33:45.911Z</updated>
     
     <content type="html"><![CDATA[<p>变更档案名称副档名以破解Excel VBA 密码<a id="more"></a></p><ol><li>找到目标.xlsm 档案并变更档案名称副档名.xlsm 为.zip。</li><li>通过任何一个存档程式，打开这个档，你可以使用WinRAR 或7-Zip。如果这样做，你应该能够看到档案目录的以下结构。</li><li>转到XL 目录选项并选取标记为「VBAProject.bin」档案。</li></ol><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/v2-0e705d7284dbbc9295cab6b41004d4f4_r.jpg" alt="img"></p><ol><li><p>通过十六进制Hex 编辑器打开VBAProject.bin 档案，并在十六进制编辑器中查询档案中的“DPB=”文字。</p></li><li><p>找到此文字后，只需删除并替换为“DPX=”。现在保存并关闭十六进位编辑器上的档案。覆盖旧的「VBAProject.bin」档案编辑新的十六进位「VBAProject.bin」档案。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/v2-67cea49cfc563b631ed0176cdb9a7e8f_r.jpg" alt="img"></p><ol><li><p>档案名称副档名还原为.xlsm，然后在Excel 中打开。从弹出的警告视窗中，选择「是」并忽略其他选项。</p></li><li><p>运行VBA 编辑器，如果弹出对话方块，选择「确定」。</p></li><li><p>打开【工具】vba属性</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220906/image-20220906092822608.png" alt="image-20220906092822608"></p><ol><li>填入新密码即可打开，下次打开直接输入新密码即可</li></ol>]]></content>
     
@@ -1848,29 +1871,6 @@
     
     
       <category term="nginx" scheme="https://blog.songuo.tech/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在谷歌浏览器(chrome)里面在线浏览word，excel文件</title>
-    <link href="https://blog.songuo.tech/p/fc11f5f9.html"/>
-    <id>https://blog.songuo.tech/p/fc11f5f9.html</id>
-    <published>2021-09-02T02:30:00.000Z</published>
-    <updated>2021-09-03T03:48:07.397Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先下载离线安装包，是一个crx文件，不需要打开<a id="more"></a></p><p>地址栏输入： chrome://extensions/</p><p>调整到开发者模式，然后将刚刚下载的crx文件拖入到浏览器</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127091755861.png" alt="在这里插入图片描述"></p><p>如果没有弹出安装的提示，把浏览器关了多重试几次。</p><p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20210903/20210127083952207.png" alt="设置允许控件"></p><p>修改配置，地址栏输入chrome://flags/#enable-nacl<br>将其改成enabled</p><p>重启浏览器</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先下载离线安装包，是一个crx文件，不需要打开
-    
-    </summary>
-    
-    
-      <category term="开发经验" scheme="https://blog.songuo.tech/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="office" scheme="https://blog.songuo.tech/tags/office/"/>
     
   </entry>
   

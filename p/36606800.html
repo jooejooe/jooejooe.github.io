@@ -21,25 +21,22 @@
     var CONFIG = {"hostname":"blog.songuo.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="scrcpy 简介 注意：拼写是 scrcpy，非 Python 爬虫框架 Scrapy。  简单地来说，scrcpy 就是通过 adb 调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的 Android 设备。它可以通过 USB 连接，也可以通过 Wifi 连接（类似于隔空投屏），而且不需要任何 root 权限，不需要在手机里安装任何程序。scrcpy 同时适用于 GNU &#x2F; Linux，">
+  <meta name="description" content="1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="scrcpy——Android 投屏神器 (使用教程)">
-<meta property="og:url" content="https://blog.songuo.tech/p/51185a0a.html">
+<meta property="og:title" content="uni-app 调用安卓原生方法代码">
+<meta property="og:url" content="https://blog.songuo.tech/p/36606800.html">
 <meta property="og:site_name" content="松果小站">
-<meta property="og:description" content="scrcpy 简介 注意：拼写是 scrcpy，非 Python 爬虫框架 Scrapy。  简单地来说，scrcpy 就是通过 adb 调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的 Android 设备。它可以通过 USB 连接，也可以通过 Wifi 连接（类似于隔空投屏），而且不需要任何 root 权限，不需要在手机里安装任何程序。scrcpy 同时适用于 GNU &#x2F; Linux，">
+<meta property="og:description" content="1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818142006.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20200516201427.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818145557.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818151221.png">
-<meta property="article:published_time" content="2022-03-28T02:30:00.000Z">
-<meta property="article:modified_time" content="2022-03-28T04:51:24.621Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220921/20201013135425306.png">
+<meta property="article:published_time" content="2022-09-21T02:30:00.000Z">
+<meta property="article:modified_time" content="2022-09-21T00:57:11.204Z">
 <meta property="article:author" content="松鼠">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="uniapp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818142006.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220921/20201013135425306.png">
 
-<link rel="canonical" href="https://blog.songuo.tech/p/51185a0a.html">
+<link rel="canonical" href="https://blog.songuo.tech/p/36606800.html">
 
 
 <script id="page-configurations">
@@ -52,7 +49,7 @@
   };
 </script>
 
-  <title>scrcpy——Android 投屏神器 (使用教程) | 松果小站</title>
+  <title>uni-app 调用安卓原生方法代码 | 松果小站</title>
   
 
 
@@ -210,7 +207,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/51185a0a.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.songuo.tech/p/36606800.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -223,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          scrcpy——Android 投屏神器 (使用教程)
+          uni-app 调用安卓原生方法代码
         </h1>
 
         <div class="post-meta">
@@ -233,7 +230,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-03-28 10:30:00" itemprop="dateCreated datePublished" datetime="2022-03-28T10:30:00+08:00">2022-03-28</time>
+              <time title="创建时间：2022-09-21 10:30:00" itemprop="dateCreated datePublished" datetime="2022-09-21T10:30:00+08:00">2022-09-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -258,14 +255,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
+              <span>377</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -277,142 +274,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="scrcpy-简介"><a href="#scrcpy-简介" class="headerlink" title="scrcpy 简介"></a>scrcpy 简介</h2><blockquote>
-<p>注意：拼写是 scrcpy，非 Python 爬虫框架 Scrapy。</p>
-</blockquote>
-<p>简单地来说，scrcpy 就是通过 adb 调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的 Android 设备。它可以通过 USB 连接，也可以通过 Wifi 连接（类似于隔空投屏），而且不需要任何 root 权限，不需要在手机里安装任何程序。scrcpy 同时适用于 GNU / Linux，Windows 和 macOS。</p>
-<p>它的一些特性：</p>
-<ul>
-<li>亮度（原生，仅显示设备屏幕）</li>
-<li>性能（30~60fps）</li>
-<li>质量（1920×1080 或以上）</li>
-<li>低延迟（35~70ms）</li>
-<li>启动时间短（显示第一张图像约 1 秒）</li>
-<li>非侵入性（设备上没有安装任何东西）</li>
-</ul>
-<p>此项目为开源项目，Github 地址：<a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener">Genymobile/scrcpy: Display and control your Android device</a></p>
-<h2 id="使用-scrcpy-的要求"><a href="#使用-scrcpy-的要求" class="headerlink" title="使用 scrcpy 的要求"></a>使用 scrcpy 的要求</h2><ol>
-<li>Android 设备至少需要 API 21（Android 5.0 以上版本）;</li>
-<li>确保在您的设备上启用了 <a href="https://developer.android.com/studio/command-line/adb.html#Enabling" target="_blank" rel="noopener">adb 调试</a> ;</li>
-<li>在某些设备上，您还需要启用<a href="https://github.com/Genymobile/scrcpy/issues/70#issuecomment-373286323" target="_blank" rel="noopener">其他选项</a>以使用键盘和鼠标控制它。</li>
-</ol>
-<p>adb 调试的开启一般是多次点击手机系统版本，如我用的是 MIUI10，开启方法是 “设置”-&gt;” 我的设备”-&gt;” 全部参数”-&gt; 点击 7 下 MIUI 版本，开启 “开发者选项”。然后在 “设置”-&gt;” 更多设置”-&gt;” 开发者选项” 中同时开启 <code>USB调试</code> 和 <code>USB调试(安全设置)</code>。</p>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818142006.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818142006.png" alt="img"></a></p>
-<p><strong>注意：</strong><code>USB调试(安全设置)</code> 必须开启，否则不可以使用电脑控制手机，即上述要求的第三条。</p>
-<h2 id="使用电脑连接手机"><a href="#使用电脑连接手机" class="headerlink" title="使用电脑连接手机"></a>使用电脑连接手机</h2><p>在 Android 手机中打开了 USB 调试后，我们即可在电脑中使用 adb 进行调试。</p>
-<p>我使用的是 Windows10 系统，以下以 Windows 为例，MacOS 或 Linux 请<a href="https://github.com/Genymobile/scrcpy#get-the-app" target="_blank" rel="noopener">点击这里</a>。</p>
-<p>程序使用了 Java 语言，我们需要在电脑中搭建 Java 运行环境，参考：<a href="https://blog.csdn.net/sigmarising/article/details/80139287" target="_blank" rel="noopener">Windows10 配置 Java 开发环境</a></p>
-<p>首先下载 scrcpy，可去 <code>releases</code> 下载最新版本，目前最新版本为 2020-04-30 的 <code>v1.13</code>。</p>
-<p>下载地址：<a href="https://github.com/Genymobile/scrcpy/releases" target="_blank" rel="noopener">https://github.com/Genymobile/scrcpy/releases</a><br>往下拉到 Assets：</p>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20200516201427.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20200516201427.png" alt="下载64位版本"></a></p>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20200516201427.png" target="_blank" rel="noopener">下载 64 位版本</a></p>
-<p>解压后的目录：</p>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818145557.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818145557.png" alt="解压文件"></a></p>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818145557.png" target="_blank" rel="noopener">解压文件</a></p>
-<p>打开 cmd 定位到此目录（在地址栏中输入 <code>cmd</code> 回车），或者将该目录如 <code>D:\Github_Run\scrcpy-win64-v1.10</code> 加入到系统环境变量中，程序的使用都在 cmd 命令行中操作。</p>
-<h2 id="使用-USB-进行连接"><a href="#使用-USB-进行连接" class="headerlink" title="使用 USB 进行连接"></a>使用 USB 进行连接</h2><p>此方式推荐使用，相对更加流畅。</p>
-<ol>
-<li>手机通过 USB 连接到 PC 上，首次连接会弹出是否信任该电脑，点击始终信任即可。</li>
-<li>运行 <code>adb usb</code> 查看是否连接成功</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb usb</span><br><span class="line">restarting in USB mode</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-<ol>
-<li>运行 <code>scrcpy</code> 即可。</li>
-</ol>
-<h2 id="使用无线连接"><a href="#使用无线连接" class="headerlink" title="使用无线连接"></a>使用无线连接</h2><p>可参考官方文档：<a href="https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/" target="_blank" rel="noopener">Open Source Project - Scrcpy now works wirelessly</a></p>
-<p>此连接方式更加方便快捷，若宽带速率高，使用效果更佳，使用方法也非常简单。</p>
-<ol>
-<li><p>确保 PC 和手机在同一 Wifi 中</p>
-</li>
-<li><p>手机先通过 USB 与 PC 相连</p>
-</li>
-<li><p>在 PC 上运行 adb tcpip 服务端口，如端口为 5555</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb tcpip 5555</span><br><span class="line">restarting in TCP mode port: 5555</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-</li>
-<li><p>拔下你的设备，断开 USB 连接</p>
-</li>
-<li><p>在 PC 上运行 adb connect 手机 IP: 服务端口（手机 IP 可通过手机的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">状态信息</span><br></pre></td></tr></table></figure>
-<p>查看，或者登录路由器查看，一般以 192.168 开头）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb connect 192.168.0.4:5555</span><br><span class="line">connected to 192.168.0.4:5555</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-</li>
-<li><p>运行 scrcpy，在 cmd 中输入 <code>scrcpy.exe</code></p>
-</li>
-</ol>
-<p><a href="https://zhyong-cn.oss-cn-shanghai.aliyuncs.com/old/20190818151221.png" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220328/20190818151221.png" alt="img"></a></p>
-<p>这样弹出手机的屏幕，手机投屏成功！正如预期的那样，性能与 USB 不同，默认的 scrcpy 比特率是 8Mbps，这对于 Wi-Fi 连接来说可能太多了。根据使用情况，降低比特率和分辨率可能是一个很好的折中方案。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scrcpy --bit-rate 2M --max-size 800</span><br><span class="line"># 或者简写</span><br><span class="line">scrcpy -b2M -m800</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-<p>若要切换回 USB 模式：<code>adb usb</code></p>
-<h2 id="常用快捷键（重要）"><a href="#常用快捷键（重要）" class="headerlink" title="常用快捷键（重要）"></a>常用快捷键（重要）</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>描述</strong></th>
-<th style="text-align:left"><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">切换全屏模式</td>
-<td style="text-align:left">Ctrl+f</td>
-</tr>
-<tr>
-<td style="text-align:left">点击手机电源</td>
-<td style="text-align:left">Ctrl+p</td>
-</tr>
-<tr>
-<td style="text-align:left">返回</td>
-<td style="text-align:left">Ctrl+b</td>
-</tr>
-<tr>
-<td style="text-align:left">返回到 HOME</td>
-<td style="text-align:left">Ctrl+h</td>
-</tr>
-<tr>
-<td style="text-align:left">多任务</td>
-<td style="text-align:left">Ctrl+s</td>
-</tr>
-<tr>
-<td style="text-align:left">更多操作</td>
-<td style="text-align:left">长按鼠标左键</td>
-</tr>
-<tr>
-<td style="text-align:left">显示最佳窗口</td>
-<td style="text-align:left">Ctrl+g</td>
-</tr>
-<tr>
-<td style="text-align:left">调节音量</td>
-<td style="text-align:left">Ctrl + 上下键</td>
-</tr>
-<tr>
-<td style="text-align:left">关闭设备屏幕（保持镜像）</td>
-<td style="text-align:left">Ctrl+o</td>
-</tr>
-<tr>
-<td style="text-align:left">将设备剪贴板复制到计算机</td>
-<td style="text-align:left">Ctrl+c</td>
-</tr>
-<tr>
-<td style="text-align:left">将计算机剪贴板粘贴到设备</td>
-<td style="text-align:left">Ctrl+v</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Tips</strong>：查看已连接设备命令 <code>adb devices</code>，显示 <code>device</code> 则表示已连接，显示 <code>offline</code> 则离线：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\Github_Run\scrcpy-win64-v1.10&gt;adb devices</span><br><span class="line">List of devices attached</span><br><span class="line">192.168.0.4:5555        device</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-<p>使用命令行选项在启动时镜像时可以关闭设备屏幕，这一点也挺实用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scrcpy --turn-screen-off</span><br><span class="line">scrcpy -S</span><br></pre></td></tr></table></figure>
-<p>复制</p>
-<p>这样我们就使用了两种方式（USB 连接和 Wifi 连接）使用 scrcpy，其它方法详见：<a href="https://github.com/Genymobile/scrcpy#features" target="_blank" rel="noopener">README</a> 如可直接拖拽 APK 进行安装，手机录屏等。</p>
-<blockquote>
-<p>参考：<a href="http://blog.lujun9972.win/blog/2019/03/20/使用scrcpy控制你的手机/" target="_blank" rel="noopener">使用 scrcpy 控制你的手机 - 暗无天日</a><br><a href="https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/" target="_blank" rel="noopener">Open Source Project - Scrcpy now works wirelessly</a></p>
-</blockquote>
+        <p>1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下<a id="more"></a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/jooejooe/images/image/20220921/20201013135425306.png" alt="img"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// com.example.myapplicatio 为安卓包名，要改为自己的包名</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddCount</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2: uni-app 前端代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> AddCount = plus.android.importClass(<span class="string">"com.example.myapplication.AddCount"</span>)</span><br><span class="line"><span class="keyword">var</span> addCount = <span class="keyword">new</span> AddCount();  </span><br><span class="line"><span class="comment">// addCount.add 即为上面的原生方法拉</span></span><br><span class="line"><span class="keyword">this</span>.w4 = addCount.add(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p>直接打包成apk，验证完美调用了。</p>
 
     </div>
 
@@ -424,7 +291,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+              <a href="/tags/uniapp/" rel="tag"># uniapp</a>
           </div>
 
         
@@ -433,13 +300,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/p/b10acde0.html" rel="prev" title="如何破解HIT的孤岛效应，一起关于患者主索引的案例分享">
-      <i class="fa fa-chevron-left"></i> 如何破解HIT的孤岛效应，一起关于患者主索引的案例分享
+    <a href="/p/c870ea4d.html" rel="prev" title="破解Excel VBA 密码">
+      <i class="fa fa-chevron-left"></i> 破解Excel VBA 密码
     </a></div>
-      <div class="post-nav-item">
-    <a href="/p/5651d140.html" rel="next" title="摘要、签名与数字证书都是什么？">
-      摘要、签名与数字证书都是什么？ <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -499,7 +363,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scrcpy-简介"><span class="nav-text">scrcpy 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-scrcpy-的要求"><span class="nav-text">使用 scrcpy 的要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用电脑连接手机"><span class="nav-text">使用电脑连接手机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-USB-进行连接"><span class="nav-text">使用 USB 进行连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用无线连接"><span class="nav-text">使用无线连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用快捷键（重要）"><span class="nav-text">常用快捷键（重要）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -680,7 +543,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'jooejooe.github.io',
       owner       : 'jooejooe',
       admin       : ['jooejooe'],
-      id          : 'a9afdbdf368985d5c0e8af79d76bfe43',
+      id          : '35a4a60901f9c751935e42baf64d0a65',
         language: 'zh-CN',
       distractionFreeMode: true
     });
