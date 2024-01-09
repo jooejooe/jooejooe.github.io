@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>staruml on 松果小站</title><link>/tags/staruml/</link><description>Recent content in staruml on 松果小站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 18 Mar 2022 10:30:00 +0000</lastBuildDate><atom:link href="/tags/staruml/rss.xml" rel="self" type="application/rss+xml"/><item><title>三步激活 StarUML V4.0.1 (WIN10) | 仅供学习</title><link>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%B8%89%E6%AD%A5%E6%BF%80%E6%B4%BB-staruml-v4.0.1-win10-%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0/</link><pubDate>Fri, 18 Mar 2022 10:30:00 +0000</pubDate><guid>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%B8%89%E6%AD%A5%E6%BF%80%E6%B4%BB-staruml-v4.0.1-win10-%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0/</guid><description>&lt;p>
+&lt;a href="https://staruml.io/" title="&amp;lt;code&amp;gt;StarUML&amp;lt;/code&amp;gt;" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;code>StarUML&lt;/code>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>是一个开源的 &lt;code>UML&lt;/code> 工具列表软件，它遵守 &lt;code>GNU GPL&lt;/code> 的一个修订版。&lt;code>StarUML&lt;/code> 项目宣称的目标是代替大型的商业 UML 工具软件，如 &lt;code>IBM&lt;/code> 的 &lt;code>Rational Rose&lt;/code> ， &lt;code>Borland&lt;/code> 公司的 &lt;code>Together&lt;/code> 。&lt;code>StarUML&lt;/code> 支持 UML2.0 定义的大多数图，是一款跨平台且轻量高效的现代 UML 绘图工具。&lt;/p>
+&lt;p>但由于其商业性质，免费版仅提供一段时间的试用预览，到期后导出图片会有 &lt;code>未注册&lt;/code> 字样水印，非常影响成图质量。经过一番研究，StarUML 采用 &lt;code>Electron&lt;/code> 框架，使用 &lt;code>node.js&lt;/code> 实现，仅需简单修改其中许可证判定代码即可完成破解，在此感谢万能的 GitHub 社区。&lt;/p></description></item></channel></rss>

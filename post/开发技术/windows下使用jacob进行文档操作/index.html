@@ -1,0 +1,328 @@
+<!doctype html><html lang=zh-CN data-theme=light><head><meta charset=UTF-8><meta name=viewport content="width=device-width"><meta name=theme-color content="#222" media="(prefers-color-scheme: light)"><meta name=generator content="Hugo 0.121.2"><link rel="shortcut icon" type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/imgs/icons/favicon_16x16.icon><link rel=icon type=image/png sizes=32x32 href=/imgs/icons/favicon_32_32.icon><link rel=apple-touch-icon sizes=180x180 href=/imgs/icons/apple_touch_icon_next.png><meta itemprop=name content="Windows下使用jacob进行文档操作"><meta itemprop=description content="记录轨迹。"><meta itemprop=datePublished zgotmplz><meta itemprop=dateModified zgotmplz><meta itemprop=image content="/imgs/hugo_next_avatar.png"><meta itemprop=keywords content="office,jacob"><meta property="og:type" content="article"><meta property="og:title" content="Windows下使用jacob进行文档操作"><meta property="og:description" content="记录轨迹。"><meta property="og:image" content="/imgs/hugo_next_avatar.png"><meta property="og:image:width" content="312"><meta property="og:image:height" content="312"><meta property="og:image:type" content="image/jpeg/png/svg/jpg"><meta property="og:url" content="/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/"><meta property="og:site_name" content="松果小站"><meta property="og:locale" content="zh-CN"><meta property="article:author" content="松果小站"><meta property="article:published_time" content="2021-08-20 10:30:00 +0000 UTC"><meta property="article:modified_time" content="2021-08-20 10:30:00 +0000 UTC"><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/font-awesome/6.1.2/css/all.min.css><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/animate.css/3.1.1/animate.min.css><link type=text/css rel=stylesheet href=https://cdn.staticfile.org/viewerjs/1.11.0/viewer.min.css><link rel=stylesheet href=/css/main.min.e83ed60f44a866830eb8ff84b9b1ceb1b585dff20463c785c1f71ea16bf54e9c.css><style type=text/css>.post-footer,.flinks-list-footer hr:after{content:"~ 我可是有底线的哟 ~"}</style><script type=text/javascript>(function(){localDB={set:function(e,t,n){if(n===0)return;const s=new Date,o=n*864e5,i={value:t,expiry:s.getTime()+o};localStorage.setItem(e,JSON.stringify(i))},get:function(e){const t=localStorage.getItem(e);if(!t)return void 0;const n=JSON.parse(t),s=new Date;return s.getTime()>n.expiry?(localStorage.removeItem(e),void 0):n.value}},theme={active:function(){const e=localDB.get("theme");if(e==null)return;theme.toggle(e),window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e){theme.toggle(e.matches?"dark":"light")})},toggle:function(e){document.documentElement.setAttribute("data-theme",e),localDB.set("theme",e,2);const t=document.querySelector("iframe.giscus-frame");if(t){const n={setConfig:{theme:e}};t.contentWindow.postMessage({giscus:n},"https://giscus.app")}}},theme.active()})(window)</script><script class=next-config data-name=page type=application/json>{"comments":false,"isHome":false,"isPage":true,"path":"windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C","permalink":"/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/","title":"Windows下使用jacob进行文档操作","waline":{"js":[{"alias":"waline","alias_name":"@waline/client","file":"dist/pageview.js","name":"pageview","version":"2.13.0"},{"alias":"waline","alias_name":"@waline/client","file":"dist/comment.js","name":"comment","version":"2.13.0"}]}}</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",e.async=!1,e.defer=!0,document.head.appendChild(e),e.onload=function(){NexT.utils.fmtBusuanzi()}})</script><title>Windows下使用jacob进行文档操作 - 松果小站</title><noscript><link rel=stylesheet href=/css/noscript.css></noscript></head><body itemscope itemtype=http://schema.org/WebPage class=use-motion><div class=headband></div><main class=main><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-container><div class=site-nav-toggle><div class=toggle aria-label role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div></div><div class=site-meta><a href=/ class=brand rel=start><i class=logo-line></i><h1 class=site-title>松果小站</h1><i class=logo-line></i></a><p class=site-subtitle itemprop=description>松果小站博客</p></div><div class=site-nav-right><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class=site-nav><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href=/ class=hvr-icon-pulse rel=section><i class="fa fa-home hvr-icon"></i>首页</a></li><li class="menu-item menu-item-about"><a href=/about.html class=hvr-icon-pulse rel=section><i class="fa fa-user hvr-icon"></i>关于</a></li><li class="menu-item menu-item-categories"><a href=/categories/ class=hvr-icon-pulse rel=section><i class="fa fa-thumbs-up hvr-icon"></i>分类</a></li><li class="menu-item menu-item-tags"><a href=/tags/ class=hvr-icon-pulse rel=section><i class="fa fa-thumbs-up hvr-icon"></i>标签</a></li><li class="menu-item menu-item-archives"><a href=/archives/ class=hvr-icon-pulse rel=section><i class="fa fa-archive hvr-icon"></i>归档
+<span class=badge>139</span></a></li><li class="menu-item menu-item-search"><a role=button class="popup-trigger hvr-icon-pulse"><i class="fa fa-search fa-fw hvr-icon"></i>搜索</a></li></ul></nav><div class=search-pop-overlay><div class="popup search-popup"><div class=search-header><span class=search-icon><i class="fa fa-search"></i></span><div class=search-input-container><input autocomplete=off autocapitalize=off maxlength=80 placeholder=搜索... spellcheck=false type=search class=search-input></div><span class=popup-btn-close role=button><i class="fa fa-times-circle"></i></span></div><div class="search-result-container no-result"><div class=search-result-icon><i class="fa fa-spinner fa-pulse fa-5x"></i></div></div></div></div></div><div class="toggle sidebar-toggle" role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div><aside class=sidebar><div class="sidebar-inner sidebar-overview-active"><ul class=sidebar-nav><li class=sidebar-nav-toc>文章目录</li><li class=sidebar-nav-overview>站点概览</li></ul><div class=sidebar-panel-container><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><nav id=TableOfContents></nav></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image alt=松果小站 src=/imgs/img-lazy-loading.gif data-src=/imgs/hugo_next_avatar.png><p class=site-author-name itemprop=name>松果小站</p><div class=site-description itemprop=description>记录轨迹。</div></div><div class="site-state-wrap site-overview-item animated"><nav class=site-state><div class="site-state-item site-state-posts"><a href=/archives/><span class=site-state-item-count>139</span>
+<span class=site-state-item-name>日志</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/><span class=site-state-item-count>33</span>
+<span class=site-state-item-name>分类</span></a></div><div class="site-state-item site-state-tags"><a href=/tags/><span class=site-state-item-count>110</span>
+<span class=site-state-item-name>标签</span></a></div></nav></div><div class="links-of-social site-overview-item animated"><span class=links-of-social-item><a href=https://github.com/jooejooe title="Github → https://github.com/jooejooe" rel=noopener target=_blank>Github</a></span></div><div class="links-of-blogroll site-overview-item animated"><div class=links-of-blogroll-title><i class="fa fa-globe fa-fw"></i>
+友情链接</div><ul class=links-of-blogroll-list><li class=links-of-blogroll-item><a href=https://gitee.com/hugo-next/hugo-theme-next title=https://gitee.com/hugo-next/hugo-theme-next target=_blank>Hugo-NexT</a></li><li class=links-of-blogroll-item><a href=https://lisenhui.cn title=https://lisenhui.cn target=_blank>凡梦星尘空间站1</a></li></ul></div></div></div></div></aside><div class=sidebar-dimmer></div></header><div class=tool-buttons><div id=goto-gtranslate class=button title=多语言翻译><i class="fas fa-globe"></i></div><div id=toggle-theme class=button title=深浅模式切换><i class="fas fa-adjust"></i></div><div class=back-to-top role=button title=返回顶部><i class="fa fa-arrow-up"></i>
+<span>0%</span></div></div><div class=reading-progress-bar></div><a role=button class="book-mark-link book-mark-link-fixed"></a><a href=https://github.com/jooejooe rel="noopener external nofollow noreferrer" target=_blank title="Follow me on GitHub" class="exturl github-corner"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><script type=text/javascript src=//sidecar.gitter.im/dist/sidecar.v1.js async></script><script type=text/javascript>((window.gitter={}).chat={}).options={room:"hugo-next/community"}</script><noscript><div class=noscript-warning>Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner post posts-expand"><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs/hugo_next_avatar.png"><meta itemprop=name content="松果小站"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="松果小站"><meta itemprop=description content="记录轨迹。"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Windows下使用jacob进行文档操作"><meta itemprop=description content="使用jacob进行office文件操作"></span><header class=post-header><h1 class=post-title itemprop="name headline">Windows下使用jacob进行文档操作
+<a href=https://github.com/jooejooe/jooejooe.github.io/tree/master/post/post/%e5%bc%80%e5%8f%91%e6%8a%80%e6%9c%af/Windows%e4%b8%8b%e4%bd%bf%e7%94%a8jacob%e8%bf%9b%e8%a1%8c%e6%96%87%e6%a1%a3%e6%93%8d%e4%bd%9c.md rel="noopener external nofollow noreferrer" target=_blank class="exturl post-edit-link" title=编辑><i class="fa fa-pen-nib"></i></a></h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="far fa-calendar"></i>
+</span><span class=post-meta-item-text title=发表于>发表于：
+</span><time title="创建时间：2021-08-20 10:30:00 +0000 UTC" itemprop="dateCreated datePublished" datetime="2021-08-20 10:30:00 +0000 UTC">2021-08-20
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="far fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分类于>分类于：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C itemprop=url rel=index><span itemprop=name>开发经验</span></a></span></span></div><div class=post-meta-items><span class=post-meta-item title=字数><span class=post-meta-item-icon><i class="far fa-file-word"></i>
+</span><span class=post-meta-item-text>字数：</span>
+<span>2505</span>
+</span><span class=post-meta-item title=阅读><span class=post-meta-item-icon><i class="far fa-clock"></i>
+</span><span class=post-meta-item-text>阅读：&ap;</span>
+<span>5分钟</span>
+</span><span class=post-meta-item title=浏览><span class=post-meta-item-icon><i class="far fa-eye"></i>
+</span><span class=post-meta-item-text>浏览：
+</span><span id=busuanzi_value_page_pv data-path=/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/><i class="fa fa-sync fa-spin"></i></span></span></div></div></header><div class=post-body itemprop=articleBody><p>使用jacob进行office文件操作</p><p>1.下载jacob相关jar和dll</p><p><a href=https://github.com/freemansoft/jacob-project/releases title=https://github.com/freemansoft/jacob-project/releases rel="noopener external nofollow noreferrer" target=_blank class=exturl>https://github.com/freemansoft/jacob-project/releases
+<i class="fa fa-external-link-alt"></i></a></p><p>2.将dll放入对应文件夹</p><p>64位windows环境，将dll放到C:\Windows\System32<em>下面</em></p><p>32位windows环境，将dll <em>放到</em>C:\Windows\SysWOW64 下面</p><p>3.pom文件引用相关jar</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#f92672>&lt;dependency&gt;</span>
+</span></span><span style=display:flex><span>	<span style=color:#f92672>&lt;groupId&gt;</span>com.jacob<span style=color:#f92672>&lt;/groupId&gt;</span>
+</span></span><span style=display:flex><span>	<span style=color:#f92672>&lt;artifactId&gt;</span>jacob<span style=color:#f92672>&lt;/artifactId&gt;</span>
+</span></span><span style=display:flex><span>	<span style=color:#f92672>&lt;version&gt;</span>1.20<span style=color:#f92672>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>4.文档操作工具类</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-java data-lang=java><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.File;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.net.URI;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.net.URL;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.net.URLConnection;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.util.ArrayList;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.util.List;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> cn.hutool.core.io.FileUtil;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> cn.hutool.core.util.StrUtil;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.jacob.activeX.ActiveXComponent;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.jacob.com.ComThread;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.jacob.com.Dispatch;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.jacob.com.Variant;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> lombok.extern.slf4j.Slf4j;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> org.apache.commons.io.FilenameUtils;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Slf4j</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>JacobOfficeUtil</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> wdFormatPDF <span style=color:#f92672>=</span> 17;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> xlTypePDF <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> ppSaveAsPDF <span style=color:#f92672>=</span> 32;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// doc格式</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DOC_FMT <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   * docx格式
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   */</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DOCX_FMT <span style=color:#f92672>=</span> 12;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>    File<span style=color:#f92672>[]</span> files <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> File(<span style=color:#e6db74>&#34;E:\\试验项目\\jacob&#34;</span>).<span style=color:#a6e22e>listFiles</span>();
+</span></span><span style=display:flex><span>    Long start <span style=color:#f92672>=</span> System.<span style=color:#a6e22e>currentTimeMillis</span>();
+</span></span><span style=display:flex><span>    List list <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (File file :files ) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (file.<span style=color:#a6e22e>isFile</span>()){
+</span></span><span style=display:flex><span>          String fileMainName<span style=color:#f92672>=</span> FileUtil.<span style=color:#a6e22e>mainName</span>(file);
+</span></span><span style=display:flex><span>          log.<span style=color:#a6e22e>info</span>(<span style=color:#e6db74>&#34;处理文件名为{}的文件&#34;</span>,file.<span style=color:#a6e22e>getName</span>());
+</span></span><span style=display:flex><span>          String filePath <span style=color:#f92672>=</span> file.<span style=color:#a6e22e>getAbsolutePath</span>();
+</span></span><span style=display:flex><span>          list.<span style=color:#a6e22e>add</span>(filePath);
+</span></span><span style=display:flex><span><span style=color:#75715e>//          JacobOfficeUtil.word2PDF(</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//              filePath, file.getParent()+File.separator+&#34;pdf&#34;+File.separator+fileMainName+&#34;.pdf&#34;);</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    log.<span style=color:#a6e22e>info</span>(<span style=color:#e6db74>&#34;转换共花费{}秒&#34;</span>,(System.<span style=color:#a6e22e>currentTimeMillis</span>()<span style=color:#f92672>-</span>start)<span style=color:#f92672>/</span>1000);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//    //		doc转为docx</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//		try {</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//			JacobOfficeUtil.convertDocFmt(&#34;D:/cod/1.doc&#34;, &#34;D:/cod/4.docx&#34;, DOCX_FMT);</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//		} catch (Exception e) {</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//			// TODO Auto-generated catch block</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//			e.printStackTrace();</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//		}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//		合并docx</span>
+</span></span><span style=display:flex><span>    start <span style=color:#f92672>=</span> System.<span style=color:#a6e22e>currentTimeMillis</span>();
+</span></span><span style=display:flex><span>    uniteDoc(list, <span style=color:#e6db74>&#34;E:\\试验项目\\jacob\\合并\\合并.docx&#34;</span>);
+</span></span><span style=display:flex><span>    log.<span style=color:#a6e22e>info</span>(<span style=color:#e6db74>&#34;共计合并{}个文档，耗时{}秒&#34;</span>,list.<span style=color:#a6e22e>size</span>(),(System.<span style=color:#a6e22e>currentTimeMillis</span>()<span style=color:#f92672>-</span>start)<span style=color:#f92672>/</span>1000);
+</span></span><span style=display:flex><span>    start <span style=color:#f92672>=</span> System.<span style=color:#a6e22e>currentTimeMillis</span>();
+</span></span><span style=display:flex><span>    JacobOfficeUtil.<span style=color:#a6e22e>word2PDF</span>(<span style=color:#e6db74>&#34;E:\\试验项目\\jacob\\合并\\合并.docx&#34;</span>, <span style=color:#e6db74>&#34;E:\\试验项目\\jacob\\合并\\合并.pdf&#34;</span>);
+</span></span><span style=display:flex><span>    log.<span style=color:#a6e22e>info</span>(<span style=color:#e6db74>&#34;转换文档共计耗时{}秒&#34;</span>,list.<span style=color:#a6e22e>size</span>(),(System.<span style=color:#a6e22e>currentTimeMillis</span>()<span style=color:#f92672>-</span>start)<span style=color:#f92672>/</span>1000);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//docx转为htm</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//		ChageFormat(&#34;d:\\cod\\&#34;,&#34;1.docx&#34;);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>convert2PDF</span>(String inputFile, String pdfFile) {
+</span></span><span style=display:flex><span>    String suffix <span style=color:#f92672>=</span> getFileSufix(inputFile);
+</span></span><span style=display:flex><span>    File file <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> File(inputFile);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>file.<span style=color:#a6e22e>exists</span>()) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;pdf&#34;</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;doc&#34;</span>) <span style=color:#f92672>||</span> suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;docx&#34;</span>) <span style=color:#f92672>||</span> suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;txt&#34;</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> word2PDF(inputFile, pdfFile);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;ppt&#34;</span>) <span style=color:#f92672>||</span> suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;pptx&#34;</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> ppt2PDF(inputFile, pdfFile);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;xls&#34;</span>) <span style=color:#f92672>||</span> suffix.<span style=color:#a6e22e>equals</span>(<span style=color:#e6db74>&#34;xlsx&#34;</span>)) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> excel2PDF(inputFile, pdfFile);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> String <span style=color:#a6e22e>getFileSufix</span>(String fileName) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> splitIndex <span style=color:#f92672>=</span> fileName.<span style=color:#a6e22e>lastIndexOf</span>(<span style=color:#e6db74>&#34;.&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> fileName.<span style=color:#a6e22e>substring</span>(splitIndex <span style=color:#f92672>+</span> 1);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// word转换为pdf</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>word2PDF</span>(String inputFile, String pdfFile) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 打开word应用程序</span>
+</span></span><span style=display:flex><span>      ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;Word.Application&#34;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 设置word不可见</span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>setProperty</span>(<span style=color:#e6db74>&#34;Visible&#34;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 获得word中所有打开的文档,返回Documents对象</span>
+</span></span><span style=display:flex><span>      Dispatch docs <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Documents&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 调用Documents对象中Open方法打开文档，并返回打开的文档对象Document</span>
+</span></span><span style=display:flex><span>      Dispatch doc <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>call</span>(docs, <span style=color:#e6db74>&#34;Open&#34;</span>, inputFile, <span style=color:#66d9ef>false</span>, <span style=color:#66d9ef>true</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 调用Document对象的SaveAs方法，将文档保存为pdf格式</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>//Dispatch.call(doc, &#34;SaveAs&#34;, pdfFile, wdFormatPDF //word保存为pdf格式宏，值为17 );</span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(doc, <span style=color:#e6db74>&#34;ExportAsFixedFormat&#34;</span>, pdfFile, wdFormatPDF);<span style=color:#75715e>// word保存为pdf格式宏，值为17</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 关闭文档</span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(doc, <span style=color:#e6db74>&#34;Close&#34;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 关闭word应用程序</span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>, 0);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// excel转换为pdf</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>excel2PDF</span>(String inputFile, String pdfFile) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;Excel.Application&#34;</span>);
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>setProperty</span>(<span style=color:#e6db74>&#34;Visible&#34;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>      Dispatch excels <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Workbooks&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      Dispatch excel <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>call</span>(excels, <span style=color:#e6db74>&#34;Open&#34;</span>, inputFile, <span style=color:#66d9ef>false</span>, <span style=color:#66d9ef>true</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(excel, <span style=color:#e6db74>&#34;ExportAsFixedFormat&#34;</span>, xlTypePDF, pdfFile);
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(excel, <span style=color:#e6db74>&#34;Close&#34;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// ppt转换为pdf</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>ppt2PDF</span>(String inputFile, String pdfFile) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;PowerPoint.Application&#34;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// app.setProperty(&#34;Visible&#34;, msofalse);</span>
+</span></span><span style=display:flex><span>      Dispatch ppts <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Presentations&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      Dispatch ppt <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>call</span>(ppts, <span style=color:#e6db74>&#34;Open&#34;</span>, inputFile, <span style=color:#66d9ef>true</span>, <span style=color:#75715e>// ReadOnly</span>
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>true</span>, <span style=color:#75715e>// Untitled指定文件是否有标题</span>
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>false</span><span style=color:#75715e>// WithWindow指定文件是否可见</span>
+</span></span><span style=display:flex><span>      ).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(ppt, <span style=color:#e6db74>&#34;SaveAs&#34;</span>, pdfFile, ppSaveAsPDF);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(ppt, <span style=color:#e6db74>&#34;Close&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//将doc转为docx</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> File <span style=color:#a6e22e>convertDocFmt</span>(String srcPath, String descPath, <span style=color:#66d9ef>int</span> fmt) <span style=color:#66d9ef>throws</span> Exception {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 实例化ComThread线程与ActiveXComponent</span>
+</span></span><span style=display:flex><span>    ComThread.<span style=color:#a6e22e>InitSTA</span>();
+</span></span><span style=display:flex><span>    ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;Word.Application&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 文档隐藏时进行应用操作</span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>setProperty</span>(<span style=color:#e6db74>&#34;Visible&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>));
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 实例化模板Document对象</span>
+</span></span><span style=display:flex><span>      Dispatch document <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Documents&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 打开Document进行另存为操作</span>
+</span></span><span style=display:flex><span>      Dispatch doc <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>invoke</span>(document, <span style=color:#e6db74>&#34;Open&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>,
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { srcPath, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>true</span>), <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>true</span>) }, <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>1<span style=color:#f92672>]</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>invoke</span>(doc, <span style=color:#e6db74>&#34;SaveAs&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>, <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { descPath, <span style=color:#66d9ef>new</span> Variant(fmt) }, <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>1<span style=color:#f92672>]</span>);
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>(doc, <span style=color:#e6db74>&#34;Close&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>));
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> File(descPath);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>throw</span> e;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>finally</span> {
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 释放线程与ActiveXComponent</span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>, <span style=color:#66d9ef>new</span> Variant<span style=color:#f92672>[]</span> {});
+</span></span><span style=display:flex><span>      ComThread.<span style=color:#a6e22e>Release</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// 合并docx</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>uniteDoc</span>(List fileList, String savepaths) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (fileList.<span style=color:#a6e22e>size</span>() <span style=color:#f92672>==</span> 0 <span style=color:#f92672>||</span> fileList <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 打开word</span>
+</span></span><span style=display:flex><span>    ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;Word.Application&#34;</span>);<span style=color:#75715e>// 启动word</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 设置word不可见 ---也就是设置ActiveXComponent对象的一个属性</span>
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>setProperty</span>(<span style=color:#e6db74>&#34;Visible&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>));
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 获得documents对象----Variant。toDispatch()</span>
+</span></span><span style=display:flex><span>      Object docs <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Documents&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 打开第一个文件</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 功能调用，对ActiveX对象docs的&#34;Open&#34;属性执行Dispatch.Method（Dispatch.Put\Dispatch.Get等）操作，执行后&#34;Open&#34;的值为参数4，参数5为错误参数码常定义为new</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// int[1]，（注：call、get和put方法都是通过该方法实现的）</span>
+</span></span><span style=display:flex><span>      Object doc <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>invoke</span>((Dispatch) docs, <span style=color:#75715e>// 调用目标</span>
+</span></span><span style=display:flex><span>          <span style=color:#e6db74>&#34;Open&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>,
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { (String) fileList.<span style=color:#a6e22e>get</span>(fileList.<span style=color:#a6e22e>size</span>()<span style=color:#f92672>-</span>1), <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>), <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>true</span>) }, <span style=color:#75715e>// 参数4</span>
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>3<span style=color:#f92672>]</span>).<span style=color:#a6e22e>toDispatch</span>();<span style=color:#75715e>// 参数5</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//			Dispatch selection1 = Dispatch.get(app, &#34;Selection&#34;).toDispatch();</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//			//插入分页符</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//			Dispatch.call(selection1,  &#34;InsertBreak&#34; ,  new Variant(7) );</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 追加文件</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 和上面一样，不过换种通俗的解释：参数1就是这个invoke方法的主题操作对象，参数2就是要对参数1执行的方法的名字，参数3就是参数2这个方法的具体操作;参数4就是一系列的参数;参数5为错误参数码常定义为new</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// int[1]</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0; i <span style=color:#f92672>&lt;</span> fileList.<span style=color:#a6e22e>size</span>()<span style=color:#f92672>-</span>1; i<span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        Dispatch.<span style=color:#a6e22e>invoke</span>(app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Selection&#34;</span>).<span style=color:#a6e22e>toDispatch</span>(), <span style=color:#75715e>// 参数1</span>
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;insertFile&#34;</span>, <span style=color:#75715e>// 参数2</span>
+</span></span><span style=display:flex><span>            Dispatch.<span style=color:#a6e22e>Method</span>, <span style=color:#75715e>// 参数3</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { (String) fileList.<span style=color:#a6e22e>get</span>(i), <span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>), <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>),
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>) }, <span style=color:#75715e>// 参数4</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>3<span style=color:#f92672>]</span>);<span style=color:#75715e>// 参数5</span>
+</span></span><span style=display:flex><span>        Dispatch selection <span style=color:#f92672>=</span> Dispatch.<span style=color:#a6e22e>get</span>(app, <span style=color:#e6db74>&#34;Selection&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//插入分页符</span>
+</span></span><span style=display:flex><span>        Dispatch.<span style=color:#a6e22e>call</span>(selection,  <span style=color:#e6db74>&#34;InsertBreak&#34;</span> ,  <span style=color:#66d9ef>new</span> Variant(7) );
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 保存新的word文件</span>
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>invoke</span>((Dispatch) doc, <span style=color:#e6db74>&#34;SaveAs&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>, <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { savepaths, <span style=color:#66d9ef>new</span> Variant(12) },
+</span></span><span style=display:flex><span>          <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>3<span style=color:#f92672>]</span>);
+</span></span><span style=display:flex><span>      Variant f <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>      Dispatch.<span style=color:#a6e22e>call</span>((Dispatch) doc, <span style=color:#e6db74>&#34;Close&#34;</span>, f);<span style=color:#75715e>// 该方法和get方法非常类似，他是把&#34;Close&#34;属性赋值给f</span>
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      e.<span style=color:#a6e22e>printStackTrace</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> RuntimeException(<span style=color:#e6db74>&#34;合并word文件出错.原因:&#34;</span> <span style=color:#f92672>+</span> e);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>finally</span> {
+</span></span><span style=display:flex><span>      app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>, <span style=color:#66d9ef>new</span> Variant<span style=color:#f92672>[]</span> {});
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//	转换为html</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>ChageFormat</span>(String FolderPath, String FileName) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    String FileFormat <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>;
+</span></span><span style=display:flex><span>    String<span style=color:#f92672>[]</span> filesplit<span style=color:#f92672>=</span>FileName.<span style=color:#a6e22e>split</span>(<span style=color:#e6db74>&#34;\\.&#34;</span>);
+</span></span><span style=display:flex><span>    FileFormat <span style=color:#f92672>=</span>filesplit<span style=color:#f92672>[</span>filesplit.<span style=color:#a6e22e>length</span><span style=color:#f92672>-</span>1<span style=color:#f92672>]</span>;<span style=color:#75715e>// FileName.substring(FileName.length() - 5, FileName.length());</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (FileFormat.<span style=color:#a6e22e>equalsIgnoreCase</span>(<span style=color:#e6db74>&#34;docx&#34;</span>)) {
+</span></span><span style=display:flex><span>      String DocFile <span style=color:#f92672>=</span> FolderPath <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;//&#34;</span> <span style=color:#f92672>+</span> FileName;
+</span></span><span style=display:flex><span>      <span style=color:#75715e>//System.out.println(&#34;word文件路径：&#34; + DocFile);</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// word文件的完整路径</span>
+</span></span><span style=display:flex><span>      String HtmlFile <span style=color:#f92672>=</span> DocFile.<span style=color:#a6e22e>substring</span>(0, (DocFile.<span style=color:#a6e22e>length</span>() <span style=color:#f92672>-</span> 5)) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.html&#34;</span>;
+</span></span><span style=display:flex><span>      <span style=color:#75715e>//System.out.println(&#34;htm文件路径：&#34; + HtmlFile);</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// html文件的完整路径</span>
+</span></span><span style=display:flex><span>      ActiveXComponent app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ActiveXComponent(<span style=color:#e6db74>&#34;Word.Application&#34;</span>);
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 启动word</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>        app.<span style=color:#a6e22e>setProperty</span>(<span style=color:#e6db74>&#34;Visible&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>));
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 设置word程序非可视化运行</span>
+</span></span><span style=display:flex><span>        Dispatch docs <span style=color:#f92672>=</span> app.<span style=color:#a6e22e>getProperty</span>(<span style=color:#e6db74>&#34;Documents&#34;</span>).<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>        Dispatch doc <span style=color:#f92672>=</span> Dispatch
+</span></span><span style=display:flex><span>            .<span style=color:#a6e22e>invoke</span>(docs, <span style=color:#e6db74>&#34;Open&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>,
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { DocFile, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>true</span>), <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>true</span>) }, <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>3<span style=color:#f92672>]</span>)
+</span></span><span style=display:flex><span>            .<span style=color:#a6e22e>toDispatch</span>();
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 打开word文件</span>
+</span></span><span style=display:flex><span>        Dispatch.<span style=color:#a6e22e>invoke</span>(doc, <span style=color:#e6db74>&#34;SaveAs&#34;</span>, Dispatch.<span style=color:#a6e22e>Method</span>, <span style=color:#66d9ef>new</span> Object<span style=color:#f92672>[]</span> { HtmlFile, <span style=color:#66d9ef>new</span> Variant(8) }, <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>1<span style=color:#f92672>]</span>);
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 作为htm格式保存文件</span>
+</span></span><span style=display:flex><span>        Dispatch.<span style=color:#a6e22e>call</span>(doc, <span style=color:#e6db74>&#34;Close&#34;</span>, <span style=color:#66d9ef>new</span> Variant(<span style=color:#66d9ef>false</span>));
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 关闭文件</span>
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>        e.<span style=color:#a6e22e>printStackTrace</span>();
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>finally</span> {
+</span></span><span style=display:flex><span>        app.<span style=color:#a6e22e>invoke</span>(<span style=color:#e6db74>&#34;Quit&#34;</span>, <span style=color:#66d9ef>new</span> Variant<span style=color:#f92672>[]</span> {});
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 退出word程序</span>
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// 转化完毕</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   * 判断文件是否存在
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   * @param httpPath
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   * @return
+</span></span></span><span style=display:flex><span><span style=color:#75715e>   */</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Boolean <span style=color:#a6e22e>existHttpPath</span>(String httpPath){
+</span></span><span style=display:flex><span>    URL httpurl <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      httpurl <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> URL(<span style=color:#66d9ef>new</span> URI(httpPath).<span style=color:#a6e22e>toASCIIString</span>());
+</span></span><span style=display:flex><span>      URLConnection urlConnection <span style=color:#f92672>=</span> httpurl.<span style=color:#a6e22e>openConnection</span>();
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// urlConnection.getInputStream();</span>
+</span></span><span style=display:flex><span>      Long TotalSize<span style=color:#f92672>=</span>Long.<span style=color:#a6e22e>parseLong</span>(urlConnection.<span style=color:#a6e22e>getHeaderField</span>(<span style=color:#e6db74>&#34;Content-Length&#34;</span>));
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> (TotalSize <span style=color:#f92672>&lt;=</span> 0){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div><footer class=post-footer><div class=post-tags><a href=/tags/officejacob>office,jacob</a></div><div class=addthis_inline_share_toolbox style=text-align:center></div><hr><div class=post-nav><div class="post-nav-next post-nav-item"><a href=/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/lodop%E6%89%93%E5%8D%B0pdf/ rel=next title=lodop打印pdf><i class="fa fa-chevron-left"></i> lodop打印pdf</a></div><div class="post-nav-prev post-nav-item"><a href=/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E6%8A%93%E5%8F%96%E5%BC%B9%E5%87%BA%E6%A1%86%E7%9A%84xpath/ rel=prev title=抓取弹出框的xpath>抓取弹出框的xpath
+<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div></div></main><footer class=footer><div class=footer-inner><div id=gtranslate class=google-translate><i class="fa fa-language"></i><div id=google_translate_element></div></div><div class=copyright>&copy;
+<span itemprop=copyrightYear>2020 - 2024
+</span><span class=with-love><i class="fa fa-heart"></i>
+</span><span class=author itemprop=copyrightHolder>松果小站</span></div><div class=powered-by>由 <a href=https://gohugo.io title=0.121.2 target=_blank>Hugo</a> & <a href=https://github.com/hugo-next/hugo-theme-next title=4.5.3 target=_blank>Hugo NexT.Gemini</a> 强力驱动</div><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script></div></footer><script type=text/javascript src=https://cdn.staticfile.org/animejs/3.2.1/anime.min.js defer></script><script type=text/javascript src=https://cdn.staticfile.org/viewerjs/1.11.0/viewer.min.js defer></script><script class=next-config data-name=main type=application/json>{"bookmark":{"color":"#222","enable":true,"save":"manual"},"copybtn":true,"darkmode":false,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小时前","ds_hours":" 小时 ","ds_just":"刚刚","ds_min":" 分钟前","ds_mins":" 分钟","ds_month":" 个月前","ds_years":" 年 ","empty":"没有找到任何搜索结果：${query}","hits":"找到 ${hits} 个搜索结果","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","placeholder":"搜索..."},"lang":"zh-CN","lazyload":false,"localSearch":{"enable":true,"limit":1e3,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":false,"plugin":"waline"},"views":{"enable":true,"plugin":"busuanzi"}},"root":"/","scheme":"Gemini","sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"vendor":{"plugins":"qiniu","router":"https://cdn.staticfile.org"},"version":"4.5.3","waline":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o \n\n可用快捷键选取表情符号：😀😄😁🥳👻👽👀🚄\n(Window系统：Win+.，Mac系统：Control+Command+Space)","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"waline","file":"dist/waline.css","name":"@waline/client","version":"2.13.0"},"js":{"alias":"waline","file":"dist/waline.js","name":"@waline/client","version":"2.13.0"}}}</script><script type=text/javascript src=/js/main.min.0fb3547374c917d23a2e5f762b70f3698d20b46a01cc18c38f9c467aeffc99fc.js defer></script></body></html>

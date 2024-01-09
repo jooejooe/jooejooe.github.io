@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vue on 松果小站</title><link>/tags/vue/</link><description>Recent content in vue on 松果小站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 28 May 2020 11:30:00 +0000</lastBuildDate><atom:link href="/tags/vue/rss.xml" rel="self" type="application/rss+xml"/><item><title>动态表单之form-create</title><link>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%8A%A8%E6%80%81%E8%A1%A8%E5%8D%95/</link><pubDate>Thu, 28 May 2020 11:30:00 +0000</pubDate><guid>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%8A%A8%E6%80%81%E8%A1%A8%E5%8D%95/</guid><description>&lt;p>
+&lt;a href="http://www.form-create.com/" title="form-create" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ form-create
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a> 是一个可以通过 JSON 生成具有动态渲染、数据收集、验证和提交功能的表单生成器。并且支持生成任何 Vue 组件。结合内置17种常用表单组件和自定义组件，再复杂的表单都可以轻松搞定。&lt;/p></description></item></channel></rss>

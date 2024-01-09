@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>开源版tailscale，headscale搭建</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%BC%80%E6%BA%90%E7%89%88tailscaleheadscale%E6%90%AD%E5%BB%BA/</url><categories><category>开发经验</category></categories><tags><tag>headscale</tag></tags><content type="html"> Headscale 部署
+Headscale 部署在 Linux 主机上，随便找台有独立ip的vps就可以了，但是要注意，如果需要穿透的内网无法打洞成功那么流量就会由服务器中转，这意味着穿透后的速度会直接的受限于节点跟服务器之间的网络情况，所以尽量选择离你近的服务器，即使打洞失败了，至少网络还是稳定的，通畅的。
+项目主页：https://github.com/juanfont/headscale/
+# 下载服务端 wget --output-document=/usr/local/bin/headscale \ https://github.com/juanfont/headscale/releases/download/v0.22.3/headscale_0.22.3_linux_amd64 # 设置执行权限 chmod +x /usr/local/bin/headscale 准备
+#创建配置目录： mkdir -p /etc/headscale #创建目录用来存储数据与证书： mkdir -p /var/lib/headscale #创建空的 SQLite 数据库文件： touch /var/lib/headscale/db.sqlite #　从example 创建 Headscale 配置文件： wget https://github.com/juanfont/headscale/raw/main/config-example.yaml -O /etc/headscale/config.yaml server_url 设置为 http://:8080，将 `` 替换为公网 IP 或者域名。 可自定义私有网段，也可同时开启 IPv4 和 IPv6： ip_prefixes: # - fd7a:115c:a1e0::/48 - 10.1.0.0/16 随机端口要打开，否则同一个内网中多个终端会有问题 randomize_client_port: true 创建 SystemD service 配置文件：
+# /etc/systemd/system/headscale.service [Unit] Description=headscale controller After=syslog.target After=network.target [Service] …</content></entry><entry><title>Windows 解除文件占用</title><url>/post/office/windows-%E8%A7%A3%E9%99%A4%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 使用 Process Explorer 工具
+Process Explorer - Windows Sysinternals | Microsoft Docs
+有时候，IObit Unlocker 也不好使，可以使用 Process Explorer 找。
+在 Find 中，输出被占用文件/文件夹的路径，就可以找出是哪个进程占用了。</content></entry><entry><title>没有H1-6标题头和评论的文章</title><url>/post/no-header-title.html</url><categories><category>示例</category></categories><tags><tag>toc</tag><tag>标题</tag></tags><content type="html"> 刘慈欣2018克拉克奖获奖感言（部分内容节选）。
+用于测试在没有H1-6标题头时，文章的目录导航是否会直接关闭，并关闭评论功能。
+先生们、女士们，晚上好，
+很荣幸获得Clarke Award for Imagination in Service to Society Award。
+这个奖项是对想象力的奖励，而想象力是人类所拥有的一种似乎只应属于神的能力，它存在的意义也远超出我们的想象。有历史学家说过，人类之所以能够超越地球上的其它物种建立文明，主要是因为他们能够在自己的大脑中创造出现实中不存在的东西。在未来，当人工智能拥有超过人类的智力时，想象力也许是我们对于它们所拥有的惟一优势。
+科幻小说是基于想象力的文学，而最早给我留下深刻印象的是Arthur . Clarke的作品。除了Jules Verne和George Wells外，Clarke的作品是最早进入中国的西方现代科幻小说。在上世纪八十年代初，中国出版了他的《2001:A Space Odyssey》和《Rendezvous With Rama》。当时文革刚刚结束，旧的生活和信仰已经崩塌，新的还没有建立起来，我和其他年轻人一样，心中一片迷茫。这两本书第一次激活了我想象力，思想豁然开阔许多，有小溪流进大海的感觉。读完《2001:A Space Odyssey》的那天深夜，我走出家门仰望星空，那时的中国的天空还没有太多的污染，能够看到银河，在我的眼中，星空与过去完全不一样了，我第一次对宇宙的宏大与神秘产生了敬畏感，这是一种宗教般的感觉。而后来读到的《Rendezvous With Rama》，也让我惊叹如何可以用想象力构造一个栩栩如生的想象世界。正是Clarke带给我的这些感受，让我后来成为一名科幻作家。
+现在，三十多年过去了，我渐渐发现，我们这一代在上世纪六十年代出生于中国的人，很可能是人类历史上最幸运的人，因为之前没有任何一代人，像我们这样目睹周围的世界发生了如此巨大的变化，我们现在生活的世界，与我们童年的世界已经完全是两个不同的世界，而这种变化还在加速发生着。中国是一个充满着未来感的国度，中国的未来可能充满着挑战和危机，但从来没有像现在这样具有吸引力，这就给科幻小说提供了肥沃的土壤，使其在中国受到了空前的关注，作为一个在六十年代出生在中国的科幻小说家，则是幸运中的幸运。
+我期待有那么一天，像那些曾经描写过信息 …</content></entry><entry><title>SJIP-02无线投屏器使用</title><url>/post/office/%E6%97%A0%E7%BA%BF%E6%8A%95%E5%B1%8Fsojo-02%E4%BD%BF%E7%94%A8/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 将SJIP-02的HDMI插入显示器的HDMI接口，并将USB口插入显示器的USB口，以便给SJIP-02供电。
+用电视遥控器选择相对应的同屏器HDMI插入口的输入信号源 （选择刚才插入的HDMI端口做信号源输入即可）。
+屏幕会显示SJIP-02的无线网络信息
+打开电脑Wi-Fi搜索并选择EZCast2-xxxxxxxx，输入电视机 上方的 8位Password数字密码即可连接。
+点击
+下载
+EZcast软件， Windows EZCast 免安装版
+右键解压下载软件，双击Ezcast.exe
+运行EZCast app并找到EZCast设备，点击该设备名称左方 的齿轮图示进入设置，选择互联网后连接至家中Wi-Fi。
+在EZCast app中点击镜像/扩展屏幕即可开始投屏。</content></entry><entry><title>uni-app 调用安卓原生方法代码</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/uni-app-%E8%B0%83%E7%94%A8%E5%AE%89%E5%8D%93%E5%8E%9F%E7%94%9F%E6%96%B9%E6%B3%95%E4%BB%A3%E7%A0%81/</url><categories><category>开发经验</category></categories><tags><tag>uniapp</tag></tags><content type="html"> 1:直接贴代码拉，很简单，在安卓离线打包内，新建一个java文件，如下
+package com.example.myapplication; // com.example.myapplicatio 为安卓包名，要改为自己的包名 public class AddCount { public int add(int a, int b) { return a + b; } } 2: uni-app 前端代码
+var AddCount = plus.android.importClass(&amp;#34;com.example.myapplication.AddCount&amp;#34;) var addCount = new AddCount(); // addCount.add 即为上面的原生方法拉 this.w4 = addCount.add(1,2); 直接打包成apk，验证完美调用了。</content></entry><entry><title>Mermaid支持流程图</title><url>/post/mermaid-charts.html</url><categories><category>示例</category></categories><tags><tag>流程图</tag><tag>时序图</tag></tags><content type="html"><![CDATA[  本主题已支持 Mermaid 实现以纯文本的方式绘制流程图、序列图、甘特图、状态图、关系图行等等，随着 Mermaid 也在逐步发展，后续还会有各种各样的图被引入进来，更多的类型及使用方式可关注其官方网站：https://mermaid-js.github.io/。
+使用说明通过 hugo new 命令创建一篇新的文章 在文章头部配置 mermaid: true 使用短代码书写各种类型的图，自带2个参数： align（对齐） 和 bc（背景色），可参考如下使用示例 流程图{{&lt; mermaid align=&#34;left&#34; &gt;}} graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; {{&lt; /mermaid &gt;}} graph TD;A-->B;A-->C;B-->D;C-->D;时序图{{&lt; mermaid bc=&#34;#eee&#34; &gt;}} sequenceDiagram participant Alice participant Bob Alice-&gt;&gt;John: Hello John, how are you? loop Healthcheck John-&gt;&gt;John: Fight against hypochondria end Note right of John: Rational thoughts &lt;br/&gt;prevail! John--&gt;&gt;Alice: Great! John-&gt;&gt;Bob: How about you? Bob--&gt;&gt;John: Jolly good! {{&lt; /mermaid &gt;}} sequenceDiagramparticipant Aliceparticipant BobAlice->>John: Hello John, how are you?loop HealthcheckJohn->>John: Fight against hypochondriaendNote right of John: Rational thoughts prevail!John-->>Alice: Great!John->>Bob: How about you?Bob-->>John: Jolly good!类图{{&lt; mermaid &gt;}} classDiagram Class01 &lt;|-- AveryLongClass : Cool Class03 *-- Class04 Class05 o-- Class06 Class07 .. Class08 Class09 --&gt; C2 : Where am i? Class09 --* C3 Class09 --|&gt; Class07 Class07 : equals() Class07 : Object[] elementData Class01 : size() Class01 : int chimp Class01 : int gorilla Class08 &lt;--&gt; C2: Cool label {{&lt; /mermaid &gt;}} classDiagramClass01 <|-- AveryLongClass : CoolClass03 *-- Class04Class05 o-- Class06Class07 .. Class08Class09 --> C2 : Where am i?Class09 --* C3Class09 --|> Class07Class07 : equals()Class07 : Object[] elementDataClass01 : size()Class01 : int chimpClass01 : int gorillaClass08 <--> C2: Cool label甘特图{{&lt; mermaid &gt;}} gantt dateFormat YYYY-MM-DD title Adding GANTT diagram to mermaid excludes weekdays 2014-01-10 section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d {{&lt; /mermaid &gt;}} ganttdateFormat YYYY-MM-DDtitle Adding GANTT diagram to mermaidexcludes weekdays 2014-01-10section A sectionCompleted task :done, des1, 2014-01-06,2014-01-08Active task :active, des2, 2014-01-09, 3dFuture task : des3, after des2, 5dFuture task2 : des4, after des3, 5d实体关系图{{&lt; mermaid &gt;}} erDiagram CUSTOMER ||--o{ ORDER : places ORDER ||--|{ LINE-ITEM : contains CUSTOMER }|..|{ DELIVERY-ADDRESS : uses {{&lt; /mermaid &gt;}} erDiagramCUSTOMER ||--o{ ORDER : placesORDER ||--|{ LINE-ITEM : containsCUSTOMER }|..|{ DELIVERY-ADDRESS : uses用户旅程{{&lt; mermaid &gt;}} journey title My working day section Go to work Make tea: 5: Me Go upstairs: 3: Me Do work: 1: Me, Cat section Go home Go downstairs: 5: Me Sit down: 5: Me {{&lt; /mermaid &gt;}} journeytitle My working daysection Go to workMake tea: 5: MeGo upstairs: 3: MeDo work: 1: Me, Catsection Go homeGo downstairs: 5: MeSit down: 5: Me  ]]></content></entry><entry><title>数学公式渲染</title><url>/post/math-formula.html</url><categories><category>示例</category></categories><tags><tag>数学公式</tag><tag>mathjax</tag><tag>katex</tag></tags><content type="html"><![CDATA[  本主题支持 mathjax 和 katex 两种不的方案支持数学公式的渲染，可根据自已的需求进行选择。
+接下的示例中，将使用 MathJax方案来展示渲染效果。
+使用 hugo new 命令创建一篇新的文章 可以全局启用数据公式渲染，请在项目配置参数 math: katex 或 math: mathjax 或是将该参数配置到需要显示数学公式的页面头部（减少不必要的加载消耗） 注意： 使用支持的TeX功能的联机参考资料。
+例子重复的分数$$ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } } $$
+总和记号$$ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) $$
+几何级数之和我把接下来的两个例子分成了几行，这样它在手机上表现得更好。这就是为什么它们包含 \displaystyle。
+$$ \displaystyle\sum_{i=1}^{k+1}i $$
+$$ \displaystyle= \left(\sum_{i=1}^{k}i\right) +(k+1) $$
+$$ \displaystyle= \frac{k(k+1)}{2}+k+1 $$
+$$ \displaystyle= \frac{k(k+1)+2(k+1)}{2} $$
+$$ \displaystyle= \frac{(k+1)(k+2)}{2} $$
+$$ \displaystyle= \frac{(k+1)((k+1)+1)}{2} $$
+乘记号$$ \displaystyle 1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \displaystyle \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \displaystyle\text{ for }\lvert q\rvert &lt; 1. $$
+随文数式这是一些线性数学: $$ k_{n+1} = n^2 + k_n^2 - k_{n-1} $$ ， 然后是更多的文本。
+希腊字母$$ \Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega \alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi \ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi $$
+箭头$$ \gets\ \to\ \leftarrow\ \rightarrow\ \uparrow\ \Uparrow\ \downarrow\ \Downarrow\ \updownarrow\ \Updownarrow $$
+$$ \Leftarrow\ \Rightarrow\ \leftrightarrow\ \Leftrightarrow\ \mapsto\ \hookleftarrow \leftharpoonup\ \leftharpoondown\ \rightleftharpoons\ \longleftarrow\ \Longleftarrow\ \longrightarrow $$
+$$ \Longrightarrow\ \longleftrightarrow\ \Longleftrightarrow\ \longmapsto\ \hookrightarrow\ \rightharpoonup $$
+$$ \rightharpoondown\ \leadsto\ \nearrow\ \searrow\ \swarrow\ \nwarrow $$
+符号$$ \surd\ \barwedge\ \veebar\ \odot\ \oplus\ \otimes\ \oslash\ \circledcirc\ \boxdot\ \bigtriangleup $$
+$$ \bigtriangledown\ \dagger\ \diamond\ \star\ \triangleleft\ \triangleright\ \angle\ \infty\ \prime\ \triangle $$
+微积分学$$ \int u \frac{dv}{dx},dx=uv-\int \frac{du}{dx}v,dx $$
+$$ f(x) = \int_{-\infty}^\infty \hat f(\xi),e^{2 \pi i \xi x} $$
+$$ \oint \vec{F} \cdot d\vec{s}=0 $$
+洛伦茨方程$$ \begin{aligned} \dot{x} &amp; = \sigma(y-x) \\ \dot{y} &amp; = \rho x - y - xz \\ \dot{z} &amp; = -\beta z + xy \end{aligned} $$
+交叉乘积这在KaTeX中是可行的，但在这种环境中馏分的分离不是很好。
+$$ \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ \frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\ \frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \end{vmatrix} $$
+这里有一个解决方案:使用“mfrac”类(在MathJax情况下没有区别)的额外类使分数更小:
+$$ \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ \frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\ \frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \end{vmatrix} $$
+强调$$ \hat{x}\ \vec{x}\ \ddot{x} $$
+有弹性的括号$$ \left(\frac{x^2}{y^3}\right) $$
+评估范围$$ \left.\frac{x^3}{3}\right|_0^1 $$
+诊断标准$$ f(n) = \begin{cases} \frac{n}{2}, &amp; \text{if } n\text{ is even} \\ 3n+1, &amp; \text{if } n\text{ is odd} \end{cases} $$
+麦克斯韦方程组$$ \begin{aligned} \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\ \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\ \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\ \nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned} $$
+统计学固定词组：
+$$ \frac{n!}{k!(n-k)!} = {^n}C_k {n \choose k} $$
+分数在分数$$ \frac{\frac{1}{x}+\frac{1}{y}}{y-z} $$
+ｎ次方根$$ \sqrt[n]{1+x+x^2+x^3+\ldots} $$
+矩阵$$ \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33} \end{pmatrix} \begin{bmatrix} 0 &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 \end{bmatrix} $$
+标点符号$$ f(x) = \sqrt{1+x} \quad (x \ge -1) f(x) \sim x^2 \quad (x\to\infty) $$
+现在用标点符号:
+$$ f(x) = \sqrt{1+x}, \quad x \ge -1 f(x) \sim x^2, \quad x\to\infty $$
+  ]]></content></entry><entry><title>支持用户自定义设计</title><url>/post/custom-files.html</url><categories><category>示例</category></categories><tags><tag>自定义</tag><tag>个性化</tag><tag>布局</tag></tags><content type="html"><![CDATA[  对于熟悉前端开发的用户来说，可以通过自定义文件配置，实现对站点的样式和布局进行个性化的调整。其中布局方面主要是支持左侧边栏的站点概览部分，以及站点底部2个位置，但样式的重置可以是整个站点的任意位置。
+打开配置参数首先要明确在配置文件的 params 区域中有配置如下参数：
+customFilePath: sidebar: custom_sidebar.html footer: custom_footer.html style: /css/custom_style.css 注意： sidebar 和 footer 的文件命名不可以与它们的参数名称相同，不然会影响系统默认的布局设计，切记！！！ &#x1f604;然后在站点的根目录下创建 layouts/partials 2个目录，用于存放自定布局设计文件，另外在站点根目录下创建 statics/css 2个目录，用于存放自定义 CSS 样式文件。一切就绪后，就可以参考如下的步骤，完成自己的设计想法。
+侧边栏设计在前面创建 partials 目录中新一个后缀名为 html 的文件，可以在里面书写你所想表达的设计或内容，比如引入一些第三方组件内容。示例如下：
+&lt;div class=&#34;mydefined animated&#34; itemprop=&#34;custom&#34;&gt; &lt;span&gt;支持自定义CSS和Sidebar布局啦💄💄💄&lt;/span&gt; &lt;/div&gt; 再把该文件的路径配置到相应的参数中，效果请查看左侧边栏底部的效果。
+底部设计在前面创建 partials 目录中新一个后缀名为 html 的文件，可以在里面书写你所想表达的设计或内容，比如引入一些第三方组件内容。示例如下：
+&lt;div class=&#34;custom-footer&#34;&gt; Website source code &lt;a href=&#34;https://github.com/hugo-next/hugo-theme-next/tree/develop/exampleSite/layouts/partials/custom-footer.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; &lt;/div&gt; 再把该文件的路径配置到相应的参数中，效果请查看站点底部的效果。
+自定义样式在前面创建 css 目录中新一个后缀名为 css 的文件，然后可以在里面把站点的样式进行重定义，或是增加一些自己定义的样式设计，在写文章时进行引用，示例如下：
+.custom-head5 { font-size: 1.2em; color: #ed6c24; font-weight: bold; } 再把该文件的路径配置到相应的参数中，效果参考如下：
+我是自定义的标题样式效果!!!
+  ]]></content></entry><entry><title>破解Excel VBA 密码</title><url>/post/office/%E7%A0%B4%E8%A7%A3excel-vba-%E5%AF%86%E7%A0%81/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 变更档案名称副档名以破解Excel VBA 密码
+找到目标.xlsm 档案并变更档案名称副档名.xlsm 为.zip。 通过任何一个存档程式，打开这个档，你可以使用WinRAR 或7-Zip。如果这样做，你应该能够看到档案目录的以下结构。 转到XL 目录选项并选取标记为「VBAProject.bin」档案。 通过十六进制Hex 编辑器打开VBAProject.bin 档案，并在十六进制编辑器中查询档案中的“DPB=”文字。
+找到此文字后，只需删除并替换为“DPX=”。现在保存并关闭十六进位编辑器上的档案。覆盖旧的「VBAProject.bin」档案编辑新的十六进位「VBAProject.bin」档案。
+档案名称副档名还原为.xlsm，然后在Excel 中打开。从弹出的警告视窗中，选择「是」并忽略其他选项。
+运行VBA 编辑器，如果弹出对话方块，选择「确定」。
+打开【工具】vba属性
+填入新密码即可打开，下次打开直接输入新密码即可</content></entry><entry><title>常用的IDEA插件</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%B8%B8%E7%94%A8%E7%9A%84idea%E6%8F%92%E4%BB%B6/</url><categories><category>开发经验</category></categories><tags><tag>IDE</tag></tags><content type="html"><![CDATA[   DEA是程序员用的最多的开发工具，很多程序员想把它打造成一站式开发工具，于是安装了各种各样的插件。通过插件在IDEA中完成各种操作，无需安装其他软件，确实很方便！今天给大家分享下我平时常用的IDEA插件，个个是精品！
+Key Promoter XKey Promoter X 是一款帮助你快速学习IDEA快捷键的插件，当你在IDEA中用鼠标点击某些功能时，它会自动提示你使用该功能的快捷键。它能让你更轻松地摆脱使用鼠标功能，从而只使用键盘来开发，这大概是刚开始使用IDEA的程序员最需要的插件了。
+当我们使用鼠标完成某些工作时，Key Promoter X会提示对应的快捷键，方便我们更快地掌握IDEA的快捷键。
+LombokLombok目前已经是开发Java应用的标配了，不仅SpringBoot默认支持它，连IDEA也内置了Lombok插件，无需安装即可使用。Lombok是一款Java代码功能增强库，通过Lombok的注解，你可以不用再写getter、setter、equals等方法，Lombok将在编译时为你自动生成。
+举个例子，当我们给一个类添加@Getter和@Setter注解后；
+/** * 修改订单费用信息参数 * Created by macro on 2018/10/29. */ @Getter @Setter public class OmsMoneyInfoParam { @ApiModelProperty(&amp;#34;订单ID&amp;#34;) private Long orderId; @ApiModelProperty(&amp;#34;运费金额&amp;#34;) private BigDecimal freightAmount; @ApiModelProperty(&amp;#34;管理员后台调整订单所使用的折扣金额&amp;#34;) private BigDecimal discountAmount; @ApiModelProperty(&amp;#34;订单状态：0-&amp;gt;待付款；1-&amp;gt;待发货；2-&amp;gt;已发货；3-&amp;gt;已完成；4-&amp;gt;已关闭；5-&amp;gt;无效订单&amp;#34;) private Integer status; } Lombok就会为我们自动生成所有属性的Getter和Setter方法，无需我们再手写，具体使用可以参考Lombok的使用。 …  ]]></content></entry><entry><title>自定义短语示例</title><url>/post/shortcodes.html</url><categories><category>示例</category></categories><tags><tag>短代码</tag><tag>语法</tag></tags><content type="html"><![CDATA[  虽然 Markdown 语法已经非常丰富能够满足我们写文章的绝大部分需求，但是为更好的对文章内容进行更友好的排版，为引设计一套自定义的短语，便于在使用时能够快速引用。
+块引用在引用一些经典名言名句时，可以采用此短语，语法参考如下：
+{{&lt; quote &gt;}} ### block quote 写下你想表达的话语！ {{&lt; /quote &gt;}} 实际效果：
+希望是无所谓有，无所谓无的，这正如地上的路。
+其实地上本没有路，走的人多了，也便成了路。
+鲁迅
+信息块支持 default，info，success，warning，danger 等五种不同效果的展示，语法参考如下：
+{{&lt; note [class] [no-icon] &gt;}} 书写表达的信息 支持 Markdown 语法 {{&lt; /note &gt;}} 实际效果：
+Default Header without iconWelcome to Hugo NexT!Default HeaderWelcome to Hugo NexT!Info HeaderWelcome to Hugo NexT!Success HeaderWelcome to Hugo NexT!Warning HeaderWelcome to Hugo NexT!Danger HeaderWelcome to Hugo NexT!  ]]></content></entry><entry><title>cmd常用命令</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url><categories><category>开发经验</category></categories><tags><tag>windows</tag></tags><content type="html"> 查看笔记本型号：dxdiag</content></entry><entry><title>关于 Hugo NexT 组织</title><url>/about.html</url><categories/><tags/><content type="html"> Hugo NexT 组织是由众多喜爱 NexT 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 Hugo 引擎中也能得到发扬光大，在此也欢迎你的加入！
+我们的愿景
+延续 NexT 经典的黑白调搭配，保持简单的易用性及强大的功能。
+使用反馈
+加入 GitHub Discussions
+或 Gitter
+在线讨论 &amp;#x1f37b; GitHub Issues
+提交错误报告 &amp;#x1f41b; GitHub Feature
+表新功能的想法 &amp;#x2728; 同时国内用户也可加入 QQ 群交流： 604710815</content></entry><entry><title>文章目录导航</title><url>/post/table-of-content.html</url><categories><category>示例</category></categories><tags><tag>目录</tag><tag>导航</tag><tag>博客</tag></tags><content type="html"> 巴顿将军说过：“衡量一个人是否成功，不是看他站到顶峰，而是从顶峰跌落之后的反弹力”，褚时健的人生便是如此，中年发家致富，名利双收，之后又跌落到谷底，等到74岁再创业，10年后带着褚橙归来，东山再起收获亿万财富，他的发展轨迹就是反弹的过程。
+早年的故事
+起始
+2014年的春天，在云南省华宁县和宜良县的交界处，一座名叫矣则的小山村里，一处已经有上百年历史的古旧四合院宅子被拆掉。村委会正带领村民们进行“美丽乡村”的建设，一年以后，旧有村居将再也看不到，代之而起的是钢筋混凝土的新式民居。就像10年、20年前中国大小城市的改造一样，这个群山围绕的小村子也开始陷入“工地模式”。
+童年浪花
+在江河边长大的孩子几乎都有一个当仁不让的特长：善水。褚时健也不例外，他不仅从小就在南盘江和花鱼塘里扑腾出了上佳的游泳技术，五六岁已经可以一个猛子扎出老远，而且从七八岁就可以在南盘江和河滩上的鱼塘里捉鱼了。
+少年故事
+褚时健在乡村自由自在生活的十多年，其实正是中国社会风雨飘摇的十多年。特别是1937年卢沟桥事变后，日本人发动全面侵华战争，短短两三年间，中国的大部分国土相继沦陷
+激情的青春十年
+当上了游击队员
+1948年夏天，褚时健回乡，在禄丰车站小学做了一名老师，同时也和褚时仁、褚时杰一起继续保持与共产党组织的联系，做一些传递情报的工作
+战火纷飞
+因为战斗力相较悬殊，所以游击队只能是靠打一枪换一个地方的办法，专找敌人薄弱的地方攻击，但更多时候，都是在防御和转移阵地。
+迎来解放
+1949年12月，国民党云南省主席卢汉在昆明宣布起义，云南正式拉开解放的序幕。1950年2月20日，陈赓、宋任穷、周保中率解放军第二野战军第四兵团进入昆明，24日，陈赓宣布云南全境解放。
+生活的断层
+跌入生活底层
+“反右”运动中被打倒的人在“右派”身份确定后，只有一条路可走：下放到农场。农场名副其实，就是干农活儿的地方，必须过和农民一样的生活。
+尾声
+岁月像一条河
+2015年，是褚时健和马静芬结婚60周年，被称为“钻石婚”的纪念年份。这简直是一份人生的奖赏,在中国离婚率愈益升高的当下，60年的婚姻，几乎就像一个前世之梦。一个甲子的相伴相随，褚时健和马静芬共同经历了国家和个人的各种风浪，共同面对过生死。他们两人已经不仅是夫妻，更是一对战友。尽管马静芬偶尔会对褚时健年轻时候的粗心抱怨上两句，但说到最后，她会说一句：“没有我就没 …</content></entry><entry><title>Hugo 内置的 Chroma 语法高亮</title><url>/post/syntax-highlighting.html</url><categories><category>示例</category></categories><tags><tag>语法</tag><tag>高亮</tag><tag>Chroma</tag></tags><content type="html"><![CDATA[  Hugo 通过 Chroma 提供非常快速的语法高亮显示，现 Hugo 中使用 Chroma 作为代码块高亮支持，它内置在 Go 语言当中，速度是真的非常、非常快，而且最为重要的是它也兼容之前我们使用的 Pygments 方式。
+以下通过 Hugo 内置短代码 highlight 和 Markdown 代码块方式分别验证不同语言的代码块渲染效果并能正确高亮显示，有关优化语法突出显示的更多信息，请参阅 Hugo 文档。
+编程语言GO199 200 201 202 203 204 205 206 207 208 func GetTitleFunc(style string) func(s string) string { switch strings.ToLower(style) { case &#34;go&#34;: return strings.Title case &#34;chicago&#34;: return transform.NewTitleConverter(transform.ChicagoStyle) default: return transform.NewTitleConverter(transform.APStyle) } } Javaimport javax.swing.JFrame; //Importing class JFrame import javax.swing.JLabel; //Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); //Creating frame frame.setTitle(&#34;Hi!&#34;); //Setting title frame frame.add(new JLabel(&#34;Hello, world!&#34;));//Adding text to frame frame.pack(); //Setting size to smallest frame.setLocationRelativeTo(null); //Centering frame frame.setVisible(true); //Showing frame } } Pythonprint &#34;Hello, world!&#34; Git 对比1*** /path/to/original &#39;&#39;timestamp&#39;&#39; 2--- /path/to/new &#39;&#39;timestamp&#39;&#39; 3*************** 4*** 1 **** 5! This is a line. 6--- 1 --- 7! This is a replacement line. 8It is important to spell 9-removed line 10+new line *** /path/to/original &#39;&#39;timestamp&#39;&#39; --- /path/to/new &#39;&#39;timestamp&#39;&#39; *************** *** 1 **** ! This is a line. --- 1 --- ! This is a replacement line. It is important to spell -removed line +new line 文件Make 文件CC=gcc CFLAGS=-I. hellomake: hellomake.o hellofunc.o $(CC) -o hellomake hellomake.o hellofunc.o -I. Markdown 文档**bold** *italics* [link](www.example.com) 数据内容JSON 数据{&#34;employees&#34;:[ {&#34;firstName&#34;:&#34;John&#34;, &#34;lastName&#34;:&#34;Doe&#34;}, ]} XML 内容&lt;employees&gt; &lt;employee&gt; &lt;firstName&gt;John&lt;/firstName&gt; &lt;lastName&gt;Doe&lt;/lastName&gt; &lt;/employee&gt; &lt;/employees&gt; SQL 查询SELECT column_name,column_name FROM Table WHERE column_name = &#34;condition&#34; 除以上列举的代码高亮显示外，还支持诸如：C 语言、C++、HTML、CSS、Shell脚本等各主流的代码语言高亮显示，可自行测试效果。
+  ]]></content></entry><entry><title>支持 Emoji 表情</title><url>/post/emoji-support.html</url><categories><category>示例</category></categories><tags><tag>表情</tag><tag>emoji</tag></tags><content type="html"><![CDATA[  Emoji 可以通过多种方式在 Hugo 项目中启用。
+emojify方法可以直接在模板中调用, 或者使用行内 Shortcodes.
+要全局使用 emoji, 需要在你的网站配置中设置 enableEmoji 为 true， 然后你就可以直接在文章中输入 emoji 的代码。
+它们以冒号开头和结尾，并且包含 emoji 的 代码：
+去露营啦! {:}tent: 很快就回来. 真开心! {:}joy: 呈现的输出效果如下:
+去露营啦! &#x26fa; 很快就回来。
+真开心! &#x1f602;
+以下符号清单是 emoji 代码的非常有用的参考。
+表情与情感笑脸表情图标 代码 图标 代码 &#x1f600; grinning &#x1f603; smiley &#x1f604; smile &#x1f601; grin &#x1f606; laughing satisfied &#x1f605; sweat_smile &#x1f923; rofl &#x1f602; joy &#x1f642; slightly_smiling_face &#x1f643; upside_down_face &#x1f609; wink &#x1f60a; blush &#x1f607; innocent 爱意表情图标 代码 图标 代码 &#x1f60d; heart_eyes &#x1f618; kissing_heart &#x1f617; kissing &#x263a;&#xfe0f; relaxed &#x1f61a; kissing_closed_eyes &#x1f619; kissing_smiling_eyes 吐舌头表情图标 代码 图标 代码 &#x1f60b; yum &#x1f61b; stuck_out_tongue &#x1f61c; stuck_out_tongue_winking_eye &#x1f61d; stuck_out_tongue_closed_eyes &#x1f911; money_mouth_face 国家和地区旗帜图标 代码 图标 代码 &#x1f1e6;&#x1f1e9; andorra &#x1f1e6;&#x1f1ea; united_arab_emirates &#x1f1e6;&#x1f1eb; afghanistan &#x1f1e6;&#x1f1ec; antigua_barbuda &#x1f1e6;&#x1f1ee; anguilla &#x1f1e6;&#x1f1f1; albania &#x1f1e6;&#x1f1f2; armenia &#x1f1e6;&#x1f1f4; angola &#x1f1e6;&#x1f1f6; antarctica &#x1f1e6;&#x1f1f7; argentina &#x1f1e6;&#x1f1f8; american_samoa &#x1f1e6;&#x1f1f9; austria &#x1f1e6;&#x1f1fa; australia &#x1f1e6;&#x1f1fc; aruba &#x1f1e6;&#x1f1fd; aland_islands &#x1f1e6;&#x1f1ff; azerbaijan &#x1f1e7;&#x1f1e6; bosnia_herzegovina &#x1f1e7;&#x1f1e7; barbados &#x1f1e7;&#x1f1e9; bangladesh &#x1f1e7;&#x1f1ea; belgium &#x1f1e7;&#x1f1eb; burkina_faso &#x1f1e7;&#x1f1ec; bulgaria &#x1f1e7;&#x1f1ed; bahrain &#x1f1e7;&#x1f1ee; burundi &#x1f1e7;&#x1f1ef; benin &#x1f1e7;&#x1f1f1; st_barthelemy &#x1f1e7;&#x1f1f2; bermuda &#x1f1e7;&#x1f1f3; brunei &#x1f1e7;&#x1f1f4; bolivia &#x1f1e7;&#x1f1f6; caribbean_netherlands &#x1f1e7;&#x1f1f7; brazil &#x1f1e7;&#x1f1f8; bahamas &#x1f1e7;&#x1f1f9; bhutan &#x1f1e7;&#x1f1fc; botswana &#x1f1e7;&#x1f1fe; belarus &#x1f1e7;&#x1f1ff; belize &#x1f1e8;&#x1f1e6; canada &#x1f1e8;&#x1f1e8; cocos_islands &#x1f1e8;&#x1f1e9; congo_kinshasa &#x1f1e8;&#x1f1eb; central_african_republic &#x1f1e8;&#x1f1ec; congo_brazzaville &#x1f1e8;&#x1f1ed; switzerland &#x1f1e8;&#x1f1ee; cote_divoire &#x1f1e8;&#x1f1f0; cook_islands &#x1f1e8;&#x1f1f1; chile &#x1f1e8;&#x1f1f2; cameroon &#x1f1e8;&#x1f1f3; cn &#x1f1e8;&#x1f1f4; colombia &#x1f1e8;&#x1f1f7; costa_rica &#x1f1e8;&#x1f1fa; cuba &#x1f1e8;&#x1f1fb; cape_verde &#x1f1e8;&#x1f1fc; curacao &#x1f1e8;&#x1f1fd; christmas_island &#x1f1e8;&#x1f1fe; cyprus &#x1f1e8;&#x1f1ff; czech_republic &#x1f1e9;&#x1f1ea; de &#x1f1e9;&#x1f1ef; djibouti &#x1f1e9;&#x1f1f0; denmark &#x1f1e9;&#x1f1f2; dominica &#x1f1e9;&#x1f1f4; dominican_republic &#x1f1e9;&#x1f1ff; algeria &#x1f1ea;&#x1f1e8; ecuador &#x1f1ea;&#x1f1ea; estonia &#x1f1ea;&#x1f1ec; egypt &#x1f1ea;&#x1f1ed; western_sahara &#x1f1ea;&#x1f1f7; eritrea &#x1f1ea;&#x1f1f8; es &#x1f1ea;&#x1f1f9; ethiopia &#x1f1ea;&#x1f1fa; eu european_union &#x1f1eb;&#x1f1ee; finland &#x1f1eb;&#x1f1ef; fiji &#x1f1eb;&#x1f1f0; falkland_islands &#x1f1eb;&#x1f1f2; micronesia &#x1f1eb;&#x1f1f4; faroe_islands &#x1f1eb;&#x1f1f7; fr &#x1f1ec;&#x1f1e6; gabon &#x1f1ec;&#x1f1e7; gb uk &#x1f1ec;&#x1f1e9; grenada &#x1f1ec;&#x1f1ea; georgia &#x1f1ec;&#x1f1eb; french_guiana &#x1f1ec;&#x1f1ec; guernsey &#x1f1ec;&#x1f1ed; ghana &#x1f1ec;&#x1f1ee; gibraltar &#x1f1ec;&#x1f1f1; greenland &#x1f1ec;&#x1f1f2; gambia &#x1f1ec;&#x1f1f3; guinea &#x1f1ec;&#x1f1f5; guadeloupe &#x1f1ec;&#x1f1f6; equatorial_guinea &#x1f1ec;&#x1f1f7; greece &#x1f1ec;&#x1f1f8; south_georgia_south_sandwich_islands &#x1f1ec;&#x1f1f9; guatemala &#x1f1ec;&#x1f1fa; guam &#x1f1ec;&#x1f1fc; guinea_bissau &#x1f1ec;&#x1f1fe; guyana &#x1f1ed;&#x1f1f0; hong_kong &#x1f1ed;&#x1f1f3; honduras &#x1f1ed;&#x1f1f7; croatia &#x1f1ed;&#x1f1f9; haiti &#x1f1ed;&#x1f1fa; hungary &#x1f1ee;&#x1f1e8; canary_islands &#x1f1ee;&#x1f1e9; indonesia &#x1f1ee;&#x1f1ea; ireland &#x1f1ee;&#x1f1f1; israel &#x1f1ee;&#x1f1f2; isle_of_man &#x1f1ee;&#x1f1f3; india &#x1f1ee;&#x1f1f4; british_indian_ocean_territory &#x1f1ee;&#x1f1f6; iraq &#x1f1ee;&#x1f1f7; iran &#x1f1ee;&#x1f1f8; iceland &#x1f1ee;&#x1f1f9; it &#x1f1ef;&#x1f1ea; jersey &#x1f1ef;&#x1f1f2; jamaica &#x1f1ef;&#x1f1f4; jordan &#x1f1ef;&#x1f1f5; jp &#x1f1f0;&#x1f1ea; kenya &#x1f1f0;&#x1f1ec; kyrgyzstan &#x1f1f0;&#x1f1ed; cambodia &#x1f1f0;&#x1f1ee; kiribati &#x1f1f0;&#x1f1f2; comoros &#x1f1f0;&#x1f1f3; st_kitts_nevis &#x1f1f0;&#x1f1f5; north_korea &#x1f1f0;&#x1f1f7; kr &#x1f1f0;&#x1f1fc; kuwait &#x1f1f0;&#x1f1fe; cayman_islands &#x1f1f0;&#x1f1ff; kazakhstan &#x1f1f1;&#x1f1e6; laos &#x1f1f1;&#x1f1e7; lebanon &#x1f1f1;&#x1f1e8; st_lucia &#x1f1f1;&#x1f1ee; liechtenstein &#x1f1f1;&#x1f1f0; sri_lanka &#x1f1f1;&#x1f1f7; liberia &#x1f1f1;&#x1f1f8; lesotho &#x1f1f1;&#x1f1f9; lithuania &#x1f1f1;&#x1f1fa; luxembourg &#x1f1f1;&#x1f1fb; latvia &#x1f1f1;&#x1f1fe; libya &#x1f1f2;&#x1f1e6; morocco &#x1f1f2;&#x1f1e8; monaco &#x1f1f2;&#x1f1e9; moldova &#x1f1f2;&#x1f1ea; montenegro &#x1f1f2;&#x1f1ec; madagascar &#x1f1f2;&#x1f1ed; marshall_islands &#x1f1f2;&#x1f1f0; macedonia &#x1f1f2;&#x1f1f1; mali &#x1f1f2;&#x1f1f2; myanmar &#x1f1f2;&#x1f1f3; mongolia &#x1f1f2;&#x1f1f4; macau &#x1f1f2;&#x1f1f5; northern_mariana_islands &#x1f1f2;&#x1f1f6; martinique &#x1f1f2;&#x1f1f7; mauritania &#x1f1f2;&#x1f1f8; montserrat &#x1f1f2;&#x1f1f9; malta &#x1f1f2;&#x1f1fa; mauritius &#x1f1f2;&#x1f1fb; maldives &#x1f1f2;&#x1f1fc; malawi &#x1f1f2;&#x1f1fd; mexico &#x1f1f2;&#x1f1fe; malaysia &#x1f1f2;&#x1f1ff; mozambique &#x1f1f3;&#x1f1e6; namibia &#x1f1f3;&#x1f1e8; new_caledonia &#x1f1f3;&#x1f1ea; niger &#x1f1f3;&#x1f1eb; norfolk_island &#x1f1f3;&#x1f1ec; nigeria &#x1f1f3;&#x1f1ee; nicaragua &#x1f1f3;&#x1f1f1; netherlands &#x1f1f3;&#x1f1f4; norway &#x1f1f3;&#x1f1f5; nepal &#x1f1f3;&#x1f1f7; nauru &#x1f1f3;&#x1f1fa; niue &#x1f1f3;&#x1f1ff; new_zealand &#x1f1f4;&#x1f1f2; oman &#x1f1f5;&#x1f1e6; panama &#x1f1f5;&#x1f1ea; peru &#x1f1f5;&#x1f1eb; french_polynesia &#x1f1f5;&#x1f1ec; papua_new_guinea &#x1f1f5;&#x1f1ed; philippines &#x1f1f5;&#x1f1f0; pakistan &#x1f1f5;&#x1f1f1; poland &#x1f1f5;&#x1f1f2; st_pierre_miquelon &#x1f1f5;&#x1f1f3; pitcairn_islands &#x1f1f5;&#x1f1f7; puerto_rico &#x1f1f5;&#x1f1f8; palestinian_territories &#x1f1f5;&#x1f1f9; portugal &#x1f1f5;&#x1f1fc; palau &#x1f1f5;&#x1f1fe; paraguay &#x1f1f6;&#x1f1e6; qatar &#x1f1f7;&#x1f1ea; reunion &#x1f1f7;&#x1f1f4; romania &#x1f1f7;&#x1f1f8; serbia &#x1f1f7;&#x1f1fa; ru &#x1f1f7;&#x1f1fc; rwanda &#x1f1f8;&#x1f1e6; saudi_arabia &#x1f1f8;&#x1f1e7; solomon_islands &#x1f1f8;&#x1f1e8; seychelles &#x1f1f8;&#x1f1e9; sudan &#x1f1f8;&#x1f1ea; sweden &#x1f1f8;&#x1f1ec; singapore &#x1f1f8;&#x1f1ed; st_helena &#x1f1f8;&#x1f1ee; slovenia &#x1f1f8;&#x1f1f0; slovakia &#x1f1f8;&#x1f1f1; sierra_leone &#x1f1f8;&#x1f1f2; san_marino &#x1f1f8;&#x1f1f3; senegal &#x1f1f8;&#x1f1f4; somalia &#x1f1f8;&#x1f1f7; suriname &#x1f1f8;&#x1f1f8; south_sudan &#x1f1f8;&#x1f1f9; sao_tome_principe &#x1f1f8;&#x1f1fb; el_salvador &#x1f1f8;&#x1f1fd; sint_maarten &#x1f1f8;&#x1f1fe; syria &#x1f1f8;&#x1f1ff; swaziland &#x1f1f9;&#x1f1e8; turks_caicos_islands &#x1f1f9;&#x1f1e9; chad &#x1f1f9;&#x1f1eb; french_southern_territories &#x1f1f9;&#x1f1ec; togo &#x1f1f9;&#x1f1ed; thailand &#x1f1f9;&#x1f1ef; tajikistan &#x1f1f9;&#x1f1f0; tokelau &#x1f1f9;&#x1f1f1; timor_leste &#x1f1f9;&#x1f1f2; turkmenistan &#x1f1f9;&#x1f1f3; tunisia &#x1f1f9;&#x1f1f4; tonga &#x1f1f9;&#x1f1f7; tr &#x1f1f9;&#x1f1f9; trinidad_tobago &#x1f1f9;&#x1f1fb; tuvalu &#x1f1f9;&#x1f1fc; taiwan &#x1f1f9;&#x1f1ff; tanzania &#x1f1fa;&#x1f1e6; ukraine &#x1f1fa;&#x1f1ec; uganda &#x1f1fa;&#x1f1f8; us &#x1f1fa;&#x1f1fe; uruguay &#x1f1fa;&#x1f1ff; uzbekistan &#x1f1fb;&#x1f1e6; vatican_city &#x1f1fb;&#x1f1e8; st_vincent_grenadines &#x1f1fb;&#x1f1ea; venezuela &#x1f1fb;&#x1f1ec; british_virgin_islands &#x1f1fb;&#x1f1ee; us_virgin_islands &#x1f1fb;&#x1f1f3; vietnam &#x1f1fb;&#x1f1fa; vanuatu &#x1f1fc;&#x1f1eb; wallis_futuna &#x1f1fc;&#x1f1f8; samoa &#x1f1fd;&#x1f1f0; kosovo &#x1f1fe;&#x1f1ea; yemen &#x1f1fe;&#x1f1f9; mayotte &#x1f1ff;&#x1f1e6; south_africa &#x1f1ff;&#x1f1f2; zambia &#x1f1ff;&#x1f1fc; zimbabwe   ]]></content></entry><entry><title>Markdown 语法支持</title><url>/post/markdown-syntax.html</url><categories><category>示例</category></categories><tags><tag>Markdown</tag><tag>语法</tag></tags><content type="html"><![CDATA[  仅以此篇文章来测试下在 NexT 主题中在通过 Hugo 引擎来建站时，是否支持 Markdown 文件内容中所写的各种语法，并展示下实际的效果。
+标题样式让我们从所有可能的标题开始，在 HTML 中 &lt;h1&gt;-&lt;h6&gt;元素分别表示六个不同级别的标题样式，其中 &lt;h1&gt; 为最大标题，&lt;h6&gt;为最小标题，效果如下：
+标题 1标题 2标题 3标题 4标题 5标题 6段落格式根据W3C 定义的HTML5 规范，HTML 文档由元素和文本组成。每个元素的组成都由一个开始标记表示，例如： &lt;body&gt; ，和结束标记表示，例如： &lt;/body&gt; 。（某些开始标记和结束标记在某些情况下可以省略，并由其他标记暗示。） 元素可以具有属性，这些属性控制元素的工作方式。例如：超链接是使用 a 元素及其 href 属性形成的。
+Markdown 语法![图像说明](图像地址) HTML IMG 标签&lt;img src=&#34;图像地址&#34; width=&#34;宽度&#34; height=&#34;高度&#34; /&gt; SVG 格式&lt;svg&gt;xxxxxx&lt;/svg&gt; 列表类型有序列表第一个元素 第二个元素 第三个元素 无序列表列表元素 另一个元素 和其它元素 嵌套列表借助 HTML 的 ul 元素来实现。
+第一项第二项第二项第一个子项目第二项第二个子项目第二项第二分项第一分项第二项第二分项第二分项第二项第二分项第三分项第二项第三个子项目第二项第三分项第一分项第二项第三分项第二分项第二项第三分项第三分项第三项自定义列表通过 HTML 的 dl 元素还支持自定义列表（表格列表）。
+Hugo 目录结构assetsconfig.tomlcontentdatathemestaticHugo 模板基础模板列表模板单页模板块引用blockquote 元素表示从另一个源引用的内容，可以选择引用必须在 footer 或 cite 元素中，也可以选择使用注释和缩写等行内更改。
+引用文本 这一行也是同样的引用 同样你也在 blockquote 中使用 Markdown 语法书写
+带有引文的 Blockquote 元素效果。
+我的目标不是赚大钱,是为了制造好的电脑。当我意识到我可以永远当工程师时，我才创办了这家公司。
+— 史蒂夫·沃兹尼亚克根据 Mozilla 的网站记录，Firefox 1.0 于 2004 年发布，并取得了巨大成功。
+表格表格并不算是 Markdown 的核心要素，但 Hugo 同样支持它。
+ID 创建者 模型 年份 1 Honda Accord 2009 2 Toyota Camry 2012 3 Hyundai Elantra 2010 可以使用 : （英文格式冒号）来对表格内容进行对齐。
+表格 可以是 很酷 左对齐 居中 右对齐 左对齐 居中 右对齐 左对齐 居中 右对齐 同样也可以在表格中使用 Markdown 语法。
+表格 中 使用 Markdown 语法 斜体 粗体 中划线 代码块 Code&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Example HTML5 Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;Test&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Example HTML5 Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;Test&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; 其它元素： abbr、sub、sup、kbd等等GIF 是位图图像格式。
+H2O
+C6H12O6
+Xn + Yn = Zn
+按X获胜。或按CTRL+ALT+F显示 FPS 计数器。
+比特作为信息论中的信息单位，也被称为 shannon ，以信息论领域的创始人 Claude shannon 的名字命名。
+参考：
+来自 Mainroad 主题的 Basic Elements内容   ]]></content></entry><entry><title>世界，你好！</title><url>/post/hello-world.html</url><categories><category>博客</category></categories><tags><tag>Hugo</tag><tag>开始</tag></tags><content type="html">
+Hugo
+是现今世界上最快的网站建设框架，也是最流行的开源静态站点生成器之一。 凭借其惊人的速度和灵活性，Hugo 让建设网站再次变得有趣起来。
+快速开始
+发表新文章
+$ hugo new hello-world.md 更多信息：
+内容格式
+启动服务
+$ hugo server 更多信息：
+Hugo 服务命令行
+生成静态文件
+$ hugo 更多信息：
+Hugo 建站
+部署到服务器
+$ hugo deploy 更多信息：
+Hugo 发布
+祝你好运，相信你会喜欢上 Hugo 建站的旅程！</content></entry><entry><title>欢迎加入 Hugo NexT 组织！</title><url>/post/hugo_next/external-link/</url><categories><category>示例</category></categories><tags><tag>Hugo</tag><tag>NexT</tag></tags><content type="html"> weight: 1 置顶
+欢迎来到 Hugo NexT 文档站点！ 它是从 Theme NexT
+移植过来的为 Hugo
+打造的高品质优雅主题，保持简单易用的特性和强大的功能。
+用户指南
+设置 NexT 主题很容易。只需遵循文档，就可快速创建您的个人网站！
+反馈
+访问 Awesome NexT 列表，与其他用户分享插件和教程。 加入我们的 Gitter 聊天。 在几秒钟内添加或改进翻译。 在 GitHub Issues 中报告一个 &amp;#x1f41b;。 在 GitHub 上申请一个新特性。 为最受欢迎的功能请求投票。</content></entry><entry><title>摘要、签名与数字证书都是什么？</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E6%91%98%E8%A6%81%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E9%83%BD%E6%98%AF%E4%BB%80%E4%B9%88/</url><categories><category>开发经验</category></categories><tags><tag>加解密</tag></tags><content type="html"> 看完这篇文章，你将会知道：
+摘要、签名、证书是什么；
+摘要、签名、证书的用途和关系；
+签名是怎么生成的；
+签名是怎么校验的；
+证书是怎么生成的；
+证书是怎么校验的。
+1. 消息摘要（Digest）
+什么是消息摘要？
+对一份数据，进行一个单向的 Hash 函数，生成一个固定长度的 Hash 值，这个值就是这份数据的摘要，也称为指纹。
+摘要算法
+常见的摘要算法有 MD5、SHA-1、SHA-256 等。他们都有这些特点：
+对于同一个摘要算法，无论输入的数据是什么，输出都是相同长度的值。 例如 MD5，无论数据有多大，输出总是128位的散列值。 摘要算法是单向的，只能根据原始数据计算出它的摘要值，但是不能根据摘要值反算出原始数据。 越优秀的摘要算法越难找到Hash碰撞。 虽然长内容生成短摘要是必定会产生碰撞的，但一个优秀的摘要算法很难主动构造出两条数据，使得他们的摘要值相同。 消息摘要的用途：可以用于校验数据的完整性。 例如我们在下载文件时，数据源会提供一个文件的MD5。文件下载好之后，我们本地计算出文件的MD5，和数据源提供的MD5做对比，如果相同则文件是完整的。 但独立使用消息摘要时，无法确保数据没有被篡改，因为无法保证从数据源获取的MD5有没有被中途篡改。 相比加密算法，摘要算法速度都相对较快。 2. 数字签名（Signature）
+在了解签名之前，需要了解什么是公开密钥体系：
+公开密钥密码体系： 基于大整数的因数分解可以生成一对公钥和私钥。公钥和私钥是一一对应关系，一把私钥有着和它唯一对应的公钥，反之亦然。用公钥加密的数据，只能用和它对应的私钥解密，用私钥加密也只能同与之对应的公钥解密。 密钥对的生成很快速，但根据公钥反推私钥是极其困难的事。
+根据公开密钥密码体系，我们有了非对称加密。常见的非对称加密是 RSA 加密。
+如果用「公钥」对数据加密，用「私钥」去解密，这是「加密」； 反之用「私钥」对数据加密，用「公钥」去解密，这是「签名」。
+简单地看，似乎没有区别，只是换了个名字。但实际上，两者的用途完全不一样。 由于所有人都持有公钥，所以「签名」并不能保证数据的安全性，因为所有人都可以用公钥去解密。 但「签名」却能用于保证消息的准确性和不可否认性。因为公钥和私钥是一一对应的，所以当一个公钥能解密某个密文时，说明这个密文一定来自于私钥持有者。
+我们来看一下具体签名和验 …</content></entry><entry><title>scrcpy——Android 投屏神器 (使用教程)</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/scrcpyandroid-%E6%8A%95%E5%B1%8F%E7%A5%9E%E5%99%A8-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url><categories><category>开发经验</category></categories><tags><tag>工具</tag></tags><content type="html"><![CDATA[  scrcpy 简介注意：拼写是 scrcpy，非 Python 爬虫框架 Scrapy。
+简单地来说，scrcpy 就是通过 adb 调试的方式来将手机屏幕投到电脑上，并可以通过电脑控制您的 Android 设备。它可以通过 USB 连接，也可以通过 Wifi 连接（类似于隔空投屏），而且不需要任何 root 权限，不需要在手机里安装任何程序。scrcpy 同时适用于 GNU / Linux，Windows 和 macOS。
+它的一些特性：
+亮度（原生，仅显示设备屏幕） 性能（30~60fps） 质量（1920×1080 或以上） 低延迟（35~70ms） 启动时间短（显示第一张图像约 1 秒） 非侵入性（设备上没有安装任何东西） 此项目为开源项目，Github 地址：Genymobile/scrcpy: Display and control your Android device使用 scrcpy 的要求Android 设备至少需要 API 21（Android 5.0 以上版本）; 确保在您的设备上启用了 adb 调试; 在某些设备上，您还需要启用其他选项以使用键盘和鼠标控制它。 adb 调试的开启一般是多次点击手机系统版本，如我用的是 MIUI10，开启方法是 “设置”-&amp;gt;” 我的设备”-&amp;gt;” 全部参数”-&amp;gt; 点击 7 下 MIUI 版本，开启 “开发者选项”。然后在 “设置”-&amp;gt;” 更多设置”-&amp;gt;” 开发者选项” 中同时开启 USB调试 和 USB调试(安全设置)。
+注意：USB调试(安全设置) 必须开启，否则不可以使用电脑控制手机，即上述要求的第三条。
+使用电脑连接手机在 Android 手机中打开了 USB 调试后，我们即可在电脑中使用 adb 进行调试。
+我使用的是 Windows10 系统，以下以 Windows 为例，MacOS 或 Linux 请点击这里。
+程序使用了 Java 语言，我们需要在电脑中搭建 Java 运行环境，参考：Windows10 配置 Java 开发环境首先下载 scrcpy，可去 releases 下载最新版本，目前最新版本为 2020-04-30 的 v1.13。
+下载地址：https://github.com/Genymobile/scrcpy/releases  …  ]]></content></entry><entry><title>如何破解HIT的孤岛效应，一起关于患者主索引的案例分享</title><url>/post/%E5%8C%BB%E7%96%97/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3hit%E7%9A%84%E5%AD%A4%E5%B2%9B%E6%95%88%E5%BA%94%E4%B8%80%E8%B5%B7%E5%85%B3%E4%BA%8E%E6%82%A3%E8%80%85%E4%B8%BB%E7%B4%A2%E5%BC%95%E7%9A%84%E6%A1%88%E4%BE%8B%E5%88%86%E4%BA%AB/</url><categories><category>医疗</category></categories><tags><tag>医疗</tag></tags><content type="html"> 从一个虚构的故事说起
+故事是这样的，当时我们正在讨论安全架构，传来轻轻的敲门声，伴随着小刘有些胆怯的声音：“主任，这个警官找您”。小刘是我们新来的同事，做事很踏实，就是一说话就脸红。我抬眼看到一个气宇轩昂的警官，想都想得到，小刘被他的气质给吓到了。
+“你就是主任哈，我们需要调阅一份病历。”警官开门见山的说。
+“查阅病历去病案室呀，他们负责接待各种病历查询需求。”我嘴里说着，心里就在犯嘀咕，这次又是啥难缠的事情呀?
+“我们就是从病案室过来的，他们那里查不到任何信息，可是事主说当年就在你们医院住的院。”警官倒还是蛮客气。
+旁边穿红衣服的女子发话了，“你是主任哈，这事你不解决不得行哈，当年我们就是在你们医院住院的，为啥现在你们拿不出病历！”
+“有介绍信么，我们再仔细找找呢。”我说到。
+警官递过来一封介绍信，我接过一看，大致内容是说，请我们协助调查事主徐某（身份证号）的孩子张某某（身份证号）2002年6月在我院住院的事宜，需要我们提供患者的出院记录和死亡记录。
+十八年前的病历，还是份死亡病历，看来今天这事确实有点麻烦，事主已经去病案室查询过，没有找到就说明，按照正常的患者姓名、身份证号是查询不到这份病历的。
+2002年我们已经实施了住院登记系统，患者入院时是需要填写详细基本信息的，也许通过其他信息可以查到。于是我开启了侦探模式。
+从介绍信上发现，患者张某某的身份证号上的出身日期就是2002年6月，我问道：“这是新生儿呀？”
+“对头，刚出生就不好，送到你们医院儿科抢救。”徐女士回答道。
+在我们医院，刚出生的婴儿很多都来不及取名字，所以常常冠以“某某之子”或者“某某之女”，而且2002年的新生儿也不会马上分配身份证号的，就算他后来上户口分配了身份证号，在我们数据库里可能也不会有身份证号码。从逻辑上来说，这介绍信上提供的姓名和身份证号估计在我们数据库里都没有留存。
+“select * from pat_master_index where name like ‘徐%’ and &amp;amp;hellip; ”，我输入一段代码，看看有没有可能这患儿入院是用妈妈名字来标识的。
+果然，数据库里有符合我设想的记录，“徐大双、徐小双”，继续探索吧。
+“你生的是一对双呀？”我问道，女子马上说“就是呀，老大是男娃娃，老二是女娃娃，后来只老大活下来了。”
+在联系人字段里存储的是张某的名字，我问道“你老公叫啥 …</content></entry><entry><title>三步激活 StarUML V4.0.1 (WIN10) | 仅供学习</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%B8%89%E6%AD%A5%E6%BF%80%E6%B4%BB-staruml-v4.0.1-win10-%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0/</url><categories><category>开发经验</category></categories><tags><tag>staruml</tag></tags><content type="html"><![CDATA[  StarUML是一个开源的 UML 工具列表软件，它遵守 GNU GPL 的一个修订版。StarUML 项目宣称的目标是代替大型的商业 UML 工具软件，如 IBM 的 Rational Rose ， Borland 公司的 Together 。StarUML 支持 UML2.0 定义的大多数图，是一款跨平台且轻量高效的现代 UML 绘图工具。
+但由于其商业性质，免费版仅提供一段时间的试用预览，到期后导出图片会有 未注册 字样水印，非常影响成图质量。经过一番研究，StarUML 采用 Electron 框架，使用 node.js 实现，仅需简单修改其中许可证判定代码即可完成破解，在此感谢万能的 GitHub 社区。
+本教程激活 StarUML V4.0.1 ，平台为 Win10。
+学（ji）习（huo）步骤第一步，解包app.asar 文件是 Electron 程序的主业务文件，是一种压缩格式的文件。我们需要修改的部分就被压缩在这里，具体文件位置为：
+C:\Program Files\StarUML ├─locales ├─resources | └─app.asar └─swiftshader app.asar 文件可以使用编辑器直接打开，但如果直接修改会导致程序无法正常运行，因此需要解包修改再压缩。
+解包前需要确认您的电脑已经安装 node.js ，可在 CMD 执行以下命令，若回显版本号说明已安装，若没有安装请移步：https://nodejs.org/en/
+C:\Program Files&gt;node -v v12.18.3 之后全局安装 asar 工具：
+npm install -g asar 或者 cnpm install -g asar C:\Program Files&gt;asar -V v3.0.3 // 出现版本号说明安装成功 解压 app.asar 文件：
+asar extract app.asar ./asar/ 使用上面命令将 app.asar 解压到同级目录 asar 下，前提是 cd 到文件所在目录，并创建好 asar 文件。
+第二步，激活解压后在 asar 目录下，找到这个文件：asar\src\engine\license-manager.js，使用你偏好的编辑器打开，修改其中这段代码：
+checkLicenseValidity () { this.validate().then(() =&gt; { setStatus(this, true) }, () =&gt; { //setStatus(this,false) &lt;-- comment this line setStatus(this, true) //&lt;-- add this line //UnregisteredDialog.showDialog() &lt;-- comment this line }) } 注意其中注释的部分，总结来看就是将 false 改为 true，再将 false 的后续动作注释即可。
+MaxOS, Linux 类比修改，下面是我在 GitHub 找到的 v3.0.* 文件位置，待验证。。。 Mac OS: /Applications/StarUML.app/Contents/www/license/node/ Linux: /opt/staruml/www/license/node/
+第三步，压缩修改完成后，将修改后的内容重新打包回 app.asar ，使用以下命令压缩即可，其中 pack 是我前一步解压的目录：
+asar pack asar app.asar 注：建议在此前备份旧的 app.asar 文件，以免造成无法挽回的损失。
+若不出意外，到这里 StarUML 就已经成功激活了。
+总结本文介绍了一种简单的直接使用官网版本激活 StarUML 的方法，避免了不明来源的破解程序对你电脑的侵害。
+特别说明：本方法仅用于学习用途，请勿商用，若产生纠纷本文作者概不负责。
+  ]]></content></entry><entry><title>从0到1，看电子健康卡（码）产品设计与发展趋势</title><url>/post/%E5%8C%BB%E7%96%97/%E4%BB%8E0%E5%88%B01%E7%9C%8B%E7%94%B5%E5%AD%90%E5%81%A5%E5%BA%B7%E5%8D%A1%E7%A0%81%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF/</url><categories><category>医疗</category></categories><tags><tag>医疗</tag></tags><content type="html"> 电子健康卡（码）业务在去年无论是腾讯、还是阿里都在做，无论是它的作用还是它的落地难度都被低估了。
+2013年，原卫生部启动了关于统一居民健康卡建设工作，居民健康卡是由国家卫生健康委员会统一标准推进实施、面向全体居民发放、在全国医疗卫生机构通用、方便居民看病就医及实现健康管理的基础载体 。于2017年 10 月 9 日，国务院常务会议提出“推动在医疗机构之间实现就诊卡和诊疗信息共享，全面推进医疗便民惠民服务”居民健康卡作为跨医疗机构应用的介质，其重要性被提升到新的高度。
+电子健康码最早之前是由NFC卡来作为介质，由于NFC制卡成本所在，所以一般医院会与银行进行合作发卡。
+但是，实体卡作为电子健康卡对于数据存储、写入都比较繁琐。又随着移动互联网医疗需求的持续增长，实体卡不足以支撑居民线上线下一体化的就医需求。
+实际上，大家关注的问题是“多院多卡”，每去一家医院要办一张就诊卡，看了十家医院就有十张健康卡，每一张卡有不低的成本并且卡与卡之间的就诊记录数据互不相通，没有记录。
+总体来看，推行电子健康卡，是旨在消除“一院一卡、互不通用”堵点问题，同时便于居民掌握自己的电子健康档案。
+电子健康卡（码）是解锁移动互联网新服务模式的一把钥匙。
+自从国家卫生计生委统计信息中心发布了《居民健康卡虚拟化应用建设指导方案 ( 试用 )》发行之后，电子健康卡（码）业务就受到了医疗企业的青睐。
+作为腾讯、阿里以社交、服务等为主营业务的互联网企业为丰富服务内容，增加用户粘性和满意度，电子健康卡（码）成为了他们的医疗业务基础。
+早在五年前，我涉及的第一个医疗项目就是居民电子健康档案。
+当时做这个项目的企业起码有10几家，其企业规模大大小小参差不齐。/当然，最后是没有中标，原因有几个：1、初创企业对医院资源没有可及性。2、软件数据安全风险高。
+回想起来，如今只有一些龙头企业去解决整体的统一标准，它们也有能力去解决，对于初创企业来说这种业务还是不要碰，最好基于基础业务上去做衍生应用。
+在我们来看，从2017年12月全国第一张电子健康卡发出，至今一共发了几百万张，虽然电子健康卡使用，但这种普及率太低了。
+即使是腾讯、阿里等大厂落地推行，但推行速度并不尽如人意。/那么为什么在各地实际推广过程中，渗透率会那么低呢？
+并不是需求不存在，我们要实现的是就医入口统一，那么就要首先实现医院系统实现互联互通、医联体信息 …</content></entry><entry><title>卫生信息文件</title><url>/post/%E6%96%87%E6%A1%88%E7%A7%AF%E7%B4%AF/%E5%8D%AB%E7%94%9F%E4%BF%A1%E6%81%AF%E6%96%87%E4%BB%B6/</url><categories><category>医疗</category></categories><tags><tag>医疗</tag></tags><content type="html"> 标准号 标准名 发布时间 实施时间 WS/T 790.18—2021 区域卫生信息平台交互标准 第18部分：提醒服务
+2021年10月27日 2022年4月1日 WS/T 790.17—2021 区域卫生信息平台交互标准 第17部分：签约服务
+2021年10月27日 2022年4月1日 WS/T 790.16—2021 区域卫生信息平台交互标准 第16部分：双向转诊服务
+2021年10月27日 2022年4月1日 WS/T 790.15—2021 区域卫生信息平台交互标准 第15部分：预约挂号服务
+2021年10月27日 2022年4月1日 WS/T 790.14—2021 区域卫生信息平台交互标准 第14部分：文档订阅发布服务
+2021年10月27日 2022年4月1日 WS/T 790.13—2021 区域卫生信息平台交互标准 第13部分：健康档案调阅服务
+2021年10月27日 2022年4月1日 WS/T 790.12—2021 区域卫生信息平台交互标准 第12部分：健康档案采集服务
+2021年10月27日 2022年4月1日 WS/T 790.11—2021 区域卫生信息平台交互标准 第11部分：健康档案管理服务
+2021年10月27日 2022年4月1日 WS/T 790.10—2021 区域卫生信息平台交互标准 第10部分：健康档案存储服务
+2021年10月27日 2022年4月1日 WS/T 790.9—2021 区域卫生信息平台交互标准 第9部分：术语注册服务
+2021年10月27日 2022年4月1日 WS/T 790.8—2021 区域卫生信息平台交互标准 第8部分：医疗卫生人员注册服务
+2021年10月27日 2022年4月1日 WS/T 790.7—2021 区域卫生信息平台交互标准 第7部分：医疗卫生机构注册服务
+2021年10月27日 2022年4月1日 WS/T 790.6—2021 区域卫生信息平台交互标准 第6部分：居民注册服务
+2021年10月27日 2022年4月1日 WS/T 790.5—2021 区域卫生信息平台交互标准 第5部分：基础通知服务
+2021年10月27日 2022年4月1日 WS/T 790.4—2021 区域卫生信息平台交互标准 第4部分：安全审计服务
+2021年10月27日 2022年4月1日 WS/T …</content></entry><entry><title>CentOS Dootask安装</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/dootask%E5%AE%89%E8%A3%85/</url><categories><category>开发经验</category></categories><tags><tag>dootask</tag></tags><content type="html"> CentOS Dootask安装
+CentOS Docker 安装
+使用官方安装脚本自动安装
+curl -sSL https://get.daocloud.io/docker | sh 卸载 docker
+删除安装包：
+yum remove docker-ce 删除镜像、容器、配置文件等内容：
+rm -rf /var/lib/docker 安装Docker Compose v2.0+
+安装 Docker Compose 可以通过下面命令自动下载适应版本的 Compose，并为安装脚本添加执行权限
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose sudo chmod +x /usr/local/bin/docker-compose 要安装其他版本的 Compose，请替换 v2.2.2。
+将可执行权限应用于二进制文件：
+$ sudo chmod +x /usr/local/bin/docker-compose 安装git命令：yum install git 之后使用git拉取项目源码
+git clone --depth=1 https://gitee.com/aipaw/dootask.git 进入目录
+cd dootask 一键安装项目（自定义端口安装 ./cmd install &amp;ndash;port 2222）
+./cmd install 没有找到php容器问题解决
+重启docker服务
+systemctl start docker</content></entry><entry><title>一文读懂医联体和医共体的区别！</title><url>/post/%E5%8C%BB%E7%96%97/%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%E5%8C%BB%E8%81%94%E4%BD%93%E5%92%8C%E5%8C%BB%E5%85%B1%E4%BD%93%E7%9A%84%E5%8C%BA%E5%88%AB/</url><categories><category>医联体</category></categories><tags><tag>医疗</tag><tag>医联体</tag><tag>医共体</tag></tags><content type="html"> 医联体：你我本无缘分，为了政绩、品牌、技术，大家站在一起做做样子。随缘互相转介绍病人，随缘或根据合作协议安排一定的技术指导。
+医共体：我们因为人、财、物、考核指标等经济关系走在了一起，有着共同的经济目标与经济责任。我们要完成某个经营指标，每个人都必须出力。
+医联体要强调“联”的是什么？“联”的是疾病，基层解决不了的病要联大医院、大专家。 医共体要强调“共”的是什么？“共”的是健康，共的是居民常见疾病预防健康管理、慢病康复等。
+医联体：一种医疗组织形式
+医联体全称叫“医疗联合体建设”， 医联体主要是以区域内医疗联合体为表现形式。一般是将同一区域内的医疗资源整合在一起，形成一个医疗互助与共享的系统。 通常由区域内的三级医院与二级医院，社区医院和其他医疗组织等，共同组成一个医疗联合体，形成一个区域内分级诊疗的上下联动的互助医疗组织与系统。
+医联体的四种组织形式
+**（一）医联体，是城市开展医联体建设的主要模式。**以1家三级医院为牵头单位，联合若干城市二级医院、康复医院、护理院以及社区卫生服务中心，构建“1+X”医联体，纵向整合医疗资源。有条件的地区推行医联体内人、财、物统一管理模式，促使医联体成为目标一致的共同体。不具备条件的，可在医联体内以对口帮扶、技术支持为纽带形成松散型合作，引导优质医疗资源下沉，提升基层医疗服务能力。
+**（二）医共体，是农村开展医联体建设的主要模式。**重点探索以“县医院为龙头，乡镇卫生院为枢纽，村卫生室为基础”的县乡一体化管理，构建县、乡、村三级联动的县域医疗服务体系。
+**（三）专科联盟，指医疗机构之间以专科协作为纽带形成的联合体。**以一家医疗机构特色专科为主，联合其他医疗机构相同专科技术力量，形成区域内若干特色专科中心，提升解决专科重大疾病的救治能力，形成补位发展模式。横向盘活现有医疗资源，突出专科特色。
+（四）远程医疗协作网，由牵头单位与基层、偏远和欠发达地区医疗机构建立远程医疗服务网络。大力推进面向基层、偏远和欠发达地区的远程医疗服务体系建设，鼓励二级、三级医院向基层医疗卫生机构提供远程医疗服务。
+需注意的是：
+在这里表述的医联体一般是指不改变医院间组织结构的医疗联合组织。因此，它是以解决患者就医难、就医烦为目标的一个医疗互助系统。这是它的一个特点，也是他的初心。
+同时医联体的龙头医院或者核心医院也是以不改变基层医疗组织的属性，以及 …</content></entry><entry><title>医疗文案积累</title><url>/post/%E6%96%87%E6%A1%88%E7%A7%AF%E7%B4%AF/%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%E7%A7%AF%E7%B4%AF/</url><categories><category>文案</category></categories><tags><tag>医疗</tag><tag>文案</tag></tags><content type="html"> 《意见》提出全力推进上海中医药传承创新开放发展，发挥中医药在突发公共卫生事件中应急处置和重大传染病防控中的作用。 以就近结对、兼顾传统合作关系为主要原则，依托4家市级中医医院，与市级综合医院协同，在全市构建东、南、西、北四大区域中医医联体。 作为公共卫生体系重要的组成部分，中医药在非典、流感、新冠肺炎等传染病防控中发挥关键作用。 发挥中医治未病“未病先防、既病防变、瘥后防复”特点和优势，加强与临床诊疗、慢病管理、社区中医药服务等联动，推广治未病理念和技术方法，促进中医药全面融入市民健康生活。具体包括建设省级治未病中心，形成省级服务管理平台，强化治未病服务网络;建立完善针对不同人群、不同健康状况的治未病处方库并推广;依托“市健康云”加强治未病与市民健康管理衔接;大力普及中医养生保健知识和太极拳等养生保健方法，推进治未病服务进学校、进社区、进家庭。 医联体
+关于医联体的描述，PPT可能会用到</content></entry><entry><title>Word如何创建模板文件，附带多层级模板</title><url>/post/office/word%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%E9%99%84%E5%B8%A6%E5%A4%9A%E5%B1%82%E7%BA%A7%E6%A8%A1%E6%9D%BF/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> Word如何创建模板文件，附带多层级模板：
+多层级模板
+件github
+**模板的导入：**将此dotx模板文档拷贝到“D:\Users\Documents\自定义 Office 模板”下（具体路径根据各自office安装环境会有差异），导入即完成。
+**模板的固定：**打开任意一个word文档，点击“开始”“新建”“更多模板”
+点击“个人”找到需要固定的模板文件，点击文件上的“固定至列表”模板文件即出现在“新建”列表中
+​ 使用方法：打开任意一个word文件，点击“开始”，在“新建”中选择需要使用的模板，即可创建</content></entry><entry><title>Word如何调整标题编号以及样式</title><url>/post/office/word%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E6%A0%87%E9%A2%98%E7%BC%96%E5%8F%B7%E4%BB%A5%E5%8F%8A%E6%A0%B7%E5%BC%8F/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 打开文档，我们发现编号不一致，编号变没了，而且正文标题的缩进有大有小：
+点击【开始】，选择层级编号下的【定义新的多级列表】
+进入设置界面，我们看到级别5是没有编号的：
+设置【要在库中显示的级别】为级别5，在【输入编号的格式】出，依次选择【级别1】+添加点号+【级别2】+添加点号+【级别3】+添加点号+【级别4】+【次级别的编号样式】（即第五级的编号样式），级别设置完成。 设置完成如下图，修改【字体】为统一字体。 效果如图 同理修改其它级别编号，字体。
+若需修改缩进方式，只需修改如图红色标记区域</content></entry><entry><title>Word如何批量调整表格自适应窗口</title><url>/post/office/word%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E8%B0%83%E6%95%B4%E8%A1%A8%E6%A0%BC%E8%87%AA%E9%80%82%E5%BA%94%E7%AA%97%E5%8F%A3/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"><![CDATA[   word批量调整表格自适应窗口：打开word，点击【视图】【宏】【查看宏】，或者直接使用Alt+F8打开查看宏界面 创建宏
+编写宏
+相关代码
+Dim oDoc As Document Dim oTable As Table Set oDoc = Documents.Open(&#34;E:\123\Doc\数据库结构7.25-1.docx&#34;) For Each oTable In oDoc.Tables oTable.AutoFitBehavior (wdAutoFitWindow) Next MsgBox &#34;完成！&#34;   ]]></content></entry><entry><title>2021年度总结</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</url><categories><category>生活学习</category></categories><tags><tag>总结</tag></tags><content type="html"> 工作情况
+2021年分为两个阶段
+11月份之前，法院项目。在11月份之前，通过大家的努力，攻克了一个个难点，验证码处理、模拟录入方案以及实现等；初步完成了快审系统，改造完成案件收录平台，支持了其它法院的快审系统的实施。 11月份之后，会诊项目。11月份之后，大家共同努力，基本完成会诊平台PC端功能。 暴露问题
+在完成项目过程中，项目团队成员之间相互支持、相互沟通，使得每个人或多或少都有进步。但同时也暴露出一些问题，一些可能是项目组特有的问题
+1.沟通问题。
+​ 组员之间沟通有所改善，还需要更进一步改善，多多沟通，多多配合，培养团队的默契感。
+​ 沟通时常会出现怼的情况，即工作之中带着情绪，例如，“我不会，你做吧”、“我不做”、“我XXXX呢，你XXX去吧”，团队工作是一个精密的机械运转，每个人都在这个运转中担任着独一无二的责任，履行着不同的功能，我希望大家相互配合，共同去完成这个运转流程。如果说是运转整体出现问题，那么有可能整个运转系统（团队）将被替换，如果说每次都是局部问题，那可能局部需要维修，需要替换。
+A：xxx效果不好，应该xx会好些，给处理下。 B：xx效果挺好，有很多这种网站。 A：xx效果挺多啊，那你给找一个咱们看一下。 B：我在忙别的，你自己找一下。 A：………… ​ 作为有效沟通，要“讲观点，摆事实”，即有理有据。这样才能说服别人，形成有效沟通。
+​ 要提高大局观，是否能让其他人的工作更顺畅作为衡量工作的标尺；
+2.及时反馈问题。
+​ 工作中时常会出现，临时分配任务的这种情况：
+组长：小明，咱们组最近不怎么忙，你先看看XX这个功能，掌握的差不多了给我说下。
+小明：好的
+一天过去……
+两天过去……
+三天过去……
+组长纳闷了，咋这么长时间，没看完。
+组长：小明，XX这个功能怎么样了？
+小明：我做完了啊，已经XXX了
+还会出现这种情况
+项目需要小明小红配合完成，但小明或小红做完后，没有告知对方，需要配合的功能点已经完成，导致对方还在等等等……
+以上举例都是实际工作中碰到的实际场景。这些场景反映了，一个问题，反馈的及时性问题，项目组成员之间的反馈延时、有明确期望性的反馈延时、无明确期望的任务，更需要及时反馈，以让项目成员/组长/负责人明白当前工作内容进展，以及工作的问题。
+​ 沟通群内的回复，及时回复，哪怕先说“收到”、“稍等下”、“我先看看”等这些话语， …</content></entry><entry><title>2021团队年度总结</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/2021%E5%9B%A2%E9%98%9F%E6%80%BB%E7%BB%93/</url><categories><category>生活学习</category></categories><tags><tag>总结</tag></tags><content type="html"> ​ 总结要点：无非功过得失，人财物分析。
+2021年分为两个阶段
+11月份之前，法院项目。在11月份之前，通过大家的努力，攻克了一个个难点，验证码处理、模拟录入方案以及实现等；初步完成了快审系统，改造完成案件收录平台，支持了其它法院的快审系统的实施。 11月份之后，会诊项目。11月份之后，大家共同努力，基本完成会诊平台PC端功能。 在完成项目过程中，项目团队成员之间相互支持、相互沟通，使得每个人或多或少都有进步。但同时也暴露出一些问题，一些可能是项目组特有的问题
+1.沟通问题。
+​ 组员之间沟通有所改善，还需要更进一步改善，多多沟通，多多配合，培养团队的默契感。
+​ 沟通时常会出现怼的情况，即工作之中带着情绪，例如，“我不会，你做吧”、“我不做”、“我XXXX呢，你XXX去吧”，团队工作是一个精密的机械运转，每个人都在这个运转中担任着独一无二的责任，履行着不同的功能，我希望大家相互配合，共同去完成这个运转流程。如果说是运转整体出现问题，那么有可能整个运转系统（团队）将被替换，如果说每次都是局部问题，那可能局部需要维修，需要替换。
+​ 工作之中，没有敌人，只有伙伴，大家的共同目的是一样的，共同完成某个项目，不要天天跟干炮样的，你说一句，我怼一句。每天10小时，每周50个小时，大家都在一起工作，大家可以说是类似“家人”的关系，每朝相处，希望大家在工作中多沟通、和谐沟通、协同沟通，提高沟通效率，共同完成某个项目，某个任务。
+A：xxx效果不好，应该xx会好些，给处理下。 B：xx效果挺好，有很多这种网站。 A：xx效果挺多啊，那你给找一个咱们看一下。 B：我在忙别的，你自己找一下。 A：…………
+​ 作为有效沟通，要“讲观点，摆事实”，即有理有据。这样才能说服别人，形成有效沟通。
+要提高大局观，是否能让其他人的工作更顺畅作为衡量工作的标尺；
+2.及时反馈问题。
+​ 工作中时常会出现，临时分配任务的这种情况：
+组长：小明，咱们组最近不怎么忙，你先看看XX这个功能，掌握的差不多了给我说下。
+小明：好的
+一天过去……
+两天过去……
+三天过去……
+组长纳闷了，咋这么长时间，没看完。
+组长：小明，XX这个功能怎么样了？
+小明：我做完了啊，已经XXX了
+还会出现这种情况
+项目需要小明小红配合完成，但小明或小红做完后，没有告知对方，需要配合的功能点已经完成，导致对方还在等等等……
+以上 …</content></entry><entry><title>分节后，word总页数不为节的总页数</title><url>/post/office/%E5%88%86%E8%8A%82%E5%90%8Eword%E6%80%BB%E9%A1%B5%E6%95%B0%E4%B8%8D%E4%B8%BA%E8%8A%82%E7%9A%84%E6%80%BB%E9%A1%B5%E6%95%B0/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 选中总页数，鼠标右击，选中编辑域，进入弹出窗口
+在弹出的窗口,点击【域代码】，
+将NumPages修改成sectionpages，点击【确定】即可</content></entry><entry><title>nginx反向代理去除tomcat项目名</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%8E%BB%E9%99%A4tomcat%E9%A1%B9%E7%9B%AE%E5%90%8D/</url><categories><category>开发经验</category></categories><tags><tag>nginx</tag></tags><content type="html"> server { listen 80; server_name crm.xxx.net; location / { proxy_pass http://192.168.1.216/crm/; proxy_cookie_path /crm/ /; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; } location /crm/{ proxy_pass http://192.168.1.216/crm/; proxy_cookie_path /crm/ /; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; } }</content></entry><entry><title>在谷歌浏览器(chrome)里面在线浏览word，excel文件</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8chrome%E9%87%8C%E9%9D%A2%E5%9C%A8%E7%BA%BF%E6%B5%8F%E8%A7%88wordexcel%E6%96%87%E4%BB%B6/</url><categories><category>开发经验</category></categories><tags><tag>office</tag></tags><content type="html"> 首先下载离线安装包，是一个crx文件，不需要打开
+地址栏输入： chrome://extensions/
+调整到开发者模式，然后将刚刚下载的crx文件拖入到浏览器
+如果没有弹出安装的提示，把浏览器关了多重试几次。
+修改配置，地址栏输入chrome://flags/#enable-nacl 将其改成enabled
+重启浏览器</content></entry><entry><title>nignx文件服务器，添加用户认证</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/nignx%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81/</url><categories><category>开发经验</category></categories><tags><tag>nignx</tag><tag>文件服务</tag></tags><content type="html"> nginx搭建文件服务器，为了安全起见，但只想部分份能够下载。
+Nginx进行用户名密码验证的话是通过ngx_http_auth_basic_module模块实现，该模块可作用范围http，server，location，limit_except，语法如下：
+location / { auth_basic &amp;#34;Please input your name&amp;#34;; auth_basic_user_file /etc/nginx/conf/htpasswd; } 在conf目录下创建htpasswd文件，文件中添加用户名密码，格式如下
+test:123456 重启nginx后，访问，效果如下：</content></entry><entry><title>lodop打印pdf</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/lodop%E6%89%93%E5%8D%B0pdf/</url><categories><category>开发经验</category></categories><tags><tag>lodop</tag></tags><content type="html"> 参考： http://demo.clodop.com:8000/c_pdfprint
+结合jacob转pdf，可实现office文档的在线打印。</content></entry><entry><title>Windows下使用jacob进行文档操作</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E4%BD%BF%E7%94%A8jacob%E8%BF%9B%E8%A1%8C%E6%96%87%E6%A1%A3%E6%93%8D%E4%BD%9C/</url><categories><category>开发经验</category></categories><tags><tag>office,jacob</tag></tags><content type="html"><![CDATA[  使用jacob进行office文件操作
+1.下载jacob相关jar和dll
+https://github.com/freemansoft/jacob-project/releases2.将dll放入对应文件夹
+64位windows环境，将dll放到C:\Windows\System32下面
+32位windows环境，将dll 放到C:\Windows\SysWOW64 下面
+3.pom文件引用相关jar
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.jacob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jacob&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 4.文档操作工具类
+import java.io.File; import java.net.URI; import java.net.URL; import java.net.URLConnection; import java.util.ArrayList; import java.util.List; import cn.hutool.core.io.FileUtil; import cn.hutool.core.util.StrUtil; import com.jacob.activeX.ActiveXComponent; import com.jacob.com.ComThread; import com.jacob.com.Dispatch; import com.jacob.com.Variant; import lombok.extern.slf4j.Slf4j; import org.apache.commons.io.FilenameUtils; @Slf4j public class JacobOfficeUtil { private static final int wdFormatPDF = 17; private static final int xlTypePDF = 0; private static final int ppSaveAsPDF = 32; // doc格式 private static final …  ]]></content></entry><entry><title>抓取弹出框的xpath</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E6%8A%93%E5%8F%96%E5%BC%B9%E5%87%BA%E6%A1%86%E7%9A%84xpath/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"> 打开chrome浏览器，打开F12开发者工具，点击sources页签，在出现弹框是，点击右侧停止标记停止渲染加载页面你即可。</content></entry><entry><title>linux定时删除文件</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/linux%E5%AE%9A%E6%97%B6%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6/</url><categories><category>开发经验</category></categories><tags><tag>linux</tag></tags><content type="html"> 创建shellauto-del-files.sh touch /home/suzhuichang/auto-del-files.sh chmod +x auto-del-files.sh 新建一个可执行文件auto-del-files.sh，并分配可运行权限
+2.编辑shell脚本
+vi auto-del-files.sh 编辑auto-del-files.sh文件如下：
+#!/bin/sh find /home/suzhuichang/importZipDes -mtime +10 -name &amp;#34;*&amp;#34; -exec rm -rf {} \; ok，保存退出(:wq)
+3.计划任务
+crontab -e 将auto-del-files.sh执行脚本加入到系统计划任务，到点自动执行.输入：
+10 0 * * * /home/suzhuichang/auto-del-files.sh 这里的设置是每天凌晨0点10分执行auto-del-files.sh文件进行数据清理任务了。
+4.错误 -bash: xxx: /bin/sh^M: bad interpreter: No such file or directory
+使用notepad++打开sh文件，将文件转为Unix(LF) UTF-8格式保存，上传即可。
+参考资料：
+http://c.biancheng.net/view/1092.html
+https://tool.lu/crontab/
+https://www.cnblogs.com/panie2015/p/8523377.html</content></entry><entry><title>office在线预览以及在线编辑1</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/office%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%911/</url><categories><category>开发经验</category></categories><tags><tag>onlineoffice</tag></tags><content type="html"><![CDATA[  做OA或者工作流程的网站中，常常能够看到一些在线Word编辑进行文档处理的功能，这里我开发了一个在线Word编辑插件并且以此为例。
+1．NTKO Word在线编辑器介绍：
+NTKO的官方网站：http://www.ntko.com/ NTKO OFFICE文档控件是拥有完全自主知识产权的ActiveX控件。使用NTKO Office文档控件，能够在浏览器中直接编辑Word,Excel等Office文档，或者WPS，金山电子表等文档并保存到web服务器。实现文档和电子表格的统一管理。NTKO OFFICE文档控件具有在线编辑，痕迹保留，手写签名，模板套红，安全电子印章[企业版提供]，全屏批注，保存为HTML,MHT,PDF文件等办公自动化系统必备的功能。可以运行在PHP，ASP，JSP，C#，VB.NET，DOMINO等各种web编程语言和服务器。
+2．列出完整的jQuery插件的代码清单：
+jquery.ntko.js /* @author: Leepy * @date: 2010-12 * @descript: ntko word编辑器JQ插件 */ ( function($) { $.ntko = $.ntko || {}; $.fn.extend( { //文件类型 fileType: { Word: &amp;#34;Word.Document&amp;#34;, Excel: &amp;#34;Excel.Sheet&amp;#34;, PowerPoint: &amp;#34;PowerPoint.Show&amp;#34; }, //弹出窗类型 showDialogType: { New: 0, Open: 1, Save: 2, SaveCopy: 3, Print: 4, PageSetup: 5, Properties: 6 }, //Word信息内容 wordInfo: { Start: 0, End: 0, Text: &amp;#34;NDOFramer&amp;#34; }, //表单设置 formSettings: { UploadFileId: &amp;#34;EDITFILE&amp;#34;, Data: &amp;#34;savetype=1&amp;amp;fileType=&amp;#34;, FileName: &amp;#34;demo.doc&amp;#34;, FormId: 0 }, _doc: null, _selection: …  ]]></content></entry><entry><title>office在线预览以及在线编辑</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/office%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91/</url><categories><category>开发经验</category></categories><tags><tag>onlineoffice</tag></tags><content type="html">
+https://gitee.com/freshways/dsoframer</content></entry><entry><title>使用IEXPress.exe工具制作CAB包</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iexpress.exe%E5%B7%A5%E5%85%B7%E5%88%B6%E4%BD%9Ccab%E5%8C%85/</url><categories><category>开发经验</category></categories><tags><tag>onlineoffice</tag></tags><content type="html"> Internet软件分发单位是“软件包”，它由包含.INF文件或软件分发.OSD文件（或两者都包括）的.CAB文件所组成。一个分发单位也可以包含软件组件，如ActiveX控件，DLL文件等。在制作CAB文件时，可以使用Windows自带的工具IEXPress.exe，该工具位于（C：\windows\system32）目录下。</content></entry><entry><title>selenium执行js的注意事项</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E6%89%A7%E8%A1%8Cjs%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  1.传参注意事项String js = &#34;var attachments = arguments[0];\n&#34; + &#34;var fjlx = arguments[1];\n&#34; + &#34;var data = arguments[2];\n&#34; + &#34;function addFileByjs(attachments,fjlx,data){\n&#34; + &#34;console.log(attachments);&#34; + &#34;}\n&#34; + &#34;addFileByjs(attachments,fjlx,data);&#34;; ((JavascriptExecutor) browser).executeScript(js,attachments,fjlx,data); ​	executeScript(String var1, Object&hellip; var2)支持传参，参数在js中使用arguments[i]进行接收。arguments[i]必须放置在最外层，放置在函数中会无法赋值。
+2.调用本地js文件执行js函数的示例我们要在Java中执行JavaScriptMethods.js中的execute(s1,s2)方法，JavaScriptMethods.js文件内容如下：
+function execute(s1, s2){ return s1 + s2; } 首先需要定义一个接口，这个接口中给出与要执行的JavaScript方法一样的方法签名，我们定义接口Methods，它的内容如下：
+/** * 接口中的方法签名必须与要执行的JavaScript方法一致 */ public interface Methods { public String execute(String s1,String s2); } 然后，就可以用脚本引擎执行JavaScriptMethods.js中execute(s1,s2)方法了，具体内容写在下面的ExecuteScript类中的：
+import java.io.FileReader; import javax.script.Invocable; import javax.script.ScriptEngine; import javax.script.ScriptEngineManager; public class ExecuteScript { public static void main(String[] args) { ScriptEngineManager manager = new ScriptEngineManager(); ScriptEngine engine = manager.getEngineByName(&#34;js&#34;); try { String path = ExecuteScript.class.getResource(&#34;&#34;).getPath(); System.out.println(path); // FileReader的参数为所要执行的js文件的路径 engine.eval(new FileReader(path + &#34;JavaScriptMethods.js&#34;)); if (engine instanceof Invocable) { Invocable invocable = (Invocable) engine; Methods executeMethod = invocable.getInterface(Methods.class); System.out.println(executeMethod.execute(&#34;hello&#34;, &#34; world&#34;)); } } catch (Exception e) { e.printStackTrace(); } } }   ]]></content></entry><entry><title>selenium与http结合实现附件上传</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E4%B8%8Ehttp%E7%BB%93%E5%90%88%E5%AE%9E%E7%8E%B0%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  背景：
+​	项目中需要进行多个多附件上传，且需要保证每个附件都进行上传，缺少一个附件也不能进行提交操作。这样通过sendkey的方式无法判断上传完成的时机，进行附件上传成功与否的判断就比较复杂。在此情况下，想到了通过selenium和http结合的方式进行附件处理，保证表单所有附件都正确上传后再进行表单提交。
+思路：
+1.获取附件上传链接
+2.获取附件上传所需要的cookie以及参数
+3.进行附件上传
+4.查看上传成功后的处理，执行js进行处理
+代码如下
+//获取cookies Set&lt;Cookie&gt; cookieSet = browser.manage().getCookies(); HttpCookie[] cookies = new HttpCookie[cookieSet.size()]; StringBuilder stringBuilder = new StringBuilder(); int index=0; for(Cookie cookie:cookieSet){ cookies[index]=new HttpCookie(cookie.getName(),cookie.getValue()); stringBuilder.append(cookie.getName()) .append(&#34;=&#34;) .append(cookie.getValue()) .append(&#34;;&#34;) ; index++; } String cookiesStr = stringBuilder.substring(0,stringBuilder.length()-1); //调用http接口进行附件上传 String result = HttpUtil.createPost(&#34;&#34;) .cookie(cookies) .header(Header.COOKIE,cookiesStr) .header(Header.HOST,&#34;ssfw.gdcourts.gov.cn&#34;) .form(&#34;file&#34;,new File(&#34;&#34;)) .execute() .body(); //获取执行结果 JSONObject data = JSON.parseObject(result); //判断上传是否成功并进行处理 if (!data.getBoolean(&#34;success&#34;)){ log.info(&#34;上传失败&#34;); }else { //判断是否成功 //进行js处理 String attachments = &#34;&#34;; String fjlx = &#34;&#34;; String js = &#34;var attachments = arguments[0];\n&#34; + &#34;var fjlx = arguments[1];\n&#34; + &#34;var data = arguments[2];\n&#34; + &#34;function addFileByjs(){\n&#34; + &#34;\tif($.trim(data.fjList)!=&#39;&#39;){\n&#34; + &#34;\t\tvar fjpdf = \&#34;1\&#34;;\n&#34; + &#34;\t\tfor(var i=0;i&lt;data.fjList.length;i++){\n&#34; + &#34;\t\t\tvar fj = data.fjList[i];\n&#34; + &#34;\t\t\tvar suffix = fj.fjmc.substring(fj.fjmc.lastIndexOf(&#39;.&#39;)+1);\n&#34; + &#34;\t\t\tif(suffix == &#39;pdf&#39;){\n&#34; + &#34;\t\t\t\tfjpdf = &#39;2&#39;;\n&#34; + &#34;\t\t\t}\n&#34; + &#34;\t\t\tvar len = $(&#39;#&#39;+attachments).find(\&#34;.attachment_cls\&#34;).length+1;\n&#34; + &#34;\t\t\tvar mc = W21Json[fjlx];\n&#34; + &#34;\t\t\t//替换特殊字符\n&#34; + &#34;\t\t\tvar fjmcTmp = filterSpecialChar(fj.fjmc);\n&#34; + &#34;\t\t\tvar zjmc = mc+\&#34;_\&#34;+len+\&#34;(\&#34;+fjmcTmp+\&#34;)\&#34;;\n&#34; + &#34;\t\t\tvar clone = $(\&#34;#attachment_div\&#34;).clone(true);\n&#34; + &#34;\t\t\tclone.removeAttr(\&#34;id\&#34;);\n&#34; + &#34;\t\t\tclone.find(\&#34;.zjxxs_fjmc\&#34;).attr({\n&#34; + &#34;\t\t\t\t\&#34;href\&#34;:\t\&#34;javascript:void(0);\&#34;,\n&#34; + &#34;\t\t\t\t\&#34;onclick\&#34;:\&#34;funClxxUpload_wzh(this,&#39;\&#34;+fjm+\&#34;&#39;);\&#34;,\n&#34; + &#34;\t\t\t\t\&#34;htitle\&#34;: zjmc,\n&#34; + &#34;\t\t\t\t\&#34;fjmc\&#34;:fjmcTmp\n&#34; + &#34;\t\t\t}).append(zjmc);\n&#34; + &#34;\t\t\tclone.find(\&#34;input[name=&#39;zjxxs.fjid&#39;]\&#34;).val(fj.fjid);\n&#34; + &#34;\t\t\tclone.find(\&#34;input[name=&#39;zjxxs.lx&#39;]\&#34;).val(fjlx);\n&#34; + &#34;\t\t\tclone.find(\&#34;input[name=&#39;zjxxs.zjmc&#39;]\&#34;).val(zjmc);\n&#34; + &#34;\t\t\tclone.appendTo(\&#34;#\&#34;+attachments);\n&#34; + &#34;\t\t}\n&#34; + &#34;\t}\n&#34; + &#34;}\n&#34; + &#34;addFileByjs();&#34;; ((JavascriptExecutor) browser).executeScript(js,attachments,fjlx,data); } executeScript调用js的注意事项见下节内容
+  ]]></content></entry><entry><title>使用Maven将Jar包打到本地仓库</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8maven%E5%B0%86jar%E5%8C%85%E6%89%93%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/</url><categories><category>开发经验</category></categories><tags><tag>maven</tag></tags><content type="html"><![CDATA[  Maven 执行命令
+#Dfile：JAR 包的路径 #DgroupId：groupId(随便填) #DartifactId：artifactId(随便填) #Dversion：版本号(随便填) mvn install:install-file -Dfile=C:\lib\jasperreports-fonts-5.6.0.jar -DgroupId=org.ireport -DartifactId=jasperreports-fonts -Dversion=5.6.0 -Dpackaging=jar Pom.xml 对应上方你填写的名称
+&lt;dependency&gt; &lt;groupId&gt;org.xxxxx&lt;/groupId&gt; &lt;artifactId&gt;xxxxxx&lt;/artifactId&gt; &lt;version&gt;xxxx&lt;/version&gt; &lt;/dependency&gt;   ]]></content></entry><entry><title>Word如何调整文字宽度</title><url>/post/office/word%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E6%96%87%E5%AD%97%E5%AE%BD%E5%BA%A6/</url><categories><category>office</category></categories><tags><tag>office</tag></tags><content type="html"> 打开文档，我们发现内容参差不齐：
+选取需要排版的文字，找到“开始”下方“调整宽度”
+进入设置界面，一般按照你最大的文字宽度设置字符距离：
+达到预期的排版效果：
+有些朋友在操作时会出现图示状况，原因是选取设置的内容时，需要按住CTRL键选择不连续文本，而不能直接选取整个内容。
+你可以将其他部分单个选取设置宽度，也可以按住CTRL键选取后全部设置，达到预期效果。</content></entry><entry><title>WEB套打程序开发 (lodop使用)</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/web%E5%A5%97%E6%89%93%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-lodop%E4%BD%BF%E7%94%A8/</url><categories><category>开发经验</category></categories><tags><tag>lodop</tag></tags><content type="html">
+WEB套打程序开发 (lodop使用)
+WEB套打可选方案不多，理想的更少，利用免费控件Lodop+JavaScript实现精确套打，算是较为经典的选择。这种方案其实比较简单，利用一个htm文件就可以实现模板设计过程，几乎是“空手套”式的开发，但理解这几个步骤还是需要点时间，下面一步步详细演示说明：
+第一步：建立一个空白的模板设计文件
+把以下超文本代码复制到一个本地htm文件中:
+本文模拟EMS特快专递单的程序开发，文件起名为printEMS.htm，权且称它为模板设计文件。
+第二步：用浏览器打开该文件
+在本地文件夹中双击该文件就可以打开，但在进入设计之前，你的机器需要安装Lodop，如果还没安装过，
+请在如下地址下载安装文件(解压rar后运行那个exe文件，Lodop是一个1M左右的小文件)：
+http://www.lodop.net/download.html
+第三步：准备设计
+成功安装Lodop之后再次打开模板设计文件printEMS.htm，点击其中“模板设计”链接，就弹出如下空白的打印设计窗口：
+为了尽快定位模板中的数据位置，你需要做一张票据扫描图作为背景，当然没有扫描图也能完成，只是需要多摸索几次，费点时间而已。
+下面是我做的EMS扫描图，你把该图另存成一个jpg文件，以便我们一起完成后面的演示步骤。
+第四步：装载背景图并调整图片大小
+在打印设计窗口，点下图所示的“装载背景图&amp;amp;hellip;”菜单，调入以上保存的EMS图片文件。
+装载背景图后，点上图所示的“调整背景图&amp;amp;hellip;”菜单，弹出下图“背景图调整”窗口，设定其中的图片宽度为209mm,高度113mm会自动变化。
+这个宽度值是我测量实际票据得来的。如果扫描图是按1:1比例获得的，那么调整背景图这一步就免了，当然要做点这点很难，所以最好还是在这里直接设置具体尺寸反倒简单。
+第五步：添加数据内容，开始打印测试
+点下图所示“插入文本项”菜单，添加打印内容，内容项可以拖拉或精细调整，基本对准之后，点击“预览”按钮（注意旁边的“打印”按钮是收费功能，纸上会有水印，而“预览时的打印”按钮是完全免费的，我们用后者）。
+把内容打印到薄一点的白纸上，然后在阳光下与真实票据透亮对比，以最左最上的某个内容为基准，其它内容远近调整，如此反复测试直到所有内容相互位置都对准。
+这一步先做到内容之间的相互位置对准，等下 …</content></entry><entry><title>java利用Freemarker模板生成docx格式的word文档</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/java%E5%88%A9%E7%94%A8freemarker%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90docx%E6%A0%BC%E5%BC%8F%E7%9A%84word%E6%96%87%E6%A1%A3/</url><categories><category>开发经验</category></categories><tags><tag>word</tag></tags><content type="html"><![CDATA[  利用Freemarker模板生成docx
+思路1.把docx文档修改为ZIP格式（修改.docx后缀名为.zip） 2.获取zip里的document.xml文档以及_rels文件夹下的document.xml.rels文档 3.把内容填充到document.xml里 4.在输入docx文档的时候把填充过内容的的 document.xml用流的方式写入zip（详见下面代码）。 5.输出docx文档 docx模板修改成zip格式后的信息如下（因为word文档本身就是ZIP格式实现的）
+document.xml里存放主要数据 处理流程1.准备好docx模板
+2.把docx文档修改为ZIP格式（修改.docx后缀名为.zip）
+3.获取zip文件里的word文件夹下的document.xml文件作为模板。
+4.填充模板信息。
+5.输出word测试
+代码&lt;dependency&gt; &lt;groupId&gt;cn.hutool&lt;/groupId&gt; &lt;artifactId&gt;hutool-all&lt;/artifactId&gt; &lt;version&gt;5.6.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.freemarker&lt;/groupId&gt; &lt;artifactId&gt;freemarker&lt;/artifactId&gt; &lt;version&gt;2.3.31&lt;/version&gt; &lt;/dependency&gt; import cn.hutool.core.io.FileUtil; import cn.hutool.core.io.IoUtil; import cn.hutool.extra.template.Template; import cn.hutool.extra.template.TemplateConfig; import cn.hutool.extra.template.TemplateEngine; import cn.hutool.extra.template.TemplateUtil; import lombok.extern.slf4j.Slf4j; import org.apache.commons.text.WordUtils; import java.io.*; import java.util.Enumeration; import java.util.HashMap; import java.util.List; import java.util.Map; import java.util.zip.ZipEntry; import java.util.zip.ZipFile; import java.util.zip.ZipOutputStream; @Slf4j public class DocUtils { public static void main(String[] args) { OutputStream outputStream = null; try { outputStream= new FileOutputStream(&#34;e:/test.docx&#34;); Map dataMap = new HashMap(); dataMap.put(&#34;ah&#34;,&#34;1231231&#34;); dataMap.put(&#34;dsrmc&#34;,&#34;456&#34;); createDocx(dataMap,outputStream); } catch (FileNotFoundException e) { e.printStackTrace(); } finally { } } //outputStream 输出流可以自己定义 浏览器或者文件输出流 public static void createDocx(Map dataMap, OutputStream outputStream) { ZipOutputStream zipout = null; try { //内容模板 ByteArrayInputStream documentInput = getFreemarkerContentInputStream(dataMap); //最初设计的模板 File docxFile = new File(&#34;E:\\template.docx&#34;); if (!docxFile.exists()) { docxFile.createNewFile(); } ZipFile zipFile = new ZipFile(docxFile); Enumeration&lt;? extends ZipEntry&gt; zipEntrys = zipFile.entries(); zipout = new ZipOutputStream(outputStream); //开始覆盖文档------------------ int len = -1; byte[] buffer = new byte[1024]; while (zipEntrys.hasMoreElements()) { ZipEntry next = zipEntrys.nextElement(); InputStream is = zipFile.getInputStream(next); if (next.toString().indexOf(&#34;media&#34;) &lt; 0) { zipout.putNextEntry(new ZipEntry(next.getName())); //如果是word/document.xml由我们输入 if (&#34;word/document.xml&#34;.equals(next.getName())) { if (documentInput != null) { while ((len = documentInput.read(buffer)) != -1) { zipout.write(buffer, 0, len); } documentInput.close(); } } else { while ((len = is.read(buffer)) != -1) { zipout.write(buffer, 0, len); } is.close(); } } } } catch (Exception e) { log.error(&#34;word导出失败:&#34;,e); }finally { if(zipout!=null){ try { zipout.close(); } catch (IOException e) { log.error(&#34;io异常&#34;); } } if(outputStream!=null){ try { outputStream.close(); } catch (IOException e) { log.error(&#34;io异常&#34;); } } } } /** * 获取模板字符串输入流 * @param dataMap 参数 * @return */ public static ByteArrayInputStream getFreemarkerContentInputStream(Map dataMap) { ByteArrayInputStream in = null; try { TemplateEngine engine = TemplateUtil.createEngine(new TemplateConfig()); String templateStr= FileUtil.readString(new File(&#34;E:\\document.xml&#34;),&#34;utf-8&#34;); Template template = engine.getTemplate(templateStr); String result = template.render(dataMap); //这里一定要设置utf-8编码 否则导出的word中中文会是乱码 in = new ByteArrayInputStream(result.getBytes(&#34;utf-8&#34;)); } catch (Exception e) { log.error(&#34;模板生成错误！&#34;); } return in; } }   ]]></content></entry><entry><title>使用selenium 接管 已打开的浏览器</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E4%BD%BF%E7%94%A8selenium-%E6%8E%A5%E7%AE%A1-%E5%B7%B2%E6%89%93%E5%BC%80%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  在使用selenium进行自动化测试中我们有时会遇到这样的情况：
+​ 我们需要手动打开浏览器，进入到所需的页面，执行一些手动任务，如输入表单、输入验证码，登陆成功后，然后再开始运行自动化脚本。
+这种情况下如何使用selenium来接管先前已打开的浏览器呢？
+这里给出Google Chrome浏览器的解决方案。
+我们可以利用Chrome DevTools协议。它允许客户检查和调试Chrome浏览器。
+打开cmd，在命令行中输入命令：
+chrome.exe &amp;ndash;remote-debugging-port=9222 &amp;ndash;user-data-dir=&amp;ldquo;C:\selenum\AutomationProfile&amp;rdquo;
+对于-remote-debugging-port值，可以指定任何打开的端口。
+对于-user-data-dir标记，指定创建新Chrome配置文件的目录。它是为了确保在单独的配置文件中启动chrome，不会污染你的默认配置文件。
+还有，不要忘了在环境变量中PATH里将chrome的路径添加进去。
+此时会打开一个浏览器页面，我们输入百度网址，我们把它当成一个已存在的浏览器：
+现在，我们需要接管上面的浏览器。新建一个python文件，运行以下代码：
+from selenium import webdriver from selenium.webdriver.chrome.options import Options chrome_options = Options() chrome_options.add_experimental_option(&amp;#34;debuggerAddress&amp;#34;, &amp;#34;127.0.0.1:9222&amp;#34;) chrome_driver = &amp;#34;C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe&amp;#34; driver = webdriver.Chrome(chrome_driver, chrome_options=chrome_options) print(driver.title) 会发现打印出了 “百度一下，你就知道” 的网页标题。这样我们就实现了对一个已打开的浏览器的控制。
+import …  ]]></content></entry><entry><title>教你一招，让 Selenium 在 Linux 中以有头模式运行</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E6%95%99%E4%BD%A0%E4%B8%80%E6%8B%9B%E8%AE%A9-selenium-%E5%9C%A8-linux-%E4%B8%AD%E4%BB%A5%E6%9C%89%E5%A4%B4%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8C/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"> 经常使用 Selenium 或者 Puppeteer 的同学都知道，启动的 Chrome 浏览器分为有头模式和无头模式
+如果是有头模式，则会弹出一个 Chrome 浏览器窗口，然后你能看到这个浏览器里面在自动操作；而无头模式则不会弹出任何窗口，只有产生一个进程
+下面这篇文章中，我们介绍了一个探测模拟浏览器特征的网站
+别去送死了！爬虫使用 Selenium 与 Puppeteer 能被网站探测的几十个特征
+通过他我们可以发现，在不做任何设置的情况下，Selenium 或者 Puppeteer 启动的浏览器有几十个特征能够被目标网站识别为爬虫，并且无头模式的特征比有头模式的特征多得多
+也就是说，即使你不使用任何隐藏特征的技术，仅仅使用有头模式，你都会安全很多；如果网站不是非常严格的反爬虫，很多情况下，使用无头模式更容易被发现，但使用有头模式，更难被发现
+下图为使用 有头模式，不使用任何隐藏特征的技术访问检测网站：
+下图为使用 无头模式，不使用任何隐藏特征的技术访问检测网站：
+万里河山一片红
+所以，一般情况下，你应该多使用有头模式
+但问题在于，当我们要在 Linux 服务器上面使用 Selenium 或者 Puppeteer 运行爬虫的时候，就会发现有头模式始终会报错
+这是因为，有头模式需要系统提供图形界面支持，才能绘制浏览器窗口，但是 Linux 服务器一般来说是没有图形界面的，所以有头模式一定会失败
+在这种情况下，为了能够使用模拟浏览器的有头模式，我们需要搞一个假的图形界面出来，从而欺骗浏览器，让它的有头模式能够正常使用
+为了达到这个目的，我们可以使用一个叫做 Xvfb的东西，这个东西在维基百科上面的介绍[1]如下：
+Xvfb or X virtual framebuffer is a display server implementing the X11 display server protocol. In contrast to other display servers, Xvfb performs all graphical operations in virtual memory without showing any screen output.
+Xvfb 在一个没有图像设备的机器上实现了 X11显示服务的协议，它实现了其他图形界面都有的各种接口，但并没 …</content></entry><entry><title>图画书幼儿观察能力的年龄特点与指导策略（5—6岁）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E5%9B%BE%E7%94%BB%E4%B9%A6%E5%B9%BC%E5%84%BF%E8%A7%82%E5%AF%9F%E8%83%BD%E5%8A%9B%E7%9A%84%E5%B9%B4%E9%BE%84%E7%89%B9%E7%82%B9%E4%B8%8E%E6%8C%87%E5%AF%BC%E7%AD%96%E7%95%A556%E5%B2%81/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> （一）5～6岁幼儿图画观察能力的基本特点是：
+能很好地把握单页图画中各个事物之间的关系，也能在一定程度上把握页与页之间的内容联系，观察的有序性、细致性、概括性、坚持性等已发展到一定水平。
+绝大部分幼儿能按顺序完整讲述单页图画的内容，大部分幼儿能完整讲述多页图画所呈现的内容，部分幼儿能够完整讲述整本书的图画内容。
+​ 2. 能够对画面信息进行较为深入的分析、解释，作出某种推断。
+幼儿不仅能比较细致地观察、描述图画内容，还能对图画中隐藏的人物心理、因果关系等进行一定程度的探究，也能根据画面提供的信息对图画内容进行预测和推断。
+​ 3. 在理解图画内容的基础上，能在教师有针对性的引导下理解图画书的表现方式，即基本结构。
+(二)5～6岁幼儿图画观察能力发展的指导策略：
+教师对5～6岁幼儿图画观察能力的指导可重在对多页图画内容的连续观察上，从而引导幼儿由关注单页图画的内容向分析、推断多页图画内在的联系乃至主题内容、逻辑关系等过渡，培养幼儿对于图画内在信息的分析、推理能力，帮助幼儿逐渐了解图画书的基本结构。具体可运用以下指导策略：
+​ 1．根据图画书的结构引导幼儿连续观察多页画面，从整体上把握图画书的基本内容。
+图画书的图画总是以一定的结构呈现的，有的是连续性的情节结构，比如说我们前面提到的《古利和古拉》，有的是句式重复的结构，比如说《逃家小兔》。我们可以帮助幼儿发现其中的内在规律，根据图画书内容将其划分为多个完整意义单元，请幼儿观察一个完整意义单元后，再对这个完整意义单元的图画进行表述。
+比如故事《逃家小兔》，便是句式重复的结构，妈妈和小兔以“如果你变成……我就变成……”的句式展开对话来编构故事情节。我们也会发现它是由两个页面构成的完整意义单元，例如小兔说：“如果你变成大树，我就变成小帆船，漂得远远的，远远的。”妈妈说：“如果你变成小帆船，我就变成风，把你吹到你想去的地方。”我们可以让幼儿先观察这两个画面，一幅是海面上飘着一只小帆船，这只小帆船和我们平时看见的不一样，它长着长长的兔子耳朵，让幼儿想象这个小帆船便是小兔子变得。另一幅图画和前一幅的区别就在于，图妈妈出现在远处，大口大口地吹着凤，兔妈妈变成了一阵阵地风，把小帆船吹得远远的。这样的画面能引起幼儿无尽的想象。
+这个故事中每两个页面构成一个完整意义单元，整个故事有九个这样的意义单元，每个意义单元之间也是密切联系，不管小兔 …</content></entry><entry><title>图画书幼儿观察能力的年龄特点与指导策略（4—5岁）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E5%9B%BE%E7%94%BB%E4%B9%A6%E5%B9%BC%E5%84%BF%E8%A7%82%E5%AF%9F%E8%83%BD%E5%8A%9B%E7%9A%84%E5%B9%B4%E9%BE%84%E7%89%B9%E7%82%B9%E4%B8%8E%E6%8C%87%E5%AF%BC%E7%AD%96%E7%95%A545%E5%B2%81/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> （一）4～5岁幼儿图画观察能力的基本特点是：
+​ 1. 观察的有序性增强。
+通过前期的引导，我们发现这一时期幼儿能逐渐按照从主到次、从左到右、从上到下等基本顺序观察图画，开始意识到单页图画中各事物之间的联系，也能够用自己的话简单概括出单页图画的基本内容，但对连续观察多页图画并概括其内容有较大困难。
+​ 2. 高度关注细节，尝试赋予每个细节以意义。
+中班幼儿对图画的某些细节有着特别的观察兴趣，并喜欢由此展开想象。如图画书《爷爷一定有办法》中，有一个细节就是图画的下方有“小老鼠一家”，这让幼儿特别感兴趣，其实这个细节在故事中并没有什么特殊的意义，但幼儿会特别关注，而且对每一页小老鼠的活动都非常感兴趣。
+​ 3. 能发现关键线索，但还不能贯穿观察的始终。
+如在《爷爷一定有办法》中，图画的关键线索是旧毯子做成的东西越来越小，从最开始的外套到后来的背心、领带、纽扣。可能经我们引导，幼儿在刚开始阅读时可能会发现这条关键线索，但随着阅读活动的延续，很多幼儿会“忘记”利用该线索来预测故事情节。
+(二)4～5岁幼儿图画观察能力发展的指导策略：
+教师对4～5岁幼儿图画观察能力的指导应先重在帮助幼儿整体观察单页图画，然后逐渐过渡到对两页以至多页图画的连续观察，重在提高幼儿对多页图画观察的概括性，帮助幼儿理解画页间的联系。具体可运用以下指导策略：
+​ 1．初次阅读时，引导幼儿把握故事主要线索，忽略无关细节。
+刚刚我们谈到过，这一时期幼儿对某些细节部分格外感兴趣，并喜欢展开想象。所以在初次阅读的过程中，教师不要主动提及无关细节让幼儿观察，即便有幼儿关注，我们也尽量采用“忽略”策略，以防幼儿将关注点投向寻找细节和赋予细节意义上，或者展开过多的想象，影响对图画主要内容的观察和理解。
+如在《爷爷一定有办法》中，教师在初次引导幼儿观察图画时应该先以“约瑟一家”这条线索为主，让幼儿跟随故事画面，从毯子到外套，再到背心，领带……随着故事的进展，在爷爷说出：“这块料子还够做……”时，引导幼儿发挥想象，接下来还可以做什么呢？
+在初次观察的时候，“小老鼠一家”这条辅助线索可暂时不观察。不过，关于这个细节，我们也可以想一想，为什么这个图画书中会有小老鼠一家这个细节呢？因为约瑟爷爷剪下来的那些碎毯子，最后都掉到了小老鼠一家中，成了它们布置房间的好材料，包括最后的那一粒让约瑟怎么都找不到的纽扣。在理解了故事之后，我 …</content></entry><entry><title>图画书幼儿观察能力的年龄特点与指导策略（3—4岁）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E5%9B%BE%E7%94%BB%E4%B9%A6%E5%B9%BC%E5%84%BF%E8%A7%82%E5%AF%9F%E8%83%BD%E5%8A%9B%E7%9A%84%E5%B9%B4%E9%BE%84%E7%89%B9%E7%82%B9%E4%B8%8E%E6%8C%87%E5%AF%BC%E7%AD%96%E7%95%A534%E5%B2%81/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 总体来看，小班幼儿在观察图画的时候，最突出特点就是喜欢关注单个、零散的事物，不能按顺序观察，具体有以下表现：
+(一)3～4岁幼儿图画观察能力的基本特点：
+​ 1. 能指认图画中的单个事物并命名。
+我们发现，幼儿在这一时期已经能辨认生活中的很多具体事物，只要图画中出现的事物处于幼儿经验范围之内，他们就能说出单个事物是什么，而且还非常乐意指着图画中自己认识的事物说个不停。
+​ 2. 容易注意到零散、个别的现象或事物，尤其是与其兴趣直接相关的事物，但很难把握图画中各事物之间、事物与整体环境之间的关系。
+比如说《小田鼠的背带裤》这个故事中，看第一幅图画，幼儿就会被画面上众多的小动物所吸引，可能会指着小老鼠、兔子、猪、河马说着它们的名字，而丝毫不关注小田鼠身上的那件颜色鲜亮的背带裤，小田鼠穿上这件背带裤时得意的神情，和其它小动物看到小田鼠这件背带裤时羡慕的眼神，也不会想到围绕这件让大家都羡慕不已的背带裤，接下来会发生些什么事情。
+基于以上特点，容易产生的问题就是幼儿会格外关注图画中单个具体的事物，不能很好地抓住单页图画中的关键信息，也无法从整体上把握单页图画描述的主题，很难对一幅完整的图画进行概括性的表述。
+​ 3. 观察的无序性突出，坚持性较差。
+幼儿基本上不知道应该按什么顺序观察一幅图画，他们往往喜欢总从自身的经验或者是自己的兴趣出发跳跃着观察，注意力往往集中在自己熟悉、喜欢的事物上，持续观察时间也不长。
+针对以上特点，我们对3～4岁幼儿图画观察能力的指导应重在培养幼儿细致、有序地观察单页图画，抓住单页图画中的重点细节进行观察，逐步发现单页中各事物之间的联系，并能概括单页图画内容的能力。具体可运用以下指导策略：
+(二)3～4岁幼儿图画观察能力发展的指导策略：
+​ 1．提出明确、具体的观察任务。
+前面我们在“幼儿观察目的性发展”这一部分提到过，这一时期幼儿不能达到有目的地观察，有时候只看一处，有时候随意乱指。如何解决这个问题呢？我们可以用明确、具体的观察任务来加以引导。
+具体来说，我们可以将观察任务化解成具体的问题来引导幼儿有针对性地观察，获取关键信息。在这里，提什么样的问题也很关键 。
+【提问】比如说，小田鼠的背带裤第一页，我们要给幼儿的观察任务就是请幼儿观察小田鼠的穿着和其他小动物有什么不同，从而让幼儿将注意力集中在小田鼠的这条背带裤上。针对这个任务，我们该如何提问呢？ …</content></entry><entry><title>图画书幼儿观察能力发展特点</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E5%9B%BE%E7%94%BB%E4%B9%A6%E5%B9%BC%E5%84%BF%E8%A7%82%E5%AF%9F%E8%83%BD%E5%8A%9B%E5%8F%91%E5%B1%95%E7%89%B9%E7%82%B9/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 幼儿期是观察力发展的萌芽阶段。3岁以前幼儿的观察多是随意的，无目的性的。比如说，这一时期的幼儿在小区玩耍的时候，无意中会被鸟儿的喳喳声，汽车的喇叭声，还有开得正艳的花朵等各种事物所吸引，有时候还会盯着自己感兴趣的事物看上好一阵子。这时他们的知觉是被动的，是无意的知觉，简单地说，这些知觉都是由外界刺激物引起的。
+而当幼儿渐渐成长，我们带着他到户外去感受春天，观察春天的树叶、花朵，分辨它们不同的颜色，感觉不同的气味，感受春天的阳光、微风时，这时的观察才是视觉、听觉、触觉、嗅觉等多种感知觉综合的结果，这个过程中包含着理解、思考，有一定的目的性和计划性。
+我们发现，幼儿早期的观察基本上是被动的、无意识的观察，这一时期的观察需要成人的引导，否则很容易被外界其他事物所吸引，分散注意力。随着年龄的增长，在我们正确的教育和引导下，幼儿的观察能力逐渐由先前的无意知觉转变为有目的、有组织的多重感知觉综合的“思维的知觉”，形成初步的有目的、有方向、自觉的观察能力。
+但就整个发展来说，幼儿观察力的发展还是不够的，他们观察的目的性、持续性、理解性、条理性等都还不强。具体表现在以下几个方面：
+一、观察的目的性发展
+刚刚我们谈到，幼儿早期的观察是随意的，无目的性的。这一时期的观察需要成人的引导，否则很容易被其他事物所吸引。到了中后期，幼儿观察的目的性增强，开始排除干扰，主动进行观察。在—项关于幼儿观察的研究中，研究者将幼儿观察的目的性分成了三级水平。
+一级：能根据任务有目的地观察，遇到困难和干扰也能坚持细致观察；
+二级：能够有目的地观察，但遇到困难和干扰不能克服，不愿坚持；
+三级：不能根据任务有目的地观察，东张西望，或只看一处，或随意乱指。
+二、观察的持续性发展
+​ 我们都知道，幼儿自我控制力较差，容易受外界的干扰，所以他们无法像成人一样坚持长时间观察。另外，幼儿的情绪、兴趣、爱好等也会影响观察的时间。不过在教育和引导下，幼儿可以逐渐学会持续地观察事物。
+在上述的测查实验中，各年龄幼儿观察图画的平均持续时间随年龄增长而延长。3—4岁幼儿的观察时间平均为6分8秒； 5岁时为7分6秒； 6岁为12分3秒。从6岁开始，观察的持续时间显著增加。这表明大班学生是观察持续性发展的快速期。
+三、观察的理解性的发展
+所谓观察的理解性就是指在观察过程中，善于发现某种事物的特征，能透过事物的表面现象，发现事物之间的 …</content></entry><entry><title>亲子共读的指导策略</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E4%BA%B2%E5%AD%90%E5%85%B1%E8%AF%BB%E7%9A%84%E6%8C%87%E5%AF%BC%E7%AD%96%E7%95%A5/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 一、亲子共读的类型
+（一）平行式亲子阅读
+特点：母亲与孩子一起阅读的时候,基本不谈论或者很少谈论图画书的内容。
+总结：平行式亲子阅读关系没有发挥帮助幼儿,支持幼儿持续阅读的作用。
+（二）偏离式亲子阅读
+特点: １.无视或者忽略书中文字的作用。
+2.误读画面内容,过度注意细枝末节。
+3.随意,过多地无意联想。
+4.表面上是围绕故事书在交流,实际上已经游离于故事情景之外。
+总结:偏离式阅读是水平较低的一种阅读行为,母亲的阅读”指导”无形中会让幼儿对图画故事产生错觉,认为故事无趣,没有任何挑战性。
+（三）合作式亲子阅读
+特点：母亲与孩子围绕图画书故事展开有效交流的一种亲子阅读形式。
+总结:在合作式亲子阅读中,母亲适宜的指导,对幼儿良好习惯的形成,阅读兴趣的激发,基本阅读能力和元认知能力的培养均会起到促进作用。
+二、指导家长进行家庭早期阅读的策略
+（一）指导家长为幼儿创设阅读环境
+家长在家里也应为孩子创设一个自由读书的空间,让孩子随手可以拿到自己喜爱的书，并给家庭中的物品做一些名称标记,如“妈妈的房间”,“宝宝的玩具狗”“电视机”等。家长还可以通过指导幼儿观察不同的印刷品来帮助幼儿了解文字的功能和重要意义,如查看账单、信件、报纸或购物单等。从不同的活动中不断丰富阅读内容,也进一步培养幼儿阅读能力。
+我们要充分利用家访和接送幼儿的机会，与家长交流，使家长明白，良好的阅读习惯和能力对幼儿想象力、创造力、语言表达能力的提高有着密切的关系。鼓励家长在家中也为孩子创设良好的阅读环境，每天抽出时间为孩子朗读故事，和孩子共同看画面，帮助孩子理解内容等等。
+（二）指导家长利用社区资源进行早期阅读
+幼儿与家庭有意为孩子创设的是一个固定的环境,自然和社会则是一个千变万化的大环境,是幼儿更容易获取阅读信息的大课堂。公路的名称,交通标志,商店的名称,广告用语等都是很好的阅读材料。
+（“鸣喇叭”的标志表示机动车行至该标志处必须鸣喇叭。此标志设在公路的急转弯处、陡坡等视线不良路段的起点。）
+（三）家庭与幼儿园之间开展多种形式的互动
+全面提升孩子的各种综合能力。针对我国当前家庭的现状，大多数以三口之家为主，孩子从小就缺乏过集体生活的经历，而且大都以自我为主，很少能够替别人考虑，比较霸道任性，幼儿园开展了形式多样的互动活动，让孩子们在玩的过程中成长。家园合作活动的开展，不仅使家长成为活动的参与者，而且还是 …</content></entry><entry><title>幼儿故事的分类及策略</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E5%B9%BC%E5%84%BF%E6%95%85%E4%BA%8B%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E7%AD%96%E7%95%A5/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 儿童故事是一种具有悠久历史的儿童文学体裁，以其起伏多变、充满童趣的情节在小读者中播撒着文学的种子，因而他在儿童文学中站着十分重要的位置。故事作为一种最受幼儿喜欢的文字形式，其优美的景色，典型的人物形象塑造，生动的故事讲述，让幼儿深深为之吸引，使他们增长了知识，发展了智力，并从中受到感染和教育，懂得什么是真善美，什么的假丑恶，从而培养爱憎分明的情感，并把学到的好思想见褚于行动中。
+一、幼儿故事的分类
+1、幼儿故事一般分为：民间故事、动物故事、历史故事、地理故事、生活故事
+2、按照故事题材分：亲情类、社交类、成长类、励志类、知识类、友情类、行为习惯类、个性培养类。
+二、不同年龄幼儿故事学习的特点
+1．小班
+幼儿已有简单的故事图式，但这个时期他们对故事的理解往往集中于某一个人物或者某一个事物，不能进行连贯的理解。教师应该注重语言规范的引导、故事情节连贯性的建构，引导幼儿了解故事发展的因果关系。教师所提供的故事内容应情节简单、语言简洁明了、易于理解、故事图画书的画面以简单为主要内容。
+2．中班
+这个时期是幼儿故事建构的重要时期。教师要充分利用各种活动，提供合适的、种类丰富的刺激材料发展幼儿故事的表述能力。教师要注重指导幼儿建构故事情节的完整结构，如故事高潮部分的讲述、对故事细节信息的关注、把握故事主题等。
+3．大班
+幼儿故事讲述、复述、续编能力都有了很大提高。教师要注重在对故事内容理解的指导，续编更适合大班幼儿。
+三、不同类型故事的教学策略
+（一）亲情类：
+1．概念：故事情节主要以家人之间的爱为线索展开讲述，让幼儿感受父母是如何我们，我们应该如何去爱父母。
+2．教学策略：这一类的故事适合用谈话法。
+通过老师设置不同的问题，层层深入的引导幼儿感受父母、长辈对自己的爱。只有这样才能让幼儿充分的感受到这种情感的教育与熏陶。
+（二）社交类：
+1．概念：通过各种生活故事，培养正在成长中幼儿初步的社会交往能力，告诉幼儿怎样与同伴相处。
+2．教学策略：这一类故事都是来源于幼儿的实际生活场景，并且是通过故事情节培养幼儿与人交往的方式。因此适合用故事表演法，让幼儿通过扮演故事中的角色，体验角色的感受，从而获得交往的能力。
+（三）成长类：
+1．概念：通过一些简单的事件或孩子成长的对比告诉孩子成长的过程是曲折的，也是快乐的。
+2．教学策略：这一类故事适合运用列提纲法和自制图书法。成长类故事主要是 …</content></entry><entry><title>绘本教学的组织方法及策略（四）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E7%BB%98%E6%9C%AC%E6%95%99%E5%AD%A6%E7%9A%84%E7%BB%84%E7%BB%87%E6%96%B9%E6%B3%95%E5%8F%8A%E7%AD%96%E7%95%A5%E5%9B%9B/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 根据教学的策略来分：
+观察式清晰阅读法
+​ 绘本是一种独立的图书形式，文字与图画共同承担着讲故事的重要责任，图画不再仅仅起辅助和诠释文字的作用，图画、文字之间是一种平衡的关系，相互衬托，才能营造出整个绘本的完美感觉，所以绘本特别注重文字与图画的内在关系。当然，也有一些相当著名的绘本只有图画，而完全没有文字。
+​ 绘本《神秘的大衣》这样的图画与文字的结合，深深地吸引住了孩子们的眼球，孩子们的观察力被这么拟人化的展示充分的调动起来，他们在阅读时很容易就关注到了类似于这样的有趣细节，可以让孩子们清晰地了解绘本的脉络，为成功阅读提供了有效的保证。
+想象式深入阅读法
+​ 优秀的绘本能给幼儿提供无限的想象空间，而包含了幼儿丰富想象的绘本更是拓展了原有作品的内涵，使其变得更加丰满。
+​ 1．预测故事。无论什么书，封面都是最先映入读者眼帘的，而在阅读前让孩子对故事进行猜测会激起孩子强烈的阅读欲望。比如绘本《神秘的大衣》的封面，瞧瞧他，一副神秘兮兮的样子，胖得无边无际，领子里居然露出火烈鸟的长脖子、长颈鹿的脑袋、兔子的耳朵。蜥蜴从他的衣襟里探出身来。他的挎包里面，蹲着两只怪模怪样的鹅。他的如同鳄鱼一般起伏的背上，停着一只乌鸦……
+​ 2．设疑想象。设置这样的环节，意在培养幼儿大胆质疑、猜想、预测等主动学习的能力。同时也能帮助教师了解幼儿的实际水平和已有的生活经验，为更好的阅读绘本奠定扎实的基础。如《我的幸运一天》看了题目和封面就设疑：这是谁的幸运一天呢？他幸运在什么地方呢？（它为什么会幸运呢）等等。
+​ 3．合理联想。幼儿在看一本书时，不仅会联想到现实的生活、其他的文学作品、还会把自己想象成这个作品中喜欢的角色，这就是幼儿的年龄特征所引发的。如《蛤蟆爷爷的秘诀》“如果你遇见了这样的怪兽，你会怎么办？”
+游戏情景式探究阅读法
+​ 当阅读引起了强烈的情感共鸣时，幼儿常常会以角色扮演和身体动作等方式对绘本作出回应。当幼儿听到故事的高潮部分时或是阅读之后，幼儿的角色往往会从一个听众变成一个游戏者，在游戏的情境中，幼儿不是孤立存在的，有了伙伴的互动，大家可以共享对故事的不同见解，他们有时会用自己独特的动作或是简短语言以示回应，这也是幼儿将动作和语言结合起来表现对故事的理解，这样的游戏方式能促进幼儿更深入地探究绘本。
+​ 1．绘本阅读中的游戏。如在《猜猜我有多爱你》中让老师和家长扮演大兔子，小朋 …</content></entry><entry><title>绘本教学的组织方法及策略（三）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E7%BB%98%E6%9C%AC%E6%95%99%E5%AD%A6%E7%9A%84%E7%BB%84%E7%BB%87%E6%96%B9%E6%B3%95%E5%8F%8A%E7%AD%96%E7%95%A5%E4%B8%89/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> （三）集体教学的组织方法及策略。
+根据教学的方式来分：1、分段式2、主干式3、细节式4、整体式5、综合式
+分段式阅读法——有机运用故事情节。
+分段式阅读法是将一个绘本分成几个部分逐步进行教学的方法。绘本通常以较多连续的画面展示一个完整的故事，相对而言有故事的容量比较大，而且不少的作品情节跌宕起伏，每个转折的关键情节都是一个很好的教学契机，这样的绘本就很适合进行分段式的阅读。比如绘本《给天使一对翅膀》为例。将绘本的阅读分成三部分进行，第一部分集体阅读，知道小男孩画了一个天使，而天使不要那种有羽毛的翅膀。第二部分亲子阅读，小男孩为天使画了许多美丽而又新奇的翅膀。第三部分集体阅读，天使为了报答小男孩，带着小男孩绕着老胡桃树飞了三圈。最后再完整阅读故事。 主干式阅读法——突出呈现故事的主题。
+主干式阅读法指的是在不影响作品主题的前提下，抽出绘本主要的骨架展开的教学方法。在阅读这类绘本时我们可以尝试在第一次的阅读中可采取先阅读故事的主要情节、简化语言等方式，再进入第二次的深入阅读。例如绘本《蛤蟆爷爷的秘诀》《神秘的大衣》。 ** ** 细节式阅读法**——**细致地感受作品精髓。 细节式阅读法指细致地观察绘本中有趣的细节，从而达到感受作品完美意境的方法。虽然每本书的文图构成不同，以图画为主，有的绘本文字少，有的文字多，但优秀的绘本文字都考虑了情节、场景、人物、心理等的变化，图画也具有动态感和流畅性，使整个画面看起来和谐、完整。一些图画设计非常巧妙，别具匠心，既能协助突出主题，又能让人忍俊不禁，运用细节式阅读绘本中这些精彩的部分，能让幼儿更细致感受作品，有时也能以这种方式切入来阅读绘本。如《母鸡萝丝去散步》，在故事的扉页有一张地图，就是母鸡散步的路线，画面把萝丝的家、院子、池塘、草垛、磨房、篱笆和蜂箱完整而连贯地以大页面的方式展现，把故事情节的主线直接拎出来，与地图上“母鸡萝丝去散步”相呼应，作者的考虑是多么的巧妙与慎密。
+整体式阅读法**——**整体地展现作品内容。
+整体式阅读法是完整地阅读整个绘本的教学方法。精彩的绘本图画艺术性强，非常富有情感，故事的主题来自于幼儿的生活经验，能引发幼儿共鸣的，完整地阅读能带给幼儿情感上的冲击、语言上的提升。在绘本阅读中，整体式的阅读是最重要的策略之一，它经常使用在绘本的内容比较浅显或重复较多、幼儿阅读能力较强、阅读相似的绘本、分段阅读之后 …</content></entry><entry><title>绘本教学的组织方法及策略（二）</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E7%BB%98%E6%9C%AC%E6%95%99%E5%AD%A6%E7%9A%84%E7%BB%84%E7%BB%87%E6%96%B9%E6%B3%95%E5%8F%8A%E7%AD%96%E7%95%A5%E4%BA%8C/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> ​ 绘本教学必须要关注的三个要素：故事情节、画面和儿童。教师必须事先挖掘绘本故事的内涵，结合故事的发展脉络，联系儿童的实际生活，用适合儿童心理特点的语言表达出来，并适时引导他们思考。同时，绘本教学，还要关注一个**“绘”字，即抓住绘本的视觉元素**，在讲述精彩故事的同时引导儿童仔细观察故事画面。一方面可以帮助儿童在听的过程中学会欣赏美、感受美，另一方面可以借图片内容进一步烘托故事主题。
+绘本教学的目标：（即三要三不要）** ** “ 三要”： ●要激起幼儿阅读的欲望和兴趣（现在的教是为了以后的不教） ●要关注自主阅读的培养，重视对孩子读图、看图、阅读图的技能（关注到绘本的特质所隐含的教育价值） ●绘本是文化传承的通道，要培养孩子的智慧
+“三不要”： ●不用怀疑孩子的理解能力，孩子是看绘本的天才 ●不必强求完整的故事内容 ●不必强调深奥的道理（随机渗透）→因为绘本不单单只是一个道理，隐含在里面的教育意义很多很多
+（一）怎样选择绘本？
+1、要根据年龄的特点选择适合的绘本。
+2、内容要贴近幼儿的生活经验。（儿童的经验是儿童和画面碰撞的依据，它能让幼儿与画面里的角色行为产生共鸣。共鸣中的欣喜或烦恼都会刺激幼儿的阅读情绪，这是儿童自主阅读的支柱。为此，选择绘本要有儿童喜欢的对象，最好是动物和儿童自己。）
+3、为幼儿的阅读和理解带来一定的挑战。
+4、画面和颜色也是选择的一个重要因素。(幼儿喜欢的色彩是鲜明而不紊乱，大块色彩和小块结合，大块色彩最好能凸显出故事角色。故事中的角色要动态夸张，能诱发儿童的好奇心，会自然地运用形象的语言、比喻的手法自编故事内容，有声有色地讲述。颜色应是鲜明的，布局应是简单整齐的。如：故事的讲述形式或采用重复的结构方式、或情节与情节之间存在一定的逻辑关系，这样的读本就便于孩子们阅读和理解。)
+（二）教师怎样研读绘本？
+1、熟悉绘本。（看题目猜想故事情节？看封面猜想人物、动物及故事情节？看绘本）
+2、查阅相关教学资料。
+3、备课。我们要学会剖析绘本的图片特点，寻找教育元素。因绘本来自于国外，它具有他国的文化背景因素。对我们来说，也许有生疏之感，只有细细解读才能领悟文本作者所传递的信息，才能找到相关的教育元素。只有掌握了相关的教育元素，才能跟随幼儿自主阅读，在过程中给予合适的引导。
+这里我要特别讲一下：
+​ 我们应该挖掘环衬、扉页上所隐含的教育元素，发挥其正 …</content></entry><entry><title>绘本教学的组织策略</title><url>/post/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E7%BB%98%E6%9C%AC%E6%95%99%E5%AD%A6%E7%9A%84%E7%BB%84%E7%BB%87%E7%AD%96%E7%95%A5/</url><categories><category>生活学习</category></categories><tags><tag>绘本</tag></tags><content type="html"> 一、什么是绘本。
+●绘本，英文为「picture books」，在日本译为「绘本」，直译为图画书绘本是以图文并茂的形式，反映儿童生活为主的儿童图书。这一类书籍特别强调视觉传达的效果，所以版面大而精美，不仅具有辅助文字传达的功能，更能增强主题内容的表现。优秀的绘本能够给孩子带来愉悦和幸福感，让孩子充分体会到阅读的快乐。
+●绘本教学活动是教师有目的、有计划有组织地把绘本作为教材为提升幼儿阅读能力服务的教与学的全过程，使师生共同进步的活动。
+二、绘本的特点。
+●从文学的角度来说有文学性、生活性、教育性、情趣性；
+●从美术的角度说，有美术表达形式的多样性、物像形态的生动性、色彩鲜明的协调性；
+●从结构的角度看，精美完整（封面、封底、环衬、扉页、独页、跨页等）。
+三、绘本的特质及价值。
+1、特质——用一个词语概括“赏心悦目”
+●“赏心”是指图文互为补充，互相交融，体现了一种既高深又轻浅的儿童哲学，衍生出精神上的享受。
+●“悦目”是因为绘本表现形式使人眼前一亮，难以忘怀。
+2、绘本教学的价值——套用一个股票的俗语“一支绩优股”
+●让幼儿学会阅读。
+●让幼儿学会观察、想像、推理。
+●让幼儿学会丰富的语言。（儿童文学作家使用孩子可以解读的词汇，熟悉的语句结构，再将主题巧妙涵盖进去，汇聚成结构完整与内容丰富的故事。透过阅读，孩子无形中便培养出精湛的语文能力。）
+●让幼儿懂得美术欣赏。（目前绘本中的图画部分，都是世界上知名插画家作品，他们运用各种材质，营造故事情节，让孩子在阅读过程中，享受文学，也感染到美学。在同一绘本中，根据自身的体验解读出不同的图意，使孩子充分享受阅读的乐趣。）
+●让幼儿学会如何去发现，去思考，去表达。（绘本故事横跨国界，穿越各种文化背景，透过文字与画面，孩子得以进入不同的世界，让创意无限扩大。引发儿童情感的共鸣、呼应，激发内心真实的情感体验，使儿童凭借各自对绘本的理解，对事物的认识以及生活体验和想像，做出种种猜想推测。在这里，孩子的推理也许与故事不谋而合，也许相差悬殊，但结果并不重要，重要的是要学会如何去发现，去思考，去表达。）
+●让幼儿懂得如何生活。口语教条式的灌输道德教育，僵化了教学方式，也拉远了与孩子间的距离。然而，借着生活化的绘本内容，孩子透过同伴间的讨论，吸收、激荡、转化各种观点，最后学习到清楚的价值观，并将此种能力运用在曰常生活上的应对，形成积极向上的 …</content></entry><entry><title>绿色版本JDK制作方法</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E7%BB%BF%E8%89%B2%E7%89%88%E6%9C%ACjdk%E5%88%B6%E4%BD%9C%E6%96%B9%E6%B3%95/</url><categories><category>开发经验</category></categories><tags><tag>JDK</tag></tags><content type="html"><![CDATA[  1. 下载官网EXE版本的jdk安装包2. 提取JDK文件以下为JDK1.8的提取方式，不同版本路径有所不同。1. 使用7-ZIP压缩工具打开EXE文件2. 找到JDK文件的目录1. JDK1.8 32位的目录为：\jdk-8u161-windows-i586.exe\tools.zip\ 2. JDK1.8 64位的目录为：\jdk-8u161-windows-x64.exe\.rsrc\1033\JAVA_CAB10\111\tools.zip\ 熟悉JDK程序目录的朋友，应该可以认出，这个目录下的文件就是JDK的文件了
+3. 把上面目录的文件解压出来4. 解压.pack文件以管理员的身份运行CMD窗口，打开第3步提取文件的目录，输入如下命令
+for /r %x in (*.pack) do .\bin\unpack200 -r &#34;%x&#34; &#34;%~dx%~px%~nx.jar&#34; 上面命令的作用是，使用unpack200这个程序，把*.pack的文件解压为.jar的文件。
+附Openjdk下载镜像：
+https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK/  ]]></content></entry><entry><title>使用Charles代理工具导致电脑无法正常访问网站（您的连接不是私密连接）</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8charles%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99%E6%82%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E4%B8%8D%E6%98%AF%E7%A7%81%E5%AF%86%E8%BF%9E%E6%8E%A5/</url><categories><category>开发经验</category></categories><tags><tag>charles</tag></tags><content type="html"> ​ 很多开发者都需要使用代理工具来调试接口，查看数据等等，但是有时候发现打开代理工具之后，代理工具同时也拦截了电脑的所有网络请求，导致电脑访问网站时提示（您的连接不是私密连接）。。。
+​ 造成这种问题的原因就是charles等代理工具也拦截了电脑网页的请求，但是使用的是charles代理工具的证书，导致浏览器无法验证此网页的证书，进而导致了报错，那么该如何解决呢？我们只需要将charles的证书添加到电脑的信任证书中即可。
+​ 进入Charles的Help中，选择SSL Proxying，然后点击Install Charles Root Certificate。
+​ 此时我们的Charles证书是不被系统信任的，所以访问网站每回都会报证书问题，然后我们点击安装证书。
+​ 可以选择证书的安装位置，我选择的是本地计算机，所有用户都可以用，或者为了安全，也可以选择只给当前用户安装，那么别的windows用户就没有被安装此证书；
+​ 然后为证书选择存储位置，这里必须手动选择存储位置，否则自动选择出来的证书位置仍然是不被信任的。
+​ 然后点击浏览，我们手动指定证书的存储位置为“受信任的根证书颁发机构”。
+​ 然后点击确定，完成，此时再次进入安装证书的步骤，我们就发现Charles证书已经被系统信任。
+​ 此时，开着Charles再次访问网站，是不是已经可以正常访问了？如果还是报证书问题的话，试着重启一下电脑，重启之后就可以正常访问了。</content></entry><entry><title>扒微信小程序源码</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E6%89%92%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%BA%90%E7%A0%81/</url><categories><category>微信小程序</category></categories><tags><tag>微信小程序</tag></tags><content type="html"> Root Explorer 4.9.2下载地址：
+https://www.lanzoui.com/i8xv21a
+密码:4sgw
+https://xitmi.lanzoui.com/i117Jtw4zkf
+如何扒微信小程序源码：https://blog.csdn.net/lmy1998/article/details/109047385
+小程序反编译(支持分包)：https://gitee.com/zjb_space/wxapp-unpacker
+https://gitee.com/ksd/wxappUnpacker?_from=gitee_search
+此库报错，最新反编译见上方</content></entry><entry><title>模拟操作之word编辑问题</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C%E4%B9%8Bword%E7%BC%96%E8%BE%91%E9%97%AE%E9%A2%98/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  背景：软航的word编辑操作，在模拟操作中无法进行定位处理。
+方案：
+打开需要进行模拟的编辑页面 找到保存按钮或上一步打开编辑页面loadword的对应的方法，在方法中看能否找到保存的是哪个文件（保存方法的request中看能否查到）。 在本机找到对应的文件缓存目录（js中找到的路径） 使用poi或其他中间件操作word 模拟操作进行提交。 例如：
+1.软航中保存的按钮，看SaveToURL(type,returnFlag)方法，首先接受了所有的修订AcceptAllRevisions()，接受修订调用了ActiveX插件进行的，document.getElementById(&amp;ldquo;TANGER_OCX&amp;rdquo;).ActiveDocument.AcceptAllRevisions()，接受修订完成后进行的word上传保存操作。从如下js中获取
+var returnFlag_glob = 0; var spxtPath = &amp;#39;http://149.0.150.10:8080/ajgl/&amp;#39;; var sfJaws; function SaveToURL(type,returnFlag){ var sfgg=&amp;#34;0&amp;#34;; if(sfgg==&amp;#39;1&amp;#39;){ AcceptAllRevisions(); } if(type == 2){ if(confirm(&amp;#34;定稿之后文书将无法修改，确认要继续？&amp;#34;)){ commit(type,returnFlag); } }else{ commit(type,returnFlag); } } //接受所有修订 function AcceptAllRevisions() { document.getElementById(&amp;#34;TANGER_OCX&amp;#34;).ActiveDocument.AcceptAllRevisions(); } function commit(type,returnFlag){ showLoading(); $(&amp;#34;#loading-indicator-LoadingInfo-overlay&amp;#34;).html(&amp;#34;&amp;lt;div …  ]]></content></entry><entry><title>selenium操作易盾验证码</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E6%93%8D%E4%BD%9C%E6%98%93%E7%9B%BE%E9%AA%8C%E8%AF%81%E7%A0%81/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"> 易盾验证码模拟
+import lombok.extern.slf4j.Slf4j; import org.apache.commons.io.FileUtils; import org.apache.commons.lang3.StringUtils; import org.opencv.core.*; import org.opencv.imgcodecs.Imgcodecs; import org.opencv.imgproc.Imgproc; import org.openqa.selenium.By; import org.openqa.selenium.JavascriptExecutor; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; import org.openqa.selenium.interactions.Actions; import org.openqa.selenium.support.ui.ExpectedCondition; import org.openqa.selenium.support.ui.ExpectedConditions; import org.openqa.selenium.support.ui.WebDriverWait; import javax.imageio.ImageIO; import java.awt.image.BufferedImage; import java.io.File; import java.io.IOException; import java.net.URL; import java.util.ArrayList; import java.util.List; import java.util.Random; @Slf4j public class YidunRPA { public static void main(String[] args) { Long start = …</content></entry><entry><title>selenium操作chrome时的一些配置</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E6%93%8D%E4%BD%9Cchrome%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  收集的一些selenium chrome配置信息：
+一些Chrome的地址栏命令（这些命令会不停的变动，所有不一定都是好用的） 在Chrome的浏览器地址栏中输入以下命令，就会返回相应的结果。这些命令包括查看内存状态，浏览器状态，网络状态，DNS服务器状态，插件缓存等等。 about:version - 显示当前版本 about:memory - 显示本机浏览器内存使用状况 about:plugins - 显示已安装插件 about:histograms - 显示历史记录 about:dns - 显示DNS状态 about:cache - 显示缓存页面 about:gpu -是否有硬件加速 about:flags -开启一些插件 //使用后弹出这么些东西：“请小心，这些实验可能有风险”，不知会不会搞乱俺的配置啊！ chrome://extensions/ - 查看已经安装的扩展 其他的一些关于Chrome的实用参数及简要的中文说明（使用方法同上，当然也可以在shell中使用） –user-data-dir=”[PATH]” 指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区。 –disk-cache-dir=”[PATH]“ 指定缓存Cache路径 –disk-cache-size= 指定Cache大小，单位Byte –first run 重置到初始状态，第一次运行 –incognito 隐身模式启动 –disable-javascript 禁用Javascript &amp;ndash;omnibox-popup-count=&amp;ldquo;num&amp;rdquo; 将地址栏弹出的提示菜单数量改为num个。我都改为15个了。 &amp;ndash;user-agent=&amp;ldquo;xxxxxxxx&amp;rdquo; 修改HTTP请求头部的Agent字符串，可以通过about:version页面查看修改效果 &amp;ndash;disable-plugins 禁止加载所有插件，可以增加速度。可以通过about:plugins页面查看效果 &amp;ndash;disable-javascript 禁用JavaScript，如果觉得速度慢在加上这个 &amp;ndash;disable-java 禁用java &amp;ndash;start-maximized …  ]]></content></entry><entry><title>selenium获取验证码图片</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  获取验证码图片
+import java.awt.image.BufferedImage; import java.io.*; import java.util.ArrayList; import java.util.HashMap; import java.util.List; import java.util.Map; import com.alibaba.fastjson.JSONObject; import lombok.extern.slf4j.Slf4j; import okhttp3.Response; import okhttp3.ResponseBody; import org.apache.commons.httpclient.HttpClient; import org.apache.commons.io.FileUtils; import org.apache.http.HeaderIterator; import org.apache.http.HttpEntity; import org.apache.http.HttpResponse; import org.apache.http.HttpStatus; import org.apache.http.NameValuePair; import org.apache.http.ParseException; import org.apache.http.client.ClientProtocolException; import org.apache.http.client.CookieStore; import org.apache.http.client.config.RequestConfig; import org.apache.http.client.entity.UrlEncodedFormEntity; import org.apache.http.client.methods.CloseableHttpResponse; import org.apache.http.client.methods.HttpGet; import org.apache.http.client.methods.HttpPost; import org.apache.http.client.protocol.HttpClientContext; import org.apache.http.cookie.Cookie; import org.apache.http.impl.client.*; import org.apache.http.impl.cookie.BasicClientCookie; import org.apache.http.message.BasicNameValuePair; import org.apache.http.util.EntityUtils; import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; import javax.imageio.ImageIO; @Slf4j public class LsptRPA { public static void main(String[] args) { try { System.setProperty(&#34;webdriver.chrome.driver&#34;,&#34;C:\\windows\\chromedriver.exe&#34;); //创建无Chrome无头参数 ChromeOptions chromeOptions=new ChromeOptions(); chromeOptions.addArguments(&#34;-headless&#34;); WebDriver browser = new ChromeDriver(chromeOptions); browser.manage().window().maximize(); browser.get(&#34;https://lspt.court.gov.cn/ssoserver/login?service=https%3A%2F%2Flspt.court.gov.cn%2Fapi%2Fv1%2Flogin%3FredirectUrl%3Dhttps%253A%252F%252Flspt.court.gov.cn%252F&#34;); JavascriptExecutor jse = (JavascriptExecutor)browser; jse.executeScript(&#34;document.getElementById(&#39;captchaImage&#39;).className=&#39;&#39;;&#34;); WebElement ele = browser.findElement(By.xpath(&#34;//*[@id=\&#34;captchaImage\&#34;]&#34;)); String img = ele.getScreenshotAs(OutputType.BASE64); System.out.println(img); } catch (Exception e) { e.printStackTrace(); } finally { } } }   ]]></content></entry><entry><title>selenium操作webupload进行文件上传</title><url>/post/%E6%A8%A1%E6%8B%9F%E6%93%8D%E4%BD%9C/selenium%E6%93%8D%E4%BD%9Cwebupload%E8%BF%9B%E8%A1%8C%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url><categories><category>selenium</category></categories><tags><tag>selenium</tag></tags><content type="html"><![CDATA[  selenium操作webupload进行文件上传
+import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; import java.awt.*; import java.awt.datatransfer.StringSelection; import java.awt.event.KeyEvent; public class UploadFileRPA { public static void main(String[] args) { webuploader(&#34;E:\\lspt\\f2ud.jpg&#34; ,&#34;d:\\Users\\Pictures\\banner.jpg&#34; //,&#34;E:\\lspt\\临时\\2am7.jpg&#34; ,&#34;d:\\Users\\Pictures\\view_123.pdf&#34; ,&#34;E:\\lspt\\0\\2a4c_1616552975916.jpg&#34; ,&#34;d:/Users/Pictures/view_123.pdf&#34; ); } public static void webuploader(String... filePaths){ System.setProperty(&#34;webdriver.chrome.driver&#34;,&#34;C:\\windows\\chromedriver.exe&#34;); //创建无Chrome无头参数 ChromeOptions chromeOptions=new ChromeOptions(); //chromeOptions.addArguments(&#34;-headless&#34;); WebDriver browser = new ChromeDriver(chromeOptions); browser.get(&#34;http://fex.baidu.com/webuploader/getting-started.html&#34;); WebElement uploaderWE = browser.findElement(By.xpath(&#34;//*[@id=\&#34;picker\&#34;]/div[2]&#34;)); for (String filePath:filePaths) { uploaderWE.click(); try { Thread.sleep(5000); //指定文件路径 StringSelection sel=new StringSelection(filePath); //将图片复制到剪切板上 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null); //新建robot类 Robot robot=new Robot(); Thread.sleep(1000); //按下回车，释放回车，（可有可无，有：选中文件，无：直接将文件路径复制到搜索框里） robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER); //按下ctril v，拷贝文件 robot.keyPress(KeyEvent.VK_CONTROL); robot.keyPress(KeyEvent.VK_V); //释放ctril v robot.keyRelease(KeyEvent.VK_CONTROL); robot.keyRelease(KeyEvent.VK_V); //按下回车，释放回车，确定 robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER); robot.delay(500); } catch (Exception e) { e.printStackTrace(); } } } } 注意：文件路径使用反斜杠\进行处理，否则会报错。
+  ]]></content></entry><entry><title>最高院:2016版民事裁判文书制作规范及样式模板</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%9C%80%E9%AB%98%E9%99%A22016%E7%89%88%E6%B0%91%E4%BA%8B%E8%A3%81%E5%88%A4%E6%96%87%E4%B9%A6%E5%88%B6%E4%BD%9C%E8%A7%84%E8%8C%83%E5%8F%8A%E6%A0%B7%E5%BC%8F%E6%A8%A1%E6%9D%BF/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>文书</tag></tags><content type="html"> 最高人民法院关于印发《人民法院民事裁判文书制作规范》《民事诉讼文书样式》的通知
+法〔2016〕221号
+各省、自治区、直辖市高级人民法院，解放军军事法院，新疆维吾尔自治区高级人民法院生产建设兵团分院：
+为进一步规范和统一民事裁判文书写作标准，提高民事诉讼文书质量，最高人民法院制定了《人民法院民事裁判文书制作规范》《民事诉讼文书样式》。该两份文件已于2016年2月22日经最高人民法院审判委员会第1679次会议通过，现予印发，自2016年8月1日起施行。请认真遵照执行。
+最高人民法院
+2016年6月28日
+人民法院民事裁判文书制作规范
+为指导全国法院民事裁判文书的制作，确保文书撰写做到格式统一、要素齐全、结构完整、繁简得当、逻辑严密、用语准确，提高文书质量，制定本规范。
+一、基本要素
+文书由标题、正文、落款三部分组成。
+标题包括法院名称、文书名称和案号。
+正文包括首部、事实、理由、裁判依据、裁判主文、尾部。首部包括诉讼参加人及其基本情况，案件由来和审理经过等;事实包括当事人的诉讼请求、事实和理由，人民法院认定的证据及事实;理由是根据认定的案件事实和法律依据，对当事人的诉讼请求是否成立进行分析评述，阐明理由;裁判依据是人民法院作出裁判所依据的实体法和程序法条文;裁判主文是人民法院对案件实体、程序问题作出的明确、具体、完整的处理决定;尾部包括诉讼费用负担和告知事项。
+落款包括署名和日期。
+二、标题
+标题由法院名称、文书名称和案号构成，例如：“××××人民法院民事判决书(民事调解书、民事裁定书)+案号”。
+(一)法院名称
+法院名称一般应与院印的文字一致。基层人民法院、中级人民法院名称前应冠以省、自治区、直辖市的名称，但军事法院、海事法院、铁路运输法院、知识产权法院等专门人民法院除外。
+涉外裁判文书，法院名称前一般应冠以“中华人民共和国”国名;案件当事人中如果没有外国人、无国籍人、外国企业或组织的，地方人民法院、专门人民法院制作的裁判文书标题中的法院名称无需冠以“中华人民共和国”。
+(二)案号
+案号由收案年度、法院代字、类型代字、案件编号组成。
+案号=“(”+收案年度+“)”+法院代字+类型代字+案件编号+“号”。
+案号的编制、使用应根据《最高人民法院关于人民法院案件案号的若干规定》等执行。
+三、正文
+(一)当事人的基本情况
+1.当事人的基本情况包括：诉讼地位和基本信息。
+2. …</content></entry><entry><title>【民事诉讼指南】案件的审理期限和审限的计算</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%B0%91%E4%BA%8B%E8%AF%89%E8%AE%BC%E6%8C%87%E5%8D%97%E6%A1%88%E4%BB%B6%E7%9A%84%E5%AE%A1%E7%90%86%E6%9C%9F%E9%99%90%E5%92%8C%E5%AE%A1%E9%99%90%E7%9A%84%E8%AE%A1%E7%AE%97/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>民诉法</tag></tags><content type="html"> （一）案件的审理期限
+1.普通程序案件
+《中华人民共和国民事诉讼法》第一百四十九条 法院适用普通程序审理的案件，应当在立案之日起六个月内审结。有特殊情况需要延长的，由本院院长批准，可以延长六个月；还需要延长的，报请上级法院批准。
+《中华人民共和国民事诉讼法》第一百七十六条 法院审理对判决的上诉案件，应当在第二审立案之日起三个月内审结。有特殊情况需要延长的，由本院院长批准。
+法院审理对裁定的上诉案件，应当在第二审立案之日起三十日内作出终审裁定。
+2.简易程序案件
+《中华人民共和国民事诉讼法》第一百六十一条 法院适用简易程序审理案件，应当在立案之日起三个月内审结。
+3.特别程序案件
+《中华人民共和国民事诉讼法》第一百八十条 法院适用特别程序审理的案件，应当在立案之日起三十日内或者公告期满后三十日内审结。有特殊情况需要延长的，由法院院长批准。但审理选民资格案件除外。
+4.审判监督案件
+通过审判监督程序再审的案件按照第一审程序或者第二审程序审理的，适用《中华人民共和国民事诉讼法》第一百四十九条、第一百七十六条规定的审限。审限自决定再审的次日起计算。
+5.涉外民事案件
+《中华人民共和国民事诉讼法》第二百七十条 法院审理涉外民事案件的期间，不受本法第一百四十九条、第一百七十六条规定的限制。
+（二）案件审限的计算
+案件的审限从立案次日开始计算，至结案之日截止。
+下列期间不计入审限:1.刑事案件对被告人精神病等进行专业鉴定的期间；
+2.刑事案件因另行委托、指定辩护人，法院决定延期审理的，自案件宣布延期审理之日起至第十日止准备辩护的期间；
+3.合议庭成员、检察员等相关人员发现案件需要补充侦查，提出延期审理建议，法院同意延期审理的期间；
+4.刑事案件因当事人、诉讼代理人、辩护人申请通知新的证人到庭、调取新的证据、申请重新鉴定或者勘验，法院决定延期一个月的期间；
+5.刑事案件二审期间，检察院查阅案卷超过七日后的期间；
+6.审理当事人提出的管辖权异议和处理法院之间的管辖争议的期间；
+\7. 民事、行政案件公告、鉴定的期间；
+\8. 民事、行政、执行案件由有关专业机构进行审计、评估、资产清理的期间；
+\9. 中止诉讼（审理）或执行至恢复诉讼（审理）或执行的期间；
+10.审限届满前，当事人申请调解的案件，从申请之日起三十日的调解期间；
+11.执行中拍卖、变卖被查封、冻结、扣押财产的期间； …</content></entry><entry><title>doc/docx转html</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/docdocx%E8%BD%AChtml/</url><categories><category>开发经验</category></categories><tags><tag>doc转html</tag></tags><content type="html"> 在一些特殊场景下，我们要使用word模板，来规范文档格式，然而我们无法使用富文本编辑器来实现和word模板一样的样式，这样的工作量是非常繁重的。
+所以，在需要使用到word模板时，我们可以先讲word转换为html之后，将html拼接完整，将文件名修改为doc文件即可保留word原格式输出。
+word转html可使用腾讯企业有限，点击【写信】，将word复制到内容区域，点击【】,则切换到html代码视图下，将视图下代码copy保存到，html的body区域中，保存，然后将html文件修改为doc/docx后缀文件。使用office打开即可看到文档保留了原格式。</content></entry><entry><title>反思与再造：证据交换制度在互联网庭审中的应用研究</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E5%8F%8D%E6%80%9D%E4%B8%8E%E5%86%8D%E9%80%A0%E8%AF%81%E6%8D%AE%E4%BA%A4%E6%8D%A2%E5%88%B6%E5%BA%A6%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%AD%E5%AE%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>互联网法院</tag></tags><content type="html"> 反思与再造：证据交换制度在互联网庭审中的应用研究
+科学技术的迅猛发展使得整个世界形成了一个扁平化、虚拟化的信息时代，信息技术推动着这个社会从生产工具到生产关系的巨大变革，渗透、辐射到各个领域。 人们将社会生活的方方面面慢慢从实体转向了虚拟，从线下转向了线上，由此所产生的人们对司法运行模式的多元化、简洁化、精确化的需求日益更甚。2017年8月中国第一家互联网法院的揭牌就是顺应时代的需求、当事人的需求而创造出的成果，由此带来的对民事诉讼制度的挑战不容忽视。目前C市P区人民法院在S省、C市三级法院的大力支持下正在紧锣密鼓的筹备C市P区法院互联网法庭，作者作为本次互联网法庭建设的工作人员，全程参与互联网法庭的建设、测试工作，亲身体验网上诉讼的全部流程，不断改进创新网上诉讼流程，作为初步的研究，本文是对民事诉讼中的证据交换制度在互联网庭审中的运用之探析。
+一、梳理与检视：互联网庭审面临的现实难题
+互联网庭审不同于一般的网络庭审。目前我们所称的网络庭审是指“网络庭审直播”。即，将审理案件的过程通过网络媒介平台同步制作和发布图文、视频信息，是一种便于公众在第一时间了解庭审现状的双向互动直播模式。与新闻媒体片段化的记录、报导不同，“网络庭审直播”呈现出公开性、完整性和及时性的特点。庭审过程的可视化、审判流程公开、裁判文书公开、执行信息公开，让当事人迅速了解案件的进程，使“程序正义”在案件审理中得以真正实现。互联网庭审则是基于互联网法院管辖网络空间发生的各类案件并且审判活动全程在网上实现的庭审过程。具体而言，原、被告双方在不到实体法庭的情况下直接通过网络视频方式开庭的庭审模式，当事人无需踏进法院，便可实现诉讼全程在线化，大大提升了司法质效、为当事人带来了极大的便利，更为重要的是进一步推进网络空间的法治化。
+（一）互联网庭审的快速、便捷、高效与庭审程序法定性、程序正义的冲突
+习惯于“快餐式”网络交易的当事人，希望诉讼也能够尽可能通过简化诉讼程序、优化程序规则、缩短诉讼流程的方式，快速、便捷、高效的得以解决。这就要求互联网庭审程序尽可能简单、快速、流畅，但是庭审程序、规则的法定性以及当事人诉讼权利的保护等问题都是程序正义的必然要求，即使是互联网庭审程序再造，也不能损害当事人的合法权益、违反诉讼法的强制性规定。笔者通过S省法院庭审直播网的100件网络直播庭审案件分析，从审判员宣布开庭到原告 …</content></entry><entry><title>Can't connect to X11 window server using 'localhost:10.0' as the value of the DISPLAY variable</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/cant-connect-to-x11-window-server-using-localhost10.0-as-the-value-of-the-display-variable/</url><categories><category>开发经验</category></categories><tags><tag>tomcat</tag></tags><content type="html"><![CDATA[  问题】
+centos上的tomcat报错
+Exception in thread &ldquo;http-bio-8080-exec-6&rdquo; java.lang.InternalError: Can&rsquo;t connect to X11 window server using &rsquo;localhost:10.0&rsquo; as the value of the DISPLAY variable
+前台问题是页面的验证码图片加载不出来，而且报500错误
+【原因】
+因为用到了图形处理，java程序会去寻找linux上的图形界面是否启动
+【解决办法】
+不让java寻找linux图形界面即可，在java启动时加选项java -Djava.awt.headless=true
+在/usr/local/tomcat/bin/catalina.sh中开头添加如下参数
+JAVA_OPTS=-Djava.awt.headless=true 【我的tomcat实际效果】
+/usr/local/tomcat/bin/catalina.sh 开头加入
+JAVA_OPTS=&quot;$JAVA_OPTS -XX:PermSize=256m -XX:MaxPermSize=512m -Xms2g -Xmx2g -Djava.awt.headless=true &quot;
+  ]]></content></entry><entry><title>Jeecgboot自定义列使用</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/jeecgboot%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E4%BD%BF%E7%94%A8/</url><categories><category>开发经验</category></categories><tags><tag>jeecgboot</tag></tags><content type="html"><![CDATA[  直接将代码copy到相应页面即可
+标签添加如下
+&lt;span style=&#34;float:right&#34;&gt; &lt;a @click=&#34;loadData()&#34;&gt;&lt;a-icon type=&#34;sync&#34; /&gt;刷新&lt;/a&gt; &lt;a-divider type=&#34;vertical&#34; /&gt; &lt;a-popover title=&#34;自定义列&#34; trigger=&#34;click&#34; placement=&#34;leftBottom&#34;&gt; &lt;template slot=&#34;content&#34;&gt; &lt;a-checkbox-group @change=&#34;onColSettingsChange&#34; v-model=&#34;settingColumns&#34; :defaultValue=&#34;settingColumns&#34;&gt; &lt;a-row&gt; &lt;template v-for=&#34;(item,index) in defColumns&#34;&gt; &lt;template v-if=&#34;item.key!=&#39;rowIndex&#39;&amp;&amp; item.dataIndex!=&#39;action&#39;&#34;&gt; &lt;a-col :span=&#34;12&#34; :key=&#34;index&#34;&gt; &lt;a-checkbox :value=&#34;item.dataIndex&#34;&gt; {{ item.title }} &lt;/a-checkbox&gt; &lt;/a-col&gt; &lt;/template&gt; &lt;/template&gt; &lt;/a-row&gt; &lt;/a-checkbox-group&gt; &lt;/template&gt; &lt;a&gt;&lt;a-icon type=&#34;setting&#34; /&gt;自定义列&lt;/a&gt; &lt;/a-popover&gt; &lt;/span&gt; data生命周期定义变量
+columns: [], settingColumns: [], defColumns: columns, created声明周期调用
+created() { this.initColumns() }, methods方法定义
+onColSettingsChange (checkedValues) { var key = this.$route.name + &#39;:colsettings&#39; this.$ls.set(key, checkedValues, 7 * 24 * 60 * 60 * 1000) this.settingColumns = checkedValues const cols = this.defColumns.filter(item =&gt; { if (item.key === &#39;rowIndex&#39; || item.dataIndex === &#39;action&#39;) { return true } if (this.settingColumns.includes(item.dataIndex)) { return true } return false }) this.columns = cols }, initColumns() { // 权限过滤（列权限控制时打开，修改第二个参数为授权码前缀） // this.defColumns = colAuthFilter(this.defColumns,&#39;testdemo:&#39;); var key = this.$route.name + &#39;:colsettings&#39; let colSettings = this.$ls.get(key) if (colSettings == null || colSettings == undefined) { let allSettingColumns = [] this.defColumns.forEach(function (item, i, array) { allSettingColumns.push(item.dataIndex) }) this.settingColumns = allSettingColumns this.columns = this.defColumns } else { this.settingColumns = colSettings const cols = this.defColumns.filter(item =&gt; { if (item.key === &#39;rowIndex&#39; || item.dataIndex === &#39;action&#39;) { return true } if (colSettings.includes(item.dataIndex)) { return true } return false }) this.columns = cols } }   ]]></content></entry><entry><title>linux下字体的安装处理</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/linux%E4%B8%8B%E5%AD%97%E4%BD%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%A4%84%E7%90%86/</url><categories><category>开发经验</category></categories><tags><tag>linux</tag></tags><content type="html"> linux下字体的安装处理
+linux下itextpdf将html转换为pdf的过程中，需要处理字体 需要将C:\Windows\Fonts下的字体文件copy到linux/usr/share/fonts目录，并且设置权限为755
+参考链接
+centos系统安装中文字体几种方法</content></entry><entry><title>立案、审理流程</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E7%AB%8B%E6%A1%88%E5%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 立案、审理流程
+1 、案件受理流程：
+递交立案材料（当事人递交立案材料）→审查立案（立案大庭收到立案材料之日7日之内审查立案，发送立案庭长审批）→生成案号（立案庭长审批号返回立案大庭生成案号）→送达诉讼文书（立案庭向原告送达《受理案件通知书》等文书，告知其缴费）→预交费用（当事人收到送达书7日内预交案件受理费和其它费用）→案件移送（立案大庭确认缴费后，于办妥立案手续次日内将案件移送业务庭，经业务庭长确认）→分案（业务庭长2日内完成分案，移交审判员）。
+2 、案件审理流程：
+**（1）民事：**适用普通程序的，立案之日起六个月内审结，有特殊情况需要延长的，经本院主管院长批准，可以延长六个月，还需要延长的报请上一级人民法院批准。
+**（2）行政：**立案之日起三个月审结，有特殊情况需要延长的，由高级人民法院批准。
+（3）刑事：
+**公诉案件：**人民法院审理公诉案件，应当在受理后二个月以内宣判，至迟不得超过三个月。
+**适用简易程序的案件：**适用简易程序审理案件，人民法院应当在受理后二十日以内审结；对可能判处的有期徒刑超过三年的，可以延长至一个半月。
+**（4）申请再审、申诉案件：**民事案件自收到再审申请书之日起三个月内审查完毕，有特殊情况需要延长的报本院院长批准；行政案件立案登记的材料经审查后，在六个月内作出是否予以再审处理；对立案审查的刑事申诉案件，应当在三个月内作出决定，至迟不得超过六个月。
+摘自
+立案、审理流程</content></entry><entry><title>备用sql语句查询</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%A4%87%E7%94%A8sql%E8%AF%AD%E5%8F%A5/</url><categories><category>mysql</category></categories><tags><tag>Mysql</tag></tags><content type="html"> Mysql查询表的最新更新时间
+SELECT update_time, t.* FROM `information_schema`.`TABLES` t WHERE 1=1 -- and table_name LIKE &amp;#39;%log%&amp;#39; ORDER BY update_time DESC</content></entry><entry><title>git ignore idea文件</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/git-ignore-idea%E6%96%87%E4%BB%B6/</url><categories><category>开发经验</category></categories><tags><tag>idea</tag></tags><content type="html"> git ignore idea 文件
+git rm --cached --force -r .idea</content></entry><entry><title>深入理解时间戳</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E6%97%B6%E9%97%B4%E6%88%B3/</url><categories><category>时间戳</category></categories><tags><tag>时间戳服务器</tag></tags><content type="html"> 深入理解时间戳
+时间戳可谓数字签名的好伙伴，它为数字签名提供了额外的时间上的保证，使得数字签名的可信度大大提高。
+到底什么是时间戳？从PDF签名的角度来看，时间戳会直接表现在签名里：
+在前两篇文章，我分析过PDF里的签名信息，也就是PDF dictionary里的content下的内容，其实是一个CMS对象. 而真正的签名值，也就是对一个哈希内容做的加密结果，其实是存在signerInfo下面的signature字段里。
+PDF签名的时间戳对象，其实就是这个签名值signature.
+时间戳的定义(wiki)：
+Trusted timestamping is the process of securely
+keeping track of the creation and modification time of a document. Security here means that no one—not even the owner of the document—should be able to change it once it has been recorded provided that the timestamper&amp;amp;rsquo;s integrity is never compromised.
+下面通过一个实例来说说整个时间戳请求和响应的过程。
+1.生成TimeStampRequest
+笔者想对字符串&amp;amp;quot;123&amp;amp;quot;做时间戳，首先对原文123做SHA256，得到数据指纹：
+hex:a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3 base64:pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM= 得到了数据指纹，这里采用Java的第三方安全库bouncycastle来生成一个TimeStampRequest：
+byte[] respBytes = null; // Setup the time stamp request TimeStampRequestGenerator tsqGenerator = new TimeStampRequestGenerator(); …</content></entry><entry><title>freemarker常用语法</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/freemarker%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url><categories><category>开发经验</category></categories><tags><tag>freemarker</tag></tags><content type="html"> 常用语法收集
+去掉数字输出时的逗号 ${123456?c}或者${123456?string.computer}</content></entry><entry><title>IDEA自动格式化代码</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/idea%E4%BF%9D%E5%AD%98%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81/</url><categories><category>idea</category></categories><tags><tag>idea</tag></tags><content type="html"> 1、settings -&amp;gt; plugins 选择 Browse repositories…
+2、搜索google-java-format 和 Save Actions，安装
+3、重启IDE，启用google-java-format
+4、 启用Save Actions
+保存时自动格式化 ，将没用的import 语句删除</content></entry><entry><title>IDEA自动导包设置</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/idea%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%8C%85%E8%AE%BE%E7%BD%AE/</url><categories><category>idea</category></categories><tags><tag>idea</tag></tags><content type="html"> 1、配置
+进入file-setting
+2、说明
+勾选标注第1个选项，IDEA 自动帮我们导入需要用到的包。但是对于那些同名的包，还是需要手动 Alt + Enter 进行导入的 勾选标注第2个选项，IDEA自动帮我们优化导入的包，比如自动去掉一些没有用到的包。</content></entry><entry><title>ES版本对应jdk</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/es%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94jdk/</url><categories><category>ES</category></categories><tags><tag>ES</tag></tags><content type="html">
+Elasticsearch and JVM</content></entry><entry><title>诉源治理规范化建设的现实解决路径</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%AF%89%E6%BA%90%E6%B2%BB%E7%90%86%E8%A7%84%E8%8C%83%E5%8C%96%E5%BB%BA%E8%AE%BE%E7%9A%84%E7%8E%B0%E5%AE%9E%E8%A7%A3%E5%86%B3%E8%B7%AF%E5%BE%84/</url><categories><category>法律知识</category></categories><tags><tag>诉源治理</tag></tags><content type="html"> 《最高人民法院关于深化人民法院司法体制综合配套改革的意见 ——人民法院第五个五年改革纲要(2019—2023)》简称“五五改革纲要”，首次提出“诉源治理”这一概念。何为“诉源治理”？“五五改革纲要”并未给予进一步的解释。笔者经搜索国内各文献，鲜有人对“诉源治理”这一概念进行解析，仅在四川省成都市中级人民法院院长郭彦撰写的文章中搜索到：“‘诉源治理’是指社会个体及各种机构对纠纷的预防及化解所采取的各项措施、方式和方法，使潜在纠纷和已出现纠纷的当事人的相关利益和冲突得以调和，并且采取联合行动所持续的过程。”笔者认为，“诉源治理”重在强调“源”，纠纷性质为“诉”，手段为“治理”，可理解为对诉讼纠纷的源头化解及处理机制。最高院提出强化诉源治理，即是从法院视角下，要求全国各级法院推动从源头上减少诉讼增量而采取引领、分流等各项举措。
+一、法院在诉源治理实质化过程中角色定位的优劣分析
+1.法院在诉源治理中的优势价值分析。从职能定位角度来讲，法院是化解社会纠纷和保障公民权利的国家机关，是维护社会公平、正义的最后一道防线。我国宪法和法律赋予人民法院行使审判权的职能，司法解决是当今社会化解纠纷最权威的方式。从专业化角度来讲，法院作为专门化解纠纷的司法机关，无论是庭室设置或者法官适用法律化解纠纷的能力都是专业的。从效率角度来讲，法院调解可以跳过诉讼中纷繁复杂的程序限制，仅就纠纷的矛盾点直接进行讨论和评判，节约了时间成本、人力成本，也极大的节约了司法资源，也提高了当事人解决纠纷的效率。
+2.法院在诉源治理中的局限分析。从社会治理效果而言，法院并非是基层治理的领导者和直接责任人，在很多纠纷化解工作中不足以起到立竿见影的效果。熟人社会里，刚硬的法条有的时候不如熟人的几句规劝来得更让当事人心服，司法解决并非是化解纠纷最好的方式。有些前期未处理好的纠纷最终进入司法程序，法院调解无果后依法裁判，但效果并不理想，甚至在后期执行中引发群体性事件。有些涉及群体众多、社会覆盖面大的案件，党委、政府在大调解工作中的组织力量更具优势。治理效果更彻底，这也是在党委、政府还是人民调解组织的调解工作中得以达成调解协议的案件很少到法院申请司法确认的原因。
+基于上述分析，诉源治理应当是构建由党委政府主导、多方协调、统筹发展、合力加强调解技能培训的组织格局。法院在诉源治理过程中有其局限性——司法功能的有限延伸，法院应当是提 …</content></entry><entry><title>SpringBoot 在IDEA中实现热部署 (JRebel实用版)</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/springboot-%E5%9C%A8idea%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%83%AD%E9%83%A8%E7%BD%B2-jrebel%E5%AE%9E%E7%94%A8%E7%89%88/</url><categories><category>IDE</category></categories><tags><tag>IDE</tag><tag>热部署</tag></tags><content type="html"> 转自：https://blog.csdn.net/qierkang/article/details/95095954
+JRebel简介： JRebel是与应用程序服务器集成的JVM Java代理，可使用现有的类加载器重新加载类。只有更改的类会重新编译并立即重新加载到正在运行的应用程序中，JRebel特别不依赖任何IDE或开发工具（除编译器外）。但是，与您的IDE紧密集成仍然很不错。请记住：只要您用新文件覆盖旧类文件，JRebel就会重新加载您的更改并减少重新部署的时间。
+顺便整理下步骤防止以后忘记：
+​ 在Java开发的过程选择一个适合自己的IDE是很重要的，每次修改代码都需要重新的编译、重启，如何解决这个问题？。看了一下网上的教程，其中Intellij IDEA是Java开发中公认的最好的IDE，拥有很好的代码提示功能，jetty相比于tomcat来说更加轻量级，对于静态资源具有很好的热加载的性能，JRebel能够监控class文件。因此我参考网上教程将这三个工具结合起来，完成静态资源修改、java代码修改后的热加载。
+Service Address ：https://jrebel.qekang.com/{GUID} GUID地址： https://www.guidgen.com
+http://www.ofmonkey.com/transfer/guid
+https://www.guidgenerator.com/online-guid-generator.aspx
+JRebel插件安装步骤:</content></entry><entry><title>让Jenkins自动布署你的Vue项目</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E8%AE%A9jenkins%E8%87%AA%E5%8A%A8%E5%B8%83%E7%BD%B2%E4%BD%A0%E7%9A%84vue%E9%A1%B9%E7%9B%AE/</url><categories><category>自动化运维</category></categories><tags><tag>自动化运维</tag></tags><content type="html">
+https://mp.weixin.qq.com/s/oiznlZ_4L_0Am2SNOonLDw</content></entry><entry><title>pdf转html，签章以及二维码</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/pdf%E8%BD%AChtml%E7%AD%BE%E7%AB%A0%E4%BB%A5%E5%8F%8A%E4%BA%8C%E7%BB%B4%E7%A0%81/</url><categories><category>开发</category></categories><tags><tag>pdf转html</tag><tag>itextpdf</tag></tags><content type="html"> 1.html导出为pdf，外部css，字体，页眉页脚，签章，水印
+https://www.jianshu.com/p/33b76197ceae
+https://my.oschina.net/liuhuiweb/blog/538151
+https://blog.csdn.net/hj7jay/article/details/102605521
+https://blog.csdn.net/zhong_jianyu/article/details/96147949
+https://blog.csdn.net/goodlook0123/article/details/81121351
+2.二维码条形码处理
+3.印章动态生成
+源码github地址
+实现效果pdf，参见源码demo文件夹下pdf文件
+生成示例pdf文件</content></entry><entry><title>html和word中字体对应</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/html%E5%92%8Cword%E4%B8%AD%E5%AD%97%E4%BD%93%E5%AF%B9%E5%BA%94/</url><categories><category>开发</category></categories><tags><tag>字体</tag></tags><content type="html"> 开发中需要使用freemarker导出word，需要前端人员写html模板，在开发中遇到了word中字体和css中字体对应的问题，经过试验如下：
+word字字号 word字体值(pt) Css字体大小(px) 初号 44pt 58.6 小初 36pt 48 一号 26pt 34.6 小一 24pt 32 二号 22pt 29.3 小二 18pt 24 三号 16pt 21.3 小三 15pt 20 四号 14pt 18.6 小四 12pt 16 五号 10.5pt 14 小五 9pt 12 六号 7.5pt 10 小六 6.5pt 8.6 七号 5.5pt 7.3 八号 5pt 6.6</content></entry><entry><title>itextpdf确定页面坐标的方式</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/itextpdf%E7%A1%AE%E5%AE%9A%E9%A1%B5%E9%9D%A2%E5%9D%90%E6%A0%87%E7%9A%84%E6%96%B9%E5%BC%8F/</url><categories><category>开发</category></categories><tags><tag>itextpdf</tag></tags><content type="html"><![CDATA[  itextpdf的确定页面上的具体坐标是通过坐标来确定的。
+它们的坐标轴是这样的：以左下角为原点的xy坐标轴。
+在itextpdf的方法中中，定义某个点的位置，都是以左下方为原点坐标轴来确定。
+如果要定义一个矩形框，如：Rectangle rect = new Rectangle(300, 300, 400, 400);
+它的四个值，确定了矩形左下角和右上角的坐标。通过这种方式来确定矩形范围。
+itextpdf中一些坐标的含义：
+1、页面尺寸
+System.out.println(&amp;#34;页面尺寸&amp;#34;); //当前页面的对角坐标值，当前是A4纸 System.out.println(&amp;#34;top:&amp;#34;+doc.getPageSize().getTop());//右上角y轴坐标 System.out.println(&amp;#34;bottom:&amp;#34;+doc.getPageSize().getBottom());//左下角y轴坐标 System.out.println(&amp;#34;left:&amp;#34;+doc.getPageSize().getLeft());//左下角x轴坐标 System.out.println(&amp;#34;right:&amp;#34;+doc.getPageSize().getRight());//右上角x轴坐标 System.out.println(); 打印结果：
+页面尺寸 top:842.0 bottom:0.0 left:0.0 right:595.0 2、正文尺寸
+System.out.println(&amp;#34;page正文尺寸&amp;#34;); //去除也边距后对角值 System.out.println(&amp;#34;top:&amp;#34;+doc.top());//右上角y轴坐标 System.out.println(&amp;#34;bottom:&amp;#34;+doc.bottom());//左下角y轴坐标 System.out.println(&amp;#34;left:&amp;#34;+doc.left());//左下角x轴坐标 System.out.println(&amp;#34;right:&amp;#34;+doc.right());//右上角x轴坐标 打印结果：
+page正文尺寸 top:806.0 bottom:36.0 left:36.0 …  ]]></content></entry><entry><title>【科 学 上 网】v2ray订阅地址</title><url>/post/office/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91v2ray%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80/</url><categories><category>科 学上网</category></categories><tags><tag>科 学上网</tag></tags><content type="html"> 科 学 上 网
+订阅地址
+https://youlianboshi.netlify.com
+https://muma16fx.netlify.com
+https://fforever.github.io/v2rayfree
+https://jiang.netlify.com
+https://www.go4net.ga/v2ray.txt
+https://bihai-v2ray.netlify.com
+https://www.tiancai.ml/baba.txt
+https://freev2ray.netlify.com
+https://www.namaho.org/service/subscribe
+https://cdn.jsdelivr.net/gh/fggfffgbg/https-aishangyou.tube-@master/README.md
+https://rss.sswow.xyz/link/pjcHSsymqDeXViPZ
+https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub
+https://v2ray.qlolp.ml
+v2ray客户端地址
+Linux : https://github.com/jiangxufeng/v2rayL/releases
+MacOS : https://github.com/Cenmrev/V2RayX/releases
+Android : https://github.com/2dust/v2rayNG/releases
+Windows : https://github.com/2dust/v2rayN/releases</content></entry><entry><title>仲裁与诉讼的区别</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E4%BB%B2%E8%A3%81%E4%B8%8E%E8%AF%89%E8%AE%BC%E7%9A%84%E5%8C%BA%E5%88%AB/</url><categories><category>法律知识</category></categories><tags><tag>仲裁</tag></tags><content type="html"> 仲裁与诉讼的区别
+仲裁？诉讼？傻傻分不清楚。不都是解决纠纷的方式吗？二者有什么区别呢？本文，我们就来重点聊一下：仲裁与诉讼的区别。
+首先需要明确的是，对任何事物的界定和解读，都需建立在其与同类事物比较的基础上。仲裁和诉讼具有共性，从宏观层面上讲，二者都是第三方机构解决纠纷的程序性制度。但是，在发生、管辖、裁判者选择、审理案件的规则与标准、审级等方面，二者的差异还是相当明显的。
+什么是仲裁？
+仲裁[Arbitration]是指纠纷当事人在自愿基础上达成协议，将纠纷提交非司法机构的第三者审理，由第三者做出对争议各方均有约束力的裁决的一种解决纠纷的制度和方式。仲裁在性质上是兼具契约性、自治性、民间性和准司法性的一种争议解决方式。
+通俗一点来说，仲裁不是司法机构，而是民间机构。仲裁的法律工作者都是兼职的做案件审理工作，可以是律师、法律顾问，或者是退休的法律工作者。要仲裁的话，在100个仲裁员里面，我方选一个仲裁员代表，乙方选一个仲裁员代表，还有个首席仲裁员，组成仲裁庭。
+几个要点：
+**1、当事人在自愿的基础上达成仲裁协议是提起仲裁的前提。**这体现了对当事人在纠纷解决事务上的意思自治的尊重。众所周知，诉讼是解决各类纠纷的法定的、最终的途径。法谚有云：“司法乃是正义的最后一道防线”，说的便是这个道理。采用诉讼方式解决纠纷，无需当事人事先约定，这是诉讼与仲裁的一个显著的区别；
+**2、仲裁机构是非司法性质的第三方纠纷解决机关。**仲裁机构不是司法机关，不列入司法机关序列，具有成立、组织、活动等方面的独立性；
+**3、仲裁机构针对特定案件的裁决书具有强制执行力。**根据《最高人民法院关于适用&amp;amp;lt;中华人民共和国仲裁法&amp;amp;gt;若干问题的解释》第29条的规定，当事人申请执行仲裁裁决案件，由被执行人住所地或者被执行财产所在地的中级人民法院管辖。
+4、劳动仲裁是专门的司法机构。跟仲裁不一样。
+什么是诉讼？
+诉讼[lawsuit / litigation / legal action] 是指国家专门机关在诉讼参与人的参加下，依据法定的权限和程序，解决具体案件的活动。是人民或检察官请求司法官本着司法权作裁判的行为。
+中国大陆的诉讼程序一般实行二审终审制，分为一审和二审，但部分案件实行一审终审。如新《民事诉讼法》第一百六十二条规定“ 基层人民法院和它派出的法庭审理符合本法第一百五十七条第一 …</content></entry><entry><title>验证类代码积累</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E9%AA%8C%E8%AF%81%E7%B1%BB%E4%BB%A3%E7%A0%81%E7%A7%AF%E7%B4%AF/</url><categories><category>代码积累</category></categories><tags><tag>验证类</tag></tags><content type="html"><![CDATA[  验证类代码积累
+验证企业代码是否正确/** * 验证企业代码是否正确 * * @param code * @return */ public static final boolean isValidEntpCode(String code) { if (StringUtils.isBlank(code)) { return false; } int[] ws = { 3, 7, 9, 10, 5, 8, 4, 2 }; String str = &#34;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;; String regex = &#34;^([0-9A-Z]){8}-[0-9|X]$&#34;; if (!code.matches(regex)) { return false; } int sum = 0; for (int i = 0; i &lt; 8; i++) { sum += str.indexOf(String.valueOf(code.charAt(i))) * ws[i]; } int c9 = 11 - (sum % 11); String sc9 = String.valueOf(c9); if (11 == c9) { sc9 = &#34;0&#34;; } else if (10 == c9) { sc9 = &#34;X&#34;; } return sc9.equals(String.valueOf(code.charAt(9))); } 验证企业统一信用代码/** * 验证企业统一信用代码 * * @param creditCode * @return */ public static boolean isValidCreditCode(String creditCode) { if (StringUtils.isBlank(creditCode) || (creditCode.equals(&#34;&#34;)) || creditCode.length() != 18) { return false; } String baseCode = &#34;0123456789ABCDEFGHJKLMNPQRTUWXY&#34;; char[] baseCodeArray = baseCode.toCharArray(); Map&lt;Character, Integer&gt; codes = new HashMap&lt;Character, Integer&gt;(); for (int i = 0; i &lt; baseCode.length(); i++) { codes.put(baseCodeArray[i], i); } char[] businessCodeArray = creditCode.toCharArray(); Character check = businessCodeArray[17]; if (baseCode.indexOf(check) == -1) { return false; } int[] wi = { 1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28 }; int sum = 0; for (int i = 0; i &lt; 17; i++) { Character key = businessCodeArray[i]; if (baseCode.indexOf(key) == -1) { return false; } sum += (codes.get(key) * wi[i]); } int value = 31 - sum % 31; if(value == 31){ value = 0; } return value == codes.get(check); }   ]]></content></entry><entry><title>动态表单之form-create</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%8A%A8%E6%80%81%E8%A1%A8%E5%8D%95/</url><categories><category>vue</category></categories><tags><tag>vue</tag><tag>动态表单</tag></tags><content type="html"><![CDATA[  form-create是一个可以通过 JSON 生成具有动态渲染、数据收集、验证和提交功能的表单生成器。并且支持生成任何 Vue 组件。结合内置17种常用表单组件和自定义组件，再复杂的表单都可以轻松搞定。
+示例：http://jsrun.net/NQhKp/edit
+在js文件后添加如下代码，主要模拟远程获取表单数据
+//后台获取数据值进行绑定 var result = { &#34;goods_name&#34;:&#34;fdsfdsfd&#34;, &#39;address&#39;:[&#39;北京市&#39;, &#39;市辖区&#39;, &#39;西城区&#39;], &#39;is_postage&#39;:&#39;1&#39;, &#39;label&#39;:[&#34;1&#34;, &#34;3&#34;], &#39;is_show&#39;:&#39;1&#39;, &#39;cate_id&#39;:[&#39;105&#39;], &#39;section_day&#39;:[&#39;2020-05-25&#39;,new Date()], &#39;section_time&#39;:[&#39;8:00:01&#39;,&#39;8:00:02&#39;], &#39;checked&#39;:&#39;1&#39; } vm.fApi.setValue(result)   ]]></content></entry><entry><title>胜诉后应该怎么做？执行全流程详解</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%83%9C%E8%AF%89%E5%90%8E%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%A7%E8%A1%8C%E5%85%A8%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>执行流程</tag></tags><content type="html"> 拿到胜诉判决后，你应该这样做！
+1、判决生效，对方拒不执行，查询和了解财产线索，起草《强制执行申请书》，向法院申请强制执行立案，请求法院查封房产车辆和冻结银行存款，从立案庭转至执行实施庭，大约需要五天的时间，执行员阅卷，并且制作阅卷笔录，制订出执行计划。内容大体是：时间、地点、阅卷人、申请执行人、被执行人、执行依据、标的额，案件事实、阅后意见、执行方案、列出一二三来，然后打印出来，执行员签名。
+书记员上网登记。一是在内网里录进去，二是在外网里录进去，两个网都有非常多的用途，即内网用于报结案、失信被执行人名单等，外网查控被执行人银行贷款、查询工商信息等，这个网络录入需要一定的时间。
+打印提供被执行人财产线索通知书，送达给申请执行人。
+法官查控，发现被执行人有银行存款。除个别银行，例如中国工商银行外，其他银行可能控制，但实际上还得到银行的分支机构去冻结、扣划，冻结、扣划必须出具法律文书，通常是执行裁定书、协助冻结或扣划银行存款通过书、有的银行需要生效的法律文书。银行的效率有高有低，所要求也并非统一，且只能根据银行的情况而定，经验认为越偏远的地方的银行办事效率越低，有一个银行早上10时开始至下午2时才结束。
+若被执行人是单位的职工，且有工资正常发放，但又一次性不能完全履行。在此情况下，可以采取扣留提取的办法，由执行员出具执行裁定书、协助执行通知书下发给被执行人单位，找单位劳资部门或者财务科办理相关协助手续，每月留部分生活费（一般超过最低生活保障金），然后逐月扣除，这就是说每年度提取一次，但当事人提出请求时，可以提前支取一次，这样做的好处时，执行员可以稍轻快一些，不必为银行存款到期而苦恼，也不必为被执行人月月要生活费而头疼，但是按照规定，这不算是结案，且要四查二报，只能按照终结本次执行程序报结，待全部案款执行完毕，才能算是结案，战线拉得很长很长，有时需要100年。
+若是该案查封了房产及车辆，那就存在评估拍卖的问题。填写对外委托拍卖移交单，内容包括：案由、简要案情、委托材料、当事人的姓名、职务、手机、固话、移交单位、联系人及电话、庭长意见、局长意见、立案庭备案。填完这些后，然后复印民事判决书、拍卖委托书、合议庭笔录、产权证明、执行裁定书，缺少一样你的案件无法转至技术室。摇号确定评估机构。确定评估费用，签订委托评估协议。评估大概需要2至4周，才能出具《评估报告》。摇号拍卖。第一 …</content></entry><entry><title>送达流程</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E9%80%81%E8%BE%BE%E6%B5%81%E7%A8%8B/</url><categories><category>送达</category></categories><tags><tag>送达</tag></tags><content type="html"> 总体流程
+系统组成
+送达载体全覆盖，线上线下一体化
+功能介绍
+电话送达
+电子送达
+邮寄送达
+外勤送达
+公告送达
+网格协助
+短信送达
+跨域集约
+送达地址库
+岗位与设备配置</content></entry><entry><title>编写技术规范的实用指南</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E7%BC%96%E5%86%99%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83%E7%9A%84%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97/</url><categories><category>文档</category></categories><tags><tag>文档</tag></tags><content type="html"> 作为一名软件工程师，你的主要职责是解决技术问题。你的第一个冲动可能是立即直接开始编写代码。但如果你没有仔细考虑过你的解决方案，那么这可能是一个糟糕的主意。
+你可以通过编写技术规范来思考一些困难的技术问题。如果你自认并非一个好作家，那么编写这样的技术规范可能会让你感到沮丧。你甚至可能认为这是一件不必要的琐事。但是，编写技术规范真的可以增加成功的项目、服务或功能的机会，让所有利益相关者都感到满意。它可以降低在实施过程中甚至在产品发布之后出现严重错误的几率。
+在本文中，我将讲述如何编写确保产品质量的技术规范。
+什么是技术规范文档
+技术规范文档概述了如何通过设计和构建解决方案来解决技术问题。它有时也被称为技术设计文档、软件设计文档或工程设计文档。它通常是由工程师编写的，他们将构建解决方案或在实施过程中担任负责人，但对于大型项目，它可以由技术负责人、项目负责人或高级工程师编写。这些文档向工程师团队和其他利益相关者展示了功能、项目、计划和服务的设计、所涉及的工作、影响和时间线。
+为什么编写技术规范很重要
+技术规范对参与项目的每个人都有巨大的好处：编写它们的工程师，使用它们的团队，甚至是根据它们设计的项目。以下是你应该编写技术规范的一些理由。
+给工程师带来的好处
+通过编写技术规范，工程师被迫在直接进入代码之前检查问题，在代码中他们可能会忽略解决方案的某些方面。当你把实施过程中需要做的所有工作进行分解、组织和安排，你就会对解决方案的范围有一个更好的认识。因为技术规范是所提议的解决方案的透彻看法，所以技术规范也可以作为项目的文档，无论是在实施阶段还是实施之后的文档，都是为了交流你在项目上的成就。
+有了这个经过深思熟虑的解决方案，你的技术规范就不必再向多个团队成员和利益相关者反复解释你的设计了。但常言道，人无完人。你的同行和经验更为丰富的工程师可能会给你展示他们在设计、新技术、工程实践、替代解决方案等方面的新事物，而这些你以前可能从未见过或从未想到过。他们可能会发现你可能忽略的解决方案的例外情况，从而减少你的责任。反正你编写的技术规范，关注的人越多越好。
+给团队带来的好处
+要在团队和其他利益相关者之间沟通项目设计思想，技术规范是一种直接而有效的方式。整个团队可以协作解决问题并创建解决方案。随着越来越多的团队成员和利益相关者为规范做出贡献，这会让他们在项目中投入更多精力，并鼓励他们主动承 …</content></entry><entry><title>民事诉讼流程图</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%B0%91%E4%BA%8B%E8%AF%89%E8%AE%BC%E6%B5%81%E7%A8%8B%E5%9B%BE/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>工作流程</tag></tags><content type="html"></content></entry><entry><title>基层法院书记员操作手册</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E5%9F%BA%E5%B1%82%E6%B3%95%E9%99%A2%E4%B9%A6%E8%AE%B0%E5%91%98%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>工作流程</tag></tags><content type="html"> 基层法院书记员操作手册
+法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。
+【前言】法院审判部门所作的一切工作， 最终会体现在裁判文书上，但是形成裁判文书的基础是庭审，可以说，我们所有的诉讼活动都是围绕着庭审而展开。书记员的工作，主要就是记录和送达。尤其是庭审记录，是重中之重。
+书记员是人民法院干部队伍的重要组成部分，主要履行以下职责：（一）办理庭前准备过程中的事务性工作；（二）检查开庭时诉讼参与人的出庭情况，宣布法庭纪律；（三）担任案件审理过程中的记录工作；（四）整理、装订、归档案卷材料；（五）完成法官交办的其他事务性工作。[1]
+下面就基层法院书记员工作操作流程分解如下：
+一、庭前准备
+（一） 文书送达
+1、书记员收到案件后，准备庭前应送达的材料。
+原告方需送达：①受理案件通知书；（应由立案庭送达，收到案件时应检查）②举证通知书；（因涉及当事人举证权利，需存档）③开庭传票；④诉讼风险提示书；⑤廉政监督表；⑥当事人权利义务须知；⑦裁判文书上网告知书；⑧调解忠告书。
+被告方需送达：①民事诉状副本；②应诉通知书；③举证通知书；④开庭传票；⑤诉讼风险提示书；⑥廉政监督表；⑦当事人权利义务须知；⑧裁判文书上网告知书。⑨解忠告书。（除送达上述文书外，还需让被告填写送达地址确认书）
+如果是民一庭的离婚诉讼，则需另行再送一份损害赔偿请求权告知书。
+【说明】：根据民事诉讼法113条的规定，人民法院应当在立案之日起五日内将起诉状副本发送被告，被告在收到之日起十五日内提出答辩状。但是在五日内未必能够送达，变通的作法是将文书的日期落在立案之日起五日内。普通程序审理的案件，除当事人自由协商一致的外，举证期限不得少于30日（证据规定第33条，虽然民事诉讼法司法解释改为了15天， 但该举证期限的起诉时间是在答辩期届满之后，所以15天的答辩期+15天的举证期，还是30天！）。但本院多数是简易程序，根据《民事诉讼法司法解释》第266条的规定，简易程序的举证期不得超过15日。（简易程序规定在民事诉讼法第十三章，而民事诉讼法113条规定在民事诉讼法第十二章，故简易程序中不应局限民事诉讼法第113条中关于答辩期15日的规定）。简易程序的举证通知书通常写开庭前举 …</content></entry><entry><title>类案要素式审判问题研究</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E7%B1%BB%E6%A1%88%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>要素式</tag></tags><content type="html"> 类案要素式审判问题研究
+引言：
+​ 如何革命性地提高办案效率，是当前人民法院面临的重大课题。作为应对案多人少、提高办案效率的一项改革性举措和创新性工作方法，要素式审判自2012年由深圳市中级人民法院率先在其辖区实行，已在全国诸多地区探索实践、开花结果。但对于要素式审判的内涵及其必要性、可行性、实效性等，目前理论界和司法实务界均未作出明确界定，客观上又制约了要素式审判工作模式的进一步推行，也难以充分发挥出要素式审判的特点和优势。本文从南京市两级法院学习、实践、完善、推进，尤其是以信息化技术对传统要素式审判进行升级改造的探索过程出发，对要素式审判工作方法进行总结和再思考，以期对深入推进人民法院在现行诉讼制度框架内化解人案矛盾、规范审判程序、优化繁简分流、实现快审快结找到可行的方法路径。
+一、要素式审判的时代背景
+（一）案多人少
+2015年，全国各级人民法院共登记立案1323.6万余件，同比增长20.41%；其中，民事案件同比增长20.2%，行政案件同比增长61.5%，刑事自诉案件同比增长23.5%。近年来，南京市两级法院受理案件也呈持续增长态势，2011年-2015年逐年上升幅度分别为8.74%、3.92%、8.72%、8.86%、24.75%，2016年1-9月共受理各类案件171837件，同比继续上升13.6%，是2011年全年（129107件）的1.33倍，也就是说5年内案件量增加了近80%。
+审理案件是智力体力相结合的复杂劳动，案件数量越来越多，案件复杂程度越来越高，意味着办理案件的时间成本越来越高，劳动量越来越大，智力与体力投入越来越大。传统破解这种困境的主要做法就是增加劳动力的数量，即增加法官数量。依此匡算，案件数量增加80%，法官的数量至少应该随之相应增加。随着法官员额制的深入落实，法官数量减少应当是大势所趋，南京法院2011年一线法官为821名，2016年10月员额制改革后首批入额法官仅720名（不含南京铁路运输法院）。这意味着劳动量（案件）增长80%，劳动力（法官）却减少了12.3%，粗浅计算就是法官工作量人均增加105.25%。不可回避的是，当前的劳动者（法官）的智力支持和体力支出已经是满负荷状态。如果继续适用传统的办案模式与方法，就会造成法官身心疲惫，难以维持正常的工作。如果不在法律制度的框架内寻求相对高效的审判方法，必然不能有效应对人民法院面临的 …</content></entry><entry><title>最高院关于修改最高院适用《民诉法》的解释第一百四十条建议的答复</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%9C%80%E9%AB%98%E9%99%A2%E5%85%B3%E4%BA%8E%E4%BF%AE%E6%94%B9%E6%9C%80%E9%AB%98%E9%99%A2%E9%80%82%E7%94%A8%E6%B0%91%E8%AF%89%E6%B3%95%E7%9A%84%E8%A7%A3%E9%87%8A%E7%AC%AC%E4%B8%80%E7%99%BE%E5%9B%9B%E5%8D%81%E6%9D%A1%E5%BB%BA%E8%AE%AE%E7%9A%84%E7%AD%94%E5%A4%8D/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>民诉法</tag></tags><content type="html"> 对十二届全国人大五次会议第1755号建议的答复
+您提出的关于修改最高人民法院关于适用《中华人民共和国民事诉讼法》的解释第一百四十条的建议收悉，现答复如下：
+根据《中华人民共和国民事诉讼法》（以下简称民事诉讼法）第一百五十七条的规定，基层人民法院和它派出的法庭审理事实清楚、权利义务关系明确、争议不大的简易的民事案件，可以适用简易程序。根据民事诉讼法第九十二条的规定，公告送达适用于受送达人下落不明或者用其他方式无法送达的情形。由于公告送达是一种拟制送达方式，案件事实、权利义务关系、当事人之间的争议不易确定，不符合民事诉讼法第一百五十七条规定的简易程序适用条件，故民事诉讼法司法解释第一百四十条规定，适用简易程序的案件，不适用公告送达。
+审判实践中，确实存在被告故意避而不见、不参加庭审、不接收法律文书等规避送达的情形。对此，可以通过加强送达工作、改进送达方式等措施着力解决。2017年7月，最高人民法院印发《关于进一步加强民事送达工作的若干意见》， 全面推进当事人送达地址确认制度，统一送达地址确认书格式，规范送达地址确认书，提升民事送达的质量和效率。今后，我们将对送达问题继续调查研究，在总结审判实践经验基础上推动民事送达制度的完善。
+感谢您对人民法院工作的关心和支持。
+​ 2017年8月26日</content></entry><entry><title>民事诉讼程序繁简分流改革试点实施办法</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%B0%91%E4%BA%8B%E8%AF%89%E8%AE%BC%E7%A8%8B%E5%BA%8F%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E6%94%B9%E9%9D%A9%E8%AF%95%E7%82%B9%E5%AE%9E%E6%96%BD%E5%8A%9E%E6%B3%95/</url><categories><category>法律知识</category></categories><tags><tag>司法</tag><tag>民事诉讼</tag></tags><content type="html"> 民事诉讼程序繁简分流改革试点实施办法
+来源：最高人民法院 发布时间：2020-01-16 00:11:05 法〔2020〕11号
+最高人民法院
+关于印发《民事诉讼程序繁简分流改革试点实施办法》的通知
+北京、上海、江苏、浙江、安徽、福建、山东、河南、湖北、广东、四川、贵州、云南、宁夏、陕西省（区、市）高级人民法院： 为深入贯彻党的十九大和十九届二中、三中、四中全会及中央政法工作会议精神，深化民事诉讼制度改革，根据第十三届全国人大常委会第十五次会议作出的《全国人民代表大会常务委员会关于授权最高人民法院在部分地区开展民事诉讼程序繁简分流改革试点工作的决定》（人大常委会字〔2019〕42号）和最高人民法院印发的《民事诉讼程序繁简分流改革试点方案》（法〔2020〕10号），结合工作实际，最高人民法院制定了《民事诉讼程序繁简分流改革试点实施办法》。现将文件印发给你们，请认真组织实施。实施过程中遇有情况和问题，请及时层报最高人民法院。
+最高人民法院
+2020年1月15日
+民事诉讼程序繁简分流改革试点实施办法
+为深化民事诉讼制度改革，推进案件繁简分流、轻重分离、快慢分道，进一步优化司法资源配置，全面促进司法公正，提升司法效能，满足人民群众多元、高效、便捷的纠纷解决需求，维护当事人合法诉讼权益，根据第十三届全国人民代表大会常务委员会第十五次会议作出的《全国人民代表大会常务委员会关于授权最高人民法院在部分地区开展民事诉讼程序繁简分流改革试点工作的决定》，结合审判工作实际，制定本办法。 一、一般规定 第一条 试点法院应当根据本办法，积极优化司法确认程序、小额诉讼程序和简易程序，健全审判组织适用模式，探索推行电子诉讼和在线审理机制，有效降低当事人诉讼成本，充分保障人民群众合法诉讼权益，促进司法资源与司法需求合理有效配置，全面提升司法质量、效率和公信力，努力让人民群众在每一个司法案件中感受到公平正义。 二、优化司法确认程序 第二条 人民法院应当建立特邀调解名册，按照规定的程序和条件，确定特邀调解组织和特邀调解员，并对名册进行管理。 第三条 经人民调解委员会、特邀调解组织或者特邀调解员调解达成民事调解协议的，双方当事人可以自调解协议生效之日起三十日内共同向人民法院申请司法确认。 第四条 司法确认案件按照以下规定依次确定管辖： （一）委派调解的，由作出委派的人民法院管辖； （二）当事人选择由人民 …</content></entry><entry><title>要素式审判法应用问题的调研报告</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%B3%95%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>要素式审判</tag><tag>内蒙</tag></tags><content type="html"> 作者：鄂尔多斯中院 发布时间：2018-01-20 10:54:54
+引言
+当前我国经济社会持续快速发展，人民法院受理案件数量不断迅猛增长；司法责任制改革和人员分类管理，虽然实现了把最优秀的人才吸引到办案一线，但人均办案数量的增长也更加显著。2017年上半年，全国法院共受理案件1458.6万件，与2016年上半年相比，全国法院受理案件数量上升11.2%，其中新收案件上升14.8%。全国共计约12万名员额法官，仅2017年上半年，人均受理案件121.4件，人均审结案件74件。从全国范围看，共有369家法院新收案件增幅超过50%，198家法院增幅超过40%，343家法院增幅超过30%。 全国法院系统的超负荷运载能力正在遇到前所未有的挑战。
+为了应对当前日益严峻的案多人少的局面，最高人民法院于2016年出台了《关于进一步推进案件繁简分流优化司法资源配置的若干意见》，明确提出要根据案件事实、法律适用、社会影响等因素，选择适用适当的审理程序，规范不同程序之间的转换衔接，做到该繁则繁，当简则简，繁简得当，努力以较小的司法成本取得较好的法律效果。随后发布的《民事诉讼文书样式》（2016年版）则明确要求裁判文书应当体现以审判为中心，要求对裁判文书繁简分流并明确了分流标准，以减轻办案法官制作裁判文书的工作量，缓解案多人少的压力。新的文书样式也增加了要素式裁判文书、令状式裁判文书和表格式裁判文书三种简化的文书样式。
+由于受鄂尔多斯地区近年来经济下行、民间借贷资金链断裂的影响，鄂尔多斯市两级法院的民间借贷纠纷、金额借贷纠纷、物业纠纷、合同纠纷、房地产纠纷等类型案件迅猛增长，两级法院于2013年新收案件43386件，2014年新收59059件，2015年新收65902件，2016年新收80519件，案件总量近几年来始终在高位运行，并呈迅猛增长态势。但由于历史原因，鄂尔多斯地区法院系统中央政法专项编制人员较少，按人员编制比例进行员额制改革后，员额法官数量与案件总量相近的其他法院相比起来相对较少。但面对案多人少的突出困难，鄂尔多斯市两级法院不等不靠，通过改革从机制上采取应对措施。坚持多元化解，强化诉调对接，让更多的纠纷在法院诉讼之外得以解决，最大化司法资源的效益。以诉讼程序优化和司法资源结构性调整为着力点，深挖内部潜力，最大限度地提高办案效率，以提高司法生产力。一方面以司法责任制改革为引领，实 …</content></entry><entry><title>最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%9C%80%E9%AB%98%E6%B3%95%E5%90%AF%E5%8A%A8%E6%B0%91%E4%BA%8B%E8%AF%89%E8%AE%BC%E7%A8%8B%E5%BA%8F%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E6%94%B9%E9%9D%A9%E8%AF%95%E7%82%B9%E5%B7%A5%E4%BD%9C-%E5%8D%B0%E5%8F%91%E6%94%B9%E9%9D%A9%E8%AF%95%E7%82%B9%E6%96%B9%E6%A1%88%E5%8F%8A%E5%AE%9E%E6%96%BD%E5%8A%9E%E6%B3%95/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>繁简分流</tag></tags><content type="html"> 最高法启动民事诉讼程序繁简分流改革试点工作印发改革试点方案及实施办法
+来源：人民法院新闻传媒总社 发布时间：2020-01-15 21:49:16 为深入贯彻中央决策部署，认真落实全国人大常委会授权决定，深化民事诉讼制度改革，推进案件繁简分流、轻重分离、快慢分道；为充分保障人民群众合法诉讼权益，有效降低当事人诉讼成本，满足人民群众多元、高效、便捷的解纷需求，进一步优化司法资源配置，提升审判工作质效和公信力，今天，最高人民法院印发《民事诉讼程序繁简分流改革试点方案》和《民事诉讼程序繁简分流改革试点实施办法》，正式启动为期2年的试点工作。
+按照重大改革先行先试要求，最高人民法院经扎实深入调研，广泛征求意见，根据全国人大常委会授权决定，研究起草了《试点方案》和《实施办法》。《试点方案》明确了改革目标和基本原则、试点主要内容、试点范围和期限、方案实施和组织保障等内容，《实施办法》共30条，对试点方案作了进一步细化，是开展试点工作的具体依据。两个文件主要内容包括五个方面：
+一是优化司法确认程序。文件规定，除人民调解委员会外，将特邀调解组织、特邀调解员主持达成的调解协议纳入司法确认范围，明确司法确认案件管辖规则，允许中级人民法院及专门人民法院受理符合级别管辖及专门管辖标准的司法确认案件，进一步规范和促进非诉调解工作，提升纠纷化解效率，增强调解公信力。
+二是完善小额诉讼程序。文件规定，小额诉讼程序适用于标的额为人民币5万元以下的案件，对于标的额在人民币5万至10万元的案件，允许当事人合意选择适用小额诉讼程序。在充分保障当事人诉讼权利基础上，进一步简化小额诉讼程序审理方式和裁判文书，合理确定小额诉讼案件审限。规范小额诉讼程序与简易程序、普通程序的转换适用机制。
+三是完善简易程序规则。文件规定，合理扩大简易程序适用范围，将需要公告送达的简单民事案件纳入适用范围。进一步明确简易程序庭审和文书简化规则，优化庭审程序和审理方式，推行要素式裁判文书，对事实清楚、争议不大的案件可以适当简化说理。
+四是扩大独任制适用。文件规定，在一审程序中，基层法院可以采取独任制审理部分民事案件。在二审程序中，中级法院及专门法院可采取独任制审理一审以简易程序审结的上诉案件以及民事裁定上诉案件，实现二审程序繁简分流。同时，建立完善独任制与合议制转换适用机制，充分保障当事人诉讼权利，保障案件审判质量。
+五是健全电子 …</content></entry><entry><title>广州互联网法院 构建“互联网+”金融解纷新机制</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E5%B9%BF%E5%B7%9E%E4%BA%92%E8%81%94%E7%BD%91%E6%B3%95%E9%99%A2-%E6%9E%84%E5%BB%BA%E4%BA%92%E8%81%94%E7%BD%91+%E9%87%91%E8%9E%8D%E8%A7%A3%E7%BA%B7%E6%96%B0%E6%9C%BA%E5%88%B6/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>广东</tag></tags><content type="html"> 广州互联网法院 构建“互联网+”金融解纷新机制
+发布时间：2019-12-23 16:37:41
+​ 为及时回应数字经济发展进程中的司法新需求，探索创新“互联网+”纠纷解决机制，广州互联网法院联合政法系统、地方金融监管系统、金融业机构等80余家单位，共建数字金融协同治理中心，上线“类案批量智审系统”，协同打造“一系统+一指引+一中心”创新模式，共建数字金融纠纷解决机制改革新样板，强化互联网金融综合治理，以良好法治环境助力普惠金融发展，为粤港澳大湾区数字金融建设赋能。
+一、以技术强化为驱动，打造全国首个互联网金融纠纷全流程在线批量审理系统
+上线在线纠纷“类案批量智审系统”，全程覆盖存证调证、催告、和解、调解、申请立案、立案审查、送达、证据交换、庭审、宣判、执行等诉讼环节，实现案件全程在线快速、批量、智能办理。一是便捷自动存证。依托“网通法链”智慧信用生态系统，广州互联网法院诉讼平台标准化对接多个存证平台数据库，已存证电子数据，可直接批量导入诉讼平台；未存证电子数据，可依照要素列表整理，批量提交。二是失联修复送达。系统送达全程区块链留痕，可实时追踪送达时间、地点、签收人等关键节点信息。对无法电子送达的当事人，系统采用失联修复技术，可自动获取其本人近三个月内活跃的手机号码、电子邮箱等作为优先送达地址，提升电子送达率。三是批量立案裁判。系统借助案件信息预先配置、证据要素智能审定技术实现批量立案、匹配和审核，可一键批量生成令状式、要素式、表格式等各式文书，显著减少法官工作量，提升金融纠纷案件审判质效。四是推广示范性审判。对于代表性强、具有示范意义的典型案件，法官可以通过系统发送邀请码等形式，实现同类型案件当事人在线旁听，推动平行案件达成和解、调解协议或自动履行，引导非判决方式批量解决纠纷。
+二、以标准制定为抓手，出台全国首个互联网金融在线程序指引
+出台《广州互联网法院互联网金融借款、小额借款合同纠纷在线批量化解程序指引（试行）》，以多层次数字金融司法需求为切入点，在保障当事人权益前提下优化审理程序，破解互联网金融案件治理规则不完善难题。一是严格纠纷准入标准。程序仅限标的额小、以快速批量处理、在线执行即可化解的纠纷，避免纠纷因化解难、执行难而批量滞留于司法程序，确保纠纷智能、高效、有序化解。就申请批量化解程序的案件，严抓“八道准入门槛”，从当事人身份认证、证据标准、送达方式、合 …</content></entry><entry><title>2018年度广东省行政诉讼情况报告</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/2018%E5%B9%B4%E5%BA%A6%E5%B9%BF%E4%B8%9C%E7%9C%81%E8%A1%8C%E6%94%BF%E8%AF%89%E8%AE%BC%E6%83%85%E5%86%B5%E6%8A%A5%E5%91%8A/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>广东</tag></tags><content type="html"> 2018年度广东省行政诉讼情况报告
+​ 2018年，广东省各级法院深入学习贯彻习近平新时代中国特色社会主义思想和党的十九大精神以及习近平总书记对广东重要讲话精神，全面加强行政审判工作，保护人民群众合法权益，促进行政争议实质性解决，支持和监督行政机关依法行政，为广东实现“四个走在全国前列”、当好“两个重要窗口”提供强有力司法保障。
+一、2018年度广东省行政诉讼概况和案件特点
+（一）行政诉讼概况
+1.行政诉讼案件年度增长。2018年，全省法院新收行政案件持续快速增长，其中一审行政案件新收21442件，同比增长18%，二审行政案件新收12229件，同比增长31.23%，行政申请再审案件新收2177件，同比增长57%，审判压力继续上升。
+2.行政诉讼案件类型分布。2018年，全省新收一审行政案件类型更趋分散。传统案件继续增长，收案最多的依然是劳动和社会保障类案件（3671件），其次是土地海洋林业等自然资源类案件（1930件）。与此同时，新类型案件比重上升，无法归入传统案由的案件占42%。
+3.行政诉讼案件地域分布。2018年，全省行政案件地域集中趋势有所缓和。大湾区内地九市（广州、深圳、佛山、东莞、中山、惠州、珠海、肇庆、江门）新收一审行政案件17092件，占全省的80%。粤东西北一审收案恢复增长，新收一审行政案件4350件，同比增长28%，比全省平均增幅高出10个百分点。
+4.行政诉讼裁判结果。2018年，全省共审结一审行政案件21316件，其中直接判决行政机关败诉的891件，行政机关改变行政行为后裁定准予原告撤诉的5件，合计896件。行政机关一审败诉率为4.2%，较上年度下降6.5个百分点。
+（二）行政非诉审查概况
+1.行政非诉审查案件继续增长。2018年，全省法院新收行政机关申请法院强制执行行政行为的案件即行政非诉审查案件33129件，同比增长12.6%，审结33098件，同比增长11%。行政非诉审查案件类型高度集中，土地、公积金、环保和交通4类案件占全部非诉审查案件的72%。
+\2. 准予执行率基本持平。2018年，全省法院裁定准予强制执行行政行为25634件，准予执行率77.45%，同比微降0.4个百分点。各类行政行为中，不准予执行率相对较高的依然是土地类、环保类行政行为。行政机关不服不准予执行裁定，向上一级法院申请复议560件，复议率1.7%，同比上升1.3个 …</content></entry><entry><title>中华人民共和国民事诉讼法</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B0%91%E4%BA%8B%E8%AF%89%E8%AE%BC%E6%B3%95/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>民事诉讼法</tag></tags><content type="html"> 　(1991年4月9日第七届全国人民代表大会第四次会议通过　根据2007年10月28日第十届全国人民代表大会常务委员会第三十次会议《关于修改〈中华人民共和国民事诉讼法〉的决定》第一次修正　根据2012年8月31日第十一届全国人民代表大会常务委员会第二十八次会议《关于修改〈中华人民共和国民事诉讼法〉的决定》第二次修正　根据2017年6月27日第十二届全国人民代表大会常务委员会第二十八次会议《关于修改〈中华人民共和国民事诉讼法〉和〈中华人民共和国行政诉讼法〉的决定》第三次修正)
+第一编　总　则
+第一章　任务、适用范围和基本原则
+第一条 中华人民共和国民事诉讼法以宪法为根据，结合我国民事审判工作的经验和实际情况制定。
+第二条 中华人民共和国民事诉讼法的任务，是保护当事人行使诉讼权利，保证人民法院查明事实，分清是非，正确适用法律，及时审理民事案件，确认民事权利义务关系，制裁民事违法行为，保护当事人的合法权益，教育公民自觉遵守法律，维护社会秩序、经济秩序，保障社会主义建设事业顺利进行。
+第三条 人民法院受理公民之间、法人之间、其他组织之间以及他们相互之间因财产关系和人身关系提起的民事诉讼，适用本法的规定。
+第四条 凡在中华人民共和国领域内进行民事诉讼，必须遵守本法。
+第五条 外国人、无国籍人、外国企业和组织在人民法院起诉、应诉，同中华人民共和国公民、法人和其他组织有同等的诉讼权利义务。
+外国法院对中华人民共和国公民、法人和其他组织的民事诉讼权利加以限制的，中华人民共和国人民法院对该国公民、企业和组织的民事诉讼权利，实行对等原则。
+第六条 民事案件的审判权由人民法院行使。
+人民法院依照法律规定对民事案件独立进行审判，不受行政机关、社会团体和个人的干涉。
+第七条 人民法院审理民事案件，必须以事实为根据，以法律为准绳。
+第八条 民事诉讼当事人有平等的诉讼权利。人民法院审理民事案件，应当保障和便利当事人行使诉讼权利，对当事人在适用法律上一律平等。
+第九条 人民法院审理民事案件，应当根据自愿和合法的原则进行调解;调解不成的，应当及时判决。
+第十条 人民法院审理民事案件，依照法律规定实行合议、回避、公开审判和两审终审制度。
+第十一条 各民族公民都有用本民族语言、文字进行民事诉讼的权利。
+在少数民族聚居或者多民族共同居住的地区，人民法院应当用当地民族通用的语言、文字进行审理和发布法律文书。 …</content></entry><entry><title>查看当前npm源</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8Dnpm%E6%BA%90/</url><categories><category>开发经验</category></categories><tags><tag>前端</tag></tags><content type="html"> 查看当前npm源
+npm config get registry &amp;gt;http://registry.npmjs.org/ 修改npm源（设置为淘宝npm源）
+npm config set registry https://registry.npm.taobao.org</content></entry><entry><title>Windows下安装及使用NVM</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8nvm/</url><categories><category>开发经验</category></categories><tags><tag>nodejs</tag></tags><content type="html"> Windows下安装及使用NVM
+​ 所谓nvm就是一个可以让你在同一台机器上安装和切换不同版本node的工具。这里是一篇安装及使用教程。
+第一步：下载nvm
+可以到github上下载最新版本https://github.com/coreybutler/nvm-windows/releases
+nvm-noinstall.zip： 这个是绿色免安装版本，但是使用之前需要配置 nvm-setup.zip：这是一个安装包，下载之后点击安装，无需配置就可以使用，方便。 Source code(zip)：zip压缩的源码 Sourc code(tar.gz)：tar.gz的源码，一般用于*nix系统
+第二部：安装
+之后，按照提示完成安装即可，安装完成后可以检测一下是否安装成功 在命令行输入nvm，如果出现nvm版本号和一系列帮助指令，则说明nvm安装成功；否则，可能会提示nvm: command not found
+第三步：修改settings.txt
+在你安装的目录下找到settings.txt文件，打开后加上 node_mirror: https://npm.taobao.org/mirrors/node/
+npm_mirror: https://npm.taobao.org/mirrors/npm/
+这一步主要是将npm镜像改为淘宝的镜像，可以提高下载速度。
+第四步：使用
+nvm arch [32|64]： 显示node是运行在32位还是64位模式。指定32或64来覆盖默认体系结构。 -nvm install [arch]：该可以是node.js版本或最新稳定版本latest。（可选[arch]）指定安装32位或64位版本（默认为系统arch）。设置[arch]为all以安装32和64位版本。在命令后面添加–insecure，可以绕过远端下载服务器的SSL验证。 nvm list [available]：列出已经安装的node.js版本。可选的available，显示可下载版本的部分列表。这个命令可以简写为nvm ls [available]。 nvm on： 启用node.js版本管理。 nvm off： 禁用node.js版本管理(不卸载任何东西) nvm proxy [url]： 设置用于下载的代理。留[url]空白，以查看当前的代理。设置[url]为none删 …</content></entry><entry><title>网站备案指的是域名备案？ 还是指的服务器备案呢？</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88%E6%8C%87%E7%9A%84%E6%98%AF%E5%9F%9F%E5%90%8D%E5%A4%87%E6%A1%88%E8%BF%98%E6%98%AF%E6%8C%87%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%87%E6%A1%88%E5%91%A2/</url><categories><category>开发经验</category></categories><tags><tag>服务器</tag></tags><content type="html"> ​ 一般在建网站的时候很多人对于怎么备案，给域名备案还是服务器备案比较迷糊，下面为大家详细讲解一下，希望各位个人站长或者企业建站可以很准确的搞好备案。
+​ 备案是工信部要求的，主要是为了规范网络安全化，维护网站经营者的合法权益，保障网民的合法利益。凡是使用国内空间的网站域名都需要备案。
+​ 域名如果绑定指向到国内网站空间就要备案。也就是说如果你这个域名只是纯粹注册下来，用作投资或者暂时不用，是无需备案的。域名指向到国外网站空间，也是无需备案的。由于域名备案基本取决于网站空间的情况，所以备案也是主机提供商提供的，不是域名注册商。 备案是针对空间的，但是备案号是挂在域名上的，可以说备案如果没有空间或者没有域名都备案不了。备案首先是要由空间商审核，审核完才能递交到通管局，审核成功后，备案号是挂在域名上。备案与否是根据空间判断的，空间要求备案就备案，不要求就不用。网站空间怎么备案呢?只要联系当时购买的空间商就可以了，正规的空间商都会提供免费的备案帮助。只要按照空间商的要求准备备案资料就可以了。
+​ 备案之后，可以使用国内空间，内地用户打开的速度会大大快于其他空间，保障了排名和转化率。百度，Google，等搜索引擎，对同类型网站的搜录，往往是已备案的多于未备案的。因为没有备案被封过的网站不在少数，其中不备案的很多都是违法网站，一般正规网站备案之后，如果出了问题容易解决，而没有备案的，如果存在违法信息，被发现了，就会直接撤销。另外，如果你的网站涉及违法内容，将可以直接调查到你本人，如果你的网站被攻击或遭受利益上的损失，你可以凭备案许可进行报案。
+​ 网站备案到底是给域名备案还是给空间备案?备案说到底是给域名备案，但备案的话离不开域名和国内空间，两者缺一不可。备案的最终结果是让域名有备案号，有了备案号的域名才能访问国内空间。</content></entry><entry><title>济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%B5%8E%E5%8D%97%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E6%B3%95%E5%BA%AD%E7%BC%96%E5%8F%91%E8%91%97%E4%BD%9C%E6%9D%83%E4%BE%B5%E6%9D%83%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E5%AE%A1%E5%88%A4%E8%A6%81%E7%B4%A0%E8%A1%A8+%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%88%A4%E5%86%B3%E4%B9%A6%E6%A0%B7%E5%BC%8F%E8%8C%83%E6%9C%AC/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 济南知识产权法庭编发“著作权侵权纠纷案件审判要素表+要素式判决书样式”（范本）
+**发布：**济南中院新闻中心 来源：济南知识产权法庭
+​ 为贯彻落实最高人民法院民事诉讼程序繁简分流改革试点精神以及省法院要素式审判方式指引规定要求，进一步提升著作权侵权纠纷案件审判质效，更加合理分配司法审判资源，济南知识产权法庭依照《济南市中级人民法院关于民事诉讼程序繁简分流改革试点工作实施方案（试行）》，结合济南知识产权审判工作实际，编写了《著作权侵权纠纷案件审判要素表、要素式判决书样式》并予以印发。
+​ 《著作权侵权纠纷案件审判要素表、要素式判决书样式》为基层法院适用小额诉讼程序或者简易程序审理图片类、音乐作品类著作权侵权案件提供了规范化指引，并为审判流程和裁判文书的简化进一步细化了操作流程。
+著作权侵权纠纷案件审判要素表
+** **
+**提示：**1.为了帮助您更好地参加诉讼，保护您的合法权利，请填写本表。2.本表所列各项内容为法院查明案件事实所需，务必如实填写。3.您在本表中所填内容属于依法向法院陈述的事实，不如实填写应承担由此产生的法律后果。4.本表有些内容可能与您的案件无关，您认为与案件无关的项目可以填“无”或不填；对于本表中勾选项可以在对应项打“√”；您认为另有重要内容未予列明的，可以在本表尾部填写。 案件事实要素 原告填写 被告**/**第三人确认 1.权利主体 原始著作权人□ 受让人□1.合同签订时间：2.转让的权利种类：3.地域范围： 被许可使用人□1.合同签订时间：2.许可使用的权利种类、是否为专有使用权：3.地域范围、期间： 其他□ 2.权利内容 作品类型： 作品名称： 作品完成时间： 发表时间： 作品载体： 著作权登记证书1.登记机关：2.登记时间： 权利种类1.复制权2.发行权3.信息网络传播权4.放映权5.获得报酬权6.其他 3.侵权行为及取证方式 1. 2. 3. 4.被诉侵权作品与权利作品比对情况 构成相同□构成实质性相似□ 5.损害赔偿 实际损失□1.数额：2.计算方式： 侵权获利□1.数额：2.计算方式： 参照许可使用费□1.数额：2.计算方式： 法定赔偿□1.数额：2.参考依据： 6.合理开支 公证费□：________元；律师费□：________元；调查费□：________元；其他□：________元。 7.是否有合法来源 是□1.来源 …</content></entry><entry><title>Java开发手册(泰山版)</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C%E6%B3%B0%E5%B1%B1%E7%89%88/</url><categories><category>开发技术</category></categories><tags><tag>java开发手册</tag><tag>经验</tag></tags><content type="html"> Java开发手册(泰山版)
+{% pdf /files/Java开发手册(泰山版).pdf 700px %}</content></entry><entry><title>Markdown自动生成左侧导航栏</title><url>/post/office/markdown%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%B7%A6%E4%BE%A7%E5%AF%BC%E8%88%AA%E6%A0%8F/</url><categories><category>markdown</category></categories><tags><tag>markdown</tag><tag>目录</tag></tags><content type="html"><![CDATA[  Markdown自动生成左侧导航栏
+把以下代码直接 复制到markdown生成的html中即可。
+&amp;lt;script src=&amp;#34;http://code.jquery.com/jquery-1.7.2.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt; //是否显示导航栏 var showNavBar = true; //是否展开导航栏 var expandNavBar = true; var currentIndex = 0; var currentScrollHigh = 0; var currentContentScrollHigh = 0; function sleep(numberMillis) { var now = new Date(); var exitTime = now.getTime() + numberMillis; while (true) { now = new Date(); if (now.getTime() &amp;gt; exitTime) return; } } $(window).onbeforeunload = function(){ currentIndex = 0; } $(window).load(function(){ var h1s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h1&amp;#34;); var h2s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h2&amp;#34;); var h3s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h3&amp;#34;); var h4s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h4&amp;#34;); var h5s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h5&amp;#34;); var h6s = $(&amp;#34;body&amp;#34;).find(&amp;#34;h6&amp;#34;); var headCounts = [h1s.length, h2s.length, h3s.length, h4s.length, h5s.length, h6s.length]; var vH1Tag = null; // 显示的最 …  ]]></content></entry><entry><title>一种基于平均思想的任务分配算法</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E5%B9%B3%E5%9D%87%E6%80%9D%E6%83%B3%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95/</url><categories><category>开发经验</category></categories><tags><tag>开发经验</tag></tags><content type="html"> ​ 假设现在有n个任务需要分配给m个审核员去完成，但是每个审核员手头上还有未完成的任务，且未完成的任务数不同。那么如何均匀的把这些任务分配给各个审核员呢?这里我提出了一种基于平均思想的任务分配算法（我称之为标杆算法）。
+​ 算法的主要思想是：首先找出所有审核员中手头未完成任务数最大的审核员，然后其它审核员以该审核员的未完成任务数为标杆，计算自己可容纳的任务数，最后所有审核员可容纳的任务数之和即为总的可容纳任务数(ava_task)。 ​ 这里有两种情况，第一种情况是：总的可容纳任务数小于或等于n个待分配的任务数，此时所有审核员以最大未完成任务数(max_task)为标杆，接收待分配的任务。如果刚好分配完，那么算法结束；如果还有剩下的任务未分配，那将剩下的任务抽取m个任务分配给每一个审核员，依次类推，直到剩下的未分配任务数小于m为止，然后再将这小于m的任务随机分配给相应数量的审核员。第二种情况是：总的可容纳任务数大于n个待分配的任务数，此时降低一个单位的标杆(max_task-1)，然后循环计算可容纳的任务数，直到退出循环(循环终止条件为：ava_task - task_num &amp;amp;lt;= lower_List.size()，lower_List.size()表示的是低于当前标杆的审核员数)。 ​ 接下来，我们将通过一个简单的例子来说明算法的流程，由于第一种情况比较简单，因此，该例子是基于第二种情况的,，如图1所示。
+​ 假设有20个任务需要分配给8个审核员(对应8个条形图，实线条形图里的数字代表该审核员手头未完成的任务数)。首先找出这8个审核员中未完成任务数的最大值max_task=7，然后各审核员以max_task为标杆计算各自可容纳的任务数(对应虚线条形图里的数字)，总的可容纳任务数为所有审核员可容纳的任务数之和，即ava_task=6+3+4+2+5+0+5+6=31，由图1可知，lower_List.size()=7，由于31-20&amp;amp;gt;7，因此可降低一个单位的标杆，即max_task=max_task-1=6，如图2所示。 ​ 那么，ava_task=5+2+3+1+4+0+4+5=24，lower_List.size()=7，由于24-20&amp;amp;lt;7，因此循环终止。由于可容纳的任务数仍然大于待分配的任务数，因此需要再降低一个单位的标杆(一定要考虑这种情 …</content></entry><entry><title>提问的智慧</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</url><categories><category>开发经验</category></categories><tags><tag>开发经验</tag></tags><content type="html"> 提问的智慧
+How To Ask Questions The Smart Way
+Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen
+本指南英文版版权为 Eric S. Raymond, Rick Moen 所有。
+原文网址：
+http://www.catb.org/~esr/faqs/smart-questions.html
+Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu
+本中文指南是基于原文 3.10 版以及 2010 年由 Gasolin
+所翻译版本的最新翻译；
+协助指出翻译问题，请
+发 Issue
+，或直接
+发 Pull Request
+给我。
+本文另有
+繁體中文版
+。
+原文版本历史
+目录
+声明
+简介
+在提问之前
+当你提问时
+慎选提问的论坛
+Stack Overflow
+网站和 IRC 论坛
+第二步，使用项目邮件列表
+使用有意义且描述明确的标题
+使问题容易回复
+用清晰、正确、精准并合法语法的语句
+使用易于读取且标准的文件格式发送问题
+精确地描述问题并言之有物
+话不在多而在精
+别动辄声称找到 Bug
+低声下气不能代替你的功课
+描述问题症状而非你的猜测
+按发生时间先后列出问题症状
+描述目标而不是过程
+别要求使用私人电邮回复
+清楚明确的表达你的问题以及需求
+询问有关代码的问题时
+别把自己家庭作业的问题贴上来
+去掉无意义的提问句
+即使你很急也不要在标题写紧急
+礼多人不怪，而且有时还很有帮助
+问题解决后，加个简短的补充说明
+如何解读答案
+RTFM 和 STFW：如何知道你已完全搞砸了
+如果还是搞不懂
+处理无礼的回应
+如何避免扮演失败者
+不该问的问题
+好问题与蠢问题
+如果得不到回答
+如何更好地回答问题
+相关资源
+鸣谢
+声明
+许多项目在他们的使用协助/说明网页中链接了本指南，这么做很好，我们也鼓励大家都这么做。但如果你是负责管理这个项目网页的人，请在超链接附近的显著位置上注明：
+本指南不提供此项目的实际支持服务！
+我们已经深刻领教到少了上述声明所带来的痛苦。因为少了这点声明，我们不停地被一些白痴纠缠。这些白痴认为既然我们发布了这本指南，那么我们就有责任解决世上所有的技术问题。
+如果你是因为需要某些协助而正在阅读这本指 …</content></entry><entry><title>老大说：谁要再用double定义商品金额，就自己收拾东西走!</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E8%80%81%E5%A4%A7%E8%AF%B4%E8%B0%81%E8%A6%81%E5%86%8D%E7%94%A8double%E5%AE%9A%E4%B9%89%E5%95%86%E5%93%81%E9%87%91%E9%A2%9D%E5%B0%B1%E8%87%AA%E5%B7%B1%E6%94%B6%E6%8B%BE%E4%B8%9C%E8%A5%BF%E8%B5%B0/</url><categories><category>开发经验</category></categories><tags><tag>开发经验</tag></tags><content type="html"> 以下文章来源于CodeSheep ，作者hansonwong99
+老大说：谁要再用double定义商品金额，就自己收拾东西走!
+先看现象
+涉及诸如float或者double这两种浮点型数据的处理时，偶尔总会有一些怪怪的现象，不知道大家注意过没，举几个常见的栗子：
+典型现象（一）：条件判断超预期
+System.out.println( 1f == 0.9999999f ); // 打印：false System.out.println( 1f == 0.99999999f ); // 打印：true 纳尼？ 典型现象（二）：数据转换超预期
+float f = 1.1f; double d = (double) f; System.out.println(f); // 打印：1.1 System.out.println(d); // 打印：1.100000023841858 纳尼？ 典型现象（三）：基本运算超预期
+System.out.println( 0.2 + 0.7 ); // 打印：0.8999999999999999 纳尼？ 典型现象（四）：数据自增超预期
+float f1 = 8455263f; for (int i = 0; i &amp;amp;lt; 10; i++) { System.out.println(f1); f1++; } // 打印：8455263.0 // 打印：8455264.0 // 打印：8455265.0 // 打印：8455266.0 // 打印：8455267.0 // 打印：8455268.0 // 打印：8455269.0 // 打印：8455270.0 // 打印：8455271.0 // 打印：8455272.0 float f2 = 84552631f; for (int i = 0; i &amp;amp;lt; 10; i++) { System.out.println(f2); f2++; } // 打印：8.4552632E7 纳尼？不是 +1了吗？ // 打印：8.4552632E7 纳尼？不是 +1了吗？ // 打印：8.4552632E7 纳尼？不是 +1了吗？ // 打印：8.4552632E7 纳尼？不是 +1了吗？ // 打印：8.4552632E7 纳尼？不是 +1了吗？ // 打印：8.4552632E7 纳尼？不是 +1 …</content></entry><entry><title>成为一流软件开发者的34条建议</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E6%88%90%E4%B8%BA%E4%B8%80%E6%B5%81%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%8434%E6%9D%A1%E5%BB%BA%E8%AE%AE/</url><categories><category>开发经验</category></categories><tags><tag>开发经验</tag></tags><content type="html"> 成为一流软件开发者的34条建议
+我们列出了一张包含 34 条建议的清单，来帮助你成为一流的软件开发者，在技术行业中打造出成功的职业生涯。
+这些建议中，有一些是特别针对增强编程技能的，其他的一些建议则是软件开发职业生涯中的软技能，还有些甚至能够帮助你成为一个更好的人。
+1. 规划方法 &amp;amp;amp; 在编码前先写伪代码
+当你试图构建一个项目或者完成一个任务时，如果没有规划就直接开始编写代码，可能会浪费大量时间，还会经历很多不同程度的挫折。
+在开始编码前，花一点时间写下要实现的功能或者待解决问题的大致结构。这会让实际的编码过程更加顺畅，防止潜在的缺陷发生。向队友或者同事主动寻求反馈或者其他想法，这会让你更好地向他们解释你所处理的事情。
+作为一名软件开发者，很容易陷入编码的细节中，导致只见树木不见森林（正如这条著名谚语所说的那样）。做好规划并预先编写伪代码能让你同时看到两者，也许，你还能听到森林里鸟儿的鸣叫声呢！
+2. 总是寻找新东西来学习
+这可能是老调重弹，但事实就是这样。软件行业变化非常迅速。如果你想一直待在程序员这个圈子里，你就不得不持续学习新的东西。
+你持续学习得越多，你就越会觉得这是很自然的一件事，你会觉得学习是一种享受，而且当你不去学习时，反倒会觉得自己停滞不前。阅读一些科技博客或者新闻网站，花一点时间来研究你感兴趣的事情，或者那些会影响到软件行业未来的事情。
+3. 不要尝试去学习所有的东西
+尽管不断地学习新东西很重要，但是你每天的时间有限，所以在安排时间时，需要有选择性地学习。
+你不必对所有的事情都做出响应。Verge 的报告说，你学到的 95% 的内容都将在未来几个月内消失。当你用在学习或者研究新技术上的时间有限时，就应当注意这点。
+4. 了解怎样学习
+每个人都通过不同的学习方法来达到最好的学习效果。有些人喜欢阅读书籍，有些人则喜欢看视频教程。如果你能找到适用于你自己的学习方法，并使用它，那就可以让你很轻松地学习到新东西。
+除了独特的学习方法，还有一些可以优化学习过程的基本方法。这里是 Coursera 网站上的免费在线课程（
+https://www.coursera.org/learn/learning-how-to-learn ），覆盖了艺术、音乐、文学、数学、科学、运动和很多其他学科专家所采用的学习方法。
+5. 缓缓前行，不要破坏东西
+“快速前行，打破常 …</content></entry><entry><title>keystore导出p12,cer,crt,.key.pem证书文件格式</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/keystore%E5%AF%BC%E5%87%BAp12cercrt.key.pem%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/</url><categories><category>开发</category></categories><tags><tag>证书</tag></tags><content type="html"> p12文件生成
+keytool -genkey -v -alias root -keyalg RSA -storetype PKCS12 -keystore dlt.p12 -dname &amp;#34;CN=www.handtimes.com,OU=ipcc,O=云电同方,L=昆明,ST=云南,C=中国&amp;#34; -storepass ipcc@95598 -keypass ipcc@95598 1、生成keystore文件
+命令行窗口执行如下命令：
+keytool -genkey -alias ynhr -keyalg RSA -keysize 1024 -keypass 123456 -validity 36500 -keystore test.keystore -storepass 123456 命令解读：
+-alias 别名：ynhr
+-keyalg 算法：RSA
+-keysize 密码长度：1024
+-keypass 私钥访问密码：123456
+-validity 有效期：36500天
+-keystore 名称：test.keystore
+-storepass keystone文件访问密码：123456
+在目录下已生成名为：test.keystore 的文件
+2、keytool 通过keystone 导出p12文件
+keytool -importkeystore -srcstoretype JKS -srckeystore test.keystore -srcstorepass 123456 -srcalias ynhr -srckeypass 123456 -deststoretype PKCS12 -destkeystore test.p12 -deststorepass 123456 -destalias client -destkeypass 123456 -noprompt keytool -importkeystore -srckeystore 要转换的.jks -destkeystore 转换后的.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass STORE密码 -deststorepass STORE密码 -srcalias 用户名 -destalias 用户名 -srckeypass KEY密码 -destkeypass KEY密码 -noprompt 继续执行如上命令导出p12私钥文件
+3、从p12导出格式为.key的私钥文件
+openssl pkcs12 -in test.p12 -nocerts -nodes -out test.key 4、从keystore导出cer公钥证书文件
+keytool -export -alias ynhr -keystore test.keystore -rfc -file test.cer 有时候需要.crt格式的文件，调整下格式即可
+keytool -export -alias ynhr -keystore test.keystore -rfc -file test.crt 5、导出格式为“pem”的公钥证书文件
+5.1、keytool生成keystore的转为PKCS12格式
+keytool -importkeystore -srcstoretype JKS -srckeystore test.keystore -srcstorepass 123456 -srcalias ynhr -srckeypass 123456 -deststoretype PKCS12 -destkeystore test.p12 -deststorepass 123456 -destalias test -destkeypass 123456 -noprompt 5.2、opensl 从PKCS12中导出私钥
+openssl pkcs12 -in test.p12 -passin pass:123456 -nocerts -out test.private MAC verified OK Enter PEM pass phrase:123456 Verifying - Enter PEM pass phrase:123456 5.3、opensl 从私钥导出不带签名的公钥
+openssl rsa -in test.private -pubout Enter pass phrase for client.private:123456 writing RSA key -----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClREmV3+XLyq23AKA00kYZ0exc 4CcLqhVVgavJckgwLKPKc0F0Rg8J4fKb8JBfIl9qaHa/RWh6MI50y1GKBEub5PWj JOAwsDhhLKTOD8DU7GXJnDOcwMfFPhfcMvID98l3uK3G9fjviMcKbN3tMlW0vg0D 19msDnNhOpRKqZnULwIDAQAB -----END PUBLIC KEY----- 6、将公钥证书导入密钥库
+keytool -import -v -file bst.cer -keystore miepay.keystore</content></entry><entry><title>使用Kettle将mysql数据同步到Elasticsearch中</title><url>/post/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/%E4%BD%BF%E7%94%A8kettle%E5%B0%86mysql%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E5%88%B0elasticsearch%E4%B8%AD/</url><categories><category>全文检索</category></categories><tags><tag>elasticsearch</tag></tags><content type="html"> 使用Kettle将mysql数据同步到Elasticsearch中
+整体流程图如下
+获取配置信息
+将数据字段进行清洗
+将附件进行下载抽取
+根据规则查看ID文档是否存在
+将结构化信息提交
+回写ES的文档id</content></entry><entry><title>【kettle】【报错】 Unexpected problem reading shared objects from XML file当读共享文件时发生错误</title><url>/post/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/kettle-%E5%BD%93%E8%AF%BB%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E6%97%B6%E5%8F%91%E7%94%9F%E9%94%99%E8%AF%AF/</url><categories><category>数据抽取</category></categories><tags><tag>Kettle</tag></tags><content type="html"> ETL报错：
+Unexpected problem reading shared objects from XML file : null
+当读共享文件时发生错误(继续加载 报kettle新建转换 时，“读取共享对象时发生一个严重错误”
+“Unexpected problem reading shared objects from XML file : null”&amp;hellip;
+保存ktr,kjb时弹出错误提示 ：“Unable to save shared ojects“
+”Unexpected problem reading shared objects from XML file :“
+问题原因：
+​ 这是开发在共享 DB连接 （数据库连接） 时候操作不当造成的。
+解决方案：
+​ 找到 .kettle/shared.xml（一般在：C:\Users\User.kettle） 文件;删除 &amp;hellip;之间的内容，可解决这个问题；</content></entry><entry><title>Nginx常用配置</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url><categories><category>开发</category></categories><tags><tag>nginx</tag></tags><content type="html"><![CDATA[  Nginx常用配置常用代理Server配置server { listen 80; //监听的本地端口 server_name localhost; location /api1/ { proxy_pass http://localhost:8080; } # http://localhost/api1/xxx -&gt; http://localhost:8080/api1/xxx; location /api2/ { proxy_pass http://localhost:8080/; } # http://localhost/api2/xxx -&gt; http://localhost:8080/xxx; location /api3 { proxy_pass http://localhost:8080; } # http://localhost/api3/xxx -&gt; http://localhost:8080/api3/xxx; location /api4 { proxy_pass http://localhost:8080/; } # http://localhost/api4/xxx -&gt; http://localhost:8080//xxx; # 请注意这里的双斜线,好好分析一下 location /api5/ { proxy_pass http://localhost:8080/haha; } # http://localhost/api5/xxx -&gt; http://localhost:8080/api4/hahaxxx; # 请注意这里的haha和xxx之间没有斜杠 } 携带Cookie配置常用于cas单点登录跳转
+unstream 10api { server 192.168.1.10:8080; } server{ location ^~ /prod-api/ { proxy_cookie_domain 10api $host; proxy_cookie_path /strategy /prod-api; #注意这里的路径 是两个不同的路径,中间有空格,把前者路径的cookie设定到后者 } }   ]]></content></entry><entry><title>Kettle数据抽取</title><url>/post/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/kettle%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%96/</url><categories><category>数据抽取</category></categories><tags><tag>Kettle</tag></tags><content type="html"> 数据库数据抽取
+抽取数据转换json
+数据存储
+附件文本抽取</content></entry><entry><title>elasticsearch中英文混搜</title><url>/post/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/elasticsearch%E4%B8%AD%E8%8B%B1%E6%96%87%E6%B7%B7%E6%90%9C/</url><categories><category>全文检索</category></categories><tags><tag>elasticsearch</tag></tags><content type="html"> 参考地址：
+https://blog.csdn.net/weixin_33725126/article/details/89702059
+https://blog.csdn.net/weixin_34148456/article/details/86002009
+https://blog.csdn.net/zmx729618/article/details/80415984
+https://www.cnblogs.com/zhangyafei/p/11028927.html
+mapping设置
+中文分词插件
+英文分词插件
+拼音搜索插件
+举例</content></entry><entry><title>几种常见的消息中间件对比</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AF%B9%E6%AF%94/</url><categories><category>消息中间件</category></categories><tags><tag>RabbitMQ</tag><tag>RocketMQ</tag><tag>ActiveMQ</tag><tag>Kafka</tag><tag>消息中间件</tag></tags><content type="html"> 常见消息中间件介绍
+当前使用较多的消息队列有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，而部分数据库如Redis、MySQL以及phxsql也可实现消息队列的功能。
+消息队列概述
+消息队列是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。
+RabbitMQ
+RabbitMQ于2007年发布，是一个在AMQP(高级消息队列协议)基础上完成的，可复用的企业消息系统，是当前最主流的消息中间件之一。
+主要特性
+可靠性：提供了多种技术可以让你在性能和可靠性之间进行权衡。这些技术包括持久性机制、投递确认、发布者证实和高可用性机制； 灵活的路由：消息在到达队列前是通过交换机进行路由的。RabbitMQ为典型的路由逻辑提供了多种内置交换机类型。如果你有更复杂的路由需求，可以将这些交换机组合起来使用，你甚至可以实现自己的交换机类型，并且当做RabbitMQ的插件来使用； 消息集群：在相同局域网中的多个RabbitMQ服务器可以聚合在一起，作为一个独立的逻辑代理来使用； 队列高可用：队列可以在集群中的机器上进行镜像，以确保在硬件问题下还保证消息安全； 支持多种协议：支持多种消息队列协议； 支持多种语言：用Erlang语言编写，支持只要是你能想到的所有编程语言； 管理界面：RabbitMQ有一个易用的用户界面，使得用户可以监控和管理消息Broker的许多方面； 跟踪机制：如果消息异常，RabbitMQ 提供消息跟踪机制，使用者可以找出发生了什么； 插件机制：提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。 优点
+由于Erlang语言的特性，消息队列性能较好，支持高并发； 健壮、稳定、易用、跨平台、支持多种语言、文档齐全； 有消息确认机制和持久化机制，可靠性高； 高度可定制的路由； 管理界面较丰富，在互联网公司也有较大规模的应用，社区活跃度高。 缺点
+尽管结合 Erlang 语言本身的并发优势，性能较好，但是不利于做二次开发和维护； 实现了代理架构，意味着消息在发送到客户端之前可以在中央节点上排队。此特性使得RabbitMQ易于使用和部署，但是使得其运行速度较慢，因为中央节点 增加了延迟，消息封装后也比较大；需要学习比较复杂的接口和协议，学习和维护成本较高。 RocketMQ …</content></entry><entry><title>elasticsearch中父子关系文档</title><url>/post/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-elasticsearch%E7%88%B6%E5%AD%90%E6%96%87%E6%A1%A3/</url><categories><category>全文检索</category></categories><tags><tag>elasticsearch</tag><tag>全文检索</tag></tags><content type="html"><![CDATA[  参考地址：
+https://blog.csdn.net/hsj1213522415/article/details/97693509为什么要有父子文档？nested object的数据建模，是采取类似冗余数据的方式，将多个数据都放在一起，维护成本就比较高；
+parent-child数据建模，采取的是类似于关系型数据库的三范式，多个实体都分割开来，每个实体之间都通过一些关联方式，进行了父子关系的关联，各种数据不需要都放在一起，父doc和子doc分别在进行更新的时候，都不会影响对方；
+为什么父子文档性能好？​	虽然数据实体之间分割开来，但是我们在搜索的时候，由es自动为我们处理底层的关联关系，并且通过一些手段保证搜索性能。
+父子文档核心​	父子关系元数据映射，用于确保查询时候的高性能，但是有一个限制：父子数据必须存在于一个shard中；（多个type之间有父子关系，用_parent指定父type）；父子关系数据存在一个shard中，而且映射其关联关系的元数据，因此在搜索父子关系数据的时候，不用跨分片。
+实例-带权限的全文检索建立mappingPUT /company { &#34;mappings&#34;: { &#34;doc&#34;: {}, &#34;employee&#34;: { &#34;_parent&#34;: { &#34;type&#34;: &#34;rd_center&#34; } } } }   ]]></content></entry><entry><title>在powerdesigner中执行SQL.通过SQL生成模型图</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%9C%A8powerdesigner%E4%B8%AD%E6%89%A7%E8%A1%8Csql.%E9%80%9A%E8%BF%87sql%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E5%9B%BE/</url><categories><category>数据库</category></categories><tags><tag>PD</tag><tag>PowerDesigner</tag></tags><content type="html"><![CDATA[  在powerdesigner中执行SQL.通过SQL生成模型图通过hbm2dll生成了数据库脚本之后.想在powerdesigner中生成相应的模型图
+方法: 在powerdesigner中.选择file&ndash;&gt;reverse engine&ndash;&gt;database&mdash;&gt;选择相应的数据库版本,再把SQL导入执行即可.
+  ]]></content></entry><entry><title>PowerDesigner设计Name和Comment替换</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/powerdesigner%E8%AE%BE%E8%AE%A1name%E5%92%8Ccomment-%E6%9B%BF%E6%8D%A2/</url><categories><category>数据库</category></categories><tags><tag>PD</tag><tag>PowerDesigner</tag></tags><content type="html"><![CDATA[  PowerDesigner设计Name和Comment 替换comment 是注释。name 是字段描述
+在 PowerDesigner中操作如下
+PowerDesigner&ndash;&gt;Tools&ndash;&gt;Execute Commands&ndash;&gt;Edit/Run Scripts 下执行就OK了
+把comment 覆盖name方法如下：
+Option Explicit ValidationMode = True InteractiveMode = im_Batch Dim mdl &#39; the current model &#39; get the current active model Set mdl = ActiveModel If (mdl Is Nothing) Then MsgBox &#34;There is no current Model &#34; ElseIf Not mdl.IsKindOf(PdPDM.cls_Model) Then MsgBox &#34;The current model is not an Physical Data model. &#34; Else ProcessFolder mdl End If Private sub ProcessFolder(folder) On Error Resume Next Dim Tab &#39;running table for each Tab in folder.tables if not tab.isShortcut then tab.name = tab.comment Dim col &#39; running column for each col in tab.columns if col.comment=&#34;&#34; then else col.name= col.comment end if next end if next Dim view &#39;running view for each view in folder.Views if not view.isShortcut then view.name = view.comment end if next &#39; go into the sub-packages Dim f &#39; running folder For Each f In folder.Packages if not f.IsShortcut then ProcessFolder f end if Next end sub 将name覆盖comment方法如下
+Option Explicit ValidationMode = True InteractiveMode = im_Batch Dim mdl &#39; the current model &#39; get the current active model Set mdl = ActiveModel If (mdl Is Nothing) Then MsgBox &#34;There is no current Model &#34; ElseIf Not mdl.IsKindOf(PdPDM.cls_Model) Then MsgBox &#34;The current model is not an Physical Data model. &#34; Else ProcessFolder mdl End If &#39; This routine copy name into comment for each table, each column and each view &#39; of the current folder Private sub ProcessFolder(folder) Dim Tab &#39;running table for each Tab in folder.tables if not tab.isShortcut then tab.comment = tab.name Dim col &#39; running column for each col in tab.columns col.comment= col.name next end if next Dim view &#39;running view for each view in folder.Views if not view.isShortcut then view.comment = view.name end if next &#39; go into the sub-packages Dim f &#39; running folder For Each f In folder.Packages if not f.IsShortcut then ProcessFolder f end if Next end sub   ]]></content></entry><entry><title>gitlab添加问题模板</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/gitlab%E6%B7%BB%E5%8A%A0%E9%97%AE%E9%A2%98%E6%A8%A1%E6%9D%BF/</url><categories><category>git</category></categories><tags><tag>git</tag></tags><content type="html"> gitlab 添加问题/任务模板
+操作步骤：
+在项目中找到文件夹 .gitlab（和 .git 是在同一目录），创建文件夹 issue_templates
+在文件夹 issue_templates下添加一个.md的文件，如bug.md
+将添加的文件推送到服务器分支上，合并
+最后新建一个问题就可以看到标题左边就有一个模板的下拉框，里面就有一个选项 bug 这样就可以了</content></entry><entry><title>word转md文件</title><url>/post/hexo/word%E8%BD%ACmd%E6%96%87%E4%BB%B6/</url><categories><category>hexo</category></categories><tags><tag>pandoc</tag><tag>word</tag></tags><content type="html"> 使用Pandoc转换
+# Docx to markdown, including math: $ pandoc -s example30.docx -t markdown -o example35.md 更多命令参考</content></entry><entry><title>要素式审核-最高人民法院关于民商事案件繁简分流和调解速裁操作规程</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E6%A0%B8-%E6%9C%80%E9%AB%98%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E5%85%B3%E4%BA%8E%E6%B0%91%E5%95%86%E4%BA%8B%E6%A1%88%E4%BB%B6%E7%B9%81%E7%AE%80%E5%88%86%E6%B5%81%E5%92%8C%E8%B0%83%E8%A7%A3%E9%80%9F%E8%A3%81%E6%93%8D%E4%BD%9C%E8%A7%84%E7%A8%8B/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 最高人民法院关于民商事案件繁简分流和调解速裁操作规程
+{% pdf /files/最高人民法院关于民商事案件繁简分流和调解速裁操作规程.pdf 800px %}</content></entry><entry><title>要素式审核-c</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E6%A0%B8-%E5%B1%B1%E4%B8%9C%E7%9C%81%E9%AB%98%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2%E8%A6%81%E7%B4%A0%E5%BC%8F%E5%AE%A1%E5%88%A4%E6%96%B9%E5%BC%8F%E6%8C%87%E5%BC%95%E8%AF%95%E8%A1%8C/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 山东省高级人民法院要素式审判方式指引（试行）
+{% pdf /files/山东省高级人民法院要素式审判方式指引（试行）.pdf 800px %}</content></entry><entry><title>常用法律文书收集</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E6%B3%95%E5%BE%8B%E6%96%87%E4%B9%A6/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 信用卡纠纷案件审判要素表.doc 【
+预览
+】【
+下载
+】</content></entry><entry><title>诉讼费收费标准</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E8%AF%89%E8%AE%BC%E8%B4%B9%E6%94%B6%E8%B4%B9%E6%A0%87%E5%87%86/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag></tags><content type="html"> 案件受理费交纳标准：
+＜1万 50元
+1万至10万 ×2.5%-200
+10万至20万 ×2%+300
+20万至50万 ×1.5%+1300
+50万至100万 ×1%+3800
+100万至200万 ×0.9%+4800
+200万至500万 ×0.8%+6800
+500万至1000万 ×0.7%+11800
+1000万至2000万 ×0.6%+21800
+2000万以上 ×0.5%+41800
+离婚案件不涉及财产分割的，每件交纳50元；涉及财产分割，财产总额不超过20万元的，
+每件交纳300元，超过20万元的部分，按照0.5%交纳。
+适用简易程序审理的案件减半交纳案件受理费。
+适用普通程序审理的案件撤诉或调解结案的减半收取案件受理费。</content></entry><entry><title>Hexo中预览pdf</title><url>/post/hexo/hexo%E4%B8%AD%E9%A2%84%E8%A7%88pdf/</url><categories><category>hexo</category></categories><tags><tag>hexo</tag><tag>pdf</tag></tags><content type="html"><![CDATA[  希望在博客中能预览pdf，hexo已有插件支持pdf预览，非常方便，只需安装插件和添加链接即可。
+实现 安装插件npm install --save hexo-pdf 使用在Markdown文档中添加pdf 本地资源
+{% pdf test.pdf %} 在线资源
+&lt;center&gt; **监督学习**&lt;/center&gt; # 居中 {% pdf https://raw.githubusercontent.com/afshinea/stanford-cs-229-machine-learning/4d5ac4e620be8b63b6f889ecff667b7ebac008a8/zh/cheatsheet-supervised-learning.pdf %} 问题处理github上pdf的显示要想成功显示pdf，必须正确配置路径，可以用F12来查看。若想显示github上的pdf，用github.com的域名是不行的，应该是raw.githubusercontent.com的域名，可以通过F12来查看。
+  ]]></content></entry><entry><title>银行卡纠纷案件的审理流程与思路</title><url>/post/%E6%B3%95%E5%BE%8B%E7%9F%A5%E8%AF%86/%E9%93%B6%E8%A1%8C%E5%8D%A1%E7%BA%A0%E7%BA%B7%E6%A1%88%E4%BB%B6%E7%9A%84%E5%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B%E4%B8%8E%E6%80%9D%E8%B7%AF/</url><categories><category>法律知识</category></categories><tags><tag>法院</tag><tag>信用卡纠纷</tag></tags><content type="html"> 近日， 北京西城法院甘琳法官结合审判实践和理论研究， 总结梳理了欠款类银行卡纠纷案件、 盗刷类银行卡纠纷案件、 维权类银行卡纠纷案件等三类银行卡纠纷案件的审理流程与思路， 具有一定的实践价值。
+一、 欠款类银行卡纠纷案件的审理流程与思路 （一） 案件审理的时间节点管理 （二） 程序问题的处理 （三） 实体审理中的常见抗辩事由及处理思路 二、 盗刷类银行卡纠纷案件的审理思路 （一） 民刑交叉情形下的受理 （二） 侵权责任或违约责任的认定 （三） 伪卡交易情形下举证责任的分配与责任认定 （四） 无卡交易情形下的举证责任分配与责任认定 三、 维权类银行卡纠纷案件的审理思路 （一） 主体资格的审查 （二） 格式条款的效力认定 （三） 增值业务效力的认定 一、 欠款类银行卡纠纷案件的审理流程与思路 欠款类银行卡纠纷案件， 指以发卡行作为原告， 以持卡人作为被告， 以持卡人经催收仍欠款 不予偿还为基础诉讼事实， 以要求持卡人偿还信用卡透支欠款本金、 利息、 手续费、 超限费 及滞纳金为诉讼请求的信用卡合同纠纷案件。 当前， 欠款类银行卡纠纷已经成为困扰银行的 一类高发纠纷， 也成为基层法院近年来审理数量较大的一类案件。 近年来， 欠款类银行卡案 件数量增长迅猛， 并呈现出标的额不断增加、 公告送达比例高、 被告到庭应诉率低、 案件审 理成本高等特点， 特别是人口流动加剧人户分离现状， 虚假填报申领表导致冒名申卡现象突 出等问题的出现， 给此类案件的审理带来了一定的困难。 （一） 案件审理的时间节点管理 欠款类银行卡案件在诉讼主体、 诉讼基础事实以及诉讼请求等要素上相对固定， 案件事实清 楚， 法律关系明确， 但由于案件数量大， 送达困难多， 司法辅助性工作量大， 因此在审判实 践中应注重提高效率， 形成规范化的审理流程。 为此， 我们制定了审理此类案件的时间节点 管理流程图及相应的具体工作要求。 1、 收案后 5 天内完成： 初步整理卷宗， 对案件进行分类、 筛查、 标注； 在高院身份信息查询系统中查询并打印当事人的户籍信息； 向被告所有联系地址邮寄起诉书、 证据材料、 到庭传票， 完成首次邮寄送达； 拨打被告所有联系电话， 并做好相应电话工作记录。
+2、 收案后 5-20 天内完成： 对户籍地在北京市内的被告进行上门送达； 在高院裁判文书数据库中搜索被告有无在先的刑事判决， …</content></entry><entry><title>在线预览，互联网解决方案</title><url>/post/office/%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E5%80%BC%E5%BE%AE%E8%BD%AF%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/</url><categories><category>office</category><category>在线预览</category></categories><tags><tag>在线预览</tag><tag>office</tag></tags><content type="html"> 使用微软在线预览
+https://view.officeapps.live.com/op/view.aspx?src=offcie链接地址</content></entry><entry><title>IDEA撤销提交</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/idea%E6%92%A4%E9%94%80%E6%8F%90%E4%BA%A4/</url><categories><category>git</category></categories><tags><tag>git</tag></tags><content type="html"> 日常工作中会遇到 commit 到本地仓库的代码，因为一些原因，需要撤销后在提交到本地，或者需要整合多次 commit，然后 push 到远程仓库。下面是 IDEA 支持的快捷方式。 Undo Commit
+可以在 Version Control 查看到刚刚撤销的内容
+此时，就可以从新 commit 代码了</content></entry><entry><title>IDEA中Git的更新、提交、还原方法</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/idea%E4%B8%ADgit%E7%9A%84%E6%9B%B4%E6%96%B0%E6%8F%90%E4%BA%A4%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/</url><categories><category>git</category></categories><tags><tag>git</tag><tag>idea</tag></tags><content type="html"> 第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；
+第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；
+第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file; 2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作； 3.进行commit Directory操作 如图7： 4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域； 5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。 第四还原操作：如图选择10区域按钮：revert进行还原操作；</content></entry><entry><title>标签</title><url>/tags/</url><categories/><tags/><content type="html"></content></entry><entry><title>分类</title><url>/categories/</url><categories/><tags/><content type="html"></content></entry><entry><title>全国法院列表数据</title><url>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/%E5%85%A8%E5%9B%BD%E6%B3%95%E9%99%A2%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE/</url><categories><category>法院</category></categories><tags><tag>法院列表</tag></tags><content type="html"><![CDATA[  法院信息列表来源
+http://zxgk.court.gov.cn/zhzxgk/static/javascript/data.jshttp://zxgk.court.gov.cn/zhzxgk/console中添加如下方法
+function print(){ var courts=&amp;#34;(0,&amp;#39;最高人民法院&amp;#39;,null,true),&amp;#34;; for(var i = 0;i&amp;lt;court_0.length;i++){ console.log(court_0[i].id+&amp;#34;,&amp;#34;+court_0[i].sname+&amp;#34;,0&amp;#34;); courts+=&amp;#34;(&amp;#34;+court_0[i].id+&amp;#34;,&amp;#39;&amp;#34;+court_0[i].sname+&amp;#34;&amp;#39;,0,&amp;#34;+court_0[i].hasNext+&amp;#34;),&amp;#34;; if(court_0[i].hasNext){ var intCourt = eval(&amp;#34;court_&amp;#34;+court_0[i].id); for(var ii = 0;ii&amp;lt;intCourt.length;ii++){ console.log(intCourt[ii].id+&amp;#34;,&amp;#34;+intCourt[ii].sname+&amp;#34;,&amp;#34;+court_0[i].id); courts+=&amp;#34;(&amp;#34;+intCourt[ii].id+&amp;#34;,&amp;#39;&amp;#34;+intCourt[ii].sname+&amp;#34;&amp;#39;,&amp;#34;+court_0[i].id+&amp;#34;,&amp;#34;+intCourt[ii].hasNext+&amp;#34;),&amp;#34;; if(intCourt[ii].hasNext){ var subCourt = eval(&amp;#34;court_&amp;#34;+intCourt[ii].id); for(var iii = 0;iii&amp;lt;subCourt.length;iii++){ console.log(subCourt[iii].id+&amp;#34;,&amp;#34;+subCourt[iii].sname+&amp;#34;,&amp;#34;+intCourt[ii].id); …  ]]></content></entry><entry><title>站点示例</title><url>/flinks.html</url><categories/><tags/><content type="html"> 如想交换本站友情链接，请在评论区留下你的站点信息，格式参考如下：
+- name: Hugo-NexT desc: Hugo NexT 官方预览网站。 avatar: https://hugo-next.eu.org/imgs/hugo_next_avatar.png link: https://hugo-next.eu.org</content></entry></search>

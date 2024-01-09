@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lodop on 松果小站</title><link>/tags/lodop/</link><description>Recent content in lodop on 松果小站</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Aug 2021 15:30:00 +0000</lastBuildDate><atom:link href="/tags/lodop/rss.xml" rel="self" type="application/rss+xml"/><item><title>lodop打印pdf</title><link>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/lodop%E6%89%93%E5%8D%B0pdf/</link><pubDate>Fri, 20 Aug 2021 15:30:00 +0000</pubDate><guid>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/lodop%E6%89%93%E5%8D%B0pdf/</guid><description>参考： http://demo.clodop.com:8000/c_pdfprint 结合jacob转pdf，可实现office文档的在线打印。</description></item><item><title>WEB套打程序开发 (lodop使用)</title><link>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/web%E5%A5%97%E6%89%93%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-lodop%E4%BD%BF%E7%94%A8/</link><pubDate>Wed, 12 May 2021 15:30:00 +0000</pubDate><guid>/post/%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/web%E5%A5%97%E6%89%93%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-lodop%E4%BD%BF%E7%94%A8/</guid><description>&lt;p>
+&lt;a href="https://www.diewufeiyang.com/post/1210.html" title="WEB套打程序开发 (lodop使用)" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ WEB套打程序开发 (lodop使用)
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p>
+&lt;p>WEB套打可选方案不多，理想的更少，利用免费控件Lodop+JavaScript实现精确套打，算是较为经典的选择。这种方案其实比较简单，利用一个htm文件就可以实现模板设计过程，几乎是“空手套”式的开发，但理解这几个步骤还是需要点时间，下面一步步详细演示说明：&lt;/p></description></item></channel></rss>
